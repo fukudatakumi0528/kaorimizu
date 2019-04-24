@@ -1,0 +1,139 @@
+@import "../_utils/**";
+
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+	@include screen-medium() {
+		font-size: 72%;
+	}
+}
+
+body {
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Noto Sans JP', sans-serif;
+	//background-color: #f2f6f7;
+	//font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+	color: #333;
+	text-rendering: optimizeLegibility;
+	letter-spacing: 0.02em;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break: break-all;
+	//font-feature-settings : "palt";
+	font-feature-settings: "pkna"
+/*
+	@include screen-large(){
+		font-feature-settings : "pkna";
+	}
+*/
+
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(243, 226, 34, 0.5);
+	color: inherit;
+}
+
+p {
+	line-height: 1.75;
+}
+
+a p {
+  color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	//background-size: cover;
+}
+
+table {
+	width: 100%;
+}
+
+label {
+	display: block;
+}
+
+input,
+textarea {
+	-webkit-appearance: none;
+}
+
+button {
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+// placeholder color
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+@include screen-medium() {
+	::placeholder {
+		position: relative;
+		top: 5px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.-isSP {
+	display: none!important;
+	@include screen-medium {
+		display: block!important;
+	}
+}
+
+.-isPC {
+	@include screen-medium {
+    display: none!important;
+  }
+}
+
+
+
+
+
+
+@import "../_components/**";
+@import "../_modules/**";

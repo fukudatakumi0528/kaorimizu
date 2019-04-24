@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/fonts/icomoon.eot?m0m6g');
+  src:  url('../fonts/icomoon/fonts/icomoon.eot?m0m6g#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/fonts/icomoon.ttf?m0m6g') format('truetype'),
+    url('../fonts/icomoon/fonts/icomoon.woff?m0m6g') format('woff'),
+    url('../fonts/icomoon/fonts/icomoon.svg?m0m6g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+//NotoSnas JP
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700');
+
+
+//筑紫丸ゴシック（日本語丸文字）
+@font-face {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+// AvenirNext（英字太文字）
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('../fonts/AvenirNext-Bold/AvenirNext-Bold.eot');
+	src: url('../fonts/AvenirNext-Bold/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.woff2') format('woff2'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.woff') format('woff'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+// AntroVectra (手書き風文字)
+@font-face {
+	font-family: 'Antro Vectra';
+	src: url('../fonts/AntroVectra/Antro_Vectra.eot');
+	src: url('../fonts/AntroVectra/Antro_Vectra.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AntroVectra/Antro_Vectra.woff2') format('woff2'),
+		url('../fonts/AntroVectra/Antro_Vectra.woff') format('woff');
+	//font-weight: bold;
+	font-style: normal;
+}
+
+// AntroVectra_bold (手書き風文字)
+@font-face {
+	font-family: 'Antro Vectra bolder';
+	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot');
+	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff2') format('woff2'),
+		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}

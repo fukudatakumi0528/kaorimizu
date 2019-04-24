@@ -1,0 +1,260 @@
+// #xxx プライバシーポリシー
+// -----------------------------------
+@import "../../_utils/_variables";
+@import "../../_utils/_mixins";
+
+/*
+
+.l-head {
+	padding: 80px 0;
+}
+
+
+.l-privacy {
+	border-top: #e0e0e0 solid 1px;
+}
+.privacy__wrap {
+	width: 620px;
+	margin: 60px auto 0;
+	padding-bottom: 60px;
+
+	@include screen-medium() {
+		width: 100%;
+		padding: 0 12px;
+		margin-bottom: 50px;
+	}
+	> section {
+		&:nth-of-type(n + 2) {
+			border-top: #eee solid 1px;
+			margin-top: 20px;
+			padding-top: 60px;
+		}
+
+		> h2 {
+			display: block;
+			margin-bottom: 30px;
+			font-size: 2.4rem;
+			color: #444;
+			font-weight: bold;
+			line-height: 1.4;
+		}
+	}
+	.privacy__note {
+		&:nth-of-type(n + 2) {
+			margin-top: 20px;
+		}
+		span {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	dl {
+		dt {
+			margin-top: 40px;
+			font-weight: bold;
+			color: #444;
+			margin-bottom: 16px;
+			line-height: 1.4;
+
+			@include screen-medium() {
+				margin-left: 24px;
+				&:first-letter {
+					margin-left: -23px;
+				}
+			}
+		}
+		dd {
+			font-size: $font-s;
+			color: #666;
+			line-height: 1.8;
+
+			p {
+				//margin-top: 8px;
+			}
+			b {
+				display: block;
+				margin-top: 8px;
+			}
+		}
+		.ol {
+			padding-left: 16px;
+			> li {
+				list-style: decimal;
+				&:nth-of-type(n + 2) {
+					margin-top: 16px;
+				}
+			}
+		}
+		.ol2 {
+			> li {
+				&:nth-of-type(n + 2) {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	p {
+		font-size: $font-s;
+		color: #666;
+		@include screen-medium() {
+			text-align: justify;
+		}
+	}
+
+	address {
+		margin-bottom: 30px;
+		&.-right {
+			margin-top: 40px;
+			text-align: right;
+		}
+		> b {
+			font-size: 1.4rem;
+			color: #777;
+			display: block;
+			margin: 16px 0 16px;
+		}
+	}
+	ul {
+		margin-left: 2rem;
+		margin-top: 5px;
+		li {
+			list-style-type: disc;
+			color: #666;
+			font-size: $font-s;
+			line-height: 1.4;
+			margin-bottom: 8px;
+		}
+	}
+	small {
+		display: block;
+		text-align: right;
+	}
+}
+*/
+
+
+
+
+
+
+
+.l-head {
+	padding: 80px 0;
+}
+
+
+.l-privacy {
+	border-top: #e0e0e0 solid 1px;
+}
+.privacy__wrap {
+	width: 620px;
+	margin: 60px auto 0;
+	padding-bottom: 60px;
+
+	@include screen-medium() {
+		width: 100%;
+		padding: 0 12px;
+		margin-bottom: 50px;
+	}
+	> section {
+		> h2 {
+			display: block;
+			margin-bottom: 30px;
+			font-size: 2.4rem;
+			color: #444;
+			font-weight: bold;
+			line-height: 1.4;
+		}
+	}
+	.privacy__note {
+		&:nth-of-type(n + 2) {
+			margin-top: 20px;
+		}
+		span {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	dl {
+		dt {
+			margin-top: 40px;
+			font-weight: bold;
+			color: #444;
+			margin-bottom: 16px;
+			line-height: 1.4;
+
+			@include screen-medium() {
+				margin-left: 24px;
+				&:first-letter {
+					margin-left: -23px;
+				}
+			}
+		}
+		dd {
+			font-size: $font-s;
+			color: #666;
+			line-height: 1.8;
+
+			p {
+				margin-top: 16px;
+			}
+		}
+		.ol {
+			padding-left: 16px;
+			> li {
+				list-style: decimal;
+				&:nth-of-type(n + 2) {
+					margin-top: 16px;
+				}
+			}
+		}
+		.ol2 {
+			> li {
+				&:nth-of-type(n + 2) {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	p {
+		font-size: $font-s;
+		color: #666;
+		@include screen-medium() {
+			text-align: justify;
+		}
+	}
+
+	address {
+		margin-top: 60px;
+		margin-bottom: 30px;
+		&.-right {
+			margin-top: 40px;
+			text-align: right;
+		}
+		> b {
+			font-size: 1.4rem;
+			color: #777;
+			display: block;
+			margin: 16px 0 16px;
+		}
+	}
+	ul {
+		margin-left: 2rem;
+		margin-top: 5px;
+		li {
+			list-style-type: disc;
+			color: #666;
+			font-size: $font-s;
+			line-height: 1.4;
+			margin-bottom: 8px;
+		}
+	}
+	small {
+		display: block;
+		text-align: right;
+	}
+}

@@ -1,0 +1,41 @@
+@import "../_utils/_variables";
+@import "../_utils/_mixins";
+
+//
+// component - Button
+// -----------------------------------
+
+.m-ttl {
+	font-size: 5rem;
+	font-family: 'Avenir Next';
+	font-weight: bold;
+	letter-spacing: 7px;
+	display: block;
+	text-align: center;
+	@include screen-medium(){
+		font-size:2.8rem;
+		letter-spacing: 3px;
+	}
+	span {
+		display: block;
+		letter-spacing: 2px;
+		font-size: $font-l;
+		margin-top: 20px;
+		font-weight: bold;
+		@include screen-medium() {
+			font-size: $font-s;
+		}
+	}
+}
+
+.m-ttl2 {
+	font-size: 3.6rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	display: block;
+	text-align: center;
+	line-height:1.5;
+	@include screen-medium(){
+		font-size:2.4rem;
+	}
+}

@@ -1,0 +1,52 @@
+@import "../_utils/_variables";
+@import "../_utils/_mixins";
+
+// ボタンのスタイルを指定
+.c-more-btn{
+	display: none;
+	@include z-index(more-btn);
+
+	@include screen-medium(){
+		display: block;
+		text-align:center;
+		font-weight:bold;
+		color:$link-color;
+		text-decoration: underline;
+		cursor: pointer;
+		&:before{
+			content:'もっと見る'
+		}
+	}
+
+	// チェックボックスを見えなくする
+	&__trigger{
+			display: none;
+
+			// チェック後の動作を指定
+			&:checked {
+
+				// 表示＆グラデーションを消す
+				~.c-more-btn__fire{
+					// ＊height:autoだとtransitionがきかないので、高さを実数で指定。無駄に広げるとtransitionが不自然になる。
+					max-height:3000px;
+					&:before{
+						display: none;
+					}
+				}
+
+				// ボタンの文言を変える
+				~.c-more-btn{
+					&:before{
+						content: '閉じる';
+					}
+				}
+			}
+	}
+
+	// 隠す高さ・グラデーションの始まりを指定
+	&__fire{
+		@include more-btn-hide($height:1000px);
+		// ease-outにすると閉じる時のアニメーションの不自然さが和らぐ
+		transition: all 0.8s ease-out;
+	}
+}

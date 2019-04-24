@@ -1,0 +1,139 @@
+//-
+//- 企業情報
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "お問い合わせ"
+	- var assetsPath = "../"
+	- var pageKey = "contact/index"
+	- var scriptFlag = false
+
+
+
+block contents
+	.l-head
+		h1.m-ttl CONTACT#[span お問い合わせ]
+
+	//-
+	//- 記事一覧
+	//-
+	section.l-contact.inner.-m
+		.contact__tab
+			ul
+				li.-isActive #[span お仕事の依頼]
+				li: a(href="") 取材・アポイント・営業
+				li: a(href="") 協力パートナー応募
+				li: a(href="/contact/entry.html") 採用エントリー
+
+
+		.contact__panel.js-contact__panel.-work
+			h2.contact__panel_title 取材・アポイント・営業
+			.contact__panel_head
+				p 弊社サービスにご興味のある方、オフィスや店舗・研究所等の移転、エントランスデザインやレイアウトの変更などをご検討されている方は、下記フォームに必要事項をお書きの上、ご送信ください。
+				p 3営業日以内に返答がない場合は、メールアドレスが間違っている、何らかの理由でメールが届いていない可能性がございます。その際は大変お手数ですが再度ご送信いただくか、お電話にてご連絡ください。
+				address
+					a(href="tel:03-6281-9950") 03-6281-9950
+					p 平日 10:00 ~ 18:00
+
+			.contact__panel_form
+				form(method="" post="")
+					dl
+						dt 会社名
+						dd
+							label.m-form
+								input(type="text" placeholder="例）オフィス・ラボ")
+						dt.-isRequired お名前
+						dd
+							label.m-form
+								input(type="text" placeholder="例）オフィス　太郎")
+						dt.-isRequired メールアドレス
+						dd
+							label.m-form
+								input(type="email" placeholder="例）info@officelab-ka.com")
+						dt.-isRequired お電話番号
+						dd
+							label.m-form
+								input(type="tel" placeholder="例）03-1234-5678")
+
+						dt.-isRequired お電話番号(レイアウト確認用)
+						dd.-tel.
+							<label class="m-form">
+								<span class="mwform-tel-field">
+									<input type="text" name="tel[data][0]" size="6" maxlength="5" value="" data-conv-half-alphanumeric="true" /> -
+									<input type="text" name="tel[data][1]" size="5" maxlength="4" value="" data-conv-half-alphanumeric="true" /> -
+									<input type="text" name="tel[data][2]" size="5" maxlength="4" value="" data-conv-half-alphanumeric="true" />
+									<input type="hidden" name="tel[separator]" value="-" />
+								</span>
+							</label>
+
+						dt
+						dd
+							label.m-form
+								input(type="file")
+
+
+
+
+
+						dt.-isRequired 種類
+						dd
+							ul
+								li
+									label.m-form
+										input(type="checkbox")
+										span 移転
+								li
+									label.m-form
+										input(type="checkbox")
+										span レイアウト変更
+								li
+									label.m-form
+										input(type="checkbox")
+										span 新規開設
+								li
+									label.m-form
+										input(type="checkbox")
+										span 増床・減床
+								li
+									label.m-form
+										input(type="checkbox")
+										span その他
+						dt.-isRequired 予算
+						dd
+							label.m-form
+								input(type="text" placeholder="例）2,000万円くらい")
+						dt.-isRequired 依頼先の所在地
+						dd
+							label.m-form
+								textarea
+						dt.-isRequired 住所、対応先
+						dd
+							label.m-form
+								textarea
+						dt.-isRequired 工事完了希望日
+						dd
+							label.m-form
+								input(type="text" placeholder="例）2,020年8月くらい")
+						dt.-isRequired お問い合わせ内容
+						dd
+							label.m-form
+								textarea.-l(colspan="6")
+
+						dt.-isRequired プライバシーポリシーに同意する
+						dd.agreementBox
+							label.m-form.
+								<span class="mwform-checkbox-field horizontal-item">
+									<label>
+										<input type="checkbox" name="agreement[data][]" value="同意する" />
+										<span class="mwform-checkbox-field-text">同意する</span>
+									</label>
+								</span>
+								<input type="hidden" name="agreement[separator]" value="," />
+								<input type="hidden" name="__children[agreement][]" value="{&quot;\u540c\u610f\u3059\u308b&quot;:&quot;\u540c\u610f\u3059\u308b&quot;}" />
+
+
+
+
+					.form_btns
+						button(type="submit" name="submitBack" value="back" class="m-btn -gray") 戻る
+						button(type="submit" name="submit" value="send" class="m-btn") 送信する

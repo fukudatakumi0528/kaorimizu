@@ -1,0 +1,200 @@
+//-
+//- トップページ
+//-
+extends ../_include/_layout
+block vars
+	- var pageTitle = "トップページ"
+	- var assetsPath = "./"
+	- var pageKey = "home"
+	- var scriptFlag = false
+
+
+
+block contents
+
+
+	//-
+	//- KV
+	//-
+	section.l-kv
+		video(src="assets/mov/officelab_top_mov.mp4" muted autoplay loop)
+
+
+
+	//-
+	//- MESSAGE
+	//-
+	section.l-massage
+		h2 POLICY#[span 大切にしていること]
+		.message__wrap.inner.-s
+			.message__fig
+				figure.-isPC(style="background-image:url(assets/img/home/img_message_01--PC.jpg)")
+				figure.-isSP(style="background-image:url(assets/img/home/img_message_01--SP.jpg)")
+			.message__text
+				h3 #[span ありがとう]で結ばれる<br>企業を目指して
+				h4 Who we are
+				p 小さくても大きくても「オフィス」です。
+				p
+					| 働く場所、集まる場所、戦略を考える場所。
+					br
+					| 企業によって様々な「オフィス」の在り方が存在します。
+					br
+					| 会社の規模ではなく、これからどういう会社にしていきたいか。
+					br
+					| その想いにオフィス・ラボは真摯に向き合い続けます。
+
+				a.m-btn(href="") COMPANY
+
+
+
+
+	//-
+	//- SERVICE
+	//-
+	section.l-service
+		.inner
+			h2 SERVICE#[span できること]
+			h3 What we do
+		.inner
+			.service__wrap
+				ul.service__slider
+					li
+						figure.-isPC(style="background-image:url(assets/img/home/img_service_01--PC.jpg)")
+						figure.-isSP(style="background-image:url(assets/img/home/img_service_01--SP.jpg)")
+				.service__text
+					p オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスのあり方」をご提案いたします。
+					a.m-btn(href="") MORE
+
+
+
+
+
+
+
+
+	//-
+	//- PROJECT
+	//-
+	section.l-project
+		.inner.-s
+			h2.m-ttl PROJECT#[span 施工事例]
+			ul.project__list
+				-
+					var items = [
+						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/12/011-810x540.jpg", ttl: "日本研紙様"},
+						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/09/jibannet-002.jpg", ttl: "地盤ネット総合研究所様"},
+						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/09/COLORS-003.jpg",ttl: "COLORS様"},
+						{img: "http://www.officelab-ka.com/wp-content/uploads/2018/12/nexa-002_1-810x540.jpg",ttl: "全国試験運営センター様"},
+						{img: "http://www.officelab-ka.com/wp-content/uploads/2018/11/OSRAM_002-810x540.jpg",ttl: "OSRAM様"},
+					]
+				each item in items
+					li.project__item
+						a(href="")
+							.item__wrap
+								.item__figwrap
+									figure(style="background-image: url(" + item.img + ")")
+							h3.item__ttl= item.ttl
+
+			a.m-btn(href="") VIEW ALL PROJECT
+
+
+
+
+
+
+
+	//-
+	//- PICK UP
+	//-
+	section.l-pickup
+		h2.m-ttl PICK UP#[span 注目記事]
+		.inner.-m
+			ul.pickup__list.js-slickSlider--pickup
+				li.pickup__item
+					a(href="")
+						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
+							figcaption PICK UP
+						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
+				li.pickup__item
+					a(href="")
+						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
+							figcaption PICK UP
+						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
+				li.pickup__item
+					a(href="")
+						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
+							figcaption PICK UP
+						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
+			.js-slickSlider--pickup--arrows
+
+
+
+	//-
+	//- ARTICLE
+	//-
+	section.l-article
+		h2.m-ttl ARTICLE#[span 記事]
+		.inner.-m
+			ul.article__list.js-slickSlider--article
+				- for (var x = 0; x < 10; x++)
+					li.article__item
+						a(href="")
+							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
+								figcaption.-news NEWS
+							h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
+							time 2018.04.01
+			.js-slickSlider--article--arrows
+
+		.article__btns
+			a.m-btn(href="") NEWS ARCHIVE
+			a.m-btn(href="") COLUMN ARCHIVE
+
+
+
+	//-
+	//- VOICE
+	//-
+	section.l-voice
+		h2.m-ttl VOICE#[span お客様の声]
+		.inner.-l
+			ul.voice__list
+				li.voice__item
+					a(href="")
+						.item__figwrap
+							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
+							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
+						.item__logo
+							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
+
+				li.voice__item
+					a(href="")
+						.item__figwrap
+							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
+							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
+						.item__logo
+							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
+
+				li.voice__item
+					a(href="")
+						.item__figwrap
+							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
+							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
+						.item__logo
+							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
+
+
+	//-
+	//- RECRUIT
+	//-
+	section.l-recruit
+		a(href="")
+			h2.m-ttl RECRUIT#[span 採用情報]
+			p
+				| 「ありがとう」で結ばれる会社で
+				br
+				| 共に夢を叶えませんか？
+
+
+
+
+

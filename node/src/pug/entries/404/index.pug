@@ -1,0 +1,33 @@
+//-
+//- 404ページ
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "404"
+	- var assetsPath = "../"
+	- var pageKey = "404/index"
+	- var scriptFlag = false
+
+
+
+block contents
+	//-
+	//- 404
+	//-
+	section.l-404.inner.-m
+		.block
+			.text
+				p
+					| お探しのページは見つかりませんでした。
+					br
+					| 目的のページは削除されたか、
+					br
+					| アドレスが変更されている可能性があります。
+
+
+		a.m-btn.-gray(href="/") トップに戻る
+
+
+
+
+

@@ -1,0 +1,6 @@
+@import "../_utils/_variables";
+@import "../_utils/_mixins";
+
+.m-underline{
+	background:linear-gradient(transparent 72%, $base-color-yellow 72%);
+}

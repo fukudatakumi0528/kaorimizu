@@ -1,0 +1,61 @@
+//-
+//- 記事一覧ページ
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "記事一覧"
+	- var assetsPath = "../"
+	- var pageKey = "article/index"
+	- var scriptFlag = false
+
+
+
+block contents
+	.l-head
+		h1.m-ttl COLUMN#[span コラム]
+
+	//-
+	//- 記事一覧
+	//-
+	section.l-articles
+		.articles__accordion
+			.inner.-m
+				dl
+					dt CATEGORY
+					dd
+						ul
+							li
+								a(href="") オフィス
+									span 10
+							li
+								a(href="") 什器備品
+									span 10
+							li
+								a(href="") 働き方
+									span 10
+							li
+								a(href="") 内装デザイン
+									span 5
+
+
+		.articles__list.inner.-m
+			- for (var i = 0; i < 5; i++)
+				article.articles__item
+					a(href="")
+						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2019/01/catch-3-400x267.jpg)")
+							figcaption オフィス
+						.item__wrap
+							h1.item__title オフィスの置き菓子サービス導入の魅力とは？
+							p こんにちは、オフィス・ラボです。好評のオフィス・ラボシリーズもいよいよ最終回。今日はオフィスの置き菓子・コンビニサービオスについてご紹介してきます....
+							time 2018.12.05
+							span NEW
+
+		.articles__pager
+			.c-pager
+				a(href="").-prev
+				a(href="").-isCurrent 1
+				a(href="") 2
+				a(href="") 3
+				a(href="").-ellipsis
+				a(href="") 17
+				a(href="").-next

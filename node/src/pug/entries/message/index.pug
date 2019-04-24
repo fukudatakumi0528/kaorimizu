@@ -1,0 +1,87 @@
+//-
+//- 代表挨拶
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "代表挨拶"
+	- var assetsPath = "../"
+	- var pageKey = "message/index"
+	- var scriptFlag = false
+
+
+
+block contents
+	.l-head
+		h1.m-ttl MESSAGE#[span 代表挨拶]
+
+	//-
+	//- 代表挨拶
+	//-
+	section.l-message.inner.-m
+		.change__tab
+			ul
+				li: a(href="") 企業情報
+				li.-isActive #[span 代表挨拶]
+
+
+
+		.message__items
+			.message__img
+				figure(style="background-image: url(../assets/img/message/img_watanabe-kouichirou.jpg)")
+
+			.message__wrap
+				.message__left.-isPC
+					.message__title
+						h1
+							span お客様に常に寄#[span り]添い、
+							br
+							span 支#[span え]続け#[span る]最良の
+							br
+							span パー#[span ト]ナーであ#[span り]たい
+
+
+				.message__right
+					.message__head
+						b
+							| お客様、協力企業、社員とその家族
+							br
+							| すべての方々から永遠に愛され、
+							br
+							| 真に社会に貢献する。
+							br
+							| 「ありがとう」で結ばれる企業を目指して、
+							br
+							| 私たちは成長し続けます。
+					.message__title--SP.-isSP
+						h1
+							| お客様に常に寄り添い、
+							br
+							| 支え続ける最良の
+							br
+							| パートナーでありたい
+
+					.message__text
+						p
+							| 「お客様のために、真摯に働く社員を幸せにしたい」
+							br
+							| その想いで、2010年、私は弊社を創業しました。
+							br
+							| オフィスは、働く現代人にとって一日の大半を過ごす場所であり、生産効率や利益に直結する、"経営装置"そのものです。そのためには、経営者のビジョンが明確に発信され、社員一人一人が能力を最大限に発揮でき、いきいきとした笑顔あふれる場所であるべきだ、と考えています。
+						p
+							| 企業の成長、変革、成熟、すべての局面において、
+							br
+							| お客様に常に寄り添い、支え続ける最良のパートナーでありたい。
+							br
+							| オフィス・ラボはいつもそう願い、独立系企業を貫き、「オフィス専門のコンサルタント」として、お客様の目線でよりよいオフィスづくりを心がけてきました。常に、新しいオフィスの在り方をイメージし、いかなる経営課題にも真摯に向き合い、求められる以上の価値を提供する。私たちが目指すのは、お客様に、社会に、真に貢献し続ける企業です。
+						p
+							| オフィス・ラボに出会っていただいたすべての人々の幸せを想い、
+							br
+							| 「ありがとう」という言葉で結ばれる絆を深め、これまでも、これからも、ひたむきに誠実に取り組んでまいります。
+
+					.message__sign
+						p 株式会社オフィス・ラボ　代表取締役社長
+						img(src="../assets/img/message/img_sign.svg")
+
+
+
+

@@ -1,0 +1,87 @@
+doctype html
+html(lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover")
+		title オフィス・ラボ様
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	body
+		.wrap
+			table
+				caption フロント
+				thead
+					tr
+						th ページID
+						th 項目
+						th URL
+						//th 担当
+						//th 進捗
+						//th 補足
+				tbody
+					-
+						var items = [
+							{id: 'home', ttl: 'トップページ', url: 'home', who: '奥村', prgs: '0%', text: ''},
+							{id: 'articleIndex', ttl: '記事一覧', url: 'article/index', who: '奥村', prgs: '0%', text: ''},
+							{id: 'articlePost', ttl: '記事詳細', url: 'article/post', who: '奥村', prgs: '0%', text: ''},
+							{id: 'projectIndex', ttl: '施工事例一覧', url: 'project/index', who: '奥村', prgs: '0%', text: ''},
+							{id: 'projectPost', ttl: '施工事例詳細', url: 'project/post', who: '奥村', prgs: '0%', text: ''},
+							{id: 'company', ttl: '企業情報', url: 'company/index', who: '奥村', prgs: '0%', text: ''},
+							{id: 'privacy', ttl: 'プライバシーポリシー', url: 'privacy/index', who: '奥村', prgs: '0%', text: ''},
+							//-{id: 'contact', ttl: 'お問い合わせ - 入力画面', url: 'contact/index', who: '奥村', prgs: '0%', text: ''},
+						]
+					each item in items
+						tr
+							td= item.id
+							td= item.ttl
+							td
+								if(item.url != 'none')
+									a(href="./" + item.url + ".html" target="_blank")= "/" + item.url + ".html"
+								else
+									span none
+							//td= item.who
+							//td.prg= item.prgs
+							//td= item.text
+
+
+		div.
+			<style type="text/css">
+				.wrap {
+					max-width: 1000px;
+					margin: 0 auto;
+				}
+				table {
+					width: 100%;
+					border-collapse: collapse;
+				}
+				caption {
+					font-size: 18px;
+					text-align: left;
+					padding-bottom: 10px;
+				}
+				th {
+					border-top: #ccc solid 1px;
+					border-bottom: #ccc solid 1px;
+					padding: 10px;
+					text-align: left;
+					width: 10px;
+					white-space: nowrap;
+				}
+				td {
+					border-top: #ccc solid 1px;
+					border-bottom: #ccc solid 1px;
+					padding: 8px;
+					text-align: left;
+					width: 10px;
+					white-space: nowrap;
+				}
+				td.prg {
+					background: #664bff;
+					color: #fff;
+				}
+				tbody tr:nth-of-type(odd) {
+					background: #f2f2f2;
+				}
+				* {
+					font-size: 12px;
+				}
+			</style>

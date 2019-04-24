@@ -1,0 +1,28 @@
+.c-sns {
+	display: flex;
+	li {
+		margin-right: 4px;
+	}
+	@include screen-medium() {
+		overflow: scroll;
+		padding: 6px 0;
+		-webkit-overflow-scrolling: touch;
+		overflow-scrolling: touch;
+		transform: scale(1.15);
+		transform-origin: left;
+		li {
+			margin-right: 8px;
+		}
+	}
+	@media all and (max-width: 480px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 65%;
+		min-width: 300px;
+		margin: 0 auto;
+		transform-origin: center;
+		li {
+			margin-bottom: 8px;
+		}
+	}
+}

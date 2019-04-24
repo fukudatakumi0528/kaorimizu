@@ -1,0 +1,48 @@
+- var siteTitle = "株式会社オフィス・ラボ"
+- var rootPath = "http://localhost"
+- var imgPath = "./assets/img/"
+
+
+block vars
+	- var pageKey
+	- var pageTitle
+	- var scriptFlag
+	- var wrapState
+
+
+doctype html
+html(lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+	head
+		include ./_head
+
+	body
+		.wrap
+
+			include ./_header
+
+			main
+
+				block contents
+
+			include ./_footer
+
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js")
+		script(src="/assets/js/common.js")
+		if(scriptFlag == true)
+			script(src="/assets/js/" + pageKey + ".js")
+
+
+		//- FBシェア用スクリプト
+		#fb-root
+			script(async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2")
+
+		//- ツイートボタン用スクリプト
+		script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+
+		//- はてぶ用スクリプト
+		script(type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async")
+
+		//- ラインで送るスクリプト
+		script(src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer")
+

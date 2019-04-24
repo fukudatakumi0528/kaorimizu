@@ -1,0 +1,366 @@
+// #xxx お問い合わせ - 入力画面
+// -----------------------------------
+@import "../../_utils/_variables";
+@import "../../_utils/_mixins";
+
+
+.l-head {
+	padding: 80px 0;
+	@include screen-medium() {
+		padding: 80px 0 40px;
+	}
+}
+
+
+
+.l-contact {
+	border-top: #e0e0e0 solid 1px;
+	@include screen-medium() {
+		border-top: none;
+	}
+}
+.contact__tab {
+	margin-bottom: 60px;
+	ul {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: -1px;
+	}
+	li {
+		font-weight: bold;
+		position: relative;
+		color: #b1b1b1;
+		cursor: pointer;
+		&:nth-of-type(n + 2) {
+			&::before {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 16px;
+				background: #ebebeb;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-2px);
+			}
+		}
+		a {
+			display: block;
+			padding: 20px 30px 10px;
+			transition: color .2s ease;
+		}
+		&.-isActive {
+			color: #333;
+			border-top: #000 solid 1px;
+			pointer-events: none;
+			padding: 19px 30px 10px;
+		}
+		&:hover {
+			color: $link-color-yellow;
+		}
+	}
+	@include screen-medium() {
+		border-top: #e0e0e0 solid 1px;
+		border-bottom: #e0e0e0 solid 1px;
+		margin-bottom: 40px;
+		ul {
+			display: block;
+		}
+		li {
+			padding: 0;
+			a {
+				padding: 16px 12px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+					//color: #d4d4d4;
+				}
+			}
+			&:nth-of-type(n + 2) {
+				border-top: #eee solid 1px!important;
+				&::before {
+					content: none;
+				}
+			}
+			&.-isActive {
+				padding: 16px 12px;
+				border-top: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+
+.contact__panel {
+	width: 620px;
+	margin: 0 auto;
+
+	@include screen-medium() {
+		width: 100%;
+		padding: 0 16px;
+	}
+
+}
+
+.contact__panel_title {
+	text-align: center;
+	font-weight: bold;
+	font-size: $font-xl;
+	margin-bottom: 30px;
+}
+
+
+
+.contact__panel_form {
+	padding-bottom: 60px;
+	margin-top: 40px;
+	dt {
+		font-size: 1.4rem;
+		font-weight: bold;
+		margin-bottom: 12px;
+		display: flex;
+		align-items: center;
+		& ~ dt {
+			margin-top: 32px;
+		}
+		&.-isRequired {
+			&::before {
+				content: "必須";
+				display: inline-block;
+				background: #EB5757;
+				font-size: .8rem;
+				color: #fff;
+				padding: 5px 8px;
+				border-radius: 3px;
+				margin-right: 8px;
+			}
+		}
+		&.-isNonRequired {
+			&::before {
+				content: "任意";
+				display: inline-block;
+				background: #8fe723;
+				font-size: .8rem;
+				color: #fff;
+				padding: 5px 8px;
+				border-radius: 3px;
+				margin-right: 8px;
+			}
+		}
+	}
+	dd {
+		&.-col {
+			display: flex;
+			label {
+				flex-grow: 1;
+				&:nth-of-type(n + 2) {
+					margin-left: 16px;
+				}
+			}
+		}
+		&.-old {
+			label {
+				display: flex;
+				align-items: center;
+				input {
+					width: 100px;
+					margin-right: 16px;
+				}
+			}
+		}
+		&.-file {
+			div {
+				padding: 10px;
+				background: #f9f9f9;
+				border-radius: 3px;
+			}
+			p {
+				font-size: $font-s;
+				margin-bottom: 16px;
+			}
+			.mwform-file-delete {
+				//border: blue solid 1px;
+			}
+		}
+		&.-tel {
+			@include screen-medium() {
+				input[type="text"] {
+					width: 25%;
+				}
+			}
+		}
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: -16px;
+		li {
+			margin-right: 40px;
+			margin-bottom: 16px;
+		}
+	}
+
+	//ボタン
+	.form_btns {
+		display: flex;
+		margin-top: 40px;
+		justify-content: center;
+		.m-btn {
+			margin: 0;
+			&:nth-of-type(n + 2) {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	//エラーメッセージ
+	.error {
+		display: block;
+		margin-top: 8px;
+	}
+
+	//同意ボタン
+	.agreementBox {
+		a {
+			color: $link-color;
+			text-decoration: underline;
+			display: block;
+			margin-bottom: 20px;
+			transition: all .2s ease;
+			&:after {
+				content: "\e3e0";
+				font-family: 'icomoon';
+				font-size: 1.2rem;
+				//padding-left: 2px;
+			}
+			&:hover {
+				color: $link-color-yellow;
+			}
+		}
+	}
+}
+
+
+
+.contact__panel_form_head {
+	margin-bottom: 60px;
+	p {
+		font-size: 1.3rem;
+	}
+	address {
+		background: #f2f2f2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+		margin-top: 20px;
+		a {
+			display: block;
+			font-weight: bold;
+			font-size: 1.8rem;
+			&::before {
+				content: "\e916";
+				font-family: 'icomoon';
+				display: inline-block;
+				font-size: 1.2rem;
+				margin-right: 10px;
+			}
+			&::after {
+				content: "";
+				display: inline-block;
+				width: 1px;
+				height: 15px;
+				background: #333;
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+		}
+		p {
+			font-weight: bold;
+		}
+		@include screen-medium() {
+			display: block;
+			text-align: center;
+			margin-top: 20px;
+			padding: 10px 0;
+			a {
+				&::after {
+					content: none;
+				}
+			}
+			p {
+				margin-top: 8px;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// MW WPフォームの設定
+
+//入力画面
+.mw_wp_form_input {
+}
+
+
+
+//確認画面
+.mw_wp_form_confirm {
+
+	.contact__panel_form_head {
+		display: none;
+	}
+
+	dt {
+		color: #b1b1b1;
+		&::before {
+			content: none!important;
+		}
+	}
+	dd {
+		border-bottom: #eee solid 1px;
+		padding-bottom: 24px;
+	}
+
+	.-isOnlyInput {
+		display: none!important;
+	}
+
+	.-fullname {
+		label {
+			flex-grow: 0!important;
+		}
+	}
+
+	.-textarea {
+		line-height: 1.4;
+	}
+}
+
+
+

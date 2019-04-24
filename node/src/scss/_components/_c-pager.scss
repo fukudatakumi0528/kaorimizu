@@ -1,0 +1,58 @@
+
+.c-pager {
+	display: flex;
+	justify-content: center;
+	.page-numbers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		font-size: 1.2rem;
+		margin: 0 10px;
+		@include screen-medium() {
+			width: 40px;
+			height: 40px;
+			margin: 0 2px;
+		}
+		@include screen-small() {
+			width: 32px;
+			height: 32px;
+			margin: 0 2px;
+		}
+		&.prev,
+		&.next {
+			border: #333 solid 1px;
+		}
+		&.prev {
+			&::before {
+				content: "\e902";
+				font-family: 'icomoon';
+			}
+		}
+		&.next {
+			&::before {
+				content: "\e901";
+				font-family: 'icomoon';
+			}
+		}
+		&.dots {
+			pointer-events: none;
+			@include screen-medium() {
+				width: 20px;
+				height: 34px;
+				margin: 0;
+			}
+		}
+		&.current {
+			background: #333;
+			color: #fff;
+			pointer-events: none;
+		}
+		&:hover {
+			background: #333;
+			color: #fff;
+		}
+	}
+}

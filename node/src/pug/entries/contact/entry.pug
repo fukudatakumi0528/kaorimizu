@@ -1,0 +1,118 @@
+//-
+//- お問い合わせ - 採用エントリー入力画面
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "お問い合わせ"
+	- var assetsPath = "../"
+	- var pageKey = "contact/index"
+	- var scriptFlag = false
+
+
+
+block contents
+	.l-head
+		h1.m-ttl CONTACT#[span お問い合わせ]
+
+	//-
+	//- 記事一覧
+	//-
+	section.l-contact.inner.-m
+		.contact__tab
+			ul
+				li: a(href="/contact/") お仕事の依頼
+				li: a(href="") 取材・アポイント・営業
+				li: a(href="") 協力パートナー応募
+				li.-isActive #[span 採用エントリー]
+
+
+		.contact__panel.js-contact__panel.-work
+			.contact__panel_head
+				p 弊社サービスにご興味のある方、オフィスや店舗・研究所等の移転、エントランスデザインやレイアウトの変更などをご検討されている方は、下記フォームに必要事項をお書きの上、ご送信ください。
+				p 3営業日以内に返答がない場合は、メールアドレスが間違っている、何らかの理由でメールが届いていない可能性がございます。その際は大変お手数ですが再度ご送信いただくか、お電話にてご連絡ください。
+				address
+					a(href="tel:03-6281-9950") 03-6281-9950
+					p 平日 10:00 ~ 18:00
+
+			.contact__panel_form
+				form(method="" post="")
+					dl
+						dt エントリー種別
+						dd
+							ul
+								li
+									label.m-form
+										input(type="radio" name="entry_type")
+										span 新卒採用
+								li
+									label.m-form
+										input(type="radio" name="entry_type")
+										span キャリア採用
+						dt 応募種別
+						dd
+							ul
+								li
+									label.m-form
+										input(type="radio" name="entry_job")
+										span オフィスコンサルタント
+								li
+									label.m-form
+										input(type="radio" name="entry_job")
+										span 空間設計デザイナー
+						dt お名前（漢字）
+						dd.-col
+							label.m-form
+								input(type="text" placeholder="例）山田")
+							label.m-form
+								input(type="text" placeholder="例）太郎")
+						dt お名前（カナ）
+						dd.-col
+							label.m-form
+								input(type="text" placeholder="例）ヤマダ")
+							label.m-form
+								input(type="text" placeholder="例）タロウ")
+
+						hr
+						dt お名前（カナ）
+						dd.-col.-fullname
+							label.m-form 奥村
+							label.m-form 洋亮
+
+
+
+
+
+						dt 年齢
+						dd.-old
+							label.m-form
+								input(type="number" placeholder="")
+								span 歳
+
+						dt.-isRequired メールアドレス
+						dd
+							label.m-form
+								input(type="email" placeholder="例）info@officelab-ka.com")
+						dt.-isRequired メールアドレス（確認）
+						dd
+							label.m-form
+								input(type="email" placeholder="例）info@officelab-ka.com")
+						dt.-isRequired お電話番号
+						dd
+							label.m-form
+								input(type="tel" placeholder="例）03-1234-5678")
+						dt.-isRequired 学歴・職務履歴
+						dd
+							label.m-form
+								textarea.-l(placeholder="※担当されていた業務内容を分かりやすくご記載ください")
+						dt.-isRequired PR
+						dd
+							label.m-form
+								textarea.-l(placeholder="※これまでに成し遂げた仕事・活動について分かりやすくご記載ください")
+						dt.-isRequired 添付ファイル
+						dd
+							label.m-form
+								textarea.-l(placeholder="※これまでに成し遂げた仕事・活動について分かりやすくご記載ください")
+
+
+					button.m-btn(type="submit") 確認画面へ
+

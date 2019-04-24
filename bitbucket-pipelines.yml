@@ -1,0 +1,22 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: alpine:3.1
+
+pipelines:
+  default:
+    - step:
+        name: Deploy to staging
+        deployment: staging
+        script:
+          - apk update && apk add openssh-client bash
+          - ssh -p $DEPLOY_SERVER_PORT $DEPLOY_SERVER_USER@$STAGE_SERVER_IP "cd $STAGE_DEPLOY_DIR && git checkout $REFER_BRANCH && git pull"
+    - step:
+        name: Deploy to production
+        deployment: production
+        trigger: manual
+        script:
+          - apk update && apk add openssh-client bash
+          - ssh -p $DEPLOY_SERVER_PORT $DEPLOY_SERVER_USER@$PROD_SERVER_IP "cd $PROD_DEPLOY_DIR && git pull"

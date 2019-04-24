@@ -1,0 +1,244 @@
+.footer {
+	border-top: #ebebeb solid 1px;
+}
+
+.footer__pager {
+	padding: 20px 20px;
+	border-bottom: #ebebeb solid 1px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include screen-medium() {
+		padding: 12px;
+	}
+
+	.breadcrumb {
+		width: 100%;
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			width: 30px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+98&0+0,1+100 */
+			background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.98) 70%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.98) 70%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.98) 70%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+		}
+
+
+		@include screen-medium() {
+			width: calc(100% - 12px);
+		}
+		ol {
+			width: 100%;
+			display: flex;
+			position: relative;
+			@include screen-medium() {
+				overflow-x: scroll;
+				-webkit-overflow-scrolling: touch;
+			}
+			li {
+				white-space: nowrap;
+				font-size: 1.2rem;
+				&:nth-of-type(1) {
+					a {
+						display: inline-block;
+						&::before {
+							content: "\e905";
+							font-family: 'icomoon';
+							display: block;
+						}
+					}
+				}
+				&:nth-of-type(n + 2) {
+					margin-left: 10px;
+					&::before {
+						content: "\e901";
+						font-family: 'icomoon';
+						font-size: 1.2rem;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+		@include screen-medium() {
+			height: 30px;
+			position: relative;
+			top: 7px;
+			li {
+				height: 20px;
+			}
+
+		}
+	}
+	.pagetop {
+		flex: 1;
+		padding: 10px 20px;
+		@include screen-medium() {
+			padding: 0 5px 0 0;
+		}
+		&::before {
+			content: "\e903";
+			font-family: 'icomoon';
+			display: block;
+			font-size: 2rem;
+		}
+	}
+}
+
+
+
+//
+// IE10~EDGE hack
+_:-ms-lang(x), .breadcrumb ol {
+  overflow: hidden!important;
+}
+
+
+
+
+
+.footer__nav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 70px;
+	padding: 0 20px 60px;
+	@include screen-medium() {
+		display: block;
+		padding: 0 16px;
+		margin-top: 30px;
+	}
+	> div {
+		width: 16%;
+		@include screen-medium() {
+			width: 100%;
+			& + div {
+				margin-top: 24px;
+			}
+		}
+	}
+	dl {
+		& + dl {
+			margin-top: 40px;
+			@include screen-medium() {
+				margin-top: 24px;
+			}
+		}
+	}
+	dt {
+		margin-bottom: 16px;
+		a {
+			display: block;
+			font-weight: bold;
+			letter-spacing: 1px;
+			background-image: url(../img/common/line_3dots.gif);
+			background-repeat: repeat-x;
+			background-position: center bottom;
+			padding-bottom: 16px;
+			&::after {
+				content: "\e901";
+				font-family: 'icomoon';
+				font-size: 1.2rem;
+				float: right;
+			}
+		}
+	}
+	li {
+		a {
+			color: #666;
+			font-size: $font-s;
+			padding: 10px 0;
+			display: block;
+			@include screen-medium() {
+				font-size: $font-xs;
+				&::before {
+					content: "-";
+					margin-left: 2px;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+
+.footer__logo {
+	border-top: #ebebeb solid 1px;
+	text-align: center;
+	padding-top: 60px;
+	@include screen-medium() {
+		padding-top: 20px;
+		margin-top: 30px;
+	}
+	figure {
+		display: block;
+		margin: 0 auto 20px;
+		width: 140px;
+		height: 140px;
+		background-image: url(../img/common/logo_vertical.svg);
+		background-size: contain;
+		background-position: center center;
+		@include screen-medium() {
+			width: 120px;
+			height: 120px;
+		}
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+	p {
+		line-height: 2.4;
+		font-weight: bold;
+		color: #555;
+		@include screen-medium() {
+			font-size: $font-s;
+		}
+	}
+}
+.footer__contact {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 80px;
+	@include screen-medium() {
+		margin-bottom: 30px;
+	}
+	.tel {
+		display: block;
+		padding: 0 30px;
+		font-weight: bold;
+		font-size: $font-xl;
+		margin-bottom: 30px;
+		font-family: 'Avenir Next';
+		letter-spacing: 2px;
+
+		&::before {
+			content: "\e916";
+			font-family: 'icomoon';
+			display: inline-block;
+			font-size: 1.2rem;
+			margin-right: 10px;
+		}
+	}
+	.m-btn {
+		@include screen-medium() {
+			width: calc(100% - 24px);
+		}
+	}
+}
+.footer__copy {
+	display: block;
+	text-align: center;
+	border-top: #ebebeb solid 1px;
+	padding: 40px 0;
+	font-weight: bold;
+	font-size: $font-xs;
+	@include screen-medium() {
+		padding: 20px 0;
+	}
+}

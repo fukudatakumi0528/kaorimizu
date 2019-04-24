@@ -1,0 +1,57 @@
+version: '2'
+services:
+  web:
+    container_name: wordpress_web
+    build: docker/nginx
+    ports:
+      - 8888:80
+    links:
+      - fpm:php
+    volumes:
+      - ./app:/var/www/html
+  fpm:
+    container_name: wordpress_php
+    build: docker/phpfpm
+    volumes:
+      - ./app:/var/www/html
+    links:
+      - mysql:mysql
+      - smtp:smtp
+    environment:
+      - DEBUG=true
+  mysql:
+    container_name: wordpress_mysql
+    build: docker/mysql
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=wordpress
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+    links:
+      - mysql
+    ports:
+       - 8889:80
+    volumes:
+       - /sessions
+  smtp:
+    container_name: wordpress_smtp
+    image: phpdockerio/mailhog:latest
+    ports:
+      - 8025:8025
+  node:
+    container_name: officelab_node
+    tty: true
+    build: ./docker/node
+    ports:
+      - 3000:3000
+    volumes:
+      - ./node:/home/node
+      - ./app/wp-content/themes/officelab_renewal/assets/js:/home/app/wp-content/themes/officelab_renewal/assets/js
+      - ./app/wp-content/themes/officelab_renewal/assets/css:/home/app/wp-content/themes/officelab_renewal/assets/css

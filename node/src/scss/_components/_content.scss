@@ -1,0 +1,45 @@
+.wrap {
+	overflow: hidden;
+}
+
+
+main {}
+
+.container {}
+
+
+
+.inner {
+	margin: 0 auto;
+	&.-s {
+		max-width: 1030px;
+		width: 100%;
+		@include screen-medium() {
+			max-width: 100%;
+		}
+	}
+	&.-m {
+		max-width: 1200px;
+		width: 100%;
+		@include screen-medium() {
+			max-width: 100%;
+		}
+	}
+	&.-l {
+		max-width: 1400px;
+		width: 100%;
+		@include screen-medium() {
+			max-width: 100%;
+		}
+	}
+}
+
+.table{
+	display: flex;
+	flex-wrap: wrap;
+
+	.tr{
+		flex:0 0 100%;
+		display: flex;
+	}
+}
