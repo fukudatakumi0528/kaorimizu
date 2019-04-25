@@ -6,8 +6,7 @@
 image: alpine:3.1
 
 pipelines:
-  branches:
-    master:
+  default:
       - step:
           name: Deploy to staging
           deployment: staging
