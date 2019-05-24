@@ -5,6 +5,22 @@
 * [PHP](https://secure.php.net/) 7.1以上
 * [Node.js](https://nodejs.org/ja/) 8.11.1以上
 
+## Server(prod & stage)
+
+* クラウドホスティング
+    * conoha VPS
+* IPアドレス
+    * 150.95.186.83
+
+## Directory structure
+
+* docker
+ `docker構成ファイル`
+* app
+ `ドキュメントルート`
+* sql
+ `DBdumpデータ`
+
 ## Get Started (Docker)
 
 ### dockerをインストール
@@ -75,8 +91,22 @@ docker rmi `docker images | sed -ne '2,$p' -e 's/  */ /g' | awk '{print $1":"$2}
 初期のデータベースを更新
 
 ```
-$ docker exec wordpress_mysql /usr/bin/mysqldump -u root --password=password wordpress > sql/wordpress.sql
+$ docker exec office officelab-ka_mysql /usr/bin/mysqldump -u root --password=password wordpress > sql/wordpress.sql
 ```
+WP CLIを使う
+
+```
+$ docker exec office officelab-ka_php /usr/local/bin/wp --info
+```
+※ rootで実行するため--allow-rootオプションを付けてください
+
+[使い方はこちら](http://wp-cli.org/ja/)
+
+URLを変更する([new hostname]に新しいホスト名を入れてください)
+```
+$ docker exec office officelab-ka_php /usr/local/bin/wp search-replace 'localhost:8888' '[new hostname]' --skip-columns=guid --allow-root --dry-run
+```
+※ 本番実行の際は--dry-runを外して実行してください
 
 ## Get Started (JS/SCSSビルド環境)
 
