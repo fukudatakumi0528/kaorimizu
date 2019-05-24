@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    container_name: wordpress_web
+    container_name: office officelab-ka_web
     build: docker/nginx
     ports:
       - 8888:80
@@ -10,7 +10,7 @@ services:
     volumes:
       - ./app:/var/www/html
   fpm:
-    container_name: wordpress_php
+    container_name: office officelab-ka_php
     build: docker/phpfpm
     volumes:
       - ./app:/var/www/html
@@ -20,7 +20,7 @@ services:
     environment:
       - DEBUG=true
   mysql:
-    container_name: wordpress_mysql
+    container_name: office officelab-ka_mysql
     build: docker/mysql
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
@@ -41,7 +41,7 @@ services:
     volumes:
        - /sessions
   smtp:
-    container_name: wordpress_smtp
+    container_name: office officelab-ka_smtp
     image: phpdockerio/mailhog:latest
     ports:
       - 8025:8025
