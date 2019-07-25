@@ -280,9 +280,16 @@ _:-ms-lang(x), .message__title h1 > span span {
 	}
 }
 .message__text {
+	> h2 {
+		font-size: 2.2rem;
+		margin-bottom: 30px;
+		line-height: 2;
+		@include screen-medium() {
+			display: none;
+		}
+	}
 	p {
 		font-size: $font-l;
-		//font-weight: bold;
 		line-height: 2.2;
 		& + p {
 			margin-top: 2rem;

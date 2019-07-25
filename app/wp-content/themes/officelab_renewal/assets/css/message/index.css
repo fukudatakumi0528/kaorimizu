@@ -306,6 +306,18 @@ _:-ms-lang(x), .message__title h1 > span span {
   }
 }
 
+.message__text > h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .message__text > h2 {
+    display: none;
+  }
+}
+
 .message__text p {
   font-size: 1.8rem;
   line-height: 2.2;
