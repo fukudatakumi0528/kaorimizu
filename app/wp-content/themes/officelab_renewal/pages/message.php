@@ -19,18 +19,26 @@
 		</div>
 		<div class="message__items">
 			<div class="message__img">
-				<figure style="background-image: url(<?= assetsPath('img') ?>message/img_watanabe-kouichirou.jpg)"></figure>
+				<figure class="-isPC" style="background-image: url(<?= assetsPath('img') ?>message/img_watanabe-kouichirou--PC.png)"></figure>
+				<figure class="-isSP" style="background-image: url(<?= assetsPath('img') ?>message/img_watanabe-kouichirou--SP.png)"></figure>
 			</div>
+
 			<div class="message__wrap">
 				<div class="message__left -isPC">
 					<div class="message__title">
+						<figure>
+							<img src="<?= assetsPath('img') ?>message/img_message.png" alt="">
+						</figure>
+						<?php /*
 						<h1><span>お客様に常に寄<span>り</span>添い、</span><br><span>支<span>え</span>続け<span>る</span>最良の</span><br><span>パー<span>ト</span>ナーであ<span>り</span>たい</span></h1>
+						*/ ?>
 					</div>
 				</div>
 				<div class="message__right">
 					<div class="message__head"><b>お客様、協力企業、社員とその家族、<br>すべての方々から永遠に愛され、<br>真に社会に貢献する。<br>「ありがとう」で結ばれる企業を目指して<br>私たちは成長し続けます。</b></div>
 					<div class="message__title--SP -isSP">
-						<h1>お客様に常に寄り添い、<br>支え続ける最良の<br>パートナーでありたい</h1>
+						<img src="<?= assetsPath('img') ?>message/img_message.png" alt="">
+						<?php /* <h1>お客様に常に寄り添い、<br>支え続ける最良の<br>パートナーでありたい</h1> */ ?>
 					</div>
 					<div class="message__text">
 						<h2>お客様に常に寄り添い、<br>支え続ける最良のパートナーでありたい。</h2>
@@ -39,7 +47,7 @@
 						<p>オフィス・ラボに出会っていただいたすべての人々の幸せを想い、<br>「ありがとう」という言葉で結ばれる絆を深め、<br>これまでも、これからも、ひたむきに誠実に取り組んでまいります。</p>
 					</div>
 					<div class="message__sign">
-						<p>株式会社オフィス・ラボ　<br class="-isSP">代表取締役社長</p><img src="<?= assetsPath('img') ?>message/img_sign.svg">
+						<p>株式会社オフィス・ラボ　<br class="-isSP">代表取締役社長</p><img src="<?= assetsPath('img') ?>message/img_sign.png">
 					</div>
 				</div>
 			</div>

@@ -45,8 +45,8 @@
 			</section>
 			<div class="c-presidentlink">
 				<div class="c-presidentlink__img">
-					<img class="-isPC" src="<?= assetsPath('img') ?>/company/president.jpg" alt="代表取締役社長　渡邉 晃一郎">
-					<img class="-isSP" src="<?= assetsPath('img') ?>/company/president--SP.jpg" alt="代表取締役社長　渡邉 晃一郎">
+					<img class="-isPC" src="<?= assetsPath('img') ?>/company/president--PC.jpg" alt="代表取締役社長　渡邉 晃一郎">
+					<img class="-isSP" src="<?= assetsPath('img') ?>/company/president--SP.png" alt="代表取締役社長　渡邉 晃一郎">
 				</div>
 
 				<div class="c-skeleton-arrow">
