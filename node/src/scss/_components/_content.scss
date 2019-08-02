@@ -1,5 +1,8 @@
 .wrap {
 	overflow: hidden;
+	background-image: url(../img/common/bg.gif);
+	background-repeat: repeat;
+	background-position: 80px center;
 }
 
 
@@ -21,6 +24,13 @@ main {}
 	&.-m {
 		max-width: 1200px;
 		width: 100%;
+
+		//border: red solid 1px;
+		//min-height: 200px;
+
+
+
+
 		@include screen-medium() {
 			max-width: 100%;
 		}

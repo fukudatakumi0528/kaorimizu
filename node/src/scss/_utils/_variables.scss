@@ -34,14 +34,23 @@ $font-xxl: 2.2rem;
 
 
 
+//
+// fontfamily
+//
 
-
-
+$font-family-notosans: 'Noto Sans JP', sans-serif; 	// メイン文字
+$font-family-notoserif: 'Noto Serif JP', serif;			// タイトル日本語
+$font-family-vollkorn: 'Vollkorn', serif;						// タイトル英語
+$font-family-antrovectra: 'Antro Vectra bolder';		// 手書き文字
 
 
 //
 // Colors
 //
+$primary-color: #f7e789 !default;
+$secondary-color: #00235c !default;
+$color-gray1: #f3f3f3 !default;
+
 
 $base-color-yellow: #FFF002 !default;
 $base-color-blue: #397bf6 !default;
@@ -49,7 +58,6 @@ $border-color1: #333333;
 $border-color2: #F2F2F2;
 $link-color: #2D9CDB;
 $link-color-yellow: #ffcf21;
-
 
 
 //

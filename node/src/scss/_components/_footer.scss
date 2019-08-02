@@ -1,5 +1,6 @@
 .footer {
 	border-top: #ebebeb solid 1px;
+	background: #fff;
 }
 
 .footer__pager {
@@ -194,7 +195,7 @@ _:-ms-lang(x), .breadcrumb ol {
 	}
 	p {
 		line-height: 2.4;
-		font-weight: bold;
+		//font-weight: bold;
 		color: #555;
 		@include screen-medium() {
 			font-size: $font-s;
@@ -211,10 +212,12 @@ _:-ms-lang(x), .breadcrumb ol {
 	.tel {
 		display: block;
 		padding: 0 30px;
-		font-weight: bold;
+		font-weight: 700;
 		font-size: $font-xl;
 		margin-bottom: 30px;
-		font-family: 'Avenir Next';
+		//font-family: 'Avenir Next';
+		@include fontFamily(vol);
+
 		letter-spacing: 2px;
 
 		&::before {
@@ -234,9 +237,10 @@ _:-ms-lang(x), .breadcrumb ol {
 .footer__copy {
 	display: block;
 	text-align: center;
-	border-top: #ebebeb solid 1px;
-	padding: 40px 0;
+	background: $color-gray1;
+	padding: 15px 0;
 	font-weight: bold;
+	@include fontFamily(vol);
 	font-size: $font-xs;
 	@include screen-medium() {
 		padding: 20px 0;

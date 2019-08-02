@@ -8,16 +8,160 @@
 // KV
 //
 .l-kv {
-	display: flex;
+	margin-top: 20px;
+	height: calc(100vh - 140px); // ← 100vh - (header + margin)
+	min-height: 660px;
 	position: relative;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 100px;
-	margin-top: -100px;
 	overflow: hidden;
-	video {
-		width: 100%;
+
+	&::before {
+		// 左側グレー背景
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 281px;
+		height: calc(100% - 100px);
+		background: $color-gray1;
 	}
+
+
+	.kv__left {
+		position: absolute;
+		width: 480px;
+		z-index: 1;
+		height: 100%;
+		left: 130px;
+		h1 {
+			@include fontFamily(serif);
+			font-weight: 900;
+			font-size: 5.5rem;
+			line-height: 1.58;
+			letter-spacing: 11px;
+			z-index: 1;
+			margin-top: 180px;
+			span {
+				@include fontFamily(vol);
+				display: block;
+				font-size: 1.6rem;
+				letter-spacing: 3px;
+			}
+		}
+	}
+
+
+	.kv__slider {
+		position: absolute;
+		top: 0;
+		left: 482px;
+		width: calc(100% - 480px);
+		height: calc(100% - 120px);
+		overflow: hidden;
+		&_list {
+			height: 100%;
+			opacity: 0;
+			transition: all 1.5s ease;
+			&.slick-initialized {
+				opacity: 1;
+			}
+		}
+		&_item {
+			transition: all 2s ease;
+			background-size: cover;
+			background-position: center center;
+			height: 700px;
+			//heightはjsで取った方が良さそう
+		}
+		&_dots {
+			position: relative;
+			width: 130px;
+			height: 30px;
+			margin-top: 25px;
+			margin-left: -3px;
+			.slick-dots {
+				position: absolute;
+				top: 0;
+				height: auto;
+				bottom: auto;
+				text-align: left;
+				width: 150px;
+				li {
+					margin-right: 7px;
+					width: 12px;
+					button {
+						width: 10px;
+						height: 10px;
+						padding: 0;
+						&:hover {
+							&::before {
+								background: #000;
+								opacity: .25;
+							}
+						}
+						&::before {
+							content: "";
+							display: block;
+							width: 10px;
+							height: 10px;
+							font-family: none;
+							background: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.kv__scroll {
+		position: absolute;
+		bottom: 80px;
+		a {
+			display: inline-block;
+			span {
+				display: block;
+				width: 24px;
+				height: 40px;
+				border: #333 solid 2px;
+				border-radius: 40px;
+				&::before {
+					content: "";
+					display: block;
+					width: 6px;
+					height: 6px;
+					background-color: #333;
+					border-radius: 100%;
+					animation: sdb 5s infinite;
+					position: relative;
+					top: 7px;
+					left: 50%;
+					margin-left: -3px;
+				}
+			}
+		}
+		@keyframes sdb {
+		  0% {
+		    transform: translate(0, 0);
+		    opacity: 0;
+		  }
+		  20% {
+		    opacity: 1;
+		  }
+		  60% {
+		    transform: translate(0, 20px);
+		    opacity: 0;
+		  }
+		  80% {
+		    opacity: 0;
+		  }
+		  100% {
+		    opacity: 0;
+		  }
+		}
+	}
+
+
+
 	@include screen-medium() {
 		margin-top: 50px;
 		margin-bottom: 20px;
@@ -26,39 +170,105 @@
 
 
 
+
 //
-// MESSAGE
+// POLICY
 //
-.l-massage {
-	min-width: 1000px;
-	padding-top: 100px;
-	position: relative;
+.l-policy {
+	margin-top: 130px;
+	padding-top: 30px;
+	padding-bottom: 130px;
+	> .inner {
+		position: relative;
+		min-height: 550px;
+	}
 	h2 {
-		font-family: 'Avenir Next';
-		font-size: 5rem;
-		font-weight: bold;
-		letter-spacing: 7px;
-		display: block;
+		writing-mode: vertical-rl;
 		position: absolute;
-		top: 90px;
-		left: -50px;
-		transform: rotate(90deg);
-		pointer-events: none;
-		z-index: 1;
-		height: 190px;
+		top: 0;
+		left: 60px;
 
 		span {
-			display: block;
-			letter-spacing: 2px;
-			font-size: 1.6rem;
-			margin-top: 20px;
-			transform: rotate(-90deg);
-			writing-mode: vertical-rl;
-			position: relative;
-			top: -70px;
-			left: 80px;
+			&.en {
+				@include fontFamily(vol);
+				font-size: 1.8rem;
+				font-weight: bold;
+				letter-spacing: 3px;
+				&::after {
+					content: "";
+					display: inline-block;
+					height: 35px;
+					width: 2px;
+					background: #333;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+			&.jp {
+				@include fontFamily(serif);
+				font-weight: 700;
+				font-size: 3.4rem;
+				letter-spacing: 9px;
+			}
 		}
 	}
+	.policy {
+		&__wrap {
+			display: flex;
+		}
+		&__fig {
+			width: 60%;
+			&::before {
+				content: "";
+				display: block;
+				width: 380px;
+				height: 180px;
+				background: $primary-color;
+				position: absolute;
+				top: calc(100% - 50px);
+				left: 0;
+			}
+			> figure {
+				margin-left: 130px;
+				height: 100%;
+				position: relative;
+				@include adjustBg();
+			}
+		}
+		&__text {
+			width: 40%;
+			padding-left: 80px;
+			padding-top: 70px;
+			position: relative;
+			h3 {
+				@include fontFamily(serif);
+				@include lineHeight(1.8);
+				font-weight: 700;
+				font-size: 3rem;
+				letter-spacing: 10px;
+				span {
+					font-size: 130%;
+					margin-right: 5px;
+				}
+			}
+			h4 {
+				position: absolute;
+				top: -50px;
+				left: -90px;
+				@include fontFamily(antro);
+				font-size: 10rem;
+				transform: rotate(-4deg);
+			}
+			p {
+				margin-top: 40px;
+				@include lineHeight(2.2);
+			}
+			.m-btn {
+				margin: 40px 0 0;
+			}
+		}
+	}
+
 
 	@include screen-medium() {
 		min-width: 100%;
@@ -94,71 +304,9 @@
 		}
 	}
 }
-.message__wrap {
-	display: flex;
-	@include screen-medium() {
-		display: block;
-		position: relative;
-		margin-top: 40px;
-		&::before {
-			content: "Who we are";
-			font-family: 'Antro Vectra bolder';
-			font-size: 4rem;
-			position: absolute;
-			z-index: 1;
-			right: 10px;
-			top: -30px;
-			transform: rotate(-8deg);
-		}
-	}
-}
-.message__fig {
-	width: 50%;
-	padding-right: 40px;
-	figure {
-		width: 70%;
-		float: right;
-		height: 100%;
-		position: relative;
-		background-position: 30% center;
-		background-size: cover;
-		&::before {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: -90px;
-			left: -70px;
-			background: $base-color-blue;
-			width: 80%;
-			height: 180px;
-			z-index: -1;
-		}
-	}
-	@include screen-medium() {
-		width: 80%;
-		padding-right: 0;
-		figure {
-			width: 100%;
-			padding-bottom: 61.8%;
-			float: none;
-			&::before {
-				height: 80px;
-				bottom: -20px;
-			}
-			&::after {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 120px;
-				background: $base-color-yellow;
-				position: absolute;
-				top: 20px;
-				right: -22%;
-				z-index: -1;
-			}
-		}
-	}
-}
+
+
+/*
 .message__text {
 	width: 55%;
 	padding: 100px 25px 30px;
@@ -237,6 +385,87 @@
 		}
 	}
 }
+*/
+
+/*
+.message__fig {
+	width: 50%;
+	padding-right: 40px;
+	figure {
+		width: 70%;
+		float: right;
+		height: 100%;
+		position: relative;
+		background-position: 30% center;
+		background-size: cover;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -90px;
+			left: -70px;
+			background: $base-color-blue;
+			width: 80%;
+			height: 180px;
+			z-index: -1;
+		}
+	}
+	@include screen-medium() {
+		width: 80%;
+		padding-right: 0;
+		figure {
+			width: 100%;
+			padding-bottom: 61.8%;
+			float: none;
+			&::before {
+				height: 80px;
+				bottom: -20px;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 120px;
+				background: $base-color-yellow;
+				position: absolute;
+				top: 20px;
+				right: -22%;
+				z-index: -1;
+			}
+		}
+	}
+}
+*/
+/*
+.message__wrap {
+	display: flex;
+	@include screen-medium() {
+		display: block;
+		position: relative;
+		margin-top: 40px;
+		&::before {
+			content: "Who we are";
+			font-family: 'Antro Vectra bolder';
+			font-size: 4rem;
+			position: absolute;
+			z-index: 1;
+			right: 10px;
+			top: -30px;
+			transform: rotate(-8deg);
+		}
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,6 +478,82 @@
 //
 // SERVICE
 //
+.l-service {
+	margin-top: 170px;
+	position: relative;
+	h2 {
+		writing-mode: vertical-rl;
+		margin-right: 20px;
+		span {
+			&.en {
+				@include fontFamily(vol);
+				font-size: 1.8rem;
+				font-weight: bold;
+				letter-spacing: 3px;
+				&::after {
+					content: "";
+					display: inline-block;
+					height: 35px;
+					width: 2px;
+					background: #333;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+			&.jp {
+				@include fontFamily(serif);
+				font-weight: 700;
+				font-size: 3.4rem;
+				letter-spacing: 9px;
+			}
+		}
+	}
+}
+.service {
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		width: calc( (100% - ((100% - 1200px) / 2)) - 100px );
+		height: 560px;
+		background-image: url(../img/home/img_service.jpg);
+		@include adjustBg();
+	}
+	&__text {
+		background: #fff;
+		width: 470px;
+		margin-top: 380px;
+		padding: 60px 50px;
+		position: relative;
+		h3 {
+			position: absolute;
+			top: -50px;
+			left: -40px;
+			@include fontFamily(antro);
+			font-size: 10rem;
+			transform: rotate(-6deg);
+			letter-spacing: -2px;
+		}
+		p {
+			@include lineHeight(2.2);
+		}
+		.m-btn {
+			margin-top: 40px;
+			margin-left: 0;
+		}
+	}
+}
+
+
+
+
+
+/*
 .l-service {
 	margin-bottom: 180px;
 	position: relative;
@@ -455,18 +760,7 @@
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 //
@@ -474,17 +768,21 @@
 //
 .l-project {
 	position: relative;
+	margin-top: 100px;
 	&::before {
 		content: "";
 		display: block;
-		background: #ebebeb;
+		background: $color-gray1;
 		width: 100%;
 		height: 500px;
 		position: absolute;
-		top: 30px;
+		top: 70px;
 		left: 0;
-		z-index: -1;
+		z-index: 0;
 		pointer-events: none;
+	}
+	.m-btn {
+		margin-top: 30px;
 	}
 	@include screen-medium() {
 		.inner {
@@ -501,7 +799,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-top: 70px;
+	margin-top: 120px;
 	@include screen-medium() {
 		display: block;
 	}
@@ -514,14 +812,14 @@
 		&::before {
 			content: "Latest";
 			display: block;
-			font-family: 'Antro Vectra bolder';
-			font-size: 8.5rem;
+			@include fontFamily(antro);
+			font-size: 9rem;
 			position: absolute;
 			z-index: 1;
 			pointer-events: none;
-			transform: rotate(-8deg);
+			transform: rotate(-16deg);
 			top: -20px;
-			left: -30px;
+			left: -100px;
 		}
 		.item__wrap {
 			transform: skewY(-2.5deg);
@@ -582,9 +880,9 @@
 		top: -30px;
 	}
 	.item__ttl {
+		font-size: 1.8rem;
 		font-weight: bold;
 		letter-spacing: 1px;
-		//font-size: $font-;
 	}
 	&:hover {
 		.item__wrap {
@@ -621,18 +919,17 @@
 
 
 .l-pickup {
-	margin-top: 100px;
+	margin-top: 140px;
 	position: relative;
 	&::before {
 		content: "";
 		display: block;
-		background: #e6f4fc;
+		background: $primary-color;
 		width: 100%;
-		height: 270px;
+		height: 230px;
 		position: absolute;
-		top: 30px;
+		top: 70px;
 		left: 0;
-		z-index: -1;
 		pointer-events: none;
 	}
 	@include screen-medium() {
@@ -645,6 +942,7 @@
 }
 .pickup__list {
 	overflow: hidden;
+	margin-top: 50px;
 	padding-top: 20px;
 	padding-bottom: 40px;
 	.slick-dots {
@@ -741,13 +1039,12 @@
 	&::before {
 		content: "";
 		display: block;
-		background: #ebebeb;
+		background: $color-gray1;
 		width: 100%;
-		height: 270px;
+		height: 230px;
 		position: absolute;
-		top: 30px;
+		top: 70px;
 		left: 0;
-		z-index: -1;
 		pointer-events: none;
 	}
 	.article__btns {
@@ -778,6 +1075,7 @@
 	overflow: hidden;
 	padding-top: 20px;
 	padding-bottom: 40px;
+	margin-top: 30px;
 	.slick-dots {
 		position: absolute;
 		bottom: 0;
@@ -1042,8 +1340,25 @@
 	border-top: #ebebeb solid 1px;
 	margin-top: 120px;
 	position: relative;
-	background: #fff;
-	transition: all .3s ease;
+	background-image: url(../img/home/bg_recruit.png);
+	@include adjustBg();
+	background-position: center top;
+	background-color: #fff;
+
+	.m-ttl {
+		span {
+			font-size: 4.4rem;
+			&::before {
+				background: #fff;
+				margin: 20px auto;
+			}
+		}
+	}
+
+
+
+	//transition: all .3s ease;
+/*
 	&::before {
 		content: "";
 		width: 100%;
@@ -1054,12 +1369,12 @@
 		background-image: url(../img/home/bg_recruit.jpg);
 		background-size: cover;
 		background-position: center center;
-		z-index: -1;
+
 		opacity: .4;
 	}
+*/
 
 	&:hover {
-		background: none;
 		a {
 			&::after {
 				transform: translateX(20px);
@@ -1073,6 +1388,7 @@
 	a {
 		display: block;
 		padding: 80px 0;
+		color: #fff;
 		&::after {
 			content: "→";
 			display: block;

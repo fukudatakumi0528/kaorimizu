@@ -17,34 +17,45 @@ block contents
 	//- KV
 	//-
 	section.l-kv
-		video(src="assets/mov/officelab_top_mov.mp4" muted autoplay loop)
+		.kv__left
+			h1
+				| すべては、
+				br
+				| 働く人の
+				br
+				| 笑顔のために。
+				span All for the smile of working people.
+			.kv__slider_dots
+			.kv__scroll
+				a(href="#policy") #[span]
+		.kv__slider
+			ul.kv__slider_list.js-slickSlider--topkv
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_01.jpg)")
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_02.jpg)")
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_03.jpg)")
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_04.jpg)")
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_05.jpg)")
+				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_06.jpg)")
+
 
 
 
 	//-
 	//- MESSAGE
 	//-
-	section.l-massage
-		h2 POLICY#[span 大切にしていること]
-		.message__wrap.inner.-s
-			.message__fig
-				figure.-isPC(style="background-image:url(assets/img/home/img_message_01--PC.jpg)")
-				figure.-isSP(style="background-image:url(assets/img/home/img_message_01--SP.jpg)")
-			.message__text
-				h3 #[span ありがとう]で結ばれる<br>企業を目指して
-				h4 Who we are
-				p 小さくても大きくても「オフィス」です。
-				p
-					| 働く場所、集まる場所、戦略を考える場所。
-					br
-					| 企業によって様々な「オフィス」の在り方が存在します。
-					br
-					| 会社の規模ではなく、これからどういう会社にしていきたいか。
-					br
-					| その想いにオフィス・ラボは真摯に向き合い続けます。
-
-				a.m-btn(href="") COMPANY
-
+	section.l-policy#policy
+		.inner.-m
+			h2 #[span.en POLICY]#[span.jp 大切にしていること]
+			.policy__wrap
+				.policy__fig
+					figure.-isPC(style="background-image:url(assets/img/home/img_policy_01.png)")
+					figure.-isSP(style="background-image:url(assets/img/home/img_policy_01.png)")
+				.policy__text
+					h3 #[span ありがとう]で<br>結ばれる<br>企業を目指して
+					h4 Who we are
+					p 小さくても大きくても「オフィス」です。
+					p 働く場所、集まる場所、戦略を考える場所。<br>企業によって様々な「オフィス」の在り方が存在します。会社の規模ではなく、これからどういう会社にしていきたいか。その想いにオフィス・ラボは真摯に向き合い続けます。
+					a.m-btn(href="") COMPANY
 
 
 
@@ -52,23 +63,14 @@ block contents
 	//- SERVICE
 	//-
 	section.l-service
-		.inner
-			h2 SERVICE#[span できること]
-			h3 What we do
-		.inner
+		.inner.-m
+			.service__bg
 			.service__wrap
-				ul.service__slider
-					li
-						figure.-isPC(style="background-image:url(assets/img/home/img_service_01--PC.jpg)")
-						figure.-isSP(style="background-image:url(assets/img/home/img_service_01--SP.jpg)")
+				h2 #[span.en SERVICE]#[span.jp できること]
 				.service__text
-					p オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスのあり方」をご提案いたします。
+					h3 What we do
+					p オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。
 					a.m-btn(href="") MORE
-
-
-
-
-
 
 
 

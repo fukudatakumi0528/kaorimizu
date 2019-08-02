@@ -38,6 +38,62 @@
 
 
 
+
+
+//
+// font-family
+//
+@mixin fontFamily($family: $font-family-notosans) {
+	// base : notosans
+	// other : serif | vol | antro
+	// minchoは使わない?
+	//
+	@if $family == serif {
+		font-family: $font-family-notoserif;
+	} @else if $family == vol {
+		font-family: $font-family-vollkorn;
+	} @else if $family == antro {
+		font-family: $font-family-antrovectra;
+	} @else if $family == sans {
+		font-family: $font-family-notosans;
+	} @else if $family == micho {
+		font-family: source-han-serif-japanese, serif;
+	}
+}
+
+@mixin font-mincho() {
+	font-family: source-han-serif-japanese, serif;
+}
+
+
+
+//
+// line-height 上寄せ
+//
+@mixin lineHeight($line-height) {
+	line-height: $line-height;
+	&::before {
+		content: '';
+		display: block;
+		height: 0;
+		width: 0;
+		margin-top: calc((1 - #{$line-height}) * 0.5em);
+	}
+}
+
+
+
+
+
+//
+@mixin adjustBg() {
+	background-size: cover;
+	background-position: center center;
+}
+
+
+
+
 //
 // n番目以降
 //
