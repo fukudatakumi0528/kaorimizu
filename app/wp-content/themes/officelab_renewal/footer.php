@@ -141,8 +141,8 @@
 						<span class="tel -isPC"><?= COMPANY_TEL  ?></span>
 						<a class="m-btn -black" href="<?php home_url() ?>/contact/">CONTACT</a>
 					</div>
-					<small class="footer__copy"><?= date('Y'); ?> &copy; <?= COMPANY_NAME_EN ?></small>
 				</div>
+				<small class="footer__copy"><?= date('Y'); ?> &copy; <?= COMPANY_NAME_EN ?></small>
 			</footer>
 		</div>
 

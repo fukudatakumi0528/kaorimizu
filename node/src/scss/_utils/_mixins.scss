@@ -41,22 +41,27 @@
 
 
 //
-// font-family
+// font-family + weight + letter-space
 //
-@mixin fontFamily($family: $font-family-notosans) {
+@mixin fontFamily($family: $font-family-notosans, $weight: 400, $space: 0px) {
 	// base : notosans
 	// other : serif | vol | antro
 	// minchoは使わない?
 	//
 	@if $family == serif {
 		font-family: $font-family-notoserif;
+		font-weight: $weight;
+		letter-spacing: $space;
 	} @else if $family == vol {
 		font-family: $font-family-vollkorn;
+		font-weight: $weight;
+		letter-spacing: $space;
 	} @else if $family == antro {
 		font-family: $font-family-antrovectra;
 	} @else if $family == sans {
 		font-family: $font-family-notosans;
-	} @else if $family == micho {
+		font-weight: $weight;
+	} @else if $family == mincho {
 		font-family: source-han-serif-japanese, serif;
 	}
 }
@@ -83,6 +88,11 @@
 
 
 
+// トランジション
+@mixin transition($time: .3s) {
+	transition: all $time ease;
+}
+
 
 
 //
@@ -97,6 +107,14 @@
 //
 // n番目以降
 //
+@mixin after2() {
+	&:nth-of-type(n + 2) {
+		@content;
+	}
+}
+
+
+//旧
 @mixin after-the-n() {
 	&:nth-of-type(n + 2) {
 		@content;

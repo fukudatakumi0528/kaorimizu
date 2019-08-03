@@ -16,13 +16,13 @@
 			</div>
 			<div class="header__nav">
 				<ul>
-					<li><a href="<?= home_url() ?>/project/">PROJECT</a></li>
-					<li><a href="<?= home_url() ?>/service/">SERVICE</a></li>
-					<li><a href="<?= home_url() ?>/column/">COLUMN</a></li>
-					<li><a href="<?= home_url() ?>/news/">NEWS</a></li>
-					<li><a href="<?= home_url() ?>/recruit/">RECRUIT</a></li>
-					<li><a href="<?= home_url() ?>/company/">COMPANY</a></li>
-					<li><a href="<?= home_url() ?>/contact/">CONTACT</a></li>
+					<li><a href="<?= home_url() ?>/project/"><span>PROJECT</span>施工事例</a></li>
+					<li><a href="<?= home_url() ?>/service/"><span>SERVICE</span>サービス</a></li>
+					<li><a href="<?= home_url() ?>/column/"><span>COLUMN</span>コラム</a></li>
+					<li><a href="<?= home_url() ?>/news/"><span>NEWS</span>ニュース</a></li>
+					<li><a href="<?= home_url() ?>/recruit/"><span>RECRUIT</span>採用情報</a></li>
+					<li><a href="<?= home_url() ?>/company/"><span>COMPANY</span>企業情報</a></li>
+					<li><a href="<?= home_url() ?>/contact/"><span>CONTACT</span>お問い合わせ</a></li>
 				</ul>
 			</div>
 		</div>

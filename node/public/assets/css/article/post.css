@@ -105,7 +105,7 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #FFF002;
+  background: #f7e789;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -118,8 +118,8 @@ $font-xxl: 2rem;
   font-weight: bold;
   line-height: 1.4;
   display: inline;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, transparent), color-stop(50%, #FFF002));
-  background: linear-gradient(transparent 75%, #FFF002 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, transparent), color-stop(50%, #f7e789));
+  background: linear-gradient(transparent 75%, #f7e789 50%);
 }
 
 .article__header_info {
@@ -167,8 +167,8 @@ $font-xxl: 2rem;
 .article__body h1, .article__body h2, .article__body h3, .article__body h4 {
   font-size: 2.2rem;
   line-height: 1.4;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(50%, #FFF002));
-  background: linear-gradient(transparent 80%, #FFF002 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(50%, #f7e789));
+  background: linear-gradient(transparent 80%, #f7e789 50%);
   display: inline;
 }
 
@@ -296,12 +296,12 @@ $font-xxl: 2rem;
 
 .article__prevnext a {
   display: block;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .article__prevnext a:hover {
-  background: #FFF002;
+  opacity: .7;
 }
 
 .article__prevnext .prev,
@@ -450,8 +450,8 @@ $font-xxl: 2rem;
 
 .article__related li {
   background: #fff;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .article__related li:nth-of-type(n + 2) {
@@ -517,7 +517,7 @@ $font-xxl: 2rem;
 }
 
 .article__related li:hover {
-  background: #FFF002;
+  opacity: .7;
 }
 
 /**************************************
@@ -539,8 +539,8 @@ $font-xxl: 2rem;
 
 .article__new li {
   background: #fff;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .article__new li:nth-of-type(n + 2) {
@@ -597,5 +597,5 @@ $font-xxl: 2rem;
 }
 
 .article__new li:hover {
-  background: #FFF002;
+  opacity: .7;
 }

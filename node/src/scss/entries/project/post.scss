@@ -11,7 +11,7 @@
 	height: 500px;
 	position: relative;
 	margin-bottom: 100px;
-	margin-top: -100px;
+	margin-top: -130px;
 	padding-left: 16px;
 	.head__figure {
 		background-size: cover;
@@ -36,14 +36,15 @@
 		justify-content: flex-end;
 		padding-right: 40px;
 		h1 {
+			@include fontFamily(serif);
 			font-size: 3.2rem;
 			font-weight: bold;
 			margin-bottom: 24px;
 			line-height: 1.4;
 		}
 		h2 {
-			font-size: $font-l;
-			color: #666;
+			font-size: $font-m;
+			color: #555;
 			line-height: 1.4;
 		}
 	}
@@ -64,7 +65,7 @@
 		table {}
 		tr {}
 		td {
-			font-weight: bold;
+			//font-weight: bold;
 			padding: 16px 0;
 			@include screen-medium() {
 				padding: 12px 0;
@@ -278,12 +279,13 @@
 		margin-bottom: 40px;
 		display: flex;
 		font-size: $font-xl;
+		@include fontFamily(serif);
 		@include screen-medium() {
 			font-size: $font-s;
 			margin-bottom: 20px;
 		}
 		span {
-			font-family: 'Antro Vectra bolder';
+			@include fontFamily(antro);
 			font-size: 3rem;
 			padding-right: 30px;
 			margin-right: 20px;
@@ -445,7 +447,7 @@
 // RECOMMEND
 //
 .l-recommend {
-	margin-top: 60px;
+	margin-top: 100px;
 	margin-bottom: 100px;
 	@include screen-medium() {
 		padding: 0 12px;
@@ -455,6 +457,9 @@
 .recommend__title {
 	display: block;
 	margin-bottom: 30px;
+	@include fontFamily(vol);
+	font-weight: bold;
+	font-size: 2rem;
 }
 .recommend__slider {
 	display: flex;

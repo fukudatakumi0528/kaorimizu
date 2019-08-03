@@ -119,6 +119,7 @@ $font-xxl: 2rem;
   justify-content: center;
   text-align: center;
   margin: 64px 0 0;
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -210,6 +211,7 @@ $font-xxl: 2rem;
   text-align: center;
   font-weight: bold;
   font-size: 2.4rem;
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {

@@ -22,7 +22,6 @@
 	display: flex;
 	justify-content: center;
 	position: relative;
-
 	@include screen-medium(){
 		margin-top: 16px;
 		overflow: hidden;
@@ -98,6 +97,11 @@
 	justify-content: center;
 	text-align:center;
 	margin: 64px 0 0;
+
+	background-color: #fff;
+
+
+
 	@include screen-medium(){
 		margin-top: 32px;
 		display: block;
@@ -158,7 +162,6 @@
 			@include screen-medium() {
 				border: none;
 			}
-
 		}
 	}
 }
@@ -172,6 +175,7 @@
 	text-align:center;
 	font-weight:bold;
 	font-size:2.4rem;
+	background-color: #fff;
 	@include screen-medium(){
 		padding:24px 0;
 		font-size:$font-xxl;

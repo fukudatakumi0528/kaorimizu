@@ -24,15 +24,15 @@ body {
 	font-size: 1.6rem;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	font-family: 'Noto Sans JP', sans-serif;
-	color: #333;
+	@include fontFamily(sans);
+	color: #222;
 	text-rendering: optimizeLegibility;
 	letter-spacing: 0.02em;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	word-break: break-all;
-	//font-feature-settings : "palt";
-	font-feature-settings: "pkna"
+	font-feature-settings : "palt";
+	//font-feature-settings: "pkna"
 /*
 	@include screen-large(){
 		font-feature-settings : "pkna";

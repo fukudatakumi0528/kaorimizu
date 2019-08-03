@@ -4,49 +4,54 @@
 	get_header();
 ?>
 <main>
-
 	<section class="l-kv">
-		<video class="-isPC" src="<?= assetsPath('mov') ?>officelab20190329.mp4" muted autoplay loop></video>
-		<img class="-isSP" src="<?= assetsPath('img') ?>home/sp_kv.jpg">
+    <div class="kv__left">
+      <h1>すべては、<br>働く人の<br>笑顔のために。<span>All for the smile of working people.</span></h1>
+      <div class="kv__slider_dots"></div>
+      <div class="kv__scroll"><a href="#policy"><span></span></a></div>
+    </div>
+    <div class="kv__slider">
+      <ul class="kv__slider_list js-slickSlider--topkv">
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_01.jpg)"></li>
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_02.jpg)"></li>
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_03.jpg)"></li>
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_04.jpg)"></li>
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_05.jpg)"></li>
+        <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_06.jpg)"></li>
+      </ul>
+    </div>
 	</section>
 
-	<section class="l-massage">
-		<h2>POLICY<span>大切にしていること</span></h2>
-		<div class="message__wrap inner -s">
-			<div class="message__fig">
-				<figure class="-isPC" style="background-image:url(<?= assetsPath('img') ?>home/img_message_01--PC.jpg)"></figure>
-				<figure class="-isSP" style="background-image:url(<?= assetsPath('img') ?>home/img_message_01--SP.jpg)"></figure>
-			</div>
-			<div class="message__text">
-				<h3><span>ありがとう</span>で結ばれる<br>企業を目指して</h3>
-				<h4>Who we are</h4>
-				<p>小さくても大きくても「オフィス」です。</p>
-				<p>働く場所、集まる場所、戦略を考える場所。<br>企業によって様々な「オフィス」の在り方が存在します。<br>会社の規模ではなく、これからどういう会社にしていきたいか。<br>その想いにオフィス・ラボは真摯に向き合い続けます。</p>
-				<a class="m-btn" href="<?php home_url() ?>/company/">COMPANY</a>
-			</div>
-		</div>
-	</section>
+	<section class="l-policy" id="policy">
+    <div class="inner -m">
+      <h2><span class="en">POLICY</span><span class="jp">大切にしていること</span></h2>
+      <div class="policy__wrap">
+        <div class="policy__fig">
+          <figure class="-isPC" style="background-image:url(<?= assetsPath('img') ?>home/img_policy_01.png)"></figure>
+          <figure class="-isSP" style="background-image:url(<?= assetsPath('img') ?>home/img_policy_01.png)"></figure>
+        </div>
+        <div class="policy__text">
+          <h3><span>ありがとう</span>で<br>結ばれる<br>企業を目指して</h3>
+          <h4>Who we are</h4>
+          <p>小さくても大きくても「オフィス」です。</p>
+          <p>働く場所、集まる場所、戦略を考える場所。<br>企業によって様々な「オフィス」の在り方が存在します。会社の規模ではなく、これからどういう会社にしていきたいか。その想いにオフィス・ラボは真摯に向き合い続けます。</p><a class="m-btn" href="<?php home_url() ?>/company/">COMPANY</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 	<section class="l-service">
-		<div class="inner">
-			<h2>SERVICE<span>できること</span></h2>
-			<h3>What we do</h3>
-		</div>
-		<div class="inner">
-			<div class="service__wrap">
-				<ul class="service__slider">
-					<li>
-						<figure class="-isPC" style="background-image:url(<?= assetsPath('img') ?>home/img_service_01--PC.jpg)"></figure>
-						<figure class="-isSP" style="background-image:url(<?= assetsPath('img') ?>home/img_service_01--SP.jpg)"></figure>
-					</li>
-				</ul>
-				<div class="service__text">
-					<p>オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。</p>
-					<a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
+    <div class="inner -m">
+      <div class="service__bg"></div>
+      <div class="service__wrap">
+        <h2><span class="en">SERVICE</span><span class="jp">できること</span></h2>
+        <div class="service__text">
+          <h3>What we do</h3>
+          <p>オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。</p><a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 	<section class="l-project">
 		<div class="inner -s">
@@ -149,8 +154,6 @@
 			<a class="m-btn" href="<?= home_url() ?>/column/">COLUMN ARCHIVE</a></div>
 	</section>
 
-
-
 	<?php /*
 	<section class="l-voice">
 		<h2 class="m-ttl">VOICE<span>お客様の声</span></h2>
@@ -179,12 +182,12 @@
 	</section>
 	*/ ?>
 
-
 	<section class="l-recruit">
 		<a href="<?= home_url() ?>/recruit/">
 			<h2 class="m-ttl">RECRUIT<span>採用情報</span></h2>
 			<p>「ありがとう」で結ばれる会社で<br>共に夢を叶えませんか？</p>
 		</a>
 	</section>
+
 </main>
 <?php get_footer() ?>

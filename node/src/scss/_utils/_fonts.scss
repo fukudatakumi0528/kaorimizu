@@ -26,9 +26,63 @@
 
 
 
-//NotoSnas JP
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700');
 
+
+
+
+
+//GoogleFont
+// NotoSansJp 400 , 500 , 700
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Noto+Serif+JP:400,500,600,700,900|Vollkorn:400,600,700,900&display=swap&subset=japanese');
+
+
+
+// AntroVectra (手書き風文字)
+// 手書き風文字 - 細字
+@font-face {
+	font-family: 'Antro Vectra';
+	src: url('../fonts/AntroVectra/Antro_Vectra.eot');
+	src: url('../fonts/AntroVectra/Antro_Vectra.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AntroVectra/Antro_Vectra.woff2') format('woff2'),
+		url('../fonts/AntroVectra/Antro_Vectra.woff') format('woff');
+	//font-weight: bold;
+	font-style: normal;
+}
+
+// AntroVectra_bold (手書き風文字)
+// 手書き風文字 - 太字
+@font-face {
+	font-family: 'Antro Vectra bolder';
+	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot');
+	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff2') format('woff2'),
+		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************
+2019.7月改修後未使用
 
 //筑紫丸ゴシック（日本語丸文字）
 @font-face {
@@ -42,7 +96,6 @@
 	font-style: normal;
 }
 
-
 // AvenirNext（英字太文字）
 @font-face {
 	font-family: 'Avenir Next';
@@ -54,27 +107,4 @@
 	font-weight: bold;
 	font-style: normal;
 }
-
-
-
-// AntroVectra (手書き風文字)
-@font-face {
-	font-family: 'Antro Vectra';
-	src: url('../fonts/AntroVectra/Antro_Vectra.eot');
-	src: url('../fonts/AntroVectra/Antro_Vectra.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/AntroVectra/Antro_Vectra.woff2') format('woff2'),
-		url('../fonts/AntroVectra/Antro_Vectra.woff') format('woff');
-	//font-weight: bold;
-	font-style: normal;
-}
-
-// AntroVectra_bold (手書き風文字)
-@font-face {
-	font-family: 'Antro Vectra bolder';
-	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot');
-	src: url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff2') format('woff2'),
-		url('../fonts/AntroVectra_bolder/Antro_Vectra_Bolder.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
+**********************************/

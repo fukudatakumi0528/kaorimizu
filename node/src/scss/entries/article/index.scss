@@ -104,6 +104,7 @@
 	margin-bottom: 40px;
 	width: calc( (100% / 3) - 20px );
 	background: #fff;
+	transition: all .3s ease;
 	@include screen-medium() {
 		width: 100%;
 		margin-bottom: 20px;
@@ -158,5 +159,8 @@
 		@include screen-medium() {
 			font-size: $font-s;
 		}
+	}
+	&:hover {
+		opacity: .8;
 	}
 }

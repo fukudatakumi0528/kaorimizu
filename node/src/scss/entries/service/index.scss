@@ -32,7 +32,7 @@
 			display: block;
 			width: 200px;
 			height: 160px;
-			background: $base-color-yellow;
+			background: $primary-color;
 			position: absolute;
 			top: 18%;
 			left: 100%;
@@ -70,7 +70,7 @@
 	position: relative;
 	b {
 		content: "Total Produce";
-		font-family: 'Antro Vectra bolder';
+		@include fontFamily(antro);
 		font-size: 5.5rem;
 		position: absolute;
 		top: 0;
@@ -84,14 +84,17 @@
 		}
 	}
 	h1 {
+		@include fontFamily(serif);
 		font-size: 3.6rem;
 		font-weight: bold;
 		line-height: 1.4;
-		margin-bottom: 24px;
+		margin-bottom: 40px;
+		letter-spacing: 8px;
 	}
 	p {
+		@include lineHeight(2.2);
 		& + p {
-			margin-top: 1.8rem;
+			margin-top: 30px;
 		}
 	}
 	@include screen-medium() {
@@ -123,10 +126,14 @@
 		font-size: 3.6rem;
 		font-weight: bold;
 		margin-bottom: 50px;
+		@include fontFamily(serif);
+		letter-spacing: 5px;
 		span {
 			display: block;
 			font-size: $font-m;
 			margin-bottom: 16px;
+			@include fontFamily(vol);
+			letter-spacing: 2px;
 		}
 	}
 	@include screen-medium() {
@@ -146,12 +153,16 @@
 			font-size: 2.2rem;
 			font-weight: bold;
 			line-height: 1.4;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
+			@include fontFamily(serif);
+			@include lineHeight(1.6);
+			letter-spacing: 3px;
 		}
 	}
 	p {
+		@include lineHeight(2);
 		& + p {
-			margin-top: 1.8rem;
+			margin-top: 30px;
 		}
 	}
 	@include screen-medium() {
@@ -177,7 +188,7 @@
 				display: block;
 				width: 50%;
 				height: 90%;
-				background: #f6f6f6;
+				background: $color-gray1;
 				position: absolute;
 				top: -35%;
 				left: -80px;
@@ -189,14 +200,16 @@
 			position: relative;
 			&::before {
 				content: "01";
-				font-family: 'Avenir Next';
+				@include fontFamily(vol);
+				font-weight: bold;
 				position: absolute;
 				top: -80px;
 				left: -100px;
-				color: #f6f6f6;
+				color: $color-gray1;
 				font-size: 200px;
 				z-index: -1;
 				letter-spacing: -10px;
+				opacity: .7;
 			}
 		}
 		@include screen-medium() {
@@ -239,7 +252,7 @@
 				display: block;
 				width: 90%;
 				height: 90%;
-				background: $base-color-yellow;
+				background: $primary-color;
 				position: absolute;
 				bottom: 28%;
 				left: 35%;
@@ -252,11 +265,13 @@
 			padding-left: 40px;
 			&::before {
 				content: "02";
-				font-family: 'Avenir Next';
+				@include fontFamily(vol);
+				font-weight: bold;
 				position: absolute;
 				top: 0px;
 				left: 20%;
-				color: #f6f6f6;
+				color: $color-gray1;
+				opacity: .7;
 				font-size: 200px;
 				z-index: -1;
 				letter-spacing: -10px;
@@ -302,7 +317,7 @@
 				display: block;
 				width: 50%;
 				height: 90%;
-				background: #f6f6f6;
+				background: $color-gray1;
 				position: absolute;
 				top: -35%;
 				left: -80px;
@@ -314,7 +329,9 @@
 			position: relative;
 			&::before {
 				content: "03";
-				font-family: 'Avenir Next';
+				@include fontFamily(vol);
+				font-weight: bold;
+				opacity: .7;
 				position: absolute;
 				top: -80px;
 				left: 45%;
@@ -391,7 +408,8 @@
 		justify-content: center;
 	}
 	h3 {
-		font-size: 2.2rem;
+		font-size: 1.8rem;
+		//@include fontFamily(serif);
 		font-weight: bold;
 		margin-bottom: 16px;
 	}

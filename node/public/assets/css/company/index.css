@@ -16,120 +16,9 @@ $font-xxl: 2rem;
   }
 }
 
-.l-company {
-  border-top: #e0e0e0 solid 1px;
-}
-
 @media (max-width: 767px) {
   .l-company {
     border-top: none;
-  }
-}
-
-.change__tab {
-  margin-bottom: 60px;
-}
-
-.change__tab ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  top: -1px;
-}
-
-.change__tab li {
-  font-weight: bold;
-  position: relative;
-  color: #b1b1b1;
-  cursor: pointer;
-}
-
-.change__tab li:nth-of-type(n + 2)::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 16px;
-  background: #ebebeb;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.change__tab li a {
-  display: block;
-  padding: 20px 60px 10px;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-.change__tab li.-isActive {
-  color: #333;
-  border-top: #000 solid 1px;
-  pointer-events: none;
-  padding: 19px 60px 10px;
-}
-
-.change__tab li:hover {
-  color: #ffcf21;
-}
-
-@media (max-width: 767px) {
-  .change__tab {
-    border-top: #e0e0e0 solid 1px;
-    border-bottom: #e0e0e0 solid 1px;
-    margin-bottom: 40px;
-  }
-  .change__tab ul {
-    display: block;
-  }
-  .change__tab li {
-    padding: 0;
-  }
-  .change__tab li a {
-    padding: 16px 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .change__tab li a::after {
-    content: "\e901";
-    font-family: 'icomoon';
-  }
-  .change__tab li:nth-of-type(n + 2) {
-    border-top: #eee solid 1px !important;
-  }
-  .change__tab li:nth-of-type(n + 2)::before {
-    content: none;
-  }
-  .change__tab li.-isActive {
-    padding: 16px 12px;
-    border-top: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .change__tab li.-isActive::after {
-    content: "\e901";
-    font-family: 'icomoon';
-    opacity: 0;
   }
 }
 
@@ -258,6 +147,7 @@ $font-xxl: 2rem;
 .company__caption {
   width: 50%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media (max-width: 767px) {
@@ -270,6 +160,9 @@ $font-xxl: 2rem;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 1.5;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
 }
 
 @media (max-width: 767px) {

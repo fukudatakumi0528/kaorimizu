@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Noto+Serif+JP:400,500,600,700,900|Vollkorn:400,600,700,900&display=swap&subset=japanese");
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/fonts/icomoon.eot?m0m6g");
@@ -23,26 +23,6 @@
 }
 
 @font-face {
-  font-family: fot-tsukuardgothic-std, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: fot-tsukuardgothic-std, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url("../fonts/AvenirNext-Bold/AvenirNext-Bold.eot");
-  src: url("../fonts/AvenirNext-Bold/AvenirNext-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Bold/AvenirNext-Bold.woff2") format("woff2"), url("../fonts/AvenirNext-Bold/AvenirNext-Bold.woff") format("woff"), url("../fonts/AvenirNext-Bold/AvenirNext-Bold.svg#AvenirNext-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Antro Vectra';
   src: url("../fonts/AntroVectra/Antro_Vectra.eot");
   src: url("../fonts/AntroVectra/Antro_Vectra.eot?#iefix") format("embedded-opentype"), url("../fonts/AntroVectra/Antro_Vectra.woff2") format("woff2"), url("../fonts/AntroVectra/Antro_Vectra.woff") format("woff");
@@ -57,6 +37,33 @@
   font-style: normal;
 }
 
+/*********************************
+2019.7月改修後未使用
+
+//筑紫丸ゴシック（日本語丸文字）
+@font-face {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+// AvenirNext（英字太文字）
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('../fonts/AvenirNext-Bold/AvenirNext-Bold.eot');
+	src: url('../fonts/AvenirNext-Bold/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.woff2') format('woff2'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.woff') format('woff'),
+		url('../fonts/AvenirNext-Bold/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+**********************************/
 /*
 	ress.css ¥ v1.2.2
 	MIT License
@@ -545,15 +552,21 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #222;
   text-rendering: optimizeLegibility;
   letter-spacing: 0.02em;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-all;
-  -webkit-font-feature-settings: "pkna";
-  font-feature-settings: "pkna";
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: "palt";
+  /*
+	@include screen-large(){
+		font-feature-settings : "pkna";
+	}
+*/
 }
 
 a {
@@ -653,7 +666,6 @@ $font-xxl: 2rem;
 */
 .c-companyinfo {
   overflow: hidden;
-  padding-right: 20px;
 }
 
 .c-companyinfo table {
@@ -662,16 +674,19 @@ $font-xxl: 2rem;
 
 .c-companyinfo th {
   text-align: right;
-  padding-right: 50px;
+  padding-right: 30px;
   font-weight: bold;
   color: #BDBDBD;
   position: relative;
   top: 1px;
+  width: 400px;
 }
 
 .c-companyinfo td {
   padding-bottom: 30px;
-  width: 68%;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 800px;
   font-size: 1.4rem;
 }
 
@@ -1124,6 +1139,7 @@ $font-xxl: 2rem;
   align-items: center;
   border: 1px solid #f2f2f2;
   position: relative;
+  background: #fff;
 }
 
 .c-presidentlink a {
@@ -1275,6 +1291,122 @@ $font-xxl: 2rem;
   }
 }
 
+.c-tab {
+  /*
+	@include screen-medium() {
+		border-top: #e0e0e0 solid 1px;
+		border-bottom: #e0e0e0 solid 1px;
+		margin-bottom: 40px;
+		ul {
+			display: block;
+		}
+		li {
+			padding: 0;
+			a {
+				padding: 16px 12px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+				}
+			}
+			&:nth-of-type(n + 2) {
+				border-top: #eee solid 1px!important;
+				&::before {
+					content: none;
+				}
+			}
+			&.-isActive {
+				padding: 16px 12px;
+				border-top: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+					opacity: 0;
+				}
+			}
+		}
+	}
+*/
+}
+
+.c-tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  top: -1px;
+}
+
+.c-tab li {
+  width: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.c-tab li a {
+  text-align: center;
+  display: block;
+  padding: 15px 0;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.c-tab li a::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00235c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.c-tab li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00235c;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.c-tab li a:hover {
+  color: #00235c;
+}
+
+.c-tab li a:hover::before, .c-tab li a:hover::after {
+  width: 35%;
+}
+
+.c-tab li a.-isActive {
+  color: #00235c;
+  pointer-events: none;
+  cursor: all-scroll !important;
+}
+
+.c-tab li a.-isActive::before, .c-tab li a.-isActive::after {
+  width: 35%;
+}
+
 /*
 
 
@@ -1299,7 +1431,13 @@ $font-xxl: 2rem;
   overflow: hidden;
   background-image: url(../img/common/bg.gif);
   background-repeat: repeat;
-  background-position: 80px center;
+  position: relative;
+  background-position: calc(50%) center;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 .inner {
@@ -1428,16 +1566,19 @@ $font-xxl: 2rem;
 .footer__pager .breadcrumb ol li {
   white-space: nowrap;
   font-size: 1.2rem;
+  color: #888;
 }
 
 .footer__pager .breadcrumb ol li:nth-of-type(1) a {
   display: inline-block;
+  color: #888;
 }
 
 .footer__pager .breadcrumb ol li:nth-of-type(1) a::before {
   content: "\e905";
   font-family: 'icomoon';
   display: block;
+  color: #888;
 }
 
 .footer__pager .breadcrumb ol li:nth-of-type(n + 2) {
@@ -1480,6 +1621,7 @@ $font-xxl: 2rem;
   font-family: 'icomoon';
   display: block;
   font-size: 2rem;
+  color: #888;
 }
 
 _:-ms-lang(x), .breadcrumb ol {
@@ -1534,7 +1676,10 @@ _:-ms-lang(x), .breadcrumb ol {
 
 .footer__nav dt a {
   display: block;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   letter-spacing: 1px;
   background-image: url(../img/common/line_3dots.gif);
   background-repeat: repeat-x;
@@ -1547,6 +1692,8 @@ _:-ms-lang(x), .breadcrumb ol {
   font-family: 'icomoon';
   font-size: 1.2rem;
   float: right;
+  position: relative;
+  top: 1px;
 }
 
 .footer__nav li a {
@@ -1632,6 +1779,8 @@ _:-ms-lang(x), .breadcrumb ol {
   font-size: 2rem;
   margin-bottom: 30px;
   font-family: "Vollkorn", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   letter-spacing: 2px;
 }
 
@@ -1656,6 +1805,8 @@ _:-ms-lang(x), .breadcrumb ol {
   padding: 15px 0;
   font-weight: bold;
   font-family: "Vollkorn", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   font-size: 1.2rem;
 }
 
@@ -1697,6 +1848,7 @@ _:-ms-lang(x), .breadcrumb ol {
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
+  padding: 0 5px;
 }
 
 .header__logo a {
@@ -1733,9 +1885,8 @@ _:-ms-lang(x), .breadcrumb ol {
 }
 
 .header__nav ul li {
-  margin-left: 60px;
+  margin-left: 58px;
   text-align: center;
-  letter-spacing: 2px;
 }
 
 .header__nav ul li:first-child {
@@ -1744,21 +1895,65 @@ _:-ms-lang(x), .breadcrumb ol {
 
 .header__nav ul li a {
   display: block;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1.4rem;
-  letter-spacing: 3px;
   font-family: "Noto Serif JP", serif;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 8px;
 }
 
-.header__nav ul li span {
+.header__nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00235c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.header__nav ul li a::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00235c;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.header__nav ul li a span {
   font-size: 1rem;
   display: block;
   margin-bottom: 8px;
   font-family: "Vollkorn", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   color: #888;
   letter-spacing: 2px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.header__nav ul li a:hover {
+  color: #00235c;
+}
+
+.header__nav ul li a:hover::after, .header__nav ul li a:hover::before {
+  width: 50%;
+}
+
+.header__nav ul li a:hover span {
+  color: #00235c;
 }
 
 @media (max-width: 767px) {
@@ -1876,13 +2071,13 @@ _:-ms-lang(x), .breadcrumb ol {
   align-items: center;
   background-color: #00235c;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.1);
   font-family: "Vollkorn", serif;
+  font-weight: 400;
   letter-spacing: 3px;
-  font-weight: bold;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   margin: 0 auto;
 }
@@ -1894,8 +2089,8 @@ _:-ms-lang(x), .breadcrumb ol {
   background: #fff;
   position: absolute;
   right: 20px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .m-btn::after {
@@ -1908,12 +2103,12 @@ _:-ms-lang(x), .breadcrumb ol {
   right: 20px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .m-btn:hover {
-  background: #f3f3f3;
+  background: #fff;
   color: #00235c;
 }
 
@@ -2137,18 +2332,19 @@ $font-xxl: 2rem;
 .m-ttl {
   text-align: center;
   font-family: "Vollkorn", serif;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 4px;
+  font-size: 1.8rem;
   position: relative;
   z-index: 1;
 }
 
 .m-ttl span {
   display: block;
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   font-family: "Noto Serif JP", serif;
   font-weight: 600;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 }
 
 .m-ttl span::before {
@@ -2191,6 +2387,9 @@ $font-xxl: 2rem;
   display: block;
   text-align: center;
   line-height: 1.5;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
 }
 
 @media (max-width: 767px) {
@@ -2208,6 +2407,6 @@ $font-xl: 1.8rem;
 $font-xxl: 2rem;
 */
 .m-underline {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(72%, transparent), color-stop(72%, #FFF002));
-  background: linear-gradient(transparent 72%, #FFF002 72%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(72%, transparent), color-stop(72%, #f7e789));
+  background: linear-gradient(transparent 72%, #f7e789 72%);
 }

@@ -1,0 +1,103 @@
+.c-tab {
+	ul {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: -1px;
+	}
+	li {
+		width: 200px;
+		position: relative;
+		cursor: pointer;
+		a {
+			text-align: center;
+			display: block;
+			padding: 15px 0;
+			transition: color .2s ease;
+			position: relative;
+			font-weight: bold;
+			letter-spacing: 2px;
+			&::before {
+				content: "";
+				display: block;
+				width: 0%;
+				height: 2px;
+				background: $secondary-color;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transition: all .3s ease;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 0%;
+				height: 2px;
+				background: $secondary-color;
+				position: absolute;
+				bottom: 0;
+				right: 50%;
+				transition: all .3s ease;
+			}
+			&:hover {
+				color: $secondary-color;
+				&::before,
+				&::after {
+					width: 35%;
+				}
+			}
+			&.-isActive {
+				color: $secondary-color;
+				pointer-events: none;
+				cursor: all-scroll!important;
+				&::before,
+				&::after {
+					width: 35%;
+				}
+			}
+		}
+	}
+
+
+/*
+	@include screen-medium() {
+		border-top: #e0e0e0 solid 1px;
+		border-bottom: #e0e0e0 solid 1px;
+		margin-bottom: 40px;
+		ul {
+			display: block;
+		}
+		li {
+			padding: 0;
+			a {
+				padding: 16px 12px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+				}
+			}
+			&:nth-of-type(n + 2) {
+				border-top: #eee solid 1px!important;
+				&::before {
+					content: none;
+				}
+			}
+			&.-isActive {
+				padding: 16px 12px;
+				border-top: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&::after {
+					content: "\e901";
+					font-family: 'icomoon';
+					opacity: 0;
+				}
+			}
+		}
+	}
+*/
+}

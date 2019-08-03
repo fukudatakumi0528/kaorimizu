@@ -135,6 +135,8 @@ $font-xxl: 2rem;
   margin-bottom: 40px;
   width: calc( (100% / 3) - 20px);
   background: #fff;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 @media (max-width: 767px) {
@@ -212,4 +214,8 @@ $font-xxl: 2rem;
   .articles__item time, .articles__item span {
     font-size: 1.4rem;
   }
+}
+
+.articles__item:hover {
+  opacity: .8;
 }

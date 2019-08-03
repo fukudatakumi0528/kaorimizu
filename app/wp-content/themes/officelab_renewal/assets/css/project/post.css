@@ -10,7 +10,7 @@ $font-xxl: 2rem;
   height: 500px;
   position: relative;
   margin-bottom: 100px;
-  margin-top: -100px;
+  margin-top: -130px;
   padding-left: 16px;
 }
 
@@ -48,6 +48,9 @@ $font-xxl: 2rem;
 }
 
 .l-head.-isPC .head__content h1 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
   font-size: 3.2rem;
   font-weight: bold;
   margin-bottom: 24px;
@@ -55,8 +58,8 @@ $font-xxl: 2rem;
 }
 
 .l-head.-isPC .head__content h2 {
-  font-size: 1.8rem;
-  color: #666;
+  font-size: 1.6rem;
+  color: #555;
   line-height: 1.4;
 }
 
@@ -78,7 +81,6 @@ $font-xxl: 2rem;
 }
 
 .l-head.-isPC .head__content_table td {
-  font-weight: bold;
   padding: 16px 0;
 }
 
@@ -324,6 +326,9 @@ $font-xxl: 2rem;
   display: -ms-flexbox;
   display: flex;
   font-size: 2rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
 }
 
 @media (max-width: 767px) {
@@ -334,7 +339,7 @@ $font-xxl: 2rem;
 }
 
 .l-message h2 span {
-  font-family: 'Antro Vectra bolder';
+  font-family: "Antro Vectra bolder";
   font-size: 3rem;
   padding-right: 30px;
   margin-right: 20px;
@@ -531,7 +536,7 @@ $font-xxl: 2rem;
 }
 
 .l-recommend {
-  margin-top: 60px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -545,6 +550,11 @@ $font-xxl: 2rem;
 .recommend__title {
   display: block;
   margin-bottom: 30px;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .recommend__slider {
