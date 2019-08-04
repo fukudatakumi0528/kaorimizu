@@ -136,7 +136,7 @@ _:-ms-lang(x), .breadcrumb ol {
 		a {
 			display: block;
 			font-weight: 600;
-			@include fontFamily(serif);
+			@include fontFamily(serif, 600, 1px);
 			letter-spacing: 1px;
 			background-image: url(../img/common/line_3dots.gif);
 			background-repeat: repeat-x;

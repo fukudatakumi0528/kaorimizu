@@ -571,7 +571,7 @@ body {
 
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(243, 226, 34, 0.5);
+  -webkit-tap-highlight-color: rgba(243, 226, 34, 0.2);
   color: inherit;
 }
 
@@ -1689,8 +1689,8 @@ _:-ms-lang(x), .breadcrumb ol {
   display: block;
   font-weight: 600;
   font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
+  font-weight: 600;
+  letter-spacing: 1px;
   letter-spacing: 1px;
   background-image: url(../img/common/line_3dots.gif);
   background-repeat: repeat-x;
@@ -1993,7 +1993,7 @@ _:-ms-lang(x), .breadcrumb ol {
   }
   .header__nav ul li a {
     font-size: 1.6rem;
-    padding: 12px 0 12px 33px;
+    padding: 12px 0 12px 0;
     display: block;
   }
 }
