@@ -11,12 +11,12 @@
 		<h1 class="m-ttl">COMPANY<span>企業情報</span></h1>
 	</div>
 	<section class="l-company inner -m">
-		<div class="change__tab">
-			<ul>
-				<li class="-isActive"><span>企業情報</span></li>
-				<li><a href="<?php home_url() ?>/company/message/">代表挨拶</a></li>
-			</ul>
-		</div>
+		<div class="message__tab c-tab">
+      <ul>
+        <li><a class="-isActive" href="<?php home_url() ?>/company/">企業情報</a></li>
+        <li><a href="<?php home_url() ?>/company/message">代表挨拶</a></li>
+      </ul>
+    </div>
 		<div class="company__items">
 			<section class="company__top">
 				<div class="company__top__img"></div>

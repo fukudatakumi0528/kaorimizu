@@ -17,121 +17,8 @@ $font-xxl: 2rem;
   }
 }
 
-.l-contact {
-  border-top: #e0e0e0 solid 1px;
-}
-
-@media (max-width: 767px) {
-  .l-contact {
-    border-top: none;
-  }
-}
-
 .contact__tab {
   margin-bottom: 60px;
-}
-
-.contact__tab ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  top: -1px;
-}
-
-.contact__tab li {
-  font-weight: bold;
-  position: relative;
-  color: #b1b1b1;
-  cursor: pointer;
-}
-
-.contact__tab li:nth-of-type(n + 2)::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 16px;
-  background: #ebebeb;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.contact__tab li a {
-  display: block;
-  padding: 20px 30px 10px;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-.contact__tab li.-isActive {
-  color: #333;
-  border-top: #000 solid 1px;
-  pointer-events: none;
-  padding: 19px 30px 10px;
-}
-
-.contact__tab li:hover {
-  color: #ffcf21;
-}
-
-@media (max-width: 767px) {
-  .contact__tab {
-    border-top: #e0e0e0 solid 1px;
-    border-bottom: #e0e0e0 solid 1px;
-    margin-bottom: 40px;
-  }
-  .contact__tab ul {
-    display: block;
-  }
-  .contact__tab li {
-    padding: 0;
-  }
-  .contact__tab li a {
-    padding: 16px 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .contact__tab li a::after {
-    content: "\e901";
-    font-family: 'icomoon';
-  }
-  .contact__tab li:nth-of-type(n + 2) {
-    border-top: #eee solid 1px !important;
-  }
-  .contact__tab li:nth-of-type(n + 2)::before {
-    content: none;
-  }
-  .contact__tab li.-isActive {
-    padding: 16px 12px;
-    border-top: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .contact__tab li.-isActive::after {
-    content: "\e901";
-    font-family: 'icomoon';
-    opacity: 0;
-  }
 }
 
 .contact__panel {
@@ -177,7 +64,7 @@ $font-xxl: 2rem;
 .contact__panel_form dt.-isRequired::before {
   content: "必須";
   display: inline-block;
-  background: #EB5757;
+  background: #cd2f27;
   font-size: .8rem;
   color: #fff;
   padding: 5px 8px;
@@ -188,7 +75,7 @@ $font-xxl: 2rem;
 .contact__panel_form dt.-isNonRequired::before {
   content: "任意";
   display: inline-block;
-  background: #8fe723;
+  background: #87d03e;
   font-size: .8rem;
   color: #fff;
   padding: 5px 8px;

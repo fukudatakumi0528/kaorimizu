@@ -11,12 +11,12 @@
 		<h1 class="m-ttl">MESSAGE<span>代表挨拶</span></h1>
 	</div>
 	<section class="l-message inner -m">
-		<div class="change__tab">
-			<ul>
-				<li><a href="<?php home_url() ?>/company/">企業情報</a></li>
-				<li class="-isActive"><span>代表挨拶</span></li>
-			</ul>
-		</div>
+		<div class="message__tab c-tab">
+      <ul>
+        <li><a href="<?php home_url() ?>/company/">企業情報</a></li>
+        <li><a class="-isActive" href="<?php home_url() ?>/company/message">代表挨拶</a></li>
+      </ul>
+    </div>
 		<div class="message__items">
 			<div class="message__img">
 				<figure class="-isPC" style="background-image: url(<?= assetsPath('img') ?>message/img_watanabe-kouichirou--PC.png)"></figure>
@@ -29,16 +29,12 @@
 						<figure>
 							<img src="<?= assetsPath('img') ?>message/img_message.png" alt="">
 						</figure>
-						<?php /*
-						<h1><span>お客様に常に寄<span>り</span>添い、</span><br><span>支<span>え</span>続け<span>る</span>最良の</span><br><span>パー<span>ト</span>ナーであ<span>り</span>たい</span></h1>
-						*/ ?>
 					</div>
 				</div>
 				<div class="message__right">
 					<div class="message__head"><b>お客様、協力企業、社員とその家族、<br>すべての方々から永遠に愛され、<br>真に社会に貢献する。<br>「ありがとう」で結ばれる企業を目指して<br>私たちは成長し続けます。</b></div>
 					<div class="message__title--SP -isSP">
 						<img src="<?= assetsPath('img') ?>message/img_message.png" alt="">
-						<?php /* <h1>お客様に常に寄り添い、<br>支え続ける最良の<br>パートナーでありたい</h1> */ ?>
 					</div>
 					<div class="message__text">
 						<h2>お客様に常に寄り添い、<br>支え続ける最良のパートナーでありたい。</h2>

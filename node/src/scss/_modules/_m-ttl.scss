@@ -28,46 +28,12 @@
 }
 
 
-
-
-
-
-
-/*
-.m-ttl {
-	font-size: 5rem;
-	font-family: 'Avenir Next';
-	font-weight: bold;
-	letter-spacing: 7px;
-	display: block;
-	text-align: center;
-	@include screen-medium(){
-		font-size:2.8rem;
-		letter-spacing: 3px;
-	}
-	span {
-		display: block;
-		letter-spacing: 2px;
-		font-size: $font-l;
-		margin-top: 20px;
-		font-weight: bold;
-		@include screen-medium() {
-			font-size: $font-s;
-		}
-	}
-}
-*/
-
 .m-ttl2 {
 	font-size: 3.6rem;
-	font-weight: bold;
-	letter-spacing: 4px;
+	@include fontFamily(serif, 700, 4px);
+	@include lineHeight(1.6);
 	display: block;
 	text-align: center;
-	line-height:1.5;
-	@include fontFamily(serif);
-
-
 	@include screen-medium(){
 		font-size:2.4rem;
 	}

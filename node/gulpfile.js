@@ -29,9 +29,7 @@ const options = {
   },
   WEBPACK: {
     entry: {
-	    'common':		'./src/js/entries/common.js',
-	    'home':		'./src/js/entries/home.js',
-	    'project/index':		'./src/js/entries/project/index.js'
+	    'common':		'./src/js/entries/common.js'
     },
     output: {
       filename: '[name].js',
@@ -103,7 +101,7 @@ gulp.task('scss', () => {
 gulp.task('scss-wp', () => {
   return gulp.src(`${options.SRC_PATH}/scss/entries/**/*.scss`)
     .pipe(sassGlob())
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer(options.AUTOPREFIXER))
     .pipe(gulp.dest(`${options.THEME_PATH}/assets/css/`))
     .pipe(browserSync.stream());

@@ -84,12 +84,10 @@
 		}
 	}
 	h1 {
-		@include fontFamily(serif);
+		@include fontFamily(serif, 600, 8px);
 		font-size: 3.6rem;
-		font-weight: bold;
 		line-height: 1.4;
 		margin-bottom: 40px;
-		letter-spacing: 8px;
 	}
 	p {
 		@include lineHeight(2.2);
@@ -124,16 +122,13 @@
 	margin-top: 40px;
 	h2 {
 		font-size: 3.6rem;
-		font-weight: bold;
 		margin-bottom: 50px;
-		@include fontFamily(serif);
-		letter-spacing: 5px;
+		@include fontFamily(serif, 600, 5px);
 		span {
 			display: block;
 			font-size: $font-m;
 			margin-bottom: 16px;
-			@include fontFamily(vol);
-			letter-spacing: 2px;
+			@include fontFamily(vol, 600, 2px);
 		}
 	}
 	@include screen-medium() {
@@ -150,13 +145,10 @@
 	> div {
 		flex: 1;
 		h3 {
-			font-size: 2.2rem;
-			font-weight: bold;
-			line-height: 1.4;
+			font-size: 2.4rem;
 			margin-bottom: 40px;
-			@include fontFamily(serif);
+			@include fontFamily(serif, 600, 3px);
 			@include lineHeight(1.6);
-			letter-spacing: 3px;
 		}
 	}
 	p {
@@ -200,7 +192,6 @@
 			position: relative;
 			&::before {
 				content: "01";
-				@include fontFamily(vol);
 				font-weight: bold;
 				position: absolute;
 				top: -80px;
@@ -265,7 +256,6 @@
 			padding-left: 40px;
 			&::before {
 				content: "02";
-				@include fontFamily(vol);
 				font-weight: bold;
 				position: absolute;
 				top: 0px;
@@ -329,7 +319,6 @@
 			position: relative;
 			&::before {
 				content: "03";
-				@include fontFamily(vol);
 				font-weight: bold;
 				opacity: .7;
 				position: absolute;

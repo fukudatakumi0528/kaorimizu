@@ -38,6 +38,10 @@ $font-xxl: 2rem;
   }
 }
 
+.recruit__top .m-ttl2 {
+  margin-top: 80px;
+}
+
 @media (max-width: 767px) {
   .recruit__top .m-ttl2 {
     text-align: left;
@@ -50,7 +54,6 @@ $font-xxl: 2rem;
 }
 
 .recruit__top__img {
-  margin-bottom: 56px;
   width: 33.4%;
   min-width: 150px;
 }
@@ -96,7 +99,7 @@ $font-xxl: 2rem;
   font-weight: bold;
   text-align: center;
   line-height: 2;
-  margin-top: 24px;
+  margin-top: 40px;
 }
 
 @media (max-width: 767px) {
@@ -180,11 +183,7 @@ $font-xxl: 2rem;
 }
 
 .recruit__pagelink:hover, .recruit__pagelink__mid:hover {
-  color: #ffcf21;
-}
-
-.recruit__pagelink:hover .arrow, .recruit__pagelink__mid:hover .arrow {
-  border-color: #ffcf21;
+  opacity: .5;
 }
 
 .recruit__pagelink:nth-of-type(n + 2):after {

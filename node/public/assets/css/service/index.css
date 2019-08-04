@@ -103,13 +103,11 @@ $font-xxl: 2rem;
 
 .service__wrap h1 {
   font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
+  font-weight: 600;
+  letter-spacing: 8px;
   font-size: 3.6rem;
-  font-weight: bold;
   line-height: 1.4;
   margin-bottom: 40px;
-  letter-spacing: 8px;
 }
 
 .service__wrap p {
@@ -149,11 +147,9 @@ $font-xxl: 2rem;
 
 .l-feature h2 {
   font-size: 3.6rem;
-  font-weight: bold;
   margin-bottom: 50px;
   font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
+  font-weight: 600;
   letter-spacing: 5px;
 }
 
@@ -162,8 +158,7 @@ $font-xxl: 2rem;
   font-size: 1.6rem;
   margin-bottom: 16px;
   font-family: "Vollkorn", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -190,15 +185,12 @@ $font-xxl: 2rem;
 }
 
 .feature__sec > div h3 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  line-height: 1.4;
+  font-size: 2.4rem;
   margin-bottom: 40px;
   font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 1.6;
+  font-weight: 600;
   letter-spacing: 3px;
+  line-height: 1.6;
 }
 
 .feature__sec > div h3::before {
@@ -265,9 +257,6 @@ $font-xxl: 2rem;
 
 .feature__sec.-sec1 div::before {
   content: "01";
-  font-family: "Vollkorn", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
   font-weight: bold;
   position: absolute;
   top: -80px;
@@ -340,9 +329,6 @@ $font-xxl: 2rem;
 
 .feature__sec.-sec2 div::before {
   content: "02";
-  font-family: "Vollkorn", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
   font-weight: bold;
   position: absolute;
   top: 0px;
@@ -411,9 +397,6 @@ $font-xxl: 2rem;
 
 .feature__sec.-sec3 div::before {
   content: "03";
-  font-family: "Vollkorn", serif;
-  font-weight: 400;
-  letter-spacing: 0px;
   font-weight: bold;
   opacity: .7;
   position: absolute;
