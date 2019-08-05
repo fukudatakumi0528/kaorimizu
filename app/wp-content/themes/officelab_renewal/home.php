@@ -47,7 +47,7 @@
         <h2><span class="en">SERVICE</span><span class="jp">できること</span></h2>
         <div class="service__text">
           <h3>What we do</h3>
-          <p>オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。</p><a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
+          <p>働く環境づくりのノウハウからデザイン性、コストバランスまで考え、企業によって様々な「オフィスの在り方」をご提案いたします。</p><a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
         </div>
       </div>
     </div>
