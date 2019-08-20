@@ -846,6 +846,7 @@
 			}
 		}
 		&__item {
+			@include transition();
 			a {
 				display: block;
 				padding: 40px;
@@ -878,6 +879,9 @@
 				.item__ttl {
 					transform: scale(0.81);
 				}
+			}
+			&:hover {
+				opacity: .85;
 			}
 			@include screen-medium() {
 				a {
@@ -964,6 +968,7 @@
 			}
 		}
 		&__item {
+			@include transition();
 			a {
 				display: block;
 				padding: 40px;
@@ -1008,6 +1013,9 @@
 				@include lineHeight(1.6);
 				text-align: justify;
 			}
+			&:hover {
+				opacity: .85;
+			}
 			@include screen-medium() {
 				a {
 					padding: 20px;
@@ -1036,11 +1044,7 @@
 						transform: scale(1.16);
 					}
 				}
-
-
-
 			}
-
 		}
 	}
 }

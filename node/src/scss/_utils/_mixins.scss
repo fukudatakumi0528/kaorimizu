@@ -91,6 +91,8 @@
 // トランジション
 @mixin transition($time: .3s) {
 	transition: all $time ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 

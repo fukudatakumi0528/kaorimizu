@@ -945,6 +945,13 @@ $font-xxl: 2rem;
   bottom: 0;
 }
 
+.l-pickup .pickup__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .l-pickup .pickup__item a {
   display: block;
   padding: 40px;
@@ -995,6 +1002,10 @@ $font-xxl: 2rem;
 .l-pickup .pickup__item:nth-of-type(2) .item__ttl {
   -webkit-transform: scale(0.81);
   transform: scale(0.81);
+}
+
+.l-pickup .pickup__item:hover {
+  opacity: .85;
 }
 
 @media (max-width: 767px) {
@@ -1085,6 +1096,13 @@ $font-xxl: 2rem;
   bottom: 0;
 }
 
+.l-article .article__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .l-article .article__item a {
   display: block;
   padding: 40px;
@@ -1099,6 +1117,8 @@ $font-xxl: 2rem;
   position: relative;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .l-article .article__item figcaption {
@@ -1149,6 +1169,10 @@ $font-xxl: 2rem;
   height: 0;
   width: 0;
   margin-top: calc((1 - 1.6) * 0.5em);
+}
+
+.l-article .article__item:hover {
+  opacity: .85;
 }
 
 @media (max-width: 767px) {
@@ -1324,6 +1348,8 @@ $font-xxl: 2rem;
   font-size: 3rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .l-recruit p {
