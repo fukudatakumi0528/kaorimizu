@@ -1,16 +1,18 @@
 <?php
 	global $cssName;
+	global $scriptName;
 	$cssName = "home";
+	$scriptName = "home";
 	get_header();
 ?>
 <main>
 	<section class="l-kv">
-    <div class="kv__left">
+    <div class="kv__left js-scroll" data-direction="left">
       <h1>すべては、<br>働く人の<br>笑顔のために。<span>All for the smile of working people.</span></h1>
       <div class="kv__slider_dots"></div>
       <div class="kv__scroll"><a href="#policy"><span></span></a></div>
     </div>
-    <div class="kv__slider">
+    <div class="kv__slider js-scroll" data-direction="right">
       <ul class="kv__slider_list js-slickSlider--topkv">
         <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_01.jpg)"></li>
         <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_02.jpg)"></li>
@@ -24,13 +26,13 @@
 
 	<section class="l-policy" id="policy">
     <div class="inner -m">
-      <h2><span class="en">POLICY</span><span class="jp">大切にしていること</span></h2>
+      <h2 class="js-scroll" data-direction="left"><span class="en">POLICY</span><span class="jp">大切にしていること</span></h2>
       <div class="policy__wrap">
-        <div class="policy__fig">
+        <div class="policy__fig js-scroll" data-direction="left">
           <figure class="-isPC" style="background-image:url(<?= assetsPath('img') ?>home/img_policy_01.png)"></figure>
           <figure class="-isSP" style="background-image:url(<?= assetsPath('img') ?>home/img_policy_01.png)"></figure>
         </div>
-        <div class="policy__text">
+        <div class="policy__text js-scroll" data-direction="right">
           <h3><span>ありがとう</span>で<br>結ばれる<br>企業を目指して</h3>
           <h4>Who we are</h4>
           <p>オフィス・ラボは、オフィス移転のプロジェクトマネジメント全般を手がけるトータルプロデュース会社です。</p>
@@ -42,10 +44,10 @@
 
 	<section class="l-service">
     <div class="inner -m">
-      <div class="service__bg"></div>
+      <div class="service__bg js-scroll" data-direction="top"></div>
       <div class="service__wrap">
-        <h2><span class="en">SERVICE</span><span class="jp">できること</span></h2>
-        <div class="service__text">
+        <h2 class="js-scroll" data-direction="right"><span class="en">SERVICE</span><span class="jp">できること</span></h2>
+        <div class="service__text js-scroll" data-direction="bottom">
           <h3>What we do</h3>
           <p>働く環境づくりのノウハウからデザイン性、コストバランスまで考え、企業によって様々な「オフィスの在り方」をご提案いたします。</p><a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
         </div>
@@ -66,11 +68,13 @@
 					$query = new WP_Query($args);
 					if($query->have_posts()): while($query->have_posts()): $query->the_post();
 				?>
-					<li class="project__item">
+					<li class="project__item js-scroll">
 						<a href="<?php the_permalink() ?>">
 							<div class="item__wrap">
 								<div class="item__figwrap">
-									<figure style="background-image: url(<?php echo CFS()->get('works_images')[0]['works_image'] ?>)"></figure>
+									<figure style="background-image: url(<?php echo CFS()->get('works_images')[0]['works_image'] ?>)">
+										<figcaption>Detail</figcaption>
+									</figure>
 								</div>
 							</div>
 							<h3 class="item__ttl"><?php the_title() ?></h3>
@@ -84,7 +88,7 @@
 	<section class="l-pickup">
 		<h2 class="m-ttl">PICK UP<span>注目記事</span></h2>
 		<div class="inner -m">
-			<ul class="pickup__list js-slickSlider--pickup">
+			<ul class="pickup__list js-slickSlider--pickup js-scroll">
 				<?php
 					// 配列にピックアップ記事のIDを格納にarticleで出さないようにする
 					$not_in_post_ID = array();
@@ -125,7 +129,7 @@
 	<section class="l-article">
 		<h2 class="m-ttl">ARTICLE<span>記事</span></h2>
 		<div class="inner -m">
-			<ul class="article__list js-slickSlider--article">
+			<ul class="article__list js-slickSlider--article js-scroll">
 				<?php
 					$args = [
 						'post_type' => ['news','column'],

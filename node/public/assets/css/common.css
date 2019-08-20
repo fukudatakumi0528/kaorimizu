@@ -2062,6 +2062,48 @@ _:-ms-lang(x), .breadcrumb ol {
   }
 }
 
+@media screen and (min-width: 767px) {
+  .js-scroll {
+    opacity: 0;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+  }
+  .js-scroll[data-direction="right"] {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  .js-scroll[data-direction="left"] {
+    -webkit-transform: translateX(-40px);
+    transform: translateX(-40px);
+  }
+  .js-scroll[data-direction="top"] {
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+  .js-scroll[data-direction="bottom"] {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  .js-scroll.-isView {
+    opacity: 1;
+  }
+  .js-scroll.-isView[data-direction="right"], .js-scroll.-isView[data-direction="left"], .js-scroll.-isView[data-direction="top"], .js-scroll.-isView[data-direction="bottom"] {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .js-scroll {
+    opacity: 0;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+  }
+  .js-scroll.-isView {
+    opacity: 1;
+  }
+}
+
 .m-bold {
   font-weight: bold;
 }

@@ -1,2 +1,42 @@
-.js-more {
+.js-scroll {
+
+	@media screen and (min-width: 767px) {
+		opacity: 0;
+		transition:all .8s ease;
+
+		&[data-direction="right"] {
+			transform: translateX(40px);
+		}
+
+		&[data-direction="left"] {
+			transform: translateX(-40px);
+		}
+
+		&[data-direction="top"] {
+			transform: translateY(-40px);
+		}
+
+		&[data-direction="bottom"] {
+			transform: translateY(40px);
+		}
+
+		&.-isView {
+			opacity: 1;
+			&[data-direction="right"],
+			&[data-direction="left"],
+			&[data-direction="top"],
+			&[data-direction="bottom"] {
+				//opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	@include screen-medium() {
+		opacity: 0;
+		transition:all .8s ease;
+		&.-isView {
+			opacity: 1;
+		}
+	}
 }

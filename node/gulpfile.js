@@ -29,7 +29,8 @@ const options = {
   },
   WEBPACK: {
     entry: {
-	    'common':		'./src/js/entries/common.js'
+	    'common':		'./src/js/entries/common.js',
+	    'home':		'./src/js/entries/home.js'
     },
     output: {
       filename: '[name].js',

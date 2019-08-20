@@ -6,7 +6,7 @@ block vars
 	- var pageTitle = "トップページ"
 	- var assetsPath = "./"
 	- var pageKey = "home"
-	- var scriptFlag = false
+	- var scriptFlag = true
 
 
 
@@ -17,7 +17,7 @@ block contents
 	//- KV
 	//-
 	section.l-kv
-		.kv__left
+		.kv__left.js-scroll(data-direction="left")
 			h1
 				| すべては、
 				br
@@ -28,7 +28,7 @@ block contents
 			.kv__slider_dots
 			.kv__scroll.-isPC
 				a(href="#policy") #[span]
-		.kv__slider
+		.kv__slider.js-scroll(data-direction="right")
 			ul.kv__slider_list.js-slickSlider--topkv
 				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_01.jpg)")
 				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_02.jpg)")
@@ -47,12 +47,12 @@ block contents
 	//-
 	section.l-policy#policy
 		.inner.-m
-			h2 #[span.en POLICY]#[span.jp 大切にしていること]
+			h2.js-scroll(data-direction="left") #[span.en POLICY]#[span.jp 大切にしていること]
 			.policy__wrap
-				.policy__fig
-					figure.-isPC(style="background-image:url(assets/img/home/img_policy_01.png)")5
+				.policy__fig.js-scroll(data-direction="left")
+					figure.-isPC(style="background-image:url(assets/img/home/img_policy_01.png)")
 					figure.-isSP(style="background-image:url(assets/img/home/img_policy_01.png)")
-				.policy__text
+				.policy__text.js-scroll(data-direction="right")
 					h3 #[span ありがとう]で<br>結ばれる<br>企業を目指して
 					h4 Who we are
 					p 小さくても大きくても「オフィス」です。
@@ -66,10 +66,10 @@ block contents
 	//-
 	section.l-service
 		.inner.-m
-			.service__bg
+			.service__bg.js-scroll(data-direction="top")
 			.service__wrap
-				h2 #[span.en SERVICE]#[span.jp できること]
-				.service__text
+				h2.js-scroll(data-direction="right") #[span.en SERVICE]#[span.jp できること]
+				.service__text.js-scroll(data-direction="bottom")
 					h3 What we do
 					p オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。
 					a.m-btn(href="") MORE
@@ -92,11 +92,12 @@ block contents
 						{img: "http://www.officelab-ka.com/wp-content/uploads/2018/11/OSRAM_002-810x540.jpg",ttl: "OSRAM様"},
 					]
 				each item in items
-					li.project__item
+					li.project__item.js-scroll
 						a(href="")
 							.item__wrap
 								.item__figwrap
 									figure(style="background-image: url(" + item.img + ")")
+										figcaption Detail
 							h3.item__ttl= item.ttl
 
 			a.m-btn(href="") VIEW ALL PROJECT
@@ -113,7 +114,7 @@ block contents
 	section.l-pickup
 		h2.m-ttl PICK UP#[span 注目記事]
 		.inner.-m
-			ul.pickup__list.js-slickSlider--pickup
+			ul.pickup__list.js-slickSlider--pickup.js-scroll
 				li.pickup__item
 					a(href="")
 						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
@@ -139,7 +140,7 @@ block contents
 	section.l-article
 		h2.m-ttl ARTICLE#[span 記事]
 		.inner.-m
-			ul.article__list.js-slickSlider--article
+			ul.article__list.js-slickSlider--article.js-scroll
 				- for (var x = 0; x < 10; x++)
 					li.article__item
 						a(href="")
