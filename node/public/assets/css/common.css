@@ -2189,6 +2189,11 @@ _:-ms-lang(x), .breadcrumb ol {
     width: 100%;
     margin: 0 auto;
   }
+  .m-btn::after {
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+  }
 }
 
 /*

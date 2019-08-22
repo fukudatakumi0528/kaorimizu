@@ -64,11 +64,6 @@ $font-xxl: 2rem;
 
 .l-kv .kv__slider_list {
   height: 100%;
-  /*
-			&.slick-initialized {
-				opacity: 1;
-			}
-*/
 }
 
 .l-kv .kv__slider_item {
@@ -208,14 +203,14 @@ $font-xxl: 2rem;
     margin-top: 140px;
   }
   .l-kv .kv__left h1 {
-    font-size: 3.8rem;
+    font-size: 11vw;
     line-height: 1.4;
     padding-left: 30px;
     margin-top: 60px;
     margin-bottom: 30px;
   }
   .l-kv .kv__left h1 span {
-    font-size: 1.4rem;
+    font-size: 4vw;
     letter-spacing: 2px;
     margin-top: 10px;
   }
@@ -417,6 +412,15 @@ $font-xxl: 2rem;
     font-size: 2.4rem;
     letter-spacing: 4px;
   }
+  .l-policy .policy__hw_SP {
+    font-family: "Antro Vectra bolder";
+    font-size: 3.2rem;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+  }
   .l-policy .policy__wrap {
     display: block;
   }
@@ -471,9 +475,7 @@ $font-xxl: 2rem;
     margin-right: 5px;
   }
   .l-policy .policy__text h4 {
-    top: -350px;
-    left: 150px;
-    font-size: 4rem;
+    display: none;
   }
   .l-policy .policy__text p {
     margin-top: 30px;
@@ -583,7 +585,7 @@ $font-xxl: 2rem;
 @media (max-width: 767px) {
   .l-service {
     position: relative;
-    margin-top: -40px;
+    margin-top: -20px;
     margin-bottom: 60px;
   }
   .l-service::before {
@@ -618,6 +620,19 @@ $font-xxl: 2rem;
     font-size: 2.4rem;
     letter-spacing: 4px;
   }
+  .l-service .service__hw_SP {
+    font-family: "Antro Vectra bolder";
+    font-size: 3.2rem;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+  }
+  .l-service .service__hw_SP::after {
+    content: ".";
+    opacity: 0;
+  }
   .l-service .service__wrap {
     display: block;
     -webkit-box-orient: horizontal;
@@ -641,10 +656,7 @@ $font-xxl: 2rem;
     left: 0;
   }
   .l-service .service__text h3 {
-    font-size: 4rem;
-    top: -200px;
-    left: auto;
-    right: 0;
+    display: none;
   }
   .l-service .service__text::before {
     content: "";

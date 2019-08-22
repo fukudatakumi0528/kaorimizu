@@ -5,14 +5,6 @@
 
 
 
-
-
-
-
-
-
-
-
 //
 // KV
 //
@@ -22,7 +14,6 @@
 	min-height: 660px;
 	position: relative;
 	overflow: hidden;
-
 	&::before {
 		// 左側グレー背景
 		content: "";
@@ -34,8 +25,6 @@
 		height: calc(100% - 100px);
 		background: $color-gray1;
 	}
-
-
 	.kv__left {
 		position: absolute;
 		width: 480px;
@@ -48,8 +37,6 @@
 			line-height: 1.58;
 			z-index: 1;
 			margin-top: 180px;
-			//border: red solid 1px;
-			//text-shadow: 1px 1px 3px #fff;
 			span {
 				@include fontFamily(vol, $space:4px);
 				display: block;
@@ -57,8 +44,6 @@
 			}
 		}
 	}
-
-
 	.kv__slider {
 		position: absolute;
 		top: 0;
@@ -69,15 +54,8 @@
 		overflow: hidden;
 		&_list {
 			height: 100%;
-			//opacity: 0;
-/*
-			&.slick-initialized {
-				opacity: 1;
-			}
-*/
 		}
 		&_item {
-			//@include transition(2s);
 			@include adjustBg();
 			height: 700px;
 			//heightはjsで取った方が良さそう
@@ -120,7 +98,6 @@
 			}
 		}
 	}
-
 	.kv__scroll {
 		position: absolute;
 		bottom: 80px;
@@ -167,8 +144,6 @@
 		  }
 		}
 	}
-
-
 	@include screen-medium() {
 		height: auto;
 		min-height: auto;
@@ -180,13 +155,14 @@
 			left: 0;
 			margin-top: 140px;
 			h1 {
-				font-size: 3.8rem;
+				font-size: 11vw;
 				line-height: 1.4;
 				padding-left: 30px;
 				margin-top: 60px;
 				margin-bottom: 30px;
 				span {
-					font-size: 1.4rem;
+					//font-size: 1.4rem;
+					font-size: 4vw;
 					letter-spacing: 2px;
 					margin-top: 10px;
 				}
@@ -201,16 +177,12 @@
 			&_list {
 				height: 100%;
 				opacity: 0;
-				//@include transition(.5s);
 				&.slick-initialized {
 					opacity: 1;
 				}
 			}
 			&_item {
-				//@include transition(2s);
 				@include adjustBg();
-				//height: 280px;
-				//heightはjsで取った方が良さそう
 			}
 			&_dots {
 				display: none;
@@ -226,12 +198,6 @@
 		}
 	}
 }
-
-
-
-
-
-
 
 //
 // POLICY
@@ -361,6 +327,14 @@
 			}
 		}
 		.policy {
+			&__hw_SP {
+				@include fontFamily(antro);
+				font-size: 3.2rem;
+				transform: rotate(-4deg);
+				position: absolute;
+				top: -30px;
+				right: 10px;
+			}
 			&__wrap {
 				display: block;
 			}
@@ -407,9 +381,10 @@
 					}
 				}
 				h4 {
-					top: -350px;
-					left: 150px;
-					font-size: 4rem;
+					display: none;
+					//top: -340px;
+					//left: 35%;
+					//font-size: 4rem;
 				}
 				p {
 					margin-top: 30px;
@@ -511,7 +486,7 @@
 
 	@include screen-medium() {
 		position: relative;
-		margin-top: -40px;
+		margin-top: -20px;
 		margin-bottom: 60px;
 		&::before {
 			content: "";
@@ -546,6 +521,18 @@
 			}
 		}
 		.service {
+			&__hw_SP {
+				@include fontFamily(antro);
+				font-size: 3.2rem;
+				transform: rotate(-4deg);
+				position: absolute;
+				top: -30px;
+				right: 10px;
+				&::after {
+					content: ".";
+					opacity: 0;
+				}
+			}
 			&__wrap {
 				display: block;
 				flex-direction: row;
@@ -559,18 +546,13 @@
 				padding-bottom: 65%;
 			}
 			&__text {
-				//border: red solid 2px;
 				width: calc(100% - 32px);
-				//margin-top: 0;
 				margin: 200px auto 0;
 				padding: 30px;
 				position: relative;
 				left: 0;
 				h3 {
-					font-size: 4rem;
-					top: -200px;
-					left: auto;
-					right: 0;
+					display: none;
 				}
 				&::before {
 					content: "";
@@ -583,20 +565,11 @@
 					background-image: url(../img/home/img_service.jpg);
 					@include adjustBg();
 					z-index: -1;
-
 				}
 			}
 		}
 	}
-
-
-
 }
-
-
-
-
-
 
 
 
@@ -631,7 +604,6 @@
 			top: 16px;
 		}
 	}
-
 	.project {
 		&__list {
 			display: flex;
@@ -645,9 +617,7 @@
 		&__item {
 			margin-bottom: 60px;
 			position: relative;
-			//opacity:0;
 			transform:translateX(-20px);
-			//transition:all .8s cubic-bezier(0.475, 0.425, 0, 0.995);
 			&:nth-of-type(1) {
 				width: 100%;
 				&::before {
@@ -708,7 +678,6 @@
 					}
 				}
 			}
-
 			.item__figwrap {
 				height: 90%!important;
 				overflow: hidden;
@@ -805,10 +774,6 @@
 }
 
 
-
-
-
-
 //
 // 注目記事
 //
@@ -833,7 +798,6 @@
 			height: 180px;
 		}
 	}
-
 	.pickup {
 		&__list {
 			overflow: hidden;
@@ -909,9 +873,6 @@
 		}
 	}
 }
-
-
-
 
 
 
@@ -1187,10 +1148,7 @@
 	margin-top: 100px;
 	position: relative;
 	padding: 0 30px;
-
 	display: none;
-
-
 	&::before {
 		content: "";
 		display: block;

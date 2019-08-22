@@ -8,9 +8,9 @@
 <main>
 	<section class="l-kv">
     <div class="kv__left js-scroll" data-direction="left">
-      <h1>すべては、<br>働く人の<br>笑顔のために。<span>All for the smile of working people.</span></h1>
+      <h1>すべては、<br>働く人の<br>笑顔のために。<span>Everything is all for your smile.</span></h1>
       <div class="kv__slider_dots"></div>
-      <div class="kv__scroll"><a href="#policy"><span></span></a></div>
+      <div class="kv__scroll -isPC"><a href="#policy"><span></span></a></div>
     </div>
     <div class="kv__slider js-scroll" data-direction="right">
       <ul class="kv__slider_list js-slickSlider--topkv">
@@ -22,10 +22,12 @@
         <li class="kv__slider_item" style="background-image:url(<?= assetsPath('img') ?>home/img_kv_06.jpg)"></li>
       </ul>
     </div>
+    <div class="kv__scroll -isSP"><a href="#policy"><span></span></a></div>
 	</section>
 
 	<section class="l-policy" id="policy">
     <div class="inner -m">
+	    <p class="policy__hw_SP js-scroll -isSP">Who we are</p>
       <h2 class="js-scroll" data-direction="left"><span class="en">POLICY</span><span class="jp">大切にしていること</span></h2>
       <div class="policy__wrap">
         <div class="policy__fig js-scroll" data-direction="left">
@@ -34,7 +36,7 @@
         </div>
         <div class="policy__text js-scroll" data-direction="right">
           <h3><span>ありがとう</span>で<br>結ばれる<br>企業を目指して</h3>
-          <h4>Who we are</h4>
+          <h4 class="-isPC">Who we are</h4>
           <p>オフィス・ラボは、オフィス移転のプロジェクトマネジメント全般を手がけるトータルプロデュース会社です。</p>
           <p>お客様の目線でオフィスの悩みを考え解決に導くことを重要とし、高品質とコスト最適化を両立させたご提案、そして行き届いたサービスで「ありがとう」で結ばれる企業を目指します。</p><a class="m-btn" href="<?php home_url() ?>/company/">COMPANY</a>
         </div>
@@ -44,11 +46,12 @@
 
 	<section class="l-service">
     <div class="inner -m">
+	    <p class="service__hw_SP js-scroll -isSP">What we do</p>
       <div class="service__bg js-scroll" data-direction="top"></div>
       <div class="service__wrap">
         <h2 class="js-scroll" data-direction="right"><span class="en">SERVICE</span><span class="jp">できること</span></h2>
         <div class="service__text js-scroll" data-direction="bottom">
-          <h3>What we do</h3>
+          <h3 class="-isPC">What we do</h3>
           <p>働く環境づくりのノウハウからデザイン性、コストバランスまで考え、企業によって様々な「オフィスの在り方」をご提案いたします。</p><a class="m-btn" href="<?php home_url() ?>/service/">MORE</a>
         </div>
       </div>
