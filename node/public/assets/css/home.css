@@ -1332,24 +1332,45 @@ $font-xxl: 2rem;
   background-color: #fff;
 }
 
+.l-recruit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.l-recruit .m-ttl {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .l-recruit .m-ttl span {
   font-size: 4.4rem;
 }
 
 .l-recruit .m-ttl span::before {
-  background: #fff;
+  background: #222;
   margin: 20px auto;
-}
-
-.l-recruit:hover a::after {
-  -webkit-transform: translateX(20px);
-  transform: translateX(20px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .l-recruit a {
   display: block;
   padding: 80px 0;
-  color: #fff;
 }
 
 .l-recruit a::after {
@@ -1362,6 +1383,9 @@ $font-xxl: 2rem;
   transition: all 0.3s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  color: #222;
+  position: relative;
+  z-index: 1;
 }
 
 .l-recruit p {
@@ -1369,6 +1393,35 @@ $font-xxl: 2rem;
   margin-top: 30px;
   letter-spacing: 2px;
   line-height: 2.2;
+  color: #222;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.l-recruit:hover::before {
+  opacity: 0;
+}
+
+.l-recruit:hover a {
+  color: #fff;
+}
+
+.l-recruit:hover a::after {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  color: #fff;
+}
+
+.l-recruit:hover p {
+  color: #fff;
+}
+
+.l-recruit:hover .m-ttl span::before {
+  background: #fff;
 }
 
 @media (max-width: 767px) {
