@@ -56,8 +56,10 @@
 			height: 100%;
 		}
 		&_item {
-			@include adjustBg();
+			//@include adjustBg();
 			height: 700px;
+			background-size: cover;
+			background-position: center top;
 			//heightはjsで取った方が良さそう
 		}
 		&_dots {
