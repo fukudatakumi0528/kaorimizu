@@ -2,6 +2,7 @@ import Header from '../utils/header';
 import Slick from '../utils/slick';
 import Scroll from '../utils/scroll';
 import Hugelink from '../utils/Hugelink';
+import FixedButton from '../utils/fixedButton';
 
 // ヘッダーメニュー
 const header = new Header();
@@ -15,7 +16,9 @@ slick.slickInit();
 const scroll = new Scroll();
 scroll.init();
 
-
 // リンクパネル
 const hugelink = new Hugelink();
 hugelink.init();
+
+const fixedButton = new FixedButton();
+fixedButton.clickMenu();

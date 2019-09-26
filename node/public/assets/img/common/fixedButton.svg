@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="47px" viewBox="0 0 95 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu_open_01" transform="translate(-276.000000, -568.000000)" fill="#FFD94A">
+            <g id="menu" transform="translate(0.000000, 568.000000)">
+                <g id="btn" transform="translate(0.222656, 0.000000)">
+                    <g id="Group" transform="translate(276.000000, 0.000000)">
+                        <path d="M0,44 C7.3515625,43.893674 11.9440104,39.4504258 13.7773438,30.6702555 C15.6106771,21.8900852 18.2773437,26.6666667 21.7773438,45 L0,44 Z" id="Path-16"></path>
+                        <path d="M73,44 C80.3515625,43.893674 84.9440104,39.4504258 86.7773438,30.6702555 C88.6106771,21.8900852 91.2773437,26.6666667 94.7773438,45 L73,44 Z" id="Path-16" transform="translate(83.888672, 35.702665) scale(-1, 1) translate(-83.888672, -35.702665) "></path>
+                        <path d="M47.2773438,0 C65.7788829,-3.3986776e-15 80.7773438,14.9984609 80.7773438,33.5 L80.7773438,47 L13.7773438,47 L13.7773438,33.5 C13.7773437,14.9984609 28.7758046,3.3986776e-15 47.2773438,0 Z" id="Rectangle-Copy"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

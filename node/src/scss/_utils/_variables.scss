@@ -8,6 +8,15 @@
 
 $root: "../../../";
 
+//
+// font weight
+//
+
+$font-regular:400; //基本は指定しない
+$font-medium:500;
+$font-semibold:600;
+$font-bold:700;
+
 
 //
 // font size
@@ -22,17 +31,13 @@ $font-xl: 1.8rem;
 $font-xxl: 2rem;
 */
 
-
-
-
+$font-xxs: 1.0rem;
 $font-xs: 1.2rem;
 $font-s: 1.4rem;
 $font-m: 1.6rem;
 $font-l: 1.8rem;
 $font-xl: 2rem;
 $font-xxl: 2.2rem;
-
-
 
 //
 // fontfamily
@@ -47,18 +52,13 @@ $font-family-antrovectra: 'Antro Vectra bolder';		// 手書き文字
 //
 // Colors
 //
-$primary-color: #f7e789 !default;
-$secondary-color: #00235c !default;
-$color-black1: #222 !default;
-$color-gray1: #f3f3f3 !default;
 
-
-$base-color-yellow: #FFF002 !default;
-$base-color-blue: #397bf6 !default;
-$border-color1: #333333;
-$border-color2: #F2F2F2;
-$link-color: #2D9CDB;
-$link-color-yellow: #ffcf21;
+$bg-base-color:#262626;
+$bg-1-color:#FFD94A;
+$bg-2-color:#FFF2C3;
+$bg-3-color:#F5F5F5;
+$bg-4-color:#DE3B39;
+$bg-5-color:#285486;
 
 
 //
@@ -78,11 +78,8 @@ $base-pd: 12px;
 // Breakpoint
 //
 
-$base-breakpoint-small: 768px !default;
-$base-breakpoint-medium: 769px !default;
-$base-breakpoint-large:  1200px !default;
-$base-breakpoint-xlarge: 1600px !default;
-
+$base-breakpoint-small: 480px !default;
+$base-breakpoint-medium: 1000px !default;
 
 
 //

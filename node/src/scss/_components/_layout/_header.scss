@@ -1,0 +1,33 @@
+.l-header {
+  height: 72px;
+  padding:8px 20px 8px 16px;
+
+  .l-header__inner {
+    display:flex;
+    justify-content: space-between;
+    height: 100%;
+
+    .m-logo {
+      width: 120px;
+      display:flex;
+      justify-content:center;
+      align-items: center; 
+
+      .m-logo__image{
+        width: 100%;
+      }
+    }
+
+    .l-header__inner__left {
+      max-width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        margin-left: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+}

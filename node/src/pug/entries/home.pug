@@ -12,100 +12,16 @@ block vars
 
 block contents
 
-
 	//-
 	//- KV
 	//-
-	section.l-kv
-		.kv__left.js-scroll(data-direction="left")
-			h1
-				| すべては、
-				br
-				| 働く人の
-				br
-				| 笑顔のために。
-				span Everything is all for your smile.
-			.kv__slider_dots
-			.kv__scroll.-isPC
-				a(href="#policy") #[span]
-		.kv__slider.js-scroll(data-direction="right")
-			ul.kv__slider_list.js-slickSlider--topkv
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_01.jpg)")
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_02.jpg)")
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_03.jpg)")
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_04.jpg)")
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_05.jpg)")
-				li.kv__slider_item(style="background-image:url(assets/img/home/img_kv_06.jpg)")
-		.kv__scroll.-isSP
-			a(href="#policy") #[span]
-
-
-
-
-	//-
-	//- MESSAGE
-	//-
-	section.l-policy#policy
-		.inner.-m
-			p.policy__hw_SP.js-scroll.-isSP Who we are
-			h2.js-scroll(data-direction="left") #[span.en POLICY]#[span.jp 大切にしていること]
-			.policy__wrap
-				.policy__fig.js-scroll(data-direction="left")
-					figure.-isPC(style="background-image:url(assets/img/home/img_policy_01.png)")
-					figure.-isSP(style="background-image:url(assets/img/home/img_policy_01.png)")
-				.policy__text.js-scroll(data-direction="right")
-					h3 #[span ありがとう]で<br>結ばれる<br>企業を目指して
-					h4 Who we are
-					p 小さくても大きくても「オフィス」です。
-					p 働く場所、集まる場所、戦略を考える場所。<br>企業によって様々な「オフィス」の在り方が存在します。会社の規模ではなく、これからどういう会社にしていきたいか。その想いにオフィス・ラボは真摯に向き合い続けます。
-					a.m-btn(href="") COMPANY
-
-	//-
-	//- SERVICE
-	//-
-	section.l-service
-		.inner.-m
-			p.service__hw_SP.js-scroll.-isSP What we do
-			.service__bg.js-scroll(data-direction="top")
-			.service__wrap
-				h2.js-scroll(data-direction="right") #[span.en SERVICE]#[span.jp できること]
-				.service__text.js-scroll(data-direction="bottom")
-					h3 What we do
-					p オフィス・ラボは、移転プロジェクトを通じて様々な組織課題を解決する「オフィスの在り方」をご提案いたします。
-					a.m-btn(href="") MORE
-
-
-	//-
-	//- PROJECT
-	//-
-	section.l-project
-		.inner.-s
-			h2.m-ttl PROJECT#[span 施工事例]
-			ul.project__list
-				-
-					var items = [
-						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/12/011-810x540.jpg", ttl: "日本研紙様"},
-						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/09/jibannet-002.jpg", ttl: "地盤ネット総合研究所様"},
-						{img: "http://www.officelab-ka.com/wp-content/uploads/2016/09/COLORS-003.jpg",ttl: "COLORS様"},
-						{img: "http://www.officelab-ka.com/wp-content/uploads/2018/12/nexa-002_1-810x540.jpg",ttl: "全国試験運営センター様"},
-						{img: "http://www.officelab-ka.com/wp-content/uploads/2018/11/OSRAM_002-810x540.jpg",ttl: "OSRAM様"},
-					]
-				each item in items
-					li.project__item.js-scroll
-						a(href="")
-							.item__wrap
-								.item__figwrap
-									figure(style="background-image: url(" + item.img + ")")
-										figcaption Detail
-							h3.item__ttl= item.ttl
-
-			a.m-btn(href="") VIEW ALL PROJECT
-
-
+	section
+		h1
 
 	//-
 	//- PICK UP
-	//-
+	//-	
+	| <!---
 	section.l-pickup
 		h2.m-ttl PICK UP#[span 注目記事]
 		.inner.-m
@@ -126,74 +42,23 @@ block contents
 							figcaption PICK UP
 						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
 			.js-slickSlider--pickup--arrows
+	| --->
 
+	.l-fixed-button
+		.l-fixed-button__inner
+			.l-fixed-button__inner__topper
+				.l-fixed-button__inner__topper__inner
+					.l-fixed-button__inner__topper__inner__menu
+						span.l-fixed-button__inner__topper__inner__menu__line
+						span.l-fixed-button__inner__topper__inner__menu__line
+					p.l-fixed-button__inner__topper__inner__text menu
 
-	//-
-	//- ARTICLE
-	//-
-	section.l-article
-		h2.m-ttl ARTICLE#[span 記事]
-		.inner.-m
-			ul.article__list.js-slickSlider--article.js-scroll
-				- for (var x = 0; x < 10; x++)
-					li.article__item
-						a(href="")
-							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
-								figcaption.-news NEWS
-							h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
-							time 2018.04.01
-			.js-slickSlider--article--arrows
-
-		.article__btns
-			a.m-btn(href="") NEWS ARCHIVE
-			a.m-btn(href="") COLUMN ARCHIVE
-
-
-
-	//-
-	//- VOICE
-	//-
-	section.l-voice
-		h2.m-ttl VOICE#[span お客様の声]
-		.inner.-l
-			ul.voice__list
-				li.voice__item
-					a(href="")
-						.item__figwrap
-							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
-							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
-						.item__logo
-							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
-
-				li.voice__item
-					a(href="")
-						.item__figwrap
-							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
-							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
-						.item__logo
-							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
-
-				li.voice__item
-					a(href="")
-						.item__figwrap
-							figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2017/12/962f5dbce100d3a75125f3ab03caba2b_s-400x300.jpg)")
-							h3.item__ttl 家を持つことへの夢を抱く、<br>お客様を迎える場として。
-						.item__logo
-							img(src="http://www.officelab-ka.com/wp-content/themes/officelab/img/logo_sub.png")
-
-
-	//-
-	//- RECRUIT
-	//-
-	section.l-recruit
-		a(href="")
-			h2.m-ttl RECRUIT#[span 採用情報]
-			p
-				| 「ありがとう」で結ばれる会社で
-				br
-				| 共に夢を叶えませんか？
-
-
-
-
-
+			.l-fixed-button__inner__main
+				.l-fixed-button__inner__main__button
+					p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>探す</strong>
+					.l-fixed-button__inner__main__button__icon
+						span.icon-search
+				.l-fixed-button__inner__main__button
+					p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>叶える</strong>
+					.l-fixed-button__inner__main__button__icon
+						span.icon-star

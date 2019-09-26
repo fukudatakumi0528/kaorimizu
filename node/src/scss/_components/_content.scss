@@ -1,21 +1,8 @@
-.wrap {
-	overflow: hidden;
-	background-image: url(../img/common/bg.gif);
-	background-repeat: repeat;
-	position: relative;
-	background-position: calc(50%) center;
-}
-
-
 main {
 	//border: red solid 3px;
 	position: relative;
 	z-index: 1;
 }
-
-.container {}
-
-
 
 .inner {
 	margin: 0 auto;

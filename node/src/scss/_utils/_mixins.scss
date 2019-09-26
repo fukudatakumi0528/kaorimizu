@@ -2,42 +2,28 @@
 // Mixins
 // -----------------------------------
 
-
 //
 // Media queries
 //
 
-
-
 // iphone5 以下
 @mixin screen-small() {
-  @media (max-width: 320px) {
+  @media (max-width: $base-breakpoint-small) {
     @content;
   }
 }
 
-// ipad以下
-@mixin screen-medium() {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-// ipad 以上
 @mixin screen-large() {
-  @media (min-width: 768px) {
+  @media (min-width: $base-breakpoint-small + 1) {
     @content;
   }
 }
 
-@mixin screen-xlarge() {
-  @media (min-width: $base-breakpoint-xlarge) {
+@mixin screen-medium() {
+  @media (min-width: $base-breakpoint-small + 1) {
     @content;
   }
 }
-
-
-
 
 
 //
@@ -66,12 +52,6 @@
 	}
 }
 
-@mixin font-mincho() {
-	font-family: source-han-serif-japanese, serif;
-}
-
-
-
 //
 // line-height 上寄せ
 //
@@ -86,93 +66,11 @@
 	}
 }
 
-
-
 // トランジション
 @mixin transition($time: .3s) {
 	transition: all $time ease;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-}
-
-
-
-//
-@mixin adjustBg() {
-	background-size: cover;
-	background-position: center center;
-}
-
-
-
-
-//
-// n番目以降
-//
-@mixin after2() {
-	&:nth-of-type(n + 2) {
-		@content;
-	}
-}
-
-
-//旧
-@mixin after-the-n() {
-	&:nth-of-type(n + 2) {
-		@content;
-	}
-}
-
-
-//
-// IE11 hack
-//
-@mixin hack-ie() {
-  @media all and (-ms-high-contrast: none){
-    @content;
-  }
-}
-
-@mixin separater($where) {
-	border-#{$where}: $base-border;
-}
-
-
-
-
-//
-// Visually hidden
-//
-@mixin visually-hidden() {
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-//
-// 矢印
-//
-@mixin arrow($direction:right, $size:10px, $color:black, $thick:1px){
-	@if $direction == top {
-		transform: rotate(-135deg);
-	}@else if $direction == right {
-		transform: rotate(-45deg);
-	}@else if $direction == bottom {
-		transform: rotate(45deg);
-	}@else{
-		transform: rotate(135deg);
-	}
-	display: inline-block;
-	width:$size;
-	height:$size;
-	border-color:$color;
-	border-style:solid;
-	border-width: 0 $thick $thick 0;
 }
 
 //
@@ -185,17 +83,6 @@
 	left:0;
 	width:100%;
 	height:100%;
-}
-
-//
-// 擬似要素用
-//
-@mixin pseudo($position:static,$display:block,$height:100%,$width:100%) {
-	content: '';
-	position: $position;
-	display: $display;
-	height: $height;
-	width:$width;
 }
 
 //
@@ -213,48 +100,3 @@
 	}
 }
 
-//
-// 色付き三角
-//
-@mixin triangle($direction:right, $width:10px, $color:black){
-	@if $direction == top {
-		border-top: $width solid transparent;
-		border-right: $width solid transparent;
-		border-bottom: $width solid $color;
-		border-left: $width solid transparent;
-	}@else if $direction == right {
-		border-top: $width solid transparent;
-		border-right: $width solid transparent;
-		border-bottom: $width solid transparent;
-		border-left: $width solid $color;
-	}@else if $direction == bottom {
-		border-top: $width solid $color;
-		border-right: $width solid transparent;
-		border-bottom: $width solid transparent;
-		border-left: $width solid transparent;
-	}@else if $direction == right {
-		border-top: $width solid transparent;
-		border-right: $width solid $color;
-		border-bottom: $width solid transparent;
-		border-left: $width solid transparent;
-	}
-
-}
-
-//
-// もっと見るボタン
-//
-@mixin more-btn-hide($height:500px, $gradient:90%){
-	@include screen-medium(){
-		position: relative;
-		max-height:$height;
-		overflow-y:hidden;
-
-		&:before{
-			@include pseudo($position:absolute);
-			@include z-index(more-btn-before);
-			background:linear-gradient(rgba(255, 255, 255, 0) $gradient,white 100%);
-		}
-
-	}
-}

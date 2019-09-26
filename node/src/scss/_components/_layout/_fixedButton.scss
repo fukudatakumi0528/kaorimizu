@@ -1,0 +1,114 @@
+.l-fixed-button {
+  height: 60px;
+  width: 100%;
+  position:fixed;
+  bottom:0;
+
+  .l-fixed-button__inner{
+    height: 100%;
+    background-color:$bg-1-color;
+    position: relative;
+    
+    .l-fixed-button__inner__topper {
+      position:absolute;
+      height: 50px;
+      width: 100px;
+      top:0;
+      right: 0;
+      transform: translateX(-5px) translateY(-47px);
+      background-image:url(/assets/img/common/fixedButton.svg);
+      background-size:cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .l-fixed-button__inner__topper__inner {
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .l-fixed-button__inner__topper__inner__menu {
+          margin-top:4px;
+          height: 8px;
+          width: 20px;
+          position: relative;
+          display: flex;
+
+          span {
+            position: absolute;
+            height: 2px;/*線の太さ*/
+            width: 20px;/*長さ*/
+            border-radius: 3px;
+            background:$bg-base-color;
+            display: block;
+            content: '';
+            cursor: pointer;
+
+            &:nth-child(1) {
+              top:0;
+              transition: 0.1s;
+
+              &.is-active {
+                transform: translateY(3px) rotate(40deg);
+                transition: 0.1s;
+              }
+            }
+
+            &:nth-child(2) {
+              bottom:0;
+              transition: 0.1s;
+
+              &.is-active {
+                transform: translateY(-3px) rotate(-40deg);
+                transition: 0.1s;
+              }
+            }
+          }
+        }
+
+        .l-fixed-button__inner__topper__inner__text {
+          margin:4px 0 0 0;
+          line-height: 1.0;    
+          font-size:$font-s;
+          font-weight:$font-medium;
+        }
+      }
+    }
+
+    .l-fixed-button__inner__main {
+      height: 100%;
+      padding:8px;
+      display: flex;
+      justify-content: space-between;
+
+      .l-fixed-button__inner__main__button {
+        padding:10px 0px;
+        width: 48%;
+        height: 100%;
+        background-color: $bg-3-color;
+        border:solid 2px $bg-base-color;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .l-fixed-button__inner__main__button__text {
+          font-size:$font-xxs;
+          font-weight: $font-bold;
+
+          strong {
+            font-size: $font-s;
+          }
+        }
+
+        .l-fixed-button__inner__main__button__icon {
+          margin-left: 2px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
