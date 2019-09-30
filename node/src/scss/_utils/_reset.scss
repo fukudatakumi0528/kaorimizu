@@ -427,3 +427,11 @@ video {
   color: #000;
   text-shadow: none;
 }
+
+html.enable-javascript .slider-sample{
+  visibility: hidden;
+}
+/* 画像すべてを読み終えたら、対象を表示する */
+html.enable-javascript.window-load .slider-sample{
+  visibility: visible;
+}

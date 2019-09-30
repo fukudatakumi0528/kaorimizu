@@ -3,62 +3,82 @@
 //-
 extends ../_include/_layout
 block vars
-	- var pageTitle = "トップページ"
-	- var assetsPath = "./"
-	- var pageKey = "home"
-	- var scriptFlag = true
+  - var pageTitle = "トップページ"
+  - var assetsPath = "./"
+  - var pageKey = "home"
+  - var scriptFlag = true
 
 
 
 block contents
 
-	//-
-	//- KV
-	//-
-	section
-		h1
+  //-
+  //- KV
+  //-
+  section.l-top__kv
+    .l-top__kv__bg
+    ul.l-top__kv__slider.js-slickSlider--topkv
+      li.l-top__kv__slider__list
+        .l-top__kv__slider__list__inner
+          .l-top__kv__slider__list__inner__topper
+            img.l-top__kv__slider__list__inner__topper__image(src="https://placehold.jp/300x300.png", alt="")
+          .l-top__kv__slider__list__inner__footer
+            .l-top__kv__slider__list__inner__footer__tag
+            .l-top__kv__slider__list__inner__footer__description
+              p.l-top__kv__slider__list__inner__footer__description__text 【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？
+      li.l-top__kv__slider__list
+        .l-top__kv__slider__list__inner
+          .l-top__kv__slider__list__inner__topper
+            img.l-top__kv__slider__list__inner__topper__image(src="https://placehold.jp/200x200.png", alt="")
+          .l-top__kv__slider__list__inner__footer
+            .l-top__kv__slider__list__inner__footer__tag
+            .l-top__kv__slider__list__inner__footer__description
+              p.l-top__kv__slider__list__inner__footer__description__text 【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？
+      li.l-top__kv__slider__list
+        .l-top__kv__slider__list__inner
+          .l-top__kv__slider__list__inner__topper
+            img.l-top__kv__slider__list__inner__topper__image(src="https://placehold.jp/200x150.png", alt="")
+          .l-top__kv__slider__list__inner__footer
+            .l-top__kv__slider__list__inner__footer__tag
+            .l-top__kv__slider__list__inner__footer__description
+              p.l-top__kv__slider__list__inner__footer__description__text 【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？
+      li.l-top__kv__slider__list
+        .l-top__kv__slider__list__inner
+          .l-top__kv__slider__list__inner__topper
+            img.l-top__kv__slider__list__inner__topper__image(src="https://placehold.jp/500x500.png", alt="")
+          .l-top__kv__slider__list__inner__footer
+            .l-top__kv__slider__list__inner__footer__tag
+            .l-top__kv__slider__list__inner__footer__description
+              p.l-top__kv__slider__list__inner__footer__description__text 【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？
+      li.l-top__kv__slider__list
+        .l-top__kv__slider__list__inner
+          .l-top__kv__slider__list__inner__topper
+            img.l-top__kv__slider__list__inner__topper__image(src="https://placehold.jp/500x500.png", alt="")
+          .l-top__kv__slider__list__inner__footer
+            .l-top__kv__slider__list__inner__footer__tag
+            .l-top__kv__slider__list__inner__footer__description
+              p.l-top__kv__slider__list__inner__footer__description__text 【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？
 
-	//-
-	//- PICK UP
-	//-	
-	| <!---
-	section.l-pickup
-		h2.m-ttl PICK UP#[span 注目記事]
-		.inner.-m
-			ul.pickup__list.js-slickSlider--pickup.js-scroll
-				li.pickup__item
-					a(href="")
-						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
-							figcaption PICK UP
-						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
-				li.pickup__item
-					a(href="")
-						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
-							figcaption PICK UP
-						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
-				li.pickup__item
-					a(href="")
-						figure(style="background-image: url(http://www.officelab-ka.com/wp-content/uploads/2018/12/DSC_0218-400x265.jpg)")
-							figcaption PICK UP
-						h3.item__ttl 【企画セミナー】「今どきオフィス事情と"SMILE_LAB"のトリセツ」のお知らせ
-			.js-slickSlider--pickup--arrows
-	| --->
+  .l-fixed-button
+    .l-fixed-button__inner
+      .l-fixed-button__inner__topper
+        .l-fixed-button__inner__topper__inner
+          .l-fixed-button__inner__topper__inner__menu
+            span.l-fixed-button__inner__topper__inner__menu__line
+            span.l-fixed-button__inner__topper__inner__menu__line
+          p.l-fixed-button__inner__topper__inner__text menu
 
-	.l-fixed-button
-		.l-fixed-button__inner
-			.l-fixed-button__inner__topper
-				.l-fixed-button__inner__topper__inner
-					.l-fixed-button__inner__topper__inner__menu
-						span.l-fixed-button__inner__topper__inner__menu__line
-						span.l-fixed-button__inner__topper__inner__menu__line
-					p.l-fixed-button__inner__topper__inner__text menu
-
-			.l-fixed-button__inner__main
-				.l-fixed-button__inner__main__button
-					p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>探す</strong>
-					.l-fixed-button__inner__main__button__icon
-						span.icon-search
-				.l-fixed-button__inner__main__button
-					p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>叶える</strong>
-					.l-fixed-button__inner__main__button__icon
-						span.icon-star
+      .l-fixed-button__inner__main
+        .l-fixed-button__inner__main__button
+          p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>探す</strong>
+          .l-fixed-button__inner__main__button__icon
+            span.icon-search2
+              span.path1
+              span.path2
+              span.path3
+        .l-fixed-button__inner__main__button
+          p.l-fixed-button__inner__main__button__text したい・ほしいを<strong>叶える</strong>
+          .l-fixed-button__inner__main__button__icon
+            span.icon-star2
+              span.path1
+              span.path2

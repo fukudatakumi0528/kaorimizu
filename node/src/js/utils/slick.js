@@ -1,90 +1,58 @@
 export default class Slick {
 	slickInit() {
 
-		const $topSlickSelecter = $('.js-slickSlider--topkv');
+		const $topSlickSlider = $('.js-slickSlider--topkv');
 		const $topSlickItem = $('.js-slickSlider--topkv li');
+
+		$topSlickSlider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
+			$topSlickSlider.find(".slick-slide").each((index, el) => {
+				const $this = $(el),
+					slickindex = $this.attr("data-slick-index");
+				if (nextSlide == slick.slideCount - 1 && currentSlide == 0) {
+					// 現在のスライドが最初のスライドでそこから最後のスライドに戻る場合
+					if (slickindex == "-1") {
+						// 最後のスライドに対してクラスを付与
+						$this.addClass("is-active-next");
+					} else {
+						// それ以外は削除
+						$this.removeClass("is-active-next");
+					}
+				} else if (nextSlide == 0) {
+					// 次のスライドが最初のスライドの場合
+					if (slickindex == slick.slideCount) {
+						// 最初のスライドに対してクラスを付与
+						$this.addClass("is-active-next");
+					} else {
+						// それ以外は削除
+						$this.removeClass("is-active-next");
+					}
+				} else {
+					// それ以外は削除
+					$this.removeClass("is-active-next");
+				}
+			});
+		});
 
 		//
 		// top KV スライダー
 		//
 
-
-		$topSlickSelecter.slick({
+		$topSlickSlider.slick({
 			autoplay: true,
-			autoplaySpeed: 5000,
-			fade: true,
-			speed: 2000,
+			autoplaySpeed: 3000,
+			speed: 800,
 			arrows: false,
 			dots: true,
-			appendDots: $('.kv__slider_dots'),
-/*
-			responsive: [
-				{
-					breakpoint: 480,
-					settings: {
-						//dots: true,
-						arrows: true,
-						slidesToShow: 1,
-						centerMode: true,
-						centerPadding: '40px',
-						initialSlide: 1,
-					}
-				}
-			]
-*/
+			infinite: true,
+			centerMode: true,
+			centerPadding:'0 15% 0 0',
 		});
+
 		$(window).on('load resize', function(){
-			let $containerH = $topSlickSelecter.innerHeight();
+			let $containerH = $topSlickSlider.innerHeight();
 			$topSlickItem.innerHeight($containerH);
 		});
 
 
-
-
-
-		$('.js-slickSlider--pickup').slick({
-			dots: true,
-			slidesToShow: 3,
-			appendArrows: $('.js-slickSlider--pickup--arrows'),
-			prevArrow: '<div class="slickprev"></div>',
-			nextArrow: '<div class="slicknext"></div>',
-			//autoplay: true,
-
-			//arrows: false,
-			responsive: [
-				{
-					breakpoint: 480,
-					settings: {
-						//dots: true,
-						arrows: true,
-						slidesToShow: 1,
-						centerMode: true,
-						centerPadding: '40px',
-						initialSlide: 1,
-					}
-				}
-			]
-		});
-		$('.js-slickSlider--article').slick({
-			dots: true,
-			slidesToShow: 3,
-			appendArrows: $('.js-slickSlider--article--arrows'),
-			prevArrow: '<div class="slickprev"></div>',
-			nextArrow: '<div class="slicknext"></div>',
-
-			//arrows: false,
-			responsive: [
-				{
-					breakpoint: 480,
-					settings: {
-						//dots: true,
-						//arrows: false,
-						slidesToShow: 1,
-						centerMode: true,
-						centerPadding: '40px',
-					}
-				}
-			]
-		});
 	};
 };

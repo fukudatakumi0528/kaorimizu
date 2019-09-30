@@ -519,6 +519,15 @@ video {
   text-shadow: none;
 }
 
+html.enable-javascript .slider-sample {
+  visibility: hidden;
+}
+
+/* 画像すべてを読み終えたら、対象を表示する */
+html.enable-javascript.window-load .slider-sample {
+  visibility: visible;
+}
+
 /*
 $font-xs: 1rem;
 $font-s: 1.2rem;
@@ -898,7 +907,7 @@ main {
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button {
   padding: 10px 0px;
-  width: 48%;
+  width: 48.5%;
   height: 100%;
   background-color: #F5F5F5;
   border: solid 2px #262626;
@@ -912,6 +921,12 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button.is-click {
+  background-color: #FFD94A;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__text {
