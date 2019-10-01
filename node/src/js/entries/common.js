@@ -20,5 +20,8 @@ scroll.init();
 const hugelink = new Hugelink();
 hugelink.init();
 
+// object-fit対策（IE対応）
+objectFitImages();
+
 const fixedButton = new FixedButton();
 fixedButton.clickMenu();

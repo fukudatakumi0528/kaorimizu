@@ -1,0 +1,11 @@
+mixin m-wideCard(information)
+	li.m-wideCard
+		.m-wideCard__inner
+			.m-wideCard__inner__left
+				a(href="").m-wideCard__inner__left__image
+					img(src=information.url, alt="").m-wideCard__inner__left__image__inner
+			.m-wideCard__inner__right
+				.m-wideCard__inner__right__date #{information.date}
+				a(href="").m-wideCard__inner__right__title #{information.title}
+				include ./classificationArea
+				+m-classificationArea(information.tag)

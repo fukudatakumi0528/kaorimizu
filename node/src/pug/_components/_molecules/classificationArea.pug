@@ -1,0 +1,4 @@
+mixin m-classificationArea(tags)
+  .m-classificationArea
+    each tag in tags
+      a(href=tag.link).m-classificationArea__tag #{tag.title}

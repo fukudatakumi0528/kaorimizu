@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--object-fit（IE対策）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -45,65 +46,168 @@
         </div>
       </header>
       <main>
-        <section class="l-top__kv">
-          <div class="l-top__kv__bg"></div>
-          <ul class="l-top__kv__slider js-slickSlider--topkv">
-            <li class="l-top__kv__slider__list">
-              <div class="l-top__kv__slider__list__inner">
-                <div class="l-top__kv__slider__list__inner__topper"><img class="l-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/300x300.png" alt=""></div>
-                <div class="l-top__kv__slider__list__inner__footer">
-                  <div class="l-top__kv__slider__list__inner__footer__tag"></div>
-                  <div class="l-top__kv__slider__list__inner__footer__description">
-                    <p class="l-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
+        <section class="p-top__kv">
+          <div class="p-top__kv__bg">
+            <div class="p-top__kv__bg__js">
+              <div class="slick-next"><span class="icon-arrow"></span></div>
+              <div class="slick-prev"><span class="icon-arrow"></span></div>
+            </div>
+          </div>
+          <ul class="p-top__kv__slider js-slickSlider--topkv">
+            <li class="p-top__kv__slider__list">
+              <div class="p-top__kv__slider__list__inner">
+                <div class="p-top__kv__slider__list__inner__topper"><img class="p-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/300x300.png" alt=""></div>
+                <div class="p-top__kv__slider__list__inner__footer">
+                  <div class="p-top__kv__slider__list__inner__footer__tag"></div>
+                  <div class="p-top__kv__slider__list__inner__footer__description">
+                    <p class="p-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="l-top__kv__slider__list">
-              <div class="l-top__kv__slider__list__inner">
-                <div class="l-top__kv__slider__list__inner__topper"><img class="l-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/200x200.png" alt=""></div>
-                <div class="l-top__kv__slider__list__inner__footer">
-                  <div class="l-top__kv__slider__list__inner__footer__tag"></div>
-                  <div class="l-top__kv__slider__list__inner__footer__description">
-                    <p class="l-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
+            <li class="p-top__kv__slider__list">
+              <div class="p-top__kv__slider__list__inner">
+                <div class="p-top__kv__slider__list__inner__topper"><img class="p-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/200x200.png" alt=""></div>
+                <div class="p-top__kv__slider__list__inner__footer">
+                  <div class="p-top__kv__slider__list__inner__footer__tag"></div>
+                  <div class="p-top__kv__slider__list__inner__footer__description">
+                    <p class="p-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="l-top__kv__slider__list">
-              <div class="l-top__kv__slider__list__inner">
-                <div class="l-top__kv__slider__list__inner__topper"><img class="l-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/200x150.png" alt=""></div>
-                <div class="l-top__kv__slider__list__inner__footer">
-                  <div class="l-top__kv__slider__list__inner__footer__tag"></div>
-                  <div class="l-top__kv__slider__list__inner__footer__description">
-                    <p class="l-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
+            <li class="p-top__kv__slider__list">
+              <div class="p-top__kv__slider__list__inner">
+                <div class="p-top__kv__slider__list__inner__topper"><img class="p-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/200x150.png" alt=""></div>
+                <div class="p-top__kv__slider__list__inner__footer">
+                  <div class="p-top__kv__slider__list__inner__footer__tag"></div>
+                  <div class="p-top__kv__slider__list__inner__footer__description">
+                    <p class="p-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="l-top__kv__slider__list">
-              <div class="l-top__kv__slider__list__inner">
-                <div class="l-top__kv__slider__list__inner__topper"><img class="l-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/500x500.png" alt=""></div>
-                <div class="l-top__kv__slider__list__inner__footer">
-                  <div class="l-top__kv__slider__list__inner__footer__tag"></div>
-                  <div class="l-top__kv__slider__list__inner__footer__description">
-                    <p class="l-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
+            <li class="p-top__kv__slider__list">
+              <div class="p-top__kv__slider__list__inner">
+                <div class="p-top__kv__slider__list__inner__topper"><img class="p-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/500x500.png" alt=""></div>
+                <div class="p-top__kv__slider__list__inner__footer">
+                  <div class="p-top__kv__slider__list__inner__footer__tag"></div>
+                  <div class="p-top__kv__slider__list__inner__footer__description">
+                    <p class="p-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="l-top__kv__slider__list">
-              <div class="l-top__kv__slider__list__inner">
-                <div class="l-top__kv__slider__list__inner__topper"><img class="l-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/500x500.png" alt=""></div>
-                <div class="l-top__kv__slider__list__inner__footer">
-                  <div class="l-top__kv__slider__list__inner__footer__tag"></div>
-                  <div class="l-top__kv__slider__list__inner__footer__description">
-                    <p class="l-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
+            <li class="p-top__kv__slider__list">
+              <div class="p-top__kv__slider__list__inner">
+                <div class="p-top__kv__slider__list__inner__topper"><img class="p-top__kv__slider__list__inner__topper__image" src="https://placehold.jp/500x500.png" alt=""></div>
+                <div class="p-top__kv__slider__list__inner__footer">
+                  <div class="p-top__kv__slider__list__inner__footer__tag"></div>
+                  <div class="p-top__kv__slider__list__inner__footer__description">
+                    <p class="p-top__kv__slider__list__inner__footer__description__text">【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p>
                   </div>
                 </div>
               </div>
             </li>
           </ul>
+        </section>
+        <section class="p-top__latest">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">新着<small>Latest</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
+          <ul class="o-wideCardList">
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/300x150.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/400x400.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/100x100.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/500x150.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/50x500.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="m-wideCard">
+                          <div class="m-wideCard__inner">
+                            <div class="m-wideCard__inner__left"><a class="m-wideCard__inner__left__image" href=""><img class="m-wideCard__inner__left__image__inner" src="https://placehold.jp/300x150.png" alt=""></a></div>
+                            <div class="m-wideCard__inner__right">
+                              <div class="m-wideCard__inner__right__date">2019.08.14</div><a class="m-wideCard__inner__right__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                                                <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+                                                </div>
+                            </div>
+                          </div>
+                        </li>
+          </ul>
+        </section>
+        <section class="p-top__ranking">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">人気記事<small>Ranking</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
+        </section>
+        <section class="p-top__feature">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">特集<small>Feature</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
+        </section>
+        <section class="p-top__hobby">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">趣味<small>Hobby</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
+        </section>
+        <section class="p-top__life">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">生活<small>Life</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
+        </section>
+        <section class="p-top__learn">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__text">学び<small>Learn</small></div>
+                      <div class="m-titleBorder__border"></div>
+                    </div>
         </section>
         <div class="l-fixed-button">
           <div class="l-fixed-button__inner">
@@ -126,7 +230,7 @@
           </div>
         </div>
       </main>
-      <footer class="footer"><small class="footer__copy">2018 Office Laboratory Inc.</small></footer>
+      <footer class="l-footer"><small class="l-footer__copy">©︎2019 NeseEgg,Inc.</small></footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
     <script src="/assets/js/common.js"></script>

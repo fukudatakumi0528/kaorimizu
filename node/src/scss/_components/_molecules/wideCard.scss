@@ -1,0 +1,54 @@
+.m-wideCard {
+  margin-top:14px;
+  width: 100%;
+
+  .m-wideCard__inner {
+    top:0;
+    display: flex;
+
+    .m-wideCard__inner__left {
+      width: 40%;
+
+      .m-wideCard__inner__left__image {
+        display: block;
+        padding-top:80%;
+        width: 100%;
+        position: relative;
+
+        .m-wideCard__inner__left__image__inner {
+          position: absolute;
+          top:0;
+          left:0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          font-family: 'object-fit: cover;'; /*IE対策*/
+        }
+      }
+    }
+
+    .m-wideCard__inner__right {
+      width: 70%;
+      padding-left:15px;
+      box-sizing: border-box;
+        
+      .m-wideCard__inner__right__date {
+        font-size: $font-xxs;
+        color:$font-1-color;
+      }
+
+      .m-wideCard__inner__right__title {
+        display: block;
+        margin-top:5px;
+        font-size: 13px;
+        font-weight: $font-bold;
+        color:$font-base-color;
+        line-height: 150%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+        overflow: hidden;
+      }
+    }
+  }
+}

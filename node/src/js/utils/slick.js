@@ -41,11 +41,12 @@ export default class Slick {
 			autoplay: true,
 			autoplaySpeed: 3000,
 			speed: 800,
-			arrows: false,
+			arrows: true,
 			dots: true,
 			infinite: true,
 			centerMode: true,
-			centerPadding:'0 15% 0 0',
+			centerPadding: '0 15% 0 0',
+			appendArrows: $('.p-top__kv__bg__js'),
 		});
 
 		$(window).on('load resize', function(){
