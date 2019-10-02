@@ -1,14 +1,14 @@
-.m-squareCard {
+.m-oblongCard {
   height: 100%;
 
-  .m-squareCard__inner {
+  .m-oblongCard__inner {
     
-    .m-squareCard__inner__topper {
+    .m-oblongCard__inner__topper {
       padding-top:80%;
       position: relative;
       overflow: hidden;
     
-      .m-squareCard__inner__topper__image {
+      .m-oblongCard__inner__topper__image {
         position: absolute;
         top:0;
         left:0;
@@ -19,18 +19,17 @@
       }
     }
 
-    .m-squareCard__inner__footer {
-      background-color: $bg-3-color;
-      padding:12px 8px;
+    .m-oblongCard__inner__footer {
+      padding:16px;
+      background-color: $bg-6-color;
 
-      .m-squareCard__footer__inner__tag {
-
+      .m-oblongCard__footer__inner__tag {
       }
 
-      .m-squareCard__inner__footer__description {
+      .m-oblongCard__inner__footer__description {
 
         overflow: hidden;
-        .m-squareCard__inner__footer__description__text {
+        .m-oblongCard__inner__footer__description__text {
           font-size: $font-m;
           line-height: 150%;
           font-weight: $font-medium;

@@ -1,9 +1,19 @@
 mixin m-squareCard(card)
-  li.m-squareCard
-    .m-squareCard__inner
-      .m-squareCard__inner__topper
-        img.m-squareCard__inner__topper__image(src=card.url, alt="")
-      .m-squareCard__inner__footer
-        .m-squareCard__inner__footer__tag
-        .m-squareCard__inner__footer__description
-          p.m-squareCard__inner__footer__description__text #{card.text}
+  if (card.list === true) 
+    li.m-squareCard
+      .m-squareCard__inner
+        .m-squareCard__inner__topper
+          img.m-squareCard__inner__topper__image(src=card.url, alt="")
+        .m-squareCard__inner__footer
+          .m-squareCard__inner__footer__tag
+          .m-squareCard__inner__footer__description
+            p.m-squareCard__inner__footer__description__text #{card.text}
+  else
+    .m-squareCard
+      .m-squareCard__inner
+        .m-squareCard__inner__topper
+          img.m-squareCard__inner__topper__image(src=card.url, alt="")
+        .m-squareCard__inner__footer
+          .m-squareCard__inner__footer__tag
+          .m-squareCard__inner__footer__description
+            p.m-squareCard__inner__footer__description__text #{card.text}

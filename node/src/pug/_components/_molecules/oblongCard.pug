@@ -1,0 +1,25 @@
+mixin m-oblongCard(card)
+	if (card.list === true) 
+		li.m-oblongCard
+			.m-oblongCard__inner
+				.m-oblongCard__inner__topper
+					img.m-oblongCard__inner__topper__image(src=card.url, alt="")
+				.m-oblongCard__inner__footer
+					.m-oblongCard__inner__footer__tag
+					.m-oblongCard__inner__footer__description
+						p.m-oblongCard__inner__footer__description__text #{card.text}
+					.m-oblongCard__inner__footer__classification
+					include ./classificationArea
+					+m-classificationArea(card.tag)
+	else
+		.m-oblongCard
+			.m-oblongCard__inner
+				.m-oblongCard__inner__topper
+					img.m-oblongCard__inner__topper__image(src=card.url, alt="")
+				.m-oblongCard__inner__footer
+					.m-oblongCard__inner__footer__tag
+					.m-oblongCard__inner__footer__description
+						p.m-oblongCard__inner__footer__description__text #{card.text}
+					.m-oblongCard__inner__footer__classification
+					include ./classificationArea
+					+m-classificationArea(card.tag)

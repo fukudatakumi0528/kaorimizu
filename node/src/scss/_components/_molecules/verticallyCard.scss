@@ -1,0 +1,54 @@
+.m-verticallyCard {
+  margin-top:14px;
+  width: 100%;
+
+  .m-verticallyCard__inner {
+    top:0;
+    display: flex;
+    flex-direction: column;
+
+    .m-verticallyCard__inner__topper {
+      width: 100%;
+
+      .m-verticallyCard__inner__topper__image {
+        display: block;
+        padding-top:80%;
+        width: 100%;
+        position: relative;
+
+        .m-verticallyCard__inner__topper__image__inner {
+          position: absolute;
+          top:0;
+          left:0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          font-family: 'object-fit: cover;'; /*IE対策*/
+        }
+      }
+    }
+
+    .m-verticallyCard__inner__footer {
+      width: 100%;
+      box-sizing: border-box;
+        
+      .m-verticallyCard__inner__footer__date {
+        font-size: $font-xxs;
+        color:$font-1-color;
+      }
+
+      .m-verticallyCard__inner__footer__title {
+        display: block;
+        margin-top:5px;
+        font-size: 13px;
+        font-weight: $font-bold;
+        color:$font-base-color;
+        line-height: 150%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+        overflow: hidden;
+      }
+    }
+  }
+}
