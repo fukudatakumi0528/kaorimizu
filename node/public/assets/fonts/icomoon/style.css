@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?5xfk6a');
-  src:  url('fonts/icomoon.eot?5xfk6a#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?5xfk6a') format('truetype'),
-    url('fonts/icomoon.woff?5xfk6a') format('woff'),
-    url('fonts/icomoon.svg?5xfk6a#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ynjdol');
+  src:  url('fonts/icomoon.eot?ynjdol#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ynjdol') format('truetype'),
+    url('fonts/icomoon.woff?ynjdol') format('woff'),
+    url('fonts/icomoon.svg?ynjdol#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -59,6 +59,21 @@
 }
 .icon-twitter:before {
   content: "\e90a";
+}
+.icon-arrow2 .path1:before {
+  content: "\e90d";
+  color: rgb(38, 38, 38);
+  opacity: 0.1954;
+}
+.icon-arrow2 .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(38, 38, 38);
+}
+.icon-arrow2 .path3:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(38, 38, 38);
 }
 .icon-check .path1:before {
   content: "\e900";

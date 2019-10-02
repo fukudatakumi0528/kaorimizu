@@ -3,6 +3,7 @@ import Slick from '../utils/slick';
 import Scroll from '../utils/scroll';
 import Hugelink from '../utils/Hugelink';
 import FixedButton from '../utils/fixedButton';
+import SliderTab from '../utils/sliderTab';
 
 // ヘッダーメニュー
 const header = new Header();
@@ -23,5 +24,10 @@ hugelink.init();
 // object-fit対策（IE対応）
 objectFitImages();
 
+//追従ボタン
 const fixedButton = new FixedButton();
 fixedButton.clickMenu();
+
+//追従ボタン
+const sliderTab = new SliderTab();
+sliderTab.clickTab();

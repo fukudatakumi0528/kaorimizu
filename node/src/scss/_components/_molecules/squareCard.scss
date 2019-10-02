@@ -1,0 +1,44 @@
+.m-squareCard {
+  height: 100%;
+
+  .m-squareCard__inner {
+    
+    .m-squareCard__inner__topper {
+      padding-top:80%;
+      position: relative;
+      overflow: hidden;
+    
+      .m-squareCard__inner__topper__image {
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        font-family: 'object-fit: cover;'; /*IE対策*/
+      }
+    }
+
+    .m-squareCard__inner__footer {
+      background-color: $bg-3-color;
+      padding:10px 8px;
+
+      .m-squareCard__footer__inner__tag {
+
+      }
+
+      .m-squareCard__inner__footer__description {
+
+        overflow: hidden;
+        .m-squareCard__inner__footer__description__text {
+          font-size: $font-m;
+          line-height: 150%;
+          font-weight: $font-medium;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;  
+        } 
+      }
+    }
+  }
+}
