@@ -1,5 +1,10 @@
 mixin m-wideCard(information)
 	li.m-wideCard
+		if(information.pickup)
+			.m-wideCard__pickup
+				.m-wideCard__pickup__inner
+					.m-wideCard__pickup__inner__text #{information.pickup}
+		else
 		.m-wideCard__inner
 			.m-wideCard__inner__left
 				a(href="").m-wideCard__inner__left__image

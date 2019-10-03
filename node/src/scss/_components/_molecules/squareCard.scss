@@ -22,9 +22,25 @@
     .m-squareCard__inner__footer {
       background-color: $bg-3-color;
       padding:12px 8px;
+      position: relative;
 
-      .m-squareCard__footer__inner__tag {
+      .m-squareCard__inner__footer__tag {
+        position: absolute;
+        top: 0;
+        transform: translateX(0%) translateY(-50%);
+        border: $border-2;
 
+        .m-squareCard__inner__footer__tag__text {
+          display: flex;
+          height: 100%;
+          padding:4px 12px;
+          justify-content: center;
+          align-items: center;
+          background-color:$bg-base-color; 
+          color: $bg-6-color;
+          font-size: $font-xs;
+          font-weight: $font-bold; 
+        }
       }
 
       .m-squareCard__inner__footer__description {

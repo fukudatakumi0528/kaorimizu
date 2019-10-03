@@ -1,5 +1,45 @@
 mixin m-titleBorder(information)
   .m-titleBorder
-    .m-titleBorder__text #{information.title}
-      small #{information.subtitle}
-    .m-titleBorder__border
+    case information.icon
+      when "feature"
+        span.m-titleBorder__icon.icon-feature
+          span.path1
+          span.path2
+          span.path3
+        .m-titleBorder__main
+          .m-titleBorder__main__text #{information.title}
+            small #{information.subtitle}
+          .m-titleBorder__main__border
+      when "hobby"
+        span.m-titleBorder__icon.icon-hobby
+          span.path1
+          span.path2
+          span.path3
+          span.path4
+          span.path5
+        .m-titleBorder__main
+          .m-titleBorder__main__text #{information.title}
+            small #{information.subtitle}
+          .m-titleBorder__main__border
+      when "life"
+        span.m-titleBorder__icon.icon-life
+          span.path1
+          span.path2
+        .m-titleBorder__main
+          .m-titleBorder__main__text #{information.title}
+            small #{information.subtitle}
+          .m-titleBorder__main__border
+      when "learn"
+        span.m-titleBorder__icon.icon-learn
+          span.path1
+          span.path2
+          span.path3
+        .m-titleBorder__main
+          .m-titleBorder__main__text #{information.title}
+            small #{information.subtitle}
+          .m-titleBorder__main__border
+      default
+        .m-titleBorder__main
+          .m-titleBorder__main__text #{information.title}
+            small #{information.subtitle}
+          .m-titleBorder__main__border

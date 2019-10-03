@@ -1,5 +1,4 @@
 .m-verticallyCard {
-  margin-top:14px;
   width: 100%;
 
   .m-verticallyCard__inner {
@@ -33,6 +32,7 @@
       box-sizing: border-box;
         
       .m-verticallyCard__inner__footer__date {
+        margin-top:5px;
         font-size: $font-xxs;
         color:$font-1-color;
       }
@@ -46,7 +46,7 @@
         line-height: 150%;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; 
+        -webkit-line-clamp: 3; 
         overflow: hidden;
       }
     }

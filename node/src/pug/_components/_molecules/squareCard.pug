@@ -6,6 +6,7 @@ mixin m-squareCard(card)
           img.m-squareCard__inner__topper__image(src=card.url, alt="")
         .m-squareCard__inner__footer
           .m-squareCard__inner__footer__tag
+            .m-squareCard__inner__footer__tag__text #{card.tag}
           .m-squareCard__inner__footer__description
             p.m-squareCard__inner__footer__description__text #{card.text}
   else
@@ -15,5 +16,6 @@ mixin m-squareCard(card)
           img.m-squareCard__inner__topper__image(src=card.url, alt="")
         .m-squareCard__inner__footer
           .m-squareCard__inner__footer__tag
+            .m-squareCard__inner__footer__tag__text #{card.tag}
           .m-squareCard__inner__footer__description
             p.m-squareCard__inner__footer__description__text #{card.text}

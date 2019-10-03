@@ -1,6 +1,46 @@
 .m-wideCard {
   margin-top:14px;
   width: 100%;
+  position: relative;
+
+  .m-wideCard__pickup {
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translateX(-10px) translateY(-10px);
+    z-index: 2;
+    background-color: $bg-6-color;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .m-wideCard__pickup__inner {
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      background-color: $bg-4-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .m-wideCard__pickup__inner__text {
+        color: $bg-6-color;
+        margin:0;
+        line-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        transform: rotate(-30deg);
+        font-size: $font-xxs;
+        font-weight: $font-bold;
+      }
+    }
+  }
+
 
   .m-wideCard__inner {
     top:0;
