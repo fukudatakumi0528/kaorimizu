@@ -210,6 +210,7 @@ $font-xxl: 2rem;
 
 .p-top__ranking {
   margin-top: 46px;
+  overflow: hidden;
 }
 
 .p-top__ranking .m-titleBorder {
@@ -396,6 +397,10 @@ $font-xxl: 2rem;
 
 .p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow button {
   z-index: 3;
+}
+
+.p-top__ranking .p-top__ranking__slider .slick-list {
+  overflow: visible;
 }
 
 .p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner {

@@ -791,6 +791,7 @@ main {
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
 }
 
 .l-fixed-button .l-fixed-button__inner {
@@ -1587,6 +1588,75 @@ main {
   height: 100%;
 }
 
+.m-squareCard .m-squareCard__inner {
+  position: relative;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span {
+  position: absolute;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span::before {
+  font-size: 60px;
+  margin: 0;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span.path2.rank-2::before {
+  color: blue;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span.path2.rank-3::before {
+  color: green;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  line-height: 100%;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text strong {
+  font-size: 23px;
+}
+
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__topper {
   padding-top: 80%;
   position: relative;
@@ -1638,6 +1708,7 @@ main {
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description {
+  display: block;
   overflow: hidden;
 }
 

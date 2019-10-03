@@ -185,6 +185,8 @@
 
 .p-top__ranking {
   margin-top:46px;
+  //labelを表示させるために、slick-sliceでoverflow:hiddenを解除しているため。
+  overflow: hidden;
 
   .m-titleBorder {
     padding:0 15px;
@@ -351,6 +353,10 @@
       }
     }
 
+    //labelを表示させるため。
+    .slick-list {
+      overflow: visible;
+    }
 
     .p-top__ranking__slider__inner {
       display: none;
