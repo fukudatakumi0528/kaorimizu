@@ -18,6 +18,8 @@ html(lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website
 	body
 		.wrap
 
+			include ./_spMenu
+
 			include ./_header
 
 			main
@@ -25,7 +27,8 @@ html(lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website
 				block contents
 
 			include ./_footer
-
+			
+			include ../_components/_layout/fixedButton
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js")
 		script(src="/assets/js/common.js")

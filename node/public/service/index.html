@@ -37,9 +37,50 @@
     <link rel="stylesheet" href="../assets/fonts/icomoon/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--object-fit（IE対策）-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+    <script src="assets/js/anime.min.js"></script>
   </head>
   <body>
     <div class="wrap">
+      <div class="l-spMenu" id="js-spMenu">
+        <header class="l-header">
+          <div class="l-header__inner"><a class="m-logo" href=""><img class="m-logo__image" src="./assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+            <div class="l-header__inner__left"><a class="icon-instagram" href=""></a><a class="icon-twitter" href=""></a><a class="icon-facebook" href=""><span class="path1"></span><span class="path2"></span></a></div>
+          </div>
+        </header>
+        <div class="l-spMenu__main">
+          <ul class="l-spMenu__main__nav">
+            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-home l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span></span>
+                  <p class="l-spMenu__main__nav__list__link__left__text">TOP</p>
+                </div>
+                <div class="icon-btn"></div></a></li>
+            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-feature l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                  <p class="l-spMenu__main__nav__list__link__left__text">特集</p>
+                </div>
+                <div class="icon-btn"></div></a></li>
+            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-hobby l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                  <p class="l-spMenu__main__nav__list__link__left__text">趣味</p>
+                </div>
+                <div class="icon-btn"></div></a></li>
+            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-life l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span></span>
+                  <p class="l-spMenu__main__nav__list__link__left__text">生活</p>
+                </div>
+                <div class="icon-btn"></div></a></li>
+            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-learn l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                  <p class="l-spMenu__main__nav__list__link__left__text">学び</p>
+                </div>
+                <div class="icon-btn"></div></a></li>
+          </ul>
+          <div class="l-spMenu__main__search">
+            <input class="l-spMenu__main__search__input" type="text" placeholder="気になるワードを入力してください。">
+            <div class="icon-search"></div>
+          </div>
+        </div>
+      </div>
       <header class="l-header">
         <div class="l-header__inner"><a class="m-logo" href=""><img class="m-logo__image" src="./assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
           <div class="l-header__inner__left"><a class="icon-instagram" href=""></a><a class="icon-twitter" href=""></a><a class="icon-facebook" href=""><span class="path1"></span><span class="path2"></span></a></div>
@@ -271,6 +312,26 @@
         </div>
         <div class="l-footer__copy">©︎2019 NeseEgg,Inc.</div>
       </footer>
+      <div class="l-fixed-button">
+        <div class="l-fixed-button__inner">
+          <div class="l-fixed-button__inner__topper">
+            <div class="l-fixed-button__inner__topper__inner">
+              <div class="l-fixed-button__inner__topper__inner__menu"><span class="l-fixed-button__inner__topper__inner__menu__line"></span><span class="l-fixed-button__inner__topper__inner__menu__line"></span></div>
+              <p class="l-fixed-button__inner__topper__inner__text">menu</p>
+            </div>
+          </div>
+          <div class="l-fixed-button__inner__main">
+            <div class="l-fixed-button__inner__main__button">
+              <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>探す</strong></p>
+              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+            </div>
+            <div class="l-fixed-button__inner__main__button">
+              <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>叶える</strong></p>
+              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
     <script src="/assets/js/common.js"></script>
