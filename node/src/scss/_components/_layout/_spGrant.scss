@@ -1,0 +1,63 @@
+.l-spGrant {
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  transform: translateX(-100%);
+  background-color: $bg-6-color;
+
+  &.is-left {
+    transition: 0.4s;
+  }
+
+  &.is-active {
+    transform: translateX(0%);
+    transition: 0.4s;
+  }
+
+  &.is-right {
+    transform: translateX(100%);
+    transition: 0.4s;
+  }
+
+  .l-spGrant__main {
+    width: 100%;
+
+
+    .m-inputSearch {
+      margin-top:10px;
+      width: 100%;
+      height: 50px;
+      padding:0 15px;
+    } 
+
+    .l-spGrant__main__pickup {
+      margin-top: 30px;
+      width: 100%;
+      padding:0 15px;
+
+      .l-spGrant__main__pickup__title {
+        font-size: $font-m;
+        font-weight: $font-bold;
+      }
+    }
+
+    .l-spGrant__main__keywords {
+      margin-top: 30px;
+      background-color: $bg-2-color;
+      width: 100%;
+      padding:20px 15px 180px 15px;
+
+      .l-spGrant__main__keywords__title {
+        font-size: $font-m;
+        font-weight: $font-bold;        
+      }
+
+      .o-classificationList {
+
+      }
+    }
+  }
+}

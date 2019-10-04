@@ -1,8 +1,5 @@
-ul.o-verticallyCardList
-	include ../_molecules/verticallyCard
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] })
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] })
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image3.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] })
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] })
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] })
-	+m-verticallyCard({ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] })
+mixin o-verticallyCardList(cards)
+	ul.o-verticallyCardList
+		each card in cards
+			include ../_molecules/verticallyCard
+			+m-verticallyCard(card)

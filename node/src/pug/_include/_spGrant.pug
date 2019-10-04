@@ -1,0 +1,17 @@
+.l-spGrant(id="js-spGrant")
+  include ./_header
+  .l-spGrant__main
+    include ../_components/_molecules/inputSearch
+    .l-spGrant__main__pickup
+      p.l-spGrant__main__pickup__title Pickup
+      include ../_components/_organisms/verticallyCardList
+      +o-verticallyCardList([
+        { url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+        { url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+        { url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+        { url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+      ])
+    .l-spGrant__main__keywords
+      .l-spGrant__main__keywords__title Keywords
+      include ../_components/_organisms/classificationList
+      +o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])

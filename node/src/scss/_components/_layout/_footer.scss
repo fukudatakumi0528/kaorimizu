@@ -26,33 +26,8 @@
       }
     }
 
-    .l-footer__keyword__classification {
-      display: flex;
-      flex-wrap: wrap;
-      margin:10px 0 0 -7px;
-
-      .l-footer__keyword__classification__tag {
-        margin:10px 0 0 7px;
-        background-color:$bg-6-color;
-        border-radius: 25px;
-
-        .l-footer__keyword__classification__tag__link {
-          display: block;
-          height: 100%;
-          width: 100%;
-          padding:6px 16px;
-
-          .l-footer__keyword__classification__tag__link__inner {
-            line-height: 100%;
-            font-size: $font-xs;
-            margin:0;
-  
-            &::before {
-              content:"#";
-            }
-          }  
-        }
-      }
+    .o-classificationList {
+        
     }
   }
 

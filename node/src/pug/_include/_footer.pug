@@ -3,44 +3,8 @@ footer.l-footer
 		.l-footer__keyword__header
 			.l-footer__keyword__header__subtitle Keywords
 			.l-footer__keyword__header__tilte 人気のワード
-		ul.l-footer__keyword__classification
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner TRIP
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner MOVIE
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner WORK
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner ART
-			li.l-footer__keyword__classification__tag 
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner TRIP
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner MOVIE
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner WORK
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner ART
-			li.l-footer__keyword__classification__tag 
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner TRIP
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner MOVIE
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner WORK
-			li.l-footer__keyword__classification__tag
-				a.l-footer__keyword__classification__tag__link
-					p.l-footer__keyword__classification__tag__link__inner ART
-
+		include ../_components/_organisms/classificationList
+		+o-classificationList(["TRIP", "MOVIE", "WORK", "ART", "TRIP", "MOVIE","TRIP", "MOVIE", "WORK", "ART", "TRIP", "MOVIE",])
 
 	.l-footer__downlord
 		.l-footer__downlord__inner
