@@ -8,10 +8,18 @@
     font-size: $font-xxs;
     color:$font-2-color;   
 
+    @include screen-large {
+      font-size: $font-xs;
+    }    
+
     &::before {
       content:"#";
       font-size: $font-xxs;
       color:$font-2-color;   
+
+      @include screen-large {
+        font-size: $font-xs;
+      }    
     }
   }
 }

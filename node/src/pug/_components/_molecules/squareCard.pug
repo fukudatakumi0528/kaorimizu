@@ -9,7 +9,7 @@ mixin m-squareCard(card)
               span(class="rank-" + card.ranking).path2
               span.path3
             .m-squareCard__inner__ranking__rank
-              p.m-squareCard__inner__ranking__rank__text No.<strong>#{card.ranking}</strong>
+              p.m-squareCard__inner__ranking__rank__text <small>No.</small><strong>#{card.ranking}</strong>
         else
         .m-squareCard__inner__topper
           img.m-squareCard__inner__topper__image(src=card.url, alt="")

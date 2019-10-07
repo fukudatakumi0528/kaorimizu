@@ -1775,10 +1775,22 @@ main {
   color: #285486;
 }
 
+@media (min-width: 768px) {
+  .m-classificationArea .m-classificationArea__tag {
+    font-size: 1.2rem;
+  }
+}
+
 .m-classificationArea .m-classificationArea__tag::before {
   content: "#";
   font-size: 1rem;
   color: #285486;
+}
+
+@media (min-width: 768px) {
+  .m-classificationArea .m-classificationArea__tag::before {
+    font-size: 1.2rem;
+  }
 }
 
 .m-inputSearch {
@@ -1900,6 +1912,15 @@ main {
   z-index: 2;
 }
 
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking {
+    top: 6px;
+    left: 16px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon {
   position: relative;
   height: 100%;
@@ -1915,12 +1936,18 @@ main {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span::before {
+    font-size: 30px;
+  }
+}
+
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span.path2.rank-2::before {
-  color: blue;
+  color: #A1A1A1;
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__icon > span.path2.rank-3::before {
-  color: green;
+  color: #855800;
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank {
@@ -1939,6 +1966,13 @@ main {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank {
+    height: 25px;
+    width: 25px;
+  }
+}
+
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1948,12 +1982,30 @@ main {
   align-items: baseline;
   line-height: 100%;
   color: #FFFFFF;
+  font-weight: 700;
+}
+
+.m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text small {
+  color: #FFFFFF;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text small {
+    display: none;
+  }
+}
+
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text strong {
   font-size: 23px;
+}
+
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking .m-squareCard__inner__ranking__rank .m-squareCard__inner__ranking__rank__text strong {
+    display: block;
+    font-size: 1.6rem;
+  }
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__topper {
@@ -2072,6 +2124,14 @@ main {
   align-items: baseline;
 }
 
+@media (min-width: 768px) {
+  .m-titleBorder .m-titleBorder__main {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+}
+
 .m-titleBorder .m-titleBorder__main .m-titleBorder__main__text {
   white-space: nowrap;
   font-size: 18px;
@@ -2085,6 +2145,22 @@ main {
   font-size: 12px;
   font-weight: 700;
   margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .m-titleBorder .m-titleBorder__main .m-titleBorder__main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .m-titleBorder .m-titleBorder__main .m-titleBorder__main__text small {
+    margin-left: 0;
+    margin-top: 5px;
+  }
 }
 
 .m-titleBorder .m-titleBorder__main .m-titleBorder__main__border {
@@ -2229,8 +2305,23 @@ main {
   display: flex;
 }
 
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__left {
   width: 40%;
+}
+
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner .m-wideCard__inner__left {
+    width: 100%;
+  }
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__left .m-wideCard__inner__left__image {
@@ -2259,9 +2350,22 @@ main {
   box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner .m-wideCard__inner__right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__date {
   font-size: 1rem;
   color: #A3A3A3;
+}
+
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__date {
+    font-size: 1.2rem;
+  }
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
@@ -2275,6 +2379,12 @@ main {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
+    font-size: 15px;
+  }
 }
 
 .o-classificationList {
@@ -2549,4 +2659,20 @@ main {
 
 .o-wideCardList {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .o-wideCardList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .o-wideCardList .m-wideCard {
+    width: 48%;
+  }
 }

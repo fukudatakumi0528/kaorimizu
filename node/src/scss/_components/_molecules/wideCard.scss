@@ -46,8 +46,16 @@
     top:0;
     display: flex;
 
+    @include screen-large {
+      flex-direction: column;
+    }
+
     .m-wideCard__inner__left {
       width: 40%;
+
+      @include screen-large {
+        width: 100%;
+      }  
 
       .m-wideCard__inner__left__image {
         display: block;
@@ -71,10 +79,19 @@
       width: 70%;
       padding-left:15px;
       box-sizing: border-box;
+
+      @include screen-large {
+        width: 100%;
+        padding-left: 0;
+      }  
         
       .m-wideCard__inner__right__date {
         font-size: $font-xxs;
         color:$font-1-color;
+
+        @include screen-large {
+          font-size: $font-xs;
+        }    
       }
 
       .m-wideCard__inner__right__title {
@@ -88,6 +105,10 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2; 
         overflow: hidden;
+
+        @include screen-large {
+          font-size: 15px;
+        }    
       }
     }
   }

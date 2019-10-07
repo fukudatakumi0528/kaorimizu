@@ -12,6 +12,13 @@
       left:10px;
       z-index: 2;
 
+      @include screen-large {
+        top:6px;
+        left: 16px;
+        height: 30px;
+        width: 30px;  
+      }
+
       .m-squareCard__inner__ranking__icon {
         position: relative;
         height: 100%;
@@ -22,19 +29,23 @@
           &::before {
             font-size:60px;
             margin:0;
+
+            @include screen-large {
+              font-size: 30px;
+            }      
           }
 
           &.path2.rank-2 {
             
             &::before {
-              color:blue;
+              color:$bg-11-color;
             }
           }
 
           &.path2.rank-3 {
             
             &::before {
-              color:green;
+              color:$bg-12-color;
             }
           }
         }
@@ -48,16 +59,36 @@
         justify-content: center;
         align-items: center;
 
+        @include screen-large {
+          height: 25px;
+          width: 25px;  
+        }
+  
+
         .m-squareCard__inner__ranking__rank__text {
           display: flex;
           align-items: baseline;
           line-height: 100%;
           color:$bg-6-color;
-          font-size: $font-s;
           font-weight: $font-bold;
+
+          small {
+            color:$bg-6-color;
+            font-size: $font-s;
+            font-weight: $font-bold;
   
+            @include screen-large {
+              display: none;
+            }  
+          }
+
           strong {
             font-size:23px;
+
+            @include screen-large {
+              display: block;
+              font-size: $font-m;
+            }              
           }  
         }
       }

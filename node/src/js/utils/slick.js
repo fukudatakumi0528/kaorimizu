@@ -74,37 +74,52 @@ export default class Slick {
 		});
 
 
-		// top ranking スライダー
-		$topRankingMonthSlider.slick({
-			autoplaySpeed: 3000,
-			speed: 800,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			centerMode: true,
-			appendArrows: $('.js__arrow-top__ranking__month'),
-		});
+		var mediaQuery = matchMedia('(max-width: 768px)');
 
-		$topRankingWeeklySlider.slick({
-			autoplaySpeed: 3000,
-			speed: 800,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			centerMode: true,
-			appendArrows: $('.js__arrow-top__ranking__weekly'),
-		});
+		// ページが読み込まれた時に実行
+		handle(mediaQuery);
 
-		$topRankingAllSlider.slick({
-			autoplaySpeed: 3000,
-			speed: 800,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			centerMode: true,
-			appendArrows: $('.js__arrow-top__ranking__all'),
-		});
+		// ウィンドウサイズが変更されても実行されるように
+		mediaQuery.addListener(handle);
 
+		function handle(mq) {
+			if (mq.matches) {
+				// top ranking スライダー
+				$topRankingMonthSlider.slick({
+					autoplaySpeed: 3000,
+					speed: 800,
+					arrows: true,
+					dots: false,
+					infinite: true,
+					centerMode: true,
+					appendArrows: $('.js__arrow-top__ranking__month'),
+				});
+
+				$topRankingWeeklySlider.slick({
+					autoplaySpeed: 3000,
+					speed: 800,
+					arrows: true,
+					dots: false,
+					infinite: true,
+					centerMode: true,
+					appendArrows: $('.js__arrow-top__ranking__weekly'),
+				});
+
+				$topRankingAllSlider.slick({
+					autoplaySpeed: 3000,
+					speed: 800,
+					arrows: true,
+					dots: false,
+					infinite: true,
+					centerMode: true,
+					appendArrows: $('.js__arrow-top__ranking__all'),
+				});
+				// ウィンドウサイズが798px以下のとき
+			} else {
+				// それ以外
+			}
+		}
+	
 		// top feature スライダー
 		$topFeatureSlider.slick({
 			autoplaySpeed: 3000,

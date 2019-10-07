@@ -1,3 +1,13 @@
 .o-wideCardList {
   width: 100%;
+
+  @include screen-large {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .m-wideCard {
+      width: 48%;
+    }
+  }
 }

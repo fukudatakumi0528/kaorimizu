@@ -255,25 +255,83 @@ $font-xxl: 2rem;
   font-size: 10px;
 }
 
-.p-top__latest {
+.p-top__latestRanking {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
   margin-top: 46px;
   padding: 0 15px;
 }
 
-.p-top__latest .o-wideCardList {
+@media (min-width: 768px) {
+  .p-top__latestRanking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__latest {
+    width: 60%;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__latest .o-wideCardList {
   margin-top: 32px;
 }
 
-.p-top__ranking {
+.p-top__latestRanking .p-top__latestRanking__ranking {
   margin-top: 46px;
   overflow: hidden;
 }
 
-.p-top__ranking .m-titleBorder {
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking {
+    width: 35%;
+    margin-top: 0;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .m-titleBorder {
   padding: 0 15px;
 }
 
-.p-top__ranking .p-top__ranking__tab {
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .m-titleBorder .m-titleBorder__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .m-titleBorder .m-titleBorder__main .m-titleBorder__main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .m-titleBorder .m-titleBorder__main .m-titleBorder__main__border {
+    display: none;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +346,7 @@ $font-xxl: 2rem;
   border-bottom: solid 4px #FFD94A;
 }
 
-.p-top__ranking .p-top__ranking__tab .p-top__ranking__tab__list {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__tab .p-top__latestRanking__ranking__tab__list {
   width: 32%;
   height: 28px;
   background-color: #F5F5F5;
@@ -306,14 +364,14 @@ $font-xxl: 2rem;
   transition: 0.2s;
 }
 
-.p-top__ranking .p-top__ranking__tab .p-top__ranking__tab__list.is-active {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__tab .p-top__latestRanking__ranking__tab__list.is-active {
   background-color: #FFD94A;
   height: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.p-top__ranking .p-top__ranking__tab .p-top__ranking__tab__list .p-top__ranking__tab__list__text {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__tab .p-top__latestRanking__ranking__tab__list .p-top__latestRanking__ranking__tab__list__text {
   margin-top: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,34 +385,40 @@ $font-xxl: 2rem;
   font-size: 1.2rem;
 }
 
-.p-top__ranking .p-top__ranking__slider {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider {
   margin-top: 26px;
   position: relative;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow {
   display: none;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow.is-active {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow.is-active {
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev {
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow.is-active {
+    display: none;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev {
   left: 20px;
   height: 30px;
   width: 30px;
   z-index: 2;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev::before {
   display: none;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 {
   display: block;
   height: 30px;
   width: 30px;
@@ -363,123 +427,181 @@ $font-xxl: 2rem;
   position: relative;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path1 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path1 {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path1::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path1::before {
   font-size: 30px;
   color: #262626;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path2 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path2 {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path2::before {
-  font-size: 30px;
-  color: #262626;
-  margin: 0;
-}
-
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path3 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-prev .icon-arrow2 .path3::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path2::before {
   font-size: 30px;
   color: #262626;
   margin: 0;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-prev .icon-arrow2 .path3::before {
+  font-size: 30px;
+  color: #262626;
+  margin: 0;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next {
   right: 20px;
   height: 30px;
   width: 30px;
   z-index: 2;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next::before {
   display: none;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 {
   display: block;
   height: 30px;
   width: 30px;
   position: relative;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path1 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path1 {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path1::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path1::before {
   font-size: 30px;
   color: #262626;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path2 {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path2 {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path2::before {
-  font-size: 30px;
-  color: #262626;
-  margin: 0;
-}
-
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path3 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow .slick-next .icon-arrow2 .path3::before {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path2::before {
   font-size: 30px;
   color: #262626;
   margin: 0;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__arrow button {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow .slick-next .icon-arrow2 .path3::before {
+  font-size: 30px;
+  color: #262626;
+  margin: 0;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__arrow button {
   z-index: 3;
 }
 
-.p-top__ranking .p-top__ranking__slider .slick-list {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .slick-list {
   overflow: visible;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner {
   display: none;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner.is-active {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner.is-active {
   display: block;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner .m-squareCard .m-squareCard__inner {
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+    background-color: #D8D8D8;
+    border-radius: 25px;
+    height: 2px;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard:nth-last-child(1)::after {
+    content: "";
+    display: none;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner {
   margin: 0 8px;
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer {
-  padding: 12px;
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 
-.p-top__ranking .p-top__ranking__slider .p-top__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description__text {
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__topper {
+    width: 35%;
+    padding-top: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer {
+    width: 60%;
+    padding: 0;
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__tag {
+    display: none;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .p-top__latestRanking__ranking__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description__text {
   font-size: 1.2rem;
 }
 
-.p-top__ranking .p-top__ranking__slider .slick-track {
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

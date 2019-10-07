@@ -41,6 +41,10 @@
     display: flex;
     align-items: baseline;  
 
+    @include screen-large {
+      align-items: flex-end;
+    }
+
     .m-titleBorder__main__text {
       white-space: nowrap;
       font-size: 18px;
@@ -53,6 +57,16 @@
         font-weight: $font-bold;
         margin-left:5px;
       }    
+
+      @include screen-large {
+        display: flex;
+        flex-direction: column;
+
+        small {
+          margin-left:0;
+          margin-top:5px;
+        }
+      }
     }
   
     .m-titleBorder__main__border {

@@ -211,219 +211,327 @@
   }
 }
 
-.p-top__latest {
+.p-top__latestRanking {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
   margin-top:46px;
   padding:0 15px;
 
-  .o-wideCardList {
-    margin-top:32px;
-  }
-}
-
-.p-top__ranking {
-  margin-top:46px;
-  //labelを表示させるために、slick-sliceでoverflow:hiddenを解除しているため。
-  overflow: hidden;
-
-  .m-titleBorder {
-    padding:0 15px;
-  }
-
-  .p-top__ranking__tab {
+  @include screen-large {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    height: 40px;
-    margin:20px 10px 0 10px;
-    border-bottom:$border-1;
+  }
 
-    .p-top__ranking__tab__list {
-      width: 32%;
-      height: 28px;
-      background-color:$bg-3-color;
-      border-radius: 15px 15px 0 0;
+  .p-top__latestRanking__latest {
+
+    @include screen-large {
+      width: 60%;
+    }
+
+    .o-wideCardList {
+      margin-top:32px;
+    }
+  
+  }
+
+  .p-top__latestRanking__ranking {
+    margin-top:46px;
+    //labelを表示させるために、slick-sliceでoverflow:hiddenを解除しているため。
+    overflow: hidden;
+
+    @include screen-large {
+      width: 35%;
+      margin-top: 0;
+    }
+  
+    .m-titleBorder {
+      padding:0 15px;
+
+      .m-titleBorder__main {
+
+        @include screen-large {
+          display: flex;
+          justify-content: center;  
+        }
+
+        .m-titleBorder__main__text {
+          
+          @include screen-large {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+  
+        .m-titleBorder__main__border {
+
+          @include screen-large {
+            display: none;
+          }
+        }  
+      }    
+    }
+  
+    .p-top__latestRanking__ranking__tab {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.2s;
-
-      &.is-active {
-        background-color:$bg-1-color;
-        height: 100%;
-        transition: 0.2s;
-      }
-
-      .p-top__ranking__tab__list__text {
-        margin-top:4px;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 40px;
+      margin:20px 10px 0 10px;
+      border-bottom:$border-1;
+  
+      .p-top__latestRanking__ranking__tab__list {
+        width: 32%;
+        height: 28px;
+        background-color:$bg-3-color;
+        border-radius: 15px 15px 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: $font-xs;
-      }
-    }
-
-  }
-
-  .p-top__ranking__slider {
-    margin-top:26px;
-    position: relative;
-
-    .p-top__ranking__slider__arrow {
-      display: none;
-
-      &.is-active {
-        display: block;
-        height: 100%;
-        position: absolute;
-        width: 100%;  
-      }
-
-      .slick-prev {
-        left: 20px;
-        height: 30px;
-        width: 30px;
-        z-index: 2;
-
-        &::before {
-          display: none;
+        transition: 0.2s;
+  
+        &.is-active {
+          background-color:$bg-1-color;
+          height: 100%;
+          transition: 0.2s;
         }
-
-        .icon-arrow2 {
+  
+        .p-top__latestRanking__ranking__tab__list__text {
+          margin-top:4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: $font-xs;
+        }
+      }
+  
+    }
+  
+    .p-top__latestRanking__ranking__slider {
+      margin-top:26px;
+      position: relative;
+  
+      .p-top__latestRanking__ranking__slider__arrow {
+        display: none;
+  
+        &.is-active {
           display: block;
+          height: 100%;
+          position: absolute;
+          width: 100%;  
+
+          @include screen-large {
+            display: none;
+          }
+        }
+  
+        .slick-prev {
+          left: 20px;
           height: 30px;
           width: 30px;
-          transform: rotate(-180deg);
-          position: relative;
-
-          .path1 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-            }  
+          z-index: 2;
+  
+          &::before {
+            display: none;
           }
-
-          .path2 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-              margin:0;
-            }  
-          }
-
-          .path3 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-              margin:0;
-            }  
+  
+          .icon-arrow2 {
+            display: block;
+            height: 30px;
+            width: 30px;
+            transform: rotate(-180deg);
+            position: relative;
+  
+            .path1 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+              }  
+            }
+  
+            .path2 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+  
+            .path3 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
           }
         }
-      }
-
-      .slick-next {
-        right: 20px;
-        height: 30px;
-        width: 30px;
-        z-index: 2;
-
-        &::before {
-          display: none;
-        }
-
-        .icon-arrow2 {
-          display: block;
+  
+        .slick-next {
+          right: 20px;
           height: 30px;
-          width: 30px;  
-          position: relative;
-          
-          .path1 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-            }  
+          width: 30px;
+          z-index: 2;
+  
+          &::before {
+            display: none;
           }
-
-          .path2 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-              margin:0;
-            }  
-          }
-
-          .path3 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 30px;
-              color:$bg-base-color;
-              margin:0;
-            }  
-          }
-        }
-      }
-
-      button {
-        z-index: 3;
-      }
-    }
-
-    //labelを表示させるため。
-    .slick-list {
-      overflow: visible;
-    }
-
-    .p-top__ranking__slider__inner {
-      display: none;
-
-      &.is-active {
-        display: block;
-      }  
-
-      .m-squareCard {
-
-        .m-squareCard__inner {
-          margin:0 8px;
-
-          .m-squareCard__inner__footer {
-            padding:12px;
-
-            .m-squareCard__inner__footer__description__text {
-              font-size: $font-xs;
-            }  
+  
+          .icon-arrow2 {
+            display: block;
+            height: 30px;
+            width: 30px;  
+            position: relative;
+            
+            .path1 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+              }  
+            }
+  
+            .path2 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+  
+            .path3 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 30px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
           }
         }
-      }    
-    }
+  
+        button {
+          z-index: 3;
+        }
+      }
+  
+      //labelを表示させるため。
+      .slick-list {
+        overflow: visible;
+      }
+  
+      .p-top__latestRanking__ranking__slider__inner {
+        display: none;
+  
+        &.is-active {
+          display: block;
+        }  
+  
+        .m-squareCard {
 
-    .slick-track {
-      display: flex;
-      align-items: center;
+          @include screen-large {
+
+            &::after {
+              content:"";
+              display: block;
+              width: 100%;
+              margin-left: 10px;
+              background-color: #D8D8D8;
+              border-radius: 25px;
+              height: 2px;
+              opacity: 0.3;
+            }
+          }
+
+          &:nth-last-child(1) {
+
+            @include screen-large {
+
+              &::after {
+                content:"";
+                display: none;
+              }
+            }  
+          }
+  
+          .m-squareCard__inner {
+            margin:0 8px;
+
+            @include screen-large {
+              display: flex;
+              padding:12px;
+              justify-content: space-between;
+            }
+
+            .m-squareCard__inner__topper {
+
+              @include screen-large {
+                width: 35%;    
+                padding-top: 25%;            
+              }
+
+              .m-squareCard__inner__topper__image {
+
+              }  
+            }
+  
+            .m-squareCard__inner__footer {
+
+              @include screen-large {
+                width: 60%;       
+                padding:0;
+                background-color: $bg-6-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .m-squareCard__inner__footer__tag {
+
+                @include screen-large {
+                  display: none;
+                }
+              }
+  
+              .m-squareCard__inner__footer__description__text {
+                font-size: $font-xs;
+              }  
+            }
+          }
+        }    
+      }
+  
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }
+
 
 .p-top__featureHobby {
   margin-top:46px;

@@ -25,77 +25,79 @@ block contents
       +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
       +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
       +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
-  section.p-top__latest
-    include ../_components/_molecules/titleBorder
-    +m-titleBorder({ title:"新着", subtitle:"Latest" })
-    include ../_components/_organisms/wideCardList
 
-  // ranking
-  section.p-top__ranking
-    include ../_components/_molecules/titleBorder
-    +m-titleBorder({ title:"人気記事", subtitle:"Ranking" })
-    ul.p-top__ranking__tab
-      li.p-top__ranking__tab__list.tab-month.is-active
-        p.p-top__ranking__tab__list__text 月間
-      li.p-top__ranking__tab__list.tab-weekly
-        p.p-top__ranking__tab__list__text 週間
-      li.p-top__ranking__tab__list.tab-all
-        p.p-top__ranking__tab__list__text すべて
-    .p-top__ranking__slider
-      .p-top__ranking__slider__arrow.js__arrow-top__ranking__month.is-active
-        .slick-next
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-        .slick-prev
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-      .p-top__ranking__slider__arrow.js__arrow-top__ranking__weekly
-        .slick-next
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-        .slick-prev
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-      .p-top__ranking__slider__arrow.js__arrow-top__ranking__all
-        .slick-next
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-        .slick-prev
-          span.icon-arrow2
-            span.path1
-            span.path2
-            span.path3
-      ul.p-top__ranking__slider__inner.js-slickSlider-top__ranking__month.is-active
-        include ../_components/_molecules/squareCard
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', ranking:1, tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', ranking:2, tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', ranking:3, tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
-      ul.p-top__ranking__slider__inner.js-slickSlider-top__ranking__weekly
-        include ../_components/_molecules/squareCard
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
-      ul.p-top__ranking__slider__inner.js-slickSlider-top__ranking__all
-        include ../_components/_molecules/squareCard
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
-        +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
+  section.p-top__latestRanking
+    //新着順
+    .p-top__latestRanking__latest
+      include ../_components/_molecules/titleBorder
+      +m-titleBorder({ title:"新着", subtitle:"Latest" })
+      include ../_components/_organisms/wideCardList
+    //ランキング
+    .p-top__latestRanking__ranking
+      include ../_components/_molecules/titleBorder
+      +m-titleBorder({ title:"人気記事", subtitle:"Ranking" })
+      ul.p-top__latestRanking__ranking__tab
+        li.p-top__latestRanking__ranking__tab__list.tab-month.is-active
+          p.p-top__latestRanking__ranking__tab__list__text 月間
+        li.p-top__latestRanking__ranking__tab__list.tab-weekly
+          p.p-top__latestRanking__ranking__tab__list__text 週間
+        li.p-top__latestRanking__ranking__tab__list.tab-all
+          p.p-top__latestRanking__ranking__tab__list__text すべて
+      .p-top__latestRanking__ranking__slider
+        .p-top__latestRanking__ranking__slider__arrow.js__arrow-top__ranking__month.is-active
+          .slick-next
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+          .slick-prev
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+        .p-top__latestRanking__ranking__slider__arrow.js__arrow-top__ranking__weekly
+          .slick-next
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+          .slick-prev
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+        .p-top__latestRanking__ranking__slider__arrow.js__arrow-top__ranking__all
+          .slick-next
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+          .slick-prev
+            span.icon-arrow2
+              span.path1
+              span.path2
+              span.path3
+        ul.p-top__latestRanking__ranking__slider__inner.js-slickSlider-top__ranking__month.is-active
+          include ../_components/_molecules/squareCard
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', ranking:1, tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', ranking:2, tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', ranking:3, tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
+        ul.p-top__latestRanking__ranking__slider__inner.js-slickSlider-top__ranking__weekly
+          include ../_components/_molecules/squareCard
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
+        ul.p-top__latestRanking__ranking__slider__inner.js-slickSlider-top__ranking__all
+          include ../_components/_molecules/squareCard
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image4.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image2.jpg', tag: "趣味", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image1.jpg', tag: "生活", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image5.jpg', tag: "学び", text:"【月間】鳩レースってどんなスポーツ？" })
+          +m-squareCard({ list:true, url:'/assets/img/dammy/dammy-image3.jpg', tag: "特集", text:"【月間】鳩レースってどんなスポーツ？" })
 
   // feature
   section.p-top__featureHobby
