@@ -63,6 +63,7 @@ $bg-6-color:#FFFFFF;
 $bg-7-color:#EEEEEE;
 $bg-8-color:#3c3c3c;
 $bg-9-color:#0C0C0C;
+$bg-10-color:#F7F7F7;
 
 $font-base-color:#262626;
 $font-1-color:#A3A3A3;
@@ -76,6 +77,8 @@ $base-border:solid 5px #D8D8D8;
 $border-1:solid 4px #FFD94A;
 $border-2:solid 2px #FFFFFF;
 $border-3:solid 2px #F5F5F5;
+$border-4:solid 2px #262626;
+$border-5:solid 3px #F7F7F7;
 
 
 //
@@ -89,7 +92,7 @@ $base-pd: 12px;
 //
 
 $base-breakpoint-small: 480px !default;
-$base-breakpoint-medium: 1000px !default;
+$base-breakpoint-large: 768px !default;
 
 
 //

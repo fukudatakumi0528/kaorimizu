@@ -2,32 +2,25 @@
   height: 72px;
   padding:8px 20px 8px 16px;
 
-  .l-header__inner {
-    display:flex;
-    justify-content: space-between;
-    height: 100%;
+  @include screen-large {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .m-logo {
-      width: 120px;
-      display:flex;
-      justify-content:center;
-      align-items: center; 
+  .o-headerInner {
 
-      .m-logo__image{
-        width: 100%;
-      }
-    }
+    @include screen-large {
+      display: none;
+    }  
+  }
 
-    .l-header__inner__left {
-      max-width: 40%;
+  .o-headerInnerPc {
+    display: none;
+    
+    @include screen-large {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      a {
-        margin-left: 20px;
-        font-size: 16px;
-      }
-    }
+    }  
   }
 }

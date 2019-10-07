@@ -5,6 +5,10 @@
   bottom:0;
   z-index: 1000;
 
+  @include screen-large {
+    display: none;
+  }
+
   .l-fixed-button__inner{
     height: 100%;
     background-color:$bg-1-color;

@@ -150,7 +150,7 @@ $font-xxl: 2rem;
   padding-bottom: 60px;
 }
 
-@media (min-width: 481px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .privacy__wrap {
     width: 100%;
     padding: 0 12px;
@@ -184,7 +184,7 @@ $font-xxl: 2rem;
   line-height: 1.4;
 }
 
-@media (min-width: 481px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .privacy__wrap dl dt {
     margin-left: 24px;
   }
@@ -224,7 +224,7 @@ $font-xxl: 2rem;
   color: #666;
 }
 
-@media (min-width: 481px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .privacy__wrap p {
     text-align: justify;
   }

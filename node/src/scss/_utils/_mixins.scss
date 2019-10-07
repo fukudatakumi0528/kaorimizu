@@ -13,17 +13,18 @@
   }
 }
 
-@mixin screen-large() {
-  @media (min-width: $base-breakpoint-small + 1) {
+@mixin screen-medium {
+  @media screen and (min-width: $base-breakpoint-small) and (max-width: $base-breakpoint-large) {
     @content;
   }
 }
 
-@mixin screen-medium() {
-  @media (min-width: $base-breakpoint-small + 1) {
+@mixin screen-large() {
+  @media (min-width: $base-breakpoint-large) {
     @content;
   }
 }
+
 
 
 //

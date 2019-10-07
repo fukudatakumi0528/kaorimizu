@@ -1,0 +1,32 @@
+.o-headerInner {
+  display:flex;
+  justify-content: space-between;
+  height: 100%;
+
+  @include screen-large {
+    display: none;
+  }
+
+  .m-logo {
+    width: 120px;
+    display:flex;
+    justify-content:center;
+    align-items: center; 
+
+    .m-logo__image{
+      width: 100%;
+    }
+  }
+
+  .o-headerInner__left {
+    max-width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+}

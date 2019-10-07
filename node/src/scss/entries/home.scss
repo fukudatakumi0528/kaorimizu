@@ -8,10 +8,20 @@
   width: 100%;
   position: relative;
 
+  @include screen-large {
+    margin-top:0px;
+    height: 490px;
+    background-color: $bg-10-color;
+  }
+
   &:before {
     content:"";
     display: block;
     padding-top:100%;
+
+    @include screen-large {
+      display: none;
+    }
   }
 
   .p-top__kv__bg {
@@ -23,6 +33,12 @@
     right: 0;
     display: flex;
     align-items: flex-end;
+
+    @include screen-large {
+      height: 90%;
+      width: 70%;
+      right:0;
+    }
 
     .p-top__kv__bg__js {
       height: 18%;
@@ -80,7 +96,6 @@
     }
   }
 
-
   .p-top__kv__slider {
     position: absolute;
     top: 0;
@@ -90,17 +105,81 @@
     display: flex;
     align-items: flex-end;
 
-    //初期化する前は透明に
-    &.slick-slider{
-      opacity: 0;
-      transition: 0.3;
+    @include screen-large {
+      height: 75%;
+      bottom:15%;
+      top:initial;
+    }
+    
+    .slick-list.draggable {
+      padding:0 15% 0 0 !important;
+
+      @include screen-large {
+        padding:0 30% 0 15% !important;
+      }
+
+      .slick-track {
+        display: flex;
+        align-items: flex-end;  
+      }
+
+      //アニメーション用のスタイル。
+      .m-squareCard.slick-slide {
+        transition: .5s ease;
+        transform-origin:0% 100%;
+        display: flex;
+        align-items: flex-end;
+
+        @include screen-large {
+          width: 70vw;
+          max-width: 860px;
+  
+        }
+
+        &:not(.slick-active) {
+          transform: scale(0.8);
+          transform-origin:30% 100%;  
+          opacity: 0.7;  
+        }
+
+        //最後の要素もアニメーションが効くように設定
+        &.m-squareCard.slick-cloned.is-active-next {
+          transform: scale(1.0);
+          transition:.5s ease;
+          opacity: 1;
+        }
+
+        .m-squareCard__inner {
+          width: 100%;
+  
+          @include screen-large {
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }  
+  
+          .m-squareCard__inner__topper {
+
+            @include screen-large {
+              height: 100%;
+              width: 100%;  
+              overflow: hidden;
+              padding-top: 0%;
+            }
+          }
+          
+          .m-squareCard__inner__footer {
+            background-color: $bg-6-color;
+
+            @include screen-large {
+              height: 100%;
+              width: 100%;  
+            }
+          }
+        }
+      }
     }
 
-    //初期化したら表示
-    &.slick-slider.slick-initialized{
-      opacity: 1.0;
-    }  
-    
     //dot部分のスタイル
     .slick-dots {
       position: absolute;
@@ -128,49 +207,7 @@
           }
         } 
       }
-    }
-    
-
-    //アニメーション用のスタイル。
-    .slick-slide {
-      transition: .5s ease;
-      transform-origin:0% 100%;
-
-      &:not(.slick-active) {
-        transform: scale(0.8);
-        transform-origin:30% 100%;  
-        opacity: 0.7;  
-      }
-    }
-
-    //最後の要素もアニメーションが効くように設定
-    .m-squareCard.slick-slide.slick-cloned.is-active-next {
-      transform: scale(1.0);
-      transition:.5s ease;
-      opacity: 1;
-    }
-    //
-    .slick-list.draggable {
-      padding:0 15% 0 0 !important;
-
-      .slick-track {
-        display: flex;
-        align-items: flex-end;  
-      }  
-    }
-
-    .m-squareCard {
-      display: flex;
-      align-items: flex-end;
-
-      .m-squareCard__inner {
-        width: 100%;
-
-        .m-squareCard__inner__footer {
-          background-color: $bg-6-color;
-        }
-      }
-    }
+    }    
   }
 }
 

@@ -57,6 +57,15 @@ export default class Slick {
 			centerMode: true,
 			centerPadding: '0 15% 0 0',
 			appendArrows: $('.p-top__kv__bg__js'),
+			variableWidth: true,
+			responsive: [
+				{
+		      breakpoint: 768,  //ブレイクポイントを指定
+					settings: {
+						variableWidth: false,
+			     }
+				},
+			]
 		});
 
 		$(window).on('load resize', function(){
