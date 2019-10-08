@@ -645,7 +645,9 @@
 
       .m-oblongCard__inner {
 
-        @screen
+        @include screen-large {
+          
+        }
 
         .m-oblongCard__inner__topper {
 

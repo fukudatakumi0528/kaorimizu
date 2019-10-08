@@ -732,10 +732,6 @@ $font-xxl: 2rem;
   margin: 20px 15px 0 15px;
 }
 
-.p-top__featureHobby .p-top__featureHobby__topper .m-oblongCard .m-oblongCard__inner {
-  @screen .m-oblongCard__inner__topper {}
-}
-
 .p-top__featureHobby .p-top__featureHobby__topper .m-oblongCard .m-classificationArea {
   margin: 0 0 0 -8px;
 }
