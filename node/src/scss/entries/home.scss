@@ -529,6 +529,93 @@
         align-items: center;
       }
     }
+
+    .p-top__latestRanking__ranking__keyword {
+      display: none;
+
+      @include screen-large {
+        display: block;
+        margin-top:10px;
+        width: 100%;
+        padding:24px 24px 40px 24px;
+        background-color: $bg-2-color;  
+      }
+  
+      .p-top__latestRanking__ranking__keyword__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+  
+        .p-top__latestRanking__ranking__keyword__header__subtitle {
+          font-size: $font-xs;
+          color:$bg-1-color;
+          line-height: 125%;
+        }
+  
+        .p-top__latestRanking__ranking__keyword__header__tilte {
+          font-size: $font-l;
+          font-weight: $font-bold;
+          color:$bg-base-color;
+          line-height: 116%;
+        }
+      }
+  
+      .o-classificationList {
+          
+      }
+    }
+
+    .p-top__latestRanking__ranking__downlord {
+      display: none;
+
+      @include screen-large {
+        display: block;
+        margin-top:20px;
+        width: 100%;  
+      }
+  
+      .p-top__latestRanking__ranking__downlord__inner {
+        padding:16px 10px;
+        background-color: $bg-1-color;
+  
+        .p-top__latestRanking__ranking__downlord__inner__image {
+          width: 100%;
+          object-fit: cover;
+        }
+  
+        .p-top__latestRanking__ranking__downlord__inner__main {
+  
+          .p-top__latestRanking__ranking__downlord__inner__main__link {
+            margin:24px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            width: calc(100%);
+  
+            .p-top__latestRanking__ranking__downlord__inner__main__link__AppStore {
+              width: auto;
+  
+              a {
+                display: block;
+                margin-right: 5px;
+              }
+            }
+  
+            .p-top__latestRanking__ranking__downlord__inner__main__link__GooglePlay {
+              width: auto;
+  
+              a {
+                display: block;
+                margin:0 -10px 0 -5px;
+                img {
+                  max-width: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -554,8 +641,32 @@
   .p-top__featureHobby__topper {
     margin:20px 15px 0 15px;
 
-    .m-classificationArea {
-      margin: 0 0 0 -8px;
+    .m-oblongCard {
+
+      .m-oblongCard__inner {
+
+        @screen
+
+        .m-oblongCard__inner__topper {
+
+        }
+
+        .m-oblongCard__inner__footer {
+
+
+          .m-oblongCard__inner__footer__tag {
+
+
+            .m-oblongCard__inner__footer__description {
+
+            }
+          }
+        }
+
+      }
+      .m-classificationArea {
+        margin: 0 0 0 -8px;
+      }  
     }
   }
 

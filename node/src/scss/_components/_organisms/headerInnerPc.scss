@@ -18,10 +18,15 @@
 
   .o-headerInnerPc__left {
     display: flex;
+    width: calc(100% - 120px);
+    max-width: 700px;
+    justify-content: space-between;
+
 
     .o-headerInnerPc__left__category {
       display: flex;
       align-items: center;
+      margin-left: 10px;
 
       .o-headerInnerPc__left__category__list {
         display: flex;
@@ -87,19 +92,20 @@
     .o-headerInnerPc__left__button {
       display: flex;
       justify-content: space-between;
-      padding:5px;
+      margin-left: 10px;
 
       .o-headerInnerPc__left__button__list {
         display: flex;
-        background-color: $bg-1-color;
         border: $border-4;
         border-radius: 4px;
         width: 48%;
-        padding:4px 20px;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
         .o-headerInnerPc__left__button__list__text {
+          height: 100%;
+          padding:4px 10px;
           white-space: nowrap;
           font-size: $font-xs;
           font-weight: $font-bold;
@@ -112,7 +118,47 @@
         }
 
         .o-headerInnerPc__left__button__list__icon {
-          margin-right: 10px;
+          background-color: $bg-1-color;
+          height: 100%;
+          padding:4px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-right: $border-4;
+
+          .icon-search2 {
+
+            .path1:before {
+              content: "\e908";
+              color: $bg-6-color;
+            }
+
+            .path2:before {
+              content: "\e909";
+              color: #000;
+              margin-left: -1em;
+            }
+
+            .path3:before {
+              content: "\e90b";
+              color: #000;
+              margin-left: -1em;
+            }  
+          } 
+
+          .icon-star2 {
+
+            .path1:before {
+              content: "\e923";
+              color: $bg-6-color;
+            }
+
+            .path2:before {
+              content: "\e924";
+              color: #262626;
+              margin-left: -1em;
+            }  
+          }
         }
       }
     }
@@ -121,10 +167,24 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      margin-left: 10px;
+
+      @include screen-large {
+        align-items: flex-end;
+      }
 
       a {
         margin-left: 20px;
         font-size: 16px;
+
+        @include screen-large {
+          margin-left:15px;
+        }
+
+        &:nth-child(1) {
+          margin-left: 0px;
+          font-size: 16px;
+        }
       }
     }  
   }

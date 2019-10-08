@@ -610,6 +610,105 @@ $font-xxl: 2rem;
   align-items: center;
 }
 
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__keyword {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__keyword {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 24px 24px 40px 24px;
+    background-color: #FFF2C3;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__keyword .p-top__latestRanking__ranking__keyword__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__keyword .p-top__latestRanking__ranking__keyword__header .p-top__latestRanking__ranking__keyword__header__subtitle {
+  font-size: 1.2rem;
+  color: #FFD94A;
+  line-height: 125%;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__keyword .p-top__latestRanking__ranking__keyword__header .p-top__latestRanking__ranking__keyword__header__tilte {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 116%;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner {
+  padding: 16px 10px;
+  background-color: #FFD94A;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__image {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link {
+  margin: 24px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: calc(100%);
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link .p-top__latestRanking__ranking__downlord__inner__main__link__AppStore {
+  width: auto;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link .p-top__latestRanking__ranking__downlord__inner__main__link__AppStore a {
+  display: block;
+  margin-right: 5px;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link .p-top__latestRanking__ranking__downlord__inner__main__link__GooglePlay {
+  width: auto;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link .p-top__latestRanking__ranking__downlord__inner__main__link__GooglePlay a {
+  display: block;
+  margin: 0 -10px 0 -5px;
+}
+
+.p-top__latestRanking .p-top__latestRanking__ranking .p-top__latestRanking__ranking__downlord .p-top__latestRanking__ranking__downlord__inner .p-top__latestRanking__ranking__downlord__inner__main .p-top__latestRanking__ranking__downlord__inner__main__link .p-top__latestRanking__ranking__downlord__inner__main__link__GooglePlay a img {
+  max-width: none;
+}
+
 .p-top__featureHobby {
   margin-top: 46px;
   padding-bottom: 30px;
@@ -633,7 +732,11 @@ $font-xxl: 2rem;
   margin: 20px 15px 0 15px;
 }
 
-.p-top__featureHobby .p-top__featureHobby__topper .m-classificationArea {
+.p-top__featureHobby .p-top__featureHobby__topper .m-oblongCard .m-oblongCard__inner {
+  @screen .m-oblongCard__inner__topper {}
+}
+
+.p-top__featureHobby .p-top__featureHobby__topper .m-oblongCard .m-classificationArea {
   margin: 0 0 0 -8px;
 }
 
