@@ -16,7 +16,14 @@ export default class Slick {
 		// top hobby スライダー
 		const $topHobbySlider = $('.js-slickSlider-top__hobby');
 
+		// top life スライダー
+		const $topLifeSlider = $('.js-slickSlider-top__life');
 
+		// top learn スライダー
+		const $topLearnSlider = $('.js-slickSlider-top__learn');
+
+		
+		//animationさせるための設定
 		$topSlickSlider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
 			$topSlickSlider.find(".slick-slide").each((index, el) => {
 				const $this = $(el),
@@ -48,7 +55,7 @@ export default class Slick {
 
 		// top KV スライダー
 		$topSlickSlider.slick({
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 3000,
 			speed: 800,
 			arrows: true,
@@ -84,6 +91,8 @@ export default class Slick {
 
 		function handle(mq) {
 			if (mq.matches) {
+				// ウィンドウサイズが798px以下のとき
+
 				// top ranking スライダー
 				$topRankingMonthSlider.slick({
 					autoplaySpeed: 3000,
@@ -114,33 +123,57 @@ export default class Slick {
 					centerMode: true,
 					appendArrows: $('.js__arrow-top__ranking__all'),
 				});
-				// ウィンドウサイズが798px以下のとき
+
+
+				// top feature スライダー
+				$topFeatureSlider.slick({
+					autoplaySpeed: 3000,
+					speed: 800,
+					arrows: true,
+					dots: false,
+					infinite: true,
+					centerMode: true,
+					appendArrows: $('.js__arrow-top__feature'),
+				});
+
+				// top hobby スライダー
+				$topHobbySlider.slick({
+					autoplaySpeed: 3000,
+					speed: 800,
+					arrows: true,
+					dots: false,
+					infinite: true,
+					centerMode: true,
+					appendArrows: $('.js__arrow-top__hobby'),
+				});
+
 			} else {
 				// それ以外
+
+				// top hobby スライダー
+				$topLifeSlider.slick({
+					speed: 800,
+					arrows: true,
+					dots: true,
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 3,
+					variableWidth: true,
+					appendArrows: $('.js__arrow-top__life'),
+				});
+
+				// top hobby スライダー
+				$topLearnSlider.slick({
+					speed: 800,
+					arrows: true,
+					dots: true,
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 3,
+					variableWidth: true,
+					appendArrows: $('.js__arrow-top__learn'),
+				});				
 			}
 		}
-	
-		// top feature スライダー
-		$topFeatureSlider.slick({
-			autoplaySpeed: 3000,
-			speed: 800,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			centerMode: true,
-			appendArrows: $('.js__arrow-top__feature'),
-		});
-
-		// top hobby スライダー
-		$topHobbySlider.slick({
-			autoplaySpeed: 3000,
-			speed: 800,
-			arrows: true,
-			dots: false,
-			infinite: true,
-			centerMode: true,
-			appendArrows: $('.js__arrow-top__hobby'),
-		});
-		
 	};
 };

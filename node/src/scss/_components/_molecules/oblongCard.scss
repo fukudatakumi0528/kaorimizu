@@ -23,20 +23,63 @@
       padding:16px;
       background-color: $bg-6-color;
 
-      .m-oblongCard__footer__inner__tag {
+      @include screen-large {
+        padding:20px;
+      }    
+
+      .m-oblongCard__inner__footer__date {
+        display: none;
+
+        @include screen-large {
+          display: block;
+          color:$font-1-color;
+          font-size: $font-xs;
+        }
       }
 
-      .m-oblongCard__inner__footer__description {
-
+      .m-oblongCard__inner__footer__title {
         overflow: hidden;
-        .m-oblongCard__inner__footer__description__text {
+
+        @include screen-large {
+          margin-top:5px;
+        }    
+  
+        .m-oblongCard__inner__footer__title__text {
           font-size: $font-m;
           line-height: 150%;
           font-weight: $font-medium;
           display: -webkit-box;
           -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        } 
+      }
+
+      .m-oblongCard__inner__footer__description {
+        display: none;
+
+        @include screen-large {
+          display: block;
+          overflow: hidden;
+          margin-top:5px;
+        }
+
+        .m-oblongCard__inner__footer__description__text {
+          font-size: $font-s;
+          line-height: 170%;
+          color:$font-1-color;
+          font-weight: $font-medium;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;  
         } 
+      }
+
+      .m-classificationArea {
+        margin:0 0 0 -8px;
+
+        @include screen-large {
+          margin-top:5px;
+        }
       }
     }
   }

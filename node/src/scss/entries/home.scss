@@ -131,24 +131,31 @@
         align-items: flex-end;
 
         @include screen-large {
-          width: 70vw;
-          max-width: 860px;
-  
+          width: 90vw;
+          max-width: 860px;  
         }
 
         &:not(.slick-active) {
           transform: scale(0.8);
           transform-origin:30% 100%;  
-          opacity: 0.7;  
+          opacity: 0.7;
         }
 
         //最後の要素もアニメーションが効くように設定
-        &.m-squareCard.slick-cloned.is-active-next {
+        &.m-squareCard.slick-cloned {
+  
+          @include screen-large {
+            height: 367.5px;
+          }
+
+          &.is-active-next {
           transform: scale(1.0);
           transition:.5s ease;
           opacity: 1;
-        }
+          }
 
+        }
+         
         .m-squareCard__inner {
           width: 100%;
   
@@ -162,7 +169,7 @@
 
             @include screen-large {
               height: 100%;
-              width: 100%;  
+              width: 478px;  
               overflow: hidden;
               padding-top: 0%;
             }
@@ -173,7 +180,49 @@
 
             @include screen-large {
               height: 100%;
-              width: 100%;  
+              width: calc(100% - 478px);  
+              padding:0 50px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+            }
+
+            .m-squareCard__inner__footer__sign {
+              @include screen-large {
+                position: relative;
+                width: auto;
+                transform: translateY(0%);
+              }
+            }
+
+            .m-squareCard__inner__footer__title {
+
+              @include screen-large {
+                margin-top:10px;
+              }
+
+              .m-squareCard__inner__footer__title__text {
+
+                @include screen-large {
+                  font-size: 20px;
+                  -webkit-line-clamp: 3;  
+                }  
+              }
+            }
+
+            .m-squareCard__inner__footer__description {
+
+              @include screen-large {
+                margin-top:10px;
+              }
+            }
+
+            .m-squareCard__inner__footer__classification {
+
+              @include screen-large {
+                margin-top:10px;
+              }
             }
           }
         }
@@ -216,7 +265,6 @@
   width: 100%;
   max-width: 1000px;
   margin-top:46px;
-  padding:0 15px;
 
   @include screen-large {
     display: flex;
@@ -224,6 +272,7 @@
   }
 
   .p-top__latestRanking__latest {
+    padding:0 15px;
 
     @include screen-large {
       width: 60%;
@@ -509,16 +558,24 @@
                 align-items: center;
               }
 
-              .m-squareCard__inner__footer__tag {
+              .m-squareCard__inner__footer__sign {
 
                 @include screen-large {
                   display: none;
                 }
               }
   
-              .m-squareCard__inner__footer__description__text {
+              .m-squareCard__inner__footer__title__text {
                 font-size: $font-xs;
-              }  
+              }
+
+              .m-squareCard__inner__footer__description {
+                display: none;
+              }
+
+              .m-squareCard__inner__footer__classification {
+                display: none;
+              }
             }
           }
         }    
@@ -621,39 +678,102 @@
 
 
 .p-top__featureHobby {
+  width: 100%;
   margin-top:46px;
   padding-bottom: 30px;
   position: relative;
+
+  @include screen-large {
+    margin-top:100px;
+    padding-bottom: 70px;
+  }
 
   .p-top__featureHobby__bg {
     position: absolute;
     background-color: $bg-3-color;
     bottom:0;
-    height: calc(100% - 100px);
+    left:0;
     width: 100%;
+    height: calc(100% - 100px);
     z-index: -1;
+
+    @include screen-large {
+      width: 100%;
+      height: calc(100% - 200px);
+    }
   }
 
   .m-titleBorder {
     padding:0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;  
   }
 
   .p-top__featureHobby__topper {
-    margin:20px 15px 0 15px;
+    margin: 0 auto;
+    margin-top:20px;
+    padding:0 15px;
+    width: 100%;
+    max-width: 1000px;
+  
 
-    .m-oblongCard {
+    @include screen-large {
+      height: 330px;
+      width: 100%;
+      position: relative;
+      padding:0 15px;
+      margin-top:40px;
+    }
+
+    .p-top__featureHobby__topper__bg {
+      display: none;
+
+      @include screen-large {
+        position: absolute;
+        display: block;
+        height: 300px;
+        width: calc(100% - 60px);
+        bottom:0;
+        right: 15px;
+        background-color: $bg-1-color;
+      }
+    }
+
+    >.m-oblongCard {
+      @include screen-large {
+        height: 300px;
+        position: absolute;
+      }
 
       .m-oblongCard__inner {
 
         @include screen-large {
-          
-        }
+          height: 100%;
+          width: calc(100% - 45px);
+          display: flex;
+        }  
 
         .m-oblongCard__inner__topper {
 
+          @include screen-large {
+            height: 100%;
+            width: 400px;
+            padding-top:0;
+          }
         }
 
         .m-oblongCard__inner__footer {
+
+          @include screen-large {
+            height: 100%;
+            width: calc(100% - 400px);
+            padding:50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
 
 
           .m-oblongCard__inner__footer__tag {
@@ -673,14 +793,26 @@
   }
 
   .p-top__featureHobby__slider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
     margin-top:26px;
     position: relative;
+
+    @include screen-large {
+      margin-top:40px;
+    }
+
 
     .p-top__featureHobby__slider__arrow {
       display: block;
       height: 100%;
       position: absolute;
-      width: 100%;  
+      width: 100%;
+
+      @include screen-large {
+        display: none;
+      }
 
       .slick-prev {
         left: 20px;
@@ -797,8 +929,41 @@
     .p-top__featureHobby__slider__inner {
       display: block;
 
-      .m-oblongCard__inner__footer {
-        padding:12px;
+      @include screen-large {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:0 15px;
+      }
+
+      .m-oblongCard {
+
+        @include screen-large {
+          display: none;
+        }
+
+        &:nth-child(-n+3) {
+
+          @include screen-large {
+            display: block;
+            width: 31%;
+          }  
+        }
+
+        .m-oblongCard__inner {
+          margin:0 8px;
+
+          @include screen-large {
+            margin:0;
+          }
+  
+          .m-oblongCard__inner__footer {
+  
+            .m-oblongCard__inner__footer__description__text {
+              font-size: $font-xs;
+            }  
+          }
+        }
       }
     }
 
@@ -806,27 +971,20 @@
       display: flex;
       align-items: center;
     }
-
-    .m-oblongCard {
-
-      .m-oblongCard__inner {
-        margin:0 8px;
-
-        .m-oblongCard__inner__footer__description__text {
-          font-size: $font-xs;
-        }
-
-        .m-classificationArea {
-          margin: 0 0 0 -8px;
-        }
-      }
-    }  
   }
 
   .p-top__featureHobby__footer {
-    margin:24px 15px 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;  
     display: flex;
     justify-content: flex-end;
+    padding:0 15px;
+    margin-top:24px;
+
+    @include screen-large {
+      margin-top: 40px;
+    }
 
     .p-top__featureHobby__footer__link {
       display: flex;
@@ -835,12 +993,21 @@
 
       .icon-btn {
         font-size: 27px;
+
+        @include screen-large {
+          font-size: 32px;
+        }
       }
 
       .p-top__featureHobby__footer__link__text {
         margin-left: 5px;
         font-size: $font-s;
         font-weight: $font-bold;
+
+        @include screen-large {
+          margin-left:10px;
+          font-size: $font-l;
+        }
       }
     }
   }
@@ -851,16 +1018,194 @@
 
   .m-titleBorder {
     padding:0 15px;
+
+    @include screen-large {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1000px;   
+      margin-top:100px; 
+    }
   }
 
-  .o-verticallyCardList {
-    padding:0 15px;
+  .p-top__lifeLearn__slider {
+    margin: 0 auto;
+    width: 100%;
+    margin-top:26px;
+    position: relative;
+
+    @include screen-large {
+      margin-top:40px;
+      z-index: 1;
+    }
+
+    .p-top__lifeLearn__slider__arrow {
+      display: none;
+
+      @include screen-large {
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+
+      .p-top__lifeLearn__slider__arrow__inner {
+        max-width: 1000px;
+        height: 100%;
+        margin:0 auto;
+        position: relative;
+
+        .slick-prev {
+          left: 0px;
+          height: 50px;
+          width: 50px;
+          z-index: 2;
+  
+          &::before {
+            display: none;
+          }
+  
+          .icon-arrow2 {
+            display: block;
+            height: 50px;
+            width: 50px;
+            transform: rotate(-180deg);
+            position: relative;
+  
+            .path1 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+              }  
+            }
+  
+            .path2 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+  
+            .path3 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+          }
+        }
+  
+        .slick-next {
+          right: 0px;
+          height: 50px;
+          width: 50px;
+          z-index: 2;
+  
+          &::before {
+            display: none;
+          }
+  
+          .icon-arrow2 {
+            display: block;
+            height: 50px;
+            width: 50px; 
+            position: relative;
+            
+            .path1 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+              }  
+            }
+  
+            .path2 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+  
+            .path3 {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+  
+              &::before {
+                font-size: 50px;
+                color:$bg-base-color;
+                margin:0;
+              }  
+            }
+          }
+        }
+  
+        button {
+          z-index: 3;
+        }
+      }
+    }
+
+
+    .p-top__lifeLearn__slider__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding:0 15px;
+  
+      @include screen-large {
+        padding:0;
+        margin-top:40px;
+      }
+    
+      .m-verticallyCard {
+        width: 48%;
+        margin-top:20px;
+  
+        @include screen-large {
+          margin-top:0;
+          width: 360px;
+          height: 100%;
+          padding:0 30px;
+        }
+      }
+    }  
   }
+
 
   .p-top__lifeLearn__footer {
     margin:24px 15px 0 15px;
     display: flex;
     justify-content: flex-end;
+
+    @include screen-large {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1000px;
+      margin-top:40px;   
+    }
 
     .p-top__lifeLearn__footer__link {
       display: flex;
@@ -879,3 +1224,39 @@
     }
   }
 }
+
+.p-top__keyword {
+  width: 100%;
+  padding:24px 24px 40px 24px;
+  background-color: $bg-2-color;
+  margin-top:80px;
+
+  @include screen-large {
+    display: none;
+  }
+
+  .p-top__keyword__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .p-top__keyword__header__subtitle {
+      font-size: $font-xs;
+      color:$bg-1-color;
+      line-height: 125%;
+    }
+
+    .p-top__keyword__header__tilte {
+      font-size: $font-l;
+      font-weight: $font-bold;
+      color:$bg-base-color;
+      line-height: 116%;
+    }
+  }
+
+  .o-classificationList {
+      
+  }
+}
+

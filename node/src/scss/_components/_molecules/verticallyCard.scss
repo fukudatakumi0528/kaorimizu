@@ -30,11 +30,16 @@
     .m-verticallyCard__inner__footer {
       width: 100%;
       box-sizing: border-box;
+
         
       .m-verticallyCard__inner__footer__date {
         margin-top:5px;
         font-size: $font-xxs;
         color:$font-1-color;
+
+        @include screen-large {
+          margin-top:10px;
+        }
       }
 
       .m-verticallyCard__inner__footer__title {
@@ -48,6 +53,16 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3; 
         overflow: hidden;
+
+        @include screen-large {
+          margin-top:10px;
+        }
+      }
+
+      .m-classificationArea {
+        @include screen-large {
+          margin-top:5px;
+        }
       }
     }
   }

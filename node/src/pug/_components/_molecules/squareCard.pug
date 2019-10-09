@@ -1,33 +1,51 @@
 mixin m-squareCard(card)
-  if (card.list === true) 
-    li.m-squareCard
-      .m-squareCard__inner
-        if(card.ranking)
-          .m-squareCard__inner__ranking
-            span.icon-label.m-squareCard__inner__ranking__icon
-              span.path1
-              span(class="rank-" + card.ranking).path2
-              span.path3
-            .m-squareCard__inner__ranking__rank
-              p.m-squareCard__inner__ranking__rank__text <small>No.</small><strong>#{card.ranking}</strong>
-        else
-        .m-squareCard__inner__topper
-          img.m-squareCard__inner__topper__image(src=card.url, alt="")
-        .m-squareCard__inner__footer
-          .m-squareCard__inner__footer__tag
-            .m-squareCard__inner__footer__tag__text #{card.tag}
-          a(href="").m-squareCard__inner__footer__description
-            p.m-squareCard__inner__footer__description__text #{card.text}
-  else
-    .m-squareCard
-      .m-squareCard__inner
-        if(card.ranking)
-          .m-squareCard__inner__ranking
-        else
-        .m-squareCard__inner__topper
-          img.m-squareCard__inner__topper__image(src=card.url, alt="")
-        .m-squareCard__inner__footer
-          .m-squareCard__inner__footer__tag
-            .m-squareCard__inner__footer__tag__text #{card.tag}
-          a(href="").m-squareCard__inner__footer__description
-            p.m-squareCard__inner__footer__description__text #{card.text}
+	if (card.list === true) 
+		li.m-squareCard
+			.m-squareCard__inner
+				if(card.ranking)
+					.m-squareCard__inner__ranking
+						span.icon-label.m-squareCard__inner__ranking__icon
+							span.path1
+							span(class="rank-" + card.ranking).path2
+							span.path3
+						.m-squareCard__inner__ranking__rank
+							p.m-squareCard__inner__ranking__rank__text <small>No.</small><strong>#{card.ranking}</strong>
+				else
+				.m-squareCard__inner__topper
+					img.m-squareCard__inner__topper__image(src=card.url, alt="")
+				.m-squareCard__inner__footer
+					.m-squareCard__inner__footer__sign
+						.m-squareCard__inner__footer__sign__text #{card.sign}
+					a(href="").m-squareCard__inner__footer__title
+						p.m-squareCard__inner__footer__title__text #{card.title}
+					.m-squareCard__inner__footer__description
+						.m-squareCard__inner__footer__description__text #{card.description}
+					.m-squareCard__inner__footer__classification
+						include ./classificationArea
+						+m-classificationArea(card.tag)
+
+
+	else
+		.m-squareCard
+			.m-squareCard__inner
+				if(card.ranking)
+					.m-squareCard__inner__ranking
+						span.icon-label.m-squareCard__inner__ranking__icon
+							span.path1
+							span(class="rank-" + card.ranking).path2
+							span.path3
+						.m-squareCard__inner__ranking__rank
+							p.m-squareCard__inner__ranking__rank__text <small>No.</small><strong>#{card.ranking}</strong>
+				else
+				.m-squareCard__inner__topper
+					img.m-squareCard__inner__topper__image(src=card.url, alt="")
+				.m-squareCard__inner__footer
+					.m-squareCard__inner__footer__sign
+						.m-squareCard__inner__footer__sign__text #{card.sign}
+					a(href="").m-squareCard__inner__footer__title
+						p.m-squareCard__inner__footer__title__text #{card.title}
+					.m-squareCard__inner__footer__description
+						.m-squareCard__inner__footer__description__text #{card.description}
+					.m-squareCard__inner__footer__classification
+						include ./classificationArea
+						+m-classificationArea(card.tag)

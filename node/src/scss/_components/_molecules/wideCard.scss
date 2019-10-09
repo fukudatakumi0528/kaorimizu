@@ -90,6 +90,7 @@
         color:$font-1-color;
 
         @include screen-large {
+          margin-top:5px;
           font-size: $font-xs;
         }    
       }

@@ -5,9 +5,8 @@ mixin m-oblongCard(card)
 				.m-oblongCard__inner__topper
 					img.m-oblongCard__inner__topper__image(src=card.url, alt="")
 				.m-oblongCard__inner__footer
-					.m-oblongCard__inner__footer__tag
 					.m-oblongCard__inner__footer__description
-						p.m-oblongCard__inner__footer__description__text #{card.text}
+						p.m-oblongCard__inner__footer__description__text #{card.title}
 					.m-oblongCard__inner__footer__classification
 					include ./classificationArea
 					+m-classificationArea(card.tag)
@@ -17,9 +16,11 @@ mixin m-oblongCard(card)
 				.m-oblongCard__inner__topper
 					img.m-oblongCard__inner__topper__image(src=card.url, alt="")
 				.m-oblongCard__inner__footer
-					.m-oblongCard__inner__footer__tag
+					p.m-oblongCard__inner__footer__date #{card.date}
+					.m-oblongCard__inner__footer__title
+						p.m-oblongCard__inner__footer__title__text #{card.title}
 					.m-oblongCard__inner__footer__description
-						p.m-oblongCard__inner__footer__description__text #{card.text}
+						p.m-oblongCard__inner__footer__description__text #{card.description}
 					.m-oblongCard__inner__footer__classification
 					include ./classificationArea
 					+m-classificationArea(card.tag)
