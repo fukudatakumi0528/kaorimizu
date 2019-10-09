@@ -14,7 +14,7 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-top__kv {
-    margin-top: 0px;
+    margin-top: 70px;
     height: 490px;
     background-color: #F7F7F7;
   }
@@ -61,10 +61,23 @@ $font-xxl: 2rem;
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .p-top__kv .p-top__kv__bg .p-top__kv__bg__js {
+    height: 73.5px;
+    width: 100%;
+  }
+}
+
 .p-top__kv .p-top__kv__bg .p-top__kv__bg__js .slick-prev {
   left: 20px;
   height: 30px;
   width: 30px;
+}
+
+@media (min-width: 768px) {
+  .p-top__kv .p-top__kv__bg .p-top__kv__bg__js .slick-prev {
+    left: calc(50% - 130px);
+  }
 }
 
 .p-top__kv .p-top__kv__bg .p-top__kv__bg__js .slick-prev::before {
@@ -87,6 +100,12 @@ $font-xxl: 2rem;
   right: 20px;
   height: 30px;
   width: 30px;
+}
+
+@media (min-width: 768px) {
+  .p-top__kv .p-top__kv__bg .p-top__kv__bg__js .slick-next {
+    right: calc(50% - 130px);
+  }
 }
 
 .p-top__kv .p-top__kv__bg .p-top__kv__bg__js .slick-next::before {
@@ -169,6 +188,8 @@ $font-xxl: 2rem;
   .p-top__kv .p-top__kv__slider .slick-list.draggable .m-squareCard.slick-slide {
     width: 90vw;
     max-width: 860px;
+    -webkit-transform-origin: 30% 100%;
+    transform-origin: 30% 100%;
   }
 }
 
@@ -291,6 +312,14 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .p-top__kv .p-top__kv__slider .slick-dots {
+    height: 73.5px;
+    width: 70%;
+    right: 0;
+  }
 }
 
 .p-top__kv .p-top__kv__slider .slick-dots li {
@@ -1338,6 +1367,26 @@ $font-xxl: 2rem;
   }
 }
 
+.p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots {
+  bottom: -40px;
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots li {
+  margin: 0 3px;
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots li button::before {
+  opacity: 1.0;
+  color: #EEEEEE;
+  font-size: 10px;
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots li.slick-active button::before {
+  opacity: 1.0;
+  color: #FFD94A;
+  font-size: 10px;
+}
+
 .p-top__lifeLearn .p-top__lifeLearn__footer {
   margin: 24px 15px 0 15px;
   display: -webkit-box;
@@ -1373,10 +1422,23 @@ $font-xxl: 2rem;
   font-size: 27px;
 }
 
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__footer .p-top__lifeLearn__footer__link .icon-btn {
+    font-size: 32px;
+  }
+}
+
 .p-top__lifeLearn .p-top__lifeLearn__footer .p-top__lifeLearn__footer__link .p-top__lifeLearn__footer__link__text {
   margin-left: 5px;
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__footer .p-top__lifeLearn__footer__link .p-top__lifeLearn__footer__link__text {
+    margin-left: 10px;
+    font-size: 1.8rem;
+  }
 }
 
 .p-top__keyword {

@@ -8,6 +8,7 @@ import SliderTab from '../utils/sliderTab';
 // ヘッダーメニュー
 const header = new Header();
 header.openHeaderNav();
+header.clickHeaderButton();
 
 // SLICK
 const slick = new Slick();

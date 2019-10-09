@@ -9,7 +9,7 @@
   position: relative;
 
   @include screen-large {
-    margin-top:0px;
+    margin-top:70px;
     height: 490px;
     background-color: $bg-10-color;
   }
@@ -45,10 +45,19 @@
       position: relative;
       width: 100%;
 
+      @include screen-large {
+        height: 73.5px;
+        width: 100%;
+      }
+
       .slick-prev {
         left: 20px;
         height: 30px;
         width: 30px;
+
+        @include screen-large {
+          left: calc(50% - 130px);
+        }
 
         &::before {
           display: none;
@@ -71,6 +80,10 @@
         right: 20px;
         height: 30px;
         width: 30px;
+
+        @include screen-large {
+          right: calc(50% - 130px);
+        }
 
         &::before {
           display: none;
@@ -132,7 +145,8 @@
 
         @include screen-large {
           width: 90vw;
-          max-width: 860px;  
+          max-width: 860px;
+          transform-origin:30% 100%;
         }
 
         &:not(.slick-active) {
@@ -238,6 +252,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include screen-large {
+        height: 73.5px;
+        width: 70%;
+        right: 0;
+      }
 
       li {
         margin:0 3px;
@@ -1192,6 +1212,28 @@
         }
       }
     }  
+
+    .slick-dots {
+      bottom:-40px;
+
+      li {
+        margin:0 3px;
+        button{
+          &::before{
+            opacity: 1.0;
+            color:$bg-7-color;
+            font-size: 10px;  
+          }
+        }  
+        &.slick-active{
+          button::before{
+            opacity: 1.0;
+            color:$bg-1-color;
+            font-size: 10px;
+          }
+        } 
+      }
+    }   
   }
 
 
@@ -1214,12 +1256,21 @@
 
       .icon-btn {
         font-size: 27px;
+
+        @include screen-large {
+          font-size: 32px;
+        }
       }
 
       .p-top__lifeLearn__footer__link__text {
         margin-left: 5px;
         font-size: $font-s;
         font-weight: $font-bold;
+
+        @include screen-large {
+          margin-left: 10px;
+          font-size: $font-l;
+        }
       }
     }
   }

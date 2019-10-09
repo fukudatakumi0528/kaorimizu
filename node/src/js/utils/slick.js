@@ -62,7 +62,6 @@ export default class Slick {
 			dots: true,
 			infinite: true,
 			centerMode: true,
-			centerPadding: '0 15% 0 0',
 			appendArrows: $('.p-top__kv__bg__js'),
 			variableWidth: true,
 			responsive: [
