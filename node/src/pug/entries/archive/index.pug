@@ -1,0 +1,20 @@
+//-
+//- トップページ
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "記事一覧ページ"
+	- var assetsPath = "../"
+	- var pageKey = "archive"
+	- var scriptFlag = true
+
+block contents
+	section.p-archive__topper
+		.p-archive__topper__main
+			.p-archive__topper__main__title
+				img(src="", alt="").p-archive__topper__main__title__icon
+				.p-archive__topper__main__title__text
+					h1.p-archive__topper__main__title__text__main 特集
+					p.p-archive__topper__main__title__text__sub Feature
+			.p-archive__topper__main__description ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。
+
