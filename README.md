@@ -5,7 +5,6 @@
 * [PHP](https://secure.php.net/) 7.1以上
 * [Node.js](https://nodejs.org/ja/) 8.11.1以上
 
-
 ## Server(prod & stage)
 
 * クラウドホスティング
