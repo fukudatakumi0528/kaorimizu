@@ -14,7 +14,7 @@ const cssmin = require('gulp-cssmin');
 const options = {
   SRC_PATH: './src',
   PUBLIC_PATH: './public',
-  THEME_PATH: '../app/wp-content/themes/officelab_renewal',
+  THEME_PATH: '../app/wp-content/themes/finbee_media',
   BUILD_PATH: './dist',
   AUTOPREFIXER: {
     browsers: ['last 2 versions'],

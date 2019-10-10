@@ -5,16 +5,25 @@ extends ../../_include/_layout
 block vars
 	- var pageTitle = "記事一覧ページ"
 	- var assetsPath = "../"
-	- var pageKey = "archive"
+	- var pageKey = "archive/index"
 	- var scriptFlag = true
 
 block contents
 	section.p-archive__topper
 		.p-archive__topper__main
 			.p-archive__topper__main__title
-				img(src="", alt="").p-archive__topper__main__title__icon
+				img(src="/assets/img/common/icon/feature.png", alt="").p-archive__topper__main__title__icon
 				.p-archive__topper__main__title__text
 					h1.p-archive__topper__main__title__text__main 特集
 					p.p-archive__topper__main__title__text__sub Feature
 			.p-archive__topper__main__description ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。
-
+		.p-archive__topper__refine
+			.p-archive__topper__refine__inner
+				.p-archive__topper__refine__inner__header
+					.p-archive__topper__refine__inner__header__title 人気のワードから絞り込む
+					.p-archive__topper__refine__inner__header__icon
+						span.p-archive__topper__refine__inner__header__icon__line
+						span.p-archive__topper__refine__inner__header__icon__line
+				.p-archive__topper__refine__inner__footer
+					include ../../_components/_organisms/classificationList
+					+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])

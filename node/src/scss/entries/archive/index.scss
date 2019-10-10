@@ -1,0 +1,125 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-archive__topper {
+  padding:40px 20px;
+  background-color: $bg-1-color;
+  position: relative;
+
+  .p-archive__topper__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .p-archive__topper__main__title {
+      display: flex;
+
+      .p-archive__topper__main__title__icon {
+        height: 36px;
+        object-fit: cover;
+
+      }
+
+      .p-archive__topper__main__title__text {
+        margin-left: 5px;
+
+        .p-archive__topper__main__title__text__main {
+          font-size: 22px;
+          font-weight: $font-bold;
+        }
+
+        .p-archive__topper__main__title__text__sub {
+          font-size:$font-xs;
+          font-weight: $font-bold;
+        }
+      }
+    }
+
+    .p-archive__topper__main__description {
+      margin-top:10px;
+      font-size:$font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+  .p-archive__topper__refine {
+    position: absolute;
+    width: 100%;
+    padding:0 15px;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+
+
+    .p-archive__topper__refine__inner {
+      background-color: $bg-13-color;
+      padding:20px;
+      width: 100%;
+      border-radius: 4px;
+
+      .p-archive__topper__refine__inner__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .p-archive__topper__refine__inner__header__title {
+          font-size:$font-s;
+          font-weight: $font-bold;    
+        }
+
+        .p-archive__topper__refine__inner__header__icon {
+          height: 27px;
+          width: 27px;
+          background-color: $bg-6-color;
+          border-radius: 25px;
+          position: relative;
+
+          span {
+            position: absolute;
+            height: 2px;/*線の太さ*/
+            width: 15px;/*長さ*/
+            border-radius: 3px;
+            lef
+            background:$bg-base-color;
+            display: block;
+            content: '';
+            cursor: pointer;
+
+            &:nth-child(1) {
+              top:0;
+              transition: 0.1s;
+
+              &.is-active {
+                transform: translateY(3px) rotate(40deg);
+                transition: 0.1s;
+              }
+            }
+
+            &:nth-child(2) {
+              bottom:0;
+              transition: 0.1s;
+
+              &.is-active {
+                transform: translateY(-3px) rotate(-40deg);
+                transition: 0.1s;
+              }
+            }
+          }
+        }
+      }
+  
+      .p-archive__topper__refine__inner__footer {
+       
+        display: none;
+  
+        &.is-active {
+          display: block;
+        }
+      }  
+    }
+  }
+}
