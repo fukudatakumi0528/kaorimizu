@@ -3,32 +3,23 @@
 //-
 extends ../../_include/_layout
 block vars
-	- var pageTitle = "記事一覧ページ"
+	- var pageTitle = "検索結果ページ"
 	- var assetsPath = "../"
-	- var pageKey = "archive/index"
+	- var pageKey = "article/search"
 	- var scriptFlag = true
 
 block contents
-	section.p-archive__topper
-		.p-archive__topper__main
-			.p-archive__topper__main__title
-				img(src="/assets/img/common/icon/feature.png", alt="").p-archive__topper__main__title__icon
-				.p-archive__topper__main__title__text
-					h1.p-archive__topper__main__title__text__main 特集
-					p.p-archive__topper__main__title__text__sub Feature
-			.p-archive__topper__main__description ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。
-		.p-archive__topper__refine
-			.p-archive__topper__refine__inner
-				.p-archive__topper__refine__inner__header
-					.p-archive__topper__refine__inner__header__title 人気のワードから絞り込む
-					.p-archive__topper__refine__inner__header__icon.js-refine__icon
-						span.p-archive__topper__refine__inner__header__icon__line
-						span.p-archive__topper__refine__inner__header__icon__line
-				.p-archive__topper__refine__inner__selectArea.js-refine__selectArea
-					include ../../_components/_organisms/classificationList
-					+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])
+	section.p-articleSearch__topper
+		include ../../_components/_molecules/inputSearch
 
-	section.p-archive__main
+
+	section.p-articleSearch__main
+		.p-articleSearch__main__result
+			.p-articleSearch__main__result__category
+				p.p-articleSearch__main__result__category__text <strong>#マイナースポーツ</strong>の検索結果
+			.p-articleSearch__main__result__number
+				p.p-articleSearch__main__result__number__text 40件中 1-18件を表示
+
 		include ../../_components/_organisms/verticallyCardList
 		+o-verticallyCardList([
 			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
@@ -40,14 +31,12 @@ block contents
 			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
 			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
 		])
+		.p-articleSearch__main__pagenation
+			include ../../_components/_molecules/pagenation
 
-	section.p-archive__footer
+	section.p-articleSearch__footer
 		include ../../_components/_molecules/titleBorder
 		+m-titleBorder({ title:"人気記事", subtitle:"Ranking" })
 		include ../../_components/_templates/rankingArea
-		.m-breadcrumb
-			ul.m-breadcrumb__list
-				li.m-breadcrumb__list TOP
-				li.m-breadcrumb__list 特集
-
-
+		include ../../_components/_molecules/breadcrumb
+		+m-breadcrumb([{ url:"", text: "特集" }])

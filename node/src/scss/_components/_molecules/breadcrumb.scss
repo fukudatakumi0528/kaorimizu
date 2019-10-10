@@ -1,0 +1,39 @@
+.m-breadcrumb {
+  background-color: $bg-3-color;
+
+  .m-breadcrumb__list {
+    display: flex;
+
+
+    .m-breadcrumb__list__link {
+      font-size:$font-xs;
+      font-weight: $font-bold;
+      display: flex;
+      align-items: center;  
+
+      &:nth-child(1) {
+        .m-breadcrumb__list__link__text {
+          margin-left: 0px;
+        }  
+      }
+
+      &:nth-last-child(1) {
+        span {
+          display: none;
+        }            
+      }
+
+      .m-breadcrumb__list__link__text {
+        margin-left: 5px;
+      }
+
+      span {
+        margin-left: 5px;
+
+        &::before {
+          font-size:$font-xxs;
+        }
+      }
+    }
+  }
+}

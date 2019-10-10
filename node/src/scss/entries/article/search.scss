@@ -1,0 +1,84 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-articleSearch__topper {
+  padding:15px 0;
+  background-color: $bg-3-color;
+  position: relative;
+  z-index: 1;
+
+  .m-inputSearch {
+    width: 100%;
+    height: 50px;
+
+    .m-inputSearch__input {  
+      background-color: $bg-6-color;
+    }
+  }
+}
+
+.p-articleSearch__main {
+  margin-top:10px;
+  z-index: 0;
+
+  .p-articleSearch__main__result {
+    padding:10px 15px 0px 15px;
+    margin-bottom:-10px;
+
+    .p-articleSearch__main__result__category {
+      display: flex;
+      justify-content: flex-start;
+
+      .p-articleSearch__main__result__category__text {
+        font-size: $font-s;
+        font-weight: $font-bold;
+        
+        strong {
+          font-size: $font-m;
+          background: linear-gradient(transparent 60%, $bg-1-color 40%);
+        }
+      }
+    }
+
+    .p-articleSearch__main__result__number {
+      display: flex;
+      justify-content: flex-end;
+
+      .p-articleSearch__main__result__number__text {
+        font-size: $font-xs;
+        font-weight: $font-bold;
+        color:$font-4-color;
+      }
+    }
+  }
+
+  .o-verticallyCardList {
+    padding:0 15px;
+  }
+
+  .p-articleSearch__main__pagenation {
+    width: 100%;
+    padding:0 15px;
+    margin-top:40px;
+
+    .m-pagenation {
+      width: 100%;
+    }  
+  }
+}
+
+.p-articleSearch__footer {
+  margin-top:50px;
+
+  .m-titleBorder {
+    padding:0 15px;
+  }
+
+  .m-breadcrumb {
+    margin-top:50px;
+    padding:15px;
+    background-color: $bg-3-color;
+  }
+}

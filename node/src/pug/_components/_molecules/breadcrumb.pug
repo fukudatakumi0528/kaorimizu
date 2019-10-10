@@ -1,0 +1,12 @@
+mixin m-breadcrumb(links)
+  .m-breadcrumb
+    ul.m-breadcrumb__list
+      li.m-breadcrumb__list__link 
+        a(href="").m-breadcrumb__list__link__text TOP
+        span.icon-head
+      each link in links
+        li.m-breadcrumb__list__link 
+          a(href=link.url).m-breadcrumb__list__link__text
+            p.m-breadcrumb__list__link__text__inner  #{link.text}
+          span.icon-head
+

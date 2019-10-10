@@ -1,0 +1,96 @@
+/*
+$font-xs: 1rem;
+$font-s: 1.2rem;
+$font-m: 1.4rem;
+$font-l: 1.6rem;
+$font-xl: 1.8rem;
+$font-xxl: 2rem;
+*/
+.p-articleSearch__topper {
+  padding: 15px 0;
+  background-color: #F5F5F5;
+  position: relative;
+  z-index: 1;
+}
+
+.p-articleSearch__topper .m-inputSearch {
+  width: 100%;
+  height: 50px;
+}
+
+.p-articleSearch__topper .m-inputSearch .m-inputSearch__input {
+  background-color: #FFFFFF;
+}
+
+.p-articleSearch__main {
+  margin-top: 10px;
+  z-index: 0;
+}
+
+.p-articleSearch__main .p-articleSearch__main__result {
+  padding: 10px 15px 0px 15px;
+  margin-bottom: -10px;
+}
+
+.p-articleSearch__main .p-articleSearch__main__result .p-articleSearch__main__result__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.p-articleSearch__main .p-articleSearch__main__result .p-articleSearch__main__result__category .p-articleSearch__main__result__category__text {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.p-articleSearch__main .p-articleSearch__main__result .p-articleSearch__main__result__category .p-articleSearch__main__result__category__text strong {
+  font-size: 1.6rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #FFD94A));
+  background: linear-gradient(transparent 60%, #FFD94A 40%);
+}
+
+.p-articleSearch__main .p-articleSearch__main__result .p-articleSearch__main__result__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.p-articleSearch__main .p-articleSearch__main__result .p-articleSearch__main__result__number .p-articleSearch__main__result__number__text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #969696;
+}
+
+.p-articleSearch__main .o-verticallyCardList {
+  padding: 0 15px;
+}
+
+.p-articleSearch__main .p-articleSearch__main__pagenation {
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 40px;
+}
+
+.p-articleSearch__main .p-articleSearch__main__pagenation .m-pagenation {
+  width: 100%;
+}
+
+.p-articleSearch__footer {
+  margin-top: 50px;
+}
+
+.p-articleSearch__footer .m-titleBorder {
+  padding: 0 15px;
+}
+
+.p-articleSearch__footer .m-breadcrumb {
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #F5F5F5;
+}

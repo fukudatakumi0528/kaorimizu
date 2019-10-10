@@ -30,7 +30,7 @@
     <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/archive/index.css">
+    <link rel="stylesheet" href="../assets/css/article/index.css">
     <!--link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -463,23 +463,23 @@
         </div>
       </header>
       <main>
-        <section class="p-archive__topper">
-          <div class="p-archive__topper__main">
-            <div class="p-archive__topper__main__title"><img class="p-archive__topper__main__title__icon" src="/assets/img/common/icon/feature.png" alt="">
-              <div class="p-archive__topper__main__title__text">
-                <h1 class="p-archive__topper__main__title__text__main">特集</h1>
-                <p class="p-archive__topper__main__title__text__sub">Feature</p>
+        <section class="p-article__topper">
+          <div class="p-article__topper__main">
+            <div class="p-article__topper__main__title"><img class="p-article__topper__main__title__icon" src="/assets/img/common/icon/feature.png" alt="">
+              <div class="p-article__topper__main__title__text">
+                <h1 class="p-article__topper__main__title__text__main">特集</h1>
+                <p class="p-article__topper__main__title__text__sub">Feature</p>
               </div>
             </div>
-            <div class="p-archive__topper__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+            <div class="p-article__topper__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
           </div>
-          <div class="p-archive__topper__refine">
-            <div class="p-archive__topper__refine__inner">
-              <div class="p-archive__topper__refine__inner__header">
-                <div class="p-archive__topper__refine__inner__header__title">人気のワードから絞り込む</div>
-                <div class="p-archive__topper__refine__inner__header__icon js-refine__icon"><span class="p-archive__topper__refine__inner__header__icon__line"></span><span class="p-archive__topper__refine__inner__header__icon__line"></span></div>
+          <div class="p-article__topper__refine">
+            <div class="p-article__topper__refine__inner">
+              <div class="p-article__topper__refine__inner__header">
+                <div class="p-article__topper__refine__inner__header__title">人気のワードから絞り込む</div>
+                <div class="p-article__topper__refine__inner__header__icon js-refine__icon"><span class="p-article__topper__refine__inner__header__icon__line"></span><span class="p-article__topper__refine__inner__header__icon__line"></span></div>
               </div>
-              <div class="p-archive__topper__refine__inner__selectArea js-refine__selectArea">
+              <div class="p-article__topper__refine__inner__selectArea js-refine__selectArea">
                                 <ul class="o-classificationList">
                                   <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
                                       <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
@@ -518,7 +518,15 @@
             </div>
           </div>
         </section>
-        <section class="p-archive__main">
+        <section class="p-article__main">
+          <div class="p-article__main__result">
+            <div class="p-article__main__result__category">
+              <p class="p-article__main__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
+            </div>
+            <div class="p-article__main__result__number">
+              <p class="p-article__main__result__number__text">40件中 1-18件を表示</p>
+            </div>
+          </div>
                     <ul class="o-verticallyCardList">
                                   <li class="m-verticallyCard">
                                     <div class="m-verticallyCard__inner">
@@ -601,8 +609,20 @@
                                     </div>
                                   </li>
                     </ul>
+          <div class="p-article__main__pagenation">
+            <div class="m-pagenation">
+              <div class="m-pagenation__arrow"><span class="icon-arrow2 arrow-prev"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><span class="icon-arrow2 arrow-next"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+              <ul class="m-pagenation__list">
+                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">1</a></li>
+                <li class="m-pagenation__list__link is-active"><a class="m-pagenation__list__link__text">2</a></li>
+                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">3</a></li>
+                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">4</a></li>
+                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">5</a></li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section class="p-archive__footer">
+        <section class="p-article__footer">
                     <div class="m-titleBorder">
                       <div class="m-titleBorder__main">
                         <div class="m-titleBorder__main__text">人気記事<small>Ranking</small></div>
@@ -925,12 +945,13 @@
                             </li>
             </ul>
           </div>
-          <div class="m-breadcrumb">
-            <ul class="m-breadcrumb__list">
-              <li class="m-breadcrumb__list">TOP</li>
-              <li class="m-breadcrumb__list">特集</li>
-            </ul>
-          </div>
+                    <div class="m-breadcrumb">
+                      <ul class="m-breadcrumb__list">
+                        <li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">TOP</a><span class="icon-head"></span></li>
+                        <li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">
+                            <p class="m-breadcrumb__list__link__text__inner"> 特集</p></a><span class="icon-head"></span></li>
+                      </ul>
+                    </div>
         </section>
       </main>
       <footer class="l-footer">
@@ -1060,7 +1081,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
     <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/archive/index.js"></script>
+    <script src="/assets/js/article/index.js"></script>
     <div id="fb-root">
       <script async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&amp;version=v3.2"></script>
     </div>

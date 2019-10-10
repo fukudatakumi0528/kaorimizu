@@ -163,3 +163,7 @@ $font-xxl: 2rem;
 .p-archive__footer .m-titleBorder {
   padding: 0 15px;
 }
+
+.p-archive__footer .m-breadcrumb {
+  margin-top: 50px;
+}
