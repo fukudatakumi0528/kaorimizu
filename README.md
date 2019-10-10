@@ -5,7 +5,6 @@
 * [PHP](https://secure.php.net/) 7.1以上
 * [Node.js](https://nodejs.org/ja/) 8.11.1以上
 
-↑おっくんさん確認
 
 ## Server(prod & stage)
 
@@ -14,7 +13,7 @@
 * IPアドレス
     * 150.95.186.83
 
-↑おっくんさん確認
+↑のりさん確認
 
 ## Directory structure
 
