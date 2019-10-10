@@ -4,6 +4,7 @@ import Scroll from '../utils/scroll';
 import Hugelink from '../utils/Hugelink';
 import FixedButton from '../utils/fixedButton';
 import SliderTab from '../utils/sliderTab';
+import Refine from '../utils/refine';
 
 // ヘッダーメニュー
 const header = new Header();
@@ -32,3 +33,7 @@ fixedButton.clickMenu();
 //追従ボタン
 const sliderTab = new SliderTab();
 sliderTab.clickTab();
+
+//追従ボタン
+const refine = new Refine();
+refine.clickRefineAccordion();

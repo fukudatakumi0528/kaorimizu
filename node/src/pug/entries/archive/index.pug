@@ -21,9 +21,33 @@ block contents
 			.p-archive__topper__refine__inner
 				.p-archive__topper__refine__inner__header
 					.p-archive__topper__refine__inner__header__title 人気のワードから絞り込む
-					.p-archive__topper__refine__inner__header__icon
+					.p-archive__topper__refine__inner__header__icon.js-refine__icon
 						span.p-archive__topper__refine__inner__header__icon__line
 						span.p-archive__topper__refine__inner__header__icon__line
-				.p-archive__topper__refine__inner__footer
+				.p-archive__topper__refine__inner__selectArea.js-refine__selectArea
 					include ../../_components/_organisms/classificationList
 					+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])
+
+	section.p-archive__main
+		include ../../_components/_organisms/verticallyCardList
+		+o-verticallyCardList([
+			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+		])
+
+	section.p-archive__footer
+		include ../../_components/_molecules/titleBorder
+		+m-titleBorder({ title:"人気記事", subtitle:"Ranking" })
+		include ../../_components/_templates/rankingArea
+		.m-breadcrumb
+			ul.m-breadcrumb__list
+				li.m-breadcrumb__list TOP
+				li.m-breadcrumb__list 特集
+
+

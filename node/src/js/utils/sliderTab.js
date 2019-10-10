@@ -1,7 +1,7 @@
 export default class SliderTab {
   clickTab() {
-    const $sliderTabRanking = $('.p-top__latestRanking__ranking__tab');
-    const $sliderTabRankingList = $sliderTabRanking.children('.p-top__latestRanking__ranking__tab__list')
+    const $sliderTabRanking = $('.t-rankingArea__tab');
+    const $sliderTabRankingList = $sliderTabRanking.children('.t-rankingArea__tab__list')
 
     $sliderTabRankingList.on('click', function () {
       if (!$(this).hasClass('is-active')) {
@@ -9,24 +9,24 @@ export default class SliderTab {
         $(this).addClass('is-active');
         if ($(this).hasClass('tab-month')) {
           //クラスを初期化
-          $('.p-top__latestRanking__ranking__slider__inner').removeClass('is-active');
-          $('.p-top__latestRanking__ranking__slider__arrow').removeClass('is-active');
+          $('.t-rankingArea__slider__inner').removeClass('is-active');
+          $('.t-rankingArea__slider__arrow').removeClass('is-active');
           //is-activeを付与
           $('.js-slickSlider-top__ranking__month').addClass('is-active');
           $('.js__arrow-top__ranking__month').addClass('is-active');
           $('.js-slickSlider-top__ranking__month').slick('setPosition');
         } else if ($(this).hasClass('tab-weekly')) { 
           //クラスを初期化
-          $('.p-top__latestRanking__ranking__slider__inner').removeClass('is-active');
-          $('.p-top__latestRanking__ranking__slider__arrow').removeClass('is-active');
+          $('.t-rankingArea__slider__inner').removeClass('is-active');
+          $('.t-rankingArea__slider__arrow').removeClass('is-active');
           //is-activeを付与
           $('.js-slickSlider-top__ranking__weekly').addClass('is-active');
           $('.js__arrow-top__ranking__weekly').addClass('is-active');
           $('.js-slickSlider-top__ranking__weekly').slick('setPosition');
         } else if ($(this).hasClass('tab-all')) { 
           //クラスを初期化
-          $('.p-top__latestRanking__ranking__slider__inner').removeClass('is-active');
-          $('.p-top__latestRanking__ranking__slider__arrow').removeClass('is-active');
+          $('.t-rankingArea__slider__inner').removeClass('is-active');
+          $('.t-rankingArea__slider__arrow').removeClass('is-active');
           //is-activeを付与
           $('.js-slickSlider-top__ranking__all').addClass('is-active');
           $('.js__arrow-top__ranking__all').addClass('is-active');

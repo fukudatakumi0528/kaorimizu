@@ -4,9 +4,10 @@
 @import "../../_utils/_mixins";
 
 .p-archive__topper {
-  padding:40px 20px;
+  padding:40px 20px 60px 20px;
   background-color: $bg-1-color;
   position: relative;
+  z-index: 1;
 
   .p-archive__topper__main {
     display: flex;
@@ -29,11 +30,13 @@
         .p-archive__topper__main__title__text__main {
           font-size: 22px;
           font-weight: $font-bold;
+          white-space: nowrap;
         }
 
         .p-archive__topper__main__title__text__sub {
           font-size:$font-xs;
           font-weight: $font-bold;
+          white-space: nowrap;
         }
       }
     }
@@ -50,9 +53,9 @@
     position: absolute;
     width: 100%;
     padding:0 15px;
-    bottom:0;
+    bottom:30px;
     left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(100%);
 
 
     .p-archive__topper__refine__inner {
@@ -68,7 +71,7 @@
 
         .p-archive__topper__refine__inner__header__title {
           font-size:$font-s;
-          font-weight: $font-bold;    
+          font-weight: $font-bold;
         }
 
         .p-archive__topper__refine__inner__header__icon {
@@ -89,36 +92,47 @@
             cursor: pointer;
 
             &:nth-child(1) {
-              top:0;
-              transition: 0.1s;
+              left:50%;
+              top:50%;
+              transform: translateX(-50%) translateY(-50%) rotate(90deg);
 
               &.is-active {
-                transform: translateY(3px) rotate(40deg);
-                transition: 0.1s;
+                transform: translateX(-50%) translateY(-50%);
               }
             }
 
             &:nth-child(2) {
-              bottom:0;
-              transition: 0.1s;
+              left:50%;
+              top:50%;
+              transform: translateX(-50%) translateY(-50%) rotate(0deg);
 
               &.is-active {
-                transform: translateY(-3px) rotate(-40deg);
-                transition: 0.1s;
+                transform: translateX(-50%) translateY(-50%);
               }
             }
           }
         }
       }
   
-      .p-archive__topper__refine__inner__footer {
-       
-        display: none;
-  
-        &.is-active {
-          display: block;
-        }
+      .p-archive__topper__refine__inner__selectArea {
+         
+        display: block;
+        height: auto;
       }  
     }
+  }
+}
+
+.p-archive__main {
+  margin-top:60px;
+  z-index: 0;
+  padding:0 15px;
+}
+
+.p-archive__footer {
+  margin-top:50px;
+  
+  .m-titleBorder {
+    padding:0 15px;
   }
 }
