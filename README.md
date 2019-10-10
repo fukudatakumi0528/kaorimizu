@@ -1,9 +1,11 @@
-# 株式会社オフィス・ラボ wordpress
+# 株式会社ネストエッグ wordpress
 
 ## Dependence
 
 * [PHP](https://secure.php.net/) 7.1以上
 * [Node.js](https://nodejs.org/ja/) 8.11.1以上
+
+↑おっくんさん確認
 
 ## Server(prod & stage)
 
@@ -11,6 +13,8 @@
     * conoha VPS
 * IPアドレス
     * 150.95.186.83
+
+↑おっくんさん確認
 
 ## Directory structure
 
