@@ -1,0 +1,13 @@
+mixin o-topperSection(information)
+  .o-topperSection
+    .o-topperSection__main
+      .o-topperSection__main__title
+        if (information.src)
+          img(src=information.src, alt=information.alt).o-topperSection__main__title__icon
+        else
+        .o-topperSection__main__title__text
+          h1.o-topperSection__main__title__text__main #{information.title}
+          p.o-topperSection__main__title__text__sub #{information.subtitle}
+      if (information.description)
+        .o-topperSection__main__description #{information.description}
+      else

@@ -4,51 +4,14 @@
 @import "../../_utils/_mixins";
 
 .p-article__topper {
-  padding:40px 20px 60px 20px;
-  background-color: $bg-1-color;
   position: relative;
   z-index: 1;
 
-  .p-article__topper__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .p-article__topper__main__title {
-      display: flex;
-
-      .p-article__topper__main__title__icon {
-        height: 36px;
-        object-fit: cover;
-
-      }
-
-      .p-article__topper__main__title__text {
-        margin-left: 5px;
-
-        .p-article__topper__main__title__text__main {
-          font-size: 22px;
-          font-weight: $font-bold;
-          white-space: nowrap;
-        }
-
-        .p-article__topper__main__title__text__sub {
-          font-size:$font-xs;
-          font-weight: $font-bold;
-          white-space: nowrap;
-        }
-      }
-    }
-
-    .p-article__topper__main__description {
-      margin-top:10px;
-      font-size:$font-xs;
-      font-weight: $font-bold;
-      line-height: 150%;
-      text-align: center;
-    }
+  .o-topperSection {
+    padding:40px 20px 60px 20px;
+    background-color: $bg-1-color;  
   }
+
   .p-article__topper__refine {
     position: absolute;
     width: 100%;

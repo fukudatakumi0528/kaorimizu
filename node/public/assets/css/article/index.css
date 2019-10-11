@@ -8,62 +8,13 @@ $font-xl: 1.8rem;
 $font-xxl: 2rem;
 */
 .p-article__topper {
-  padding: 40px 20px 60px 20px;
-  background-color: #FFD94A;
   position: relative;
   z-index: 1;
 }
 
-.p-article__topper .p-article__topper__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__title .p-article__topper__main__title__icon {
-  height: 36px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__title .p-article__topper__main__title__text {
-  margin-left: 5px;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__title .p-article__topper__main__title__text .p-article__topper__main__title__text__main {
-  font-size: 22px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__title .p-article__topper__main__title__text .p-article__topper__main__title__text__sub {
-  font-size: 1.2rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.p-article__topper .p-article__topper__main .p-article__topper__main__description {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 150%;
-  text-align: center;
+.p-article__topper .o-topperSection {
+  padding: 40px 20px 60px 20px;
+  background-color: #FFD94A;
 }
 
 .p-article__topper .p-article__topper__refine {

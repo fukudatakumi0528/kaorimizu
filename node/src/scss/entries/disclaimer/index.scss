@@ -3,14 +3,14 @@
 @import "../..//_utils/_variables";
 @import "../../_utils/_mixins";
 
-.p-privacy__topper {
+.p-disclaimer__topper {
 
 }
 
-.p-privacy__main {
+.p-disclaimer__main {
   padding:30px 15px;
 
-  .p-privacy__main__title {
+  .p-disclaimer__main__title {
     margin-top:50px;
     font-size: $font-m;
     line-height: 170%;
@@ -29,7 +29,7 @@
     }
   }
 
-  .p-privacy__main__description {
+  .p-disclaimer__main__description {
     margin-top:10px;
     font-size: $font-s;
     line-height: 170%;
@@ -38,7 +38,7 @@
   }
 }
 
-.p-privacy__footer {
+.p-disclaimer__footer {
   margin-top:0px;
   width: 100%;
   overflow:hidden;

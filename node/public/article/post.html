@@ -30,7 +30,7 @@
     <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/404/index.css">
+    <link rel="stylesheet" href="../assets/css/article/post.css">
     <!--link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -463,47 +463,339 @@
         </div>
       </header>
       <main>
-        <section class="p-404__main"><img class="p-404__main__img" src="/assets/img/404/404.png" alt="">
-          <p class="p-404__main__description">指定されたURLのページは存在しません。<br>人気のキーワードからあなたにぴったりの<br>楽しい記事を探してみてください。</p>
+        <section class="p-articlePost__main">
+          <h2>マイナースポーツを広めたい！フレスコボール日本代表選手・斎藤亮太さんにインタビュー</h2>
         </section>
-        <section class="p-404__footer">
-          <div class="p-404__footer__keywords">
-            <div class="p-404__footer__keywords__title">Keywords</div>
-                        <ul class="o-classificationList">
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link">
-                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-                        </ul>
+        <section class="p-articlePost__footer">
+                    <div class="m-titleBorder">
+                      <div class="m-titleBorder__main">
+                        <div class="m-titleBorder__main__text">人気記事<small>Ranking</small></div>
+                        <div class="m-titleBorder__main__border"></div>
+                      </div>
+                    </div>
+          <ul class="t-rankingArea__tab">
+            <li class="t-rankingArea__tab__list tab-month is-active">
+              <p class="t-rankingArea__tab__list__text">月間</p>
+            </li>
+            <li class="t-rankingArea__tab__list tab-weekly">
+              <p class="t-rankingArea__tab__list__text">週間</p>
+            </li>
+            <li class="t-rankingArea__tab__list tab-all">
+              <p class="t-rankingArea__tab__list__text">すべて</p>
+            </li>
+          </ul>
+          <div class="t-rankingArea__slider">
+            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__month is-active">
+              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+            </div>
+            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__weekly">
+              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+            </div>
+            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__all">
+              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+            </div>
+            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__month is-active">
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-1 path2"></span><span class="path3"></span></span>
+                                  <div class="m-squareCard__inner__ranking__rank">
+                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>1</strong></p>
+                                  </div>
+                                </div>
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-2 path2"></span><span class="path3"></span></span>
+                                  <div class="m-squareCard__inner__ranking__rank">
+                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>2</strong></p>
+                                  </div>
+                                </div>
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-3 path2"></span><span class="path3"></span></span>
+                                  <div class="m-squareCard__inner__ranking__rank">
+                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>3</strong></p>
+                                  </div>
+                                </div>
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            </ul>
+            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            </ul>
+            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="m-squareCard">
+                              <div class="m-squareCard__inner">
+                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
+                                <div class="m-squareCard__inner__footer">
+                                  <div class="m-squareCard__inner__footer__sign">
+                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
+                                  </div><a class="m-squareCard__inner__footer__title" href="">
+                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
+                                  <div class="m-squareCard__inner__footer__description">
+                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
+                                  </div>
+                                  <div class="m-squareCard__inner__footer__classification">
+                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
+                                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+            </ul>
           </div>
+                    <div class="m-breadcrumb">
+                      <ul class="m-breadcrumb__list">
+                        <li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">TOP</a><span class="icon-head"></span></li>
+                        <li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">
+                            <p class="m-breadcrumb__list__link__text__inner"> 特集</p></a><span class="icon-head"></span></li>
+                      </ul>
+                    </div>
         </section>
       </main>
       <footer class="l-footer">
@@ -633,7 +925,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
     <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/404/index.js"></script>
+    <script src="/assets/js/article/post.js"></script>
     <div id="fb-root">
       <script async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&amp;version=v3.2"></script>
     </div>

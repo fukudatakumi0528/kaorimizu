@@ -2472,6 +2472,7 @@ main {
 }
 
 .m-breadcrumb {
+  padding: 15px;
   background-color: #F5F5F5;
 }
 
@@ -3966,6 +3967,76 @@ main {
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__icon .o-headerInnerPc__left__icon__list:nth-child(1) {
   margin-left: 0px;
   font-size: 16px;
+}
+
+.o-topperSection {
+  padding: 40px 20px;
+  background-color: #FFD94A;
+}
+
+.o-topperSection .o-topperSection__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__icon {
+  height: 22px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text {
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text .o-topperSection__main__title__text__main {
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text .o-topperSection__main__title__text__sub {
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__description {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
 }
 
 .o-verticallyCardList {

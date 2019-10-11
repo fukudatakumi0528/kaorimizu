@@ -1,0 +1,31 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-articlePost__main {
+  padding:0 15px;
+
+  h2 {
+    font-size: 19px;
+    font-weight: $font-bold;
+  }
+
+  
+}
+
+.p-articlePost__footer {
+  margin-top:50px;
+  width: 100%;
+  overflow:hidden;
+
+  .m-titleBorder {
+    padding:0 15px;
+  }
+
+  .m-breadcrumb {
+    margin-top:50px;
+    padding:15px;
+    background-color: $bg-3-color;
+  }
+}

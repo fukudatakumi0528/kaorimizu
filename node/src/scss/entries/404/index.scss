@@ -1,0 +1,29 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-404__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding:20px 15px;
+
+  .p-404__main__description {
+    text-align: center;
+    font-size: $font-xs;
+    font-weight: $font-bold;
+    line-height: 180%;
+  }
+}
+
+.p-404__footer {
+  margin-top:30px;
+  padding:20px 15px;
+  background-color: $bg-2-color;
+
+  .p-404__footer__keywords__title {
+    font-size: $font-m;
+    font-weight: $font-bold;
+  }
+}

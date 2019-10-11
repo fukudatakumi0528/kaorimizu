@@ -1,0 +1,21 @@
+//-
+//- トップページ
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "記事詳細"
+	- var assetsPath = "../"
+	- var pageKey = "article/post"
+	- var scriptFlag = true
+
+block contents
+	section.p-articlePost__main
+		h2 マイナースポーツを広めたい！フレスコボール日本代表選手・斎藤亮太さんにインタビュー
+
+
+	section.p-articlePost__footer
+		include ../../_components/_molecules/titleBorder
+		+m-titleBorder({ title:"人気記事", subtitle:"Ranking" })
+		include ../../_components/_templates/rankingArea
+		include ../../_components/_molecules/breadcrumb
+		+m-breadcrumb([{ url:"", text: "特集" }])

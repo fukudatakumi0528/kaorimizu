@@ -6,76 +6,8 @@ $font-l: 1.6rem;
 $font-xl: 1.8rem;
 $font-xxl: 2rem;
 */
-.p-contact__topper {
+.p-contact__topper .o-topperSection {
   padding: 40px 20px;
-  background-color: #FFD94A;
-  position: relative;
-  z-index: 1;
-}
-
-.p-contact__topper .p-contact__topper__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__title .p-contact__topper__main__title__icon {
-  height: 22px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__title .p-contact__topper__main__title__text {
-  margin-left: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__title .p-contact__topper__main__title__text .p-contact__topper__main__title__text__main {
-  font-size: 22px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__title .p-contact__topper__main__title__text .p-contact__topper__main__title__text__sub {
-  font-size: 1.2rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.p-contact__topper .p-contact__topper__main .p-contact__topper__main__description {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 150%;
-  text-align: center;
 }
 
 .p-contact__main {

@@ -10,13 +10,8 @@ block vars
 
 block contents
 	section.p-article__topper
-		.p-article__topper__main
-			.p-article__topper__main__title
-				img(src="/assets/img/common/icon/feature.png", alt="").p-article__topper__main__title__icon
-				.p-article__topper__main__title__text
-					h1.p-article__topper__main__title__text__main 特集
-					p.p-article__topper__main__title__text__sub Feature
-			.p-article__topper__main__description ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。
+		include ../../_components/_organisms/topperSection
+		+o-topperSection({ src:"/assets/img/common/icon/feature.png", alt:"", title: "特集", subtitle: "Feature", description:"ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。", })
 		.p-article__topper__refine
 			.p-article__topper__refine__inner
 				.p-article__topper__refine__inner__header

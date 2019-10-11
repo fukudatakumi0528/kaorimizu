@@ -10,13 +10,8 @@ block vars
 
 block contents
 	section.p-contact__topper
-		.p-contact__topper__main
-			.p-contact__topper__main__title
-				img(src="/assets/img/common/icon/mail.png", alt="").p-contact__topper__main__title__icon
-				.p-contact__topper__main__title__text
-					h1.p-contact__topper__main__title__text__main お問い合わせ
-					p.p-contact__topper__main__title__text__sub Contact
-			.p-contact__topper__main__description be-topia のコンテンツに参加してみたい方は以下フォームより、お問い合わせください。
+		include ../../_components/_organisms/topperSection
+		+o-topperSection({ src:"/assets/img/common/icon/mail.png", alt:"", title: "お問い合わせ", subtitle: "Contact", description:"be-topia のコンテンツに参加してみたい方は以下フォームより、お問い合わせください。", })
 
 	section.p-contact__main
 		.p-contact__main__input

@@ -1,33 +1,21 @@
 //-
-//- 404ページ
+//- 404
 //-
 extends ../../_include/_layout
 block vars
 	- var pageTitle = "404"
 	- var assetsPath = "../"
 	- var pageKey = "404/index"
-	- var scriptFlag = false
-
-
+	- var scriptFlag = true
 
 block contents
-	//-
-	//- 404
-	//-
-	section.l-404.inner.-m
-		.block
-			.text
-				p
-					| お探しのページは見つかりませんでした。
-					br
-					| 目的のページは削除されたか、
-					br
-					| アドレスが変更されている可能性があります。
+	section.p-404__main
+		img(src="/assets/img/404/404.png", alt="").p-404__main__img
+		p.p-404__main__description 指定されたURLのページは存在しません。<br>人気のキーワードからあなたにぴったりの<br>楽しい記事を探してみてください。
 
-
-		a.m-btn.-gray(href="/") トップに戻る
-
-
-
-
+	section.p-404__footer
+		.p-404__footer__keywords
+			.p-404__footer__keywords__title Keywords
+			include ../../_components/_organisms/classificationList
+			+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])
 
