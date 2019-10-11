@@ -1,0 +1,8 @@
+mixin m-textareaArea(information)
+	.m-textareaArea
+		.m-textareaArea__topper
+			if (information.required === true)
+				p.m-textareaArea__topper__required 必須
+			p.m-textareaArea__topper__title #{information.title}
+		.m-textareaArea__under
+			textarea(placeholder=information.placeholder).m-textareaArea__under__input

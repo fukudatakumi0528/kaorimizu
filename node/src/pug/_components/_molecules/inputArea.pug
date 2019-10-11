@@ -1,0 +1,19 @@
+mixin m-inputArea(information)
+	if (information.validation)
+		.m-inputArea.is-validation
+			.m-inputArea__topper
+				if (information.required === true)
+					p.m-inputArea__topper__required 必須
+				p.m-inputArea__topper__title #{information.title}
+			.m-inputArea__under.is-validation
+				input(placeholder=information.placeholder).m-inputArea__under__input.is-validation
+			.m-inputArea__validation
+				.m-inputArea__validation__text #{information.validation}
+	else
+		.m-inputArea
+			.m-inputArea__topper
+				if (information.required === true)
+					p.m-inputArea__topper__required 必須
+				p.m-inputArea__topper__title #{information.title}
+			.m-inputArea__under
+				input(placeholder=information.placeholder).m-inputArea__under__input

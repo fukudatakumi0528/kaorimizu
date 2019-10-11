@@ -1,0 +1,52 @@
+.m-textareaArea {
+  display: flex;
+  flex-direction: column;
+
+
+  .m-textareaArea__topper {
+    display: flex;
+    align-items: center;
+
+    .m-textareaArea__topper__required {
+      background-color: $bg-4-color;
+      color: $bg-6-color;
+      border-radius: 4px;
+      padding:5px;
+      margin-right:8px;
+      font-size: $font-xxs;
+      font-weight: $font-bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 100%;
+
+    }
+
+    .m-textareaArea__topper__title {
+      font-size: $font-s;
+      font-weight: $font-bold;
+      line-height: 100%;
+    }
+  }
+
+  .m-textareaArea__under {
+    margin-top:8px;
+    width: 100%;
+    padding-left:10px;
+
+    .m-textareaArea__under__input {
+      min-height: 190px;
+      width: 100%;
+      border-radius: 4px;
+      background-color:$bg-3-color;
+      outline: none;
+      padding:10px 15px;
+      font-weight:$font-bold;
+      line-height: 150%;
+
+      &::placeholder {
+        color: $font-5-color;
+      }
+    }
+  }
+}

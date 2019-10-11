@@ -1,0 +1,138 @@
+//-
+//- お問い合わせ
+//-
+extends ../../_include/_layout
+block vars
+	- var pageTitle = "お問い合わせ"
+	- var assetsPath = "../"
+	- var pageKey = "contact/index"
+	- var scriptFlag = true
+
+block contents
+	section.p-contact__topper
+		.p-contact__topper__main
+			.p-contact__topper__main__title
+				img(src="/assets/img/common/icon/mail.png", alt="").p-contact__topper__main__title__icon
+				.p-contact__topper__main__title__text
+					h1.p-contact__topper__main__title__text__main お問い合わせ
+					p.p-contact__topper__main__title__text__sub Contact
+			.p-contact__topper__main__description be-topia のコンテンツに参加してみたい方は以下フォームより、お問い合わせください。
+
+	section.p-contact__main
+		.p-contact__main__input
+			include ../../_components/_molecules/inputArea
+			include ../../_components/_molecules/selectboxArea
+			include ../../_components/_molecules/textareaArea
+			+m-selectboxArea({required: true, title:"お問い合わせ項目", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"取材を受けたい" }, { value:2, text:"記事を書きたい" }, { value:3, text:"撮影したい" }, { value:4, text:"広告を掲載したい" }, { value:5, text:"その他" },
+				] 
+			})
+			+m-inputArea({required: true, title:"氏名", placeholder:"山田太郎" })
+			+m-inputArea({ required: true, title:"ふりがな", placeholder:"やまだたろう" })
+
+			.p-contact__main__input__radiobutton
+				.p-contact__main__input__radiobutton__topper
+					p.p-contact__main__input__radiobutton__topper__required 必須
+					p.p-contact__main__input__radiobutton__topper__title 希望連絡方法
+				.p-contact__main__input__radiobutton__under
+					input(type="radio" name="contact" value="email" id="contactChoice1" checked).p-contact__main__input__radiobutton__under__radio
+					.p-contact__main__input__radiobutton__under__label.js-contactChoiceEmailButton
+						label(for="contactChoice1")
+							span.icon-radio-button
+								span.path1
+								span.path2
+							p.p-contact__main__input__radiobutton__under__label__text メール
+					input(type="radio" name="contact" value="tel" id="contactChoice2").p-contact__main__input__radiobutton__under__radio
+					.p-contact__main__input__radiobutton__under__label.js-contactChoiceTelButton
+						label(for="contactChoice2")
+							span.icon-radio-button
+								span.path1
+								span.path2
+							p.p-contact__main__input__radiobutton__under__label__text 電話
+
+			.p-contact__main__input__email.is-active
+				+m-inputArea({ required: true, title:"メールアドレス", placeholder:"be_topia.com" })
+				+m-inputArea({ required: true, title:"メールアドレス（確認）", placeholder:"be_topia.com" })
+
+			.p-contact__main__input__tel
+				+m-inputArea({ required: true, title:"電話番号", placeholder:"080-△△△△-××××" })
+
+			+m-selectboxArea({ required: true, title:"お住まいの都道府県", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"北海道" }, { value:2, text:"青森県" },
+				] 
+			})
+			+m-selectboxArea({ required: false, title:"年齢", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"1" }, { value:2, text:"2" },
+				] 
+			})
+			+m-selectboxArea({ required: false, title:"性別", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"男性" }, { value:2, text:"女性" }, { value:3, text:"回答なし" },
+				] 
+			})
+			+m-inputArea({ required: false, title:"ブログURL", placeholder:"URLをご入力ください" })
+			+m-inputArea({ required: false, title:"Twitter アカウントURL", placeholder:"URLをご入力ください" })
+			+m-inputArea({ required: false, title:"note アカウントURL", placeholder:"URLをご入力ください" })
+			+m-inputArea({ required: false, title:"Facebook アカウントURL", placeholder:"URLをご入力ください" })
+			+m-inputArea({ required: false, title:"所属団体名", placeholder:"所属団体名があればご入力ください" })
+			+m-textareaArea({ required: false, title:"お問い合わせ内容詳細", placeholder:"500文字以内でご記入ください" })
+
+			.p-contact__main__checkbox
+				.p-contact__main__checkbox__topper
+					p.p-contact__main__checkbox__topper__required 必須
+					input(type="checkbox" id="confirm")
+					label(for="confirm").p-contact__main__checkbox__topper__icon
+						span.icon-check
+							span.path1
+							span.path2
+							span.path3
+					p.p-contact__main__checkbox__topper__title <a href="">プライバシーポリシー・利用規約</a>に同意する
+			include ../../_components/_molecules/wideButton
+			+m-wideButton({ type:"button", text:"確認する" })
+
+
+
+
+		//validationエラー時の画面
+		.p-contact__main__input
+			include ../../_components/_molecules/inputArea
+			include ../../_components/_molecules/selectboxArea
+			include ../../_components/_molecules/textareaArea
+			+m-selectboxArea({ validation:"選択してください", required: true, title:"お問い合わせ項目", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"取材を受けたい" }, { value:2, text:"記事を書きたい" }, { value:3, text:"撮影したい" }, { value:4, text:"広告を掲載したい" }, { value:5, text:"その他" },
+				] 
+			})
+			+m-inputArea({ validation:"正しく入力してください",required: true, title:"氏名", placeholder:"山田太郎" })
+			+m-inputArea({ validation:"正しく入力してください",required: true, title:"ふりがな", placeholder:"やまだたろう" })
+
+			.p-contact__main__input__email.is-active
+				+m-inputArea({ validation:"正しい形式で入力してください",required: true, title:"メールアドレス", placeholder:"be_topia.com" })
+				+m-inputArea({ validation:"上と同じアドレスを入力してください",required: true, title:"メールアドレス（確認）", placeholder:"be_topia.com" })
+
+			.p-contact__main__input__tel.is-active
+				+m-inputArea({ validation:"正しく入力してください",required: true, title:"電話番号", placeholder:"080-△△△△-××××" })
+
+			+m-selectboxArea({ validation:"選択してください",required: true, title:"お住まいの都道府県", options:[
+				{ placeholder: true, text:"選択してください" }, { value:1, text:"北海道" }, { value:2, text:"青森県" },
+				] 
+			})
+
+			.p-contact__main__checkbox
+				.p-contact__main__checkbox__topper
+					p.p-contact__main__checkbox__topper__required 必須
+					input(type="checkbox" id="confirm")
+					label(for="confirm").p-contact__main__checkbox__topper__icon
+						span.icon-check
+							span.path1
+							span.path2
+							span.path3
+					p.p-contact__main__checkbox__topper__title <a href="">プライバシーポリシー・利用規約</a>に同意する
+				.p-contact__main__checkbox__validation
+					.p-contact__main__checkbox__validation__text プライバシーポリシー・利用規約に同意の上、<br>チェックボックスにチェックを入れてください
+
+			include ../../_components/_molecules/wideButton
+			+m-wideButton({ type:"button", text:"確認する" })
+
+
+	section.p-contact__footer
+		include ../../_components/_molecules/breadcrumb
+		+m-breadcrumb([{ url:"", text: "特集" }])

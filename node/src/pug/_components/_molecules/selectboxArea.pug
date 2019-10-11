@@ -1,0 +1,33 @@
+mixin m-selectboxArea(information)
+	if (information.validation)
+		.m-selectboxArea
+			.m-selectboxArea__topper
+				if (information.required === true)
+					p.m-selectboxArea__topper__required 必須
+				p.m-selectboxArea__topper__title #{information.title}
+			.m-selectboxArea__under
+				select(name="").m-selectboxArea__under__input.js-selectbox.is-validation
+					each option in information.options
+						if (option.placeholder === true)
+							option(value=option.value disabled selected) #{option.text}
+						else
+							option(value=option.value) #{option.text}
+				.m-selectboxArea__under__icon.is-validation
+					span.icon-head
+			.m-selectboxArea__validation
+				.m-selectboxArea__validation__text #{information.validation}
+	else
+		.m-selectboxArea
+			.m-selectboxArea__topper
+				if (information.required === true)
+					p.m-selectboxArea__topper__required 必須
+				p.m-selectboxArea__topper__title #{information.title}
+			.m-selectboxArea__under
+				select(name="").m-selectboxArea__under__input.js-selectbox
+					each option in information.options
+						if (option.placeholder === true)
+							option(value=option.value disabled selected) #{option.text}
+						else
+							option(value=option.value) #{option.text}
+				.m-selectboxArea__under__icon
+					span.icon-head

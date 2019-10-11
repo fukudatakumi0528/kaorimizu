@@ -1,0 +1,280 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-contact__topper {
+  padding:40px 20px;
+  background-color: $bg-1-color;
+  position: relative;
+  z-index: 1;
+
+  .p-contact__topper__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .p-contact__topper__main__title {
+      display: flex;
+      align-items: flex-start;
+
+      .p-contact__topper__main__title__icon {
+        height: 22px;
+        object-fit: cover;
+
+      }
+
+      .p-contact__topper__main__title__text {
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .p-contact__topper__main__title__text__main {
+          font-size: 22px;
+          font-weight: $font-bold;
+          white-space: nowrap;
+        }
+
+        .p-contact__topper__main__title__text__sub {
+          font-size:$font-xs;
+          font-weight: $font-bold;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .p-contact__topper__main__description {
+      margin-top:10px;
+      font-size:$font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+}
+
+.p-contact__main {
+  margin-top:60px;
+  padding:0 15px;
+
+  .p-contact__main__input {
+
+    .m-inputArea {
+      margin-top:30px;
+    }
+
+    .m-selectboxArea {
+      margin-top:30px;
+    }
+
+    .m-textareaArea {
+      margin-top:30px;
+    }
+
+    .p-contact__main__input__radiobutton {
+      margin-top:30px;
+      display: flex;
+      flex-direction: column;
+    
+    
+      .p-contact__main__input__radiobutton__topper {
+        display: flex;
+        align-items: center;
+    
+        .p-contact__main__input__radiobutton__topper__required {
+          background-color: $bg-4-color;
+          color: $bg-6-color;
+          border-radius: 4px;
+          padding:5px;
+          margin-right:8px;
+          font-size: $font-xxs;
+          font-weight: $font-bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 100%;
+          white-space: nowrap;
+        }
+    
+        .p-contact__main__input__radiobutton__topper__title {
+          font-size: $font-s;
+          font-weight: $font-bold;
+          line-height: 100%;
+        }
+      }
+    
+      .p-contact__main__input__radiobutton__under {
+        margin-top:8px;
+        width: 100%;
+        padding-left:10px;
+        position: relative;
+        display: flex;
+        
+        input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label {
+          
+          label {
+
+            .icon-radio-button {
+
+              .path2:before {
+                  color:$bg-1-color;
+              }
+            }
+          }
+        }
+
+        .p-contact__main__input__radiobutton__under__label {
+          margin-left: 35px;
+
+          &:nth-of-type(1) {
+            margin-left:0;
+          }
+          
+          label {
+            display: flex;
+            align-items: center;  
+
+            .icon-radio-button {
+              font-size:24px;
+
+              .path2:before {
+                color:transparent;
+              }
+            }
+
+            .p-contact__main__input__radiobutton__under__label__text {
+              margin-left:5px;
+              font-size: $font-s;
+              font-weight: $font-bold;
+              line-height: 100%;      
+            }  
+          }
+        }
+      }
+    }
+
+    .p-contact__main__input__email {
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+    }
+
+    .p-contact__main__input__tel {
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+    }
+  }
+
+  .p-contact__main__checkbox {
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+  
+  
+    .p-contact__main__checkbox__topper {
+      display: flex;
+      align-items: flex-start;
+  
+      .p-contact__main__checkbox__topper__required {
+        background-color: $bg-4-color;
+        color: $bg-6-color;
+        border-radius: 4px;
+        padding:5px;
+        margin-right:8px;
+        font-size: $font-xxs;
+        font-weight: $font-bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 100%;
+        white-space: nowrap;
+      }
+
+      input[type=checkbox]:checked + .p-contact__main__checkbox__topper__icon {
+
+        .icon-check {
+
+          .path2 {
+
+            &::before {
+              color:rgb(238, 238, 238);
+              transition: 0.2s;
+            }
+          }
+          
+          .path3{
+
+            &::before {
+              color:rgb(223, 43, 40);
+              transition: 0.2s;
+            }
+          }
+        }  
+      }
+
+      .icon-check {
+        margin-left: 5px;
+        font-size: 21px;
+
+        .path2,.path3{
+
+          &::before {
+            color:transparent;
+          }
+        }
+      }
+  
+      .p-contact__main__checkbox__topper__title {
+        margin-left: 5px;
+        font-size: $font-s;
+        font-weight: $font-bold;
+        line-height: 180%;
+        a {
+          color:$font-2-color;
+          border-bottom: solid 1px $font-2-color;
+          margin-right:5px;
+        }
+      }
+    }
+
+    .p-contact__main__checkbox__validation {
+      margin-top:3px;
+      width: 100%;
+      padding-left:10px;
+  
+      .p-contact__main__checkbox__validation__text {
+        padding:5px 10px;
+        border-radius: 1px;
+        background-color: $bg-14-color;
+        color:$bg-4-color;
+        font-size: $font-xs;
+        font-weight: $font-bold;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .m-wideButton {
+    margin-top:30px;
+  }
+}
+
+
+.p-contact__footer {
+  margin-top:0px;
+  width: 100%;
+  overflow:hidden;
+
+  .m-breadcrumb {
+    margin-top:50px;
+    padding:15px;
+    background-color: $bg-3-color;
+  }
+}

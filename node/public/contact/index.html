@@ -30,7 +30,7 @@
     <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/article/search.css">
+    <link rel="stylesheet" href="../assets/css/contact/index.css">
     <!--link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -463,439 +463,326 @@
         </div>
       </header>
       <main>
-        <section class="p-articleSearch__topper">
-          <div class="m-inputSearch">
-            <input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
-            <div class="icon-search"></div>
+        <section class="p-contact__topper">
+          <div class="p-contact__topper__main">
+            <div class="p-contact__topper__main__title"><img class="p-contact__topper__main__title__icon" src="/assets/img/common/icon/mail.png" alt="">
+              <div class="p-contact__topper__main__title__text">
+                <h1 class="p-contact__topper__main__title__text__main">お問い合わせ</h1>
+                <p class="p-contact__topper__main__title__text__sub">Contact</p>
+              </div>
+            </div>
+            <div class="p-contact__topper__main__description">be-topia のコンテンツに参加してみたい方は以下フォームより、お問い合わせください。</div>
           </div>
         </section>
-        <section class="p-articleSearch__main">
-          <div class="p-articleSearch__main__result">
-            <div class="p-articleSearch__main__result__category">
-              <p class="p-articleSearch__main__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
+        <section class="p-contact__main">
+          <div class="p-contact__main__input">
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__required">必須</p>
+                            <p class="m-selectboxArea__topper__title">お問い合わせ項目</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">取材を受けたい</option>
+                              <option value="2">記事を書きたい</option>
+                              <option value="3">撮影したい</option>
+                              <option value="4">広告を掲載したい</option>
+                              <option value="5">その他</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon"><span class="icon-head"></span></div>
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__required">必須</p>
+                            <p class="m-inputArea__topper__title">氏名</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="山田太郎">
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__required">必須</p>
+                            <p class="m-inputArea__topper__title">ふりがな</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="やまだたろう">
+                          </div>
+                        </div>
+            <div class="p-contact__main__input__radiobutton">
+              <div class="p-contact__main__input__radiobutton__topper">
+                <p class="p-contact__main__input__radiobutton__topper__required">必須</p>
+                <p class="p-contact__main__input__radiobutton__topper__title">希望連絡方法</p>
+              </div>
+              <div class="p-contact__main__input__radiobutton__under">
+                <input class="p-contact__main__input__radiobutton__under__radio" type="radio" name="contact" value="email" id="contactChoice1" checked>
+                <div class="p-contact__main__input__radiobutton__under__label js-contactChoiceEmailButton">
+                  <label for="contactChoice1"><span class="icon-radio-button"><span class="path1"></span><span class="path2"></span></span>
+                    <p class="p-contact__main__input__radiobutton__under__label__text">メール</p>
+                  </label>
+                </div>
+                <input class="p-contact__main__input__radiobutton__under__radio" type="radio" name="contact" value="tel" id="contactChoice2">
+                <div class="p-contact__main__input__radiobutton__under__label js-contactChoiceTelButton">
+                  <label for="contactChoice2"><span class="icon-radio-button"><span class="path1"></span><span class="path2"></span></span>
+                    <p class="p-contact__main__input__radiobutton__under__label__text">電話</p>
+                  </label>
+                </div>
+              </div>
             </div>
-            <div class="p-articleSearch__main__result__number">
-              <p class="p-articleSearch__main__result__number__text">40件中 1-18件を表示</p>
+            <div class="p-contact__main__input__email is-active">
+                          <div class="m-inputArea">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">メールアドレス</p>
+                            </div>
+                            <div class="m-inputArea__under">
+                              <input class="m-inputArea__under__input" placeholder="be_topia.com">
+                            </div>
+                          </div>
+                          <div class="m-inputArea">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">メールアドレス（確認）</p>
+                            </div>
+                            <div class="m-inputArea__under">
+                              <input class="m-inputArea__under__input" placeholder="be_topia.com">
+                            </div>
+                          </div>
             </div>
+            <div class="p-contact__main__input__tel">
+                          <div class="m-inputArea">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">電話番号</p>
+                            </div>
+                            <div class="m-inputArea__under">
+                              <input class="m-inputArea__under__input" placeholder="080-△△△△-××××">
+                            </div>
+                          </div>
+            </div>
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__required">必須</p>
+                            <p class="m-selectboxArea__topper__title">お住まいの都道府県</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">北海道</option>
+                              <option value="2">青森県</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon"><span class="icon-head"></span></div>
+                          </div>
+                        </div>
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__title">年齢</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon"><span class="icon-head"></span></div>
+                          </div>
+                        </div>
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__title">性別</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">男性</option>
+                              <option value="2">女性</option>
+                              <option value="3">回答なし</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon"><span class="icon-head"></span></div>
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__title">ブログURL</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="URLをご入力ください">
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__title">Twitter アカウントURL</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="URLをご入力ください">
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__title">note アカウントURL</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="URLをご入力ください">
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__title">Facebook アカウントURL</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="URLをご入力ください">
+                          </div>
+                        </div>
+                        <div class="m-inputArea">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__title">所属団体名</p>
+                          </div>
+                          <div class="m-inputArea__under">
+                            <input class="m-inputArea__under__input" placeholder="所属団体名があればご入力ください">
+                          </div>
+                        </div>
+                        <div class="m-textareaArea">
+                          <div class="m-textareaArea__topper">
+                            <p class="m-textareaArea__topper__title">お問い合わせ内容詳細</p>
+                          </div>
+                          <div class="m-textareaArea__under">
+                            <textarea class="m-textareaArea__under__input" placeholder="500文字以内でご記入ください"></textarea>
+                          </div>
+                        </div>
+            <div class="p-contact__main__checkbox">
+              <div class="p-contact__main__checkbox__topper">
+                <p class="p-contact__main__checkbox__topper__required">必須</p>
+                <input type="checkbox" id="confirm">
+                <label class="p-contact__main__checkbox__topper__icon" for="confirm"><span class="icon-check"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></label>
+                <p class="p-contact__main__checkbox__topper__title"><a href="">プライバシーポリシー・利用規約</a>に同意する</p>
+              </div>
+            </div>
+                        <button class="m-wideButton"><span class="icon-btn"></span>
+                          <p class="m-wideButton__text">確認する</p>
+                        </button>
           </div>
-                    <ul class="o-verticallyCardList">
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="m-verticallyCard">
-                                    <div class="m-verticallyCard__inner">
-                                      <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-                                      <div class="m-verticallyCard__inner__footer">
-                                        <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                          </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                    </ul>
-          <div class="p-articleSearch__main__pagenation">
-            <div class="m-pagenation">
-              <div class="m-pagenation__arrow"><span class="icon-arrow2 arrow-prev"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><span class="icon-arrow2 arrow-next"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-              <ul class="m-pagenation__list">
-                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">1</a></li>
-                <li class="m-pagenation__list__link is-active"><a class="m-pagenation__list__link__text">2</a></li>
-                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">3</a></li>
-                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">4</a></li>
-                <li class="m-pagenation__list__link"><a class="m-pagenation__list__link__text">5</a></li>
-              </ul>
+          <!--validationエラー時の画面-->
+          <div class="p-contact__main__input">
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__required">必須</p>
+                            <p class="m-selectboxArea__topper__title">お問い合わせ項目</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox is-validation" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">取材を受けたい</option>
+                              <option value="2">記事を書きたい</option>
+                              <option value="3">撮影したい</option>
+                              <option value="4">広告を掲載したい</option>
+                              <option value="5">その他</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon is-validation"><span class="icon-head"></span></div>
+                          </div>
+                          <div class="m-selectboxArea__validation">
+                            <div class="m-selectboxArea__validation__text">選択してください</div>
+                          </div>
+                        </div>
+                        <div class="m-inputArea is-validation">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__required">必須</p>
+                            <p class="m-inputArea__topper__title">氏名</p>
+                          </div>
+                          <div class="m-inputArea__under is-validation">
+                            <input class="m-inputArea__under__input is-validation" placeholder="山田太郎">
+                          </div>
+                          <div class="m-inputArea__validation">
+                            <div class="m-inputArea__validation__text">正しく入力してください</div>
+                          </div>
+                        </div>
+                        <div class="m-inputArea is-validation">
+                          <div class="m-inputArea__topper">
+                            <p class="m-inputArea__topper__required">必須</p>
+                            <p class="m-inputArea__topper__title">ふりがな</p>
+                          </div>
+                          <div class="m-inputArea__under is-validation">
+                            <input class="m-inputArea__under__input is-validation" placeholder="やまだたろう">
+                          </div>
+                          <div class="m-inputArea__validation">
+                            <div class="m-inputArea__validation__text">正しく入力してください</div>
+                          </div>
+                        </div>
+            <div class="p-contact__main__input__email is-active">
+                          <div class="m-inputArea is-validation">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">メールアドレス</p>
+                            </div>
+                            <div class="m-inputArea__under is-validation">
+                              <input class="m-inputArea__under__input is-validation" placeholder="be_topia.com">
+                            </div>
+                            <div class="m-inputArea__validation">
+                              <div class="m-inputArea__validation__text">正しい形式で入力してください</div>
+                            </div>
+                          </div>
+                          <div class="m-inputArea is-validation">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">メールアドレス（確認）</p>
+                            </div>
+                            <div class="m-inputArea__under is-validation">
+                              <input class="m-inputArea__under__input is-validation" placeholder="be_topia.com">
+                            </div>
+                            <div class="m-inputArea__validation">
+                              <div class="m-inputArea__validation__text">上と同じアドレスを入力してください</div>
+                            </div>
+                          </div>
             </div>
+            <div class="p-contact__main__input__tel is-active">
+                          <div class="m-inputArea is-validation">
+                            <div class="m-inputArea__topper">
+                              <p class="m-inputArea__topper__required">必須</p>
+                              <p class="m-inputArea__topper__title">電話番号</p>
+                            </div>
+                            <div class="m-inputArea__under is-validation">
+                              <input class="m-inputArea__under__input is-validation" placeholder="080-△△△△-××××">
+                            </div>
+                            <div class="m-inputArea__validation">
+                              <div class="m-inputArea__validation__text">正しく入力してください</div>
+                            </div>
+                          </div>
+            </div>
+                        <div class="m-selectboxArea">
+                          <div class="m-selectboxArea__topper">
+                            <p class="m-selectboxArea__topper__required">必須</p>
+                            <p class="m-selectboxArea__topper__title">お住まいの都道府県</p>
+                          </div>
+                          <div class="m-selectboxArea__under">
+                            <select class="m-selectboxArea__under__input js-selectbox is-validation" name="">
+                              <option disabled selected>選択してください</option>
+                              <option value="1">北海道</option>
+                              <option value="2">青森県</option>
+                            </select>
+                            <div class="m-selectboxArea__under__icon is-validation"><span class="icon-head"></span></div>
+                          </div>
+                          <div class="m-selectboxArea__validation">
+                            <div class="m-selectboxArea__validation__text">選択してください</div>
+                          </div>
+                        </div>
+            <div class="p-contact__main__checkbox">
+              <div class="p-contact__main__checkbox__topper">
+                <p class="p-contact__main__checkbox__topper__required">必須</p>
+                <input type="checkbox" id="confirm">
+                <label class="p-contact__main__checkbox__topper__icon" for="confirm"><span class="icon-check"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></label>
+                <p class="p-contact__main__checkbox__topper__title"><a href="">プライバシーポリシー・利用規約</a>に同意する</p>
+              </div>
+              <div class="p-contact__main__checkbox__validation">
+                <div class="p-contact__main__checkbox__validation__text">プライバシーポリシー・利用規約に同意の上、<br>チェックボックスにチェックを入れてください</div>
+              </div>
+            </div>
+                        <button class="m-wideButton"><span class="icon-btn"></span>
+                          <p class="m-wideButton__text">確認する</p>
+                        </button>
           </div>
         </section>
-        <section class="p-articleSearch__footer">
-                    <div class="m-titleBorder">
-                      <div class="m-titleBorder__main">
-                        <div class="m-titleBorder__main__text">人気記事<small>Ranking</small></div>
-                        <div class="m-titleBorder__main__border"></div>
-                      </div>
-                    </div>
-          <ul class="t-rankingArea__tab">
-            <li class="t-rankingArea__tab__list tab-month is-active">
-              <p class="t-rankingArea__tab__list__text">月間</p>
-            </li>
-            <li class="t-rankingArea__tab__list tab-weekly">
-              <p class="t-rankingArea__tab__list__text">週間</p>
-            </li>
-            <li class="t-rankingArea__tab__list tab-all">
-              <p class="t-rankingArea__tab__list__text">すべて</p>
-            </li>
-          </ul>
-          <div class="t-rankingArea__slider">
-            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__month is-active">
-              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-            </div>
-            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__weekly">
-              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-            </div>
-            <div class="t-rankingArea__slider__arrow js__arrow-top__ranking__all">
-              <div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-              <div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-            </div>
-            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__month is-active">
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-1 path2"></span><span class="path3"></span></span>
-                                  <div class="m-squareCard__inner__ranking__rank">
-                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>1</strong></p>
-                                  </div>
-                                </div>
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-2 path2"></span><span class="path3"></span></span>
-                                  <div class="m-squareCard__inner__ranking__rank">
-                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>2</strong></p>
-                                  </div>
-                                </div>
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__ranking"><span class="icon-label m-squareCard__inner__ranking__icon"><span class="path1"></span><span class="rank-3 path2"></span><span class="path3"></span></span>
-                                  <div class="m-squareCard__inner__ranking__rank">
-                                    <p class="m-squareCard__inner__ranking__rank__text"><small>No.</small><strong>3</strong></p>
-                                  </div>
-                                </div>
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-            </ul>
-            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-            </ul>
-            <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image5.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image1.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image2.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image3.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="m-squareCard">
-                              <div class="m-squareCard__inner">
-                                <div class="m-squareCard__inner__topper"><img class="m-squareCard__inner__topper__image" src="/assets/img/dammy/dammy-image4.jpg" alt=""></div>
-                                <div class="m-squareCard__inner__footer">
-                                  <div class="m-squareCard__inner__footer__sign">
-                                    <div class="m-squareCard__inner__footer__sign__text">特集</div>
-                                  </div><a class="m-squareCard__inner__footer__title" href="">
-                                    <p class="m-squareCard__inner__footer__title__text">【月間】鳩レースってどんなスポーツ？【マイナースポーツ特集Vol.9】鳩レースってどんなスポーツ？</p></a>
-                                  <div class="m-squareCard__inner__footer__description">
-                                    <div class="m-squareCard__inner__footer__description__text">実は毎年開催されるごとに参加人数を増やしている鳩レース。実は毎年開催されるごとに参加人数を増やしている鳩レース。</div>
-                                  </div>
-                                  <div class="m-squareCard__inner__footer__classification">
-                                                          <div class="m-classificationArea"><a class="m-classificationArea__tag">マイナースポーツ</a><a class="m-classificationArea__tag">変わった趣味</a><a class="m-classificationArea__tag">20代から始める</a>
-                                                          </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-            </ul>
-          </div>
+        <section class="p-contact__footer">
                     <div class="m-breadcrumb">
                       <ul class="m-breadcrumb__list">
                         <li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">TOP</a><span class="icon-head"></span></li>
@@ -1032,7 +919,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
     <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/article/search.js"></script>
+    <script src="/assets/js/contact/index.js"></script>
     <div id="fb-root">
       <script async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&amp;version=v3.2"></script>
     </div>

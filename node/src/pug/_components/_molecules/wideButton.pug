@@ -1,0 +1,9 @@
+mixin m-wideButton(information)
+  if (information.type === "link")
+    a(href=information.url).m-wideButton
+      span.icon-btn
+      p.m-wideButton__text #{information.text}
+  else if (information.type === "button")
+    button.m-wideButton
+      span.icon-btn
+      p.m-wideButton__text #{information.text}

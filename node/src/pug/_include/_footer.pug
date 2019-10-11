@@ -42,9 +42,8 @@ footer.l-footer
 								span.path3
 						p.l-footer__support__inner__center__checkbox__inner__right マイナーな趣味/スポーツを<br>やっている人
 			.l-footer__support__inner__footer be-topia のコンテンツに<br class="no-pc">参加してみたい方は以下フォームより、<br class="no-pc">お問い合わせください。
-			a(href="").l-footer__support__inner__button
-				span.icon-btn
-				p.l-footer__support__inner__button__text お問い合わせ
+			include ../_components/_molecules/wideButton
+			+m-wideButton({ type:"link",link: "", text:"お問い合わせ" })
 
 	.l-footer__about
 		.l-footer__about__inner

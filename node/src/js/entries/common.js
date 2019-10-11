@@ -5,6 +5,7 @@ import Hugelink from '../utils/Hugelink';
 import FixedButton from '../utils/fixedButton';
 import SliderTab from '../utils/sliderTab';
 import Refine from '../utils/refine';
+import Contact from '../utils/contact';
 
 // ヘッダーメニュー
 const header = new Header();
@@ -37,3 +38,8 @@ sliderTab.clickTab();
 //追従ボタン
 const refine = new Refine();
 refine.clickRefineAccordion();
+
+//お問合せページ
+const contact = new Contact();
+contact.selectBoxChange();
+contact.selectContactChoice();
