@@ -1,0 +1,74 @@
+// #1 トップページ
+// -----------------------------------
+@import "../..//_utils/_variables";
+@import "../../_utils/_mixins";
+
+.p-contactThanks__main {
+  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0 15px;
+
+  .p-contactThanks__main__topper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon-check2 {
+      font-size: 30px;
+    }
+
+    .p-contactThanks__main__topper__title {
+      text-align: center;
+      font-size: $font-xl;
+      font-weight: $font-bold;
+      line-height: 150%;
+      background: linear-gradient(transparent 60%, $bg-1-color 40%);
+    }
+
+    .p-contactThanks__main__topper__subtitle {
+      margin-top:5px;
+      text-align: center;
+      font-size: $font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+    }
+
+    .p-contactThanks__main__topper__description  {
+      margin-top:30px;
+      text-align: center;
+      font-size: $font-s;
+      font-weight: $font-bold;
+      line-height: 150%;
+    }
+  }
+
+  .p-contactThanks__main__link {
+    margin-top:15px;
+    display: flex;
+    align-items: center;
+
+    .icon-btn {
+      font-size: 27px;
+    }
+
+    .p-contactThanks__main__link__text {
+      margin-left:5px;
+      font-size: $font-s;
+      font-weight: $font-bold;  
+    }
+  }
+}
+
+.p-contactThanks__footer {
+  margin-top:0px;
+  width: 100%;
+  overflow:hidden;
+
+  .m-breadcrumb {
+    margin-top:50px;
+    padding:15px;
+    background-color: $bg-3-color;
+  }
+}
