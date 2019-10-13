@@ -5,38 +5,68 @@
 
 .p-contact__topper {
 
+  @include screen-large{
+    margin-top:70px;
+  }
+
   .o-topperSection {
     padding:40px 20px;
   }
 }
 
 .p-contact__main {
-  margin-top:60px;
   padding:0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  margin-top:60px;
 
   .p-contact__main__input {
 
     .m-inputArea {
       margin-top:30px;
+
+      @include screen-large {
+        margin-top: 60px;
+      }
     }
 
     .m-selectboxArea {
       margin-top:30px;
+
+      @include screen-large {
+        margin-top: 60px;
+      }
     }
 
     .m-textareaArea {
       margin-top:30px;
+
+      @include screen-large {
+        margin-top: 60px;
+      }
     }
 
     .p-contact__main__input__radiobutton {
       margin-top:30px;
       display: flex;
       flex-direction: column;
-    
+
+      @include screen-large {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 60px;
+      }    
     
       .p-contact__main__input__radiobutton__topper {
         display: flex;
         align-items: center;
+
+        @include screen-large {
+          width: 30%;
+          min-width: 300px;
+          align-items: flex-start;
+        }    
     
         .p-contact__main__input__radiobutton__topper__required {
           background-color: $bg-4-color;
@@ -66,6 +96,10 @@
         padding-left:10px;
         position: relative;
         display: flex;
+
+        @include screen-large {
+          margin:0;
+        }    
         
         input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label {
           
@@ -132,6 +166,9 @@
     display: flex;
     flex-direction: column;
   
+    @include screen-large {
+      margin-top:120px;
+    }
   
     .p-contact__main__checkbox__topper {
       display: flex;
@@ -203,6 +240,10 @@
       margin-top:3px;
       width: 100%;
       padding-left:10px;
+
+      @include screen-large {
+        padding:0;
+      }
   
       .p-contact__main__checkbox__validation__text {
         padding:5px 10px;
@@ -212,6 +253,12 @@
         font-size: $font-xs;
         font-weight: $font-bold;
         line-height: 150%;
+
+        br {
+          @include screen-large {
+            display: none;
+          }
+        }
       }
     }
   }

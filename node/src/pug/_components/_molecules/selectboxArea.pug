@@ -14,8 +14,8 @@ mixin m-selectboxArea(information)
 							option(value=option.value) #{option.text}
 				.m-selectboxArea__under__icon.is-validation
 					span.icon-head
-			.m-selectboxArea__validation
-				.m-selectboxArea__validation__text #{information.validation}
+				.m-selectboxArea__under__validation
+					.m-selectboxArea__under__validation__text #{information.validation}
 	else
 		.m-selectboxArea
 			.m-selectboxArea__topper

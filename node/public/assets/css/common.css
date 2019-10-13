@@ -2564,6 +2564,18 @@ main {
   flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .m-inputArea {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
 .m-inputArea .m-inputArea__topper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2571,6 +2583,16 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .m-inputArea .m-inputArea__topper {
+    width: 30%;
+    min-width: 300px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
 }
 
 .m-inputArea .m-inputArea__topper .m-inputArea__topper__required {
@@ -2591,6 +2613,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   line-height: 100%;
+  white-space: nowrap;
 }
 
 .m-inputArea .m-inputArea__topper .m-inputArea__topper__title {
@@ -2603,6 +2626,12 @@ main {
   margin-top: 8px;
   width: 100%;
   padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .m-inputArea .m-inputArea__under {
+    margin: 0;
+  }
 }
 
 .m-inputArea .m-inputArea__under .m-inputArea__under__input {
@@ -2636,13 +2665,19 @@ main {
   color: #DEDEDE;
 }
 
-.m-inputArea .m-inputArea__validation {
+.m-inputArea .m-inputArea__under .m-inputArea__under__validation {
   margin-top: 3px;
   width: 100%;
   padding-left: 10px;
 }
 
-.m-inputArea .m-inputArea__validation .m-inputArea__validation__text {
+@media (min-width: 768px) {
+  .m-inputArea .m-inputArea__under .m-inputArea__under__validation {
+    padding: 0;
+  }
+}
+
+.m-inputArea .m-inputArea__under .m-inputArea__under__validation .m-inputArea__under__validation__text {
   padding: 5px 10px;
   border-radius: 1px;
   background-color: #FFE9E9;
@@ -2891,6 +2926,18 @@ main {
   flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .m-selectboxArea {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
 .m-selectboxArea .m-selectboxArea__topper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2898,6 +2945,16 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .m-selectboxArea .m-selectboxArea__topper {
+    width: 30%;
+    min-width: 300px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
 }
 
 .m-selectboxArea .m-selectboxArea__topper .m-selectboxArea__topper__required {
@@ -2918,6 +2975,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   line-height: 100%;
+  white-space: nowrap;
 }
 
 .m-selectboxArea .m-selectboxArea__topper .m-selectboxArea__topper__title {
@@ -2931,6 +2989,12 @@ main {
   width: 100%;
   padding-left: 10px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .m-selectboxArea .m-selectboxArea__under {
+    margin: 0;
+  }
 }
 
 .m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__input {
@@ -2956,7 +3020,7 @@ main {
 
 .m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__icon {
   position: absolute;
-  height: 100%;
+  height: 46px;
   width: 46px;
   top: 0;
   right: 0;
@@ -2986,13 +3050,19 @@ main {
   border-bottom: solid 2px #DE3B39;
 }
 
-.m-selectboxArea .m-selectboxArea__validation {
+.m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__validation {
   margin-top: 3px;
   width: 100%;
   padding-left: 10px;
 }
 
-.m-selectboxArea .m-selectboxArea__validation .m-selectboxArea__validation__text {
+@media (min-width: 768px) {
+  .m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__validation {
+    padding: 0;
+  }
+}
+
+.m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__validation .m-selectboxArea__under__validation__text {
   padding: 5px 10px;
   border-radius: 1px;
   background-color: #FFE9E9;
@@ -3260,6 +3330,13 @@ main {
   margin-top: 8px;
   width: 100%;
   padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .m-textareaArea .m-textareaArea__under {
+    margin-top: 16px;
+    padding: 0;
+  }
 }
 
 .m-textareaArea .m-textareaArea__under .m-textareaArea__under__input {
