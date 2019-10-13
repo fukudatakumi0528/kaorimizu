@@ -1,10 +1,13 @@
 .m-breadcrumb {
   padding:15px;
   background-color: $bg-3-color;
+  display: flex;
+  justify-content: center;
 
   .m-breadcrumb__list {
     display: flex;
-
+    width: 100%;
+    max-width: 1000px;
 
     .m-breadcrumb__list__link {
       font-size:$font-xs;

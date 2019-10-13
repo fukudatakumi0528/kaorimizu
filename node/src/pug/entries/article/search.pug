@@ -14,25 +14,28 @@ block contents
 
 
 	section.p-articleSearch__main
-		.p-articleSearch__main__result
-			.p-articleSearch__main__result__category
-				p.p-articleSearch__main__result__category__text <strong>#マイナースポーツ</strong>の検索結果
-			.p-articleSearch__main__result__number
-				p.p-articleSearch__main__result__number__text 40件中 1-18件を表示
+		.p-articleSearch__main__column
+			.p-.p-articleSearch__main__column__result
+				.p-.p-articleSearch__main__column__result__category
+					p.p-.p-articleSearch__main__column__result__category__text <strong>#マイナースポーツ</strong>の検索結果
+				.p-.p-articleSearch__main__column__result__number
+					p.p-.p-articleSearch__main__column__result__number__text 40件中 1-18件を表示
 
-		include ../../_components/_organisms/verticallyCardList
-		+o-verticallyCardList([
-			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
-			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
-			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-		])
-		.p-articleSearch__main__pagenation
-			include ../../_components/_molecules/pagenation
+			include ../../_components/_organisms/verticallyCardList
+			+o-verticallyCardList([
+				{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+				{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+				{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+			])
+			.p-articleSearch__main__column__pagenation
+				include ../../_components/_molecules/pagenation
+		.p-articleSearch__main__sidebar
+			include ../../_components/_templates/sideBarPc
 
 	section.p-articleSearch__footer
 		include ../../_components/_molecules/titleBorder

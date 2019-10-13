@@ -12,37 +12,42 @@ block contents
 	section.p-article__topper
 		include ../../_components/_organisms/topperSection
 		+o-topperSection({ src:"/assets/img/common/icon/feature.png", alt:"", title: "特集", subtitle: "Feature", description:"ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。", })
-		.p-article__topper__refine
-			.p-article__topper__refine__inner
-				.p-article__topper__refine__inner__header
-					.p-article__topper__refine__inner__header__title 人気のワードから絞り込む
-					.p-article__topper__refine__inner__header__icon.js-refine__icon
-						span.p-article__topper__refine__inner__header__icon__line
-						span.p-article__topper__refine__inner__header__icon__line
-				.p-article__topper__refine__inner__selectArea.js-refine__selectArea
-					include ../../_components/_organisms/classificationList
-					+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])
 
 	section.p-article__main
-		.p-article__main__result
-			.p-article__main__result__category
-				p.p-article__main__result__category__text <strong>#マイナースポーツ</strong>の検索結果
-			.p-article__main__result__number
-				p.p-article__main__result__number__text 40件中 1-18件を表示
+		.p-article__main__content
+			.p-article__main__content__refine
+				.p-article__main__content__refine__inner
+					.p-article__main__content__refine__inner__header
+						.p-article__main__content__refine__inner__header__title 人気のワードから絞り込む
+						.p-article__main__content__refine__inner__header__icon.js-refine__icon
+							span.p-article__main__content__refine__inner__header__icon__line
+							span.p-article__main__content__refine__inner__header__icon__line
+					.p-article__main__content__refine__inner__selectArea.js-refine__selectArea
+						include ../../_components/_organisms/classificationList
+						+o-classificationList(["マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ", "マイナースポーツ", "変わった趣味", "IKEA", "レアな仕事", "ツウな人の遊び方", "ディープな旅", "マイルの貯め方", "キャンプ",])
+			.p-article__main__content__column
+				.p-article__main__content__column__result
+					.p-article__main__content__column__result__category
+						p.p-article__main__content__column__result__category__text <strong>#マイナースポーツ</strong>の検索結果
+					.p-article__main__content__column__result__number
+						p.p-article__main__content__column__result__number__text 40件中 1-18件を表示
 
-		include ../../_components/_organisms/verticallyCardList
-		+o-verticallyCardList([
-			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
-			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
-			{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-			{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
-		])
-		.p-article__main__pagenation
-			include ../../_components/_molecules/pagenation
+				include ../../_components/_organisms/verticallyCardList
+				+o-verticallyCardList([
+					{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+					{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+					{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+					{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+					{ url:"/assets/img/dammy/dammy-image4.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:"" }, { title:"日帰り旅行ツウな人の遊び方", link:""}] },
+					{ url:"/assets/img/dammy/dammy-image5.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+					{ url:"/assets/img/dammy/dammy-image1.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+					{ url:"/assets/img/dammy/dammy-image2.jpg", date:"2019.08.14" , title:"ダミー日帰りで行ける海が綺麗なビーチを探せ！", tag:[{ title:"ビーチ", link:"" }, { title:"日帰り旅行", link:"" }, { title:"休日", link:"" }] },
+				])
+				.p-article__main__content__column__pagenation
+					include ../../_components/_molecules/pagenation
+		.p-article__main__sidebar
+			include ../../_components/_templates/sideBarPc
+
 
 	section.p-article__footer
 		include ../../_components/_molecules/titleBorder

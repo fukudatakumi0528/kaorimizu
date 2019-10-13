@@ -2474,12 +2474,20 @@ main {
 .m-breadcrumb {
   padding: 15px;
   background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .m-breadcrumb .m-breadcrumb__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link {
@@ -2846,6 +2854,7 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  max-width: 300px;
 }
 
 .m-pagenation .m-pagenation__list .m-pagenation__list__link {
@@ -4361,4 +4370,146 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.t-sideBarPc .m-titleBorder {
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .t-sideBarPc .m-titleBorder .m-titleBorder__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .t-sideBarPc .m-titleBorder .m-titleBorder__main .m-titleBorder__main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .t-sideBarPc .m-titleBorder .m-titleBorder__main .m-titleBorder__main__border {
+    display: none;
+  }
+}
+
+.t-sideBarPc .t-rankingArea__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  height: 40px;
+  margin: 20px 10px 0 10px;
+  border-bottom: solid 4px #FFD94A;
+}
+
+.t-sideBarPc .t-rankingArea__slider {
+  margin-top: 26px;
+  position: relative;
+}
+
+.t-sideBarPc .t-sideBarPc__keyword {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 24px 24px 40px 24px;
+  background-color: #FFF2C3;
+}
+
+.t-sideBarPc .t-sideBarPc__keyword .t-sideBarPc__keyword__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.t-sideBarPc .t-sideBarPc__keyword .t-sideBarPc__keyword__header .t-sideBarPc__keyword__header__subtitle {
+  font-size: 1.2rem;
+  color: #FFD94A;
+  line-height: 125%;
+}
+
+.t-sideBarPc .t-sideBarPc__keyword .t-sideBarPc__keyword__header .t-sideBarPc__keyword__header__tilte {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 116%;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner {
+  padding: 16px 10px;
+  background-color: #FFD94A;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__image {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link {
+  margin: 24px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: calc(100%);
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link .t-sideBarPc__downlord__inner__main__link__AppStore {
+  width: auto;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link .t-sideBarPc__downlord__inner__main__link__AppStore a {
+  display: block;
+  margin-right: 5px;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link .t-sideBarPc__downlord__inner__main__link__GooglePlay {
+  width: auto;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link .t-sideBarPc__downlord__inner__main__link__GooglePlay a {
+  display: block;
+  margin: 0 -10px 0 -5px;
+}
+
+.t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link .t-sideBarPc__downlord__inner__main__link__GooglePlay a img {
+  max-width: none;
 }

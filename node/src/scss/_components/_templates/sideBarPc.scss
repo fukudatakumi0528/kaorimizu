@@ -1,0 +1,123 @@
+.t-sideBarPc {
+
+  .m-titleBorder {
+    padding:0 15px;
+
+    .m-titleBorder__main {
+
+      @include screen-large {
+        display: flex;
+        justify-content: center;  
+      }
+
+      .m-titleBorder__main__text {
+        
+        @include screen-large {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .m-titleBorder__main__border {
+
+        @include screen-large {
+          display: none;
+        }
+      }  
+    }    
+  }
+
+  .t-rankingArea__tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 40px;
+    margin:20px 10px 0 10px;
+    border-bottom:$border-1;
+  }
+
+  .t-rankingArea__slider {
+    margin-top:26px;
+    position: relative;
+  }
+
+  .t-sideBarPc__keyword {
+    display: block;
+    margin-top:10px;
+    width: 100%;
+    padding:24px 24px 40px 24px;
+    background-color: $bg-2-color;  
+
+    .t-sideBarPc__keyword__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .t-sideBarPc__keyword__header__subtitle {
+        font-size: $font-xs;
+        color:$bg-1-color;
+        line-height: 125%;
+      }
+
+      .t-sideBarPc__keyword__header__tilte {
+        font-size: $font-l;
+        font-weight: $font-bold;
+        color:$bg-base-color;
+        line-height: 116%;
+      }
+    }
+
+    .o-classificationList {
+        
+    }
+  }
+
+  .t-sideBarPc__downlord {
+    display: block;
+    margin-top:20px;
+    width: 100%;  
+
+    .t-sideBarPc__downlord__inner {
+      padding:16px 10px;
+      background-color: $bg-1-color;
+
+      .t-sideBarPc__downlord__inner__image {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .t-sideBarPc__downlord__inner__main {
+
+        .t-sideBarPc__downlord__inner__main__link {
+          margin:24px 0px 0px 0px;
+          display: flex;
+          justify-content: center;
+          width: calc(100%);
+
+          .t-sideBarPc__downlord__inner__main__link__AppStore {
+            width: auto;
+
+            a {
+              display: block;
+              margin-right: 5px;
+            }
+          }
+
+          .t-sideBarPc__downlord__inner__main__link__GooglePlay {
+            width: auto;
+
+            a {
+              display: block;
+              margin:0 -10px 0 -5px;
+              img {
+                max-width: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
