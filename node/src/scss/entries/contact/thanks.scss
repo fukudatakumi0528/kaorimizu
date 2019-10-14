@@ -10,6 +10,10 @@
   align-items: center;
   padding:0 15px;
 
+  @include screen-large {
+    margin-top:120px;
+  }
+
   .p-contactThanks__main__topper {
     display: flex;
     flex-direction: column;
@@ -25,6 +29,22 @@
       font-weight: $font-bold;
       line-height: 150%;
       background: linear-gradient(transparent 60%, $bg-1-color 40%);
+
+      &.is-onlySp {
+        display: block;
+
+        @include screen-large {
+          display: none;
+        }
+      }
+
+      &.is-onlyPc {
+        display: none;
+
+        @include screen-large {
+          display: block;
+        }
+      }
     }
 
     .p-contactThanks__main__topper__subtitle {
@@ -41,6 +61,14 @@
       font-size: $font-s;
       font-weight: $font-bold;
       line-height: 150%;
+
+      br {
+        display: none;
+
+        @include screen-large {
+          display: block;
+        }
+      }
     }
   }
 
@@ -48,6 +76,11 @@
     margin-top:15px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    @include screen-large {
+      margin-top:40px;
+    }
 
     .icon-btn {
       font-size: 27px;

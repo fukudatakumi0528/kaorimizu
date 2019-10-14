@@ -21,6 +21,12 @@ $font-xxl: 2rem;
   padding: 0 15px;
 }
 
+@media (min-width: 768px) {
+  .p-contactThanks__main {
+    margin-top: 120px;
+  }
+}
+
 .p-contactThanks__main .p-contactThanks__main__topper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,6 +53,26 @@ $font-xxl: 2rem;
   background: linear-gradient(transparent 60%, #FFD94A 40%);
 }
 
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp {
+    display: none;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc {
+    display: block;
+  }
+}
+
 .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__subtitle {
   margin-top: 5px;
   text-align: center;
@@ -63,6 +89,16 @@ $font-xxl: 2rem;
   line-height: 150%;
 }
 
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br {
+    display: block;
+  }
+}
+
 .p-contactThanks__main .p-contactThanks__main__link {
   margin-top: 15px;
   display: -webkit-box;
@@ -71,6 +107,13 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__link {
+    margin-top: 40px;
+  }
 }
 
 .p-contactThanks__main .p-contactThanks__main__link .icon-btn {
