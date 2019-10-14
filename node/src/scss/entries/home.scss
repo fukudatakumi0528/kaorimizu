@@ -949,3 +949,10 @@
   }
 }
 
+.l-footer {
+
+  @include screen-large {
+    margin-top:120px;
+  }
+}
+

@@ -952,7 +952,7 @@ main {
 
 @media (min-width: 768px) {
   .l-footer {
-    margin-top: 120px;
+    margin-top: 20px;
   }
 }
 
@@ -1013,7 +1013,7 @@ main {
 
 .l-footer .l-footer__support {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1030px;
   margin: 0 auto;
 }
 

@@ -8,10 +8,18 @@
   flex-direction: column;
   align-items: center;  
   padding:20px 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin:0 auto;
+
+  @include screen-large {
+    margin-top:120px;
+  }
 
   img {
     width: 80%;
     object-fit: cover;
+    max-width: 400px;
   }
   .p-404__main__description {
     margin-top:20px;
@@ -19,16 +27,26 @@
     font-size: $font-xs;
     font-weight: $font-bold;
     line-height: 180%;
+
+    br.is-onlySp {
+      display:none;
+    }
   }
 }
 
 .p-404__footer {
   margin-top:30px;
-  padding:20px 15px;
   background-color: $bg-2-color;
 
-  .p-404__footer__keywords__title {
-    font-size: $font-m;
-    font-weight: $font-bold;
+  .p-404__footer__keywords {
+    padding:20px 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+
+    .p-404__footer__keywords__title {
+      font-size: $font-m;
+      font-weight: $font-bold;
+    }  
   }
 }

@@ -18,12 +18,22 @@ $font-xxl: 2rem;
   -ms-flex-align: center;
   align-items: center;
   padding: 20px 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .p-404__main {
+    margin-top: 120px;
+  }
 }
 
 .p-404__main img {
   width: 80%;
   -o-object-fit: cover;
   object-fit: cover;
+  max-width: 400px;
 }
 
 .p-404__main .p-404__main__description {
@@ -34,13 +44,23 @@ $font-xxl: 2rem;
   line-height: 180%;
 }
 
+.p-404__main .p-404__main__description br.is-onlySp {
+  display: none;
+}
+
 .p-404__footer {
   margin-top: 30px;
-  padding: 20px 15px;
   background-color: #FFF2C3;
 }
 
-.p-404__footer .p-404__footer__keywords__title {
+.p-404__footer .p-404__footer__keywords {
+  padding: 20px 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.p-404__footer .p-404__footer__keywords .p-404__footer__keywords__title {
   font-size: 1.6rem;
   font-weight: 700;
 }

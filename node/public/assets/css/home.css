@@ -1083,3 +1083,9 @@ $font-xxl: 2rem;
   color: #262626;
   line-height: 116%;
 }
+
+@media (min-width: 768px) {
+  .l-footer {
+    margin-top: 120px;
+  }
+}
