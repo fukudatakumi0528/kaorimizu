@@ -86,6 +86,7 @@
       .t-sideBarPc__downlord__inner__image {
         width: 100%;
         object-fit: cover;
+        font-family: 'object-fit: cover;'; /*IE対策*/
       }
 
       .t-sideBarPc__downlord__inner__main {

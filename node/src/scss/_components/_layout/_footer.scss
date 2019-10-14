@@ -20,6 +20,7 @@
       .l-footer__downlord__inner__image {
         width: 100%;
         object-fit: cover;
+        font-family: 'object-fit: cover;'; /*IE対策*/
       }
 
       .l-footer__downlord__inner__main {
@@ -478,6 +479,7 @@
             .l-footer__search__inner__downlord__inner__topper__logo {
               width: 100px;
               object-fit: contain;
+              font-family: 'object-fit: contain;'; /*IE対策*/
             }
     
             .l-footer__search__inner__downlord__inner__topper__link {

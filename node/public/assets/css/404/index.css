@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 $font-xs: 1rem;
 $font-s: 1.2rem;
@@ -33,6 +34,8 @@ $font-xxl: 2rem;
   width: 80%;
   -o-object-fit: cover;
   object-fit: cover;
+  font-family: 'object-fit: cover;';
+  /*IE対策*/
   max-width: 400px;
 }
 

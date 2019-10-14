@@ -19,6 +19,7 @@
   img {
     width: 80%;
     object-fit: cover;
+    font-family: 'object-fit: cover;'; /*IE対策*/
     max-width: 400px;
   }
   .p-404__main__description {

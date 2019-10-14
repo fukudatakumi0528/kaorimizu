@@ -976,6 +976,8 @@ main {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  font-family: 'object-fit: cover;';
+  /*IE対策*/
 }
 
 .l-footer .l-footer__downlord .l-footer__downlord__inner .l-footer__downlord__inner__main .l-footer__downlord__inner__main__link {
@@ -1578,6 +1580,8 @@ main {
   width: 100px;
   -o-object-fit: contain;
   object-fit: contain;
+  font-family: 'object-fit: contain;';
+  /*IE対策*/
 }
 
 .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__downlord .l-footer__search__inner__downlord__inner .l-footer__search__inner__downlord__inner__topper .l-footer__search__inner__downlord__inner__topper__link {
@@ -4089,6 +4093,8 @@ main {
   height: 22px;
   -o-object-fit: cover;
   object-fit: cover;
+  font-family: 'object-fit: cover;';
+  /*IE対策*/
 }
 
 .o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text {
@@ -4556,6 +4562,8 @@ main {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  font-family: 'object-fit: cover;';
+  /*IE対策*/
 }
 
 .t-sideBarPc .t-sideBarPc__downlord .t-sideBarPc__downlord__inner .t-sideBarPc__downlord__inner__main .t-sideBarPc__downlord__inner__main__link {
