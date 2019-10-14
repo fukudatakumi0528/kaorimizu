@@ -4,5 +4,4 @@
   window.addEventListener("load", function(){
     html[0].classList.add('window-load');
   }, false);
-  console.log('aaa')
 })();

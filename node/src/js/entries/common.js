@@ -1,7 +1,6 @@
 import Header from '../utils/header';
 import Slick from '../utils/slick';
 import Scroll from '../utils/scroll';
-import Hugelink from '../utils/Hugelink';
 import FixedButton from '../utils/fixedButton';
 import SliderTab from '../utils/sliderTab';
 import Refine from '../utils/refine';
@@ -19,10 +18,6 @@ slick.slickInit();
 // スムーズスクロール
 const scroll = new Scroll();
 scroll.init();
-
-// リンクパネル
-const hugelink = new Hugelink();
-hugelink.init();
 
 // object-fit対策（IE対応）
 objectFitImages();
