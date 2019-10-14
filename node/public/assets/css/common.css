@@ -2472,7 +2472,6 @@ main {
 }
 
 .m-breadcrumb {
-  padding: 15px;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2486,6 +2485,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 15px;
   width: 100%;
   max-width: 1000px;
 }

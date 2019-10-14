@@ -5,10 +5,17 @@
 
 .p-privacy__topper {
 
+  @include screen-large{
+    margin-top:70px;
+  }
+
 }
 
 .p-privacy__main {
   padding:30px 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
 
   .p-privacy__main__title {
     margin-top:50px;
