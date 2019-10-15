@@ -11,8 +11,7 @@ export default class Header {
 	clickHeaderButton() {
 		const $headerInnerPcSearch = $('.js-headerInnerPc__search');
 		const $headerInnerPcGrant = $('.js-headerInnerPc__grant');
-		const $headerInnerPcMenu = $('.js-headerInnerPc__Menu');
-		const $headerInnerPcMenuClose = $('.js-spMenu__close');
+		const $header = $('.l-header');
 
 		const $spSearch = $('#js-spSearch');
 		const $spGrant = $('#js-spGrant');
@@ -58,10 +57,19 @@ export default class Header {
       }
 		};
 
+		//headerへのクラスの出しわけ
+		function headerIsActive() {
+			if ($spSearch.hasClass("is-active") || $spGrant.hasClass("is-active") || $spMenu.hasClass("is-active")) {
+				$header.addClass('is-active');
+			} else {
+				$header.removeClass('is-active');
+			}
+		}
 
 		//pcMenuが押された時
 		$(".js-headerInnerPc__Menu, .js-spMenu__close").on('click', function () {
 			spMenuToggle()
+			headerIsActive()
 
 			//menuボタンがクリックされた時は、必ずspSearchは閉じている。
 			if ($spSearch.hasClass('is-active')) {
@@ -77,6 +85,7 @@ export default class Header {
 		//pcSearchが押された時
 		$headerInnerPcSearch.on('click', function () {
 			spSearchToggle()
+			headerIsActive()
 
 			//searchボタンがクリックされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
@@ -92,6 +101,7 @@ export default class Header {
 		//pcGrantが押された時
 		$headerInnerPcGrant.on('click', function () {
 			spGrantToggle()
+			headerIsActive()
 
 			//grantボタンがクリックされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
