@@ -2,13 +2,16 @@
 	//ポストタイプ別にテンプレート切り替え
 	$type = get_post_type();
 	switch ($type) {
-		case "column":
-			include(TEMPLATEPATH . '/archives/column.php');
+		case "feature":
+			include(TEMPLATEPATH . '/archives/feature.php');
 			break;
-		case "news":
+		case "hobby":
 			include(TEMPLATEPATH . '/archives/news.php');
 			break;
-		case "project":
+		case "life":
+			include(TEMPLATEPATH . '/archives/project.php');
+			break;
+		case "learn":
 			include(TEMPLATEPATH . '/archives/project.php');
 			break;
 	}

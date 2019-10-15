@@ -4,151 +4,204 @@
 ?>
 
 			<?php wp_footer(); ?>
-			<footer class="footer">
-				<div class="inner -m">
-					<div class="footer__pager">
-						<div class="breadcrumb">
-							<ol>
-								<li><a href="<?php home_url() ?>/"></a></li>
-								<?php if(!empty($breadcrumb)): ?>
-									<?= $breadcrumb ?>
-								<?php endif; ?>
-							</ol>
-						</div>
-						<a class="pagetop" href="#"></a>
-					</div>
 
-					<div class="footer__nav">
-						<div>
-							<dl>
-								<dt><a href="<?php home_url() ?>/service/">サービス</a></dt>
-								<?php /*
-								<dd>
-									<ul>
-										<?php
-											$services = get_posts('name=service&post_type=page');
-											$services_ID = $services[0]->ID;
-											$args = [
-												'posts_per_page' => -1,
-												'post_type' => 'page',
-												'post_parent' => $services_ID,
-												'order' => 'ASC',
-												'orderby' => 'menu_order',
-											];
-											$query = new WP_Query($args);
-											if($query->have_posts()): while($query->have_posts()): $query->the_post();
-										?>
-											<li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
-										<?php endwhile; endif; wp_reset_postdata(); ?>
-									</ul>
-								</dd>
-								*/ ?>
-							</dl>
+			<footer class="l-footer">
+        <div class="l-footer__downlord">
+          <div class="l-footer__downlord__inner"><img class="l-footer__downlord__inner__image" src="<?php echo assetsPath('img') ?>common/footer/download.png" alt="">
+            <div class="l-footer__downlord__inner__main">
+              <div class="l-footer__downlord__inner__main__link">
+                <button class="l-footer__downlord__inner__main__link__AppStore">
+									<a href="https://apps.apple.com/jp/app/finbee-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E8%B2%AF%E9%87%91-%E6%A5%BD%E3%81%97%E3%81%8F%E3%81%8A%E9%87%91%E3%82%92%E8%B2%AF%E3%82%81%E3%82%8B%E8%B2%AF%E9%87%91%E3%82%A2%E3%83%97%E3%83%AA/id1182852315?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2016-12-26&amp;kind=iossoftware&amp;bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+								</button>
+                <button class="l-footer__downlord__inner__main__link__GooglePlay">
+									<a href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155"></a>
+								</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-footer__support">
+          <div class="l-footer__support__inner">
+            <div class="l-footer__support__inner__header">
+              <div class="l-footer__support__inner__header__subtitle no-pc">contents support</div>
+              <div class="l-footer__support__inner__header__tilte">コンテンツサポート募集</div>
+              <div class="l-footer__support__inner__header__subtitle is-pc">contents support</div>
+            </div>
+            <div class="l-footer__support__inner__center">
+              <div class="l-footer__support__inner__center__checkbox color-dark">
+                <div class="l-footer__support__inner__center__checkbox__inner">
+                  <div class="l-footer__support__inner__center__checkbox__inner__left">
+										<span class="icon-check">
+											<span class="path1"></span>
+											<span class="path2"></span>
+											<span class="path3"></span>
+										</span>
+									</div>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                </div>
+              </div>
+              <div class="l-footer__support__inner__center__checkbox color-light">
+                <div class="l-footer__support__inner__center__checkbox__inner">
+                  <div class="l-footer__support__inner__center__checkbox__inner__left">
+										<span class="icon-check">
+											<span class="path1"></span>
+											<span class="path2"></span>
+											<span class="path3"></span>
+										</span>
+									</div>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                </div>
+              </div>
+              <div class="l-footer__support__inner__center__checkbox color-dark">
+                <div class="l-footer__support__inner__center__checkbox__inner">
+                  <div class="l-footer__support__inner__center__checkbox__inner__left">
+										<span class="icon-check">
+											<span class="path1"></span>
+											<span class="path2"></span>
+											<span class="path3"></span>
+										</span>
+									</div>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                </div>
+              </div>
+            </div>
+						<div class="l-footer__support__inner__footer">be-topia のコンテンツに<br class="no-pc">参加してみたい方は以下フォームより、<br class="no-pc">お問い合わせください。</div>
+						<a class="m-wideButton">
+							<span class="icon-btn"></span>
+							<p class="m-wideButton__text">お問い合わせ</p>
+						</a>
+          </div>
+        </div>
+        <div class="l-footer__about">
+          <div class="l-footer__about__inner">
+            <div class="l-footer__about__inner__main">
+              <div class="l-footer__about__inner__main__header">
+                <div class="l-footer__about__inner__main__header__subhead">What is</div>
+                <div class="l-footer__about__inner__main__header__title">be<strong>-</strong>topia?</div>
+                <div class="l-footer__about__inner__main__header__subtitle">ビートピアについて</div>
+              </div>
+              <div class="l-footer__about__inner__main__line"></div>
+              <div class="l-footer__about__inner__main__description">ダミー「be（なる）」+「topia（場所）」ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダbe-topia は、”何者かに”なる場所でありたいという願いを込めて、ダミーダミーダミーダミー。</div>
+            </div>
+            <div class="l-footer__about__inner__footer">
+							<span class="icon-check-text"></span>
+							<a class="icon-instagram" href="<?php home_url() ?>/"></a>
+							<a class="icon-twitter" href="<?php home_url() ?>/"></a>
+							<a class="icon-facebook" href="<?php home_url() ?>/">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</a>
 						</div>
-						<div>
-							<dl>
-								<dt><a href="<?php home_url() ?>/project/">施工事例</a></dt>
-								<?php /*
-								<dd>
-									<ul>
-										<li><a href="">エントランス</a></li>
-										<li><a href="">会議室</a></li>
-										<li><a href="">ワークスペース</a></li>
-										<li><a href="">フリースペース</a></li>
-										<li><a href="">床</a></li>
-										<li><a href="">壁</a></li>
-										<li><a href="">サイン</a></li>
-									</ul>
-								</dd>
-								*/ ?>
-							</dl>
-							<?php /*
-							<dl>
-								<dt><a href="<?php home_url() ?>/voice/">お客様の声</a></dt>
-							</dl>
-							*/ ?>
-						</div>
-						<div>
-							<dl>
-								<dt><a href="<?php home_url() ?>/column/">コラム</a></dt>
-								<?php /*
-								<dd>
-									<ul>
-										<li><a href="">コラムカテゴリ1</a></li>
-										<li><a href="">コラムカテゴリ2</a></li>
-										<li><a href="">コラムカテゴリ3</a></li>
-									</ul>
-								</dd>
-								*/ ?>
-							</dl>
-							<dl>
-								<dt><a href="<?php home_url() ?>/news/">ニュース</a></dt>
-								<?php /*
-								<dd>
-									<ul>
-										<li><a href="">ニュースカテゴリ1</a></li>
-										<li><a href="">ニュースカテゴリ2</a></li>
-										<li><a href="">ニュースカテゴリ3</a></li>
-									</ul>
-								</dd>
-								*/ ?>
-							</dl>
-						</div>
-						<div>
-							<dl>
-								<dt><a href="<?php home_url() ?>/recruit/">採用情報</a></dt>
-								<?php /*
-								<dd>
-									<ul>
-										<li><a href="">キャリア採用</a></li>
-										<li><a href="">新卒採用</a></li>
-										<li><a href="">採用エントリー</a></li>
-									</ul>
-								</dd>
-								*/ ?>
-							</dl>
-						</div>
-						<div>
-							<dl>
-								<dt><a href="<?php home_url() ?>/company/">企業情報</a></dt>
-								<dd>
-									<ul>
-										<li><a href="<?php home_url() ?>/company/message/">代表挨拶</a></li>
-										<li><a href="<?php home_url() ?>/policy/">プライバシーポリシー</a></li>
-									</ul>
-								</dd>
-							</dl>
-							<dl>
-								<dt><a href="<?php home_url() ?>/contact/">お問い合わせ</a></dt>
-								<dd>
-									<ul>
-										<li><a href="<?php home_url() ?>/contact/">お仕事の依頼</a></li>
-										<li><a href="<?php home_url() ?>/contact/appointment/">取材・アポイントメント</a></li>
-										<li><a href="<?php home_url() ?>/contact/partner/">協力パートナー応募</a></li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<div class="footer__logo">
-						<figure>
-							<a href="<?php home_url() ?>/"></a>
-						</figure>
-						<p>オフィス、店舗の移転・レイアウト変更なら<br>オフィス・ラボにお任せください</p>
-					</div>
-					<div class="footer__contact">
-						<a class="tel -isSP" href="tel:<?= COMPANY_TEL  ?>"><?= COMPANY_TEL  ?></a>
-						<span class="tel -isPC"><?= COMPANY_TEL  ?></span>
-						<a class="m-btn -black" href="<?php home_url() ?>/contact/">CONTACT</a>
-					</div>
+          </div>
+        </div>
+        <div class="l-footer__search">
+          <div class="l-footer__search__inner">
+            <div class="l-footer__search__inner__main">
+              <ul class="l-footer__search__inner__main__category">
+                <li class="l-footer__search__inner__main__category__list">
+									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">特集</a>
+								</li>
+                <li class="l-footer__search__inner__main__category__list">
+									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">趣味</a>
+								</li>
+                <li class="l-footer__search__inner__main__category__list">
+									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">生活</a>
+								</li>
+                <li class="l-footer__search__inner__main__category__list">
+									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">学び</a>
+								</li>
+              </ul>
+              <div class="l-footer__search__inner__main__button">
+								<a class="l-footer__search__inner__main__button__search" href="<?php home_url() ?>/"> 
+									<p class="l-footer__search__inner__main__button__search__text">したい・ほしいを<br><strong>さがす</strong></p>
+								</a>
+								<a class="l-footer__search__inner__main__button__search" href="<?php home_url() ?>/">
+									<p class="l-footer__search__inner__main__button__search__text">したい・ほしいを<br><strong>叶える</strong></p>
+								</a>
+							</div>
+              <div class="l-footer__search__inner__main__footer">
+								<a class="l-footer__search__inner__main__footer__link" href="<?php home_url() ?>/">
+									<span class="icon-btn"></span>
+									<p class="l-footer__search__inner__main__footer__link__text">自動貯金サービス「finbee」</p>
+									<span class="icon-tab"></span>
+								</a>
+							</div>
+            </div>
+            <div class="l-footer__search__inner__downlord">
+              <div class="l-footer__search__inner__downlord__inner">
+                <div class="l-footer__search__inner__downlord__inner__topper">
+									<img class="l-footer__search__inner__downlord__inner__topper__logo" src="<?= assetsPath('img') ?>common/logo-finbee.png" alt="">
+                  <div class="l-footer__search__inner__downlord__inner__topper__link">
+                    <div class="l-footer__search__inner__downlord__inner__topper__link__title">自動貯金サービス「finbee」を試してみる</div>
+                    <div class="l-footer__search__inner__downlord__inner__topper__link__button">
+                      <div class="l-footer__search__inner__downlord__inner__topper__link__button__AppStore">
+												<a href="https://apps.apple.com/jp/app/finbee-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E8%B2%AF%E9%87%91-%E6%A5%BD%E3%81%97%E3%81%8F%E3%81%8A%E9%87%91%E3%82%92%E8%B2%AF%E3%82%81%E3%82%8B%E8%B2%AF%E9%87%91%E3%82%A2%E3%83%97%E3%83%AA/id1182852315?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2016-12-26&amp;kind=iossoftware&amp;bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+											</div>
+                      <div class="l-footer__search__inner__downlord__inner__topper__link__button__GooglePlay">
+												<a href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155"></a>
+											</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-footer__search__inner__downlord__inner__footer">
+									<a class="l-footer__search__inner__downlord__inner__footer__link" href="<?php home_url() ?>/">
+										<span class="icon-btn"></span>
+										<p class="l-footer__search__inner__downlord__inner__footer__link__text">公式サイトはこちら</p>
+										<span class="icon-tab"></span>
+									</a>
+								</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-footer__nav">
+          <div class="l-footer__nav__inner">
+            <ul class="l-footer__nav__inner__main">
+              <li class="l-footer__nav__inner__main__list">
+								<a class="l-footer__nav__inner__main__list__link">
+									<p class="l-footer__nav__inner__main__list__link__text">会社概要</p>
+									<span class="icon-tab"></span>
+								</a>
+							</li>
+              <li class="l-footer__nav__inner__main__list">
+								<a class="l-footer__nav__inner__main__list__link">
+									<p class="l-footer__nav__inner__main__list__link__text">利用規約</p>
+								</a>
+							</li>
+              <li class="l-footer__nav__inner__main__list">
+								<a class="l-footer__nav__inner__main__list__link">
+									<p class="l-footer__nav__inner__main__list__link__text">プライバシーポリシー</p>
+								</a>
+							</li>
+              <li class="l-footer__nav__inner__main__list">
+								<a class="l-footer__nav__inner__main__list__link">
+									<p class="l-footer__nav__inner__main__list__link__text">お問い合わせ</p>
+								</a>
+							</li>
+            </ul>
+            <div class="l-footer__nav__inner__copy">©︎2019 NeseEgg,Inc.</div>
+          </div>
+        </div>
+      </footer>
+
+			<!--
+			<div class="footer__pager">
+				<div class="breadcrumb">
+					<ol>
+						<li><a href="<?php home_url() ?>/"></a></li>
+						<?php if(!empty($breadcrumb)): ?>
+							<?= $breadcrumb ?>
+						<?php endif; ?>
+					</ol>
 				</div>
-				<small class="footer__copy"><?= date('Y'); ?> &copy; <?= COMPANY_NAME_EN ?></small>
-			</footer>
-		</div>
+				<a class="pagetop" href="#"></a>
+			</div>
+			-->
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<?php /* <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> */ ?>
 		<script src="<?= assetsPath('js') ?>common.js"></script>
+		<script src="<?= assetsPath('js') ?>home.js"></script>
 		<?php if(!empty($scriptName)): ?>
 			<script src="<?= assetsPath('js') ?><?= $scriptName ?>.js"></script>
 		<?php endif; ?>

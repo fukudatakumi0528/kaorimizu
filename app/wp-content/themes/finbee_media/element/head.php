@@ -4,19 +4,19 @@
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<title>株式会社オフィス・ラボ</title>
+<title>finbee</title>
 <?php /*
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="twitter:card" content="summary">
-<meta property="og:title" content="株式会社オフィス・ラボ">
-<meta property="twitter:title" content="株式会社オフィス・ラボ">
+<meta property="og:title" content="finbee">
+<meta property="twitter:title" content="finbee">
 <meta property="og:url" content="">
-<meta property="og:site_name" content="株式会社オフィス・ラボ">
-<meta property="twitter:site" content="株式会社オフィス・ラボ">
+<meta property="og:site_name" content="finbee">
+<meta property="twitter:site" content="finbee">
 <meta property="og:image" content="">
 <meta property="twitter:image" content="">
-<meta property="article:publisher" content="株式会社オフィス・ラボ">
+<meta property="article:publisher" content="finbee">
 */ ?>
 <link rel="apple-touch-icon" sizes="57x57" href="<?= assetsPath('img') ?>icon/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?= assetsPath('img') ?>icon/apple-touch-icon-60x60.png">
@@ -34,9 +34,11 @@
 <meta name="theme-color" content="#FFF002">
 <link rel="stylesheet" href="<?= assetsPath('css') ?>common.css">
 <link rel="stylesheet" href="<?= assetsPath('css') . $cssName ?>.css">
+<link rel="stylesheet" href="<?= assetsPath('fonts') ?>icomoon/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
 <?php /* ↓adove typekit 筑紫ゴシック 使用スクリプト */ ?>
 <script>
 	(function(d) {
@@ -48,8 +50,6 @@
 		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 	})(document);
 </script>
-<script type="text/javascript" src="https://api.docodoco.jp/v4/docodoco?key=u9G9AHplXuxT9GMoxw29qZNzGkE17pFTg4PsG5hZOCntq5gWI1MJwKrc42REkXy5" charset="utf-8"></script>
-<script type="text/javascript" src="<?= assetsPath('js') ?>docodoco_ua_plugin.js" charset="utf-8"></script>
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

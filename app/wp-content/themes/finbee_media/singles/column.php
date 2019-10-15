@@ -9,19 +9,19 @@
 	//前後の記事取得
 	$next_post = get_next_post();
 	$next_post_ID = $next_post->ID;
-	$next_post_thumb = CFS()->get('cloumn_image', $next_post_ID);
+//	$next_post_thumb = CFS()->get('cloumn_image', $next_post_ID);
 	$next_post_url = get_permalink($next_post_ID);
 	$next_post_time = get_the_time('Y.n.j', $next_post_ID);
 
 
 	$prev_post = get_previous_post();
 	$prev_post_ID = $prev_post->ID;
-	$prev_post_thumb = CFS()->get('cloumn_image', $prev_post_ID);
+//	$prev_post_thumb = CFS()->get('cloumn_image', $prev_post_ID);
 	$prev_post_url = get_permalink($prev_post_ID);
 	$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);
 
 	//当記事のサムネイル
-	$thumbnail = CFS()->get('cloumn_image');
+//	$thumbnail = CFS()->get('cloumn_image');
 	if(empty($thumbnail)){
 		$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
 	}
@@ -30,15 +30,25 @@
 
 
 <main>
+	<section class="p-article__topper">
+		<div class="o-topperSection">
+			<div class="o-topperSection__main">
+				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+					<div class="o-topperSection__main__title__text">
+						<h1 class="o-topperSection__main__title__text__main">特集</h1>
+						<p class="o-topperSection__main__title__text__sub">Feature</p>
+					</div>
+				</div>
+				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+			</div>
+		</div>
+	</section>
 	<div class="l-article">
 		<div class="l-article--wrap inner -s">
 			<div class="l-article--left">
 				<article class="article">
 					<header class="article__header">
 						<figure style="background-image: url(<?= $thumbnail ?>)">
-							<?php if( CFS()->get('new') == true ): ?>
-								<figcaption>NEW</figcaption>
-							<?php endif; ?>
 						</figure>
 						<div class="article__header_wrap">
 							<div class="article__header_info">
