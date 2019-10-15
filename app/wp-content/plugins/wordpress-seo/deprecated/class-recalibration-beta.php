@@ -19,12 +19,16 @@ _deprecated_file( __FILE__, 'WPSEO 10.0' );
 class WPSEO_Recalibration_Beta implements WPSEO_WordPress_Integration {
 
 	/**
-	 * @var string Name of the options.
+	 * Name of the options.
+	 *
+	 * @var string
 	 */
 	protected $option_name = 'recalibration_beta';
 
 	/**
-	 * @var string The read more URL.
+	 * The read more URL.
+	 *
+	 * @var string
 	 */
 	protected $read_more_url = 'https://yoa.st/recalibration-beta-explanation';
 
@@ -36,7 +40,7 @@ class WPSEO_Recalibration_Beta implements WPSEO_WordPress_Integration {
 	 * @codeCoverageIgnore
 	 */
 	public function __construct() {
-		_deprecated_constructor( 'WPSEO_Recalibration_Beta', 'WPSEO 10.0' );
+		_deprecated_function( __METHOD__, '10.0' );
 	}
 
 	/**

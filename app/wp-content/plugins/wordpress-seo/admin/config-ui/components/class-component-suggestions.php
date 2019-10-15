@@ -37,7 +37,7 @@ class WPSEO_Config_Component_Suggestions implements WPSEO_Config_Component {
 				array(
 					'label' => __( 'Upgrade to Premium', 'wordpress-seo' ),
 					'type'  => 'primary',
-					'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/wizard-suggestion-premium' ),
+					'href'  => WPSEO_Shortlinker::get( 'https://yoa.st/wizard-suggestion-premium' ),
 				),
 				array(
 					'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/video-yoast-seo-premium' ),
@@ -60,7 +60,7 @@ class WPSEO_Config_Component_Suggestions implements WPSEO_Config_Component {
 			array(
 				'label' => 'Keyword research training',
 				'type'  => 'link',
-				'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/3lg' ),
+				'href'  => WPSEO_Shortlinker::get( 'https://yoa.st/3lg' ),
 			),
 			array(
 				'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/3lf' ),
@@ -68,26 +68,6 @@ class WPSEO_Config_Component_Suggestions implements WPSEO_Config_Component {
 					/* translators: %1$s expands to Keyword research training. */
 					__( '%1$s video', 'wordpress-seo' ),
 					'Keyword research training'
-				),
-			)
-		);
-
-		$field->add_suggestion(
-			/* translators: %1$s resolves to Yoast SEO, %2$s resolves to Yoast SEO plugin training */
-			sprintf( __( 'Get the most out of %1$s with the %2$s', 'wordpress-seo' ), 'Yoast SEO', 'Yoast SEO plugin training' ),
-			/* translators: %1$s resolves to Yoast SEO */
-			sprintf( __( 'Do you want to know all the ins and outs of the %1$s plugin? Do you want to learn all about our advanced settings? Want to be able to really get the most out of the %1$s plugin? Check out our %1$s plugin training and start outranking the competition!', 'wordpress-seo' ), 'Yoast SEO' ),
-			array(
-				'label' => 'Yoast SEO plugin training',
-				'type'  => 'link',
-				'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/wizard-suggestion-plugin-course' ),
-			),
-			array(
-				'url'   => WPSEO_Shortlinker::get( 'https://yoa.st/video-plugin-course' ),
-				'title' => sprintf(
-					/* translators: %1$s expands to Yoast SEO plugin training. */
-					__( '%1$s video', 'wordpress-seo' ),
-					'Yoast SEO plugin training'
 				),
 			)
 		);
@@ -127,7 +107,7 @@ class WPSEO_Config_Component_Suggestions implements WPSEO_Config_Component {
 	}
 
 	/**
-	 * Save data
+	 * Save data.
 	 *
 	 * @param array $data Data containing changes.
 	 *

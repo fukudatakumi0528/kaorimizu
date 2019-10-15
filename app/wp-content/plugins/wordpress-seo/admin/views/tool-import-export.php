@@ -74,7 +74,9 @@ if ( $import ) {
 			$status = 'updated';
 		}
 
-		echo '<div id="message" class="message ', $status, '"><p>', esc_html( $msg ), '</p></div>';
+		$class = 'message ' . $status;
+
+		echo '<div id="message" class="', esc_attr( $status ), '"><p>', esc_html( $msg ), '</p></div>';
 	}
 }
 
@@ -103,7 +105,7 @@ $tabs = array(
 
 		<?php
 		/**
-		 * Allow adding a custom import tab header
+		 * Allow adding a custom import tab header.
 		 */
 		do_action( 'wpseo_import_tab_header' );
 		?>
@@ -138,6 +140,6 @@ foreach ( $tabs as $identifier => $tab ) {
 }
 
 /**
- * Allow adding a custom import tab
+ * Allow adding a custom import tab.
  */
 do_action( 'wpseo_import_tab_content' );

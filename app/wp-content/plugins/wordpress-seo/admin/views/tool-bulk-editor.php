@@ -119,7 +119,8 @@ function wpseo_get_rendered_tab( $table, $id ) {
 
 ?>
 <script>
-	var wpseoBulkEditorNonce = <?php echo wp_json_encode( wp_create_nonce( 'wpseo-bulk-editor' ) ); ?>;
+	// phpcs:ignore WordPress.Security.OutputEscaping -- WPSEO_Utils::format_json_encode is safe.
+	var wpseoBulkEditorNonce = <?php echo WPSEO_Utils::format_json_encode( wp_create_nonce( 'wpseo-bulk-editor' ) ); ?>;
 
 	// eslint-disable-next-line
 	var wpseo_bulk_editor_nonce = wpseoBulkEditorNonce;
