@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="26px" viewBox="0 0 108 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>be-topia</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Helvetica" font-size="25" font-weight="normal" letter-spacing="1.5">
+        <g id="top" transform="translate(-17.000000, -12.000000)">
+            <g id="header" transform="translate(16.000000, 8.000000)">
+                <g id="logo">
+                    <text id="be-topia">
+                        <tspan x="4.82788086" y="24" fill="#000000">be</tspan>
+                        <tspan x="35.635498" y="24" fill="#FFD94A">-</tspan>
+                        <tspan x="45.4606934" y="24" fill="#000000">topia</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
