@@ -42,6 +42,26 @@
         }
       }
 
+      .m-verticallyCard__inner__footer__description {
+        display: none;
+
+        @include screen-large {
+          display: block;
+          overflow: hidden;
+          margin-top:5px;
+        }
+
+        .m-verticallyCard__inner__footer__description__text {
+          font-size: $font-s;
+          line-height: 170%;
+          color:$font-1-color;
+          font-weight: $font-medium;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;  
+        } 
+      }
+
       .m-verticallyCard__inner__footer__title {
         display: block;
         margin-top:5px;

@@ -131,14 +131,6 @@ function register_cpt_feature() {
     register_post_type( 'feature', $args );
 
     // カスタム分類（タクソノミー）登録
-    register_taxonomy(
-        'feature_taxonomy',                 // カスタム分類の名前
-        'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
-        array(
-            'label' => 'カテゴリ',   // カスタム分類表示名
-            'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
-        )
-    );
 	$labels = array(
 		'name'                       => _x( 'タグ', 'taxonomy general name' ),
 		'singular_name'              => _x( 'タグ', 'taxonomy singular name' ),

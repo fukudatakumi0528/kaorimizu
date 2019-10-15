@@ -34,38 +34,15 @@
 					</div>
 					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
 						<ul class="o-classificationList">
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
+							<?php $tags = get_terms('feature_tag'); ?>
+								<?php	if($tags): foreach ($tags as $tag ): ?>
+									<li class="o-classificationList__tag">
+										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+											<p class="o-classificationList__tag__link__inner"><?= $tag->name?></p>
+										</a>
+									</li>
+								<?php endforeach; ?>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</div>
@@ -89,7 +66,7 @@
 						$query = new WP_Query($args);
 						if($query->have_posts()): while($query->have_posts()): $query->the_post();
 
-						$tags = get_the_tags();
+						$singletags = get_the_terms($post->ID, 'feature_tag');
 
 						if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
 							$thumbnail =  get_the_post_thumbnail();
@@ -108,13 +85,16 @@
 								</div>
 								<div class="m-verticallyCard__inner__footer">
 									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
-									<a href= <?php the_permalink() ?> class="m-verticallyCard__inner__footer__title" href=""><?php the_excerpt() ?></a>
+									<a href= <?php the_permalink() ?> class="m-verticallyCard__inner__footer__title" href=""><?php the_title_attribute(); ?></a>
+									<div class="m-squareCard__inner__footer__description">
+										<p class="m-squareCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+									</div>
 									<div class="m-classificationArea">
-										<?php 
-											foreach ( $tags as $tag ) {
-												echo '<a class="m-classificationArea__tag" href="">' . $tag->name . '</a>';
-											}
-										?>
+										<?php	if($singletags): foreach ($singletags as $tag ): ?>
+											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<?= $tag->name?>
+											</a>
+										<?php  endforeach; endif; ?>
 									</div>
 								</div>
 							</div>

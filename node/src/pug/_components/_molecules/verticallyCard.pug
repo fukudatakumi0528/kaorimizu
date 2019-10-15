@@ -7,5 +7,7 @@ mixin m-verticallyCard(information)
 			.m-verticallyCard__inner__footer
 				.m-verticallyCard__inner__footer__date #{information.date}
 				a(href="").m-verticallyCard__inner__footer__title #{information.title}
+				.m-verticallyCard__inner__footer__description
+					.m-verticallyCard__inner__footer__description__text #{information.description}
 				include ./classificationArea
 				+m-classificationArea(information.tag)
