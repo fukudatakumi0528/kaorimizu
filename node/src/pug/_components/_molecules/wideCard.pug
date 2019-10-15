@@ -12,5 +12,7 @@ mixin m-wideCard(information)
 			.m-wideCard__inner__right
 				.m-wideCard__inner__right__date #{information.date}
 				a(href="").m-wideCard__inner__right__title #{information.title}
+				.m-wideCard__inner__right__description
+					.m-wideCard__inner__right__description__text #{information.description}
 				include ./classificationArea
 				+m-classificationArea(information.tag)

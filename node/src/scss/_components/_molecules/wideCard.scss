@@ -95,6 +95,27 @@
         }    
       }
 
+      .m-wideCard__inner__right__description {
+        display: none;
+
+        @include screen-large {
+          display: block;
+          overflow: hidden;
+          margin-top:5px;
+        }
+
+        .m-wideCard__inner__right__description__text {
+          font-size: $font-xs;
+          line-height: 170%;
+          color:$font-1-color;
+          font-weight: $font-medium;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;  
+        } 
+      }
+
+
       .m-wideCard__inner__right__title {
         display: block;
         margin-top:5px;
