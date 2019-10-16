@@ -15,8 +15,14 @@
     &:hover {
 
       @include screen-large {
-        color: $font-2-1-color;
+        color: $bg-1-color;
       }
+
+      &::before {  
+        @include screen-large {
+          color: $bg-1-color;
+        }    
+      }  
     }
 
     &::before {
@@ -27,13 +33,6 @@
       @include screen-large {
         font-size: $font-xs;
       }    
-
-      &:hover {
-
-        @include screen-large {
-          color: $font-2-1-color;
-        }
-      }
     }
   }
 }

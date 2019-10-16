@@ -4,28 +4,306 @@
 @import "../../_utils/_mixins";
 
 .p-articlePost__main {
-  padding:0 15px;
+	margin-top:20px;
+	padding:0 15px;
 
-  h2 {
-    font-size: 19px;
-    font-weight: $font-bold;
-  }
+	.p-articlePost__main__content {
 
-  
+		.p-articlePost__main__content__column {
+
+			.article {
+
+				.article__header {
+		
+					h1 {
+						font-size: $font-xl;
+						font-weight: $font-bold;
+						line-height: 150%;
+						letter-spacing: 1.3;
+					}
+					
+					.article__header__sub {
+						margin-top:4px;
+						display: flex;
+						align-items: center;
+			
+						p {
+							font-size: $font-xs;
+							font-weight: $font-bold;
+							line-height: 100%;
+			
+							&:after {
+								content:"|";
+								margin-left:4px;
+								font-size: $font-xs;
+								font-weight: $font-bold;
+							}
+						}
+			
+						time {
+							margin-left:4px;
+							font-weight: $font-bold;
+							color:$font-4-color;
+							font-size: $font-xs;
+							line-height: 100%;
+						}
+					}
+			
+					img.thumbnail {
+						margin-top:15px;
+						width: 100%;
+					}  
+			
+				}
+		
+				.article__body {
+					margin-top:30px;
+					font-size: $font-s;
+
+					.counter-hierarchy {
+						margin-top:15px;
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						border:$border-6;
+
+						.ez-toc-title-container {
+							padding:12px 16px;
+							background-color: $bg-3-color;
+							display: flex;
+							align-content: center;
+
+							.ez-toc-title {
+								margin:0;
+								font-size: $font-m;
+								font-weight: $font-bold;
+								display: flex;
+								align-items: center;
+
+								&:before {
+									content:"";
+									display: block;
+									background-image: url(/wp-content/themes/finbee_media/assets/img/common/table.svg);
+									height: 16px;
+									width: 22px;
+									margin-right: 8px;
+									background-size: contain;
+								}    
+							}
+						}
+
+						nav {
+
+							.ez-toc-list {
+								margin:0;
+								padding:0;
+
+								li {
+									padding:12px 16px;
+									background-color: $bg-16-color;
+									display: flex;
+									align-items: center;
+													
+									&:nth-of-type(even) {
+										background-color: $bg-3-color;
+									}
+
+									.icon-head {
+										font-size: 12px;
+									}          
+	
+									a {
+										margin:0;
+										font-size: $font-xs;
+										font-weight: $font-bold;
+										text-decoration: underline;
+										line-height: 170%; 
+										display: flex;
+										align-items: center;
+
+										&::before {
+											content: "";
+											display: block;
+											background-image: url(/wp-content/themes/finbee_media/assets/img/common/head.svg);
+											height: 10px;
+											width: 10px;
+											margin-right: 8px;
+											background-size:contain;
+										}
+									}
+								}
+							}
+						}
+					}
+		 
+					h2 {
+						display: block;
+						margin-top:30px;
+						font-size: 19px;
+						font-weight: $font-bold;
+						line-height: 170%;
+
+						.s1 {
+							display: inline;
+							background:linear-gradient(transparent 70%, $bg-1-color 0%);
+						}
+					}
+
+					h3 {
+						margin-top:20px;
+						font-size: $font-s;
+						font-weight: $font-bold;
+						line-height: 170%;
+						display: flex;
+						align-items: center;
+
+						&:before {
+							content:"ー";
+							font-size: $font-xs;
+							font-weight: $font-bold;
+							margin-right: 4px;
+						}
+					}
+		
+					p {
+						margin-top:20px;
+						font-size: $font-s;
+						line-height: 170%;
+					}
+
+					a {
+						color:$font-2-color;
+						text-decoration: underline;
+					}
+
+					ul {
+						margin:4px 0 0 0;
+						padding:0 0 0 24px;
+
+						li {
+							list-style-type: disc;
+
+							p {
+								margin:0 0 0 -4px;
+								line-height: 200%;
+							}
+						}
+					}
+
+					ol {
+						margin:4px 0 0 0;
+						padding:0 0 0 12px;
+
+						li {
+							list-style-type: none;
+							counter-increment: cnt;
+							display: flex;
+							align-items: flex-start;
+
+							&::before {
+								position: relative;
+								left: -7px;
+								display: inline-block;							 
+								content: "" counter(cnt) "";
+								border-radius: 100%;
+								line-height: 200%;
+							}
+
+							p {
+								margin:0;
+								display: inline-block;
+								line-height: 200%;
+							}
+
+						}
+					}
+
+					table {
+						margin-top:20px;
+						background-color:$font-5-color;
+						border-radius: 4px;
+						padding:2px;
+						border-collapse: inherit;
+
+						tbody {
+
+							tr {
+								
+								&:nth-of-type(1) {
+
+									td {
+										border-top: none;
+									}
+								}
+
+								&:nth-last-of-type(1) {
+
+									td {
+										border-bottom: none;
+									}
+								}
+
+								td {
+									padding:10px;
+									background-color: $bg-3-color;
+									border:$border-8;
+									box-sizing: border-box;
+
+									&:nth-of-type(1) {
+										background-color:$font-5-color;
+										border-left: none;
+									}
+
+									&:nth-last-of-type(1) {
+										border-right: none;
+									}
+								}
+							}
+						}
+					}
+
+					blockquote {
+						margin-top:20px;
+						border-left:$border-6;
+
+						&:before {
+							content:"";
+							display: block;
+							background-image: url(/wp-content/themes/finbee_media/assets/img/common/blockquote.png);
+							height: 30px;
+							width: 30px;
+							margin-left: -3px;
+							background-size:contain;
+							border-left: solid 3px #FFFFFF;
+						}
+
+						p {
+							margin:0;
+							color:$font-4-color;
+							font-size: $font-s;
+							line-height: 170%;
+							font-weight: $font-bold;
+							padding-left:10px;
+						}
+					}
+				}
+			}  
+		}
+	}
 }
 
 .p-articlePost__footer {
-  margin-top:50px;
-  width: 100%;
-  overflow:hidden;
+	margin-top:50px;
+	width: 100%;
+	overflow:hidden;
 
-  .m-titleBorder {
-    padding:0 15px;
-  }
+	.m-titleBorder {
+		padding:0 15px;
+	}
 
-  .m-breadcrumb {
-    margin-top:50px;
-    padding:15px;
-    background-color: $bg-3-color;
-  }
+	.m-breadcrumb {
+		margin-top:50px;
+		padding:15px;
+		background-color: $bg-3-color;
+	}
 }

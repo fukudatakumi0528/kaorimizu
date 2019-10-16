@@ -77,7 +77,7 @@
 						}
 					?>
 						<article class="m-verticallyCard">
-							<a class="m-verticallyCard__inner" href="">
+							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
 								<div class="m-verticallyCard__inner__topper">
 									<div class="m-verticallyCard__inner__topper__image" href="">
 										<img class="m-verticallyCard__inner__topper__image__inner" src=<?= $thumbnail ?> alt="">

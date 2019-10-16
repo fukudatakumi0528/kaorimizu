@@ -30,36 +30,22 @@
 
 
 <main>
-	<section class="p-article__topper">
-		<div class="o-topperSection">
-			<div class="o-topperSection__main">
-				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
-					<div class="o-topperSection__main__title__text">
-						<h1 class="o-topperSection__main__title__text__main">特集</h1>
-						<p class="o-topperSection__main__title__text__sub">Feature</p>
-					</div>
-				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
-			</div>
-		</div>
-	</section>
-	<div class="l-article">
-		<div class="l-article--wrap inner -s">
-			<div class="l-article--left">
+	<section class="p-articlePost__main">
+		<div class="p-articlePost__main__content">
+			<div class="p-articlePost__main__content__column">
 				<article class="article">
 					<header class="article__header">
-						<figure style="background-image: url(<?= $thumbnail ?>)">
-						</figure>
-						<div class="article__header_wrap">
-							<div class="article__header_info">
-								<!-- <span>什器備品</span> -->
-								<time><?php the_time('Y.n.j') ?></time>
-							</div>
-							<h1><?php the_title() ?></h1>
-							<div class="article__sns">
-								<?php get_template_part('element/sns') ?>
-							</div>
+						<h1><?php the_title() ?></h1>
+						<div class="article__header__sub">
+							<p>特集</p>
+							<time><?php the_time('Y.n.j') ?></time>
 						</div>
+						<img src="<?= get_the_post_thumbnail_url() ?>" class="thumbnail">
+						<!--
+						<div class="article__sns">
+							<?php get_template_part('element/sns') ?>
+						</div>
+						-->
 					</header>
 
 					<section class="article__body">
@@ -99,65 +85,10 @@
 						<figure style="background-image: url(<?= $prev_post_thumb ?>)"></figure>
 					</a>
 				</div>
-
-				<div class="article__related"><b>関連記事</b>
-					<ul>
-						<?php
-							$relatedArgs = [
-								'post_type' => 'column',
-								'posts_per_page' => 4,
-								'category_name' => 'column',
-								'post__not_in' => array($post->ID,),
-								'order' => 'DESC',
-								'orderby' => 'rand',
-							];
-							$relatedQuery = new WP_Query($relatedArgs);
-							if($relatedQuery->have_posts()): while($relatedQuery->have_posts()): $relatedQuery->the_post();
-						?>
-							<li>
-								<a href="<?php the_permalink() ?>">
-									<figure style="background-image: url(<?= CFS()->get('cloumn_image') ?>)"></figure>
-									<div><b><?php the_title() ?></b>
-										<p><?php the_excerpt() ?></p>
-										<time><?php the_time('Y.n.j') ?></time>
-									</div>
-								</a>
-							</li>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-					</ul>
-				</div>
 			</div>
 
-
-
-			<div class="l-article--right">
-				<div class="article__new"><b>新着記事</b>
-					<ul>
-						<?php
-							$newArgs = [
-								'post_type' => 'column',
-								'posts_per_page' => 5,
-								'post__not_in' => array($post->ID,),
-								'order' => 'DESC',
-							];
-							$newQuery = new WP_Query($newArgs);
-							if($newQuery->have_posts()): while($newQuery->have_posts()): $newQuery->the_post();
-						?>
-							<li>
-								<a href="<?php the_permalink() ?>">
-									<figure style="background-image: url(<?= CFS()->get('cloumn_image') ?>)"></figure>
-									<div>
-										<b><?php the_title() ?></b>
-										<time><?php the_time('Y.n.j') ?></time>
-									</div>
-								</a>
-							</li>
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-					</ul>
-				</div>
-			</div>
 		</div>
-	</div>
+	</section>
 </main>
 
 

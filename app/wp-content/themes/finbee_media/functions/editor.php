@@ -125,7 +125,8 @@ function register_cpt_feature() {
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
-        'has_archive'   => true                        // この投稿タイプのアーカイブを有効にする
+        'has_archive'   => true,                       // この投稿タイプのアーカイブを有効にする
+        'show_in_rest' => true,
     );
 
     register_post_type( 'feature', $args );
@@ -199,7 +200,8 @@ function register_cpt_hobby() {
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
-        'has_archive'   => true                        // この投稿タイプのアーカイブを有効にする
+        'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
+        'show_in_rest' => true,
     );
 
     register_post_type( 'hobby', $args );
@@ -281,7 +283,8 @@ function register_cpt_life() {
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
-        'has_archive'   => true                        // この投稿タイプのアーカイブを有効にする
+        'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
+        'show_in_rest' => true,
     );
 
     register_post_type( 'life', $args );
@@ -362,7 +365,8 @@ function register_cpt_learn() {
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
-        'has_archive'   => true                        // この投稿タイプのアーカイブを有効にする
+        'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
+        'show_in_rest' => true,
     );
 
     register_post_type( 'learn', $args );
