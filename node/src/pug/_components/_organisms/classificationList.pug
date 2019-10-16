@@ -2,5 +2,6 @@ mixin o-classificationList(tags)
   ul.o-classificationList
     each tag in tags
       li.o-classificationList__tag
-        a(href="").o-classificationList__tag__link
-          p.o-classificationList__tag__link__inner #{tag}
+        object
+          a(href="").o-classificationList__tag__link
+            p.o-classificationList__tag__link__inner #{tag}

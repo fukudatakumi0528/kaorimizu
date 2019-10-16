@@ -1,1 +1,32 @@
-.p-articlePost__footer .m-titleBorder,.p-articlePost__main{padding:0 15px}.p-articlePost__main h2{font-size:19px;font-weight:700}.p-articlePost__footer{margin-top:50px;width:100%;overflow:hidden}.p-articlePost__footer .m-breadcrumb{margin-top:50px;padding:15px;background-color:#F5F5F5}
+/*
+$font-xs: 1rem;
+$font-s: 1.2rem;
+$font-m: 1.4rem;
+$font-l: 1.6rem;
+$font-xl: 1.8rem;
+$font-xxl: 2rem;
+*/
+.p-articlePost__main {
+  padding: 0 15px;
+}
+
+.p-articlePost__main h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.p-articlePost__footer {
+  margin-top: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.p-articlePost__footer .m-titleBorder {
+  padding: 0 15px;
+}
+
+.p-articlePost__footer .m-breadcrumb {
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #F5F5F5;
+}

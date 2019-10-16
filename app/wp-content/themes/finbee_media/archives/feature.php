@@ -77,27 +77,29 @@
 						}
 					?>
 						<article class="m-verticallyCard">
-							<div class="m-verticallyCard__inner">
+							<a class="m-verticallyCard__inner" href="">
 								<div class="m-verticallyCard__inner__topper">
-									<a class="m-verticallyCard__inner__topper__image" href="">
+									<div class="m-verticallyCard__inner__topper__image" href="">
 										<img class="m-verticallyCard__inner__topper__image__inner" src=<?= $thumbnail ?> alt="">
-									</a>
+									</div>
 								</div>
 								<div class="m-verticallyCard__inner__footer">
 									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
-									<a href= <?php the_permalink() ?> class="m-verticallyCard__inner__footer__title" href=""><?php the_title_attribute(); ?></a>
+									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
 										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>
 									</div>
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
-											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
-												<?= $tag->name?>
-											</a>
+											<object>
+												<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+													<?= $tag->name?>
+												</a>
+											</object>
 										<?php  endforeach; endif; ?>
 									</div>
 								</div>
-							</div>
+							</a>
 						</article>
 					<?php endwhile; endif; ?>
 				</div>
@@ -112,9 +114,9 @@
 								'total' => $query->max_num_pages,
 								'prev_text' => __('前へ'),
 								'next_text' => __('次へ'),
-								'mid_size' => 1,
+								'mid_size' => 2,
 							];
-							echo paginate_links($pgArgs);
+							echo paginate_links_finbee($pgArgs);
 							wp_reset_postdata();
 						?>
 					</div>

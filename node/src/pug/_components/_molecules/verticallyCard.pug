@@ -1,12 +1,12 @@
 mixin m-verticallyCard(information)
 	li.m-verticallyCard
-		.m-verticallyCard__inner
+		a(href="").m-verticallyCard__inner
 			.m-verticallyCard__inner__topper
-				a(href="").m-verticallyCard__inner__topper__image
+				.m-verticallyCard__inner__topper__image
 					img(src=information.url, alt="").m-verticallyCard__inner__topper__image__inner
 			.m-verticallyCard__inner__footer
 				.m-verticallyCard__inner__footer__date #{information.date}
-				a(href="").m-verticallyCard__inner__footer__title #{information.title}
+				.m-verticallyCard__inner__footer__title #{information.title}
 				.m-verticallyCard__inner__footer__description
 					.m-verticallyCard__inner__footer__description__text #{information.description}
 				include ./classificationArea

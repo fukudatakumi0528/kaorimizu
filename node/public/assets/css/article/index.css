@@ -28,6 +28,7 @@ $font-xxl: 2rem;
   max-width: 1000px;
   margin-top: 60px;
   z-index: 0;
+  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -39,7 +40,6 @@ $font-xxl: 2rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 15px;
   }
 }
 
@@ -52,7 +52,6 @@ $font-xxl: 2rem;
 .p-article__main .p-article__main__content .p-article__main__content__refine {
   position: relative;
   width: 100%;
-  padding: 0 15px;
   z-index: 1;
 }
 
@@ -164,14 +163,8 @@ $font-xxl: 2rem;
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result {
-  padding: 10px 15px 0px 15px;
+  padding: 10px 0px 0px 0px;
   margin-bottom: -10px;
-}
-
-@media (min-width: 768px) {
-  .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result {
-    padding: 10px 0px 0px 0px;
-  }
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result .p-article__main__content__column__result__category {
@@ -207,32 +200,6 @@ $font-xxl: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
   color: #969696;
-}
-
-.p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList {
-  padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-  .p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList {
-    padding: 0;
-  }
-}
-
-.p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__pagenation {
-  width: 100%;
-  padding: 0 15px;
-  margin-top: 40px;
-}
-
-@media (min-width: 768px) {
-  .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__pagenation {
-    padding: 0;
-  }
-}
-
-.p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__pagenation .m-pagenation {
-  width: 100%;
 }
 
 .p-article__main .p-article__main__sidebar {

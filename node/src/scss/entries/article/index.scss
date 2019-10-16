@@ -22,12 +22,12 @@
   max-width: 1000px;
   margin-top:60px;
   z-index: 0;
+  padding:0 15px;
 
   @include screen-large {
     display: flex;
     margin-top:30px;
     justify-content: space-between;
-    padding:0 15px;
   }
 
   .p-article__main__content {
@@ -40,7 +40,6 @@
     .p-article__main__content__refine {
       position: relative;
       width: 100%;
-      padding:0 15px;
       z-index: 1;
     
       @include screen-large {
@@ -131,12 +130,8 @@
       }
   
       .p-article__main__content__column__result {
-        padding:10px 15px 0px 15px;
+        padding:10px 0px 0px 0px;
         margin-bottom:-10px;
-
-        @include screen-large {
-          padding:10px 0px 0px 0px;
-        }
     
         .p-article__main__content__column__result__category {
           display: flex;
@@ -164,28 +159,6 @@
           }
         }
       }
-    
-      .o-verticallyCardList {
-        padding:0 15px;
-
-        @include screen-large {
-          padding:0;
-        }
-      }
-    
-      .p-article__main__content__column__pagenation {
-        width: 100%;
-        padding:0 15px;
-        margin-top:40px;
-        
-        @include screen-large {
-          padding:0;
-        }
-    
-        .m-pagenation {
-          width: 100%;
-        }  
-      }
     }
   }
 
@@ -197,6 +170,7 @@
       width: 30%;
       min-width: 300px;
     }
+    
   }
 }
 

@@ -1,12 +1,14 @@
 .articles__pager {
   width: 100%;
+  margin-top:45px;
+  position: relative;
 
   .c-pager {
-    width: calc(100% - 110px);
+    width: calc(100% - 80px);
     margin:0 auto;
     display: flex;
-    justify-content: space-between;
-    max-width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .page-numbers {
       height: 35px;
@@ -17,13 +19,39 @@
       justify-content: center;
       align-items: center;
       font-size: $font-m;
+      margin:0 8px;
 
       &.prev {
+        position: absolute;
+        top:2.5px;
+        left: 0;
+        transform: translateX(0%) translateY(0%);
+        height: 30px;
+        width: 30px;
+        margin:0;
 
+        .icon-arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       &.next {
+        position: absolute;
+        bottom:2.5px;
+        right: 0;
+        transform: translateX(0%) translateY(0%);
+        height: 30px;
+        width: 30px;
+        margin: 0px;
 
+        .icon-arrow {
+          transform:rotate(180deg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       &.current {
@@ -31,7 +59,13 @@
       }
 
       &.dots {
+        background-color: transparent;
+        width: 16px;
+        margin:0px;
+      }
 
+      &:hover {
+        background-color: $bg-1-color;
       }
     }
   }
