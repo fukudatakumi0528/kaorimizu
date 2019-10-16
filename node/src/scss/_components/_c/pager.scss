@@ -1,0 +1,38 @@
+.articles__pager {
+  width: 100%;
+
+  .c-pager {
+    width: calc(100% - 110px);
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+
+    .page-numbers {
+      height: 35px;
+      width: 35px;
+      border-radius: 25px;
+      background-color: $bg-3-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-m;
+
+      &.prev {
+
+      }
+
+      &.next {
+
+      }
+
+      &.current {
+        background-color: $bg-1-color;
+      }
+
+      &.dots {
+
+      }
+    }
+  }
+}

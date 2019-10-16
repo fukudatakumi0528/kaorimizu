@@ -60,7 +60,7 @@
 					<?php
 						$args = [
 							'post_type' => 'feature',
-							'posts_per_page' => 12,
+							'posts_per_page' => 6,
 							'paged' => $paged,
 						];
 						$query = new WP_Query($args);
@@ -86,8 +86,8 @@
 								<div class="m-verticallyCard__inner__footer">
 									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
 									<a href= <?php the_permalink() ?> class="m-verticallyCard__inner__footer__title" href=""><?php the_title_attribute(); ?></a>
-									<div class="m-squareCard__inner__footer__description">
-										<p class="m-squareCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+									<div class="m-verticallyCard__inner__footer__description">
+										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>
 									</div>
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -110,8 +110,8 @@
 								'format' => '?paged=%#%',
 								'current' => max( 1, get_query_var('paged') ),
 								'total' => $query->max_num_pages,
-								'prev_text' => __(''),
-								'next_text' => __(''),
+								'prev_text' => __('前へ'),
+								'next_text' => __('次へ'),
 								'mid_size' => 1,
 							];
 							echo paginate_links($pgArgs);

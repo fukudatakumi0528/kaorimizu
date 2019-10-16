@@ -665,6 +665,43 @@ button {
   }
 }
 
+.articles__pager {
+  width: 100%;
+}
+
+.articles__pager .c-pager {
+  width: calc(100% - 110px);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 300px;
+}
+
+.articles__pager .c-pager .page-numbers {
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.articles__pager .c-pager .page-numbers.current {
+  background-color: #FFD94A;
+}
+
 /*
 
 
