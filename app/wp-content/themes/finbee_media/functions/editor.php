@@ -200,7 +200,6 @@ function register_cpt_hobby() {
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
-        'show_in_rest' => true,
     );
 
     register_post_type( 'hobby', $args );
@@ -283,7 +282,6 @@ function register_cpt_life() {
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
-        'show_in_rest' => true,
     );
 
     register_post_type( 'life', $args );
@@ -365,7 +363,6 @@ function register_cpt_learn() {
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
-        'show_in_rest' => true,
     );
 
     register_post_type( 'learn', $args );
