@@ -126,7 +126,6 @@ function register_cpt_feature() {
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
         'has_archive'   => true,                       // この投稿タイプのアーカイブを有効にする
-        'show_in_rest' => true,
     );
 
     register_post_type( 'feature', $args );
@@ -442,3 +441,38 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
+function article__interview_shortcode($atts ,$content){
+
+    $atts = shortcode_atts(array(
+        "src" => "ホワイトベアー株式会社",
+        "name" => "四谷"
+        ), $atts);
+
+    return '<div class="article__interview">'
+                . '<div class="article__interview__human">'
+                    . '<img class="article__interview__human__image" src="' . $atts['src'] . '" alt="">'
+                    . '<div class="article__interview__human__name">'
+                        . $atts['name'] 
+                    . '</div>'
+                . '</div>'
+                . '<div class="article__interview__callout">'
+                    . '<span class="icon-callout"></span>'
+                    . '<p class="article__interview__callout__text">'
+                        . $content
+                    . '</p>'
+                . '</div>'
+            . '</div>';
+}
+add_shortcode( 'article__interview', 'article__interview_shortcode' );
+
+function add_add_shortcode_button_plugin( $plugin_array ) {
+    $plugin_array[ 'article__interview_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor.js';
+    return $plugin_array;
+}
+add_filter( 'mce_external_plugins', 'add_add_shortcode_button_plugin' );
+
+function add_shortcode_button( $buttons ) {
+    $buttons[] = 'article__interview';
+    return $buttons;
+}
+add_filter( 'mce_buttons', 'add_shortcode_button' );

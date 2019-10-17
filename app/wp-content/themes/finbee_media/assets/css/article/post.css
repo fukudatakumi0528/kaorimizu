@@ -10,6 +10,27 @@ $font-xxl: 2rem;
 .p-articlePost__main {
   margin-top: 20px;
   padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 90px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-articlePost__main .p-articlePost__main__content {
+    max-width: 60%;
+  }
 }
 
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__header h1 {
@@ -129,6 +150,16 @@ $font-xxl: 2rem;
   font-size: 12px;
 }
 
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li::before {
+  content: "\f105";
+  display: block;
+  font-size: 1.4rem;
+  margin-right: 8px;
+  font-family: FontAwesome;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+}
+
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li a {
   margin: 0;
   font-size: 1.2rem;
@@ -141,16 +172,7 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li a::before {
-  content: "";
-  display: block;
-  background-image: url(/wp-content/themes/finbee_media/assets/img/common/head.svg);
-  height: 10px;
-  width: 10px;
-  margin-right: 8px;
-  background-size: contain;
+  color: #262626;
 }
 
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body h2 {
@@ -198,10 +220,45 @@ $font-xxl: 2rem;
   text-decoration: underline;
 }
 
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body a[target="_blank"]:after {
+  margin-left: 4px;
+  content: "\f24d";
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body img {
   display: block;
   max-width: 100%;
   margin-top: 20px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .wp-block-image {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .wp-block-image .aligncenter {
+  max-width: 100%;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .wp-block-image .aligncenter .wp-caption.alignnone {
+  max-width: 100%;
+  height: auto;
+  width: 100% !important;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .wp-block-image .aligncenter .wp-caption.alignnone img {
+  height: auto;
+  max-width: 100%;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .wp-block-image .aligncenter .wp-caption.alignnone p {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  color: #969696;
+  font-size: 1rem;
 }
 
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body iframe {
@@ -247,6 +304,7 @@ $font-xxl: 2rem;
   content: "" counter(cnt) "";
   border-radius: 100%;
   line-height: 200%;
+  font-weight: 700;
 }
 
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body ol li p {
@@ -347,6 +405,7 @@ $font-xxl: 2rem;
 }
 
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__human .article__interview__human__image {
+  margin-top: 0px;
   height: 70px;
   width: 70px;
   border-radius: 35px;
@@ -386,6 +445,18 @@ $font-xxl: 2rem;
   display: block;
   max-width: 100%;
   margin: 20px auto 0 auto;
+}
+
+.p-articlePost__main .p-articlePost__main__sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost__main .p-articlePost__main__sidebar {
+    display: block;
+    width: 30%;
+    min-width: 300px;
+  }
 }
 
 .p-articlePost__footer {

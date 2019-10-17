@@ -6,8 +6,21 @@
 .p-articlePost__main {
 	margin-top:20px;
 	padding:0 15px;
+	margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+
+	@include screen-large {
+    display: flex;
+    margin-top:90px;
+    justify-content: space-between;
+  }
 
 	.p-articlePost__main__content {
+
+    @include screen-large {
+      max-width: 60%;
+    }
 
 		.p-articlePost__main__content__column {
 
@@ -112,6 +125,15 @@
 										font-size: 12px;
 									}          
 	
+									&::before {
+										content: "\f105";
+										display: block;
+										font-size: $font-s;
+										margin-right: 8px;
+										font-family: FontAwesome;
+										text-decoration-line:none;
+									}
+
 									a {
 										margin:0;
 										font-size: $font-xs;
@@ -120,16 +142,7 @@
 										line-height: 170%; 
 										display: flex;
 										align-items: center;
-
-										&::before {
-											content: "";
-											display: block;
-											background-image: url(/wp-content/themes/finbee_media/assets/img/common/head.svg);
-											height: 10px;
-											width: 10px;
-											margin-right: 8px;
-											background-size:contain;
-										}
+										color:$font-base-color;
 									}
 								}
 							}
@@ -174,12 +187,50 @@
 					a {
 						color:$font-2-color;
 						text-decoration: underline;
+
+						&[target="_blank"] {
+
+							&:after {
+								margin-left: 4px;
+								content: "\f24d";
+								font-family: FontAwesome;
+								display: inline-block;							
+							}
+						}
 					}
 
 					img {
 						display: block;
 						max-width: 100%;
 						margin-top:20px;						
+					}
+
+					.wp-block-image {
+						margin-top:20px;
+						max-width: 100%;
+
+						.aligncenter {
+							max-width: 100%;
+
+							.wp-caption.alignnone {
+								max-width: 100%;
+								height: auto;
+								width: 100% !important;
+
+								img {
+									height: auto;
+									max-width: 100%;
+								}
+
+								p {
+									width: 100%;
+									text-align: center;
+									margin-top:0;
+									color:$font-4-color;
+									font-size: $font-xxs;
+								}
+							}
+						}
 					}
 
 					iframe {
@@ -219,6 +270,7 @@
 								content: "" counter(cnt) "";
 								border-radius: 100%;
 								line-height: 200%;
+								font-weight: $font-bold;
 							}
 
 							p {
@@ -320,6 +372,7 @@
 							align-items: center;
 
 							.article__interview__human__image {
+								margin-top:0px;
 								height: 70px;
 								width: 70px;
 								border-radius: 35px;
@@ -365,6 +418,16 @@
 				}
 			}  
 		}
+	}
+
+	.p-articlePost__main__sidebar {
+    display: none;
+
+    @include screen-large {
+      display: block;
+      width: 30%;
+      min-width: 300px;
+    }
 	}
 }
 
