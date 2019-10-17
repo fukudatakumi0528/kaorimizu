@@ -4528,6 +4528,9 @@ main {
 }
 
 @media (min-width: 768px) {
+  .t-rankingArea__slider .t-rankingArea__slider__inner .m-squareCard {
+    height: auto;
+  }
   .t-rankingArea__slider .t-rankingArea__slider__inner .m-squareCard::after {
     content: "";
     display: block;

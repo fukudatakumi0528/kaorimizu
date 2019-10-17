@@ -178,6 +178,7 @@
     .m-squareCard {
 
       @include screen-large {
+        height: auto;
 
         &::after {
           content:"";
