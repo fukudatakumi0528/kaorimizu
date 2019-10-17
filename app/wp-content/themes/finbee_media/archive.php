@@ -6,12 +6,12 @@
 			include(TEMPLATEPATH . '/archives/feature.php');
 			break;
 		case "hobby":
-			include(TEMPLATEPATH . '/archives/news.php');
+			include(TEMPLATEPATH . '/archives/hobby.php');
 			break;
 		case "life":
-			include(TEMPLATEPATH . '/archives/project.php');
+			include(TEMPLATEPATH . '/archives/life.php');
 			break;
 		case "learn":
-			include(TEMPLATEPATH . '/archives/project.php');
+			include(TEMPLATEPATH . '/archives/learn.php');
 			break;
 	}

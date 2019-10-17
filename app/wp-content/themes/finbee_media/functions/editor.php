@@ -437,7 +437,6 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-/*
 function article__interview_shortcode($atts ,$content){
 
     $atts = shortcode_atts(array(

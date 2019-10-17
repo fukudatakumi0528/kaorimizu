@@ -3,7 +3,7 @@
 	global $breadcrumb;
 
 	$cssName = "article/index";
-	$breadcrumb = "<li>特集</li>";
+	$breadcrumb = "<li>趣味</li>";
 	get_header();
 ?>
 
@@ -11,10 +11,10 @@
 	<section class="p-article__topper">
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
-				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/hobby.png" alt="">
 					<div class="o-topperSection__main__title__text">
-						<h1 class="o-topperSection__main__title__text__main">特集</h1>
-						<p class="o-topperSection__main__title__text__sub">Feature</p>
+						<h1 class="o-topperSection__main__title__text__main">趣味</h1>
+						<p class="o-topperSection__main__title__text__sub">Hobby</p>
 					</div>
 				</div>
 				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>

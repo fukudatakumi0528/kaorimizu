@@ -7,12 +7,12 @@
 			include(TEMPLATEPATH . '/singles/feature.php');
 			break;
 		case "hobby":
-			include(TEMPLATEPATH . '/singles/news.php');
+			include(TEMPLATEPATH . '/singles/hobby.php');
 			break;
 		case "life":
-			include(TEMPLATEPATH . '/singles/project.php');
+			include(TEMPLATEPATH . '/singles/life.php');
 			break;
 		case "learn":
-			include(TEMPLATEPATH . '/singles/project.php');
+			include(TEMPLATEPATH . '/singles/learn.php');
 			break;
 	}
