@@ -52,6 +52,33 @@
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<?php the_content(); ?>
 						<?php endwhile; endif; ?>
+						<div class="article__interview">
+							<div class="article__interview__human">
+								<img class="article__interview__human__image" src="<?php echo assetsPath('img') . "/dammy/dammy-image1.jpg" ?>" alt="">
+								<div class="article__interview__human__name">斎藤選手</div>
+							</div>
+							<div class="article__interview__callout"><span class="icon-callout"></span>
+								<p class="article__interview__callout__text">会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記</p>
+							</div>
+						</div>
+						<div class="article__interview">
+							<div class="article__interview__human"><img class="article__interview__human__image" src="<?php echo assetsPath('img') . "/dammy/dammy-human1.jpg" ?>" alt="">
+								<div class="article__interview__human__name">斎藤選手</div>
+							</div>
+							<div class="article__interview__callout"><span class="icon-callout"></span>
+								<p class="article__interview__callout__text">会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。</p>
+							</div>
+						</div>
+						<div class="article__interview">
+							<div class="article__interview__human"><img class="article__interview__human__image" src="<?php echo assetsPath('img') . "/dammy/dammy-human2.jpg" ?>" alt="">
+								<div class="article__interview__human__name">レイコ</div>
+							</div>
+							<div class="article__interview__callout"><span class="icon-callout"></span>
+								<p class="article__interview__callout__text">会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記事が入ります。会話形式のインタビュー記</p>
+							</div>
+						</div>
+						<img class="article__bnr" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+
 					</section>
 
 					<footer class="article__footer">

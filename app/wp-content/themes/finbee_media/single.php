@@ -4,7 +4,7 @@
 	$type = get_post_type();
 	switch ($type) {
 		case "feature":
-			include(TEMPLATEPATH . '/singles/column.php');
+			include(TEMPLATEPATH . '/singles/feature.php');
 			break;
 		case "hobby":
 			include(TEMPLATEPATH . '/singles/news.php');

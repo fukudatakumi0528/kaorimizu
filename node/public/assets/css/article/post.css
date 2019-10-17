@@ -198,6 +198,18 @@ $font-xxl: 2rem;
   text-decoration: underline;
 }
 
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body img {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body iframe {
+  display: block;
+  margin: 20px auto 0 auto;
+  max-width: 100%;
+}
+
 .p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body ul {
   margin: 4px 0 0 0;
   padding: 0 0 0 24px;
@@ -299,6 +311,81 @@ $font-xxl: 2rem;
   line-height: 170%;
   font-weight: 700;
   padding-left: 10px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body blockquote cite {
+  margin: 0;
+  color: #969696;
+  font-size: 1.4rem;
+  line-height: 170%;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__human {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__human .article__interview__human__image {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__human .article__interview__human__name {
+  margin-top: 4px;
+  font-size: 1rem;
+  line-height: 170%;
+  font-weight: 700;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__callout {
+  max-width: calc(100% - 70px);
+  position: relative;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__callout .icon-callout {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 30px;
+  height: 15px;
+  font-size: 14px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__interview .article__interview__callout .article__interview__callout__text {
+  margin: 0 0 0 15px;
+  padding: 18px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+}
+
+.p-articlePost__main .p-articlePost__main__content .p-articlePost__main__content__column .article .article__body .article__bnr {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto 0 auto;
 }
 
 .p-articlePost__footer {
