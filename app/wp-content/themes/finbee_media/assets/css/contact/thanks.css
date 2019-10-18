@@ -1,1 +1,139 @@
-.p-contactThanks__main{margin-top:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 15px}.p-contactThanks__main .p-contactThanks__main__topper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.p-contactThanks__main .p-contactThanks__main__topper .icon-check2{font-size:30px}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title{text-align:center;font-size:2rem;font-weight:700;line-height:150%;background:-webkit-gradient(linear,left top,left bottom,color-stop(60%,transparent),color-stop(40%,#FFD94A));background:linear-gradient(transparent 60%,#FFD94A 40%)}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp{display:block}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc{display:none}@media (min-width:768px){.p-contactThanks__main{margin-top:120px}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp{display:none}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc{display:block}}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__subtitle{margin-top:5px;text-align:center;font-size:1.2rem;font-weight:700;line-height:150%}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description{margin-top:30px;text-align:center;font-size:1.4rem;font-weight:700;line-height:150%}.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br{display:none}@media (min-width:768px){.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br{display:block}}.p-contactThanks__main .p-contactThanks__main__link{margin-top:15px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;cursor:pointer}@media (min-width:768px){.p-contactThanks__main .p-contactThanks__main__link{margin-top:40px}}.p-contactThanks__main .p-contactThanks__main__link .icon-btn{font-size:27px}.p-contactThanks__main .p-contactThanks__main__link .p-contactThanks__main__link__text{margin-left:5px;font-size:1.4rem;font-weight:700}.p-contactThanks__footer{margin-top:0;width:100%;overflow:hidden}.p-contactThanks__footer .m-breadcrumb{margin-top:50px;padding:15px;background-color:#F5F5F5}
+/*
+$font-xs: 1rem;
+$font-s: 1.2rem;
+$font-m: 1.4rem;
+$font-l: 1.6rem;
+$font-xl: 1.8rem;
+$font-xxl: 2rem;
+*/
+.p-contactThanks__main {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main {
+    margin-top: 120px;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .icon-check2 {
+  font-size: 30px;
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 150%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #FFD94A));
+  background: linear-gradient(transparent 60%, #FFD94A 40%);
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp {
+    display: none;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlyPc {
+    display: block;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__subtitle {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__description br {
+    display: block;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__link {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__link {
+    margin-top: 40px;
+  }
+}
+
+.p-contactThanks__main .p-contactThanks__main__link .icon-btn {
+  font-size: 27px;
+}
+
+.p-contactThanks__main .p-contactThanks__main__link .p-contactThanks__main__link__text {
+  margin-left: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.p-contactThanks__footer {
+  margin-top: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.p-contactThanks__footer .m-breadcrumb {
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #F5F5F5;
+}
