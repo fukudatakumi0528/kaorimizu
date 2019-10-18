@@ -7,3 +7,10 @@
 
 
 // 自動アップデートは停止
+
+//オブジェクトの配列を、昇順に並び替えるときに使用。
+function sort_count( $a , $b){
+  $sort_terms = strcmp( $b->count , $a->count ); //記事数で並び替え
+  
+  return $sort_terms;
+};

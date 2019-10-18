@@ -487,11 +487,6 @@
 
     $popularTags = get_terms($taxonomies, $args);
 
-    function sort_count( $a , $b){
-      $sort_terms = strcmp( $b->count , $a->count ); //記事数で並び替え
-      
-      return $sort_terms;
-    };
     usort($popularTags,"sort_count");
 
     $rankingPopularTags = array_slice($popularTags,0,10);

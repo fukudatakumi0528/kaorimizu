@@ -7,20 +7,20 @@
 <body>
 <div class="wrap">
 	<div class="l-spMenu" id="js-spMenu">
-        <header class="l-header">
-          <div class="o-headerInner">
-						<a class="m-logo" href="">
-							<img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
-						</a>
-            <div class="o-headerInner__left">
-							<a class="icon-instagram" href=""></a>
-							<a class="icon-twitter" href=""></a>
-							<a class="icon-facebook" href="">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</a>
-						</div>
-          </div>
+		<header class="l-header">
+			<div class="o-headerInner">
+				<a class="m-logo" href="">
+					<img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+				</a>
+				<div class="o-headerInner__left">
+					<a class="icon-instagram" href=""></a>
+					<a class="icon-twitter" href=""></a>
+					<a class="icon-facebook" href="">
+						<span class="path1"></span>
+						<span class="path2"></span>
+					</a>
+				</div>
+			</div>
           <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
@@ -51,33 +51,74 @@
         </header>
         <div class="l-spMenu__main">
           <ul class="l-spMenu__main__nav">
-            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
-                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-home l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span></span>
-                  <p class="l-spMenu__main__nav__list__link__left__text">TOP</p>
-                </div>
-                <div class="icon-btn"></div></a></li>
-            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
-                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-feature l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                  <p class="l-spMenu__main__nav__list__link__left__text">特集</p>
-                </div>
-                <div class="icon-btn"></div></a></li>
-            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
-                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-hobby l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+            <li class="l-spMenu__main__nav__list">
+							<a class="l-spMenu__main__nav__list__link" href="">
+								<div class="l-spMenu__main__nav__list__link__left">
+									<span class="icon-home l-spMenu__main__nav__list__link__left__icon">
+										<span class="path1"></span>
+										<span class="path2"></span>
+									</span>
+									<p class="l-spMenu__main__nav__list__link__left__text">TOP</p>
+								</div>
+								<div class="icon-btn"></div>
+							</a>
+						</li>
+            <li class="l-spMenu__main__nav__list">
+							<a class="l-spMenu__main__nav__list__link" href="">
+								<div class="l-spMenu__main__nav__list__link__left">
+									<span class="icon-feature l-spMenu__main__nav__list__link__left__icon">
+										<span class="path1"></span>
+										<span class="path2"></span>
+										<span class="path3"></span>
+									</span>
+									<p class="l-spMenu__main__nav__list__link__left__text">特集</p>
+								</div>
+								<div class="icon-btn"></div>
+							</a>
+						</li>
+            <li class="l-spMenu__main__nav__list">
+							<a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left">
+									<span class="icon-hobby l-spMenu__main__nav__list__link__left__icon">
+										<span class="path1"></span>
+										<span class="path2"></span>
+										<span class="path3"></span>
+										<span class="path4"></span>
+										<span class="path5"></span>
+									</span>
                   <p class="l-spMenu__main__nav__list__link__left__text">趣味</p>
                 </div>
-                <div class="icon-btn"></div></a></li>
-            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
-                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-life l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span></span>
+								<div class="icon-btn"></div>
+							</a>
+						</li>
+            <li class="l-spMenu__main__nav__list">
+							<a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left">
+									<span class="icon-life l-spMenu__main__nav__list__link__left__icon">
+										<span class="path1"></span>
+										<span class="path2"></span>
+									</span>
                   <p class="l-spMenu__main__nav__list__link__left__text">生活</p>
                 </div>
-                <div class="icon-btn"></div></a></li>
-            <li class="l-spMenu__main__nav__list"><a class="l-spMenu__main__nav__list__link" href="">
-                <div class="l-spMenu__main__nav__list__link__left"><span class="icon-learn l-spMenu__main__nav__list__link__left__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+								<div class="icon-btn"></div>
+							</a>
+						</li>
+            <li class="l-spMenu__main__nav__list">
+							<a class="l-spMenu__main__nav__list__link" href="">
+                <div class="l-spMenu__main__nav__list__link__left">
+									<span class="icon-learn l-spMenu__main__nav__list__link__left__icon">
+										<span class="path1"></span>
+										<span class="path2"></span>
+										<span class="path3"></span>
+									</span>
                   <p class="l-spMenu__main__nav__list__link__left__text">学び</p>
                 </div>
-                <div class="icon-btn"></div></a></li>
+								<div class="icon-btn"></div>
+							</a>
+						</li>
           </ul>
-          <div class="l-spMenu__main__searcharea"><span class="icon-close js-spMenu__close"></span>
+          <div class="l-spMenu__main__searcharea">
+						<span class="icon-close js-spMenu__close"></span>
             <div class="m-inputSearch">
               <input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
               <div class="icon-search"></div>
@@ -85,99 +126,139 @@
           </div>
           <div class="l-spMenu__main__pickup">
             <p class="l-spMenu__main__pickup__title">Pickup</p>
-                        <ul class="o-verticallyCardList">
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                        </ul>
-          </div>
+							<ul class="o-verticallyCardList">
+							<li class="m-verticallyCard">
+								<div class="m-verticallyCard__inner">
+									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
+									<div class="m-verticallyCard__inner__footer">
+										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"></div>
+										</div>
+																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
+																				</div>
+									</div>
+								</div>
+							</li>
+							<li class="m-verticallyCard">
+								<div class="m-verticallyCard__inner">
+									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
+									<div class="m-verticallyCard__inner__footer">
+										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"></div>
+										</div>
+																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+																				</div>
+									</div>
+								</div>
+							</li>
+							<li class="m-verticallyCard">
+								<div class="m-verticallyCard__inner">
+									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
+									<div class="m-verticallyCard__inner__footer">
+										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"></div>
+										</div>
+																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+																				</div>
+									</div>
+								</div>
+							</li>
+							<li class="m-verticallyCard">
+								<div class="m-verticallyCard__inner">
+									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
+									<div class="m-verticallyCard__inner__footer">
+										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"></div>
+										</div>
+																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
+																				</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<?php 
+						$taxonomies = array( 
+							'feature_tag',
+							'hobby_tag',
+							'life_tag',
+							'learn_tag',
+						);
+					
+						$args = array(
+							'orderby'       => 'name', 
+							'order'         => 'ASC',
+							'hide_empty'    => true, 
+							'exclude'       => array(), 
+							'exclude_tree'  => array(), 
+							'include'       => array(),
+							'number'        => '', 
+							'fields'        => 'all', 
+							'slug'          => '', 
+							'parent'        => '',
+							'hierarchical'  => true, 
+							'child_of'      => 0, 
+							'childless'     => false,
+							'get'           => '', 
+							'name__like'    => '',
+							'description__like' => '',
+							'pad_counts'    => false, 
+							'offset'        => '', 
+							'search'        => '', 
+							'cache_domain'  => 'core'
+						); 					
+				
+						$popularTags = get_terms($taxonomies, $args);
+				
+						usort($popularTags,"sort_count");
+				
+						$rankingPopularTags = array_slice($popularTags,0,10);
+				
+						if(count($rankingPopularTags) > 0):					
+					?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
-                        <ul class="o-classificationList">
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-                        </ul>
+						<ul class="o-classificationList">
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
+							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
+						</ul>
           </div>
-        </div>
+				</div>
+				<?php endif; ?>
       </div>
       <div class="l-spSearch" id="js-spSearch">
         <header class="l-header">

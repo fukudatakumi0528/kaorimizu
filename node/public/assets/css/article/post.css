@@ -156,6 +156,7 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__header img.thumbnail {
   margin-top: 15px;
   width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -319,6 +320,7 @@ $font-xxl: 2rem;
   display: block;
   max-width: 100%;
   margin-top: 20px;
+  height: auto;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .wp-block-image {
