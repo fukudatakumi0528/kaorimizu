@@ -34,7 +34,7 @@
 					</div>
 					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
 						<ul class="o-classificationList">
-							<?php $tags = get_terms('feature_tag'); ?>
+							<?php $tags = get_terms('learn_tag'); ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
 										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
@@ -59,14 +59,14 @@
 				<div class="o-verticallyCardList">
 					<?php
 						$args = [
-							'post_type' => 'feature',
+							'post_type' => 'learn',
 							'posts_per_page' => 6,
 							'paged' => $paged,
 						];
 						$query = new WP_Query($args);
 						if($query->have_posts()): while($query->have_posts()): $query->the_post();
 
-						$singletags = get_the_terms($post->ID, 'feature_tag');
+						$singletags = get_the_terms($post->ID, 'learn_tag');
 
 						if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
 							$thumbnail =  get_the_post_thumbnail();

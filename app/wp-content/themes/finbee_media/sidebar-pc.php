@@ -454,30 +454,67 @@
       </li>
     </ul>
   </div>
+  <?php 
+    $taxonomies = array( 
+      'feature_tag',
+      'hobby_tag',
+      'life_tag',
+      'learn_tag',
+    );
+  
+    $args = array(
+      'orderby'       => 'name', 
+      'order'         => 'ASC',
+      'hide_empty'    => true, 
+      'exclude'       => array(), 
+      'exclude_tree'  => array(), 
+      'include'       => array(),
+      'number'        => '', 
+      'fields'        => 'all', 
+      'slug'          => '', 
+      'parent'        => '',
+      'hierarchical'  => true, 
+      'child_of'      => 0, 
+      'childless'     => false,
+      'get'           => '', 
+      'name__like'    => '',
+      'description__like' => '',
+      'pad_counts'    => false, 
+      'offset'        => '', 
+      'search'        => '', 
+      'cache_domain'  => 'core'
+    ); 					
+
+    $popularTags = get_terms($taxonomies, $args);
+
+    function sort_count( $a , $b){
+      $sort_terms = strcmp( $b->count , $a->count ); //記事数で並び替え
+      
+      return $sort_terms;
+    };
+    usort($popularTags,"sort_count");
+
+    $rankingPopularTags = array_slice($popularTags,0,10);
+
+    if(count($rankingPopularTags) > 0):
+  ?>
+
   <div class="t-sideBarPc__keyword">
     <div class="t-sideBarPc__keyword__header">
       <div class="t-sideBarPc__keyword__header__tilte">人気のワード</div>
       <div class="t-sideBarPc__keyword__header__subtitle">Ranking</div>
     </div>
     <ul class="o-classificationList">
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">20代で始めたい</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-      <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-          <p class="o-classificationList__tag__link__inner">20代で始めたい</p></a></li>
+      <?php foreach($rankingPopularTags as $rankingPopularTag): ?>
+        <li class="o-classificationList__tag">
+          <a class="o-classificationList__tag__link" href="">
+            <p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
+          </a>
+        </li>
+      <?php endforeach;?>
     </ul>
   </div>
+  <?php endif; ?>
   <div class="t-sideBarPc__downlord">
     <div class="t-sideBarPc__downlord__inner"><img class="t-sideBarPc__downlord__inner__image" src="<?php echo assetsPath('img') ?>common/footer/download.png" alt="">
       <div class="t-sideBarPc__downlord__inner__main">

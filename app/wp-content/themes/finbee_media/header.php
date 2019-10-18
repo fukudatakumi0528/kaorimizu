@@ -20,11 +20,11 @@
 				</a>
 			</div>
 		</div>
-		<div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia"></a>
+		<div class="o-headerInnerPc"><a class="m-logo" href="<?= site_url('') ?>"><img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia"></a>
 			<div class="o-headerInnerPc__left">
 				<ul class="o-headerInnerPc__left__category">
 					<li class="o-headerInnerPc__left__category__list">
-						<a class="o-headerInnerPc__left__category__list__link" href="">
+						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
 							<span class="icon-feature o-headerInnerPc__left__category__list__link__icon">
 								<span class="path1"></span><span class="path2"></span><span class="path3"></span>
 							</span>
@@ -32,7 +32,7 @@
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
-						<a class="o-headerInnerPc__left__category__list__link" href="<?= home_url() ?>/">
+						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
 							<span class="icon-hobby o-headerInnerPc__left__category__list__link__icon">
 								<span class="path1"></span>
 								<span class="path2"></span>
@@ -44,7 +44,7 @@
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
-						<a class="o-headerInnerPc__left__category__list__link" href="<?= home_url() ?>/">
+						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
 							<span class="icon-life o-headerInnerPc__left__category__list__link__icon">
 								<span class="path1"></span>
 								<span class="path2"></span>
@@ -53,7 +53,7 @@
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
-						<a class="o-headerInnerPc__left__category__list__link" href="<?= home_url() ?>/">
+						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
 							<span class="icon-learn o-headerInnerPc__left__category__list__link__icon">
 								<span class="path1"></span>
 								<span class="path2"></span>

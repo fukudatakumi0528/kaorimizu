@@ -99,16 +99,16 @@
             <div class="l-footer__search__inner__main">
               <ul class="l-footer__search__inner__main__category">
                 <li class="l-footer__search__inner__main__category__list">
-									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">特集</a>
+									<a class="l-footer__search__inner__main__category__list__text" href="<?= site_url('feature/') ?>">特集</a>
 								</li>
                 <li class="l-footer__search__inner__main__category__list">
-									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">趣味</a>
+									<a class="l-footer__search__inner__main__category__list__text" href="<?= site_url('hobby/') ?>">趣味</a>
 								</li>
                 <li class="l-footer__search__inner__main__category__list">
-									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">生活</a>
+									<a class="l-footer__search__inner__main__category__list__text" href="<?= site_url('life/') ?>">生活</a>
 								</li>
                 <li class="l-footer__search__inner__main__category__list">
-									<a class="l-footer__search__inner__main__category__list__text" href="<?php home_url() ?>/">学び</a>
+									<a class="l-footer__search__inner__main__category__list__text" href="<?= site_url('learn/') ?>">学び</a>
 								</li>
               </ul>
               <div class="l-footer__search__inner__main__button">
@@ -120,7 +120,7 @@
 								</a>
 							</div>
               <div class="l-footer__search__inner__main__footer">
-								<a class="l-footer__search__inner__main__footer__link" href="<?php home_url() ?>/">
+								<a class="l-footer__search__inner__main__footer__link" href="https://finbee.jp/">
 									<span class="icon-btn"></span>
 									<p class="l-footer__search__inner__main__footer__link__text">自動貯金サービス「finbee」</p>
 									<span class="icon-tab"></span>
@@ -144,7 +144,7 @@
                   </div>
                 </div>
                 <div class="l-footer__search__inner__downlord__inner__footer">
-									<a class="l-footer__search__inner__downlord__inner__footer__link" href="<?php home_url() ?>/">
+									<a class="l-footer__search__inner__downlord__inner__footer__link" href="https://finbee.jp/">
 										<span class="icon-btn"></span>
 										<p class="l-footer__search__inner__downlord__inner__footer__link__text">公式サイトはこちら</p>
 										<span class="icon-tab"></span>
@@ -183,20 +183,6 @@
           </div>
         </div>
       </footer>
-
-			<!--
-			<div class="footer__pager">
-				<div class="breadcrumb">
-					<ol>
-						<li><a href="<?php home_url() ?>/"></a></li>
-						<?php if(!empty($breadcrumb)): ?>
-							<?= $breadcrumb ?>
-						<?php endif; ?>
-					</ol>
-				</div>
-				<a class="pagetop" href="#"></a>
-			</div>
-			-->
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<?php /* <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> */ ?>

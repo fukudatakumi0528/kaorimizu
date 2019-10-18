@@ -28,72 +28,78 @@
 
 ?>
 
-<main>
-	<section class="p-articlePost__main">
-		
-	</section>
-	<section class="p-articlePost__main">
-		<div class="p-articlePost__main__content">
-			<div class="p-articlePost__main__content__column">
-				<article class="article">
-					<header class="article__header">
-						<h1><?php the_title() ?></h1>
-						<div class="article__header__sub">
-							<p>趣味</p>
-							<time><?php the_time('Y.n.j') ?></time>
-						</div>
-						<img src="<?= get_the_post_thumbnail_url() ?>" class="thumbnail">
-						<!--
-						<div class="article__sns">
-							<?php get_template_part('element/sns') ?>
-						</div>
-						-->
-					</header>
-
-					<section class="article__body">
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-							<?php the_content(); ?>
-						<?php endwhile; endif; ?>
-						<img class="article__bnr" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
-					</section>
-
-					<footer class="article__footer">
-						<div class="article__sns">
-							<?php get_template_part('element/sns') ?>
-						</div>
-						<div class="article__footer_likeBox">
-							<figure style="background-image: url(<?= $thumbnail ?>)"></figure>
-							<div><b>facebookでも<br>随時配信しています！</b>
-								<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+<main class="p-articlePost">
+	<div class="p-articlePost__inner">
+		<section class="p-articlePost__inner__topper">
+			<h1><?php the_title() ?></h1>
+			<div class="article__header__sub">
+				<p>趣味</p>
+				<time><?php the_time('Y.n.j') ?></time>
+			</div>
+		</section>
+		<section class="p-articlePost__inner__main">
+			<div class="p-articlePost__inner__main__content">
+				<div class="p-articlePost__inner__main__content__column">
+					<article class="article">
+						<header class="article__header">
+							<h1><?php the_title() ?></h1>
+							<div class="article__header__sub">
+								<p>趣味</p>
+								<time><?php the_time('Y.n.j') ?></time>
 							</div>
-						</div>
-					</footer>
-				</article>
+							<img src="<?= get_the_post_thumbnail_url() ?>" class="thumbnail">
+							<!--
+							<div class="article__sns">
+								<?php get_template_part('element/sns') ?>
+							</div>
+							-->
+						</header>
+
+						<section class="article__body">
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+								<?php the_content(); ?>
+							<?php endwhile; endif; ?>
+							<img class="article__bnr" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+						</section>
+
+						<footer class="article__inner__footer">
+							<div class="article__sns">
+								<?php get_template_part('element/sns') ?>
+							</div>
+							<div class="article__footer_likeBox">
+								<figure style="background-image: url(<?= $thumbnail ?>)"></figure>
+								<div><b>facebookでも<br>随時配信しています！</b>
+									<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+								</div>
+							</div>
+						</footer>
+					</article>
 
 
-				<div class="article__prevnext">
-					<a class="prev" href="<?= $next_post_url ?>">
-						<figure style="background-image: url(<?= $next_post_thumb ?>)"></figure>
-						<div>
-							<time><?= $next_post_time ?></time>
-							<p><?= mb_substr(get_the_title($next_post_ID), 0, 12) ?>...</p>
-						</div>
-					</a>
-					<a class="archive" href="<?= home_url() ?>/column/">ARCHIVE</a>
-					<a class="next" href="<?= $prev_post_url ?>">
-						<div>
-							<time><?= $prev_post_time ?></time>
-							<p><?= mb_substr(get_the_title($prev_post_ID), 0, 12) ?>...</p>
-						</div>
-						<figure style="background-image: url(<?= $prev_post_thumb ?>)"></figure>
-					</a>
+					<div class="article__prevnext">
+						<a class="prev" href="<?= $next_post_url ?>">
+							<figure style="background-image: url(<?= $next_post_thumb ?>)"></figure>
+							<div>
+								<time><?= $next_post_time ?></time>
+								<p><?= mb_substr(get_the_title($next_post_ID), 0, 12) ?>...</p>
+							</div>
+						</a>
+						<a class="archive" href="<?= home_url() ?>/column/">ARCHIVE</a>
+						<a class="next" href="<?= $prev_post_url ?>">
+							<div>
+								<time><?= $prev_post_time ?></time>
+								<p><?= mb_substr(get_the_title($prev_post_ID), 0, 12) ?>...</p>
+							</div>
+							<figure style="background-image: url(<?= $prev_post_thumb ?>)"></figure>
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="p-articlePost__main__sidebar">
-			<?php get_sidebar('pc'); ?>
-		</div>
-	</section>
+			<div class="p-articlePost__inner__main__sidebar">
+				<?php get_sidebar('pc'); ?>
+			</div>
+		</section>
+	</div>
 </main>
 
 
