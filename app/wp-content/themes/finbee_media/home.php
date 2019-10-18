@@ -379,56 +379,103 @@
 				<div class="m-titleBorder__main__border"></div>
 			</div>
 		</div>
-		<div class="p-top__lifeLearn__slider">
-			<div class="p-top__lifeLearn__slider__arrow">
-				<div class="p-top__lifeLearn__slider__arrow__inner js__arrow-top__life">
-					<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-					<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
-				</div>
+
+		<?php if(count($query->posts) < 5): ?>
+			<div class="p-top__lifeLearn__list">
+				<ul class="p-top__lifeLearn__list__inner">
+
+					<?php
+						while($query->have_posts()): $query->the_post();
+
+						$singletags = get_the_terms($post->ID, 'life_tag');
+
+						if ( has_post_thumbnail() ) {
+							$thumbnail =  get_the_post_thumbnail();
+						} 
+
+						if(empty($thumbnail)){
+							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						}
+					?>
+					<li class="m-oblongCard">
+						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
+							<div class="m-oblongCard__inner__topper">
+								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+							</div>
+							<div class="m-oblongCard__inner__footer">
+								<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+								<div class="m-oblongCard__inner__footer__title">
+									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
+								</div>
+								<div class="m-oblongCard__inner__footer__description">
+									<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+								</div>
+								<div class="m-classificationArea">
+									<?php	if($singletags): foreach ($singletags as $tag ): ?>
+										<object>
+											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<?= $tag->name?>
+											</a>
+										</object>
+									<?php  endforeach; endif; ?>
+								</div>
+							</div>
+						</a>
+					</li>
+					<?php endwhile; wp_reset_postdata();?>
+				</ul>
 			</div>
-			<ul class="p-top__lifeLearn__slider__list js-slickSlider-top__life">
-				<?php
-					while($query->have_posts()): $query->the_post();
+		<?php else: ?>
+			<div class="p-top__lifeLearn__slider">
+				<div class="p-top__lifeLearn__slider__arrow">
+					<div class="p-top__lifeLearn__slider__arrow__inner js__arrow-top__life">
+						<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+						<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+					</div>
+				</div>
+				<ul class="p-top__lifeLearn__slider__list js-slickSlider-top__life">
+					<?php
+						while($query->have_posts()): $query->the_post();
 
-					$singletags = get_the_terms($post->ID, 'life_tag');
+						$singletags = get_the_terms($post->ID, 'life_tag');
 
-					if ( has_post_thumbnail() ) {
-						$thumbnail =  get_the_post_thumbnail();
-					} 
+						if ( has_post_thumbnail() ) {
+							$thumbnail =  get_the_post_thumbnail();
+						} 
 
-					if(empty($thumbnail)){
-						$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
-					}
-				?>
-				<li class="m-verticallyCard">
-					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
-						<div class="m-verticallyCard__inner__topper">
-							<div class="m-verticallyCard__inner__topper__image">
-								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+						if(empty($thumbnail)){
+							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						}
+					?>
+					<li class="m-verticallyCard">
+						<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+							<div class="m-verticallyCard__inner__topper">
+								<div class="m-verticallyCard__inner__topper__image">
+									<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="m-verticallyCard__inner__footer">
-							<div class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></div>
-							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
-							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+							<div class="m-verticallyCard__inner__footer">
+								<div class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></div>
+								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+								<div class="m-verticallyCard__inner__footer__description">
+									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								</div>
+								<div class="m-classificationArea">
+									<?php	if($singletags): foreach ($singletags as $tag ): ?>
+										<object>
+											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<?= $tag->name?>
+											</a>
+										</object>
+									<?php  endforeach; endif; ?>
+								</div>
 							</div>
-							<div class="m-classificationArea">
-								<?php	if($singletags): foreach ($singletags as $tag ): ?>
-									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
-											<?= $tag->name?>
-										</a>
-									</object>
-								<?php  endforeach; endif; ?>
-							</div>
-						</div>
-					</a>
-				</li>
-				<?php endwhile; wp_reset_postdata(); ?>
-
-			</ul>
-		</div>
+						</a>
+					</li>
+					<?php endwhile; wp_reset_postdata(); ?>
+				</ul>
+			</div>
+		<?php endif; ?>
 		<div class="p-top__lifeLearn__footer">
 			<a class="p-top__lifeLearn__footer__link" href="<?= site_url('life/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__lifeLearn__footer__link__text">記事一覧を見る</p></a>
@@ -453,6 +500,54 @@
 				<div class="m-titleBorder__main__border"></div>
 			</div>
 		</div>
+		
+		<?php if(count($query->posts) < 5): ?>
+			<div class="p-top__lifeLearn__list">
+				<ul class="p-top__lifeLearn__list__inner">
+
+					<?php
+						while($query->have_posts()): $query->the_post();
+
+						$singletags = get_the_terms($post->ID, 'learn_tag');
+
+						if ( has_post_thumbnail() ) {
+							$thumbnail =  get_the_post_thumbnail();
+						} 
+
+						if(empty($thumbnail)){
+							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						}
+					?>
+					<li class="m-oblongCard">
+						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
+							<div class="m-oblongCard__inner__topper">
+								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+							</div>
+							<div class="m-oblongCard__inner__footer">
+								<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+								<div class="m-oblongCard__inner__footer__title">
+									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
+								</div>
+								<div class="m-oblongCard__inner__footer__description">
+									<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+								</div>
+								<div class="m-classificationArea">
+									<?php	if($singletags): foreach ($singletags as $tag ): ?>
+										<object>
+											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<?= $tag->name?>
+											</a>
+										</object>
+									<?php  endforeach; endif; ?>
+								</div>
+							</div>
+						</a>
+					</li>
+					<?php endwhile; wp_reset_postdata();?>
+				</ul>
+			</div>
+		<?php else: ?>
+
 		<div class="p-top__lifeLearn__slider">
 			<div class="p-top__lifeLearn__slider__arrow">
 				<div class="p-top__lifeLearn__slider__arrow__inner js__arrow-top__learn">
@@ -502,6 +597,7 @@
 				</li>
 				<?php endwhile; wp_reset_postdata();?>
 			</ul>
+		<?php endif; ?>
 		</div>
 		<div class="p-top__lifeLearn__footer"><a class="p-top__lifeLearn__footer__link" href="<?= site_url('learn/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__lifeLearn__footer__link__text">記事一覧を見る</p></a>

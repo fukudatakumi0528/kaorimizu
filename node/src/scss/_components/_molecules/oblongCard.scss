@@ -2,6 +2,14 @@
   height: 100%;
 
   .m-oblongCard__inner {
+
+    &:hover {
+
+      @include screen-large {
+        box-shadow: 5px 5px 5px $bg-15-color;
+        transition: 0.2s;
+      }
+    }
     
     .m-oblongCard__inner__topper {
       padding-top:80%;

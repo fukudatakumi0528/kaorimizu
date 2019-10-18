@@ -988,6 +988,74 @@ $font-xxl: 2rem;
   font-size: 10px;
 }
 
+.p-top__lifeLearn .p-top__lifeLearn__list {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 26px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list {
+    margin-top: 40px;
+  }
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard:nth-child(-n+3) {
+    display: block;
+    width: 31%;
+  }
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner {
+  margin: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner {
+    margin: 0;
+  }
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description__text {
+  font-size: 1.2rem;
+}
+
+.p-top__lifeLearn .p-top__lifeLearn__list .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .p-top__lifeLearn .p-top__lifeLearn__footer {
   margin: 24px 15px 0 15px;
   display: -webkit-box;

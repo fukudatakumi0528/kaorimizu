@@ -874,6 +874,63 @@
     }   
   }
 
+  .p-top__lifeLearn__list {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin-top:26px;
+    position: relative;
+
+    @include screen-large {
+      margin-top:40px;
+    }
+
+    .p-top__lifeLearn__list__inner {
+      display: block;
+
+      @include screen-large {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:0 15px;
+      }
+
+      .m-oblongCard {
+
+        @include screen-large {
+          display: none;
+        }
+
+        &:nth-child(-n+3) {
+
+          @include screen-large {
+            display: block;
+            width: 31%;
+          }  
+        }
+
+        .m-oblongCard__inner {
+          margin:0 8px;
+
+          @include screen-large {
+            margin:0;
+          }
+  
+          .m-oblongCard__inner__footer {
+  
+            .m-oblongCard__inner__footer__description__text {
+              font-size: $font-xs;
+            }  
+          }
+        }
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   .p-top__lifeLearn__footer {
     margin:24px 15px 0 15px;

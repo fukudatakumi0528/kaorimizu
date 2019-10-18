@@ -4,6 +4,14 @@
   .m-squareCard__inner {
     position: relative;
 
+    &:hover {
+
+      @include screen-large {
+        box-shadow: 5px 5px 5px $bg-15-color;
+        transition: 0.2s;
+      }
+    }
+
     .m-squareCard__inner__ranking {
       position: absolute;
       height: 60px;

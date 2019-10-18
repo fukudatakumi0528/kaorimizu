@@ -2868,6 +2868,15 @@ main {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .m-oblongCard .m-oblongCard__inner:hover {
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__topper {
   padding-top: 80%;
   position: relative;
@@ -3193,6 +3202,15 @@ main {
 
 .m-squareCard .m-squareCard__inner {
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner:hover {
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking {
@@ -3793,6 +3811,15 @@ main {
 }
 
 @media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner:hover {
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
+@media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3910,6 +3937,14 @@ main {
   margin: 10px 0 0 7px;
   background-color: #FFFFFF;
   border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .o-classificationList .o-classificationList__tag:hover {
+    background-color: #FFD94A;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
 }
 
 .o-classificationList .o-classificationList__tag .o-classificationList__tag__link {

@@ -46,6 +46,15 @@
     top:0;
     display: flex;
 
+    &:hover {
+
+      @include screen-large {
+        box-shadow: 5px 5px 5px $bg-15-color;
+        transition: 0.2s;
+      }
+    }
+
+
     @include screen-large {
       flex-direction: column;
     }

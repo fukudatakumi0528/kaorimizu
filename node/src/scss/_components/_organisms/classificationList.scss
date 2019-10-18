@@ -8,6 +8,14 @@
     background-color:$bg-6-color;
     border-radius: 25px;
 
+    &:hover {
+
+      @include screen-large {
+        background-color:$bg-1-color;
+        transition: 0.2s;
+      }
+    }
+
     .o-classificationList__tag__link {
       display: block;
       height: 100%;
