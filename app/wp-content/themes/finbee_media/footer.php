@@ -183,6 +183,26 @@
           </div>
         </div>
       </footer>
+      <div class="l-fixed-button">
+        <div class="l-fixed-button__inner">
+          <div class="l-fixed-button__inner__topper" style="background-image:url(<?= assetsPath('img') ."common/fixedButton.svg" ?>)">
+            <div class="l-fixed-button__inner__topper__inner">
+              <div class="l-fixed-button__inner__topper__inner__menu"><span class="l-fixed-button__inner__topper__inner__menu__line"></span><span class="l-fixed-button__inner__topper__inner__menu__line"></span></div>
+              <p class="l-fixed-button__inner__topper__inner__text">menu</p>
+            </div>
+          </div>
+          <div class="l-fixed-button__inner__main">
+            <div class="l-fixed-button__inner__main__button" id="js-spSearch-trigger">
+              <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>探す</strong></p>
+              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+            </div>
+            <div class="l-fixed-button__inner__main__button" id="js-spGrant-trigger">
+              <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>叶える</strong></p>
+              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<?php /* <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> */ ?>
