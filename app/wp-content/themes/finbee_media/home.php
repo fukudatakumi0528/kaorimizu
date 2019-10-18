@@ -597,8 +597,8 @@
 				</li>
 				<?php endwhile; wp_reset_postdata();?>
 			</ul>
-		<?php endif; ?>
 		</div>
+		<?php endif; ?>
 		<div class="p-top__lifeLearn__footer"><a class="p-top__lifeLearn__footer__link" href="<?= site_url('learn/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__lifeLearn__footer__link__text">記事一覧を見る</p></a>
 		</div>
