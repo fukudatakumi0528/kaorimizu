@@ -102,7 +102,7 @@
 													<?= $tag->name?>
 												</a>
 											</object>
-										<?php  endforeach; endif; ?>
+										<?php  endforeach; wp_reset_postdata(); endif; ?>
 									</div>
 								</div>
 							</a>
