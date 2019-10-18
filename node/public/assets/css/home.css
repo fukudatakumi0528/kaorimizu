@@ -1043,6 +1043,10 @@ $font-xxl: 2rem;
   }
 }
 
+.p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer {
+  background-color: #F5F5F5;
+}
+
 .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description__text {
   font-size: 1.2rem;
 }
