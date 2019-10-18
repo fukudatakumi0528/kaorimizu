@@ -140,22 +140,43 @@
                                         </li>
                         </ul>
           </div>
-					<?php 
-						if(count($rankingPopularTags) > 0):
-					?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
-						<ul class="o-classificationList">
-							<?php foreach($rankingPopularTags as $rankingPopularTag): ?>
-								<li class="o-classificationList__tag">
-									<a class="o-classificationList__tag__link" href="">
-										<p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
-									</a>
-								</li>
-							<?php endforeach;?>
-						</ul>
-					</div>
-					<?php endif; ?>
+                        <ul class="o-classificationList">
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
+                          <li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
+                              <p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
+                        </ul>
+          </div>
         </div>
       </div>
       <div class="l-spSearch" id="js-spSearch">
