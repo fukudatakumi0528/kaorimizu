@@ -205,47 +205,10 @@
       </div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
-		<?php /* <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> */ ?>
 		<script src="<?= assetsPath('js') ?>common.js"></script>
 		<script src="<?= assetsPath('js') ?>home.js"></script>
 		<?php if(!empty($scriptName)): ?>
 			<script src="<?= assetsPath('js') ?><?= $scriptName ?>.js"></script>
 		<?php endif; ?>
-
-		<div id="fb-root">
-			<script async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&amp;version=v3.2"></script>
-		</div>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-		<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-		<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
-		<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-		<!--Ptengine-->
-		<script type="text/javascript">
-			window._pt_sp_2 = [];
-			_pt_sp_2.push('setAccount,758c2098');
-			var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-			(function() {
-				var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
-				atag.src = _protocol + 'js.ptengine.jp/pta.js';
-				var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
-				stag.src = _protocol + 'js.ptengine.jp/pts.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
-			})();
-		</script>
-		<!--LP用-->
-		<script type="text/javascript">
-		  (function () {
-		    var tagjs = document.createElement("script");
-		    var s = document.getElementsByTagName("script")[0];
-		    tagjs.async = true;
-		    tagjs.src = "//s.yjtag.jp/tag.js#site=G6pjWk1";
-		    s.parentNode.insertBefore(tagjs, s);
-		  }());
-		</script>
-		<noscript>
-		  <iframe src="//b.yjtag.jp/iframe?c=G6pjWk1" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-		</noscript>
 	</body>
 </html>
