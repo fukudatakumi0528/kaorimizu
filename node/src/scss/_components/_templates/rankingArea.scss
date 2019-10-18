@@ -208,7 +208,7 @@
 
         @include screen-large {
           display: flex;
-          padding:12px;
+          padding:12px 0;
           justify-content: space-between;
         }
 

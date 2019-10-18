@@ -98,18 +98,18 @@ function one_type_only($content) {
 function register_cpt_feature() {
     //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '特集（feature）', 'feature' ),
-        'singular_name'      => _x( '特集（feature）', 'feature' ),
+        'name'               => _x( '特集', 'feature' ),
+        'singular_name'      => _x( '特集', 'feature' ),
         'add_new'            => _x( '新規追加', 'feature' ),
-        'add_new_item'       => _x( '新しい特集（feature）を追加', 'feature' ),
-        'edit_item'          => _x( '特集（feature）を編集', 'feature' ),
-        'new_item'           => _x( '特集（feature）を追加', 'feature' ),
-        'view_item'          => _x( '特集（feature）を見る', 'feature' ),
-        'search_items'       => _x( '特集（feature）検索', 'feature' ),
-        'not_found'          => _x( '特集（feature）はありません', 'feature' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に特集（feature）はありません', 'feature' ),
-        'parent_item_colon'  => _x( '親 特集（feature）:', 'feature' ),
-        'menu_name'          => _x( '特集（feature）', 'feature' ),
+        'add_new_item'       => _x( '新しい特集を追加', 'feature' ),
+        'edit_item'          => _x( '特集を編集', 'feature' ),
+        'new_item'           => _x( '特集を追加', 'feature' ),
+        'view_item'          => _x( '特集を見る', 'feature' ),
+        'search_items'       => _x( '特集検索', 'feature' ),
+        'not_found'          => _x( '特集はありません', 'feature' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に特集はありません', 'feature' ),
+        'parent_item_colon'  => _x( '親 特集:', 'feature' ),
+        'menu_name'          => _x( '特集', 'feature' ),
     );
 
     $args = array(
@@ -172,18 +172,18 @@ add_action( 'init', 'register_cpt_feature' );
 function register_cpt_hobby() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '趣味（hobby）', 'hobby' ),
-        'singular_name'      => _x( '趣味（hobby）', 'hobby' ),
+        'name'               => _x( '趣味', 'hobby' ),
+        'singular_name'      => _x( '趣味', 'hobby' ),
         'add_new'            => _x( '新規追加', 'hobby' ),
-        'add_new_item'       => _x( '新しい趣味（hobby）を追加', 'hobby' ),
-        'edit_item'          => _x( '趣味（hobby）を編集', 'hobby' ),
-        'new_item'           => _x( '趣味（hobby）を追加', 'hobby' ),
-        'view_item'          => _x( '趣味（hobby）を見る', 'hobby' ),
-        'search_items'       => _x( '趣味（hobby）検索', 'hobby' ),
-        'not_found'          => _x( '趣味（hobby）はありません', 'hobby' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に趣味（hobby）はありません', 'hobby' ),
-        'parent_item_colon'  => _x( '親 趣味（hobby）:', 'hobby' ),
-        'menu_name'          => _x( '趣味（hobby）', 'hobby' ),
+        'add_new_item'       => _x( '新しい趣味を追加', 'hobby' ),
+        'edit_item'          => _x( '趣味を編集', 'hobby' ),
+        'new_item'           => _x( '趣味を追加', 'hobby' ),
+        'view_item'          => _x( '趣味を見る', 'hobby' ),
+        'search_items'       => _x( '趣味検索', 'hobby' ),
+        'not_found'          => _x( '趣味はありません', 'hobby' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に趣味はありません', 'hobby' ),
+        'parent_item_colon'  => _x( '親 趣味:', 'hobby' ),
+        'menu_name'          => _x( '趣味', 'hobby' ),
     );
 
     $args = array(
@@ -254,18 +254,18 @@ add_action( 'init', 'register_cpt_hobby' );
 function register_cpt_life() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '生活（life）', 'life' ),
-        'singular_name'      => _x( '生活（life）', 'life' ),
+        'name'               => _x( '生活', 'life' ),
+        'singular_name'      => _x( '生活', 'life' ),
         'add_new'            => _x( '新規追加', 'life' ),
-        'add_new_item'       => _x( '新しい生活（life）を追加', 'life' ),
-        'edit_item'          => _x( '生活（life）を編集', 'life' ),
-        'new_item'           => _x( '生活（life）を追加', 'life' ),
-        'view_item'          => _x( '生活（life）を見る', 'life' ),
-        'search_items'       => _x( '生活（life）検索', 'life' ),
-        'not_found'          => _x( '生活（life）はありません', 'life' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に生活（life）はありません', 'life' ),
-        'parent_item_colon'  => _x( '親 生活（life）:', 'life' ),
-        'menu_name'          => _x( '生活（life）', 'life' ),
+        'add_new_item'       => _x( '新しい生活を追加', 'life' ),
+        'edit_item'          => _x( '生活を編集', 'life' ),
+        'new_item'           => _x( '生活を追加', 'life' ),
+        'view_item'          => _x( '生活を見る', 'life' ),
+        'search_items'       => _x( '生活検索', 'life' ),
+        'not_found'          => _x( '生活はありません', 'life' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に生活はありません', 'life' ),
+        'parent_item_colon'  => _x( '親 生活:', 'life' ),
+        'menu_name'          => _x( '生活', 'life' ),
     );
 
     $args = array(
@@ -335,18 +335,18 @@ add_action( 'init', 'register_cpt_life' );
 function register_cpt_learn() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '学び（learn）', 'learn' ),
-        'singular_name'      => _x( '学び（learn）', 'learn' ),
+        'name'               => _x( '学び', 'learn' ),
+        'singular_name'      => _x( '学び', 'learn' ),
         'add_new'            => _x( '新規追加', 'learn' ),
-        'add_new_item'       => _x( '新しい学び（learn）を追加', 'learn' ),
-        'edit_item'          => _x( '学び（learn）を編集', 'learn' ),
-        'new_item'           => _x( '学び（learn）を追加', 'learn' ),
-        'view_item'          => _x( '学び（learn）を見る', 'learn' ),
-        'search_items'       => _x( '学び（learn）検索', 'learn' ),
-        'not_found'          => _x( '学び（learn）はありません', 'learn' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に学び（learn）はありません', 'learn' ),
-        'parent_item_colon'  => _x( '親 学び（learn）:', 'learn' ),
-        'menu_name'          => _x( '学び（learn）', 'learn' ),
+        'add_new_item'       => _x( '新しい学びを追加', 'learn' ),
+        'edit_item'          => _x( '学びを編集', 'learn' ),
+        'new_item'           => _x( '学びを追加', 'learn' ),
+        'view_item'          => _x( '学びを見る', 'learn' ),
+        'search_items'       => _x( '学び検索', 'learn' ),
+        'not_found'          => _x( '学びはありません', 'learn' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に学びはありません', 'learn' ),
+        'parent_item_colon'  => _x( '親 学び:', 'learn' ),
+        'menu_name'          => _x( '学び', 'learn' ),
     );
 
     $args = array(
