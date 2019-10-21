@@ -23,7 +23,7 @@
 	//当記事のサムネイル
 
 	if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
-		$thumbnail =  get_the_post_thumbnail();
+		$thumbnail =  get_the_post_thumbnail_url();
 	} 
 
 	if(empty($thumbnail)){
@@ -51,12 +51,7 @@
 								<p>特集</p>
 								<time><?php the_time('Y.n.j') ?></time>
 							</div>
-							<img src="<?php $thumbnail?>" class="thumbnail">
-							<!--
-							<div class="article__sns">
-								<?php get_template_part('element/sns') ?>
-							</div>
-							-->
+							<img src="<?= $thumbnail?>" class="thumbnail">
 						</header>
 
 						<section class="article__body">
@@ -68,7 +63,7 @@
 							</a>
 						</section>
 
-						<footer class="article__inner__footer">
+						<footer class="article__body__footer">
 							<div class="article__sns">
 								<?php get_template_part('element/sns') ?>
 							</div>
@@ -80,7 +75,6 @@
 							</div>
 						</footer>
 					</article>
-
 
 					<div class="article__prevnext">
 						<a class="prev" href="<?= $next_post_url ?>">

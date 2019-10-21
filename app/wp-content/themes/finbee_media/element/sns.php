@@ -1,10 +1,36 @@
-<ul class="c-sns">
+<ul class="socialBtn">
+	<!-- line -->
 	<li>
-		<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		<a class="sns-line" href="//timeline.line.me/social-plugin/share?url=<?php echo urlencode(get_permalink()); ?>" target="_blank" title="LINEでシェアする">
+			<img src="<?php echo assetsPath('img') . "logo/sns/sns-logo-line.svg" ?>">
+		</a>
 	</li>
-	<li><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false">Tweet</a></li>
-	<li><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a></li>
+
+	<!-- twitter -->
 	<li>
-		<div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="2" data-url="https://social-plugins.line.me/ja/how_to_install#lineitbutton" style="display: none;"></div>
+		<a class="sns-twitter" href="//twitter.com/intent/tweet?text=<?php echo urlencode(the_title("","",0)); ?>&<?php echo urlencode(get_permalink()); ?>&url=<?php echo urlencode(get_permalink()); ?>" target="_blank" title="Twitterでシェアする">
+			<img src="<?php echo assetsPath('img') . "logo/sns/sns-logo-twitter.svg" ?>">
+		</a>
+	</li>
+
+	<!-- facebook -->
+	<li>
+		<a class="sns-facebook" href="//www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>&t=<?php echo urlencode(the_title("","",0)); ?>" target="_blank" title="facebookでシェアする">
+			<img src="<?php echo assetsPath('img') . "logo/sns/sns-logo-facebook.svg" ?>">
+		</a>
+	</li>
+
+	<!-- pocket -->
+	<li>
+		<a class="sns-pocket" href="//getpocket.com/edit?url=<?php echo urlencode(get_permalink()); ?>" target="_blank" title="Pocketであとで読む">
+			<img src="<?php echo assetsPath('img') . "logo/sns/sns-logo-pocket.svg" ?>">
+		</a>
+	</li>
+
+	<!-- hatena -->
+	<li>
+		<a class="sns-hatena" href="//b.hatena.ne.jp/add?mode=confirm&url=<?php echo urlencode(get_permalink()); ?>&title=<?php echo urlencode(the_title("","",0)); ?>" target="_blank" data-hatena-bookmark-title="<?php the_permalink(); ?>" title="このエントリーをはてなブックマークに追加する">
+			<img src="<?php echo assetsPath('img') . "logo/sns/sns-logo-hatena.svg" ?>">
+		</a>
 	</li>
 </ul>
