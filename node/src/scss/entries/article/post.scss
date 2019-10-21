@@ -488,7 +488,13 @@
 							.article__bnr {
 								display: block;
 								max-width: 100%;
+								height: auto;
 								margin:20px auto 0 auto;
+								cursor: pointer;
+
+								.article__bnr__image {
+									width: 100%;
+								}
 							}
 						}
 					}  

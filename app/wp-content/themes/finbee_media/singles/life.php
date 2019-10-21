@@ -59,7 +59,9 @@
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<?php the_content(); ?>
 							<?php endwhile; endif; ?>
-							<img class="article__bnr" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+							<a class="article__bnr" href="https://finbee.jp/">
+								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+							</a>
 						</section>
 
 						<footer class="article__inner__footer">
@@ -98,6 +100,9 @@
 			<div class="p-articlePost__inner__main__sidebar">
 				<?php get_sidebar('pc'); ?>
 			</div>
+		</section>
+		<section class="p-articlePost__inner__footer">
+			<?php get_template_part('ranking'); ?>
 		</section>
 	</div>
 </main>
