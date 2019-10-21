@@ -534,7 +534,13 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .article__bnr {
   display: block;
   max-width: 100%;
+  height: auto;
   margin: 20px auto 0 auto;
+  cursor: pointer;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .article__bnr .article__bnr__image {
+  width: 100%;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar {

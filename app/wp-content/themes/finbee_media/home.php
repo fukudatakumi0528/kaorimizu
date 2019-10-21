@@ -31,8 +31,7 @@
 
 					//タグ名
 					$termType = get_post_taxonomies($slider->ID);
-					$term = get_the_terms($slider->ID, $termType[0]);
-
+					$term = get_the_terms($slider->ID, $termType[1]);
 			?>
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
@@ -50,13 +49,15 @@
 							<div class="m-squareCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
-							<?php	if($term): foreach ($term as $tag ): ?>
-								<object>
-									<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
-										<?= $tag->name?>
-									</a>
-								</object>
-							<?php  endforeach; endif; ?>
+							<div class="m-classificationArea">
+								<?php	if($term): foreach ($term as $tag ): ?>
+									<object>
+										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+											<?= $tag->name?>
+										</a>
+									</object>
+								<?php  endforeach; endif; ?>
+							</div>
 						</div>
 					</div>
 				</a>
