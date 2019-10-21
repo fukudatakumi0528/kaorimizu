@@ -86,9 +86,15 @@
 					);
 					$newPost = new WP_Query($newPostArgs);
 
-					//$singletags = get_the_terms($post->ID, 'feature_tag');
-
 					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
+
+					if ( has_post_thumbnail() ) {
+						$thumbnail =  get_the_post_thumbnail();
+					} 
+
+					if(empty($thumbnail)){
+						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+					}
 
 					$termType = get_post_taxonomies(get_the_ID());
 					$term = get_the_terms($post->ID, $termType[0]);
@@ -102,7 +108,7 @@
 					<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
 						<div class="m-wideCard__inner__left">
 							<div class="m-wideCard__inner__left__image">
-								<img class="m-wideCard__inner__left__image__inner" src="<?= get_the_post_thumbnail() ?>" alt="">
+								<img class="m-wideCard__inner__left__image__inner" src="<?= $thumbnail ?>" alt="">
 							</div>
 						</div>
 						<div class="m-wideCard__inner__right">
