@@ -401,6 +401,7 @@
     >.m-oblongCard {
       @include screen-large {
         height: 300px;
+        width: 100%;
         position: absolute;
       }
 
@@ -408,7 +409,7 @@
 
         @include screen-large {
           height: 100%;
-          width: calc(100% - 45px);
+          width: calc(100% - 60px);
           display: flex;
         }  
 
@@ -425,7 +426,8 @@
 
           @include screen-large {
             height: 100%;
-            width: calc(100% - 400px);
+            max-width: calc(100% - 400px);
+            width: 100%;
             padding:50px;
 
             display: flex;
@@ -880,25 +882,39 @@
     max-width: 1000px;
     margin-top:26px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     @include screen-large {
       margin-top:40px;
+      display: block;
+      flex-wrap: nowrap;
+      justify-content: space-around;
     }
 
     .p-top__lifeLearn__list__inner {
-      display: block;
-
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding:0 15px;
+  
       @include screen-large {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding:0 15px;
+        padding:0;
+        margin-top:40px;
+        justify-content: center;
       }
 
       .m-oblongCard {
-
+        width: 48%;
+        margin-top:20px;
+        height: auto;
+  
         @include screen-large {
           display: none;
+          width: 100%;
+          margin:0 15px;
         }
 
         &:nth-child(-n+3) {
@@ -910,18 +926,51 @@
         }
 
         .m-oblongCard__inner {
-          margin:0 8px;
-
-          @include screen-large {
-            margin:0;
-          }
+          margin:0;
   
           .m-oblongCard__inner__footer {
-            background-color: $bg-3-color;
+            width: 100%;
+            box-sizing: border-box;
+            padding:4px 0;
+      
+
+            .m-oblongCard__inner__footer__date {
+              display: block;
+              margin-top:5px;
+              font-size: $font-xxs;
+              color:$font-1-color;
+      
+            }
   
-            .m-oblongCard__inner__footer__description__text {
-              font-size: $font-xs;
-            }  
+
+            .m-oblongCard__inner__footer__description {
+              display: block;
+
+              .m-oblongCard__inner__footer__description__text {
+                font-size: $font-xs;
+                overflow: hidden;
+              }  
+            }
+
+            .m-oblongCard__inner__footer__title {
+              display: block;
+              margin-top:5px;
+              font-size: 13px;
+              font-weight: $font-bold;
+              color:$font-base-color;
+              line-height: 150%;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3; 
+              overflow: hidden;
+  
+              .m-oblongCard__inner__footer__title__text {
+                @include screen-large {
+                  margin-top:10px;
+                }        
+              }
+            }    
+  
           }
         }
       }

@@ -81,7 +81,7 @@
                 <div class="l-footer__about__inner__main__header__subtitle">ビートピアについて</div>
               </div>
               <div class="l-footer__about__inner__main__line"></div>
-              <div class="l-footer__about__inner__main__description">ダミー「be（なる）」+「topia（場所）」ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダbe-topia は、”何者かに”なる場所でありたいという願いを込めて、ダミーダミーダミーダミー。</div>
+              <p class="l-footer__about__inner__main__description">be-topiaは、「やりたいこと、やってみよう」をテーマにしたライフスタイルマガジンです。さまざまな人の「やりたいこと」や「やってみたこと」にまつわるストーリーやアイデアを紹介します。やりたいことが見つからない人、やりたいことを先延ばしにしている人。そんな人たちの背中をそっと押して、やりたいことへの一歩を踏み出す人を増やしていきます。</p>
             </div>
             <div class="l-footer__about__inner__footer">
 							<span class="icon-check-text"></span>

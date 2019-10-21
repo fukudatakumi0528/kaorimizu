@@ -2868,6 +2868,11 @@ main {
   height: 100%;
 }
 
+.m-oblongCard .m-oblongCard__inner {
+  display: block;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .m-oblongCard .m-oblongCard__inner:hover {
     -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
@@ -2957,6 +2962,7 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-classificationArea {
@@ -3225,7 +3231,7 @@ main {
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking {
     top: 6px;
-    left: 16px;
+    left: 6px;
     height: 30px;
     width: 30px;
   }
@@ -3606,6 +3612,7 @@ main {
 .m-verticallyCard .m-verticallyCard__inner {
   top: 0;
   display: block;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -3808,6 +3815,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

@@ -2,6 +2,8 @@
   height: 100%;
 
   .m-oblongCard__inner {
+    display: block;
+    cursor: pointer;
 
     &:hover {
 
@@ -78,7 +80,8 @@
           font-weight: $font-medium;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;  
+          -webkit-line-clamp: 2;
+          overflow: hidden;
         } 
       }
 
