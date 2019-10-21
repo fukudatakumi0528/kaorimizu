@@ -396,30 +396,7 @@
             }
           }
         }
-  
-        .l-footer__search__inner__main__button {
-          margin-top:20px;
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-  
-          .l-footer__search__inner__main__button__search {
-            width: 48%;
-            background-color:$bg-8-color;
-            border-radius: 4px;
-            padding:4px 0px;
-            font-size: $font-xs;
-            display:flex;
-            justify-content: center;
-  
-            line-height: 150%;
-            
-            strong {
-              font-size: $font-m;
-            }
-          }
-        }
-  
+    
         .l-footer__search__inner__main__footer {
           display: flex;
           justify-content: flex-end;

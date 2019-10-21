@@ -111,14 +111,6 @@
 									<a class="l-footer__search__inner__main__category__list__text" href="<?= site_url('learn/') ?>">学び</a>
 								</li>
               </ul>
-              <div class="l-footer__search__inner__main__button">
-								<a class="l-footer__search__inner__main__button__search" href="<?php home_url() ?>/"> 
-									<p class="l-footer__search__inner__main__button__search__text">したい・ほしいを<br><strong>さがす</strong></p>
-								</a>
-								<a class="l-footer__search__inner__main__button__search" href="<?php home_url() ?>/">
-									<p class="l-footer__search__inner__main__button__search__text">したい・ほしいを<br><strong>叶える</strong></p>
-								</a>
-							</div>
               <div class="l-footer__search__inner__main__footer">
 								<a class="l-footer__search__inner__main__footer__link" href="https://finbee.jp/">
 									<span class="icon-btn"></span>
@@ -158,23 +150,23 @@
           <div class="l-footer__nav__inner">
             <ul class="l-footer__nav__inner__main">
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link">
+								<a class="l-footer__nav__inner__main__list__link" href="https://finbee.jp/company/">
 									<p class="l-footer__nav__inner__main__list__link__text">会社概要</p>
 									<span class="icon-tab"></span>
 								</a>
 							</li>
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link">
+								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('disclaimer/') ?>">
 									<p class="l-footer__nav__inner__main__list__link__text">利用規約</p>
 								</a>
 							</li>
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link">
+								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('policy/') ?>">
 									<p class="l-footer__nav__inner__main__list__link__text">プライバシーポリシー</p>
 								</a>
 							</li>
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link">
+								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('contact/') ?>">
 									<p class="l-footer__nav__inner__main__list__link__text">お問い合わせ</p>
 								</a>
 							</li>
