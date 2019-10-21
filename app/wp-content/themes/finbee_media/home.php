@@ -19,7 +19,6 @@
 			<?php 
 				$topSlider = get_field('_top-slider', 'option');
 				foreach($topSlider as $slider):
-					//var_dump($slider->ID);
 										 
 					// サムネイルID
 					$thumb_id = get_post_thumbnail_id($slider);
@@ -34,7 +33,6 @@
 					$termType = get_post_taxonomies($slider->ID);
 					$term = get_the_terms($slider->ID, $termType[0]);
 
-					//var_dump($thumb_src);				
 			?>
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
@@ -134,13 +132,16 @@
 	</section>
 	<!-- feature-->
 	<?php 
+		$topFeature = get_field('top-feature', 'option');
+
 		$$topFeatureArgs = [
 			'post_type' => 'feature',
 			'posts_per_page' => 5,
+			'post__not_in' => array($topFeature->ID),
 			'paged' => $paged,
 		];
 		$query = new WP_Query($$topFeatureArgs);
-		if($query->have_posts()):
+		if($query->have_posts() || $topFeature):
 	?>
 	<section class="p-top__featureHobby">
 		<div class="p-top__featureHobby__bg"></div>
@@ -163,20 +164,19 @@
 				$termType = get_post_taxonomies($topFeature->ID);
 				$term = get_the_terms($topFeature->ID, $termType[0]);
 
-				//var_dump($thumb_src);				
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
-				<a class="m-oblongCard__inner" href="<?php the_permalink($slider) ?>" alt="">
+				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
 					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumb_src ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
-						<p class="m-oblongCard__inner__footer__date"><?= $slider->post_date ?></p>
+						<p class="m-oblongCard__inner__footer__date"><?= $topFeature->post_date ?></p>
 						<div class="m-oblongCard__inner__footer__title">
-							<p class="m-oblongCard__inner__footer__title__text"><?= $slider->post_title ?></p>
+							<p class="m-oblongCard__inner__footer__title__text"><?= $topFeature->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
-							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></p>
+							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topFeature->post_content) ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">
@@ -200,7 +200,8 @@
 			</div>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
-				  while($query->have_posts()): $query->the_post();
+					while($query->have_posts()): $query->the_post();
+					if($query !== $topFeature):
 
 					$singletags = get_the_terms($post->ID, 'feature_tag');
 
@@ -232,12 +233,12 @@
 											<?= $tag->name?>
 										</a>
 									</object>
-								<?php  endforeach; endif; ?>
+								<?php endforeach; endif; ?>
 							</div>
 						</div>
 					</a>
 				</li>
-				<?php endwhile; wp_reset_postdata(); ?>
+				<?php endif; endwhile; wp_reset_postdata(); ?>
 			</ul>
 		</div>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('feature/') ?>"><span class="icon-btn"></span>
@@ -247,13 +248,16 @@
 	<?php endif; ?>
 	<!-- hobby-->
 	<?php
+		$topHobby = get_field('top-hobby', 'option');
+
 		$topHobbyArgs = [
 			'post_type' => 'hobby',
 			'posts_per_page' => 5,
+			'post__not_in' => array($topHobby->ID),
 			'paged' => $paged,
 		];
 		$query = new WP_Query($topHobbyArgs);
-		if($query->have_posts()):
+		if($query->have_posts() || $topHobby):
 	?>
 	<section class="p-top__featureHobby">
 		<div class="p-top__featureHobby__bg"></div>
@@ -264,7 +268,6 @@
 			</div>
 		</div>
 		<?php 
-			$topHobby = get_field('top-hobby', 'option');
 			if ($topHobby):
 										
 				// サムネイルID
@@ -275,21 +278,19 @@
 				//タグ名
 				$termType = get_post_taxonomies($topHobby->ID);
 				$term = get_the_terms($topHobby->ID, $termType[0]);
-
-				//var_dump($thumb_src);				
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
-				<a class="m-oblongCard__inner" href="<?php the_permalink($slider) ?>" alt="">
+				<a class="m-oblongCard__inner" href="<?php the_permalink($topHobby) ?>" alt="">
 					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumb_src ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
-						<p class="m-oblongCard__inner__footer__date"><?= $slider->post_date ?></p>
+						<p class="m-oblongCard__inner__footer__date"><?= $topHobby->post_date ?></p>
 						<div class="m-oblongCard__inner__footer__title">
-							<p class="m-oblongCard__inner__footer__title__text"><?= $slider->post_title ?></p>
+							<p class="m-oblongCard__inner__footer__title__text"><?= $topHobby->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
-							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></p>
+							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topHobby->post_content) ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">

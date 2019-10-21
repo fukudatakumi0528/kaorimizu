@@ -66,7 +66,7 @@
 					<?php
 						$args = [
 							'post_type' => 'feature',
-							'posts_per_page' => 6,
+							'posts_per_page' => 10,
 							'paged' => $paged,
 						];
 						$query = new WP_Query($args);

@@ -183,82 +183,39 @@
 					</div>
 					<?php 
 						$taxonomies = array( 
-							'feature_tag',
-							'hobby_tag',
-							'life_tag',
-							'learn_tag',
+							'feature_taxonomy',
+							'hobby_taxonomy',
+							'life_taxonomy',
+							'learn_taxonomy',
 						);
-					
+
 						$args = array(
-							'orderby'       => 'name', 
-							'order'         => 'ASC',
-							'hide_empty'    => true, 
-							'exclude'       => array(), 
-							'exclude_tree'  => array(), 
-							'include'       => array(),
-							'number'        => '', 
-							'fields'        => 'all', 
-							'slug'          => '', 
-							'parent'        => '',
-							'hierarchical'  => true, 
-							'child_of'      => 0, 
-							'childless'     => false,
-							'get'           => '', 
-							'name__like'    => '',
-							'description__like' => '',
-							'pad_counts'    => false, 
-							'offset'        => '', 
-							'search'        => '', 
-							'cache_domain'  => 'core'
-						); 					
+							'post_type' => 'feature', //投稿タイプ名
+							'posts_per_page' => 10, //出力する記事の数
+							'tax_query' => array(
+							array(
+							'taxonomy' => 'feature_taxonomy', //タクソノミー名
+							'field' => 'slug',
+							'terms' => 'goal-grant' //タームのスラッグ
+							)
+							),
+							'fields' => 'ids',
+						);
+
+						$result = get_posts($args);
+						
+
+						var_dump($result);
 				
-						$popularTags = get_terms($taxonomies, $args);
-				
-						usort($popularTags,"sort_count");
-				
-						$rankingPopularTags = array_slice($popularTags,0,10);
-				
-						if(count($rankingPopularTags) > 0):					
 					?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
 						<ul class="o-classificationList">
 							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
 									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイナースポーツ</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">変わった趣味</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">IKEA</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">レアな仕事</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ツウな人の遊び方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">ディープな旅</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">マイルの貯め方</p></a></li>
-							<li class="o-classificationList__tag"><a class="o-classificationList__tag__link" href="">
-									<p class="o-classificationList__tag__link__inner">キャンプ</p></a></li>
 						</ul>
           </div>
 				</div>
-				<?php endif; ?>
       </div>
       <div class="l-spSearch" id="js-spSearch">
         <header class="l-header">

@@ -131,6 +131,14 @@ function register_cpt_feature() {
     register_post_type( 'feature', $args );
 
     // カスタム分類（タクソノミー）登録
+    register_taxonomy(
+        'feature_taxonomy',                 // カスタム分類の名前
+        'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        array(
+            'label' => 'カテゴリ',   // カスタム分類表示名
+            'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
+        )
+    );
 	$labels = array(
 		'name'                       => _x( 'タグ', 'taxonomy general name' ),
 		'singular_name'              => _x( 'タグ', 'taxonomy singular name' ),
@@ -147,7 +155,7 @@ function register_cpt_feature() {
 		'choose_from_most_used'      => __( 'Choose from the most used writers' ),
 		'not_found'                  => __( 'タグがありません' ),
 		'menu_name'                  => __( 'タグ' ),
-	);
+    );
     register_taxonomy(
         'feature_tag',                 // カスタム分類の名前
         'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
@@ -472,3 +480,113 @@ function add_shortcode_button( $buttons ) {
     return $buttons;
 }
 add_filter( 'mce_buttons', 'add_shortcode_button' );
+
+
+//特集カテゴリのパーマリンク設定
+add_action('init', 'feature_posttype_rewrite');
+add_action('init', 'hobby_posttype_rewrite');
+add_action('init', 'life_posttype_rewrite');
+add_action('init', 'learn_posttype_rewrite');
+
+
+function feature_posttype_rewrite() {
+
+    global $wp_rewrite;
+
+    $wp_rewrite->add_rewrite_tag('%feature%', '(feature)','post_type=');
+
+    $wp_rewrite->add_permastruct('feature', '/%feature%/%post_id%/', false);
+
+}
+
+function hobby_posttype_rewrite() {
+
+    global $wp_rewrite;
+
+    $wp_rewrite->add_rewrite_tag('%hobby%', '(hobby)','post_type=');
+
+    $wp_rewrite->add_permastruct('hobby', '/%hobby%/%post_id%/', false);
+
+}
+
+function life_posttype_rewrite() {
+
+    global $wp_rewrite;
+
+    $wp_rewrite->add_rewrite_tag('%life%', '(life)','post_type=');
+
+    $wp_rewrite->add_permastruct('life', '/%life%/%post_id%/', false);
+
+}
+
+function learn_posttype_rewrite() {
+
+    global $wp_rewrite;
+
+    $wp_rewrite->add_rewrite_tag('%learn%', '(learn)','post_type=');
+
+    $wp_rewrite->add_permastruct('learn', '/%learn%/%post_id%/', false);
+
+}
+
+
+add_filter('post_type_link', 'custom_posttype_permalink', 1, 3);
+
+function custom_posttype_permalink($post_link, $id = 0, $leavename) {
+
+    global $wp_rewrite;
+
+    $post = &get_post($id);
+
+    if(is_wp_error( $post )){
+        return $post;
+    }
+
+    if('feature' === $post->post_type){
+        $featurelink = $wp_rewrite->get_extra_permastruct($post->post_type);
+
+        $featurelink = str_replace('%feature%', $post->post_type, $featurelink);
+
+        $featurelink = str_replace('%post_id%', $post->ID, $featurelink);
+
+        $featurelink = home_url(user_trailingslashit($featurelink));
+
+        return $featurelink;
+    } elseif('hobby' === $post->post_type) {
+        $hobbylink = $wp_rewrite->get_extra_permastruct($post->post_type);
+
+        $hobbylink = str_replace('%hobby%', $post->post_type, $hobbylink);
+
+        $hobbylink = str_replace('%post_id%', $post->ID, $hobbylink);
+
+        $hobbylink = home_url(user_trailingslashit($hobbylink));
+
+        return $hobbylink;
+
+    } elseif('life' === $post->post_type) {
+        $lifelink = $wp_rewrite->get_extra_permastruct($post->post_type);
+
+        $lifelink = str_replace('%life%', $post->post_type, $lifelink);
+
+        $lifelink = str_replace('%post_id%', $post->ID, $lifelink);
+
+        $lifelink = home_url(user_trailingslashit($lifelink));
+
+        return $lifelink;
+
+    } elseif('learn' === $post->post_type) {
+        $learnlink = $wp_rewrite->get_extra_permastruct($post->post_type);
+
+        $learnlink = str_replace('%learn%', $post->post_type, $learnlink);
+
+        $learnlink = str_replace('%post_id%', $post->ID, $learnlink);
+
+        $learnlink = home_url(user_trailingslashit($learnlink));
+
+        return $learnlink;
+    }
+
+    return $post_link;
+}
+
+

@@ -4,6 +4,12 @@
 
 	$cssName = "article/index";
 	$breadcrumb = "<li>生活</li>";
+	$currentPage = get_query_var('paged'); //現在のページ数
+	$currentPage = $currentPage == 0 ? 1 : $currentPage;
+	$articlePerPage = get_option('posts_per_page');//現在の表示件数
+	
+	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
+	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
 	get_header();
 ?>
 
@@ -53,14 +59,14 @@
 						<p class="p-article__main__content__column__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
 					</div>
 					<div class="p-article__main__content__column__result__number">
-						<p class="p-article__main__content__column__result__number__text">40件中 1-18件を表示</p>
+						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('life')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
 				</div>		
 				<div class="o-verticallyCardList">
 					<?php
 						$args = [
 							'post_type' => 'life',
-							'posts_per_page' => 6,
+							'posts_per_page' => 10,
 							'paged' => $paged,
 						];
 						$query = new WP_Query($args);
@@ -96,7 +102,7 @@
 													<?= $tag->name?>
 												</a>
 											</object>
-										<?php  endforeach; endif; ?>
+										<?php  endforeach; wp_reset_postdata(); endif; ?>
 									</div>
 								</div>
 							</a>
