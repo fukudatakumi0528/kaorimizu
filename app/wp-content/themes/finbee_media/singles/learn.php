@@ -23,7 +23,7 @@
 	//当記事のサムネイル
 //	$thumbnail = CFS()->get('cloumn_image');
 	if(empty($thumbnail)){
-		$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+		$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 	}
 
 ?>

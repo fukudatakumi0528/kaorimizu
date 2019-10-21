@@ -21,9 +21,13 @@
 	$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);
 
 	//当記事のサムネイル
-//	$thumbnail = CFS()->get('cloumn_image');
+
+	if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+		$thumbnail =  get_the_post_thumbnail();
+	} 
+
 	if(empty($thumbnail)){
-		$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+		$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 	}
 
 ?>
@@ -47,7 +51,7 @@
 								<p>特集</p>
 								<time><?php the_time('Y.n.j') ?></time>
 							</div>
-							<img src="<?= get_the_post_thumbnail_url() ?>" class="thumbnail">
+							<img src="<?php $thumbnail?>" class="thumbnail">
 							<!--
 							<div class="article__sns">
 								<?php get_template_part('element/sns') ?>

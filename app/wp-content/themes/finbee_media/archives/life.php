@@ -79,7 +79,7 @@
 						} 
 
 						if(empty($thumbnail)){
-							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						}
 					?>
 						<article class="m-verticallyCard">

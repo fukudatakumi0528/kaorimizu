@@ -102,7 +102,7 @@
 					<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
 						<div class="m-wideCard__inner__left">
 							<div class="m-wideCard__inner__left__image">
-								<img class="m-wideCard__inner__left__image__inner" src=<?= get_the_post_thumbnail() ?> alt="">
+								<img class="m-wideCard__inner__left__image__inner" src="<?= get_the_post_thumbnail() ?>" alt="">
 							</div>
 						</div>
 						<div class="m-wideCard__inner__right">
@@ -211,7 +211,7 @@
 					} 
 
 					if(empty($thumbnail)){
-						$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
 				?>
 				<li class="m-oblongCard">
@@ -326,7 +326,7 @@
 					} 
 
 					if(empty($thumbnail)){
-						$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
 				?>
 				<li class="m-oblongCard">
@@ -396,7 +396,7 @@
 						} 
 
 						if(empty($thumbnail)){
-							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						}
 					?>
 					<li class="m-oblongCard">
@@ -446,7 +446,7 @@
 						} 
 
 						if(empty($thumbnail)){
-							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						}
 					?>
 					<li class="m-verticallyCard">
@@ -517,7 +517,7 @@
 						} 
 
 						if(empty($thumbnail)){
-							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						}
 					?>
 					<li class="m-oblongCard">
@@ -569,7 +569,7 @@
 					} 
 
 					if(empty($thumbnail)){
-						$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
+						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
 				?>
 				<li class="m-verticallyCard">
