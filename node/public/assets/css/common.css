@@ -3696,6 +3696,7 @@ main {
   align-items: center;
   background-color: #262626;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -4371,6 +4372,7 @@ main {
   align-items: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .t-rankingArea__tab .t-rankingArea__tab__list.is-active {
