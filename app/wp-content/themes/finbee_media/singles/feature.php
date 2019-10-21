@@ -58,20 +58,15 @@
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<?php the_content(); ?>
 							<?php endwhile; endif; ?>
+						</section>
+
+						<footer class="article__footer">
 							<a class="article__bnr" href="https://finbee.jp/">
 								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
-						</section>
-
-						<footer class="article__body__footer">
 							<div class="article__sns">
+								<p>この記事をシェアする</p>
 								<?php get_template_part('element/sns') ?>
-							</div>
-							<div class="article__footer_likeBox">
-								<figure style="background-image: url(<?= $thumbnail ?>)"></figure>
-								<div><b>facebookでも<br>随時配信しています！</b>
-									<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
-								</div>
 							</div>
 						</footer>
 					</article>
