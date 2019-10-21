@@ -431,12 +431,9 @@ function taxonomy_orderby_description( $orderby, $args ) {
 add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
 
 
-
-
 // 絵文字スクリプト読み込み停止
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
-
 
 
 //抜粋の最後の[...]を削除
@@ -469,6 +466,7 @@ function article__interview_shortcode($atts ,$content){
 }
 add_shortcode( 'article__interview', 'article__interview_shortcode' );
 
+//吹き出し機能の追加
 function add_add_shortcode_button_plugin( $plugin_array ) {
     $plugin_array[ 'article__interview_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor.js';
     return $plugin_array;
@@ -480,6 +478,26 @@ function add_shortcode_button( $buttons ) {
     return $buttons;
 }
 add_filter( 'mce_buttons', 'add_shortcode_button' );
+
+
+/**
+ * ビジュアルエディタに表(テーブル)の機能を追加します。
+ */
+function mce_external_plugins_table($plugins) {
+    $plugins['table'] = '//cdn.tinymce.com/4/plugins/table/plugin.min.js';
+    $plugins['contextmenu'] = '//cdn.tinymce.com/4/plugins/contextmenu/plugin.min.js';
+    return $plugins;
+}
+add_filter( 'mce_external_plugins', 'mce_external_plugins_table' );
+ 
+/**
+ * ビジュアルエディタにテーブル用のボタンを追加します。
+ */
+function mce_buttons_table($buttons) {
+    $buttons[] = 'table';
+    return $buttons;
+}
+add_filter( 'mce_buttons', 'mce_buttons_table' );
 
 
 //特集カテゴリのパーマリンク設定

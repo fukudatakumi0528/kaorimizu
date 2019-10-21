@@ -133,6 +133,9 @@
 			<?php get_sidebar('pc'); ?>
 		</div>
 	</section>
+	<section class="p-article__footer">
+		<?php get_template_part('ranking'); ?>
+	</section>
 </main>
 
 

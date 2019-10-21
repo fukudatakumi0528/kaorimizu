@@ -202,11 +202,7 @@
 							'fields' => 'ids',
 						);
 
-						$result = get_posts($args);
-						
-
-						var_dump($result);
-				
+						$result = get_posts($args);				
 					?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
