@@ -507,7 +507,35 @@
 
 
 								p {
+									font-size: $font-xs;
+									font-weight: $font-bold;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+	
 
+									&::before {
+										content:"";
+										display: block;
+										height: 16px;
+										width: 2px;
+										border-radius: 2px;
+										background-color: black;
+										transform: rotate(-45deg);
+										margin-right: 10px;
+									}
+			
+									&::after {
+										content:"";
+										display: block;
+										height: 16px;
+										width: 2px;
+										border-radius: 2px;
+										background-color: black;
+										transform: rotate(45deg);
+										margin-left: 10px;
+									}
+	
 								}
 
 								.socialBtn {

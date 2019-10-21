@@ -556,6 +556,44 @@ $font-xxl: 2rem;
   align-items: center;
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__sns p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__sns p::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: black;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-right: 10px;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__sns p::after {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-left: 10px;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__sns .socialBtn {
   display: -webkit-box;
   display: -ms-flexbox;
