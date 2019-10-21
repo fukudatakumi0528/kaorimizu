@@ -66,7 +66,7 @@
 					<?php
 						$args = [
 							'post_type' => 'hobby',
-							'posts_per_page' => 10,
+							'posts_per_page' => 16,
 							'paged' => $paged,
 						];
 						$query = new WP_Query($args);

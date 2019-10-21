@@ -43,6 +43,10 @@ $font-xxl: 2rem;
   }
 }
 
+.p-article__main .p-article__main__content {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .p-article__main .p-article__main__content {
     max-width: 60%;

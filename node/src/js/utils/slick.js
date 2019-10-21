@@ -55,7 +55,7 @@ export default class Slick {
 
 		// top KV スライダー
 		$topSlickSlider.slick({
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 3000,
 			speed: 800,
 			arrows: true,
