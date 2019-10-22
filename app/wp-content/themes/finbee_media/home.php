@@ -100,8 +100,6 @@
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 
-					var_dump($thumbnail);
-
 					//タグを取得
 					$term = serach_tags(get_the_ID());
 				?>
