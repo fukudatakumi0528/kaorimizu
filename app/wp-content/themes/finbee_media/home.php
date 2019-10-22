@@ -171,9 +171,11 @@
 
 			if ($topFeature):										
 				// サムネイルID
-				$thumb_id = get_post_thumbnail_id($topFeature);
-				$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
-				$thumb_src = $thumb_img[0];
+				if ( has_post_thumbnail($topFeature->ID)) {
+					$thumbnail =  get_the_post_thumbnail();
+				} else {
+					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+				};
 
 				//タグを取得
 				$term = get_the_terms($topFeature->ID, 'feature_tag');
@@ -284,12 +286,12 @@
 		</div>
 		<?php 
 			if ($topHobby):
-										
-				// サムネイルID
-				$thumb_id = get_post_thumbnail_id($topHobby);
-				$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
-				var_dump($thumb_id);
-				$thumb_src = $thumb_img[0];
+
+				if ( has_post_thumbnail($topHobby->ID)) {
+					$thumbnail =  get_the_post_thumbnail();
+				} else {
+					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+				};
 
 				//タグを取得				
 				$term = get_the_terms($topHobby->ID, 'hobby_tag');
@@ -299,7 +301,7 @@
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topHobby) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumb_src ?>" alt=""></div>
+					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
 						<p class="m-oblongCard__inner__footer__date"><?= $topHobby->post_date ?></p>
 						<div class="m-oblongCard__inner__footer__title">
