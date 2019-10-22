@@ -171,6 +171,8 @@
 		<?php 
 			$topFeature = get_field('top-feature', 'option');
 
+			var_dump($topFeature);
+
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
@@ -289,6 +291,8 @@
 		<?php 
 			if ($topHobby):
 
+				var_dump($topHobby);
+				
 				if ( has_post_thumbnail($topHobby->ID)) {
 					$thumbnail =  get_the_post_thumbnail();
 				} else {
