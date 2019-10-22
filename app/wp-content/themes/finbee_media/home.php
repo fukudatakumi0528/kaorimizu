@@ -23,9 +23,11 @@
 				foreach($topSlider as $slider):
 										 
 					// サムネイルID
-					$thumb_id = get_post_thumbnail_id($slider);
-					$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
-					$thumb_src = $thumb_img[0];
+					if ( has_post_thumbnail($slider->ID) ) {
+						$thumbnail =  get_the_post_thumbnail($slider->ID);
+					} else {
+						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+					};
 
 					//
 					$postType = get_post_type_object($slider->post_type);
@@ -37,7 +39,7 @@
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
 					<div class="m-squareCard__inner__topper">
-						<img class="m-squareCard__inner__topper__image" src="<?= $thumb_src ?>" alt="">
+						<img class="m-squareCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
 					</div>
 					<div class="m-squareCard__inner__footer">
 						<div class="m-squareCard__inner__footer__sign">

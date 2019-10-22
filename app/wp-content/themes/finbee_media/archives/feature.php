@@ -74,13 +74,12 @@
 
 						$singletags = get_the_terms($post->ID, 'feature_tag');
 
-						if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
-							$thumbnail =  get_the_post_thumbnail();
-						} 
-
-						if(empty($thumbnail)){
-							$thumbnail = assetsPath('img') . "/common/img_logo.jpg";
-						}
+						if ( has_post_thumbnail($post->ID) ) {
+							$thumbnail =  get_the_post_thumbnail($post->ID);
+						} else {
+							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						};
+	
 					?>
 						<article class="m-verticallyCard">
 							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
