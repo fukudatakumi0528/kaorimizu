@@ -3377,9 +3377,11 @@ main {
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title {
   display: block;
   overflow: hidden;
+  width: 100%;
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
+  width: 100%;
   font-size: 1.6rem;
   line-height: 150%;
   font-weight: 500;
@@ -4643,6 +4645,7 @@ main {
 
 .t-rankingArea__slider .t-rankingArea__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title__text {
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .t-rankingArea__slider .t-rankingArea__slider__inner .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description {

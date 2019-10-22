@@ -146,8 +146,10 @@
       .m-squareCard__inner__footer__title {
         display: block;
         overflow: hidden;
+        width: 100%;
 
         .m-squareCard__inner__footer__title__text {
+          width: 100%;
           font-size: $font-m;
           line-height: 150%;
           font-weight: $font-medium;

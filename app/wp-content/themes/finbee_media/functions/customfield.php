@@ -18,11 +18,20 @@
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'
     ));
-    // トップページ一覧（特集、趣味等）
+    // 人気タグ一覧
     acf_add_options_page(array(
       'page_title'     => '人気タグ一覧',
       'menu_title'    => '人気タグ一覧',
       'menu_slug'     => 'popular-tags',
+      'capability'    => 'edit_posts',
+      'redirect'        => true,
+      'icon_url'    => 'dashicons-tag'
+    ));
+    // 記事ランキング（初期）
+    acf_add_options_page(array(
+      'page_title'     => '記事ランキング',
+      'menu_title'    => '記事ランキング',
+      'menu_slug'     => 'article-ranking',
       'capability'    => 'edit_posts',
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'
