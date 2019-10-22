@@ -288,6 +288,7 @@
 				// サムネイルID
 				$thumb_id = get_post_thumbnail_id($topHobby);
 				$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
+				var_dump($thumb_id);
 				$thumb_src = $thumb_img[0];
 
 				//タグを取得				
