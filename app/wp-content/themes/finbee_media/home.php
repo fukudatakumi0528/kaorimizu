@@ -94,13 +94,11 @@
 
 					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
 
-					if ( has_post_thumbnail() ) {
+					if ( has_post_thumbnail(get_the_ID()) ) {
 						$thumbnail =  get_the_post_thumbnail();
-					} 
-
-					if(empty($thumbnail)){
+					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-					}
+					};
 
 					//タグを取得
 					$term = serach_tags(get_the_ID());
