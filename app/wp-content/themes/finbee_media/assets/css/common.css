@@ -3208,6 +3208,7 @@ main {
 
 .m-squareCard .m-squareCard__inner {
   position: relative;
+  display: block;
 }
 
 @media (min-width: 768px) {
