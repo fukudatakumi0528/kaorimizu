@@ -171,7 +171,6 @@
 		<?php 
 			$topFeature = get_field('top-feature', 'option');
 
-			var_dump($topFeature);
 
 			if ($topFeature):										
 				// サムネイルID
@@ -189,7 +188,7 @@
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumb_src ?>" alt=""></div>
+					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
 						<p class="m-oblongCard__inner__footer__date"><?= $topFeature->post_date ?></p>
 						<div class="m-oblongCard__inner__footer__title">
@@ -290,8 +289,6 @@
 		</div>
 		<?php 
 			if ($topHobby):
-
-				var_dump($topHobby);
 				
 				if ( has_post_thumbnail($topHobby->ID)) {
 					$thumbnail =  get_the_post_thumbnail();
