@@ -811,6 +811,14 @@ $font-xxl: 2rem;
   }
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__relation {
+  margin-top: 50px;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__relation .o-wideCardList {
+  margin-top: 20px;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar {
   display: none;
 }
@@ -849,10 +857,4 @@ $font-xxl: 2rem;
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .t-rankingArea__slider {
     display: none;
   }
-}
-
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .m-breadcrumb {
-  margin-top: 50px;
-  padding: 15px;
-  background-color: #F5F5F5;
 }

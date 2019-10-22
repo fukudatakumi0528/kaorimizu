@@ -7,6 +7,8 @@
 	get_header();
 ?>
 <main>
+
+
 	<!-- kv-->
 	<section class="p-top__kv">
 		<div class="p-top__kv__bg">
@@ -29,9 +31,8 @@
 					$postType = get_post_type_object($slider->post_type);
 					$postLabel = $postType->label;
 
-					//タグ名
-					$termType = get_post_taxonomies($slider->ID);
-					$term = get_the_terms($slider->ID, $termType[1]);
+					//タグを取得
+					$term = serach_tags($slider->ID);
 			?>
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
@@ -65,7 +66,12 @@
 			<?php endforeach; ?>
 		</ul>
 	</section>
+
+
+	<!--latest & ranking-->
 	<section class="p-top__latestRanking">
+
+
 		<!--latest-->
 		<div class="p-top__latestRanking__latest">
 			<div class="m-titleBorder">
@@ -96,8 +102,8 @@
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
 
-					$termType = get_post_taxonomies(get_the_ID());
-					$term = get_the_terms($post->ID, $termType[0]);
+					//タグを取得
+					$term = serach_tags(get_the_ID());
 				?>
 				<li class="m-wideCard">
 					<div class="m-wideCard__pickup">
@@ -132,11 +138,15 @@
 				<?php endwhile; wp_reset_postdata();  endif; ?>
 			</ul>
 		</div>
+
+
 		<!--ranking-->
 		<div class="p-top__latestRanking__ranking">
 			<?php get_sidebar('pc'); ?>
 		</div>
 	</section>
+
+
 	<!-- feature-->
 	<?php 
 		$topFeature = get_field('top-feature', 'option');
@@ -167,9 +177,8 @@
 				$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
 				$thumb_src = $thumb_img[0];
 
-				//タグ名
-				$termType = get_post_taxonomies($topFeature->ID);
-				$term = get_the_terms($topFeature->ID, $termType[0]);
+				//タグを取得
+				$term = get_the_terms($topFeature->ID, 'feature_tag');
 
 		?>
 		<div class="p-top__featureHobby__topper">
@@ -210,8 +219,6 @@
 					while($query->have_posts()): $query->the_post();
 					if($query !== $topFeature):
 
-					$singletags = get_the_terms($post->ID, 'feature_tag');
-
 					if ( has_post_thumbnail() ) {
 						$thumbnail =  get_the_post_thumbnail();
 					} 
@@ -219,6 +226,9 @@
 					if(empty($thumbnail)){
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
+
+					$term = get_the_terms($post->ID, 'feature_tag');
+
 				?>
 				<li class="m-oblongCard">
 					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
@@ -234,7 +244,7 @@
 								<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
 							</div>
 							<div class="m-classificationArea">
-								<?php	if($singletags): foreach ($singletags as $tag ): ?>
+								<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
 										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
 											<?= $tag->name?>
@@ -253,6 +263,8 @@
 		</div>
 	</section>
 	<?php endif; ?>
+
+
 	<!-- hobby-->
 	<?php
 		$topHobby = get_field('top-hobby', 'option');
@@ -282,9 +294,9 @@
 				$thumb_img = wp_get_attachment_image_src($thumb_id, 'full');
 				$thumb_src = $thumb_img[0];
 
-				//タグ名
-				$termType = get_post_taxonomies($topHobby->ID);
-				$term = get_the_terms($topHobby->ID, $termType[0]);
+				//タグを取得				
+				$term = get_the_terms($topHobby->ID, 'hobby_tag');
+
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
@@ -325,8 +337,6 @@
 				<?php
 					while($query->have_posts()): $query->the_post();
 
-					$singletags = get_the_terms($post->ID, 'hobby_tag');
-
 					if ( has_post_thumbnail() ) {
 						$thumbnail =  get_the_post_thumbnail();
 					} 
@@ -334,6 +344,8 @@
 					if(empty($thumbnail)){
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					}
+
+					$term = get_the_terms($post->ID, 'hobby_tag');
 				?>
 				<li class="m-oblongCard">
 					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
@@ -349,7 +361,7 @@
 								<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
 							</div>
 							<div class="m-classificationArea">
-								<?php	if($singletags): foreach ($singletags as $tag ): ?>
+								<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
 										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
 											<?= $tag->name?>

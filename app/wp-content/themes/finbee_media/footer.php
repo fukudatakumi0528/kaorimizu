@@ -3,6 +3,10 @@
 	global $scriptName;
 ?>
 
+      <div class="m-breadcrumb">
+        <?php custom_breadcrumb(); ?>
+      </div>
+
 			<?php wp_footer(); ?>
 
 			<footer class="l-footer">

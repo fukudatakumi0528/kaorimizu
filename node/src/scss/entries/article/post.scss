@@ -707,6 +707,17 @@
 									}
 								}
 							}
+
+							.article__relation {
+								margin-top:50px;
+
+								.m-titleBorder {
+								}
+
+								.o-wideCardList {
+									margin-top:20px;
+								}
+							}
 						}
 					}  
 				}
@@ -748,14 +759,7 @@
 				@include screen-large {
 					display: none;
 				}
-			}
-			
-		
-			.m-breadcrumb {
-				margin-top:50px;
-				padding:15px;
-				background-color: $bg-3-color;
-			}
+			}			
 		}
 	}
 }

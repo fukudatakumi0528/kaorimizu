@@ -14,3 +14,25 @@ function sort_count( $a , $b){
   
   return $sort_terms;
 };
+
+function serach_tags( $articleObjectId ) {
+  $termType = get_post_taxonomies($articleObjectId);
+  foreach ($termType as $termTag) {
+
+    switch ($termTag) {
+      case "feature_tag":
+          $termTagType = $termTag;
+          break;
+      case "hobby_tag":
+          $termTagType = $termTag;
+          break;
+      case "life_tag":
+          $termTagType = $termTag;
+          break;
+      case "learn_tag":
+          $termTagType = $termTag;
+          break;
+      }
+  };
+  return  get_the_terms($articleObjectId, $termTagType);
+};

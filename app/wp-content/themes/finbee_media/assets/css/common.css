@@ -2545,6 +2545,7 @@ main {
 }
 
 .m-breadcrumb {
+  margin-top: 50px;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2552,18 +2553,26 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 15px;
 }
 
-.m-breadcrumb .m-breadcrumb__list {
+.m-breadcrumb #breadcrumb {
+  width: 100%;
+}
+
+.m-breadcrumb #breadcrumb ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
   width: 100%;
   max-width: 1000px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link {
+.m-breadcrumb #breadcrumb ul > li {
   font-size: 1.2rem;
   font-weight: 700;
   display: -webkit-box;
@@ -2572,26 +2581,47 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-left: 5px;
 }
 
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link:nth-child(1) .m-breadcrumb__list__link__text {
+@media (min-width: 768px) {
+  .m-breadcrumb #breadcrumb ul > li {
+    font-size: 1.6rem;
+  }
+}
+
+.m-breadcrumb #breadcrumb ul > li > span {
+  display: block;
+}
+
+.m-breadcrumb #breadcrumb ul > li > a {
+  display: block;
+}
+
+.m-breadcrumb #breadcrumb ul > li > a > span {
+  display: block;
+}
+
+.m-breadcrumb #breadcrumb ul > li::before {
+  content: "\f105";
+  display: block;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  font-family: FontAwesome;
+}
+
+@media (min-width: 768px) {
+  .m-breadcrumb #breadcrumb ul > li::before {
+    font-size: 1.6rem;
+  }
+}
+
+.m-breadcrumb #breadcrumb ul > li:nth-child(1) {
   margin-left: 0px;
 }
 
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link:nth-last-child(1) span {
+.m-breadcrumb #breadcrumb ul > li:nth-child(1)::before {
   display: none;
-}
-
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link .m-breadcrumb__list__link__text {
-  margin-left: 5px;
-}
-
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link span {
-  margin-left: 5px;
-}
-
-.m-breadcrumb .m-breadcrumb__list .m-breadcrumb__list__link span::before {
-  font-size: 1rem;
 }
 
 .m-classificationArea {

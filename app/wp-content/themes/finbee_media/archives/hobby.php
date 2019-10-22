@@ -1,9 +1,7 @@
 <?php
 	global $cssName;
-	global $breadcrumb;
 
 	$cssName = "article/index";
-	$breadcrumb = "<li>趣味</li>";
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
