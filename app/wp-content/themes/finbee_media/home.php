@@ -217,14 +217,12 @@
 					while($query->have_posts()): $query->the_post();
 					if($query !== $topFeature):
 
-					if ( has_post_thumbnail() ) {
+					if ( has_post_thumbnail($post->ID)) {
 						$thumbnail =  get_the_post_thumbnail();
-					} 
-
-					if(empty($thumbnail)){
+					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-					}
-
+					};
+	
 					$term = get_the_terms($post->ID, 'feature_tag');
 
 				?>
@@ -335,13 +333,11 @@
 				<?php
 					while($query->have_posts()): $query->the_post();
 
-					if ( has_post_thumbnail() ) {
+					if ( has_post_thumbnail($post->ID)) {
 						$thumbnail =  get_the_post_thumbnail();
-					} 
-
-					if(empty($thumbnail)){
+					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-					}
+					};
 
 					$term = get_the_terms($post->ID, 'hobby_tag');
 				?>
@@ -407,14 +403,12 @@
 
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
-						if ( has_post_thumbnail() ) {
+						if ( has_post_thumbnail($post->ID)) {
 							$thumbnail =  get_the_post_thumbnail();
-						} 
-
-						if(empty($thumbnail)){
+						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-						}
-					?>
+						};
+						?>
 					<li class="m-oblongCard">
 						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 							<div class="m-oblongCard__inner__topper">
@@ -457,14 +451,12 @@
 
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
-						if ( has_post_thumbnail() ) {
+						if ( has_post_thumbnail($post->ID)) {
 							$thumbnail =  get_the_post_thumbnail();
-						} 
-
-						if(empty($thumbnail)){
+						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-						}
-					?>
+						};
+						?>
 					<li class="m-verticallyCard">
 						<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
 							<div class="m-verticallyCard__inner__topper">
@@ -528,14 +520,13 @@
 
 						$singletags = get_the_terms($post->ID, 'learn_tag');
 
-						if ( has_post_thumbnail() ) {
+						if ( has_post_thumbnail($post->ID)) {
 							$thumbnail =  get_the_post_thumbnail();
-						} 
-
-						if(empty($thumbnail)){
+						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-						}
-					?>
+						};
+
+						?>
 					<li class="m-oblongCard">
 						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 							<div class="m-oblongCard__inner__topper">
@@ -580,13 +571,11 @@
 
 					$singletags = get_the_terms($post->ID, 'learn_tag');
 
-					if ( has_post_thumbnail() ) {
+					if ( has_post_thumbnail($post->ID)) {
 						$thumbnail =  get_the_post_thumbnail();
-					} 
-
-					if(empty($thumbnail)){
+					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-					}
+					};
 				?>
 				<li class="m-verticallyCard">
 					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
