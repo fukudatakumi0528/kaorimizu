@@ -24,7 +24,7 @@
 
 	if ( has_post_thumbnail() ) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
 		$thumbnail =  get_the_post_thumbnail_url();
-	} 
+	}
 
 	if(empty($thumbnail)){
 		$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
@@ -79,7 +79,7 @@
 							<div class="article__sns">
 								<p>この記事をシェアする</p>
 								<?php get_template_part('element/sns') ?>
-							</div>							
+							</div>
 							<div class="article__border"></div>
 							<div class="article__prevnext">
 								<?php if($next_post): ?>
@@ -121,6 +121,39 @@
 									</div>
 								<?php endif; ?>
 							</div>
+							<?php if(get_field('related_writer')): ?>
+								<div class="article__writer">
+									<ul class="article__writer_list">
+										<?php
+											$writers_id = get_field('related_writer');
+											foreach($writers_id as $writer_id):
+												$post = get_post($writer_id);
+										?>
+											<li class="article__writer_item">
+												<figure style="background-image: url(<?php the_post_thumbnail_url('large') ?>)"></figure>
+												<div>
+													<h2><?php the_field('writer_name'); ?></h2>
+													<?php if(get_field('writer_position')): ?>
+														<b><?php the_field('writer_position'); ?></b>
+													<?php endif; ?>
+													<p><?php the_field('writer_text'); ?></p>
+													<ul class="article__writer_item_sns">
+														<?php if(get_field('writer_instagram')): ?>
+															<li class="-ig"><a href="<?php the_field('writer_instagram') ?>" target="_blank"></a></li>
+														<?php endif; ?>
+														<?php if(get_field('writer_twitter')): ?>
+															<li class="-tw"><a href="<?php the_field('writer_twitter') ?>" target="_blank"></a></li>
+														<?php endif; ?>
+														<?php if(get_field('writer_facebook')): ?>
+															<li class="-fb"><a href="<?php the_field('writer_facebook') ?>" target="_blank"></a></li>
+														<?php endif; ?>
+													</ul>
+												</div>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							<?php endif; ?>
 							<div class="article__relation">
 								<div class="m-titleBorder">
 									<div class="m-titleBorder__main">
@@ -130,7 +163,7 @@
 								</div>
 								<ul class="o-wideCardList">
 									<?php
-									
+
 										$taxonomy_slug = 'feature_tag'; // タクソノミーのスラッグを指定
 										$post_type_slug = 'feature'; // 投稿タイプのスラッグを指定
 										$post_terms = wp_get_object_terms($post->ID, $taxonomy_slug); // タクソノミーの指定
@@ -154,19 +187,19 @@
 												)
 											)
 										);
-										
-										$the_query = new WP_Query($args); 
-										
-										if($the_query->have_posts()):while ($the_query->have_posts()): $the_query->the_post(); 
+
+										$the_query = new WP_Query($args);
+
+										if($the_query->have_posts()):while ($the_query->have_posts()): $the_query->the_post();
 
 										if ( has_post_thumbnail() ) {
 											$thumbnail =  get_the_post_thumbnail();
-										} 
+										}
 
 										if(empty($thumbnail)){
 											$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 										}
-									
+
 										$termType = get_post_taxonomies(get_the_ID());
 										$term = get_the_terms($post->ID, $termType[1]);
 									?>

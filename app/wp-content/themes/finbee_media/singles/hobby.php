@@ -121,7 +121,6 @@
 								<?php endif; ?>
 							</div>
 
-
 							<?php if(get_field('related_writer')): ?>
 								<div class="article__writer">
 									<ul class="article__writer_list">
@@ -155,7 +154,6 @@
 									</ul>
 								</div>
 							<?php endif; ?>
-
 
 							<div class="article__relation">
 								<div class="m-titleBorder">
