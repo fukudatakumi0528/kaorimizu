@@ -61,7 +61,7 @@
 							<?php endwhile; endif; ?>
 						</div>
 
-												<div class="article__footer">
+						<div class="article__footer">
 							<div class="article__tag">
 								<ul class="o-classificationList">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -73,7 +73,7 @@
 									<?php  endforeach;  endif; ?>
 								</ul>
 							</div>
-							<a class="article__bnr" href="https://finbee.jp/">
+							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $post->ID ?>">
 								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
 							<div class="article__sns">

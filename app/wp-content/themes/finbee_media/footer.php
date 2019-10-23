@@ -142,7 +142,7 @@
                   </div>
                 </div>
                 <div class="l-footer__search__inner__downlord__inner__footer">
-                  <a class="l-footer__search__inner__downlord__inner__footer__link" href="https://finbee.jp/">
+                  <a class="l-footer__search__inner__downlord__inner__footer__link" href="https://finbee.jp/?utm_source=be-topia&utm_medium=footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
 										<span class="icon-btn"></span>
 										<p class="l-footer__search__inner__downlord__inner__footer__link__text">公式サイトはこちら</p>
 										<span class="icon-tab"></span>
