@@ -2043,6 +2043,10 @@ main {
   display: none;
 }
 
+.l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__description {
+  display: none;
+}
+
 .l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard .m-classificationArea {
   display: none;
 }
@@ -2336,6 +2340,10 @@ main {
   display: none;
 }
 
+.l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__description {
+  display: none;
+}
+
 .l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard .m-classificationArea {
   display: none;
 }
@@ -2528,6 +2536,10 @@ main {
 }
 
 .l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__date {
+  display: none;
+}
+
+.l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__description {
   display: none;
 }
 
