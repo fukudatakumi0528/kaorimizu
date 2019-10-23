@@ -1,43 +1,36 @@
 <?php
 	global $cssName;
-	global $breadcrumb;
+	global $scriptName;
+	$cssName = "article/search";
 
-	$cssName = "article/index";
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
 	
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
 	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
+
 	get_header();
 ?>
-
 <main>
-	<section class="p-article__topper">
-		<div class="o-topperSection">
-			<div class="o-topperSection__main">
-				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
-					<div class="o-topperSection__main__title__text">
-						<h1 class="o-topperSection__main__title__text__main">特集</h1>
-						<p class="o-topperSection__main__title__text__sub">Feature</p>
-					</div>
-				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
-			</div>
+	<section class="p-articleSearch__topper">
+		<div class="m-inputSearch">
+			<input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
+			<div class="icon-search"></div>
 		</div>
 	</section>
-	<section class="p-article__main">
-		<div class="p-article__main__content">
-			<div class="p-article__main__content__refine">
-				<div class="p-article__main__content__refine__inner">
-					<div class="p-article__main__content__refine__inner__header">
-						<div class="p-article__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
-						<div class="p-article__main__content__refine__inner__header__icon js-refine__icon">
-							<span class="p-article__main__content__refine__inner__header__icon__line"></span>
-							<span class="p-article__main__content__refine__inner__header__icon__line"></span>
+	<section class="p-articleSearch__main">
+		<div class="p-articleSearch__main__content">
+			<div class="p-articleSearch__main__content__refine">
+				<div class="p-articleSearch__main__content__refine__inner">
+					<div class="p-articleSearch__main__content__refine__inner__header">
+						<div class="p-articleSearch__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
+						<div class="p-articleSearch__main__content__refine__inner__header__icon js-refine__icon">
+							<span class="p-articleSearch__main__content__refine__inner__header__icon__line"></span>
+							<span class="p-articleSearch__main__content__refine__inner__header__icon__line"></span>
 						</div>
 					</div>
-					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
+					<div class="p-articleSearch__main__content__refine__inner__selectArea js-refine__selectArea">
 						<ul class="o-classificationList">
 							<?php $tags = get_terms('feature_tag'); ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
@@ -52,23 +45,34 @@
 					</div>
 				</div>
 			</div>
-			<div class="p-article__main__content__column">
-				<div class="p-article__main__content__column__result">
-					<div class="p-article__main__content__column__result__category">
-						<p class="p-article__main__content__column__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
+			<div class="p-articleSearch__main__content__column">
+				<?php
+					$termTypeQuery = get_query_var('feature_tag');
+					$args = [
+						'post_type' => 'feature',
+						'tax_query'=> array(
+							'relation' => 'OR',
+							array(
+								'taxonomy' => 'feature_tag',
+								'field' => 'slug',
+								'terms' => $termTypeQuery,									
+							),
+						),
+						'posts_per_page' => 16,
+						'paged' => $paged,
+					];
+					$query = new WP_Query($args);
+				?>
+				<div class="p-articleSearch__main__content__column__result">
+					<div class="p-articleSearch__main__content__column__result__category">
+						<p class="p-articleSearch__main__content__column__result__category__text"><strong>#<?= urldecode($termTypeQuery); ?></strong>の絞り込み結果</p>
 					</div>
-					<div class="p-article__main__content__column__result__number">
-						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('feature')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
+					<div class="p-articleSearch__main__content__column__result__number">
+						<p class="p-articleSearch__main__content__column__result__number__text"><?= wp_count_posts('feature')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
 				</div>		
 				<div class="o-verticallyCardList">
 					<?php
-						$args = [
-							'post_type' => 'feature',
-							'posts_per_page' => 16,
-							'paged' => $paged,
-						];
-						$query = new WP_Query($args);
 						if($query->have_posts()): while($query->have_posts()): $query->the_post();
 
 						$singletags = get_the_terms($post->ID, 'feature_tag');
@@ -127,14 +131,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="p-article__main__sidebar">
+		<div class="p-articleSearch__main__sidebar">
 			<?php get_sidebar('pc'); ?>
 		</div>
 	</section>
-	<section class="p-article__footer">
+	<section class="p-articleSearch__footer">
 		<?php get_template_part('ranking'); ?>
 	</section>
+
 </main>
-
-
-<?php get_footer(); ?>
+<?php get_footer() ?>
