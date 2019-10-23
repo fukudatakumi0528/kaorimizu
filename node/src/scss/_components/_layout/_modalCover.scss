@@ -1,0 +1,13 @@
+.l-modalCover{
+  display:none;
+  height: 100%;
+  width: 100%;
+  background-color: $bg-base-color;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.5;
+
+  &.is-active {
+    display: block;
+  }
+}

@@ -17,6 +17,8 @@ export default class Header {
 		const $spGrant = $('#js-spGrant');
 		const $spMenu = $('#js-spMenu');
 
+		const $modalCover = $('.l-modalCover')
+
 		//spSearchの出し入れ
 		function spSearchToggle() {
 			if (!$spSearch.hasClass('is-active')) {
@@ -57,19 +59,19 @@ export default class Header {
       }
 		};
 
-		//headerへのクラスの出しわけ
-		function headerIsActive() {
-			if ($spSearch.hasClass("is-active") || $spGrant.hasClass("is-active") || $spMenu.hasClass("is-active")) {
-				$header.addClass('is-active');
-			} else {
-				$header.removeClass('is-active');
-			}
+		//modalCoverの出し入れ
+		function modalCoverToggle() {
+      if ($spSearch.hasClass('is-active') || $spGrant.hasClass('is-active') || $spMenu.hasClass('is-active')) {
+        $modalCover.addClass('is-active');
+      } else {
+        $modalCover.removeClass('is-active');
+      }
 		}
 
 		//pcMenuが押された時
 		$(".js-headerInnerPc__Menu, .js-spMenu__close").on('click', function () {
-			spMenuToggle()
-			headerIsActive()
+			spMenuToggle();
+			modalCoverToggle();
 
 			//menuボタンがクリックされた時は、必ずspSearchは閉じている。
 			if ($spSearch.hasClass('is-active')) {
@@ -80,12 +82,14 @@ export default class Header {
 			if ($spGrant.hasClass('is-active')) {
 				$spGrant.removeClass('is-active');
 			};
+
 		}); 
+
 
 		//pcSearchが押された時
 		$headerInnerPcSearch.on('click', function () {
-			spSearchToggle()
-			headerIsActive()
+			spSearchToggle();
+			modalCoverToggle();
 
 			//searchボタンがクリックされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
@@ -96,12 +100,14 @@ export default class Header {
 			if ($spGrant.hasClass('is-active')) {
 				$spGrant.removeClass('is-active');
 			};
+
 		}); 
+
 
 		//pcGrantが押された時
 		$headerInnerPcGrant.on('click', function () {
-			spGrantToggle()
-			headerIsActive()
+			spGrantToggle();
+			modalCoverToggle();
 
 			//grantボタンがクリックされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
@@ -112,6 +118,27 @@ export default class Header {
 			if ($spSearch.hasClass('is-active')) {
 				$spSearch.removeClass('is-active');
 			};
+
 		}); 
+
+		$modalCover.on('click', function () {
+			$modalCover.removeClass('is-active');
+
+			//modalCoverがクリックされた時は、必ずspMenuは閉じている。
+			if ($spMenu.hasClass('is-active')) {
+				$spMenu.removeClass('is-active');
+			};
+			
+			//modalCoverがクリックされた時は、必ずspGrantは閉じている。
+			if ($spGrant.hasClass('is-active')) {
+				$spGrant.removeClass('is-active');
+			};
+
+			//modalCoverがクリックされた時は、必ずspSearchは閉じている。
+			if ($spSearch.hasClass('is-active')) {
+				$spSearch.removeClass('is-active');
+			};			
+		})
+
 	};
 };

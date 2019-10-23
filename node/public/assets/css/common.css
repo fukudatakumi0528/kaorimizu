@@ -1874,6 +1874,7 @@ main {
     width: 100%;
     z-index: 1000;
     background-color: #FFFFFF;
+    border-bottom: solid 2px #262626;
   }
 }
 
@@ -1893,6 +1894,20 @@ main {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.l-modalCover {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: #262626;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+.l-modalCover.is-active {
+  display: block;
 }
 
 .l-spGrant {

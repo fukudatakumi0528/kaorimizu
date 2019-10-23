@@ -6,6 +6,7 @@
 
 <body>
 <div class="wrap">
+  <div class="l-modalCover"></div>
 	<div class="l-spMenu" id="js-spMenu">
 		<header class="l-header">
 			<div class="o-headerInner">
