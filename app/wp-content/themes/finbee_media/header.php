@@ -127,11 +127,14 @@
               <div class="icon-search"></div>
             </div>
           </div>
+          <?php 
+            $articleAllPickup = get_field('article-all-pickup', 'option');
+            if($articleAllPickup):
+          ?>
           <div class="l-spMenu__main__pickup">
             <p class="l-spMenu__main__pickup__title">Pickup</p>
 							<ul class="o-verticallyCardList">
               <?php 
-                $articleAllPickup = get_field('article-all-pickup', 'option');
                 foreach($articleAllPickup as $articleAll):
                             
                   // サムネイルID
@@ -176,7 +179,8 @@
               </li>
               <?php endforeach; ?>
 						</ul>
-					</div>
+          </div>
+          <?php endif; ?>
 					<?php 
 						$taxonomies = array( 
 							'feature_taxonomy',
@@ -275,11 +279,14 @@
             <input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
             <div class="icon-search"></div>
           </div>
+          <?php 
+            $articleSearchPickup = get_field('article-search-pickup', 'option');
+            if($articleSearchPickup):
+          ?>
           <div class="l-spSearch__main__pickup">
             <p class="l-spSearch__main__pickup__title">Pickup</p>
             <ul class="o-verticallyCardList">
               <?php 
-                $articleSearchPickup = get_field('article-search-pickup', 'option');
                 foreach($articleSearchPickup as $articleSearch):
                             
                   // サムネイルID
@@ -325,6 +332,7 @@
               <?php endforeach; ?>
 						</ul>
           </div>
+          <?php endif;?>
           <div class="l-spSearch__main__keywords">
             <div class="l-spSearch__main__keywords__title">Keywords</div>
                         <ul class="o-classificationList">
@@ -405,6 +413,10 @@
             <input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
             <div class="icon-search"></div>
           </div>
+          <?php
+            $articleGrantPickup = get_field('article-grant-pickup', 'option');
+            if($articleGrantPickup):  
+          ?>
           <div class="l-spGrant__main__pickup">
             <p class="l-spGrant__main__pickup__title">Pickup</p>
             <ul class="o-verticallyCardList">
@@ -455,6 +467,7 @@
               <?php endforeach; ?>
 						</ul>
           </div>
+          <?php endif; ?>
           <div class="l-spGrant__main__keywords">
             <div class="l-spGrant__main__keywords__title">Keywords</div>
                         <ul class="o-classificationList">
