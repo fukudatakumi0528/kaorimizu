@@ -7,6 +7,8 @@
 <body>
 <div class="wrap">
   <div class="l-modalCover"></div>
+
+  <!-- メインメニュー -->
 	<div class="l-spMenu" id="js-spMenu">
 		<header class="l-header">
 			<div class="o-headerInner">
@@ -128,58 +130,51 @@
           <div class="l-spMenu__main__pickup">
             <p class="l-spMenu__main__pickup__title">Pickup</p>
 							<ul class="o-verticallyCardList">
+              <?php 
+                $articleAllPickup = get_field('article-all-pickup', 'option');
+                foreach($articleAllPickup as $articleAll):
+                            
+                  // サムネイルID
+                  if ( has_post_thumbnail($articleAll->ID) ) {
+                    $thumbnail =  get_the_post_thumbnail($articleAll->ID);
+                  } else {
+                    $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+                  };
+
+                  //
+                  $postType = get_post_type_object($articleAll->post_type);
+                  $postLabel = $postType->label;
+
+                  //タグを取得
+                  $term = serach_tags($articleAll->ID);
+              ?>
+
 							<li class="m-verticallyCard">
-								<div class="m-verticallyCard__inner">
-									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
+								<a class="m-verticallyCard__inner" href="<?php the_permalink($articleAll) ?>">
+									<div class="m-verticallyCard__inner__topper">
+                    <div class="m-verticallyCard__inner__topper__image" href="">
+                      <img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+                    </div>
+                  </div>
 									<div class="m-verticallyCard__inner__footer">
-										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
+                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__title"><?= $articleAll->post_title ?></div>
 										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"></div>
+											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleAll->post_content) ?></div>
 										</div>
-																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-																				</div>
+                    <div class="m-classificationArea">
+                      <?php	if($term): foreach ($term as $tag ): ?>
+                        <object>
+                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                            <?= $tag->name?>
+                          </a>
+                        </object>
+                      <?php  endforeach; endif; ?>
+                    </div>
 									</div>
-								</div>
-							</li>
-							<li class="m-verticallyCard">
-								<div class="m-verticallyCard__inner">
-									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
-									<div class="m-verticallyCard__inner__footer">
-										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"></div>
-										</div>
-																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-																				</div>
-									</div>
-								</div>
-							</li>
-							<li class="m-verticallyCard">
-								<div class="m-verticallyCard__inner">
-									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-									<div class="m-verticallyCard__inner__footer">
-										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"></div>
-										</div>
-																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-																				</div>
-									</div>
-								</div>
-							</li>
-							<li class="m-verticallyCard">
-								<div class="m-verticallyCard__inner">
-									<div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-									<div class="m-verticallyCard__inner__footer">
-										<div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"></div>
-										</div>
-																				<div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-																				</div>
-									</div>
-								</div>
-							</li>
+								</a>
+              </li>
+              <?php endforeach; ?>
 						</ul>
 					</div>
 					<?php 
@@ -214,17 +209,42 @@
           </div>
 				</div>
       </div>
+
+      <!-- 目標を探す -->
       <div class="l-spSearch" id="js-spSearch">
         <header class="l-header">
-          <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
-            <div class="o-headerInner__left"><a class="icon-instagram" href=""></a><a class="icon-twitter" href=""></a><a class="icon-facebook" href=""><span class="path1"></span><span class="path2"></span></a></div>
+          <div class="o-headerInner">
+            <a class="m-logo" href="">
+              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+            </a>
+            <div class="o-headerInner__left">
+              <a class="icon-instagram" href=""></a>
+              <a class="icon-twitter" href=""></a>
+              <a class="icon-facebook" href="">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </a>
+            </div>
           </div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc">
+            <a class="m-logo" href="">
+              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+            </a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-hobby o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <span class="icon-feature o-headerInnerPc__left__category__list__link__icon">
+                      <span class="path1"></span>
+                      <span class="path2"></span>
+                      <span class="path3"></span>
+                    </span>
+                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <span class="icon-hobby o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
                     <p class="o-headerInnerPc__left__category__list__link__text">趣味</p></a></li>
                 <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-life o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span></span>
                     <p class="o-headerInnerPc__left__category__list__link__text">生活</p></a></li>
@@ -257,47 +277,53 @@
           </div>
           <div class="l-spSearch__main__pickup">
             <p class="l-spSearch__main__pickup__title">Pickup</p>
-                        <ul class="o-verticallyCardList">
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image3.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                        </ul>
+            <ul class="o-verticallyCardList">
+              <?php 
+                $articleSearchPickup = get_field('article-search-pickup', 'option');
+                foreach($articleSearchPickup as $articleSearch):
+                            
+                  // サムネイルID
+                  if ( has_post_thumbnail($articleSearch->ID) ) {
+                    $thumbnail =  get_the_post_thumbnail($articleSearch->ID);
+                  } else {
+                    $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+                  };
+
+                  //
+                  $postType = get_post_type_object($articleSearch->post_type);
+                  $postLabel = $postType->label;
+
+                  //タグを取得
+                  $term = serach_tags($articleSearch->ID);
+              ?>
+
+							<li class="m-verticallyCard">
+								<a class="m-verticallyCard__inner" href="<?php the_permalink($articleSearch) ?>">
+									<div class="m-verticallyCard__inner__topper">
+                    <div class="m-verticallyCard__inner__topper__image" href="">
+                      <img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+                    </div>
+                  </div>
+									<div class="m-verticallyCard__inner__footer">
+                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__title"><?= $articleSearch->post_title ?></div>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleSearch->post_content) ?></div>
+										</div>
+                    <div class="m-classificationArea">
+                      <?php	if($term): foreach ($term as $tag ): ?>
+                        <object>
+                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                            <?= $tag->name?>
+                          </a>
+                        </object>
+                      <?php  endforeach; endif; ?>
+                    </div>
+									</div>
+								</a>
+              </li>
+              <?php endforeach; ?>
+						</ul>
           </div>
           <div class="l-spSearch__main__keywords">
             <div class="l-spSearch__main__keywords__title">Keywords</div>
@@ -338,6 +364,8 @@
           </div>
         </div>
       </div>
+
+      <!-- 目標を叶える -->
       <div class="l-spGrant" id="js-spGrant">
         <header class="l-header">
           <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
@@ -379,60 +407,53 @@
           </div>
           <div class="l-spGrant__main__pickup">
             <p class="l-spGrant__main__pickup__title">Pickup</p>
-                        <ul class="o-verticallyCardList">
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image4.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a><a class="m-classificationArea__tag" href="">日帰り旅行ツウな人の遊び方</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image5.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image1.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                                        <li class="m-verticallyCard">
-                                          <div class="m-verticallyCard__inner">
-                                            <div class="m-verticallyCard__inner__topper"><a class="m-verticallyCard__inner__topper__image" href=""><img class="m-verticallyCard__inner__topper__image__inner" src="/assets/img/dammy/dammy-image2.jpg" alt=""></a></div>
-                                            <div class="m-verticallyCard__inner__footer">
-                                              <div class="m-verticallyCard__inner__footer__date">2019.08.14</div><a class="m-verticallyCard__inner__footer__title" href="">ダミー日帰りで行ける海が綺麗なビーチを探せ！</a>
-                                              <div class="m-verticallyCard__inner__footer__description">
-                                                <div class="m-verticallyCard__inner__footer__description__text"></div>
-                                              </div>
-                                                                  <div class="m-classificationArea"><a class="m-classificationArea__tag" href="">ビーチ</a><a class="m-classificationArea__tag" href="">日帰り旅行</a><a class="m-classificationArea__tag" href="">休日</a>
-                                                                  </div>
-                                            </div>
-                                          </div>
-                                        </li>
-                        </ul>
+            <ul class="o-verticallyCardList">
+              <?php 
+                $articleGrantPickup = get_field('article-grant-pickup', 'option');
+                foreach($articleGrantPickup as $articleGrant):
+                            
+                  // サムネイルID
+                  if ( has_post_thumbnail($articleGrant->ID) ) {
+                    $thumbnail =  get_the_post_thumbnail($articleGrant->ID);
+                  } else {
+                    $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+                  };
+
+                  //
+                  $postType = get_post_type_object($articleGrant->post_type);
+                  $postLabel = $postType->label;
+
+                  //タグを取得
+                  $term = serach_tags($articleGrant->ID);
+              ?>
+
+							<li class="m-verticallyCard">
+								<a class="m-verticallyCard__inner" href="<?php the_permalink($articleGrant) ?>">
+									<div class="m-verticallyCard__inner__topper">
+                    <div class="m-verticallyCard__inner__topper__image" href="">
+                      <img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+                    </div>
+                  </div>
+									<div class="m-verticallyCard__inner__footer">
+                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__title"><?= $articleGrant->post_title ?></div>
+										<div class="m-verticallyCard__inner__footer__description">
+											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleGrant->post_content) ?></div>
+										</div>
+                    <div class="m-classificationArea">
+                      <?php	if($term): foreach ($term as $tag ): ?>
+                        <object>
+                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                            <?= $tag->name?>
+                          </a>
+                        </object>
+                      <?php  endforeach; endif; ?>
+                    </div>
+									</div>
+								</a>
+              </li>
+              <?php endforeach; ?>
+						</ul>
           </div>
           <div class="l-spGrant__main__keywords">
             <div class="l-spGrant__main__keywords__title">Keywords</div>
