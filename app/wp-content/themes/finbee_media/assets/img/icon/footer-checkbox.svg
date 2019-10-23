@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polyline id="path-1" points="6 7.60546875 9.90625 11.5117188 19.8759766 3"></polyline>
+    </defs>
+    <g id="PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-485.000000, -5702.000000)" id="sec_06">
+            <g transform="translate(148.000000, 5548.000000)">
+                <g id="list" transform="translate(337.000000, 114.000000)">
+                    <g id="li" transform="translate(0.000000, 40.000000)">
+                        <g id="check">
+                            <rect id="Rectangle" stroke="#262626" stroke-width="2" x="1" y="1" width="16" height="16"></rect>
+                            <g id="Path-2" stroke-linecap="round" stroke-linejoin="round">
+                                <use stroke="#F5F5F5" stroke-width="6" xlink:href="#path-1"></use>
+                                <use stroke="#DF2B28" stroke-width="3" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
