@@ -26,7 +26,7 @@
     <p class="p-privacy__main__description">
       1．当社は、利用者情報保護の実現のため、個人情報保護法、各省庁ガイドラインその他関連する法令等を遵守いたします。
       <br>
-      <br>2．本プライバシーポリシー（以下「本ポリシー」といいます。）は、当社が提供・運営するウェブサイト「be-topia」（http://●●）（以下「本サイト」といいます。）の利用に関し適用されます。
+      <br>2．本プライバシーポリシー（以下「本ポリシー」といいます。）は、当社が提供・運営するウェブサイト「be-topia」（<a href="https://be-topia.finbee.jp">https://be-topia.finbee.jp</a>）（以下「本サイト」といいます。）の利用に関し適用されます。
       <br>
       <br>3．当社以外の者が提供するウェブサイト（以下「外部サイト」といいます。）については、本サイトを経由して利用する場合であっても、本ポリシーの規定は適用されません。外部サイトにおける利用者情報の取扱いについては、当該外部サイトを提供する事業者が別途定めるプライバシーポリシー等をご参照ください。
     </p>
@@ -41,9 +41,9 @@
       <br>
       <br>b．Google Analyticsを利用した情報取得
       <br>当社は、利用者によるサイト利用状況を把握するため、Google Analyticsを利用して、アクセスログを収集します。Google Analyticsは、cookie（クッキー）を使用し、個人を特定する情報を含むことなく、本サイトの利用状況を収集し、収集された情報はGoogle社のプライバシーポリシーに基づき管理されます。
-      <br>サービス名称：Google Analytics（https://www.google.com/analytics/web/?hl=ja）
-      <br>利用規約： https://www.google.com/analytics/terms/jp.html
-      <br>プライバシーポリシー： https://policies.google.com/privacy?hl=ja&gl=jp
+      <br>サービス名称：Google Analytics（<a href="https://www.google.com/analytics/web/?hl=ja">https://www.google.com/analytics/web/?hl=ja</a>）
+      <br>利用規約： <a href="https://www.google.com/analytics/terms/jp.html">https://www.google.com/analytics/terms/jp.html</a>
+      <br>プライバシーポリシー： <a href="https://policies.google.com/privacy?hl=ja&gl=jp">https://policies.google.com/privacy?hl=ja&gl=jp</a>
       <br>
       <br>c．端末情報
       <br>端末の種類やOSバージョン、広告ID等の情報をいいます。

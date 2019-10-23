@@ -42,6 +42,11 @@
     line-height: 170%;
     letter-spacing:1.6;
     font-weight: $font-medium;
+
+    a {
+      color: $font-2-color;
+      text-decoration: underline;
+    }
   }
 }
 

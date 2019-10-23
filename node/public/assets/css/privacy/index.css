@@ -50,6 +50,11 @@ $font-xxl: 2rem;
   font-weight: 500;
 }
 
+.p-privacy__main .p-privacy__main__description a {
+  color: #285486;
+  text-decoration: underline;
+}
+
 .p-privacy__footer {
   margin-top: 0px;
   width: 100%;

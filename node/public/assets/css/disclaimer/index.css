@@ -50,6 +50,11 @@ $font-xxl: 2rem;
   font-weight: 500;
 }
 
+.p-disclaimer__main .p-disclaimer__main__description a {
+  color: #285486;
+  text-decoration: underline;
+}
+
 .p-disclaimer__footer {
   margin-top: 0px;
   width: 100%;
