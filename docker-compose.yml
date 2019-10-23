@@ -53,5 +53,5 @@ services:
       - 3000:3000
     volumes:
       - ./node:/home/node
-      - ./app/wp-content/themes/officelab_renewal/assets/js:/home/app/wp-content/themes/finbee_media/assets/js
-      - ./app/wp-content/themes/officelab_renewal/assets/css:/home/app/wp-content/themes/finbee_media/assets/css
+      - ./app/wp-content/themes/finbee_media/assets/js:/home/app/wp-content/themes/finbee_media/assets/js
+      - ./app/wp-content/themes/finbee_media/assets/css:/home/app/wp-content/themes/finbee_media/assets/css
