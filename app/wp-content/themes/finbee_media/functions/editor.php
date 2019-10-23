@@ -121,7 +121,7 @@ function register_cpt_feature() {
             'title',  // 記事タイトル
             'editor',  // 記事本文
             'thumbnail',  // アイキャッチ画像
-            'revisions',  // リビジョン    
+            'revisions',  // リビジョン
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
@@ -203,7 +203,7 @@ function register_cpt_hobby() {
             'title',  // 記事タイトル
             'editor',  // 記事本文
             'thumbnail',  // アイキャッチ画像
-            'revisions',  // リビジョン    
+            'revisions',  // リビジョン
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
@@ -285,7 +285,7 @@ function register_cpt_life() {
             'title',  // 記事タイトル
             'editor',  // 記事本文
             'thumbnail',  // アイキャッチ画像
-            'revisions',  // リビジョン    
+            'revisions',  // リビジョン
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
@@ -336,7 +336,7 @@ function register_cpt_life() {
     );
 }
 add_action( 'init', 'register_cpt_life' );
-   
+
 
 
 //学び
@@ -366,7 +366,7 @@ function register_cpt_learn() {
             'title',  // 記事タイトル
             'editor',  // 記事本文
             'thumbnail',  // アイキャッチ画像
-            'revisions',  // リビジョン    
+            'revisions',  // リビジョン
             'custom-fields'
         ),
         'taxonomies'    => array( 'type', ),       // このカスタム投稿で使用するカスタム分類
@@ -417,7 +417,34 @@ function register_cpt_learn() {
     );
 }
 add_action( 'init', 'register_cpt_learn' );
-    
+
+
+// ライター
+function register_cpt_writer() {
+  $exampleSupports = [
+    'title',
+    //'editor',
+    'thumbnail',
+    //'revisions'
+  ];
+  register_post_type( 'writer',
+    array(
+      'label' => 'ライター',
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 6,
+      'supports' => $exampleSupports
+    )
+  );
+}
+add_action( 'init', 'register_cpt_writer' );
+
+
+
+
+
+
+
 
 
 // タクソノミータームの順番をdescription順に変える
@@ -453,7 +480,7 @@ function article__interview_shortcode($atts ,$content){
                 . '<div class="article__interview__human">'
                     . '<img class="article__interview__human__image" src="' . $atts['src'] . '" alt="">'
                     . '<div class="article__interview__human__name">'
-                        . $atts['name'] 
+                        . $atts['name']
                     . '</div>'
                 . '</div>'
                 . '<div class="article__interview__callout">'
@@ -489,7 +516,7 @@ function mce_external_plugins_table($plugins) {
     return $plugins;
 }
 add_filter( 'mce_external_plugins', 'mce_external_plugins_table' );
- 
+
 /**
  * ビジュアルエディタにテーブル用のボタンを追加します。
  */
