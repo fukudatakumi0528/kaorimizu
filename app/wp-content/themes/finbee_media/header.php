@@ -5,6 +5,11 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBC63RB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="wrap">
   <div class="l-modalCover"></div>
 
@@ -13,7 +18,7 @@
 		<header class="l-header">
 			<div class="o-headerInner">
 				<a class="m-logo" href="">
-					<img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+					<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 				</a>
 				<div class="o-headerInner__left">
 					<a class="icon-instagram" href=""></a>
@@ -24,7 +29,7 @@
 					</a>
 				</div>
 			</div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
@@ -40,10 +45,12 @@
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
                   <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
+                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
                   <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
+                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
               </ul>
               <div class="o-headerInnerPc__left__icon"><a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a><a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a><a class="icon-facebook o-headerInnerPc__left__icon__list" href=""><span class="path1"></span><span class="path2"></span></a>
@@ -241,7 +248,7 @@
         <header class="l-header">
           <div class="o-headerInner">
             <a class="m-logo" href="">
-              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+              <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInner__left">
               <a class="icon-instagram" href=""></a>
@@ -254,7 +261,7 @@
           </div>
           <div class="o-headerInnerPc">
             <a class="m-logo" href="">
-              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+              <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
@@ -424,10 +431,10 @@
       <!-- 目標を叶える -->
       <div class="l-spGrant" id="js-spGrant">
         <header class="l-header">
-          <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInner__left"><a class="icon-instagram" href=""></a><a class="icon-twitter" href=""></a><a class="icon-facebook" href=""><span class="path1"></span><span class="path2"></span></a></div>
           </div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
@@ -581,10 +588,12 @@
           </div>
         </div>
       </div>
+
+  <!-- pc用header -->
 	<header class="l-header">
 		<div class="o-headerInner">
 			<a class="m-logo" href="<?= home_url() ?>/">
-				<img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia">
+				<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 			</a>
 			<div class="o-headerInner__left">
 				<a class="icon-instagram" href=""></a>
@@ -595,7 +604,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="o-headerInnerPc"><a class="m-logo" href="<?= site_url('') ?>"><img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia"></a>
+		<div class="o-headerInnerPc"><a class="m-logo" href="<?= site_url('') ?>"><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
 			<div class="o-headerInnerPc__left">
 				<ul class="o-headerInnerPc__left__category">
 					<li class="o-headerInnerPc__left__category__list">
@@ -645,9 +654,17 @@
 								<span class="path1"></span>
 								<span class="path2"></span>
 								<span class="path3"></span>
-							</span>
+              </span>
+              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__search__triangle">
+                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
+                  </div>
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+                  </div>
+                </div>
+              </div>
 						</div>
-						<p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
+            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
 					</li>
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
 						<div class="o-headerInnerPc__left__button__list__icon">
@@ -655,8 +672,16 @@
 								<span class="path1"></span>
 								<span class="path2"></span>
 							</span>
+              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__grant__triangle">
+                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
+                  </div>
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+                  </div>
+                </div>
+              </div>
 						</div>
-						<p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
+            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
 					</li>
 				</ul>
 				<div class="o-headerInnerPc__left__icon">

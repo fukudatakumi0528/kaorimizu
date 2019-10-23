@@ -11,13 +11,15 @@ export default class Header {
 	clickHeaderButton() {
 		const $headerInnerPcSearch = $('.js-headerInnerPc__search');
 		const $headerInnerPcGrant = $('.js-headerInnerPc__grant');
-		const $header = $('.l-header');
 
 		const $spSearch = $('#js-spSearch');
 		const $spGrant = $('#js-spGrant');
 		const $spMenu = $('#js-spMenu');
 
 		const $modalCover = $('.l-modalCover')
+
+		const $seachTriangle = $('.js-headerInnerPc__search__triangle');
+		const $grantTriangle = $('.js-headerInnerPc__grant__triangle');
 
 		//spSearchの出し入れ
 		function spSearchToggle() {
@@ -68,6 +70,20 @@ export default class Header {
       }
 		}
 
+		function triangleToggle() {
+			if ($spSearch.hasClass('is-active')) {
+				$seachTriangle.addClass('is-active');
+			} else {
+				$seachTriangle.removeClass('is-active');
+			}
+
+			if ($spGrant.hasClass('is-active')) {
+				$grantTriangle.addClass('is-active');
+			} else {
+				$grantTriangle.removeClass('is-active');
+			}
+		}
+
 		//pcMenuが押された時
 		$(".js-headerInnerPc__Menu, .js-spMenu__close").on('click', function () {
 			spMenuToggle();
@@ -83,8 +99,8 @@ export default class Header {
 				$spGrant.removeClass('is-active');
 			};
 
+			triangleToggle();
 		}); 
-
 
 		//pcSearchが押された時
 		$headerInnerPcSearch.on('click', function () {
@@ -101,6 +117,7 @@ export default class Header {
 				$spGrant.removeClass('is-active');
 			};
 
+			triangleToggle();
 		}); 
 
 
@@ -119,6 +136,7 @@ export default class Header {
 				$spSearch.removeClass('is-active');
 			};
 
+			triangleToggle();
 		}); 
 
 		$modalCover.on('click', function () {
@@ -138,6 +156,8 @@ export default class Header {
 			if ($spSearch.hasClass('is-active')) {
 				$spSearch.removeClass('is-active');
 			};			
+
+			triangleToggle();
 		})
 
 	};
