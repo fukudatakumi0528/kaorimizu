@@ -133,22 +133,24 @@
 											<li class="article__writer_item">
 												<figure style="background-image: url(<?php echo $writerthumb ?>)"></figure>
 												<div>
-													<h2><?php the_field('writer_name', $writer_id); ?> てsつお</h2>
+													<h2><?php the_field('writer_name', $writer_id); ?></h2>
 													<?php if(get_field('writer_position', $writer_id)): ?>
 														<b><?php the_field('writer_position', $writer_id); ?></b>
 													<?php endif; ?>
 													<p><?php the_field('writer_text', $writer_id); ?></p>
-													<ul class="article__writer_item_sns">
-														<?php if(get_field('writer_instagram', $writer_id)): ?>
-															<li class="-ig"><a href="<?php the_field('writer_instagram', $writer_id) ?>" target="_blank"></a></li>
-														<?php endif; ?>
-														<?php if(get_field('writer_twitter', $writer_id)): ?>
-															<li class="-tw"><a href="<?php the_field('writer_twitter', $writer_id) ?>" target="_blank"></a></li>
-														<?php endif; ?>
-														<?php if(get_field('writer_facebook', $writer_id)): ?>
-															<li class="-fb"><a href="<?php the_field('writer_facebook', $writer_id) ?>" target="_blank"></a></li>
-														<?php endif; ?>
-													</ul>
+													<?php if(get_field('writer_instagram', $writer_id) || get_field('writer_twitter', $writer_id) || get_field('writer_facebook', $writer_id)): ?>
+														<ul class="article__writer_item_sns">
+															<?php if(get_field('writer_instagram', $writer_id)): ?>
+																<li class="-ig"><a href="<?php the_field('writer_instagram', $writer_id) ?>" target="_blank"></a></li>
+															<?php endif; ?>
+															<?php if(get_field('writer_twitter', $writer_id)): ?>
+																<li class="-tw"><a href="<?php the_field('writer_twitter', $writer_id) ?>" target="_blank"></a></li>
+															<?php endif; ?>
+															<?php if(get_field('writer_facebook', $writer_id)): ?>
+																<li class="-fb"><a href="<?php the_field('writer_facebook', $writer_id) ?>" target="_blank"></a></li>
+															<?php endif; ?>
+														</ul>
+													<?php endif; ?>
 												</div>
 											</li>
 										<?php endforeach; ?>
