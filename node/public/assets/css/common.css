@@ -4020,7 +4020,7 @@ main {
 }
 
 .o-headerInner .m-logo {
-  width: 120px;
+  width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4071,7 +4071,7 @@ main {
 }
 
 .o-headerInnerPc .m-logo {
-  width: 120px;
+  width: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4091,7 +4091,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% - 120px);
+  width: calc(100% - 160px);
   max-width: 700px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -4228,21 +4228,44 @@ main {
   -ms-flex-align: center;
   align-items: center;
   border-right: solid 2px #262626;
-  position: relative;
 }
 
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path1:before {
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path1::before {
   content: "\e908";
   color: #FFFFFF;
 }
 
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path2:before {
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path2::before {
   content: "\e909";
   color: #000;
   margin-left: -1em;
 }
 
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path3:before {
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path2::before {
   content: "\e90b";
   color: #000;
   margin-left: -1em;

@@ -10,7 +10,7 @@
   max-width: 1000px;
 
   .m-logo {
-    width: 120px;
+    width: 160px;
     display:flex;
     justify-content:center;
     align-items: center; 
@@ -22,7 +22,7 @@
 
   .o-headerInnerPc__left {
     display: flex;
-    width: calc(100% - 120px);
+    width: calc(100% - 160px);
     max-width: 700px;
     justify-content: space-between;
 
@@ -129,26 +129,46 @@
           justify-content: center;
           align-items: center;
           border-right: $border-4;
-          position: relative;
 
           .icon-search2 {
+            position: relative;
+            height: 100%;
+            width: 100%;
 
-            .path1:before {
-              content: "\e908";
-              color: $bg-6-color;
+            .path1{
+              position: absolute;
+              height: 100%;
+              width: 100%;
+
+              &::before {
+                content: "\e908";
+                color: $bg-6-color;
+              } 
             }
 
-            .path2:before {
-              content: "\e909";
-              color: #000;
-              margin-left: -1em;
+            .path2{
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              
+              &::before {
+                content: "\e909";
+                color: #000;
+                margin-left: -1em;
+                } 
             }
 
-            .path3:before {
-              content: "\e90b";
-              color: #000;
-              margin-left: -1em;
-            }  
+            .path2{
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              
+              &::before {
+                content: "\e90b";
+                color: #000;
+                margin-left: -1em;
+              } 
+            }
           } 
 
           .icon-star2 {

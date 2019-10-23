@@ -13,7 +13,7 @@
 		<header class="l-header">
 			<div class="o-headerInner">
 				<a class="m-logo" href="">
-					<img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+					<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 				</a>
 				<div class="o-headerInner__left">
 					<a class="icon-instagram" href=""></a>
@@ -24,7 +24,7 @@
 					</a>
 				</div>
 			</div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
@@ -243,7 +243,7 @@
         <header class="l-header">
           <div class="o-headerInner">
             <a class="m-logo" href="">
-              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+              <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInner__left">
               <a class="icon-instagram" href=""></a>
@@ -256,7 +256,7 @@
           </div>
           <div class="o-headerInnerPc">
             <a class="m-logo" href="">
-              <img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia">
+              <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
@@ -426,10 +426,10 @@
       <!-- 目標を叶える -->
       <div class="l-spGrant" id="js-spGrant">
         <header class="l-header">
-          <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInner"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInner__left"><a class="icon-instagram" href=""></a><a class="icon-twitter" href=""></a><a class="icon-facebook" href=""><span class="path1"></span><span class="path2"></span></a></div>
           </div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="/assets/img/common/be-topia-logo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
@@ -588,7 +588,7 @@
 	<header class="l-header">
 		<div class="o-headerInner">
 			<a class="m-logo" href="<?= home_url() ?>/">
-				<img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia">
+				<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 			</a>
 			<div class="o-headerInner__left">
 				<a class="icon-instagram" href=""></a>
@@ -599,7 +599,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="o-headerInnerPc"><a class="m-logo" href="<?= site_url('') ?>"><img class="m-logo__image" src="<?php echo assetsPath('img') ?>common/be-topia-logo.svg" alt="be-topia"></a>
+		<div class="o-headerInnerPc"><a class="m-logo" href="<?= site_url('') ?>"><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
 			<div class="o-headerInnerPc__left">
 				<ul class="o-headerInnerPc__left__category">
 					<li class="o-headerInnerPc__left__category__list">

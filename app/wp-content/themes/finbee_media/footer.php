@@ -161,11 +161,11 @@
 							</li>
               <li class="l-footer__nav__inner__main__list">
 								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('disclaimer/') ?>">
-									<p class="l-footer__nav__inner__main__list__link__text">利用規約</p>
+									<p class="l-footer__nav__inner__main__list__link__text">免責事項</p>
 								</a>
 							</li>
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('policy/') ?>">
+								<a class="l-footer__nav__inner__main__list__link" href="<?= site_url('privacypolicy/') ?>">
 									<p class="l-footer__nav__inner__main__list__link__text">プライバシーポリシー</p>
 								</a>
 							</li>
