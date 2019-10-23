@@ -40,10 +40,12 @@
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
                   <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
+                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
                   <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
+                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
               </ul>
               <div class="o-headerInnerPc__left__icon"><a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a><a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a><a class="icon-facebook o-headerInnerPc__left__icon__list" href=""><span class="path1"></span><span class="path2"></span></a>
@@ -581,6 +583,8 @@
           </div>
         </div>
       </div>
+
+  <!-- pc用header -->
 	<header class="l-header">
 		<div class="o-headerInner">
 			<a class="m-logo" href="<?= home_url() ?>/">
@@ -645,9 +649,17 @@
 								<span class="path1"></span>
 								<span class="path2"></span>
 								<span class="path3"></span>
-							</span>
+              </span>
+              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__search__triangle">
+                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
+                  </div>
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+                  </div>
+                </div>
+              </div>
 						</div>
-						<p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
+            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
 					</li>
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
 						<div class="o-headerInnerPc__left__button__list__icon">
@@ -655,8 +667,16 @@
 								<span class="path1"></span>
 								<span class="path2"></span>
 							</span>
+              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__grant__triangle">
+                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
+                  </div>
+                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+                  </div>
+                </div>
+              </div>
 						</div>
-						<p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
+            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
 					</li>
 				</ul>
 				<div class="o-headerInnerPc__left__icon">

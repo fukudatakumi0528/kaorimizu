@@ -4054,6 +4054,10 @@ main {
   font-size: 16px;
 }
 
+.wrap {
+  z-index: 0;
+}
+
 .o-headerInnerPc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4193,7 +4197,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow: hidden;
   cursor: pointer;
 }
 
@@ -4225,6 +4228,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   border-right: solid 2px #262626;
+  position: relative;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .icon-search2 .path1:before {
@@ -4253,6 +4257,93 @@ main {
   content: "\e924";
   color: #262626;
   margin-left: -1em;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 0;
+  top: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle.is-active .o-headerInnerPc__left__button__list__icon__triangle__inner .o-headerInnerPc__left__button__list__icon__triangle__inner__back {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 20px solid #262626;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle.is-active .o-headerInnerPc__left__button__list__icon__triangle__inner .o-headerInnerPc__left__button__list__icon__triangle__inner__front {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 20px solid #FFF2C3;
+  top: calc(50% + 3px);
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle .o-headerInnerPc__left__button__list__icon__triangle__inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle .o-headerInnerPc__left__button__list__icon__triangle__inner .o-headerInnerPc__left__button__list__icon__triangle__inner__back {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 0px solid #262626;
+  top: calc(50% + 10px);
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon .o-headerInnerPc__left__button__list__icon__triangle .o-headerInnerPc__left__button__list__icon__triangle__inner .o-headerInnerPc__left__button__list__icon__triangle__inner__front {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 0px solid #FFF2C3;
+  top: calc(50% + 13px);
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__icon {

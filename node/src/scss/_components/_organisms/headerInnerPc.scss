@@ -1,3 +1,7 @@
+.wrap{
+  z-index: 0;
+}
+
 .o-headerInnerPc {
   display: flex;
   justify-content: space-between;
@@ -101,7 +105,6 @@
         width: 48%;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         cursor: pointer;
 
         .o-headerInnerPc__left__button__list__text {
@@ -126,6 +129,7 @@
           justify-content: center;
           align-items: center;
           border-right: $border-4;
+          position: relative;
 
           .icon-search2 {
 
@@ -159,6 +163,89 @@
               color: #262626;
               margin-left: -1em;
             }  
+          }
+
+          .o-headerInnerPc__left__button__list__icon__triangle {
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 0;
+            top:100%;
+            transform: translateY(-50%);
+            transition: 0.2s;
+
+            &.is-active {
+
+              .o-headerInnerPc__left__button__list__icon__triangle__inner {
+
+                .o-headerInnerPc__left__button__list__icon__triangle__inner__back {
+                  display: block;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  border-left: 17px solid transparent;
+                  border-right: 17px solid transparent;
+                  border-bottom: 20px solid $bg-base-color;
+                  top:50%;
+                  left: 50%;
+                  transform: translateX(-50%) translateY(-50%);
+                  z-index: 2;
+                  transition: 0.2s;
+                }
+
+                .o-headerInnerPc__left__button__list__icon__triangle__inner__front {
+                  display: block;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  border-left: 17px solid transparent;
+                  border-right: 17px solid transparent;
+                  border-bottom: 20px solid $bg-2-color;
+                  top: calc(50% + 3px);
+                  left: 50%;
+                  transform: translateX(-50%) translateY(-50%);
+                  z-index: 2;
+                  transition: 0.2s;
+                }  
+              }
+            }
+
+            .o-headerInnerPc__left__button__list__icon__triangle__inner {
+              display: block;
+              position: relative;
+              width: 100%;
+              height: 100%;
+
+              .o-headerInnerPc__left__button__list__icon__triangle__inner__back {
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-bottom: 0px solid $bg-base-color;
+                top:calc(50% + 10px);
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: 2;
+                transition: 0.2s;
+              }
+
+              .o-headerInnerPc__left__button__list__icon__triangle__inner__front {
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-bottom: 0px solid $bg-2-color;
+                top: calc(50% + 13px);
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: 2;
+                transition: 0.2s;
+              }
+            }
           }
         }
       }
