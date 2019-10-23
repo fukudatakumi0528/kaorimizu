@@ -314,24 +314,23 @@
           }
         }
   
-        .icon-instagram {
-  
-          @include screen-large {
-            margin-left:10px;
-          }
-        }
-  
-        .icon-twitter {
-          margin-left:20px;
-        }
-  
-        .icon-facebook{
-          margin-left:20px;
-  
-          .path2 {
-  
-            &::before{
-              color: $bg-1-color;
+
+        .l-footer__about__inner__footer__list {
+          display: flex;
+          margin-left: 20px;
+          align-items: center;
+
+
+          .l-footer__about__inner__footer__list__item {
+            height: 20px;
+            margin-left: 15px;
+
+            &:nth-of-type(1) {
+              margin:0;
+            }
+
+            img {
+              height: 100%;
             }
           }
         }

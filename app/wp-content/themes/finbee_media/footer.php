@@ -35,11 +35,7 @@
               <div class="l-footer__support__inner__center__checkbox color-dark">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
-										<span class="icon-check">
-											<span class="path1"></span>
-											<span class="path2"></span>
-											<span class="path3"></span>
-										</span>
+                    <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
                   <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
                 </div>
@@ -47,11 +43,7 @@
               <div class="l-footer__support__inner__center__checkbox color-light">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
-										<span class="icon-check">
-											<span class="path1"></span>
-											<span class="path2"></span>
-											<span class="path3"></span>
-										</span>
+                    <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
                   <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
                 </div>
@@ -59,11 +51,7 @@
               <div class="l-footer__support__inner__center__checkbox color-dark">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
-										<span class="icon-check">
-											<span class="path1"></span>
-											<span class="path2"></span>
-											<span class="path3"></span>
-										</span>
+                    <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
                   <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
                 </div>
@@ -88,13 +76,18 @@
               <p class="l-footer__about__inner__main__description">be-topiaは、「やりたいこと、やってみよう」をテーマにしたライフスタイルマガジンです。さまざまな人の「やりたいこと」や「やってみたこと」にまつわるストーリーやアイデアを紹介します。やりたいことが見つからない人、やりたいことを先延ばしにしている人。そんな人たちの背中をそっと押して、やりたいことへの一歩を踏み出す人を増やしていきます。</p>
             </div>
             <div class="l-footer__about__inner__footer">
-							<span class="icon-check-text"></span>
-							<a class="icon-instagram" href="<?php home_url() ?>/"></a>
-							<a class="icon-twitter" href="<?php home_url() ?>/"></a>
-							<a class="icon-facebook" href="<?php home_url() ?>/">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</a>
+              <span class="icon-check-text"></span>
+              <div class="l-footer__about__inner__footer__list">
+                <a class="l-footer__about__inner__footer__list__item instagram" href="">
+                  <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
+                </a>
+                <a class="l-footer__about__inner__footer__list__item twitter" href="">
+                  <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
+                </a>
+                <a class="l-footer__about__inner__footer__list__item facebook" href="">
+                  <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
+                </a>
+              </div>
 						</div>
           </div>
         </div>
