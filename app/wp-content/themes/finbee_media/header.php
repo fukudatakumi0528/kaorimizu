@@ -43,12 +43,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                   <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                   <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
@@ -286,11 +290,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                 </li>
               </ul>
@@ -448,11 +456,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+                  <div class="o-headerInnerPc__left__button__list__icon">
+                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                  </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                 </li>
               </ul>
@@ -650,11 +662,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<ul class="o-headerInnerPc__left__button">
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
 						<div class="o-headerInnerPc__left__button__list__icon">
-							<span class="icon-search2">
-								<span class="path1"></span>
-								<span class="path2"></span>
-								<span class="path3"></span>
-              </span>
+              <img src="<?= assetsPath('img') ?>icon/header-search.svg">
               <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__search__triangle">
                 <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
                   <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
@@ -668,10 +676,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</li>
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
 						<div class="o-headerInnerPc__left__button__list__icon">
-							<span class="icon-star2">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</span>
+              <img src="<?= assetsPath('img') ?>icon/header-star.svg">
               <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__grant__triangle">
                 <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
                   <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
