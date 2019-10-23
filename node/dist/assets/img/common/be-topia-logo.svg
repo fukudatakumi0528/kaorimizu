@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="37px" viewBox="0 0 108 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top" transform="translate(-17.000000, -12.000000)">
+            <g id="header" transform="translate(16.000000, 8.000000)">
+                <g id="logo">
+                    <text id="be-topia" font-family="Helvetica" font-size="25" font-weight="normal" letter-spacing="1.5">
+                        <tspan x="4.82788086" y="24" fill="#000000">be</tspan>
+                        <tspan x="35.635498" y="24" fill="#FFD94A">-</tspan>
+                        <tspan x="45.4606934" y="24" fill="#000000">topia</tspan>
+                    </text>
+                    <text id="はじめる、なりたい自分" font-family="YuGo-Bold, YuGothic" font-size="10" font-weight="bold" letter-spacing="-0.29" fill="#000000">
+                        <tspan x="1" y="40">はじめる、なりたい自分</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

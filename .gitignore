@@ -57,7 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-node/dist
 .DS_Store
 
 # wordpress medialibrary (uploads)
