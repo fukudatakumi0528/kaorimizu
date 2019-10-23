@@ -8,14 +8,22 @@
 
 // 自動アップデートは停止
 
-//オブジェクトの配列を、昇順に並び替えるときに使用。
+//オブジェクトの配列を、記事数順の昇順に並び替えるときに使用。
 function sort_count( $a , $b){
   $sort_terms = strcmp( $b->count , $a->count ); //記事数で並び替え
   
   return $sort_terms;
 };
 
-function serach_tags( $articleObjectId ) {
+//オブジェクトの配列を、記事数順の昇順に並び替えるときに使用。
+function sort_id( $a , $b){
+  $sort_terms = strcmp( $b->term_id , $a->term_id ); //記事数で並び替え
+  
+  return $sort_terms;
+};
+
+
+function search_tags( $articleObjectId ) {
   $termType = get_post_taxonomies($articleObjectId);
   foreach ($termType as $termTag) {
 

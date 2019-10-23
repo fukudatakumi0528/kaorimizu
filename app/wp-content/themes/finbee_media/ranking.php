@@ -85,7 +85,7 @@
         $postLabel = $postType->label;
 
         //タグを取得
-        $term = serach_tags($articleRankingMonth->ID);
+        $term = search_tags($articleRankingMonth->ID);
     ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingMonth) ?>">
@@ -151,7 +151,7 @@
         $postLabel = $postType->label;
 
         //タグを取得
-        $term = serach_tags($articleRankingWeekly->ID);
+        $term = search_tags($articleRankingWeekly->ID);
     ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingWeekly) ?>">
@@ -217,7 +217,7 @@
         $postLabel = $postType->label;
 
         //タグを取得
-        $term = serach_tags($articleRankingAll->ID);
+        $term = search_tags($articleRankingAll->ID);
     ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingAll) ?>">

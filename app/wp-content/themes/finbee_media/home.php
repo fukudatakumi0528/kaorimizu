@@ -34,7 +34,7 @@
 					$postLabel = $postType->label;
 
 					//タグを取得
-					$term = serach_tags($slider->ID);
+					$term = search_tags($slider->ID);
 			?>
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
@@ -103,7 +103,7 @@
 					};
 
 					//タグを取得
-					$term = serach_tags(get_the_ID());
+					$term = search_tags(get_the_ID());
 				?>
 				<li class="m-wideCard">
 					<div class="m-wideCard__pickup">
