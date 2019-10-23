@@ -121,31 +121,32 @@
 									</div>
 								<?php endif; ?>
 							</div>
+
 							<?php if(get_field('related_writer')): ?>
 								<div class="article__writer">
 									<ul class="article__writer_list">
 										<?php
 											$writers_id = get_field('related_writer');
 											foreach($writers_id as $writer_id):
-												$post = get_post($writer_id);
+												$writerthumb = get_the_post_thumbnail_url($writer_id, 'large');
 										?>
 											<li class="article__writer_item">
-												<figure style="background-image: url(<?php the_post_thumbnail_url('large') ?>)"></figure>
+												<figure style="background-image: url(<?php echo $writerthumb ?>)"></figure>
 												<div>
-													<h2><?php the_field('writer_name'); ?></h2>
-													<?php if(get_field('writer_position')): ?>
-														<b><?php the_field('writer_position'); ?></b>
+													<h2><?php the_field('writer_name', $writer_id); ?> てsつお</h2>
+													<?php if(get_field('writer_position', $writer_id)): ?>
+														<b><?php the_field('writer_position', $writer_id); ?></b>
 													<?php endif; ?>
-													<p><?php the_field('writer_text'); ?></p>
+													<p><?php the_field('writer_text', $writer_id); ?></p>
 													<ul class="article__writer_item_sns">
-														<?php if(get_field('writer_instagram')): ?>
-															<li class="-ig"><a href="<?php the_field('writer_instagram') ?>" target="_blank"></a></li>
+														<?php if(get_field('writer_instagram', $writer_id)): ?>
+															<li class="-ig"><a href="<?php the_field('writer_instagram', $writer_id) ?>" target="_blank"></a></li>
 														<?php endif; ?>
-														<?php if(get_field('writer_twitter')): ?>
-															<li class="-tw"><a href="<?php the_field('writer_twitter') ?>" target="_blank"></a></li>
+														<?php if(get_field('writer_twitter', $writer_id)): ?>
+															<li class="-tw"><a href="<?php the_field('writer_twitter', $writer_id) ?>" target="_blank"></a></li>
 														<?php endif; ?>
-														<?php if(get_field('writer_facebook')): ?>
-															<li class="-fb"><a href="<?php the_field('writer_facebook') ?>" target="_blank"></a></li>
+														<?php if(get_field('writer_facebook', $writer_id)): ?>
+															<li class="-fb"><a href="<?php the_field('writer_facebook', $writer_id) ?>" target="_blank"></a></li>
 														<?php endif; ?>
 													</ul>
 												</div>
@@ -154,6 +155,8 @@
 									</ul>
 								</div>
 							<?php endif; ?>
+
+
 							<div class="article__relation">
 								<div class="m-titleBorder">
 									<div class="m-titleBorder__main">
