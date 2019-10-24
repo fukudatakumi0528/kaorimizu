@@ -298,7 +298,7 @@
 		<?php 
 			if ($topHobby):
 
-			if ( has_post_thumbnail()) {
+			if ( has_post_thumbnail($topHobby->ID)) {
 				$topHobbyThumbnail = get_the_post_thumbnail_url($topHobby->ID);
 			} else {
 				$topHobbyThumbnail = assetsPath('img') . "logo/be-topia_thumbnail.jpg";
