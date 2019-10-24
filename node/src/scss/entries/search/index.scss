@@ -3,22 +3,40 @@
 @import "../..//_utils/_variables";
 @import "../../_utils/_mixins";
 
-
-.p-articleSearch__topper {
+.p-search__topper {
   z-index: 0;
+  background-color: $bg-3-color;
+  padding:20px 0;
 
   @include screen-large{
     margin-top:70px;
+    padding: 20px 15px;
   }
 
-  .o-topperSection {
-    padding:40px 20px 60px 20px;
-    background-color: $bg-1-color;  
-  }
+  .m-inputSearch {
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    margin:0 auto;
+
+    .m-inputSearch__input {
+      background-color: $bg-6-color;
+
+      @include screen-large {
+      }
+    }
+
+    .icon-search {
+      width: auto;
+
+      @include screen-large {
+        right: 35px;
+      }
+    }
+  }   
 }
 
-
-.p-articleSearch__main {
+.p-search__main {
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
@@ -32,14 +50,15 @@
     justify-content: space-between;
   }
 
-  .p-articleSearch__main__content {
+  .p-search__main__content {
     width: 100%;
 
     @include screen-large {
       max-width: 60%;
     }
 
-    .p-articleSearch__main__content__refine {
+
+    .p-search__main__content__refine {
       position: relative;
       width: 100%;
       z-index: 1;
@@ -50,7 +69,7 @@
         order: 2;
       }
     
-      .p-articleSearch__main__content__refine__inner {
+      .p-search__main__content__refine__inner {
         position: absolute;
         left:50%;
         transform: translateY(-95px) translateX(-50%);
@@ -67,17 +86,17 @@
           width: 100%;
         }  
     
-        .p-articleSearch__main__content__refine__inner__header {
+        .p-search__main__content__refine__inner__header {
           display: flex;
           justify-content: space-between;
           align-items: center;
     
-          .p-articleSearch__main__content__refine__inner__header__title {
+          .p-search__main__content__refine__inner__header__title {
             font-size:$font-s;
             font-weight: $font-bold;
           }
     
-          .p-articleSearch__main__content__refine__inner__header__icon {
+          .p-search__main__content__refine__inner__header__icon {
             height: 27px;
             width: 27px;
             background-color: $bg-6-color;
@@ -117,7 +136,7 @@
           }
         }
     
-        .p-articleSearch__main__content__refine__inner__selectArea {       
+        .p-search__main__content__refine__inner__selectArea {       
           display: block;
           height: auto;
         }  
@@ -125,21 +144,24 @@
     }
     
   
-    .p-articleSearch__main__content__column {
+    .p-search__main__content__column {
   
       @include screen-large {
         order: 1;
       }
   
-      .p-articleSearch__main__content__column__result {
+      .p-search__main__content__column__result {
         padding:10px 0px 0px 0px;
         margin-bottom:-10px;
     
-        .p-articleSearch__main__content__column__result__category {
+        .p-search__main__content__column__result__category {
           display: flex;
           justify-content: flex-start;
+
+          &.nothing {
+          }
     
-          .p-articleSearch__main__content__column__result__category__text {
+          .p-search__main__content__column__result__category__text {
             font-size: $font-s;
             font-weight: $font-bold;
             
@@ -150,21 +172,27 @@
           }
         }
     
-        .p-articleSearch__main__content__column__result__number {
+        .p-search__main__content__column__result__number {
           display: flex;
           justify-content: flex-end;
     
-          .p-articleSearch__main__content__column__result__number__text {
+          .p-search__main__content__column__result__number__text {
             font-size: $font-xs;
             font-weight: $font-bold;
             color:$font-4-color;
           }
         }
+
+        .p-search__main__content__column__result__nothing {
+          margin-top:20px;
+          font-size: $font-m;
+          font-weight: $font-bold;
+        }
       }
     }
   }
 
-  .p-articleSearch__main__sidebar {
+  .p-search__main__sidebar {
     display: none;
 
     @include screen-large {
@@ -176,7 +204,7 @@
   }
 }
 
-.p-articleSearch__footer {
+.p-search__footer {
   margin-top:50px;
   width: 100%;
   overflow:hidden;

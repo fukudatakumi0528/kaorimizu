@@ -67,12 +67,11 @@
 			</li>
 			<?php endforeach; ?>
 		</ul>
+		<!-- <div class="p-top__kv__cover"></div> -->
 	</section>
-
 
 	<!--latest & ranking-->
 	<section class="p-top__latestRanking">
-
 
 		<!--latest-->
 		<div class="p-top__latestRanking__latest">

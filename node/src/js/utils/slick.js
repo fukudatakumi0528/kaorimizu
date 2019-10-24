@@ -22,6 +22,18 @@ export default class Slick {
 		// top learn スライダー
 		const $topLearnSlider = $('.js-slickSlider-top__learn');
 
+		const $topSliderCover = $('.p-top__kv__cover');
+
+		$($topSlickSlider).on('init', function () {
+			$topSlickSlider.addClass('is-init');
+			setTimeout(function () {
+				$topSliderCover.animate({
+					height: 0,
+				}, 500, 'linear',  function () {
+						$topSliderCover.addClass('is-hidden');
+				});					
+			},1200)
+		});
 		
 		//animationさせるための設定
 		$topSlickSlider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {

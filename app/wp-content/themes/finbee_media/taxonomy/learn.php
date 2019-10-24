@@ -14,9 +14,17 @@
 ?>
 <main>
 	<section class="p-articleSearch__topper">
-		<div class="m-inputSearch">
-			<input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
-			<div class="icon-search"></div>
+		<div class="o-topperSection">
+			<div class="o-topperSection__main">
+				<div class="o-topperSection__main__title">
+					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+					<div class="o-topperSection__main__title__text">
+						<h1 class="o-topperSection__main__title__text__main">学び</h1>
+						<p class="o-topperSection__main__title__text__sub">Learn</p>
+					</div>
+				</div>
+				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+			</div>
 		</div>
 	</section>
 	<section class="p-articleSearch__main">

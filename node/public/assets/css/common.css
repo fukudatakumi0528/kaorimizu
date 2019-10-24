@@ -1908,7 +1908,7 @@ main {
   background-color: #262626;
   position: fixed;
   z-index: 10;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .l-modalCover.is-active {
@@ -2295,8 +2295,11 @@ main {
 @media (min-width: 768px) {
   .l-spMenu .l-spMenu__main .l-spMenu__main__searcharea .m-inputSearch .m-inputSearch__input {
     background-color: #FFFFFF;
-    left: calc(50% - 10px);
   }
+}
+
+.l-spMenu .l-spMenu__main .l-spMenu__main__searcharea .m-inputSearch .icon-search {
+  width: auto;
 }
 
 @media (min-width: 768px) {
@@ -2864,6 +2867,17 @@ main {
   line-height: normal;
 }
 
+@media (min-width: 768px) {
+  .m-inputSearch .m-inputSearch__input {
+    -webkit-transform: scale(1) translateX(0%) translateY(0%);
+    transform: scale(1) translateX(0%) translateY(0%);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .m-inputSearch .m-inputSearch__input::-webkit-input-placeholder {
   font-size: 1.6rem;
   font-weight: 700;
@@ -2889,6 +2903,7 @@ main {
 }
 
 .m-inputSearch .icon-search {
+  width: auto;
   position: absolute;
   top: 50%;
   right: 25px;

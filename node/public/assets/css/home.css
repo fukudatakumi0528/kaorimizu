@@ -32,6 +32,19 @@ $font-xxl: 2rem;
   }
 }
 
+.p-top__kv .p-top__kv__cover {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FFD94A;
+  bottom: 0;
+}
+
+.p-top__kv .p-top__kv__cover.is-hidden {
+  height: 0;
+}
+
 .p-top__kv .p-top__kv__bg {
   position: absolute;
   background-color: #FFD94A;
@@ -142,6 +155,7 @@ $font-xxl: 2rem;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -150,6 +164,10 @@ $font-xxl: 2rem;
     bottom: 15%;
     top: initial;
   }
+}
+
+.p-top__kv .p-top__kv__slider.is-init {
+  visibility: visible;
 }
 
 .p-top__kv .p-top__kv__slider .slick-list.draggable {
