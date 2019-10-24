@@ -118,6 +118,7 @@
 
         @include screen-large {
           margin-top:10px;
+          -webkit-line-clamp: 2; 
         }
       }
 

@@ -198,7 +198,7 @@
 										if($the_query->have_posts()):while ($the_query->have_posts()): $the_query->the_post();
 
 										if ( has_post_thumbnail() ) {
-											$thumbnail =  get_the_post_thumbnail();
+											$thumbnail =  get_the_post_thumbnail_url();
 										}
 
 										if(empty($thumbnail)){

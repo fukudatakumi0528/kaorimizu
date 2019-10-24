@@ -46,7 +46,7 @@
 						$singletags = search_tags($post->ID);
 
 						if ( has_post_thumbnail($post->ID) ) {
-							$thumbnail =  get_the_post_thumbnail($post->ID);
+							$thumbnail =  get_the_post_thumbnail_url($post->ID);
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};

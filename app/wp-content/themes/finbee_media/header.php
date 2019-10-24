@@ -172,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleAll->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleAll->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleAll->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };
@@ -359,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleSearch->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleSearch->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleSearch->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };
@@ -550,7 +550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleGrant->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleGrant->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleGrant->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };

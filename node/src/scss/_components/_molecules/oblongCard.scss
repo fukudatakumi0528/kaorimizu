@@ -87,7 +87,11 @@
           font-weight: $font-medium;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
+
+          @include screen-large {
+            -webkit-line-clamp: 2; 
+          }
         } 
       }
 

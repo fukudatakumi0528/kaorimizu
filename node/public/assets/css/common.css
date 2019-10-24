@@ -3025,7 +3025,13 @@ main {
   font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
+    -webkit-line-clamp: 2;
+  }
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description {
@@ -3476,7 +3482,13 @@ main {
   font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
+    -webkit-line-clamp: 2;
+  }
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description {
@@ -3825,6 +3837,7 @@ main {
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     margin-top: 10px;
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -4025,13 +4038,14 @@ main {
   line-height: 150%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
     font-size: 15px;
+    -webkit-line-clamp: 2;
   }
 }
 

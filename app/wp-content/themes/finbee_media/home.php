@@ -24,7 +24,7 @@
 										 
 					// サムネイルID
 					if ( has_post_thumbnail($slider->ID) ) {
-						$thumbnail =  get_the_post_thumbnail($slider->ID);
+						$thumbnail = get_the_post_thumbnail_url($slider->ID);
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -96,7 +96,7 @@
 					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
 
 					if ( has_post_thumbnail(get_the_ID()) ) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -174,7 +174,7 @@
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
-					$thumbnail =  get_the_post_thumbnail();
+					$thumbnail =  get_the_post_thumbnail_url();
 				} else {
 					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
@@ -227,7 +227,7 @@
 					if($query !== $topFeature):
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -299,7 +299,7 @@
 			if ($topHobby):
 				
 				if ( has_post_thumbnail($topHobby->ID)) {
-					$thumbnail =  get_the_post_thumbnail();
+					$thumbnail =  get_the_post_thumbnail_url();
 				} else {
 					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
@@ -353,7 +353,7 @@
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -428,7 +428,7 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail =  get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
@@ -555,7 +555,7 @@
 						$singletags = get_the_terms($post->ID, 'learn_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail =  get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
@@ -611,7 +611,7 @@
 					$singletags = get_the_terms($post->ID, 'learn_tag');
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};

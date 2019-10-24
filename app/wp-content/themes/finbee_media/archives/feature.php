@@ -72,7 +72,7 @@
 						$singletags = get_the_terms($post->ID, 'feature_tag');
 
 						if ( has_post_thumbnail($post->ID) ) {
-							$thumbnail =  get_the_post_thumbnail($post->ID);
+							$thumbnail =  get_the_post_thumbnail_url($post->ID);
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
