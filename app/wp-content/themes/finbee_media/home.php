@@ -298,15 +298,14 @@
 		<?php 
 			if ($topHobby):
 				
-				if ( has_post_thumbnail($topHobby->ID)) {
-					$thumbnail =  get_the_post_thumbnail_url();
-				} else {
-					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-				};
+			if ( has_post_thumbnail($topHobby->ID)) {
+				$thumbnail = get_the_post_thumbnail_url();
+			} else {
+				$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+			};
 
-				//タグを取得				
-				$term = get_the_terms($topHobby->ID, 'hobby_tag');
-
+			//タグを取得				
+			$term = get_the_terms($topHobby->ID, 'hobby_tag');
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
