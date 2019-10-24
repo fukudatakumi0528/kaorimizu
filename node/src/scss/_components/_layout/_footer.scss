@@ -392,6 +392,17 @@
                 display: none;
               }  
             }
+
+            &:hover {
+
+              .l-footer__search__inner__main__category__list__text {
+
+                @include screen-large {
+                  font-size: $font-l;
+                  transition: 0.1s;
+                }
+              }  
+            }
   
             .l-footer__search__inner__main__category__list__text {
               width: 100%;
@@ -401,6 +412,7 @@
               line-height: 150%;
               font-size: $font-s;
               font-weight: $font-bold; 
+              transition: 0.1s;
             }
           }
         }
@@ -604,6 +616,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+
+            &:before{
+              position: absolute;
+              top: 1.4em;
+              left: 0;
+              content: "";
+              display: inline-block;
+              width: 0;
+              height: 1px;
+              background: $font-4-color;
+              transition: 0.2s;
+            }
+
+            &:hover {
+
+              @include screen-large {
+                &:before {
+                  width: 100%;
+                }    
+              }
+            }
   
             .l-footer__nav__inner__main__list__link__text {
               font-size: $font-xs;
