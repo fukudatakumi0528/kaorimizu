@@ -131,7 +131,6 @@
     <?php endforeach; ?>
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
-<<<<<<< HEAD
   <?php
       $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
       $articlesRankingWeeklyNumber = 0;
@@ -139,15 +138,7 @@
       foreach($articlesRankingWeekly as $articleRankingWeekly):
 
         $articlesRankingWeeklyNumber += 1;
-=======
-  <?php
-    $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
-    $articlesRankingWeeklyNumber = 0;
 
-    foreach($articlesRankingWeekly as $articleRankingWeekly):
-
-      $articlesRankingWeeklyNumber += 1;
->>>>>>> 6db36410bf5d028ac3d4ebf64057d2a7a7ddf487
 
       // サムネイルID
       if ( has_post_thumbnail($articleRankingWeekly->ID) ) {
