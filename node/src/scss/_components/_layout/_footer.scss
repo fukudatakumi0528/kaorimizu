@@ -224,23 +224,10 @@
             line-height: 100%;
           }
     
-          .l-footer__about__inner__main__header__title {
-            margin-top:6px;
-            font-size: 36px;
-            font-weight: $font-bold; 
-            line-height: 100%;
-            white-space: nowrap;       
-  
-            strong {
-              font-size: 36px;
-              font-weight: $font-bold; 
-              line-height: 100%;
-              color: $bg-6-color;  
-              
-              @include screen-large {
-                color: $bg-1-color;
-              }
-            }
+          .l-footer__about__inner__main__header__image {
+            margin-top:16px;
+            width: 220px;
+            max-width: 220px;
           }
     
           .l-footer__about__inner__main__header__subtitle {
@@ -317,8 +304,12 @@
 
         .l-footer__about__inner__footer__list {
           display: flex;
-          margin-left: 20px;
+          margin: 0px;
           align-items: center;
+
+          @include screen-large {
+            margin-left: 20px;
+          }
 
 
           .l-footer__about__inner__footer__list__item {

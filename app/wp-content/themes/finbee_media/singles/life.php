@@ -213,7 +213,12 @@
 												</div>
 											</div>
 											<div class="m-wideCard__inner__right">
-												<time class="m-wideCard__inner__right__date"><?php the_time('Y.n.j') ?></time>
+												<div class="m-wideCard__inner__right__topper">
+													<time class="m-wideCard__inner__right__topper__date"><?php the_time('Y.n.j') ?></time>
+													<?php if(article_new_arrival($post)): ?>
+														<p class="m-wideCard__inner__right__topper__new">NEW</p>
+													<?php endif; ?>
+												</div>
 												<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
 												<div class="m-wideCard__inner__right__description">
 													<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>

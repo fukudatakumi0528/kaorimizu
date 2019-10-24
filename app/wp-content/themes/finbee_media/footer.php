@@ -69,7 +69,7 @@
             <div class="l-footer__about__inner__main">
               <div class="l-footer__about__inner__main__header">
                 <div class="l-footer__about__inner__main__header__subhead">What is</div>
-                <div class="l-footer__about__inner__main__header__title">be<strong>-</strong>topia?</div>
+                <img class="l-footer__about__inner__main__header__image" src="<?= assetsPath('img') ?>logo/be-topia_footer.svg">
                 <div class="l-footer__about__inner__main__header__subtitle">ビートピアについて</div>
               </div>
               <div class="l-footer__about__inner__main__line"></div>
