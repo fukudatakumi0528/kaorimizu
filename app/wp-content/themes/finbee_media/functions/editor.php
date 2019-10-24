@@ -34,7 +34,7 @@ add_action('init', function() {
 
 add_filter('tiny_mce_before_init', function($init) {
     $init['wpautop'] = false;
-    $init['apply_source_formatting'] = ture;
+    $init['apply_source_formatting'] = true;
     return $init;
 });
 
