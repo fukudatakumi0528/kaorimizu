@@ -47,7 +47,8 @@ define('DB_COLLATE', '');
 
 /** supercashe用の記述 */
 define('WP_CACHE', true);
-define('WPCACHEHOME', 'home/www/stg-be-topia.finbee.jp/finbee-media/app/wp-content/plugins/wp-super-cache/');
+define('WPCACHEHOME', '/home/www/stg-be-topia.finbee.jp/finbee-media/app/wp-content/plugins/wp-super-cache/');
+
 
 /**#@+
  * 認証用ユニークキー
