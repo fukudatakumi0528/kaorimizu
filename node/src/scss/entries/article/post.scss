@@ -225,11 +225,13 @@
 							h2 {
 								display: block;
 								margin-top:30px;
-								font-size: 19px;
+								font-size: 20px;
 								font-weight: $font-bold;
 								line-height: 170%;
 
-								>span {
+								span {
+									display: inline;
+									background:linear-gradient(transparent 85%, $bg-1-color 0%);
 									font-size: 19px;
 									font-weight: $font-bold;
 									line-height: 170%;
@@ -238,30 +240,24 @@
 										padding-top:30px;
 										margin-top:-30px;	
 									}
-
-									>span {
-										font-size: 19px;
-										font-weight: $font-bold;
-										line-height: 170%;	
-									}
-								}
-
-								.s1 {
-									display: inline;
-									background:linear-gradient(transparent 70%, $bg-1-color 0%);
-									font-size: 19px;
-									font-weight: $font-bold;
-									line-height: 170%;
 								}
 							}
 
 							h3 {
 								margin-top:20px;
-								font-size: $font-s;
+								font-size: 17px;
+								font-weight: $font-bold;
+								line-height: 170%;
+							}
+
+
+							h4 {
+								margin-top:20px;
+								font-size: 15px;
 								font-weight: $font-bold;
 								line-height: 170%;
 								display: flex;
-								align-items: center;
+								align-items: flex-start;
 
 								&:before {
 									content:"ー";

@@ -267,53 +267,48 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 {
   display: block;
   margin-top: 30px;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 170%;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 > span {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 span {
+  display: inline;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), color-stop(0%, #FFD94A));
+  background: linear-gradient(transparent 85%, #FFD94A 0%);
   font-size: 19px;
   font-weight: 700;
   line-height: 170%;
 }
 
 @media (min-width: 768px) {
-  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 > span {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 span {
     padding-top: 30px;
     margin-top: -30px;
   }
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 > span > span {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 170%;
-}
-
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 .s1 {
-  display: inline;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(0%, #FFD94A));
-  background: linear-gradient(transparent 70%, #FFD94A 0%);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 170%;
-}
-
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 {
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 170%;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h4 {
+  margin-top: 20px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 170%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3:before {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h4:before {
   content: "ー";
   font-size: 1.2rem;
   font-weight: 700;
