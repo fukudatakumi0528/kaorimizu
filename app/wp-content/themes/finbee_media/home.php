@@ -151,7 +151,7 @@
 		$topFeature = get_field('top-feature', 'option');
 
 		$$topFeatureArgs = [
-			'post_type' => 'feature',
+			'post_type' => 'feature',
 			'posts_per_page' => 5,
 			'post__not_in' => array($topFeature->ID),
 			'paged' => $paged,
@@ -279,7 +279,7 @@
 		$topHobby = get_field('top-hobby', 'option');
 
 		$topHobbyArgs = [
-			'post_type' => 'hobby',
+			'post_type' => 'hobby',
 			'posts_per_page' => 5,
 			'post__not_in' => array($topHobby->ID),
 			'paged' => $paged,
@@ -403,7 +403,7 @@
 
 	<?php
 		$topLifeArgs = [
-			'post_type' => 'life',
+			'post_type' => 'life',
 			'posts_per_page' => 6,
 			'paged' => $paged,
 		];
@@ -530,7 +530,7 @@
 	<!-- learn-->
 	<?php
 		$topLearnArgs = [
-			'post_type' => 'learn',
+			'post_type' => 'learn',
 			'posts_per_page' => 6,
 			'paged' => $paged,
 		];
@@ -657,7 +657,7 @@
 	<?php endif;?>
 
 	<?php 
-		if(count($rankingPopularTags) > 0):
+		if(count($rankingPopularTags) > 0):
 	?>
 	<section class="p-top__keyword">
 		<div class="p-top__keyword__header">
