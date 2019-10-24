@@ -768,6 +768,14 @@ $font-xxl: 2rem;
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__footer .p-top__featureHobby__footer__link:hover .p-top__featureHobby__footer__link__text {
+    margin-left: 3px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
 .p-top__featureHobby .p-top__featureHobby__footer .p-top__featureHobby__footer__link .icon-btn {
   font-size: 27px;
 }
@@ -788,6 +796,8 @@ $font-xxl: 2rem;
   .p-top__featureHobby .p-top__featureHobby__footer .p-top__featureHobby__footer__link .p-top__featureHobby__footer__link__text {
     margin-left: 10px;
     font-size: 1.8rem;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -1163,6 +1173,14 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__footer .p-top__lifeLearn__footer__link:hover .p-top__lifeLearn__footer__link__text {
+    margin-left: 3px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
 }
 
 .p-top__lifeLearn .p-top__lifeLearn__footer .p-top__lifeLearn__footer__link .icon-btn {
