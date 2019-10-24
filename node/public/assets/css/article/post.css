@@ -268,7 +268,7 @@ $font-xxl: 2rem;
   display: block;
   margin-top: 30px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 170%;
 }
 
@@ -277,7 +277,7 @@ $font-xxl: 2rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), color-stop(0%, #FFD94A));
   background: linear-gradient(transparent 85%, #FFD94A 0%);
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 170%;
 }
 
@@ -291,14 +291,14 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 {
   margin-top: 20px;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 170%;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h4 {
   margin-top: 20px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 170%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,7 +311,7 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h4:before {
   content: "ー";
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   margin-right: 4px;
 }
 
@@ -411,7 +411,7 @@ $font-xxl: 2rem;
   content: "" counter(cnt) "";
   border-radius: 100%;
   line-height: 200%;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body ol li p {
@@ -474,7 +474,7 @@ $font-xxl: 2rem;
   color: #969696;
   font-size: 1.4rem;
   line-height: 170%;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding-left: 10px;
 }
 
@@ -483,7 +483,7 @@ $font-xxl: 2rem;
   color: #969696;
   font-size: 1.4rem;
   line-height: 170%;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding-left: 10px;
 }
 
@@ -524,7 +524,7 @@ $font-xxl: 2rem;
   margin-top: 4px;
   font-size: 1rem;
   line-height: 170%;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .article__interview .article__interview__callout {
@@ -592,7 +592,7 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__sns p {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -747,7 +747,7 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__topper .article__prevnext__main__content__topper__text {
   width: 100%;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   color: #A3A3A3;
 }
 
@@ -813,7 +813,7 @@ $font-xxl: 2rem;
   margin-top: 10px;
   width: 100%;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   text-align: left;
   overflow: hidden;
   display: -webkit-box;
@@ -879,7 +879,7 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__writer_item > div h2 {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700 !important;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__writer_item > div b {

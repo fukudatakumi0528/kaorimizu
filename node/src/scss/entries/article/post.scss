@@ -226,14 +226,14 @@
 								display: block;
 								margin-top:30px;
 								font-size: 20px;
-								font-weight: $font-bold;
+								font-weight: $font-bold !important;
 								line-height: 170%;
 
 								span {
 									display: inline;
 									background:linear-gradient(transparent 85%, $bg-1-color 0%);
 									font-size: 19px;
-									font-weight: $font-bold;
+									font-weight: $font-bold !important;
 									line-height: 170%;
 	
 									@include screen-large {
@@ -246,7 +246,7 @@
 							h3 {
 								margin-top:20px;
 								font-size: 17px;
-								font-weight: $font-bold;
+								font-weight: $font-bold !important;
 								line-height: 170%;
 							}
 
@@ -254,7 +254,7 @@
 							h4 {
 								margin-top:20px;
 								font-size: 15px;
-								font-weight: $font-bold;
+								font-weight: $font-bold !important;
 								line-height: 170%;
 								display: flex;
 								align-items: flex-start;
@@ -262,7 +262,7 @@
 								&:before {
 									content:"ー";
 									font-size: $font-xs;
-									font-weight: $font-bold;
+									font-weight: $font-bold !important;
 									margin-right: 4px;
 								}
 							}
@@ -360,7 +360,7 @@
 										content: "" counter(cnt) "";
 										border-radius: 100%;
 										line-height: 200%;
-										font-weight: $font-bold;
+										font-weight: $font-bold !important;
 									}
 
 									p {
@@ -436,7 +436,7 @@
 									color:$font-4-color;
 									font-size: $font-s;
 									line-height: 170%;
-									font-weight: $font-bold;
+									font-weight: $font-bold !important;
 									padding-left:10px;
 								}
 
@@ -445,7 +445,7 @@
 									color:$font-4-color;
 									font-size: $font-s;
 									line-height: 170%;
-									font-weight: $font-bold;
+									font-weight: $font-bold !important;
 									padding-left:10px;
 								}
 							}
@@ -473,7 +473,7 @@
 										margin-top:4px;
 										font-size: $font-xxs;
 										line-height: 170%;
-										font-weight: $font-bold;
+										font-weight: $font-bold !important;
 									}
 								}
 
@@ -538,7 +538,7 @@
 
 								p {
 									font-size: $font-s;
-									font-weight: $font-bold;
+									font-weight: $font-bold !important;
 									display: flex;
 									justify-content: center;
 									align-items: center;
@@ -658,7 +658,7 @@
 											.article__prevnext__main__content__topper__text {
 												width: 100%;
 												font-size: $font-xs;
-												font-weight: $font-bold;
+												font-weight: $font-bold !important;
 												color: $font-1-color;
 
 												&.prev {
@@ -706,7 +706,7 @@
 												margin-top:10px;
 												width: 100%;
 												font-size: $font-xs;
-												font-weight: $font-bold;
+												font-weight: $font-bold !important;
 												text-align: left;
 												overflow: hidden;
 												display: -webkit-box;
@@ -768,7 +768,7 @@
 										padding-top: 10px;
 										h2 {
 											font-size: $font-l;
-											font-weight: bold;
+											font-weight: $font-bold !important;
 										}
 										b {
 											font-size: $font-s;
