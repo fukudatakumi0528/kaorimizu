@@ -481,7 +481,7 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail = get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
