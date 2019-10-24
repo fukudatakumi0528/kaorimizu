@@ -24,7 +24,7 @@
 										 
 					// サムネイルID
 					if ( has_post_thumbnail($slider->ID) ) {
-						$thumbnail =  get_the_post_thumbnail($slider->ID);
+						$thumbnail = get_the_post_thumbnail_url($slider->ID);
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -96,7 +96,7 @@
 					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
 
 					if ( has_post_thumbnail(get_the_ID()) ) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -150,13 +150,13 @@
 	<?php 
 		$topFeature = get_field('top-feature', 'option');
 
-		$$topFeatureArgs = [
+		$topFeatureArgs = [
 			'post_type' => 'feature',
 			'posts_per_page' => 5,
 			'post__not_in' => array($topFeature->ID),
 			'paged' => $paged,
 		];
-		$query = new WP_Query($$topFeatureArgs);
+		$query = new WP_Query($topFeatureArgs);
 		if($query->have_posts() || $topFeature):
 	?>
 	<section class="p-top__featureHobby">
@@ -174,7 +174,7 @@
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
-					$thumbnail =  get_the_post_thumbnail();
+					$thumbnail =  get_the_post_thumbnail_url();
 				} else {
 					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
@@ -227,7 +227,7 @@
 					if($query !== $topFeature):
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -299,7 +299,7 @@
 			if ($topHobby):
 				
 				if ( has_post_thumbnail($topHobby->ID)) {
-					$thumbnail =  get_the_post_thumbnail();
+					$thumbnail =  get_the_post_thumbnail_url();
 				} else {
 					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
@@ -353,7 +353,7 @@
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -428,7 +428,7 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail =  get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
@@ -481,7 +481,7 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail = get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
@@ -555,7 +555,7 @@
 						$singletags = get_the_terms($post->ID, 'learn_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail();
+							$thumbnail =  get_the_post_thumbnail_url();
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
@@ -611,7 +611,7 @@
 					$singletags = get_the_terms($post->ID, 'learn_tag');
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail();
+						$thumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
@@ -657,6 +657,42 @@
 	<?php endif;?>
 
 	<?php 
+    $taxonomies = array( 
+      'feature_tag',
+      'hobby_tag',
+      'life_tag',
+      'learn_tag',
+    );
+  
+    $args = array(
+      'orderby'       => 'name', 
+      'order'         => 'ASC',
+      'hide_empty'    => true, 
+      'exclude'       => array(), 
+      'exclude_tree'  => array(), 
+      'include'       => array(),
+      'number'        => '', 
+      'fields'        => 'all', 
+      'slug'          => '', 
+      'parent'        => '',
+      'hierarchical'  => true, 
+      'child_of'      => 0, 
+      'childless'     => false,
+      'get'           => '', 
+      'name__like'    => '',
+      'description__like' => '',
+      'pad_counts'    => false, 
+      'offset'        => '', 
+      'search'        => '', 
+      'cache_domain'  => 'core'
+    ); 					
+
+    $popularTags = get_terms($taxonomies, $args);
+
+    usort($popularTags,"sort_count");
+
+    $rankingPopularTags = array_slice($popularTags,0,10);
+
 		if(count($rankingPopularTags) > 0):
 	?>
 	<section class="p-top__keyword">

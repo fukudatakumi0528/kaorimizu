@@ -17,7 +17,8 @@
 	<section class="p-article__topper">
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
-				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/life.png" alt="">
+				<div class="o-topperSection__main__title">
+					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">生活</h1>
 						<p class="o-topperSection__main__title__text__sub">Life</p>
@@ -72,7 +73,7 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID) ) {
-							$thumbnail =  get_the_post_thumbnail($post->ID);
+							$thumbnail =  get_the_post_thumbnail_url($post->ID);
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};

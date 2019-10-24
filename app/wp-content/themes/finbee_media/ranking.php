@@ -75,7 +75,7 @@
 
         // サムネイルID
         if ( has_post_thumbnail($articleRankingMonth->ID) ) {
-          $thumbnail =  get_the_post_thumbnail($articleRankingMonth->ID);
+          $thumbnail =  get_the_post_thumbnail_url($articleRankingMonth->ID);
         } else {
           $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
         };
@@ -142,7 +142,7 @@
 
       // サムネイルID
       if ( has_post_thumbnail($articleRankingWeekly->ID) ) {
-        $thumbnail =  get_the_post_thumbnail($articleRankingWeekly->ID);
+        $thumbnail =  get_the_post_thumbnail_url($articleRankingWeekly->ID);
       } else {
         $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
       };
@@ -209,7 +209,7 @@
 
       // サムネイルID
       if ( has_post_thumbnail($articleRankingAll->ID) ) {
-        $thumbnail =  get_the_post_thumbnail($articleRankingAll->ID);
+        $thumbnail =  get_the_post_thumbnail_url($articleRankingAll->ID);
       } else {
         $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
       };

@@ -2931,11 +2931,11 @@ main {
 }
 
 @media (min-width: 768px) {
-  .m-oblongCard .m-oblongCard__inner:hover {
-    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .m-oblongCard .m-oblongCard__inner:hover .m-oblongCard__inner__topper .m-oblongCard__inner__topper__image {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -2955,6 +2955,8 @@ main {
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer {
@@ -3023,7 +3025,13 @@ main {
   font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
+    -webkit-line-clamp: 2;
+  }
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description {
@@ -3296,11 +3304,11 @@ main {
 }
 
 @media (min-width: 768px) {
-  .m-squareCard .m-squareCard__inner:hover {
-    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .m-squareCard .m-squareCard__inner:hover .m-squareCard__inner__topper .m-squareCard__inner__topper__image {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -3425,6 +3433,8 @@ main {
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer {
@@ -3472,7 +3482,13 @@ main {
   font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
+    -webkit-line-clamp: 2;
+  }
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__description {
@@ -3703,11 +3719,11 @@ main {
 }
 
 @media (min-width: 768px) {
-  .m-verticallyCard .m-verticallyCard__inner:hover {
-    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .m-verticallyCard .m-verticallyCard__inner:hover .m-verticallyCard__inner__topper .m-verticallyCard__inner__topper__image .m-verticallyCard__inner__topper__image__inner {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -3720,6 +3736,7 @@ main {
   padding-top: 80%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__topper .m-verticallyCard__inner__topper__image .m-verticallyCard__inner__topper__image__inner {
@@ -3732,6 +3749,8 @@ main {
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer {
@@ -3818,6 +3837,7 @@ main {
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     margin-top: 10px;
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -3868,63 +3888,6 @@ main {
   position: relative;
 }
 
-.m-wideCard .m-wideCard__pickup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-10px) translateY(-10px);
-  transform: translateX(-10px) translateY(-10px);
-  z-index: 2;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  height: 38px;
-  width: 38px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.m-wideCard .m-wideCard__pickup .m-wideCard__pickup__inner {
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
-  background-color: #DE3B39;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.m-wideCard .m-wideCard__pickup .m-wideCard__pickup__inner .m-wideCard__pickup__inner__text {
-  color: #FFFFFF;
-  margin: 0;
-  line-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transform: rotate(-30deg);
-  transform: rotate(-30deg);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 .m-wideCard .m-wideCard__inner {
   top: 0;
   display: -webkit-box;
@@ -3934,11 +3897,11 @@ main {
 }
 
 @media (min-width: 768px) {
-  .m-wideCard .m-wideCard__inner:hover {
-    -webkit-box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    box-shadow: 5px 5px 5px rgba(255, 217, 74, 0.5);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .m-wideCard .m-wideCard__inner:hover .m-wideCard__inner__left .m-wideCard__inner__left__image .m-wideCard__inner__left__image__inner {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -3966,6 +3929,7 @@ main {
   padding-top: 80%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__left .m-wideCard__inner__left__image .m-wideCard__inner__left__image__inner {
@@ -3978,6 +3942,8 @@ main {
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__right {
@@ -4072,13 +4038,14 @@ main {
   line-height: 150%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
     font-size: 15px;
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -4285,29 +4252,13 @@ main {
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon {
-  height: 26px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-}
-
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon.icon-feature {
-  font-size: 26px;
-}
-
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon.icon-hobby {
-  font-size: 25px;
-}
-
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon.icon-life {
-  font-size: 20px;
-}
-
-.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon.icon-learn {
-  font-size: 22px;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button {
@@ -4542,13 +4493,13 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__icon {
-  height: 22px;
+  height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
   font-family: 'object-fit: cover;';

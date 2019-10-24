@@ -32,17 +32,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </a>
 				</div>
 			</div>
-          <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
+          <div class="o-headerInnerPc">
+            <a class="m-logo" href="">
+              <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
+            </a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-hobby o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-life o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-learn o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p></a></li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
+                  </a>
+                </li>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
@@ -153,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleAll->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleAll->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleAll->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };
@@ -277,22 +296,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="">
-                    <span class="icon-feature o-headerInnerPc__left__category__list__link__icon">
-                      <span class="path1"></span>
-                      <span class="path2"></span>
-                      <span class="path3"></span>
-                    </span>
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
                     <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="">
-                    <span class="icon-hobby o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-life o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-learn o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p></a></li>
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
+                  </a>
+                </li>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
@@ -334,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleSearch->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleSearch->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleSearch->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };
@@ -461,14 +486,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="o-headerInnerPc"><a class="m-logo" href=""><img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInnerPc__left">
               <ul class="o-headerInnerPc__left__category">
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-feature o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-hobby o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-life o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p></a></li>
-                <li class="o-headerInnerPc__left__category__list"><a class="o-headerInnerPc__left__category__list__link" href=""><span class="icon-learn o-headerInnerPc__left__category__list__link__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p></a></li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                    <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
+                  </a>
+                </li>
+                <li class="o-headerInnerPc__left__category__list">
+                  <a class="o-headerInnerPc__left__category__list__link" href="">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
+                  </a>
+                </li>
               </ul>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
@@ -509,7 +550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                   // サムネイルID
                   if ( has_post_thumbnail($articleGrant->ID) ) {
-                    $thumbnail =  get_the_post_thumbnail($articleGrant->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($articleGrant->ID);
                   } else {
                     $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
                   };
@@ -639,42 +680,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="o-headerInnerPc__left">
 				<ul class="o-headerInnerPc__left__category">
 					<li class="o-headerInnerPc__left__category__list">
-						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
-							<span class="icon-feature o-headerInnerPc__left__category__list__link__icon">
-								<span class="path1"></span><span class="path2"></span><span class="path3"></span>
-							</span>
-							<p class="o-headerInnerPc__left__category__list__link__text">特集</p>
+            <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
+              <div class="o-headerInnerPc__left__category__list__link__icon">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+              </div>
+              <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
-							<span class="icon-hobby o-headerInnerPc__left__category__list__link__icon">
-								<span class="path1"></span>
-								<span class="path2"></span>
-								<span class="path3"></span>
-								<span class="path4"></span>
-								<span class="path5"></span>
-							</span>
-							<p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
+              <div class="o-headerInnerPc__left__category__list__link__icon">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+              </div>
+                <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
-							<span class="icon-life o-headerInnerPc__left__category__list__link__icon">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</span>
-							<p class="o-headerInnerPc__left__category__list__link__text">生活</p>
+              <div class="o-headerInnerPc__left__category__list__link__icon">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+              </div>
+              <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
 						</a>
 					</li>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
-							<span class="icon-learn o-headerInnerPc__left__category__list__link__icon">
-								<span class="path1"></span>
-								<span class="path2"></span>
-								<span class="path3"></span>
-							</span>
-							<p class="o-headerInnerPc__left__category__list__link__text">学び</p>
+              <div class="o-headerInnerPc__left__category__list__link__icon">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner learn" src="<?= assetsPath('img') ?>icon/header/header-icon-learn.svg" alt="学び">
+              </div>
+              <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
 						</a>
 					</li>
 				</ul>
