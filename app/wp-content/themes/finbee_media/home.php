@@ -150,13 +150,13 @@
 	<?php 
 		$topFeature = get_field('top-feature', 'option');
 
-		$$topFeatureArgs = [
+		$topFeatureArgs = [
 			'post_type' => 'feature',
 			'posts_per_page' => 5,
 			'post__not_in' => array($topFeature->ID),
 			'paged' => $paged,
 		];
-		$query = new WP_Query($$topFeatureArgs);
+		$query = new WP_Query($topFeatureArgs);
 		if($query->have_posts() || $topFeature):
 	?>
 	<section class="p-top__featureHobby">
