@@ -3173,11 +3173,21 @@ main {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  position: relative;
 }
 
 .m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__input.is-validation {
-  border: solid 2px #DE3B39;
   background-color: #FFFFFF;
+  position: relative;
+  border: blue solid 2px;
+}
+
+.m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__input.is-validation:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: green solid 3px;
 }
 
 .m-selectboxArea .m-selectboxArea__under .m-selectboxArea__under__icon {

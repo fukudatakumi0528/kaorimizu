@@ -16,7 +16,7 @@
       min-width: 300px;
       align-items: flex-start;
     }
-  
+
 
     .m-selectboxArea__topper__required {
       background-color: $bg-4-color;
@@ -63,10 +63,32 @@
       color: $font-5-color;
       appearance: none;
       cursor: pointer;
+      position: relative;
 
       &.is-validation {
-        border: solid 2px $bg-4-color;
+        //border: solid 2px $bg-4-color;
         background-color:$bg-6-color;
+        position: relative;
+
+        border: blue solid 2px;
+
+				&:before {
+					content: "";
+					//position: absolute;
+					display: block;
+					//top: 0;
+					//left: 0;
+					//border: red solid 2px;
+					width: 100px;
+					height: 100px;
+					border: green solid 3px;
+					//z-index: 1000;
+					//background: red;
+				}
+
+
+
+
       }
     }
 
@@ -76,7 +98,7 @@
       width: 46px;
       top:0;
       right: 0;
-      border-radius:0 4px 4px 0; 
+      border-radius:0 4px 4px 0;
       background-color: $bg-1-color;
       pointer-events: none;
       display: flex;
@@ -93,7 +115,7 @@
         border-right: solid 2px $bg-4-color;
         border-bottom: solid 2px $bg-4-color;
       }
-    } 
+    }
 
     .m-selectboxArea__under__validation {
       margin-top:3px;
@@ -103,7 +125,7 @@
       @include screen-large {
         padding:0;
       }
-  
+
       .m-selectboxArea__under__validation__text {
         padding:5px 10px;
         border-radius: 1px;
@@ -113,6 +135,6 @@
         font-weight: $font-bold;
         line-height: 150%;
       }
-    }  
+    }
   }
 }
