@@ -260,6 +260,6 @@
         </div>
       </a>
     </li>
-    <? endforeach; ?>
+    <?php endforeach; ?>
   </ul>
 </div>
