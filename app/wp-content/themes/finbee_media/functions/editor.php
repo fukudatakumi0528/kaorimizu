@@ -82,10 +82,10 @@ if(strstr($_SERVER['REQUEST_URI'], 'wp-admin/post-new.php?post_type=works')) {
 }
 function one_type_only($content) {
     $content = str_replace('type="checkbox" name="tax_input[type]', 'type="radio" name="tax_input[type]', $content);
-	$content = str_replace('type="checkbox" name="tax_input[taste]', 'type="radio" name="tax_input[taste]', $content);
-	$content = str_replace('type="checkbox" name="tax_input[case]', 'type="radio" name="tax_input[case]', $content);
-	$content = str_replace('type="checkbox" name="tax_input[area]', 'type="radio" name="tax_input[area]', $content);
-	$content = str_replace('type="checkbox" name="tax_input[date]', 'type="radio" name="tax_input[date]', $content);
+    $content = str_replace('type="checkbox" name="tax_input[taste]', 'type="radio" name="tax_input[taste]', $content);
+    $content = str_replace('type="checkbox" name="tax_input[case]', 'type="radio" name="tax_input[case]', $content);
+    $content = str_replace('type="checkbox" name="tax_input[area]', 'type="radio" name="tax_input[area]', $content);
+    $content = str_replace('type="checkbox" name="tax_input[date]', 'type="radio" name="tax_input[date]', $content);
     return $content;
 }
 */
@@ -139,35 +139,35 @@ function register_cpt_feature() {
             'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
         )
     );
-	$labels = array(
-		'name'                       => _x( 'タグ', 'taxonomy general name' ),
-		'singular_name'              => _x( 'タグ', 'taxonomy singular name' ),
-		'search_items'               => __( 'タグ検索' ),
-		'popular_items'              => __( '人気のタグ' ),
-		'all_items'                  => __( '全てのタグ' ),
-		'parent_item'                => null,
-		'parent_item_colon'          => null,
-		'edit_item'                  => __( 'タグを編集' ),
-		'update_item'                => __( 'タグを更新' ),
-		'add_new_item'               => __( '新規タグ追加' ),
-		'new_item_name'              => __( 'タグを新規追加' ),
-		'add_or_remove_items'        => __( 'Add or remove writers' ),
-		'choose_from_most_used'      => __( 'Choose from the most used writers' ),
-		'not_found'                  => __( 'タグがありません' ),
-		'menu_name'                  => __( 'タグ' ),
+    $labels = array(
+        'name'                       => _x( 'タグ', 'taxonomy general name' ),
+        'singular_name'              => _x( 'タグ', 'taxonomy singular name' ),
+        'search_items'               => __( 'タグ検索' ),
+        'popular_items'              => __( '人気のタグ' ),
+        'all_items'                  => __( '全てのタグ' ),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => __( 'タグを編集' ),
+        'update_item'                => __( 'タグを更新' ),
+        'add_new_item'               => __( '新規タグ追加' ),
+        'new_item_name'              => __( 'タグを新規追加' ),
+        'add_or_remove_items'        => __( 'Add or remove writers' ),
+        'choose_from_most_used'      => __( 'Choose from the most used writers' ),
+        'not_found'                  => __( 'タグがありません' ),
+        'menu_name'                  => __( 'タグ' ),
     );
     register_taxonomy(
         'feature_tag',                 // カスタム分類の名前
         'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'タグ',   // カスタム分類表示名
-			'labels' => $labels,
+            'labels' => $labels,
             'hierarchical' => true,   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
-			'show_ui' => true,
-			'show_admin_column' => true,
-			'update_count_callback' => '_update_post_term_count',
-			'query_var' => true,
-			'show_tagcloud' => true,
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'update_count_callback' => '_update_post_term_count',
+            'query_var' => true,
+            'show_tagcloud' => true,
         )
     );
 }

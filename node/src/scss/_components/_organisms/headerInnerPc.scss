@@ -23,8 +23,8 @@
   .o-headerInnerPc__left {
     display: flex;
     width: calc(100% - 160px);
-    max-width: 700px;
-    justify-content: space-between;
+    max-width: 800px;
+    justify-content: flex-end;
 
 
     .o-headerInnerPc__left__category {

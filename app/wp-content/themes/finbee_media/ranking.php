@@ -128,9 +128,10 @@
         </div>
       </a>
     </li>
-    <? endforeach; ?>
+    <?php endforeach; ?>
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
+<<<<<<< HEAD
   <?php
       $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
       $articlesRankingWeeklyNumber = 0;
@@ -138,20 +139,29 @@
       foreach($articlesRankingWeekly as $articleRankingWeekly):
 
         $articlesRankingWeeklyNumber += 1;
+=======
+  <?php
+    $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
+    $articlesRankingWeeklyNumber = 0;
 
-        // サムネイルID
-        if ( has_post_thumbnail($articleRankingWeekly->ID) ) {
-          $thumbnail =  get_the_post_thumbnail($articleRankingWeekly->ID);
-        } else {
-          $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-        };
+    foreach($articlesRankingWeekly as $articleRankingWeekly):
 
-        //
-        $postType = get_post_type_object($articleRankingWeekly->post_type);
-        $postLabel = $postType->label;
+      $articlesRankingWeeklyNumber += 1;
+>>>>>>> 6db36410bf5d028ac3d4ebf64057d2a7a7ddf487
 
-        //タグを取得
-        $term = search_tags($articleRankingWeekly->ID);
+      // サムネイルID
+      if ( has_post_thumbnail($articleRankingWeekly->ID) ) {
+        $thumbnail =  get_the_post_thumbnail($articleRankingWeekly->ID);
+      } else {
+        $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+      };
+
+      //
+      $postType = get_post_type_object($articleRankingWeekly->post_type);
+      $postLabel = $postType->label;
+
+      //タグを取得
+      $term = search_tags($articleRankingWeekly->ID);
     ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingWeekly) ?>">
@@ -194,7 +204,7 @@
         </div>
       </a>
     </li>
-    <? endforeach; ?>
+    <?php endforeach; ?>
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
   <?php
@@ -205,19 +215,20 @@
 
         $articlesRankingAllNumber += 1;
 
-        // サムネイルID
-        if ( has_post_thumbnail($articleRankingAll->ID) ) {
-          $thumbnail =  get_the_post_thumbnail($articleRankingAll->ID);
-        } else {
-          $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-        };
 
-        //
-        $postType = get_post_type_object($articleRankingAll->post_type);
-        $postLabel = $postType->label;
+      // サムネイルID
+      if ( has_post_thumbnail($articleRankingAll->ID) ) {
+        $thumbnail =  get_the_post_thumbnail($articleRankingAll->ID);
+      } else {
+        $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+      };
 
-        //タグを取得
-        $term = search_tags($articleRankingAll->ID);
+      //
+      $postType = get_post_type_object($articleRankingAll->post_type);
+      $postLabel = $postType->label;
+
+      //タグを取得
+      $term = search_tags($articleRankingAll->ID);
     ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingAll) ?>">
