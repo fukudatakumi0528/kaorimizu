@@ -24,9 +24,9 @@
 										 
 					// サムネイルID
 					if ( has_post_thumbnail($slider->ID) ) {
-						$thumbnail = get_the_post_thumbnail_url($slider->ID);
+						$topSliderThumbnail = get_the_post_thumbnail_url($slider->ID);
 					} else {
-						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						$topSliderThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 
 					//
@@ -39,7 +39,7 @@
 			<li class="m-squareCard">
 				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
 					<div class="m-squareCard__inner__topper">
-						<img class="m-squareCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+						<img class="m-squareCard__inner__topper__image" src="<?= $topSliderThumbnail ?>" alt="">
 					</div>
 					<div class="m-squareCard__inner__footer">
 						<div class="m-squareCard__inner__footer__sign">
@@ -96,9 +96,9 @@
 					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
 
 					if ( has_post_thumbnail(get_the_ID()) ) {
-						$thumbnail =  get_the_post_thumbnail_url();
+						$topLatestThumbnail =  get_the_post_thumbnail_url();
 					} else {
-						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						$topLatestThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 
 					//タグを取得
@@ -108,7 +108,7 @@
 					<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
 						<div class="m-wideCard__inner__left">
 							<div class="m-wideCard__inner__left__image">
-								<img class="m-wideCard__inner__left__image__inner" src="<?= $thumbnail ?>" alt="">
+								<img class="m-wideCard__inner__left__image__inner" src="<?= $topLatestThumbnail ?>" alt="">
 							</div>
 						</div>
 						<div class="m-wideCard__inner__right">
@@ -174,9 +174,9 @@
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
-					$thumbnail =  get_the_post_thumbnail_url();
+					$topFeatureThumbnail =  get_the_post_thumbnail_url();
 				} else {
-					$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+					$topFeatureThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
 
 				//タグを取得
@@ -187,7 +187,7 @@
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
+					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureThumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
 						<div class="m-oblongCard__inner__footer__topper">
 							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topFeature->post_date); ?></time>
@@ -227,9 +227,9 @@
 					if($query !== $topFeature):
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail_url();
+						$topFeatureListThumbnail =  get_the_post_thumbnail_url();
 					} else {
-						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						$topFeatureListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 	
 					$term = get_the_terms($post->ID, 'feature_tag');
@@ -237,7 +237,7 @@
 				<li class="m-oblongCard">
 					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 						<div class="m-oblongCard__inner__topper">
-							<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+							<img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureListThumbnail ?>" alt="">
 						</div>
 						<div class="m-oblongCard__inner__footer">
 							<div class="m-oblongCard__inner__footer__topper">
@@ -299,9 +299,9 @@
 			if ($topHobby):
 				
 			if ( has_post_thumbnail($topHobby->ID)) {
-				$thumbnail = get_the_post_thumbnail_url();
+				$topHobbyThumbnail = get_the_post_thumbnail_url();
 			} else {
-				$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+				$topHobbyThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 			};
 
 			//タグを取得				
@@ -311,7 +311,7 @@
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topHobby) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
+					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $topHobbyThumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
 						<div class="m-oblongCard__inner__footer__topper">
 							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topHobby->post_date); ?></time>
@@ -352,9 +352,9 @@
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail_url();
+						$topHobbyListThumbnail =  get_the_post_thumbnail_url();
 					} else {
-						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						$topHobbyListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 
 					$term = get_the_terms($post->ID, 'hobby_tag');
@@ -362,7 +362,7 @@
 				<li class="m-oblongCard">
 					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 						<div class="m-oblongCard__inner__topper">
-							<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+							<img class="m-oblongCard__inner__topper__image" src="<?= $topHobbyListThumbnail ?>" alt="">
 						</div>
 						<div class="m-oblongCard__inner__footer">
 							<div class="m-oblongCard__inner__footer__topper">
@@ -427,15 +427,15 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail_url();
+							$topLifeListThumbnail =  get_the_post_thumbnail_url();
 						} else {
-							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+							$topLifeListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
 					?>
 					<li class="m-oblongCard">
 						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 							<div class="m-oblongCard__inner__topper">
-								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+								<img class="m-oblongCard__inner__topper__image" src="<?= $topLifeListThumbnail ?>" alt="">
 							</div>
 							<div class="m-oblongCard__inner__footer">
 								<div class="m-oblongCard__inner__footer__topper">
@@ -480,16 +480,16 @@
 						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail = get_the_post_thumbnail_url();
+							$topLifeSliderThumbnail = get_the_post_thumbnail_url();
 						} else {
-							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+							$topLifeSliderThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
 						?>
 					<li class="m-verticallyCard">
 						<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
 							<div class="m-verticallyCard__inner__topper">
 								<div class="m-verticallyCard__inner__topper__image">
-									<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+									<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topLifeSliderThumbnail ?>" alt="">
 								</div>
 							</div>
 							<div class="m-verticallyCard__inner__footer">
@@ -554,16 +554,16 @@
 						$singletags = get_the_terms($post->ID, 'learn_tag');
 
 						if ( has_post_thumbnail($post->ID)) {
-							$thumbnail =  get_the_post_thumbnail_url();
+							$topLearnListThumbnail =  get_the_post_thumbnail_url();
 						} else {
-							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+							$topLearnListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
 
 						?>
 					<li class="m-oblongCard">
 						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 							<div class="m-oblongCard__inner__topper">
-								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
+								<img class="m-oblongCard__inner__topper__image" src="<?= $topLearnListThumbnail ?>" alt="">
 							</div>
 							<div class="m-oblongCard__inner__footer">
 								<div class="m-oblongCard__inner__footer__topper">
@@ -610,16 +610,16 @@
 					$singletags = get_the_terms($post->ID, 'learn_tag');
 
 					if ( has_post_thumbnail($post->ID)) {
-						$thumbnail =  get_the_post_thumbnail_url();
+						$topLearnSliderThumbnail =  get_the_post_thumbnail_url();
 					} else {
-						$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+						$topLearnSliderThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
 				?>
 				<li class="m-verticallyCard">
 					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
 						<div class="m-verticallyCard__inner__topper">
 							<div class="m-verticallyCard__inner__topper__image">
-								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $thumbnail ?>" alt="">
+								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topLearnSliderThumbnail ?>" alt="">
 							</div>
 						</div>
 						<div class="m-verticallyCard__inner__footer">
