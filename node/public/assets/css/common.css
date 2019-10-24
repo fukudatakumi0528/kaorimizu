@@ -2588,7 +2588,7 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 15px;
+  padding: 0 0 0 0;
 }
 
 .m-breadcrumb #breadcrumb {
@@ -2605,6 +2605,8 @@ main {
   -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
+  padding: 15px 0;
+  overflow: scroll;
 }
 
 .m-breadcrumb #breadcrumb ul > li {
@@ -2627,6 +2629,8 @@ main {
 
 .m-breadcrumb #breadcrumb ul > li > span {
   display: block;
+  white-space: nowrap;
+  font-size: 1.4rem;
 }
 
 .m-breadcrumb #breadcrumb ul > li > a {
@@ -2635,6 +2639,8 @@ main {
 
 .m-breadcrumb #breadcrumb ul > li > a > span {
   display: block;
+  white-space: nowrap;
+  font-size: 1.4rem;
 }
 
 .m-breadcrumb #breadcrumb ul > li::before {
@@ -2652,7 +2658,7 @@ main {
 }
 
 .m-breadcrumb #breadcrumb ul > li:nth-child(1) {
-  margin-left: 0px;
+  margin-left: 15px;
 }
 
 .m-breadcrumb #breadcrumb ul > li:nth-child(1)::before {
