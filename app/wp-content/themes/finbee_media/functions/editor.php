@@ -581,7 +581,7 @@ function custom_posttype_permalink($post_link, $id = 0, $leavename) {
 
     global $wp_rewrite;
 
-    $post = &get_post($id);
+    $post = get_post($id);
 
     if(is_wp_error( $post )){
         return $post;
