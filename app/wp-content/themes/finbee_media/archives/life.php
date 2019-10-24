@@ -23,7 +23,7 @@
 						<p class="o-topperSection__main__title__text__sub">Life</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">生活や仕事など、暮らしをもっと楽しくするコンテンツをお届けします。</div>
 			</div>
 		</div>
 	</section>

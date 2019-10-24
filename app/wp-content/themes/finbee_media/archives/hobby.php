@@ -21,7 +21,7 @@
 						<p class="o-topperSection__main__title__text__sub">Hobby</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">趣味やスポーツなど、ジブンもやってみたくなるコンテンツをお届けします。</div>
 			</div>
 		</div>
 	</section>
