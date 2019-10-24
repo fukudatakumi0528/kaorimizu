@@ -14,7 +14,7 @@
 ?>
 <main>
 	<section class="p-search__topper">
-    <form class="m-inputSearch">
+    <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
       <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
       <button class="icon-search" type="submit" id="s-btn-area"></button>
     </form>

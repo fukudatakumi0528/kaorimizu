@@ -136,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
           <div class="l-spMenu__main__searcharea">
 						<span class="icon-close js-spMenu__close"></span>
-            <form class="m-inputSearch">
+            <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
               <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
               <button class="icon-search" type="submit" id="s-btn-area"></button>
             </form>
@@ -318,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="l-spSearch__main__callout">
             <div class="l-spSearch__main__callout__triangle"></div>
           </div>
-          <form class="m-inputSearch">
+          <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
             <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
             <button class="icon-search" type="submit" id="s-btn-area"></button>
           </form>
@@ -492,7 +492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
         <div class="l-spGrant__main">
           <div class="l-spGrant__main__triangle"></div>
-          <form class="m-inputSearch">
+          <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
             <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
             <button class="icon-search" type="submit" id="s-btn-area"></button>
           </form>
