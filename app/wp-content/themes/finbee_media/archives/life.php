@@ -55,9 +55,6 @@
 			</div>
 			<div class="p-article__main__content__column">
 				<div class="p-article__main__content__column__result">
-					<div class="p-article__main__content__column__result__category">
-						<p class="p-article__main__content__column__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
-					</div>
 					<div class="p-article__main__content__column__result__number">
 						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('life')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
