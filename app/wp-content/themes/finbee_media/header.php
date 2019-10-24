@@ -232,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             $sliceNewArrivalTags = array_slice($newArrivalTags,0,10);
 
-            if(count($sliceNewArrivalTags) > 0):
+            if(count($sliceNewArrivalTags) > 0):
           ?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>

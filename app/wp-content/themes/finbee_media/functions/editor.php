@@ -133,7 +133,7 @@ function register_cpt_feature() {
     // カスタム分類（タクソノミー）登録
     register_taxonomy(
         'feature_taxonomy',                 // カスタム分類の名前
-        'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'feature',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'カテゴリ',   // カスタム分類表示名
             'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
@@ -180,18 +180,18 @@ add_action( 'init', 'register_cpt_feature' );
 function register_cpt_hobby() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '趣味', 'hobby' ),
-        'singular_name'      => _x( '趣味', 'hobby' ),
-        'add_new'            => _x( '新規追加', 'hobby' ),
-        'add_new_item'       => _x( '新しい趣味を追加', 'hobby' ),
-        'edit_item'          => _x( '趣味を編集', 'hobby' ),
-        'new_item'           => _x( '趣味を追加', 'hobby' ),
-        'view_item'          => _x( '趣味を見る', 'hobby' ),
-        'search_items'       => _x( '趣味検索', 'hobby' ),
-        'not_found'          => _x( '趣味はありません', 'hobby' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に趣味はありません', 'hobby' ),
-        'parent_item_colon'  => _x( '親 趣味:', 'hobby' ),
-        'menu_name'          => _x( '趣味', 'hobby' ),
+        'name'               => _x( '趣味', 'hobby' ),
+        'singular_name'      => _x( '趣味', 'hobby' ),
+        'add_new'            => _x( '新規追加', 'hobby' ),
+        'add_new_item'       => _x( '新しい趣味を追加', 'hobby' ),
+        'edit_item'          => _x( '趣味を編集', 'hobby' ),
+        'new_item'           => _x( '趣味を追加', 'hobby' ),
+        'view_item'          => _x( '趣味を見る', 'hobby' ),
+        'search_items'       => _x( '趣味検索', 'hobby' ),
+        'not_found'          => _x( '趣味はありません', 'hobby' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に趣味はありません', 'hobby' ),
+        'parent_item_colon'  => _x( '親 趣味:', 'hobby' ),
+        'menu_name'          => _x( '趣味', 'hobby' ),
     );
 
     $args = array(
@@ -210,12 +210,12 @@ function register_cpt_hobby() {
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
     );
 
-    register_post_type( 'hobby', $args );
+    register_post_type( 'hobby', $args );
 
     // カスタム分類（タクソノミー）登録
     register_taxonomy(
         'hobby_taxonomy',                 // カスタム分類の名前
-        'hobby',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'hobby',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'カテゴリ',   // カスタム分類表示名
             'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
@@ -240,7 +240,7 @@ function register_cpt_hobby() {
     );
     register_taxonomy(
         'hobby_tag',                 // カスタム分類の名前
-        'hobby',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'hobby',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'タグ',   // カスタム分類表示名
             'labels' => $labels,
@@ -262,18 +262,18 @@ add_action( 'init', 'register_cpt_hobby' );
 function register_cpt_life() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '生活', 'life' ),
-        'singular_name'      => _x( '生活', 'life' ),
-        'add_new'            => _x( '新規追加', 'life' ),
-        'add_new_item'       => _x( '新しい生活を追加', 'life' ),
-        'edit_item'          => _x( '生活を編集', 'life' ),
-        'new_item'           => _x( '生活を追加', 'life' ),
-        'view_item'          => _x( '生活を見る', 'life' ),
-        'search_items'       => _x( '生活検索', 'life' ),
-        'not_found'          => _x( '生活はありません', 'life' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に生活はありません', 'life' ),
-        'parent_item_colon'  => _x( '親 生活:', 'life' ),
-        'menu_name'          => _x( '生活', 'life' ),
+        'name'               => _x( '生活', 'life' ),
+        'singular_name'      => _x( '生活', 'life' ),
+        'add_new'            => _x( '新規追加', 'life' ),
+        'add_new_item'       => _x( '新しい生活を追加', 'life' ),
+        'edit_item'          => _x( '生活を編集', 'life' ),
+        'new_item'           => _x( '生活を追加', 'life' ),
+        'view_item'          => _x( '生活を見る', 'life' ),
+        'search_items'       => _x( '生活検索', 'life' ),
+        'not_found'          => _x( '生活はありません', 'life' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に生活はありません', 'life' ),
+        'parent_item_colon'  => _x( '親 生活:', 'life' ),
+        'menu_name'          => _x( '生活', 'life' ),
     );
 
     $args = array(
@@ -292,12 +292,12 @@ function register_cpt_life() {
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
     );
 
-    register_post_type( 'life', $args );
+    register_post_type( 'life', $args );
 
     // カスタム分類（タクソノミー）登録
     register_taxonomy(
         'life_taxonomy',                 // カスタム分類の名前
-        'life',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'life',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'カテゴリ',   // カスタム分類表示名
             'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
@@ -322,7 +322,7 @@ function register_cpt_life() {
     );
     register_taxonomy(
         'life_tag',                 // カスタム分類の名前
-        'life',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'life',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'タグ',   // カスタム分類表示名
             'labels' => $labels,
@@ -343,18 +343,18 @@ add_action( 'init', 'register_cpt_life' );
 function register_cpt_learn() {
 //カスタム投稿の部分を任意の文字列へ変更
     $labels = array(
-        'name'               => _x( '学び', 'learn' ),
-        'singular_name'      => _x( '学び', 'learn' ),
-        'add_new'            => _x( '新規追加', 'learn' ),
-        'add_new_item'       => _x( '新しい学びを追加', 'learn' ),
-        'edit_item'          => _x( '学びを編集', 'learn' ),
-        'new_item'           => _x( '学びを追加', 'learn' ),
-        'view_item'          => _x( '学びを見る', 'learn' ),
-        'search_items'       => _x( '学び検索', 'learn' ),
-        'not_found'          => _x( '学びはありません', 'learn' ),
-        'not_found_in_trash' => _x( 'ゴミ箱に学びはありません', 'learn' ),
-        'parent_item_colon'  => _x( '親 学び:', 'learn' ),
-        'menu_name'          => _x( '学び', 'learn' ),
+        'name'               => _x( '学び', 'learn' ),
+        'singular_name'      => _x( '学び', 'learn' ),
+        'add_new'            => _x( '新規追加', 'learn' ),
+        'add_new_item'       => _x( '新しい学びを追加', 'learn' ),
+        'edit_item'          => _x( '学びを編集', 'learn' ),
+        'new_item'           => _x( '学びを追加', 'learn' ),
+        'view_item'          => _x( '学びを見る', 'learn' ),
+        'search_items'       => _x( '学び検索', 'learn' ),
+        'not_found'          => _x( '学びはありません', 'learn' ),
+        'not_found_in_trash' => _x( 'ゴミ箱に学びはありません', 'learn' ),
+        'parent_item_colon'  => _x( '親 学び:', 'learn' ),
+        'menu_name'          => _x( '学び', 'learn' ),
     );
 
     $args = array(
@@ -373,12 +373,12 @@ function register_cpt_learn() {
         'has_archive'   => true,                        // この投稿タイプのアーカイブを有効にする
     );
 
-    register_post_type( 'learn', $args );
+    register_post_type( 'learn', $args );
 
     // カスタム分類（タクソノミー）登録
     register_taxonomy(
         'learn_taxonomy',                 // カスタム分類の名前
-        'learn',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'learn',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'カテゴリ',   // カスタム分類表示名
             'hierarchical' => true   // trueでカテゴリーのように階層あり、falseでタグのように階層化なし
@@ -403,7 +403,7 @@ function register_cpt_learn() {
     );
     register_taxonomy(
         'learn_tag',                 // カスタム分類の名前
-        'learn',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
+        'learn',                // このカスタム分類を使う投稿タイプ、もしくはカスタム投稿タイプ
         array(
             'label' => 'タグ',   // カスタム分類表示名
             'labels' => $labels,

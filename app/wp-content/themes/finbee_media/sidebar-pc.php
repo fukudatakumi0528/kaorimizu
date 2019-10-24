@@ -37,7 +37,7 @@
 
     $rankingPopularTags = array_slice($popularTags,0,10);
 
-    if(count($rankingPopularTags) > 0):
+    if(count($rankingPopularTags) > 0):
   ?>
 
   <div class="t-sideBarPc__keyword">

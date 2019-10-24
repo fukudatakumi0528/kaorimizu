@@ -62,7 +62,7 @@
 				<div class="o-verticallyCardList">
 					<?php
 						$args = [
-							'post_type' => 'life',
+							'post_type' => 'life',
 							'posts_per_page' => 16,
 							'paged' => $paged,
 						];
