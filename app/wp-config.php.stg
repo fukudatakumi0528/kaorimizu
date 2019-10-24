@@ -26,8 +26,6 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('WP_CACHE', true);
-define( 'WPCACHEHOME', '/var/www/html/wp-content/plugins/wp-super-cache/' );
 define('DB_NAME', 'finbee_media_stg');
 
 /** MySQL データベースのユーザー名 */
@@ -44,11 +42,6 @@ define('DB_CHARSET', 'utf8');
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define('DB_COLLATE', '');
-
-/** supercashe用の記述 */
-//define('WP_CACHE', true);
-//define('WPCACHEHOME', '/home/www/stg-be-topia.finbee.jp/finbee-media/app/wp-content/plugins/wp-super-cache/');
-
 
 /**#@+
  * 認証用ユニークキー
