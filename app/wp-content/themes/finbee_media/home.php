@@ -297,12 +297,16 @@
 		</div>
 		<?php 
 			if ($topHobby):
-				
+			
+			var_dump($topHobby->ID);
+			
 			if ( has_post_thumbnail($topHobby->ID)) {
 				$topHobbyThumbnail = get_the_post_thumbnail_url();
 			} else {
 				$topHobbyThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 			};
+
+			var_dump($topHobbyThumbnail);
 
 			//タグを取得				
 			$term = get_the_terms($topHobby->ID, 'hobby_tag');
