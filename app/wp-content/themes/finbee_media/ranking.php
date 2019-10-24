@@ -65,12 +65,12 @@
     </div>
   </div>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__month is-active">
-    <?php 
+    <?php
       $articlesRankingMonth = get_field('article-ranking-month', 'option');
       $articlesRankingMonthNumber = 0;
 
       foreach($articlesRankingMonth as $articleRankingMonth):
-        
+
         $articlesRankingMonthNumber += 1;
 
         // サムネイルID
@@ -131,12 +131,12 @@
     <? endforeach; ?>
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
-  <?php 
+  <?php
       $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
       $articlesRankingWeeklyNumber = 0;
 
       foreach($articlesRankingWeekly as $articleRankingWeekly):
-        
+
         $articlesRankingWeeklyNumber += 1;
 
         // サムネイルID
@@ -197,12 +197,12 @@
     <? endforeach; ?>
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
-  <?php 
+  <?php
       $articlesRankingAll = get_field('article-ranking-all', 'option');
       $articlesRankingAllNumber = 0;
 
       foreach($articlesRankingAll as $articleRankingAll):
-        
+
         $articlesRankingAllNumber += 1;
 
         // サムネイルID
