@@ -44,3 +44,15 @@ function search_tags( $articleObjectId ) {
   };
   return  get_the_terms($articleObjectId, $termTagType);
 };
+
+function article_new_arrival($articleObjectId) {
+  $days = 7;
+  $today = date_i18n('U');
+  $entry_day = get_the_time('U',$articleObjectId);
+  $keika = date('U',($today - $entry_day)) / 86400;
+  if ( $days > $keika ) {
+    return true;
+  } else {
+    return false;
+  };
+}

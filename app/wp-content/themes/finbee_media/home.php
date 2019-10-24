@@ -67,12 +67,11 @@
 			</li>
 			<?php endforeach; ?>
 		</ul>
+		<!-- <div class="p-top__kv__cover"></div> -->
 	</section>
-
 
 	<!--latest & ranking-->
 	<section class="p-top__latestRanking">
-
 
 		<!--latest-->
 		<div class="p-top__latestRanking__latest">
@@ -106,11 +105,6 @@
 					$term = search_tags(get_the_ID());
 				?>
 				<li class="m-wideCard">
-					<div class="m-wideCard__pickup">
-						<div class="m-wideCard__pickup__inner">
-							<div class="m-wideCard__pickup__inner__text">NEW</div>
-						</div>
-					</div>
 					<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
 						<div class="m-wideCard__inner__left">
 							<div class="m-wideCard__inner__left__image">
@@ -118,7 +112,12 @@
 							</div>
 						</div>
 						<div class="m-wideCard__inner__right">
-							<time class="m-wideCard__inner__right__date"><?php the_time('Y.n.j') ?></time>
+							<div class="m-wideCard__inner__right__topper">
+								<time class="m-wideCard__inner__right__topper__date"><?php the_time('Y.n.j') ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-wideCard__inner__right__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
 							<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
 							<div class="m-wideCard__inner__right__description">
 								<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>
@@ -190,7 +189,12 @@
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
 					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
-						<p class="m-oblongCard__inner__footer__date"><?= $topFeature->post_date ?></p>
+						<div class="m-oblongCard__inner__footer__topper">
+							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topFeature->post_date); ?></time>
+							<?php if(article_new_arrival($topFeature)): ?>
+								<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+							<?php endif; ?>
+						</div>
 						<div class="m-oblongCard__inner__footer__title">
 							<p class="m-oblongCard__inner__footer__title__text"><?= $topFeature->post_title ?></p>
 						</div>
@@ -229,7 +233,6 @@
 					};
 	
 					$term = get_the_terms($post->ID, 'feature_tag');
-
 				?>
 				<li class="m-oblongCard">
 					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
@@ -237,7 +240,12 @@
 							<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
 						</div>
 						<div class="m-oblongCard__inner__footer">
-							<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+							<div class="m-oblongCard__inner__footer__topper">
+								<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
 							<div class="m-oblongCard__inner__footer__title">
 								<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
 							</div>
@@ -306,7 +314,12 @@
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topHobby) ?>" alt="">
 					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt=""></div>
 					<div class="m-oblongCard__inner__footer">
-						<p class="m-oblongCard__inner__footer__date"><?= $topHobby->post_date ?></p>
+						<div class="m-oblongCard__inner__footer__topper">
+							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topHobby->post_date); ?></time>
+							<?php if(article_new_arrival($topHobby)): ?>
+								<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+							<?php endif; ?>
+						</div>
 						<div class="m-oblongCard__inner__footer__title">
 							<p class="m-oblongCard__inner__footer__title__text"><?= $topHobby->post_title ?></p>
 						</div>
@@ -353,7 +366,12 @@
 							<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
 						</div>
 						<div class="m-oblongCard__inner__footer">
-							<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+							<div class="m-oblongCard__inner__footer__topper">
+								<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
 							<div class="m-oblongCard__inner__footer__title">
 								<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
 							</div>
@@ -414,14 +432,19 @@
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
-						?>
+					?>
 					<li class="m-oblongCard">
 						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
 							<div class="m-oblongCard__inner__topper">
 								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
 							</div>
 							<div class="m-oblongCard__inner__footer">
-								<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+								<div class="m-oblongCard__inner__footer__topper">
+									<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+									<?php if(article_new_arrival($post)): ?>
+										<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+									<?php endif; ?>
+								</div>
 								<div class="m-oblongCard__inner__footer__title">
 									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
 								</div>
@@ -471,7 +494,12 @@
 								</div>
 							</div>
 							<div class="m-verticallyCard__inner__footer">
-								<div class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></div>
+								<div class="m-verticallyCard__inner__footer__topper">
+									<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+									<?php if(article_new_arrival($post)): ?>
+										<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+									<?php endif; ?>
+								</div>
 								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 								<div class="m-verticallyCard__inner__footer__description">
 									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
@@ -539,7 +567,12 @@
 								<img class="m-oblongCard__inner__topper__image" src="<?= $thumbnail ?>" alt="">
 							</div>
 							<div class="m-oblongCard__inner__footer">
-								<p class="m-oblongCard__inner__footer__date"><?php the_time('Y.n.j') ?></p>
+								<div class="m-oblongCard__inner__footer__topper">
+									<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+									<?php if(article_new_arrival($post)): ?>
+										<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+									<?php endif; ?>
+								</div>
 								<div class="m-oblongCard__inner__footer__title">
 									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
 								</div>
@@ -591,7 +624,12 @@
 							</div>
 						</div>
 						<div class="m-verticallyCard__inner__footer">
-							<div class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></div>
+							<div class="m-verticallyCard__inner__footer__topper">
+								<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
 								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>

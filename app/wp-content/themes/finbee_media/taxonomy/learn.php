@@ -14,9 +14,17 @@
 ?>
 <main>
 	<section class="p-articleSearch__topper">
-		<div class="m-inputSearch">
-			<input class="m-inputSearch__input" type="text" placeholder="気になるワードを入力してください。">
-			<div class="icon-search"></div>
+		<div class="o-topperSection">
+			<div class="o-topperSection__main">
+				<div class="o-topperSection__main__title">
+					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+					<div class="o-topperSection__main__title__text">
+						<h1 class="o-topperSection__main__title__text__main">学び</h1>
+						<p class="o-topperSection__main__title__text__sub">Learn</p>
+					</div>
+				</div>
+				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+			</div>
 		</div>
 	</section>
 	<section class="p-articleSearch__main">
@@ -92,7 +100,12 @@
 									</div>
 								</div>
 								<div class="m-verticallyCard__inner__footer">
-									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
+									<div class="m-verticallyCard__inner__footer__topper">
+										<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+										<?php if(article_new_arrival($post)): ?>
+											<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+										<?php endif; ?>
+									</div>
 									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
 										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>

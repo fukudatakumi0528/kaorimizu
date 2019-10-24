@@ -229,6 +229,14 @@
 								font-weight: $font-bold;
 								line-height: 170%;
 
+								>span {
+
+									@include screen-large {
+										padding-top:30px;
+										margin-top:-30px;	
+									}
+								}
+
 								.s1 {
 									display: inline;
 									background:linear-gradient(transparent 70%, $bg-1-color 0%);
@@ -717,12 +725,6 @@
 									margin-top:20px;
 								}
 							}
-
-
-
-
-
-
 
 
 							//ライター

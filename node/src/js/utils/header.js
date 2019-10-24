@@ -16,6 +16,7 @@ export default class Header {
 		const $spGrant = $('#js-spGrant');
 		const $spMenu = $('#js-spMenu');
 
+		const $header = $('.l-header');
 		const $modalCover = $('.l-modalCover')
 
 		const $seachTriangle = $('.js-headerInnerPc__search__triangle');
@@ -61,6 +62,17 @@ export default class Header {
       }
 		};
 
+
+		//headerのクラス出し分け
+		function headerToggle() {
+			if ($spSearch.hasClass('is-active') || $spGrant.hasClass('is-active')) {
+				$header.addClass('is-active');
+			} else {
+				$header.removeClass('is-active');
+			}
+		}
+		
+
 		//modalCoverの出し入れ
 		function modalCoverToggle() {
       if ($spSearch.hasClass('is-active') || $spGrant.hasClass('is-active') || $spMenu.hasClass('is-active')) {
@@ -100,6 +112,7 @@ export default class Header {
 			};
 
 			triangleToggle();
+			headerToggle();
 		}); 
 
 		//pcSearchが押された時
@@ -118,6 +131,7 @@ export default class Header {
 			};
 
 			triangleToggle();
+			headerToggle();
 		}); 
 
 
@@ -137,6 +151,7 @@ export default class Header {
 			};
 
 			triangleToggle();
+			headerToggle();
 		}); 
 
 		$modalCover.on('click', function () {
@@ -158,6 +173,7 @@ export default class Header {
 			};			
 
 			triangleToggle();
+			headerToggle();
 		})
 
 	};

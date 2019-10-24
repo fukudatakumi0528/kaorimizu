@@ -41,13 +41,34 @@
       padding:4px 0;
 
         
-      .m-verticallyCard__inner__footer__date {
+      .m-verticallyCard__inner__footer__topper {
+        display: flex;
+        align-items: center;
         margin-top:5px;
-        font-size: $font-xxs;
-        color:$font-1-color;
 
         @include screen-large {
           margin-top:10px;
+        }
+
+        .m-verticallyCard__inner__footer__topper__date {
+          font-size: $font-xxs;
+          color:$font-1-color;  
+        }  
+
+        .m-verticallyCard__inner__footer__topper__new {
+
+          font-size: $font-xxs;
+          color:$font-1-color;
+          display: flex;
+          align-items: center;
+          margin-left: 5px;
+          padding:2px 10px;
+          background-color: $bg-4-color;
+          color: $bg-3-color;
+          line-height: 100%;
+          font-weight: $font-bold;
+          border-radius: 2px;
+  
         }
       }
 

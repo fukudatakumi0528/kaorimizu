@@ -23,7 +23,7 @@
 						<p class="o-topperSection__main__title__text__sub">Learn</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">貯金や学習など、夢や目標に近づくヒントをお届けします。</div>
 			</div>
 		</div>
 	</section>
@@ -55,9 +55,6 @@
 			</div>
 			<div class="p-article__main__content__column">
 				<div class="p-article__main__content__column__result">
-					<div class="p-article__main__content__column__result__category">
-						<p class="p-article__main__content__column__result__category__text"><strong>#マイナースポーツ</strong>の検索結果</p>
-					</div>
 					<div class="p-article__main__content__column__result__number">
 						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('learn')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
@@ -88,7 +85,12 @@
 									</div>
 								</div>
 								<div class="m-verticallyCard__inner__footer">
-									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
+									<div class="m-verticallyCard__inner__footer__topper">
+										<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+										<?php if(article_new_arrival($post)): ?>
+											<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+										<?php endif; ?>
+									</div>
 									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
 										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>

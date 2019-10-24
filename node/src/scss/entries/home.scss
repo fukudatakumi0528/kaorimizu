@@ -24,6 +24,19 @@
     }
   }
 
+  .p-top__kv__cover {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:$bg-1-color;
+    bottom:0;
+
+    &.is-hidden {
+      height: 0;
+    }
+  }
+
   .p-top__kv__bg {
     position: absolute;
     background-color:$bg-1-color;
@@ -117,11 +130,16 @@
     right: 0;
     display: flex;
     align-items: flex-end;
+    visibility: hidden;
 
     @include screen-large {
       height: 75%;
       bottom:15%;
       top:initial;
+    }
+
+    &.is-init {
+      visibility: visible;
     }
     
     .slick-list.draggable {

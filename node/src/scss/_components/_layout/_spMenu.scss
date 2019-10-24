@@ -174,11 +174,11 @@
   
           @include screen-large {
             background-color: $bg-6-color;
-            left: calc(50% - 10px);
           }
         }
 
         .icon-search {
+          width: auto;
 
           @include screen-large {
             right: 35px;
