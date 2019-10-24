@@ -174,7 +174,7 @@
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
-					$topFeatureThumbnail =  get_the_post_thumbnail_url();
+					$topFeatureThumbnail =  get_the_post_thumbnail_url($topFeature->ID);
 				} else {
 					$topFeatureThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 				};
@@ -297,16 +297,12 @@
 		</div>
 		<?php 
 			if ($topHobby):
-			
-			var_dump($topHobby->ID);
 
-			if ( has_post_thumbnail($post->ID)) {
-				$topHobbyThumbnail = get_the_post_thumbnail_url();
+			if ( has_post_thumbnail()) {
+				$topHobbyThumbnail = get_the_post_thumbnail_url($topHobby->ID);
 			} else {
-				$topHobbyThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+				$topHobbyThumbnail = assetsPath('img') . "logo/be-topia_thumbnail.jpg";
 			};
-
-			var_dump($topHobbyThumbnail);
 
 			//タグを取得				
 			$term = get_the_terms($topHobby->ID, 'hobby_tag');
