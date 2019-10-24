@@ -12,10 +12,11 @@
     width: 100%;
     z-index: 1000;
     background-color: $bg-6-color;
-    border-bottom:$border-4;
+    border-bottom:$border-3;
   }
 
   &.is-active {
+    border-bottom:$border-4;
   }
 
   .o-headerInner {

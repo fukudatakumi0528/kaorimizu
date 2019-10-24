@@ -1879,8 +1879,12 @@ main {
     width: 100%;
     z-index: 1000;
     background-color: #FFFFFF;
-    border-bottom: solid 2px #262626;
+    border-bottom: solid 2px #F5F5F5;
   }
+}
+
+.l-header.is-active {
+  border-bottom: solid 2px #262626;
 }
 
 @media (min-width: 768px) {
