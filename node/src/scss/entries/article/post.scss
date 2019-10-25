@@ -79,6 +79,7 @@
 			.p-articlePost__inner__main__content {
 
 				@include screen-large {
+					width: 100%;
 					max-width: 60%;
 				}
 
@@ -841,16 +842,6 @@
 									}
 								}
 							}
-
-
-
-
-
-
-
-
-
-
 						}
 					}
 				}
