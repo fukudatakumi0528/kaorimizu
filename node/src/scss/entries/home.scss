@@ -618,7 +618,7 @@
         padding:0 15px;
       }
 
-      .m-oblongCard {
+      .m-verticallyCard {
 
         @include screen-large {
           display: none;
@@ -632,21 +632,59 @@
           }  
         }
 
-        .m-oblongCard__inner {
+        .m-verticallyCard__inner {
           margin:0 8px;
 
           @include screen-large {
             margin:0;
           }
   
-          .m-oblongCard__inner__footer {
-  
-            .m-oblongCard__inner__footer__description__text {
-              font-size: $font-xs;
+          .m-verticallyCard__inner__footer {
+            background-color: $bg-6-color;
+            padding:15px;
 
-              @media all and (-ms-high-contrast: none){
-                max-height: calc(12px * 1.7 * 2);
+            @include screen-large {
+              padding:16px;
+            }
+
+            .m-verticallyCard__inner__footer__topper {
+              display: none;
+
+              @include screen-large {
+                margin:0px;
+              }
+            }
+
+            .m-verticallyCard__inner__footer__title {
+              font-size: 16px;
+              margin-top:0;
+
+              @include screen-large {
+                margin-top:4px;
+              }
+            }
+
+            .m-verticallyCard__inner__footer__description {
+
+              @include screen-large {
+                margin-top:2px;
+              }
+
+              .m-verticallyCard__inner__footer__description__text {
+                font-size: $font-xs;
+  
+                @media all and (-ms-high-contrast: none){
+                  max-height: calc(12px * 1.7 * 2);
+                }    
               }    
+            }
+
+            .m-classificationArea {
+              margin-bottom:0;
+
+              @include screen-large {
+                margin-top:2px;
+              }
             }  
           }
         }
@@ -944,7 +982,7 @@
         justify-content: center;
       }
 
-      .m-oblongCard {
+      .m-verticallyCard {
         width: 48%;
         margin-top:20px;
         height: auto;
@@ -963,16 +1001,16 @@
           }  
         }
 
-        .m-oblongCard__inner {
+        .m-verticallyCard__inner {
           margin:0;
   
-          .m-oblongCard__inner__footer {
+          .m-verticallyCard__inner__footer {
             width: 100%;
             box-sizing: border-box;
             padding:4px 0;
       
 
-            .m-oblongCard__inner__footer__date {
+            .m-verticallyCard__inner__footer__date {
               display: block;
               margin-top:5px;
               font-size: $font-xxs;
@@ -981,10 +1019,10 @@
             }
   
 
-            .m-oblongCard__inner__footer__description {
+            .m-verticallyCard__inner__footer__description {
               display: block;
 
-              .m-oblongCard__inner__footer__description__text {
+              .m-verticallyCard__inner__footer__description__text {
                 font-size: $font-xs;
                 overflow: hidden;
 
@@ -994,7 +1032,7 @@
               }  
             }
 
-            .m-oblongCard__inner__footer__title {
+            .m-verticallyCard__inner__footer__title {
               display: block;
               margin-top:5px;
               font-size: 13px;
@@ -1009,7 +1047,7 @@
               }
               overflow: hidden;
   
-              .m-oblongCard__inner__footer__title__text {
+              .m-verticallyCard__inner__footer__title__text {
                 @include screen-large {
                   margin-top:10px;
                 }        

@@ -195,7 +195,9 @@
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
 				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureThumbnail ?>" alt=""></div>
+					<div class="m-oblongCard__inner__topper">
+						<img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureThumbnail ?>" alt="">
+					</div>
 					<div class="m-oblongCard__inner__footer">
 						<div class="m-oblongCard__inner__footer__topper">
 							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topFeature->post_date); ?></time>
@@ -225,10 +227,12 @@
 		</div>
 		<?php endif; ?>
 		<div class="p-top__featureHobby__slider">
+			<?php if($query->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__feature">
 				<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 				<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 			</div>
+			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
 					while($query->have_posts()): $query->the_post();
@@ -242,26 +246,26 @@
 	
 					$term = get_the_terms($post->ID, 'feature_tag');
 				?>
-				<li class="m-oblongCard">
-					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
-						<div class="m-oblongCard__inner__topper">
-							<img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureListThumbnail ?>" alt="">
+				<li class="m-verticallyCard">
+					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+						<div class="m-verticallyCard__inner__topper">
+							<div class="m-verticallyCard__inner__topper__image">
+								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topFeatureListThumbnail ?>" alt="">
+							</div>
 						</div>
-						<div class="m-oblongCard__inner__footer">
-							<div class="m-oblongCard__inner__footer__topper">
-								<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+						<div class="m-verticallyCard__inner__footer">
+							<div class="m-verticallyCard__inner__footer__topper">
+								<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
 								<?php if(article_new_arrival($post)): ?>
-									<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+									<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
 								<?php endif; ?>
 							</div>
-							<div class="m-oblongCard__inner__footer__title">
-								<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
-							</div>
-							<div class="m-oblongCard__inner__footer__description">
-								<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+							<div class="m-verticallyCard__inner__footer__description">
+								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
 							</div>
 							<div class="m-classificationArea">
-								<?php	if($term): foreach ($term as $tag ): ?>
+							<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
 										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
 											<?= $tag->name?>
@@ -275,9 +279,11 @@
 				<?php endif; endwhile; wp_reset_postdata(); ?>
 			</ul>
 		</div>
+		<?php if($query->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('feature/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
 		</div>
+		<?php endif; ?>
 	</section>
 	<?php endif; ?>
 
@@ -358,13 +364,15 @@
 		<?php endif; ?>
 
 		<div class="p-top__featureHobby__slider">
+			<?php if($query->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__hobby">
 				<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 				<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 			</div>
+			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__hobby">
-
 				<?php
+					if($query->post_count > 1):
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
@@ -375,43 +383,45 @@
 
 					$term = get_the_terms($post->ID, 'hobby_tag');
 				?>
-				<li class="m-oblongCard">
-					<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
-						<div class="m-oblongCard__inner__topper">
-							<img class="m-oblongCard__inner__topper__image" src="<?= $topHobbyListThumbnail ?>" alt="">
+				<li class="m-verticallyCard">
+					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+						<div class="m-verticallyCard__inner__topper">
+							<div class="m-verticallyCard__inner__topper__image">
+								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topHobbyListThumbnail ?>" alt="">
+							</div>
 						</div>
-						<div class="m-oblongCard__inner__footer">
-							<div class="m-oblongCard__inner__footer__topper">
-								<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+						<div class="m-verticallyCard__inner__footer">
+							<div class="m-verticallyCard__inner__footer__topper">
+								<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
 								<?php if(article_new_arrival($post)): ?>
-									<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+									<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
 								<?php endif; ?>
 							</div>
-							<div class="m-oblongCard__inner__footer__title">
-								<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
-							</div>
-							<div class="m-oblongCard__inner__footer__description">
-								<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+							<div class="m-verticallyCard__inner__footer__description">
+								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
 							</div>
 							<div class="m-classificationArea">
-								<?php	if($term): foreach ($term as $tag ): ?>
+							<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
 										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
 											<?= $tag->name?>
 										</a>
 									</object>
-								<?php  endforeach; endif; ?>
+								<?php endforeach; endif; ?>
 							</div>
 						</div>
 					</a>
 				</li>
-				<?php endwhile; wp_reset_postdata();?>
+				<?php endwhile; wp_reset_postdata(); endif;?>
 
 			</ul>
 		</div>
+		<?php if($query->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('hobby/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
 		</div>
+		<?php endif;?>
 	</section>
 	<?php endif; ?>
 	<!-- life-->
@@ -448,23 +458,23 @@
 							$topLifeListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
 					?>
-					<li class="m-oblongCard">
-						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
-							<div class="m-oblongCard__inner__topper">
-								<img class="m-oblongCard__inner__topper__image" src="<?= $topLifeListThumbnail ?>" alt="">
+					<li class="m-verticallyCard">
+						<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+							<div class="m-verticallyCard__inner__topper">
+								<div class="m-verticallyCard__inner__topper__image">
+									<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topLifeListThumbnail ?>" alt="">
+								</div>
 							</div>
-							<div class="m-oblongCard__inner__footer">
-								<div class="m-oblongCard__inner__footer__topper">
-									<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+							<div class="m-verticallyCard__inner__footer">
+								<div class="m-verticallyCard__inner__footer__topper">
+									<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
 									<?php if(article_new_arrival($post)): ?>
-										<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+										<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
 									<?php endif; ?>
 								</div>
-								<div class="m-oblongCard__inner__footer__title">
-									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
-								</div>
-								<div class="m-oblongCard__inner__footer__description">
-									<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+								<div class="m-verticallyCard__inner__footer__description">
+									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
 								</div>
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -576,23 +586,23 @@
 						};
 
 						?>
-					<li class="m-oblongCard">
-						<a class="m-oblongCard__inner" src="<?php the_permalink() ?>" alt="">
-							<div class="m-oblongCard__inner__topper">
-								<img class="m-oblongCard__inner__topper__image" src="<?= $topLearnListThumbnail ?>" alt="">
+					<li class="m-verticallyCard">
+						<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+							<div class="m-verticallyCard__inner__topper">
+								<div class="m-verticallyCard__inner__topper__image">
+									<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topLearnListThumbnail ?>" alt="">
+								</div>
 							</div>
-							<div class="m-oblongCard__inner__footer">
-								<div class="m-oblongCard__inner__footer__topper">
-									<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+							<div class="m-verticallyCard__inner__footer">
+								<div class="m-verticallyCard__inner__footer__topper">
+									<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
 									<?php if(article_new_arrival($post)): ?>
-										<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
+										<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
 									<?php endif; ?>
 								</div>
-								<div class="m-oblongCard__inner__footer__title">
-									<h2 class="m-oblongCard__inner__footer__title__text"><?php the_title_attribute(); ?></h2>
-								</div>
-								<div class="m-oblongCard__inner__footer__description">
-									<p class="m-oblongCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+								<div class="m-verticallyCard__inner__footer__description">
+									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
 								</div>
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>

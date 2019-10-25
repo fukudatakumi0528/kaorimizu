@@ -1924,7 +1924,8 @@ main {
 
 @media (min-width: 768px) {
   .l-header {
-    height: 70px;
+    height: 80px;
+    padding: 13px 20px 13px 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4541,10 +4542,10 @@ main {
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 17px solid #262626;
-  top: calc(50% - 8px);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 25px solid #262626;
+  top: calc(50% - 11px);
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
@@ -4558,10 +4559,10 @@ main {
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 17px solid #FFF2C3;
-  top: calc(50% - 4px);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 25px solid #FFF2C3;
+  top: calc(50% - 6px);
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
