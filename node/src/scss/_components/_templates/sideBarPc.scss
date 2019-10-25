@@ -16,6 +16,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: 16px;
         }
       }
 
@@ -56,6 +57,7 @@
       flex-direction: column;
 
       .t-sideBarPc__keyword__header__subtitle {
+        font-family: 'Josefin Sans', sans-serif;
         font-size: $font-xs;
         color:$bg-1-color;
         line-height: 125%;

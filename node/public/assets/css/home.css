@@ -379,6 +379,7 @@ $font-xxl: 2rem;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 15px;
+    margin-top: 56px;
   }
 }
 

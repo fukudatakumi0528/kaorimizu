@@ -1,5 +1,5 @@
 .m-classificationArea {
-  margin:0 0 8px -8px;
+  margin:8px 0 8px -8px;
   display: flex;
   flex-wrap: wrap;
 
@@ -9,7 +9,7 @@
     color:$font-2-color;   
 
     @include screen-large {
-      font-size: $font-xs;
+      font-size: 11px;
     } 
 
     &:hover {
@@ -31,7 +31,7 @@
       color:$font-2-color;   
 
       @include screen-large {
-        font-size: $font-xs;
+        font-size: 11px;
       }    
     }
   }

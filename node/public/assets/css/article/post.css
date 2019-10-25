@@ -565,7 +565,7 @@ $font-xxl: 2rem;
   background-color: #FFF2C3;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__bnr {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .anl_post_footer {
   display: block;
   max-width: 100%;
   height: auto;
@@ -573,7 +573,7 @@ $font-xxl: 2rem;
   cursor: pointer;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__bnr .article__bnr__image {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .anl_post_footer .anl_post_footer__image {
   width: 100%;
 }
 

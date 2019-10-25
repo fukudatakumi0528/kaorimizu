@@ -76,7 +76,10 @@
               <p class="l-footer__about__inner__main__description">be-topiaは、「やりたいこと、やってみよう」をテーマにしたライフスタイルマガジンです。さまざまな人の「やりたいこと」や「やってみたこと」にまつわるストーリーやアイデアを紹介します。やりたいことが見つからない人、やりたいことを先延ばしにしている人。そんな人たちの背中をそっと押して、やりたいことへの一歩を踏み出す人を増やしていきます。</p>
             </div>
             <div class="l-footer__about__inner__footer">
-              <span class="icon-check-text"></span>
+              <div class="l-footer__about__inner__footer__left">
+                <img class="icon-check-text" src="<?= assetsPath('img') ?>icon/check.svg">
+                <span class="icon-arrow"></span>
+              </div>
               <div class="l-footer__about__inner__footer__list">
                 <a class="l-footer__about__inner__footer__list__item instagram" href="">
                   <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
@@ -135,9 +138,9 @@
                   </div>
                 </div>
                 <div class="l-footer__search__inner__downlord__inner__footer">
-                  <a class="l-footer__search__inner__downlord__inner__footer__link" href="https://finbee.jp/?utm_source=be-topia&utm_medium=footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
+                  <a class="anl_common_footer" href="https://finbee.jp/?utm_source=be-topia&utm_medium=footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
 										<span class="icon-btn"></span>
-										<p class="l-footer__search__inner__downlord__inner__footer__link__text">公式サイトはこちら</p>
+										<p class="anl_common_footer__text">公式サイトはこちら</p>
 										<span class="icon-tab"></span>
 									</a>
 								</div>

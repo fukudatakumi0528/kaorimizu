@@ -30,17 +30,20 @@
         }
 
         .o-topperSection__main__title__text__sub {
+          margin-top:6px;
+          font-family: 'Josefin Sans', sans-serif;
           font-size:$font-xs;
           font-weight: $font-bold;
           white-space: nowrap;
+          line-height: 100%;
         }
       }
     }
 
     .o-topperSection__main__description {
       margin-top:10px;
-      font-size:$font-xs;
-      font-weight: $font-bold;
+      font-size:14px;
+      font-weight: $font-medium;
       line-height: 150%;
       text-align: center;
     }

@@ -22,6 +22,12 @@ $font-xxl: 2rem;
   background-color: #FFD94A;
 }
 
+@media (min-width: 768px) {
+  .p-articleSearch__topper .o-topperSection {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
 .p-articleSearch__main {
   margin: 0 auto;
   width: 100%;
