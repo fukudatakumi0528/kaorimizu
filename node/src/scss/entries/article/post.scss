@@ -862,6 +862,7 @@
 				@include screen-large {
 					display: block;
 					width: 300px;
+					max-width: 300px;
 					min-width: 300px;
 				}
 			}

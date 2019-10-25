@@ -959,6 +959,7 @@ $font-xxl: 2rem;
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar {
     display: block;
     width: 300px;
+    max-width: 300px;
     min-width: 300px;
   }
 }
