@@ -3598,6 +3598,7 @@ main {
     display: block;
     overflow: hidden;
     margin-top: 5px;
+    width: 100%;
   }
 }
 
@@ -3625,6 +3626,7 @@ main {
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__classification {
     display: block;
+    width: 100%;
   }
 }
 

@@ -185,6 +185,7 @@
           display: block;
           overflow: hidden;
           margin-top:5px;
+          width: 100%;
         }
 
         .m-squareCard__inner__footer__description__text {
@@ -207,6 +208,7 @@
 
         @include screen-large {
           display: block;
+          width: 100%;
         }
       }
     }
