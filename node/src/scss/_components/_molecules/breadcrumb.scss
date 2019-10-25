@@ -15,7 +15,11 @@
       align-items: center;
       margin:0 auto;
       padding:15px 0;
-      overflow: scroll;
+      overflow-x: scroll;
+
+      @include screen-large {
+        overflow: hidden;
+      }
   
       &>li {
         font-size:$font-xs;

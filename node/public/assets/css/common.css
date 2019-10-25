@@ -2670,7 +2670,13 @@ main {
   align-items: center;
   margin: 0 auto;
   padding: 15px 0;
-  overflow: scroll;
+  overflow-x: scroll;
+}
+
+@media (min-width: 768px) {
+  .m-breadcrumb #breadcrumb ul {
+    overflow: hidden;
+  }
 }
 
 .m-breadcrumb #breadcrumb ul > li {
