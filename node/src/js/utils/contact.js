@@ -9,6 +9,10 @@ export default class Contact {
     });
   }
   selectContactChoice() {
+
+	  console.log('teaestaertas');
+
+
     const $contactChoiceLabel =$('.p-contact__main__input__radiobutton__under__label')
 
     const $inputAreaEmail = $('.p-contact__main__input__email');
@@ -17,11 +21,16 @@ export default class Contact {
     $contactChoiceLabel.on('click', function () {
       if ($(this).hasClass('js-contactChoiceEmailButton')) {
         $inputAreaTel.removeClass('is-active');
+
+        $('.p-contact__main__input__email input').attr('name', '--');
+
+
+
         $inputAreaEmail.addClass('is-active');
       } else if ($(this).hasClass('js-contactChoiceTelButton')) {
         $inputAreaEmail.removeClass('is-active');
         $inputAreaTel.addClass('is-active');
-      }        
+      }
     })
   }
 }

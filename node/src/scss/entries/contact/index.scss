@@ -56,8 +56,8 @@
         flex-direction: row;
         align-items: flex-start;
         margin-top: 60px;
-      }    
-    
+      }
+
       .p-contact__main__input__radiobutton__topper {
         display: flex;
         align-items: center;
@@ -66,8 +66,8 @@
           width: 30%;
           min-width: 300px;
           align-items: flex-start;
-        }    
-    
+        }
+
         .p-contact__main__input__radiobutton__topper__required {
           background-color: $bg-4-color;
           color: $bg-6-color;
@@ -82,14 +82,14 @@
           line-height: 100%;
           white-space: nowrap;
         }
-    
+
         .p-contact__main__input__radiobutton__topper__title {
           font-size: $font-s;
           font-weight: $font-bold;
           line-height: 100%;
         }
       }
-    
+
       .p-contact__main__input__radiobutton__under {
         margin-top:8px;
         width: 100%;
@@ -99,10 +99,10 @@
 
         @include screen-large {
           margin:0;
-        }    
-        
+        }
+
         input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label {
-          
+
           label {
 
             .icon-radio-button {
@@ -120,10 +120,10 @@
           &:nth-of-type(1) {
             margin-left:0;
           }
-          
+
           label {
             display: flex;
-            align-items: center;  
+            align-items: center;
 
             .icon-radio-button {
               font-size:24px;
@@ -137,8 +137,8 @@
               margin-left:5px;
               font-size: $font-s;
               font-weight: $font-bold;
-              line-height: 100%;      
-            }  
+              line-height: 100%;
+            }
           }
         }
       }
@@ -165,15 +165,15 @@
     margin-top:30px;
     display: flex;
     flex-direction: column;
-  
+
     @include screen-large {
       margin-top:120px;
     }
-  
+
     .p-contact__main__checkbox__topper {
       display: flex;
       align-items: flex-start;
-  
+
       .p-contact__main__checkbox__topper__required {
         background-color: $bg-4-color;
         color: $bg-6-color;
@@ -200,7 +200,7 @@
               transition: 0.2s;
             }
           }
-          
+
           .path3{
 
             &::before {
@@ -208,7 +208,7 @@
               transition: 0.2s;
             }
           }
-        }  
+        }
       }
 
       .icon-check {
@@ -222,7 +222,7 @@
           }
         }
       }
-  
+
       .p-contact__main__checkbox__topper__title {
         margin-left: 5px;
         font-size: $font-s;
@@ -244,7 +244,7 @@
       @include screen-large {
         padding:0;
       }
-  
+
       .p-contact__main__checkbox__validation__text {
         padding:5px 10px;
         border-radius: 1px;

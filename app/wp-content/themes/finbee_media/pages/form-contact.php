@@ -24,43 +24,70 @@
 
 	<section class="p-contact__main">
 
-		<?php/* if(have_posts()): while(have_posts()): the_post(); */?>
-			<?php/* the_content() */?>
-		<?php/* endwhile; endif; */?>
+		<?php if(have_posts()): while(have_posts()): the_post(); ?>
+			<?php the_content() ?>
+		<?php endwhile; endif; ?>
 
 
 
 
 
 
+<!--
 <div class="p-contact__main__input">
+
   <div class="m-selectboxArea">
     <div class="m-selectboxArea__topper">
       <p class="m-selectboxArea__topper__required">必須</p>
       <p class="m-selectboxArea__topper__title">お問い合わせ項目</p>
     </div>
+
     <div class="m-selectboxArea__under">
-      <select class="m-selectboxArea__under__input js-selectbox is-validation" name="">
-        <option disabled selected>選択してください</option>
-        <option value="1">取材を受けたい</option>
-        <option value="2">記事を書きたい</option>
-        <option value="3">撮影したい</option>
-        <option value="4">広告を掲載したい</option>
-        <option value="5">その他</option>
-      </select>
+	    <div class="m-selectboxArea__under_validationwrap is-validation">
+	      <select class="m-selectboxArea__under__input js-selectbox" name="">
+	        <option disabled selected>選択してください</option>
+	        <option value="1">取材を受けたい</option>
+	        <option value="2">記事を書きたい</option>
+	        <option value="3">撮影したい</option>
+	        <option value="4">広告を掲載したい</option>
+	        <option value="5">その他</option>
+	      </select>
+	    </div>
       <div class="m-selectboxArea__under__icon"><span class="icon-head"></span></div>
+      <p class="m-selectboxArea__under_validationtext">選択してください</p>
     </div>
   </div>
+
   <div class="m-inputArea">
     <div class="m-inputArea__topper">
       <p class="m-inputArea__topper__required">必須</p>
       <p class="m-inputArea__topper__title">氏名</p>
     </div>
     <div class="m-inputArea__under">
-      <input class="m-inputArea__under__input is-validation" placeholder="山田太郎">
+	    <div class="m-inputArea__under_validationwrap is-validation">
+		    <input class="m-inputArea__under__input" placeholder="山田太郎">
+	    </div>
+      <p class="m-inputArea__under_validationtext">選択してください</p>
     </div>
   </div>
 </div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
