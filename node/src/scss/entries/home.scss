@@ -135,7 +135,7 @@
     @include screen-large {
       height: 75%;
       bottom:15%;
-      top:initial;
+      top:auto;
     }
 
     &.is-init {

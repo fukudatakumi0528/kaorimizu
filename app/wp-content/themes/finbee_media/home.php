@@ -150,12 +150,20 @@
 	<?php 
 		$topFeature = get_field('top-feature', 'option');
 
-		$topFeatureArgs = [
-			'post_type' => 'feature',
-			'posts_per_page' => 5,
-			'post__not_in' => array($topFeature->ID),
-			'paged' => $paged,
-		];
+		if($topFeature){
+			$topFeatureArgs = [
+				'post_type' => 'feature',
+				'posts_per_page' => 5,
+				'post__not_in' => array($topFeature->ID),
+				'paged' => $paged,
+			];	
+		}else {
+			$topFeatureArgs = [
+				'post_type' => 'feature',
+				'posts_per_page' => 5,
+				'paged' => $paged,
+			];	
+		}
 		$query = new WP_Query($topFeatureArgs);
 		if($query->have_posts() || $topFeature):
 	?>
@@ -278,12 +286,20 @@
 	<?php
 		$topHobby = get_field('top-hobby', 'option');
 
-		$topHobbyArgs = [
-			'post_type' => 'hobby',
-			'posts_per_page' => 5,
-			'post__not_in' => array($topHobby->ID),
-			'paged' => $paged,
-		];
+		if($topHobby){
+			$topHobbyArgs = [
+				'post_type' => 'hobby',
+				'posts_per_page' => 5,
+				'post__not_in' => array($topHobby->ID),
+				'paged' => $paged,
+			];	
+		}else{
+			$topHobbyArgs = [
+				'post_type' => 'hobby',
+				'posts_per_page' => 5,
+				'paged' => $paged,
+			];	
+		}
 		$query = new WP_Query($topHobbyArgs);
 		if($query->have_posts() || $topHobby):
 	?>

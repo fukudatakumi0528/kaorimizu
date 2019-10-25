@@ -162,7 +162,7 @@ $font-xxl: 2rem;
   .p-top__kv .p-top__kv__slider {
     height: 75%;
     bottom: 15%;
-    top: initial;
+    top: auto;
   }
 }
 

@@ -362,6 +362,7 @@ legend {
 
 img {
   border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+  pointer-events: none;
 }
 
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
