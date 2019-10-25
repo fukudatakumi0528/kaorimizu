@@ -56,6 +56,23 @@
           }  
         }
 
+        &:hover {
+
+          .o-headerInnerPc__left__category__list__link__icon {
+
+            @include screen-large {
+              animation: key1 .3s ease alternate;
+              transition: 0.4s;
+            }
+
+            @keyframes key1{
+              0% {transform: translateY(0px);}
+              50% {transform: translateY(-10px);}
+              100% {transform: translateY(0px);}
+            }
+          }
+        }
+
         .o-headerInnerPc__left__category__list__link {
           display: flex;
           height: 100%;
@@ -76,6 +93,7 @@
             height: 30px;
             display: flex;
             align-items: flex-end;
+            transition: 0.4s;
           }
         }
       }
@@ -100,17 +118,16 @@
         }
 
         .o-headerInnerPc__left__button__list__text {
-          height: 100%;
           padding:4px 10px;
           width: auto;
           white-space: nowrap;
           font-size: $font-xs;
           font-weight: $font-bold;
-          line-height: 150%;
+          line-height: 120%;
 
           strong {
             font-size: $font-m;
-            line-height: 150%;
+            line-height: 140%;
           }
         }
 

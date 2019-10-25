@@ -1921,7 +1921,7 @@ main {
 
 @media (min-width: 768px) {
   .l-header {
-    height: auto;
+    height: 70px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4293,6 +4293,45 @@ main {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list:hover .o-headerInnerPc__left__category__list__link__icon {
+    -webkit-animation: key1 .3s ease alternate;
+    animation: key1 .3s ease alternate;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+@-webkit-keyframes key1 {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes key1 {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4327,6 +4366,8 @@ main {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button {
@@ -4358,18 +4399,17 @@ main {
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__text {
-  height: 100%;
   padding: 4px 10px;
   width: auto;
   white-space: nowrap;
   font-size: 1.2rem;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 120%;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__text strong {
   font-size: 1.6rem;
-  line-height: 150%;
+  line-height: 140%;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__icon {
