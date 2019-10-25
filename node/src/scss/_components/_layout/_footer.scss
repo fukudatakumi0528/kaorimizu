@@ -203,6 +203,7 @@
       .l-footer__about__inner__main {
 
         @include screen-large {
+          width: 100%;
           display: flex;
           align-items: center;
           background-color: $bg-6-color;
@@ -238,7 +239,7 @@
   
             @include screen-large {
               width: 100%;
-              text-align: end;
+              text-align: right;
             }
           }
         }
@@ -252,7 +253,8 @@
             height: 130px;
             background-color:$bg-1-color;
             border-radius: 25px;
-            width: 10px;
+            min-width: 2px;
+            width: 3px;
           }
         }
     

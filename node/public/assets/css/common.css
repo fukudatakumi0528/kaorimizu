@@ -1309,6 +1309,7 @@ main {
 
 @media (min-width: 768px) {
   .l-footer .l-footer__about .l-footer__about__inner .l-footer__about__inner__main {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1363,7 +1364,7 @@ main {
 @media (min-width: 768px) {
   .l-footer .l-footer__about .l-footer__about__inner .l-footer__about__inner__main .l-footer__about__inner__main__header .l-footer__about__inner__main__header__subtitle {
     width: 100%;
-    text-align: end;
+    text-align: right;
   }
 }
 
@@ -1378,7 +1379,8 @@ main {
     height: 130px;
     background-color: #FFD94A;
     border-radius: 25px;
-    width: 10px;
+    min-width: 2px;
+    width: 3px;
   }
 }
 
