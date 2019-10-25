@@ -2712,36 +2712,32 @@ main {
 
 .m-breadcrumb #breadcrumb ul > li {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   margin-left: 5px;
 }
 
 @media (min-width: 768px) {
   .m-breadcrumb #breadcrumb ul > li {
-    font-size: 1.6rem;
+    font-size: 13px;
   }
 }
 
-.m-breadcrumb #breadcrumb ul > li > span {
+.m-breadcrumb #breadcrumb ul > li span {
   display: block;
   white-space: nowrap;
   font-size: 1.4rem;
 }
 
-.m-breadcrumb #breadcrumb ul > li > a {
-  display: block;
-}
-
-.m-breadcrumb #breadcrumb ul > li > a > span {
-  display: block;
-  white-space: nowrap;
-  font-size: 1.4rem;
+@media (min-width: 768px) {
+  .m-breadcrumb #breadcrumb ul > li span {
+    font-size: 13px;
+  }
 }
 
 .m-breadcrumb #breadcrumb ul > li::before {
@@ -2754,7 +2750,7 @@ main {
 
 @media (min-width: 768px) {
   .m-breadcrumb #breadcrumb ul > li::before {
-    font-size: 1.6rem;
+    font-size: 13px;
   }
 }
 

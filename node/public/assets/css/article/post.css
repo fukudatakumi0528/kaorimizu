@@ -185,7 +185,7 @@ $font-xxl: 2rem;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy .ez-toc-title-container {
-  padding: 12px 16px;
+  padding: 10px 16px;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,7 +222,7 @@ $font-xxl: 2rem;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li {
-  padding: 12px 16px;
+  padding: 10px 16px;
   background-color: #FBFBFB;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,8 +252,8 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li a {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 500;
   text-decoration: underline;
   line-height: 170%;
   display: -webkit-box;
@@ -268,7 +268,7 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 {
   display: block;
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700 !important;
   line-height: 170%;
 }
@@ -277,7 +277,7 @@ $font-xxl: 2rem;
   display: inline;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), color-stop(0%, #FFD94A));
   background: linear-gradient(transparent 85%, #FFD94A 0%);
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 700 !important;
   line-height: 170%;
 }
@@ -318,8 +318,12 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body p {
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 15px;
   line-height: 170%;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .wp-caption-text {
+  font-size: 12px;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body a {
