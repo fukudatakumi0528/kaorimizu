@@ -30,6 +30,7 @@
 	</section>
 	<section class="p-article__main">
 		<div class="p-article__main__content">
+			<?php if($wp_query->have_posts()): ?>
 			<div class="p-article__main__content__refine">
 				<div class="p-article__main__content__refine__inner">
 					<div class="p-article__main__content__refine__inner__header">
@@ -54,21 +55,24 @@
 					</div>
 				</div>
 			</div>
+			<?php endif; ?>
 			<div class="p-article__main__content__column">
 				<div class="p-article__main__content__column__result">
+					<?php if($wp_query->have_posts()): ?>
 					<div class="p-article__main__content__column__result__number">
 						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('learn')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
+					<?php else: ?>
+					<div class="p-article__main__content__column__result">
+						<div class="p-article__main__content__column__result__category nothing">
+							<p class="p-article__main__content__column__result__category__text nothing">まだ<strong>学び</strong>カテゴリに記事はありません。</p>
+						</div>
+					</div>
+					<?php endif;?>
 				</div>		
 				<div class="o-verticallyCardList">
 					<?php
-						$args = [
-							'post_type' => 'learn',
-							'posts_per_page' => 16,
-							'paged' => $paged,
-						];
-						$query = new WP_Query($args);
-						if($query->have_posts()): while($query->have_posts()): $query->the_post();
+						if($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();
 
 						$singletags = get_the_terms($post->ID, 'learn_tag');
 
@@ -118,7 +122,7 @@
 								'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 								'format' => '?paged=%#%',
 								'current' => max( 1, get_query_var('paged') ),
-								'total' => $query->max_num_pages,
+								'total' => $wp_query->max_num_pages,
 								'prev_text' => __('前へ'),
 								'next_text' => __('次へ'),
 								'mid_size' => 2,

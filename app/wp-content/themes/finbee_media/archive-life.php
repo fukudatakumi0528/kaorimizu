@@ -3,6 +3,7 @@
 	global $breadcrumb;
 
 	$cssName = "article/index";
+	$breadcrumb = "<li>生活</li>";
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
@@ -17,18 +18,19 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-feature.svg" alt="特集">
+					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
 					<div class="o-topperSection__main__title__text">
-						<h1 class="o-topperSection__main__title__text__main">特集</h1>
-						<p class="o-topperSection__main__title__text__sub">Feature</p>
+						<h1 class="o-topperSection__main__title__text__main">生活</h1>
+						<p class="o-topperSection__main__title__text__sub">Life</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">生活や仕事など、暮らしをもっと楽しくするコンテンツをお届けします。</div>
 			</div>
 		</div>
 	</section>
 	<section class="p-article__main">
 		<div class="p-article__main__content">
+			<?php if($wp_query->have_posts()): ?>
 			<div class="p-article__main__content__refine">
 				<div class="p-article__main__content__refine__inner">
 					<div class="p-article__main__content__refine__inner__header">
@@ -40,7 +42,7 @@
 					</div>
 					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
 						<ul class="o-classificationList">
-							<?php $tags = get_terms('feature_tag'); ?>
+							<?php $tags = get_terms('life_tag'); ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
 										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
@@ -53,30 +55,32 @@
 					</div>
 				</div>
 			</div>
+			<?php endif; ?>
 			<div class="p-article__main__content__column">
 				<div class="p-article__main__content__column__result">
+					<?php if($wp_query->have_posts()): ?>
 					<div class="p-article__main__content__column__result__number">
-						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('feature')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
+						<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('life')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
+					<?php else: ?>
+					<div class="p-article__main__content__column__result">
+						<div class="p-article__main__content__column__result__category nothing">
+							<p class="p-article__main__content__column__result__category__text nothing">まだ<strong>生活</strong>カテゴリに記事はありません。</p>
+						</div>
+					</div>
+					<?php endif;?>
 				</div>		
 				<div class="o-verticallyCardList">
 					<?php
-						$args = [
-							'post_type' => 'feature',
-							'posts_per_page' => 16,
-							'paged' => $paged,
-						];
-						$query = new WP_Query($args);
-						if($query->have_posts()): while($query->have_posts()): $query->the_post();
+						if($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();
 
-						$singletags = get_the_terms($post->ID, 'feature_tag');
+						$singletags = get_the_terms($post->ID, 'life_tag');
 
 						if ( has_post_thumbnail($post->ID) ) {
 							$thumbnail =  get_the_post_thumbnail_url($post->ID);
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
-	
 					?>
 						<article class="m-verticallyCard">
 							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
@@ -118,7 +122,7 @@
 								'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 								'format' => '?paged=%#%',
 								'current' => max( 1, get_query_var('paged') ),
-								'total' => $query->max_num_pages,
+								'total' => $wp_query->max_num_pages,
 								'prev_text' => __('前へ'),
 								'next_text' => __('次へ'),
 								'mid_size' => 2,
