@@ -246,6 +246,10 @@
           .m-squareCard__inner__footer__title__text {
             font-size: $font-xs;
             width: 100%;
+
+            @media all and (-ms-high-contrast: none){
+              max-height: calc(12px * 1.5 * 3);
+            }  
           }
 
           .m-squareCard__inner__footer__description {

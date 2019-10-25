@@ -714,14 +714,18 @@
 												display: -webkit-box;
 												-webkit-box-orient: vertical;
 												-webkit-line-clamp: 3;
-												max-height: calc(12px * 1.5 * 3);
+												@media all and (-ms-high-contrast: none){
+													max-height: calc(12px * 1.5 * 3);
+												}
 												overflow: hidden;
 							
 
 												@include screen-large {
 													margin:0 0 0 20px;
 													-webkit-line-clamp: 2;
-													max-height: calc(12px * 1.5 * 2);								
+													@media all and (-ms-high-contrast: none){
+														max-height: calc(12px * 1.5 * 2);								
+													}
 												}
 											}
 										}

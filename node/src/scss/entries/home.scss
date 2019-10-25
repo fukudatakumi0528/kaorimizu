@@ -239,7 +239,9 @@
                 @include screen-large {
                   font-size: 20px;
                   -webkit-line-clamp: 3; 
-                  max-height: calc(20px * 1.5 * 3);
+                  @media all and (-ms-high-contrast: none){
+                    max-height: calc(20px * 1.5 * 3);
+                  }
                   overflow: hidden;         
                 }  
               }
@@ -641,6 +643,10 @@
   
             .m-oblongCard__inner__footer__description__text {
               font-size: $font-xs;
+
+              @media all and (-ms-high-contrast: none){
+                max-height: calc(12px * 1.5 * 3);
+              }    
             }  
           }
         }
@@ -981,6 +987,10 @@
               .m-oblongCard__inner__footer__description__text {
                 font-size: $font-xs;
                 overflow: hidden;
+
+                @media all and (-ms-high-contrast: none){
+                  max-height: calc(12px * 1.5 * 3);
+                }      
               }  
             }
 
@@ -994,7 +1004,9 @@
               display: -webkit-box;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3; 
-              max-height: calc(13px * 1.5 * 3);
+              @media all and (-ms-high-contrast: none){
+                max-height: calc(13px * 1.5 * 3);
+              }
               overflow: hidden;
   
               .m-oblongCard__inner__footer__title__text {

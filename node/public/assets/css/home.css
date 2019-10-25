@@ -300,8 +300,13 @@ $font-xxl: 2rem;
   .p-top__kv .p-top__kv__slider .slick-list.draggable .m-squareCard.slick-slide .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
     font-size: 20px;
     -webkit-line-clamp: 3;
-    max-height: calc(20px * 1.5 * 3);
     overflow: hidden;
+  }
+}
+
+@media all and (min-width: 768px) and (-ms-high-contrast: none) {
+  .p-top__kv .p-top__kv__slider .slick-list.draggable .m-squareCard.slick-slide .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
+    max-height: calc(20px * 1.5 * 3);
   }
 }
 
@@ -729,6 +734,12 @@ $font-xxl: 2rem;
   font-size: 1.2rem;
 }
 
+@media all and (-ms-high-contrast: none) {
+  .p-top__featureHobby .p-top__featureHobby__slider .p-top__featureHobby__slider__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description__text {
+    max-height: calc(12px * 1.5 * 3);
+  }
+}
+
 .p-top__featureHobby .p-top__featureHobby__slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1118,6 +1129,12 @@ $font-xxl: 2rem;
   overflow: hidden;
 }
 
+@media all and (-ms-high-contrast: none) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description .m-oblongCard__inner__footer__description__text {
+    max-height: calc(12px * 1.5 * 3);
+  }
+}
+
 .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title {
   display: block;
   margin-top: 5px;
@@ -1128,8 +1145,13 @@ $font-xxl: 2rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  max-height: calc(13px * 1.5 * 3);
   overflow: hidden;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title {
+    max-height: calc(13px * 1.5 * 3);
+  }
 }
 
 @media (min-width: 768px) {

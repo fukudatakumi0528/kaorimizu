@@ -88,12 +88,16 @@
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 3;
-          max-height: calc(16px * 1.5 * 3);
+          @media all and (-ms-high-contrast: none){
+            max-height: calc(16px * 1.5 * 3);
+          }
           overflow: hidden;
 
           @include screen-large {
-            -webkit-line-clamp: 2; 
-            max-height: calc(16px * 1.5 * 2);
+            -webkit-line-clamp: 2;
+            @media all and (-ms-high-contrast: none){
+              max-height: calc(16px * 1.5 * 2);
+            }   
           }
         } 
       }
@@ -115,7 +119,9 @@
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
-          max-height: calc(14px * 1.5 * 3);
+          @media all and (-ms-high-contrast: none){
+            max-height: calc(14px * 1.5 * 3);
+          }
           overflow: hidden;
         } 
       }

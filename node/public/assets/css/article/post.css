@@ -821,14 +821,24 @@ $font-xxl: 2rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  max-height: calc(12px * 1.5 * 3);
   overflow: hidden;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {
+    max-height: calc(12px * 1.5 * 3);
+  }
 }
 
 @media (min-width: 768px) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {
     margin: 0 0 0 20px;
     -webkit-line-clamp: 2;
+  }
+}
+
+@media all and (min-width: 768px) and (-ms-high-contrast: none) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {
     max-height: calc(12px * 1.5 * 2);
   }
 }
