@@ -4,15 +4,14 @@
 @import "../../_utils/_mixins";
 
 .p-contact__topper {
-
   @include screen-large{
     margin-top:70px;
   }
-
   .o-topperSection {
     padding:40px 20px;
   }
 }
+
 
 .p-contact__main {
   padding:0 15px;
@@ -20,7 +19,6 @@
   width: 100%;
   max-width: 700px;
   margin-top:60px;
-
   .p-contact__main__input {
 
     .m-inputArea {
@@ -101,6 +99,24 @@
           margin:0;
         }
 
+        label {
+	        input {
+		        border: red solid 2px;
+		        width: 20px;
+		        height: 20px;
+	        }
+
+
+	        .mwform-radio-field-text {
+		        border: blue solid 2px;
+	        }
+
+
+
+        }
+
+
+
         input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label {
 
           label {
@@ -146,15 +162,12 @@
 
     .p-contact__main__input__email {
       display: none;
-
       &.is-active {
         display: block;
       }
     }
-
     .p-contact__main__input__tel {
       display: none;
-
       &.is-active {
         display: block;
       }
@@ -280,3 +293,22 @@
     background-color: $bg-3-color;
   }
 }
+
+
+
+
+
+
+
+
+//確認画面
+.mw_wp_form_confirm {
+	.m-selectboxArea__under__icon,
+	.p-contact__main__checkbox {
+		display: none!important;
+	}
+}
+
+
+
+

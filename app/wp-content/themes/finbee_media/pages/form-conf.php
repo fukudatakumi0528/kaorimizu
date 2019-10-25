@@ -1,0 +1,49 @@
+<?php
+	global $cssName;
+	global $breadcrumb;
+
+	$cssName = "contact/index";
+	$breadcrumb = '<li><a href="/news/">ニュース</a></li><li></li>';
+	get_header();
+
+?>
+<main>
+	<section class="p-contact__topper">
+		<div class="o-topperSection">
+			<div class="o-topperSection__main">
+				<div class="o-topperSection__main__title"><img class="o-topperSection__main__title__icon" src="/assets/img/common/icon/mail.png" alt="">
+					<div class="o-topperSection__main__title__text">
+						<h1 class="o-topperSection__main__title__text__main">お問い合わせ確認</h1>
+						<p class="o-topperSection__main__title__text__sub">Contact</p>
+					</div>
+				</div>
+				<div class="o-topperSection__main__description">be-topia のコンテンツに参加してみたい方は以下フォームより、お問い合わせください。</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-contact__main">
+
+		<?php if(have_posts()): while(have_posts()): the_post(); ?>
+			<?php the_content() ?>
+		<?php endwhile; endif; ?>
+
+	</section>
+
+
+
+	<section class="p-contact__footer">
+		<div class="m-breadcrumb">
+			<ul class="m-breadcrumb__list">
+				<li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">TOP</a><span class="icon-head"></span></li>
+				<li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">
+						<p class="m-breadcrumb__list__link__text__inner"> 特集</p></a><span class="icon-head"></span></li>
+			</ul>
+		</div>
+	</section>
+
+
+
+
+</main>
+<?php get_footer() ?>
