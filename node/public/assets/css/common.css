@@ -3092,11 +3092,14 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  max-height: calc(16px * 1.5 * 3);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
     -webkit-line-clamp: 2;
+    max-height: calc(16px * 1.5 * 2);
   }
 }
 
@@ -3120,6 +3123,7 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  max-height: calc(14px * 1.5 * 3);
   overflow: hidden;
 }
 
