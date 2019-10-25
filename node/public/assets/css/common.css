@@ -3553,11 +3553,14 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  max-height: calc(16px * 1.5 * 3);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
     -webkit-line-clamp: 2;
+    max-height: calc(16px * 1.5 * 2);
   }
 }
 
@@ -3581,6 +3584,8 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  max-height: calc(14px * 1.7 * 2);
+  overflow: hidden;
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__classification {
@@ -3889,6 +3894,8 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  max-height: calc(12px * 1.7 * 2);
+  overflow: hidden;
 }
 
 .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
@@ -3901,6 +3908,7 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  max-height: calc(13px * 1.5 * 3);
   overflow: hidden;
 }
 
@@ -3908,6 +3916,7 @@ main {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     margin-top: 10px;
     -webkit-line-clamp: 2;
+    max-height: calc(13px * 1.5 * 2);
   }
 }
 
@@ -4108,6 +4117,8 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  max-height: calc(12px * 1.7 * 2);
+  overflow: hidden;
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
@@ -4120,6 +4131,7 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  max-height: calc(13px * 1.5 * 3);
   overflow: hidden;
 }
 
@@ -4127,6 +4139,8 @@ main {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
     font-size: 15px;
     -webkit-line-clamp: 2;
+    max-height: calc(15px * 1.5 * 2);
+    overflow: hidden;
   }
 }
 

@@ -300,6 +300,8 @@ $font-xxl: 2rem;
   .p-top__kv .p-top__kv__slider .slick-list.draggable .m-squareCard.slick-slide .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
     font-size: 20px;
     -webkit-line-clamp: 3;
+    max-height: calc(20px * 1.5 * 3);
+    overflow: hidden;
   }
 }
 
@@ -1126,6 +1128,7 @@ $font-xxl: 2rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  max-height: calc(13px * 1.5 * 3);
   overflow: hidden;
 }
 

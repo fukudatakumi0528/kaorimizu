@@ -117,6 +117,8 @@
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2; 
+          max-height: calc(12px * 1.7 * 2);
+          overflow: hidden;
         } 
       }
 
@@ -131,11 +133,14 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3; 
+        max-height: calc(13px * 1.5 * 3);
         overflow: hidden;
 
         @include screen-large {
           font-size: 15px;
           -webkit-line-clamp: 2; 
+          max-height: calc(15px * 1.5 * 2);
+          overflow: hidden;
         }    
       }
     }

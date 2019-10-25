@@ -238,7 +238,9 @@
 
                 @include screen-large {
                   font-size: 20px;
-                  -webkit-line-clamp: 3;  
+                  -webkit-line-clamp: 3; 
+                  max-height: calc(20px * 1.5 * 3);
+                  overflow: hidden;         
                 }  
               }
             }
@@ -992,6 +994,7 @@
               display: -webkit-box;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3; 
+              max-height: calc(13px * 1.5 * 3);
               overflow: hidden;
   
               .m-oblongCard__inner__footer__title__text {
