@@ -9,7 +9,7 @@ export default class Contact {
     });
   }
   selectContactChoice() {
-
+		console.log('contact script');
 		//
 		//入力画面
 		//
