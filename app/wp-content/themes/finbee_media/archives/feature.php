@@ -62,7 +62,7 @@
 				<div class="o-verticallyCardList">
 					<?php
 						$args = [
-							'post_type' => 'feature',
+							'post_type' => 'feature',
 							'posts_per_page' => 16,
 							'paged' => $paged,
 						];

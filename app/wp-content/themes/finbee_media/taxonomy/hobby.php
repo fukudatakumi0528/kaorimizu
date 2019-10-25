@@ -57,7 +57,7 @@
 				<?php
 					$termTypeQuery = get_query_var('hobby_tag');
 					$args = [
-						'post_type' => 'hobby',
+						'post_type' => 'hobby',
 						'tax_query'=> array(
 							'relation' => 'OR',
 							array(

@@ -47,7 +47,7 @@
 
 				$rankingPopularTags = array_slice($popularTags,0,10);
 
-				if(count($rankingPopularTags) > 0):
+				if(count($rankingPopularTags) > 0):
 			?>
 			<div class="p-404__footer__keywords">
 				<div class="p-404__footer__keywords__title">Keywords</div>

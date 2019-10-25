@@ -57,7 +57,7 @@
 				<?php
 					$termTypeQuery = get_query_var('feature_tag');
 					$args = [
-						'post_type' => 'feature',
+						'post_type' => 'feature',
 						'tax_query'=> array(
 							'relation' => 'OR',
 							array(
