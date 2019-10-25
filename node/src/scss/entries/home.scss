@@ -645,7 +645,7 @@
               font-size: $font-xs;
 
               @media all and (-ms-high-contrast: none){
-                max-height: calc(12px * 1.5 * 3);
+                max-height: calc(12px * 1.7 * 2);
               }    
             }  
           }
@@ -989,7 +989,7 @@
                 overflow: hidden;
 
                 @media all and (-ms-high-contrast: none){
-                  max-height: calc(12px * 1.5 * 3);
+                  max-height: calc(12px * 1.7 * 2);
                 }      
               }  
             }

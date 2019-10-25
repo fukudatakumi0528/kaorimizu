@@ -3138,7 +3138,7 @@ main {
 
 @media all and (-ms-high-contrast: none) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description .m-oblongCard__inner__footer__description__text {
-    max-height: calc(14px * 1.5 * 3);
+    max-height: calc(14px * 1.5 * 2);
   }
 }
 

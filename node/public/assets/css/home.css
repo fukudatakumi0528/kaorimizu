@@ -736,7 +736,7 @@ $font-xxl: 2rem;
 
 @media all and (-ms-high-contrast: none) {
   .p-top__featureHobby .p-top__featureHobby__slider .p-top__featureHobby__slider__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description__text {
-    max-height: calc(12px * 1.5 * 3);
+    max-height: calc(12px * 1.7 * 2);
   }
 }
 
@@ -1131,7 +1131,7 @@ $font-xxl: 2rem;
 
 @media all and (-ms-high-contrast: none) {
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description .m-oblongCard__inner__footer__description__text {
-    max-height: calc(12px * 1.5 * 3);
+    max-height: calc(12px * 1.7 * 2);
   }
 }
 
