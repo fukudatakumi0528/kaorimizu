@@ -20,10 +20,18 @@ block contents
 			include ../../_components/_molecules/textareaArea
 			+m-selectboxArea({required: true, title:"お問い合わせ項目", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"取材を受けたい" }, { value:2, text:"記事を書きたい" }, { value:3, text:"撮影したい" }, { value:4, text:"広告を掲載したい" }, { value:5, text:"その他" },
-				] 
+				]
 			})
 			+m-inputArea({required: true, title:"氏名", placeholder:"山田太郎" })
 			+m-inputArea({ required: true, title:"ふりがな", placeholder:"やまだたろう" })
+
+
+
+
+
+
+
+
 
 			.p-contact__main__input__radiobutton
 				.p-contact__main__input__radiobutton__topper
@@ -54,15 +62,15 @@ block contents
 
 			+m-selectboxArea({ required: true, title:"お住まいの都道府県", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"北海道" }, { value:2, text:"青森県" },
-				] 
+				]
 			})
 			+m-selectboxArea({ required: false, title:"年齢", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"1" }, { value:2, text:"2" },
-				] 
+				]
 			})
 			+m-selectboxArea({ required: false, title:"性別", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"男性" }, { value:2, text:"女性" }, { value:3, text:"回答なし" },
-				] 
+				]
 			})
 			+m-inputArea({ required: false, title:"ブログURL", placeholder:"URLをご入力ください" })
 			+m-inputArea({ required: false, title:"Twitter アカウントURL", placeholder:"URLをご入力ください" })
@@ -94,7 +102,7 @@ block contents
 			include ../../_components/_molecules/textareaArea
 			+m-selectboxArea({ validation:"選択してください", required: true, title:"お問い合わせ項目", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"取材を受けたい" }, { value:2, text:"記事を書きたい" }, { value:3, text:"撮影したい" }, { value:4, text:"広告を掲載したい" }, { value:5, text:"その他" },
-				] 
+				]
 			})
 			+m-inputArea({ validation:"正しく入力してください",required: true, title:"氏名", placeholder:"山田太郎" })
 			+m-inputArea({ validation:"正しく入力してください",required: true, title:"ふりがな", placeholder:"やまだたろう" })
@@ -108,7 +116,7 @@ block contents
 
 			+m-selectboxArea({ validation:"選択してください",required: true, title:"お住まいの都道府県", options:[
 				{ placeholder: true, text:"選択してください" }, { value:1, text:"北海道" }, { value:2, text:"青森県" },
-				] 
+				]
 			})
 
 			.p-contact__main__checkbox

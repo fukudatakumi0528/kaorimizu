@@ -140,6 +140,16 @@ $font-xxl: 2rem;
   }
 }
 
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label input {
+  border: red solid 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label .mwform-radio-field-text {
+  border: blue solid 2px;
+}
+
 .p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label label .icon-radio-button .path2:before {
   color: #FFD94A;
 }
@@ -315,4 +325,9 @@ $font-xxl: 2rem;
   margin-top: 50px;
   padding: 15px;
   background-color: #F5F5F5;
+}
+
+.mw_wp_form_confirm .m-selectboxArea__under__icon,
+.mw_wp_form_confirm .p-contact__main__checkbox {
+  display: none !important;
 }
