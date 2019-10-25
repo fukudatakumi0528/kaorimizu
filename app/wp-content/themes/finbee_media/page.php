@@ -6,6 +6,15 @@
 			include(TEMPLATEPATH . '/pages/privacypolicy.php');
 			break;
 		case "disclaimer":
-		include(TEMPLATEPATH . '/pages/disclaimer.php');
-		break;
+			include(TEMPLATEPATH . '/pages/disclaimer.php');
+			break;
+		case "contact":
+			include(TEMPLATEPATH . '/pages/form-contact.php');
+			break;
+		case "conf":
+			include(TEMPLATEPATH . '/pages/form-conf.php');
+			break;
+		case "thanks":
+			include(TEMPLATEPATH . '/pages/form-thanks.php');
+			break;
 	}
