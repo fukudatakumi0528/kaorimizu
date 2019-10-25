@@ -68,12 +68,12 @@
 			padding:0 15px;
 			margin: 0 auto;
 			width: 100%;
-			max-width: 1000px;
+			max-width: 1030px;
 
 			@include screen-large {
 				display: flex;
 				justify-content: space-between;
-				padding:0;
+				padding:0 15px;
 			}
 
 			.p-articlePost__inner__main__content {
@@ -861,7 +861,7 @@
 
 				@include screen-large {
 					display: block;
-					width: 30%;
+					width: 300px;
 					min-width: 300px;
 				}
 			}
