@@ -322,10 +322,6 @@ $font-xxl: 2rem;
   line-height: 170%;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .wp-caption-text {
-  font-size: 12px;
-}
-
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body a {
   color: #285486;
   text-decoration: underline;
