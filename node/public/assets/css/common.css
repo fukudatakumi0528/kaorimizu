@@ -4643,8 +4643,6 @@ main {
   height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
-  font-family: 'object-fit: cover;';
-  /*IE対策*/
 }
 
 .o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text {
