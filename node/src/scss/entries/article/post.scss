@@ -153,12 +153,17 @@
 								flex-direction: column;
 								width: 100%;
 								border:$border-6;
+								border-bottom:solid 4px #DEDEDE;
+								border-radius:5px;
+								background-color: $font-5-color;
 
 								.ez-toc-title-container {
 									padding:10px 16px;
 									background-color: $bg-3-color;
 									display: flex;
 									align-content: center;
+
+									border-radius:3px 3px 0 0;
 
 									.ez-toc-title {
 										margin:0;
@@ -190,6 +195,10 @@
 											background-color: $bg-16-color;
 											display: flex;
 											align-items: center;
+
+											&:nth-last-child(1){
+												border-radius:0 0 3px 3px;
+											}
 
 											&:nth-of-type(even) {
 												background-color: $bg-3-color;
