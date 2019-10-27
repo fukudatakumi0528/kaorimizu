@@ -214,7 +214,6 @@
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topFeature->post_content) ?></p>
 						</div>
-						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>
@@ -353,7 +352,6 @@
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topHobby->post_content) ?></p>
 						</div>
-						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>

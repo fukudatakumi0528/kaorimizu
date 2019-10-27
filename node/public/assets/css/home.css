@@ -555,9 +555,34 @@ $font-xxl: 2rem;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-classificationArea {
+    margin-top: 20px;
   }
 }
 
