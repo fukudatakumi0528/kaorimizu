@@ -327,8 +327,7 @@
       margin-top:32px;
 
       .m-wideCard {
-        margin-top:20px;
-
+    
         &:nth-of-type(1) {
           margin-top:0;
         }
@@ -949,7 +948,6 @@
     
       .m-verticallyCard {
         width: 48%;
-        margin-top:20px;
   
         @include screen-large {
           margin-top:0;

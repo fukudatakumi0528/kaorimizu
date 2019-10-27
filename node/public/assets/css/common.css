@@ -1021,7 +1021,7 @@ main {
   padding: 10px 0px;
   width: 48.5%;
   height: 100%;
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
   border: solid 2px #262626;
   border-radius: 3px;
   display: -webkit-box;
@@ -1093,7 +1093,10 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: calc(100%);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 .l-footer .l-footer__downlord .l-footer__downlord__inner .l-footer__downlord__inner__main .l-footer__downlord__inner__main__link .l-footer__downlord__inner__main__link__AppStore {
@@ -4956,8 +4959,15 @@ main {
 }
 
 .o-verticallyCardList .m-verticallyCard {
-  width: 47%;
+  width: 48%;
   margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .o-verticallyCardList .m-verticallyCard {
+    width: 47%;
+    margin-top: 50px;
+  }
 }
 
 .o-wideCardList {
@@ -4975,14 +4985,17 @@ main {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .o-wideCardList .m-wideCard {
-    width: 47%;
-  }
 }
 
-@media (min-width: 768px) and (min-width: 768px) {
+.o-wideCardList .m-wideCard {
+  margin-top: 20px;
+  width: 48%;
+}
+
+@media (min-width: 768px) {
   .o-wideCardList .m-wideCard {
     margin-top: 50px;
+    width: 47%;
   }
   .o-wideCardList .m-wideCard:nth-of-type(-n+2) {
     margin-top: 0px;

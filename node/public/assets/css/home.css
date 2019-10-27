@@ -398,10 +398,6 @@ $font-xxl: 2rem;
   margin-top: 32px;
 }
 
-.p-top__latestRanking .p-top__latestRanking__latest .o-wideCardList .m-wideCard {
-  margin-top: 20px;
-}
-
 .p-top__latestRanking .p-top__latestRanking__latest .o-wideCardList .m-wideCard:nth-of-type(1) {
   margin-top: 0;
 }
@@ -1078,7 +1074,6 @@ $font-xxl: 2rem;
 
 .p-top__lifeLearn .p-top__lifeLearn__slider .p-top__lifeLearn__slider__list .m-verticallyCard {
   width: 48%;
-  margin-top: 20px;
 }
 
 @media (min-width: 768px) {

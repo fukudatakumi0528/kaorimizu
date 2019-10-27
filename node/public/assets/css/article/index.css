@@ -221,10 +221,6 @@ $font-xxl: 2rem;
   margin-top: 10px;
 }
 
-.p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList .m-verticallyCard {
-  margin-top: 20px;
-}
-
 .p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
   margin-top: 0;
 }
