@@ -32,28 +32,28 @@
               <div class="l-footer__support__inner__header__subtitle is-pc">contents support</div>
             </div>
             <div class="l-footer__support__inner__center">
-              <div class="l-footer__support__inner__center__checkbox color-dark">
+              <div class="l-footer__support__inner__center__checkbox">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
                     <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
-                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">取材、執筆、撮影など制作に<br>関わりたい人</p>
                 </div>
               </div>
-              <div class="l-footer__support__inner__center__checkbox color-light">
+              <div class="l-footer__support__inner__center__checkbox">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
                     <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
-                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味やスポーツに<br>熱中している人</p>
                 </div>
               </div>
-              <div class="l-footer__support__inner__center__checkbox color-dark">
+              <div class="l-footer__support__inner__center__checkbox">
                 <div class="l-footer__support__inner__center__checkbox__inner">
                   <div class="l-footer__support__inner__center__checkbox__inner__left">
                     <img src="<?= assetsPath('img') ?>icon/footer-checkbox.svg" alt="チェックボックスアイコン">
 									</div>
-                  <p class="l-footer__support__inner__center__checkbox__inner__right">マイナーな趣味/スポーツを<br>やっている人</p>
+                  <p class="l-footer__support__inner__center__checkbox__inner__right">その他コンテンツのネタを<br>提供したい人</p>
                 </div>
               </div>
             </div>

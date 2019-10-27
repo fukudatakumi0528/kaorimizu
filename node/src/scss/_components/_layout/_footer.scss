@@ -126,12 +126,16 @@
           width: 100%;
           padding:8px 0px;
 
-          &.color-dark {
+          &:nth-of-type(odd) {
             background-color: $bg-7-color;
           }
 
-          &.color-light {
+          &:nth-of-type(even) {
             background-color: $bg-3-color;
+          }
+
+          @include screen-large {
+            padding:16px 0px;
           }
 
           .l-footer__support__inner__center__checkbox__inner {
@@ -146,9 +150,20 @@
   
             .l-footer__support__inner__center__checkbox__inner__right {
               margin:0 8px;
+              width: 170px;
               font-size: $font-xs;
               font-weight: $font-bold;
               white-space: nowrap;
+
+              @include screen-large {
+                width: 260px;
+              }
+              br {
+                @include screen-large {
+                  display: none;
+
+                }  
+              }
             }  
           }
         }

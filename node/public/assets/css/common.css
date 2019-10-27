@@ -1214,12 +1214,18 @@ main {
   padding: 8px 0px;
 }
 
-.l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox.color-dark {
+.l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox:nth-of-type(odd) {
   background-color: #EEEEEE;
 }
 
-.l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox.color-light {
+.l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox:nth-of-type(even) {
   background-color: #F5F5F5;
+}
+
+@media (min-width: 768px) {
+  .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox {
+    padding: 16px 0px;
+  }
 }
 
 .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox .l-footer__support__inner__center__checkbox__inner {
@@ -1243,9 +1249,22 @@ main {
 
 .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox .l-footer__support__inner__center__checkbox__inner .l-footer__support__inner__center__checkbox__inner__right {
   margin: 0 8px;
+  width: 170px;
   font-size: 1.2rem;
   font-weight: 700;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox .l-footer__support__inner__center__checkbox__inner .l-footer__support__inner__center__checkbox__inner__right {
+    width: 260px;
+  }
+}
+
+@media (min-width: 768px) {
+  .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__center .l-footer__support__inner__center__checkbox .l-footer__support__inner__center__checkbox__inner .l-footer__support__inner__center__checkbox__inner__right br {
+    display: none;
+  }
 }
 
 .l-footer .l-footer__support .l-footer__support__inner .l-footer__support__inner__footer {
