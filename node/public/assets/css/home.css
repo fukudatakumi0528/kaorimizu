@@ -580,6 +580,10 @@ $font-xxl: 2rem;
   }
 }
 
+.p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description .m-oblongCard__inner__footer__description__text {
+  font-size: 13px;
+}
+
 @media (min-width: 768px) {
   .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-classificationArea {
     margin-top: 20px;

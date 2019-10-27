@@ -493,6 +493,10 @@
             @include screen-large {
               margin-top:5px;
             }
+
+            .m-oblongCard__inner__footer__description__text {
+              font-size: 13px;
+            }
           }
 
           .m-classificationArea {
