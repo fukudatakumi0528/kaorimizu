@@ -1576,6 +1576,14 @@ main {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .l-footer .l-footer__search .l-footer__search__inner {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+}
+
 .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -398,6 +398,10 @@
       justify-content: space-between;
       align-items: center;
 
+      @include screen-large {
+        align-items: flex-end;
+      }
+
       .l-footer__search__inner__main {
         display: flex;
         flex-direction: column;
