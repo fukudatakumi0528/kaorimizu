@@ -4128,6 +4128,7 @@ main {
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     margin-top: 10px;
+    font-size: 15px;
     -webkit-line-clamp: 2;
   }
 }
