@@ -243,30 +243,12 @@ $font-xxl: 2rem;
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .p-article__footer {
+    display: none;
+  }
+}
+
 .p-article__footer .m-titleBorder {
   padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .m-titleBorder {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .t-rankingArea__tab {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .t-rankingArea__slider {
-    display: none;
-  }
-}
-
-.p-article__footer .m-breadcrumb {
-  margin-top: 50px;
-  padding: 15px;
-  background-color: #F5F5F5;
 }

@@ -325,6 +325,20 @@
 
     .o-wideCardList {
       margin-top:32px;
+
+      .m-wideCard {
+        margin-top:20px;
+
+        &:nth-of-type(1) {
+          margin-top:0;
+        }
+
+        &:nth-of-type(-n+2) {
+          @include screen-large {
+            margin-top:0;
+          }
+        }
+      }
     }
   
   }
@@ -661,15 +675,11 @@
               margin-top:0;
 
               @include screen-large {
-                margin-top:4px;
+                margin-top:0px;
               }
             }
 
             .m-verticallyCard__inner__footer__description {
-
-              @include screen-large {
-                margin-top:2px;
-              }
 
               .m-verticallyCard__inner__footer__description__text {
                 font-size: $font-xs;
@@ -682,10 +692,6 @@
 
             .m-classificationArea {
               margin-bottom:0;
-
-              @include screen-large {
-                margin-top:2px;
-              }
             }  
           }
         }
@@ -927,6 +933,10 @@
           height: 100%;
           padding:0 30px;
         }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0px;
+        }
       }
     }  
 
@@ -994,12 +1004,16 @@
           margin:0 15px;
         }
 
-        &:nth-child(-n+3) {
+        &:nth-of-type(-n+3) {
 
           @include screen-large {
             display: block;
             width: 31%;
           }  
+        }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0;
         }
 
         .m-verticallyCard__inner {
@@ -1009,14 +1023,15 @@
             width: 100%;
             box-sizing: border-box;
             padding:4px 0;
+
+            @include screen-large {
+              padding:0;
+            }
       
 
             .m-verticallyCard__inner__footer__date {
               display: block;
-              margin-top:5px;
-              font-size: $font-xxs;
-              color:$font-1-color;
-      
+              font-size: $font-xxs;      
             }
   
 
@@ -1035,26 +1050,10 @@
 
             .m-verticallyCard__inner__footer__title {
               display: block;
-              margin-top:5px;
-              font-size: 13px;
-              font-weight: $font-bold;
-              color:$font-base-color;
-              line-height: 150%;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 3; 
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
               }
-              overflow: hidden;
-  
-              .m-verticallyCard__inner__footer__title__text {
-                @include screen-large {
-                  margin-top:10px;
-                }        
-              }
-            }    
-  
+            }      
           }
         }
       }

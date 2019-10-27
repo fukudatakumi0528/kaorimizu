@@ -90,7 +90,7 @@
 								</div>
 								<div class="m-verticallyCard__inner__footer">
 									<div class="m-verticallyCard__inner__footer__topper">
-										<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+										<time class="m-verticallyCard__inner__footer__topper__date"><?php the_time('Y.n.j') ?></time>
 										<?php if(article_new_arrival($post)): ?>
 											<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
 										<?php endif; ?>

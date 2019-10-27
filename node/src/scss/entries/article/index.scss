@@ -202,31 +202,12 @@
   width: 100%;
   overflow:hidden;
 
+  @include screen-large {
+    display: none;
+  }
+
   .m-titleBorder {
     padding:0 15px;
 
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .t-rankingArea__tab {
-
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .t-rankingArea__slider {
-
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .m-breadcrumb {
-    margin-top:50px;
-    padding:15px;
-    background-color: $bg-3-color;
   }
 }

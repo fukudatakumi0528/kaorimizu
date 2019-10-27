@@ -94,10 +94,10 @@
       .t-sideBarPc__downlord__inner__main {
 
         .t-sideBarPc__downlord__inner__main__link {
-          margin:24px 0px 0px 0px;
+          margin-top:24px;
           display: flex;
           justify-content: center;
-          width: calc(100%);
+          align-items: center;
 
           .t-sideBarPc__downlord__inner__main__link__AppStore {
             width: auto;
