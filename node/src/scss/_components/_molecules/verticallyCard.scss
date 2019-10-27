@@ -139,7 +139,6 @@
         overflow: hidden;
 
         @include screen-large {
-          margin-top:10px;
           font-size: 15px;
           @media all and (-ms-high-contrast: none){
             max-height: calc(13px * 1.5 * 2);
