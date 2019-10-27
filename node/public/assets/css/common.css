@@ -4615,6 +4615,18 @@ main {
   transition: 0.4s;
 }
 
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon .o-headerInnerPc__left__category__list__link__icon__inner.hobby {
+  margin-bottom: 3px;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon .o-headerInnerPc__left__category__list__link__icon__inner.life {
+  margin-bottom: 5px;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__category .o-headerInnerPc__left__category__list .o-headerInnerPc__left__category__list__link .o-headerInnerPc__left__category__list__link__icon .o-headerInnerPc__left__category__list__link__icon__inner.learn {
+  margin-bottom: 3px;
+}
+
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button {
   display: -webkit-box;
   display: -ms-flexbox;
