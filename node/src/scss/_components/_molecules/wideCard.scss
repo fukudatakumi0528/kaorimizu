@@ -1,5 +1,4 @@
 .m-wideCard {
-  margin-top:14px;
   width: 100%;
   position: relative;
 
@@ -71,7 +70,7 @@
         display: flex;
 
         @include screen-large {
-          margin-top:5px;
+          margin-top:18px;
         }    
 
         .m-wideCard__inner__right__topper__date {

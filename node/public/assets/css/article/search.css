@@ -22,6 +22,12 @@ $font-xxl: 2rem;
   background-color: #FFD94A;
 }
 
+@media (min-width: 768px) {
+  .p-articleSearch__topper .o-topperSection {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
 .p-articleSearch__main {
   margin: 0 auto;
   width: 100%;
@@ -75,8 +81,8 @@ $font-xxl: 2rem;
   -webkit-transform: translateY(-95px) translateX(-50%);
   transform: translateY(-95px) translateX(-50%);
   background-color: #FFF2C3;
-  min-height: 70px;
-  padding: 20px;
+  min-height: 52px;
+  padding: 11px 20px;
   width: calc(100% - 30px);
   border-radius: 4px;
 }
@@ -158,6 +164,10 @@ $font-xxl: 2rem;
   height: auto;
 }
 
+.p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__refine .p-articleSearch__main__content__refine__inner .p-articleSearch__main__content__refine__inner__selectArea .o-classificationList {
+  padding-bottom: 10px;
+}
+
 @media (min-width: 768px) {
   .p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column {
     -webkit-box-ordinal-group: 2;
@@ -166,9 +176,10 @@ $font-xxl: 2rem;
   }
 }
 
-.p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column .p-articleSearch__main__content__column__result {
-  padding: 10px 0px 0px 0px;
-  margin-bottom: -10px;
+@media (min-width: 768px) {
+  .p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column .p-articleSearch__main__content__column__result {
+    margin-top: 20px;
+  }
 }
 
 .p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column .p-articleSearch__main__content__column__result .p-articleSearch__main__content__column__result__category {
@@ -204,6 +215,14 @@ $font-xxl: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
   color: #969696;
+}
+
+.p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column .o-verticallyCardList {
+  margin-top: 10px;
+}
+
+.p-articleSearch__main .p-articleSearch__main__content .p-articleSearch__main__content__column .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
+  margin-top: 0;
 }
 
 .p-articleSearch__main .p-articleSearch__main__sidebar {

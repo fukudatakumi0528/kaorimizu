@@ -169,7 +169,10 @@
 	?>
 	<section class="p-top__featureHobby">
 		<div class="p-top__featureHobby__bg"></div>
-		<div class="m-titleBorder"><span class="m-titleBorder__icon icon-feature"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+		<div class="m-titleBorder">
+			<span class="m-titleBorder__icon">
+				<img class="m-titleBorder__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
+			</span>
 			<div class="m-titleBorder__main">
 				<div class="m-titleBorder__main__text">特集<small>Feature</small></div>
 				<div class="m-titleBorder__main__border"></div>
@@ -211,7 +214,6 @@
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topFeature->post_content) ?></p>
 						</div>
-						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>
@@ -311,7 +313,10 @@
 	?>
 	<section class="p-top__featureHobby">
 		<div class="p-top__featureHobby__bg"></div>
-		<div class="m-titleBorder"><span class="m-titleBorder__icon icon-hobby"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+		<div class="m-titleBorder">
+			<span class="m-titleBorder__icon">
+				<img class="m-titleBorder__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
+			</span>
 			<div class="m-titleBorder__main">
 				<div class="m-titleBorder__main__text">趣味<small>Hobby</small></div>
 				<div class="m-titleBorder__main__border"></div>
@@ -347,7 +352,6 @@
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topHobby->post_content) ?></p>
 						</div>
-						<div class="m-oblongCard__inner__footer__classification"></div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>
@@ -436,7 +440,10 @@
 		if($query->have_posts()):
 	?>
 	<section class="p-top__lifeLearn">
-		<div class="m-titleBorder"><span class="m-titleBorder__icon icon-life"><span class="path1"></span><span class="path2"></span></span>
+		<div class="m-titleBorder">
+			<span class="m-titleBorder__icon">
+				<img class="m-titleBorder__icon__image life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
+			</span>
 			<div class="m-titleBorder__main">
 				<div class="m-titleBorder__main__text">生活<small>Life</small></div>
 				<div class="m-titleBorder__main__border"></div>
@@ -563,7 +570,10 @@
 		if($query->have_posts()):
 	?>
 	<section class="p-top__lifeLearn">
-		<div class="m-titleBorder"><span class="m-titleBorder__icon icon-learn"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+		<div class="m-titleBorder">
+			<span class="m-titleBorder__icon">
+				<img class="m-titleBorder__icon__image learn" src="<?= assetsPath('img') ?>icon/home/icon-learn.svg" alt="学び">
+			</span>
 			<div class="m-titleBorder__main">
 				<div class="m-titleBorder__main__text">学び<small>Learn</small></div>
 				<div class="m-titleBorder__main__border"></div>

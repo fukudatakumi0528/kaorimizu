@@ -312,6 +312,7 @@
     display: flex;
     justify-content: space-between;
     padding:0 15px;
+    margin-top:56px;
   }
 
   .p-top__latestRanking__latest {
@@ -324,6 +325,24 @@
 
     .o-wideCardList {
       margin-top:32px;
+
+      .m-wideCard {
+        width: 100%;
+
+        @include screen-large {
+          width: 47%;
+        }
+    
+        &:nth-of-type(1) {
+          margin-top:0;
+        }
+
+        &:nth-of-type(-n+2) {
+          @include screen-large {
+            margin-top:0;
+          }
+        }
+      }
     }
   
   }
@@ -454,16 +473,41 @@
 
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
           }
 
 
-          .m-oblongCard__inner__footer__tag {
+          .m-oblongCard__inner__footer__title {
 
-
-            .m-oblongCard__inner__footer__description {
-
+            @include screen-large {
+              margin-top:20px;
             }
+
+            .m-oblongCard__inner__footer__title__text {
+
+              @include screen-large {
+                font-size: 20px;
+                font-weight: $font-bold;  
+              }
+            }
+          }
+
+          .m-oblongCard__inner__footer__description {
+
+            @include screen-large {
+              margin-top:5px;
+            }
+
+            .m-oblongCard__inner__footer__description__text {
+              font-size: 13px;
+            }
+          }
+
+          .m-classificationArea {
+
+            @include screen-large {
+              margin-top:20px;
+            }            
           }
         }
 
@@ -614,7 +658,7 @@
       @include screen-large {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         padding:0 15px;
       }
 
@@ -628,8 +672,16 @@
 
           @include screen-large {
             display: block;
-            width: 31%;
+            margin-left: 30px;
+            width: calc(100% / 3 - 30px);
           }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0;
+          }
         }
 
         .m-verticallyCard__inner {
@@ -656,19 +708,14 @@
             }
 
             .m-verticallyCard__inner__footer__title {
-              font-size: 16px;
               margin-top:0;
 
               @include screen-large {
-                margin-top:4px;
+                margin-top:0px;
               }
             }
 
             .m-verticallyCard__inner__footer__description {
-
-              @include screen-large {
-                margin-top:2px;
-              }
 
               .m-verticallyCard__inner__footer__description__text {
                 font-size: $font-xs;
@@ -681,10 +728,6 @@
 
             .m-classificationArea {
               margin-bottom:0;
-
-              @include screen-large {
-                margin-top:2px;
-              }
             }  
           }
         }
@@ -926,11 +969,16 @@
           height: 100%;
           padding:0 30px;
         }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0px;
+        }
       }
     }  
 
     .slick-dots {
       bottom:-40px;
+      display: none !important; //修正が終わり次第解除
 
       li {
         margin:0 3px;
@@ -990,15 +1038,26 @@
         @include screen-large {
           display: none;
           width: 100%;
-          margin:0 15px;
         }
 
-        &:nth-child(-n+3) {
+        &:nth-of-type(-n+3) {
 
           @include screen-large {
             display: block;
-            width: 31%;
+            margin-left: 30px;
+            width: calc(100% / 3 - 30px);
           }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0px;
+          }
+        }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0;
         }
 
         .m-verticallyCard__inner {
@@ -1008,14 +1067,15 @@
             width: 100%;
             box-sizing: border-box;
             padding:4px 0;
+
+            @include screen-large {
+              padding:0;
+            }
       
 
             .m-verticallyCard__inner__footer__date {
               display: block;
-              margin-top:5px;
-              font-size: $font-xxs;
-              color:$font-1-color;
-      
+              font-size: $font-xxs;      
             }
   
 
@@ -1034,26 +1094,10 @@
 
             .m-verticallyCard__inner__footer__title {
               display: block;
-              margin-top:5px;
-              font-size: 13px;
-              font-weight: $font-bold;
-              color:$font-base-color;
-              line-height: 150%;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 3; 
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
               }
-              overflow: hidden;
-  
-              .m-verticallyCard__inner__footer__title__text {
-                @include screen-large {
-                  margin-top:10px;
-                }        
-              }
-            }    
-  
+            }      
           }
         }
       }

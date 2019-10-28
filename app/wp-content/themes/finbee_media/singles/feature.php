@@ -8,17 +8,20 @@
 
 	//前後の記事取得
 	$next_post = get_next_post();
-	$next_post_ID = $next_post->ID;
-  $next_post_thumb = get_the_post_thumbnail_url($next_post_ID);
-	$next_post_url = get_permalink($next_post_ID);
-	$next_post_time = get_the_time('Y.n.j', $next_post_ID);
-
+	if($next_post){
+		$next_post_ID = $next_post->ID;
+		$next_post_thumb = get_the_post_thumbnail_url($next_post_ID);
+		$next_post_url = get_permalink($next_post_ID);
+		$next_post_time = get_the_time('Y.n.j', $next_post_ID);	
+	};
 
 	$prev_post = get_previous_post();
-	$prev_post_ID = $prev_post->ID;
- 	$prev_post_thumb = get_the_post_thumbnail_url($prev_post_ID);
-	$prev_post_url = get_permalink($prev_post_ID);
-	$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);
+	if($prev_post) {
+		$prev_post_ID = $prev_post->ID;
+		$prev_post_thumb = get_the_post_thumbnail_url($prev_post_ID);
+		$prev_post_url = get_permalink($prev_post_ID);
+		$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);	
+	};
 
 	//当記事のサムネイル
 
@@ -73,8 +76,8 @@
 									<?php  endforeach;  endif; ?>
 								</ul>
 							</div>
-							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
-								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+							<a class="anl_post_footer" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
+								<img class="anl_post_footer__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
 							<div class="article__sns">
 								<p>この記事をシェアする</p>
@@ -171,6 +174,8 @@
 									}
 								}
 
+								if($terms_slug):
+
 								$args = array(
 									'post_type' => $post_type_slug, // 投稿タイプを指定
 									'posts_per_page' => 4, // 表示件数を指定
@@ -243,7 +248,7 @@
 									<?php endwhile; wp_reset_postdata(); ?>
 								</ul>
 							</div>
-							<?php endif; ?>
+							<?php endif; endif; ?>
 						</div>
 
 					</article>

@@ -38,6 +38,13 @@
     $rankingPopularTags = array_slice($popularTags,0,10);
 
     if(count($rankingPopularTags) > 0):
+
+    $termsNameList = [];
+    foreach ($rankingPopularTags as $termsName) {
+      array_push($termsNameList,$termsName->name);
+    }
+
+    $uniqueTermsNameList = array_unique($termsNameList);
   ?>
 
   <div class="t-sideBarPc__keyword">
@@ -46,10 +53,10 @@
       <div class="t-sideBarPc__keyword__header__subtitle">Ranking</div>
     </div>
     <ul class="o-classificationList">
-      <?php foreach($rankingPopularTags as $rankingPopularTag): ?>
+      <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
         <li class="o-classificationList__tag">
-          <a class="o-classificationList__tag__link" href="<?= get_category_link($rankingPopularTag->term_id);?>">
-            <p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
+          <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+            <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
           </a>
         </li>
       <?php endforeach;?>
@@ -64,7 +71,7 @@
             <a class="anl_sidebar" href="https://apps.apple.com/jp/app/finbee-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E8%B2%AF%E9%87%91-%E6%A5%BD%E3%81%97%E3%81%8F%E3%81%8A%E9%87%91%E3%82%92%E8%B2%AF%E3%82%81%E3%82%8B%E8%B2%AF%E9%87%91%E3%82%A2%E3%83%97%E3%83%AA/id1182852315?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2016-12-26&amp;kind=iossoftware&amp;bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
           </div>
           <div class="t-sideBarPc__downlord__inner__main__link__GooglePlay">
-            <a href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"　class="anl_sidebar">
+            <a class="anl_sidebar" href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
               <img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155">
             </a>
           </div>

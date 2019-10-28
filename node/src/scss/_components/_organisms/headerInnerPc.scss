@@ -94,6 +94,22 @@
             display: flex;
             align-items: flex-end;
             transition: 0.4s;
+
+            .o-headerInnerPc__left__category__list__link__icon__inner {
+
+              &.hobby {
+                margin-bottom:3px;
+              }
+  
+              &.life {
+                margin-bottom:5px;
+              }
+  
+              &.learn {
+                margin-bottom:3px;
+              }
+  
+            }
           }
         }
       }
@@ -113,12 +129,24 @@
         cursor: pointer;
         overflow: hidden;
 
+        @include screen-large {
+          transition: 0.2s;
+        }
+
         &:nth-of-type(2) {
           margin-left: 10px;
         }
 
+        &:hover {
+
+          @include screen-large {
+            background-color: rgba($color: $bg-1-color, $alpha: 0.5);
+            transition: 0.2s;  
+          }
+        }
+
         .o-headerInnerPc__left__button__list__text {
-          padding:4px 10px;
+          padding:0px 10px;
           width: auto;
           white-space: nowrap;
           font-size: $font-xs;
@@ -133,17 +161,25 @@
 
         .o-headerInnerPc__left__button__list__icon {
           background-color: $bg-1-color;
-          width: 30px;
+          width: 40px;
           height: 100%;
-          padding:0 7px;
+          padding:0;
           display: flex;
           justify-content: center;
           align-items: center;
           border-right: $border-4;
 
           img{
-            width: 100%;
-            height: auto;
+
+            &.search {
+              width: 16px;
+              height: auto;  
+            }
+
+            &.star {
+              width: 19px;
+              height: auto;  
+            }
           }
 
           .o-headerInnerPc__left__button__list__icon__triangle {
@@ -164,9 +200,9 @@
                   position: absolute;
                   width: 0;
                   height: 0;
-                  border-left: 12px solid transparent;
-                  border-right: 12px solid transparent;
-                  border-bottom: 25px solid $bg-base-color;
+                  border-left: 14px solid transparent;
+                  border-right: 14px solid transparent;
+                  border-bottom: 23px solid $bg-base-color;
                   top:calc(50% - 11px);
                   left: 50%;
                   transform: translateX(-50%) translateY(-50%);
@@ -179,10 +215,10 @@
                   position: absolute;
                   width: 0;
                   height: 0;
-                  border-left: 12px solid transparent;
-                  border-right: 12px solid transparent;
-                  border-bottom: 25px solid $bg-2-color;
-                  top: calc(50% - 6px);
+                  border-left: 14px solid transparent;
+                  border-right: 14px solid transparent;
+                  border-bottom: 23px solid $bg-2-color;
+                  top: calc(50% - 7px);
                   left: 50%;
                   transform: translateX(-50%) translateY(-50%);
                   z-index: 2;

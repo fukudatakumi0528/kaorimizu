@@ -13,13 +13,19 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-article__topper {
-    margin-top: 70px;
+    margin-top: 80px;
   }
 }
 
 .p-article__topper .o-topperSection {
   padding: 40px 20px 60px 20px;
   background-color: #FFD94A;
+}
+
+@media (min-width: 768px) {
+  .p-article__topper .o-topperSection {
+    padding: 50px 20px 50px 20px;
+  }
 }
 
 .p-article__main {
@@ -36,7 +42,7 @@ $font-xxl: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 30px;
+    margin-top: 60px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -75,8 +81,8 @@ $font-xxl: 2rem;
   -webkit-transform: translateY(-95px) translateX(-50%);
   transform: translateY(-95px) translateX(-50%);
   background-color: #FFF2C3;
-  min-height: 70px;
-  padding: 20px;
+  min-height: 52px;
+  padding: 11px 20px;
   width: calc(100% - 30px);
   border-radius: 4px;
 }
@@ -120,7 +126,7 @@ $font-xxl: 2rem;
   position: absolute;
   height: 2px;
   /*線の太さ*/
-  width: 15px;
+  width: 13px;
   /*長さ*/
   border-radius: 3px;
   background: #262626;
@@ -158,6 +164,10 @@ $font-xxl: 2rem;
   height: auto;
 }
 
+.p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner .p-article__main__content__refine__inner__selectArea .o-classificationList {
+  padding-bottom: 10px;
+}
+
 @media (min-width: 768px) {
   .p-article__main .p-article__main__content .p-article__main__content__column {
     -webkit-box-ordinal-group: 2;
@@ -166,9 +176,10 @@ $font-xxl: 2rem;
   }
 }
 
-.p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result {
-  padding: 10px 0px 0px 0px;
-  margin-bottom: -10px;
+@media (min-width: 768px) {
+  .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result {
+    margin-top: 20px;
+  }
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__column .p-article__main__content__column__result .p-article__main__content__column__result__category {
@@ -206,6 +217,14 @@ $font-xxl: 2rem;
   color: #969696;
 }
 
+.p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList {
+  margin-top: 10px;
+}
+
+.p-article__main .p-article__main__content .p-article__main__content__column .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
+  margin-top: 0;
+}
+
 .p-article__main .p-article__main__sidebar {
   display: none;
 }
@@ -224,30 +243,12 @@ $font-xxl: 2rem;
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .p-article__footer {
+    display: none;
+  }
+}
+
 .p-article__footer .m-titleBorder {
   padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .m-titleBorder {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .t-rankingArea__tab {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .p-article__footer .t-rankingArea__slider {
-    display: none;
-  }
-}
-
-.p-article__footer .m-breadcrumb {
-  margin-top: 50px;
-  padding: 15px;
-  background-color: #F5F5F5;
 }

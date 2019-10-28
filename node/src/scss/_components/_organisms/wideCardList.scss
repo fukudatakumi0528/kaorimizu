@@ -6,8 +6,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .m-wideCard {
-      width: 48%;
+  }
+
+  .m-wideCard {
+    margin-top:20px;
+    width: 48%;
+
+
+    @include screen-large {
+      margin-top:50px;
+      width: 47%;
+  
+      &:nth-of-type(-n+2) {
+        margin-top:0px;
+      }  
     }
   }
+
 }

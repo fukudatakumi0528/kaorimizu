@@ -16,6 +16,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: 16px;
         }
       }
 
@@ -56,6 +57,7 @@
       flex-direction: column;
 
       .t-sideBarPc__keyword__header__subtitle {
+        font-family: 'Josefin Sans', sans-serif;
         font-size: $font-xs;
         color:$bg-1-color;
         line-height: 125%;
@@ -92,10 +94,10 @@
       .t-sideBarPc__downlord__inner__main {
 
         .t-sideBarPc__downlord__inner__main__link {
-          margin:24px 0px 0px 0px;
+          margin-top:24px;
           display: flex;
           justify-content: center;
-          width: calc(100%);
+          align-items: center;
 
           .t-sideBarPc__downlord__inner__main__link__AppStore {
             width: auto;

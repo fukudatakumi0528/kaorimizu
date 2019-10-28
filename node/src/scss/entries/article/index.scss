@@ -7,12 +7,17 @@
   z-index: 0;
 
   @include screen-large{
-    margin-top:70px;
+    margin-top:80px;
   }
 
   .o-topperSection {
     padding:40px 20px 60px 20px;
     background-color: $bg-1-color;  
+
+    @include screen-large {
+      padding:50px 20px 50px 20px;
+    }
+
   }
 }
 
@@ -26,7 +31,7 @@
 
   @include screen-large {
     display: flex;
-    margin-top:30px;
+    margin-top:60px;
     justify-content: space-between;
   }
 
@@ -54,8 +59,8 @@
         left:50%;
         transform: translateY(-95px) translateX(-50%);
         background-color: $bg-13-color;
-        min-height: 70px;
-        padding:20px;
+        min-height: 52px;
+        padding:11px 20px;
         width: calc(100% - 30px);
         border-radius: 4px;
     
@@ -86,7 +91,7 @@
             span {
               position: absolute;
               height: 2px;/*線の太さ*/
-              width: 15px;/*長さ*/
+              width: 13px;/*長さ*/
               border-radius: 3px;
               background:$bg-base-color;
               display: block;
@@ -119,6 +124,10 @@
         .p-article__main__content__refine__inner__selectArea {       
           display: block;
           height: auto;
+
+          .o-classificationList {
+            padding-bottom:10px;
+          }
         }  
       }
     }
@@ -131,8 +140,10 @@
       }
   
       .p-article__main__content__column__result {
-        padding:10px 0px 0px 0px;
-        margin-bottom:-10px;
+
+        @include screen-large {
+          margin-top:20px;
+        }
     
         .p-article__main__content__column__result__category {
           display: flex;
@@ -160,6 +171,17 @@
           }
         }
       }
+
+      .o-verticallyCardList {
+        margin-top:10px;
+
+        .m-verticallyCard {
+
+          &:nth-of-type(-n+2) {
+            margin-top:0;
+          }
+        }
+      }
     }
   }
 
@@ -180,31 +202,12 @@
   width: 100%;
   overflow:hidden;
 
+  @include screen-large {
+    display: none;
+  }
+
   .m-titleBorder {
     padding:0 15px;
 
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .t-rankingArea__tab {
-
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .t-rankingArea__slider {
-
-    @include screen-large {
-      display: none;
-    }
-  }
-
-  .m-breadcrumb {
-    margin-top:50px;
-    padding:15px;
-    background-color: $bg-3-color;
   }
 }

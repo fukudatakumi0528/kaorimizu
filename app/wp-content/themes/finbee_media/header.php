@@ -40,25 +40,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
                     <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
                     <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
                     <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="学び">
                     <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
                   </a>
                 </li>
@@ -66,14 +66,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                   <div class="o-headerInnerPc__left__button__list__triangle"></div>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                   <div class="o-headerInnerPc__left__button__list__triangle"></div>
@@ -258,14 +258,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $sliceNewArrivalTags = array_slice($newArrivalTags,0,10);
 
             if(count($sliceNewArrivalTags) > 0):
+
+            $termsNameList = [];
+            foreach ($sliceNewArrivalTags as $termsName) {
+              array_push($termsNameList,$termsName->name);
+            }
+
+            $uniqueTermsNameList = array_unique($termsNameList);
           ?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
 						<ul class="o-classificationList">
-              <?php foreach($sliceNewArrivalTags as $sliceNewArrivalTag): ?>
+              <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 							<li class="o-classificationList__tag">
-                <a class="o-classificationList__tag__link" href="<?= get_category_link($sliceNewArrivalTag->term_id); ?>">
-                  <p class="o-classificationList__tag__link__inner"><?= $sliceNewArrivalTag->name ?></p>
+                <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+                  <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
                 </a>
               </li>
               <?php endforeach;?>
@@ -302,25 +309,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
                     <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
                     <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
                     <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="学び">
                     <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
                   </a>
                 </li>
@@ -328,13 +335,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                 </li>
@@ -463,13 +470,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   asort($searchTermsUnique);
                   $searchTermsUnique = array_values($searchTermsUnique);
 
-                  foreach($searchTermsUnique as $searchTermUnique):
-                  $tag = get_term($searchTermUnique);
+                  $termsNameList = [];
+                  foreach ($searchTermsUnique as $termsID) {
+                    array_push($termsNameList,get_term($termsID)->name);
+                  }
+            
+                  $uniqueTermsNameList = array_unique($termsNameList);
+
+                  foreach($uniqueTermsNameList as $uniqueTermsName):
                 ?>
                 <li class="o-classificationList__tag">
-                  <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
                     <p class="o-classificationList__tag__link__inner">
-                      <?= $tag->name?>
+                      <?= $uniqueTermsName?>
                     </p>
                   </a>
                 </li>
@@ -502,25 +515,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__category">
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                    <img class="o-headerInnerPc__left__category__list__link__icon feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
                     <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                    <img class="o-headerInnerPc__left__category__list__link__icon hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
                     <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                    <img class="o-headerInnerPc__left__category__list__link__icon life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
                     <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
                   </a>
                 </li>
                 <li class="o-headerInnerPc__left__category__list">
                   <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
-                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="学び">
+                    <img class="o-headerInnerPc__left__category__list__link__icon learn" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="学び">
                     <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
                   </a>
                 </li>
@@ -528,13 +541,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ul class="o-headerInnerPc__left__button">
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
                 </li>
                 <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
                   <div class="o-headerInnerPc__left__button__list__icon">
-                    <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
                   </div>
                   <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
                 </li>
@@ -662,13 +675,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               asort($grantTermsUnique);
               $grantTermsUnique = array_values($grantTermsUnique);
 
-              foreach($grantTermsUnique as $grantTermUnique):
-              $tag = get_term($grantTermUnique);
-            ?>
+              $termsNameList = [];
+              foreach ($grantTermsUnique as $termsID) {
+                array_push($termsNameList,get_term($termsID)->name);
+              }
+        
+              $uniqueTermsNameList = array_unique($termsNameList);
+
+              foreach($uniqueTermsNameList as $uniqueTermsName):
+        ?>
             <li class="o-classificationList__tag">
-              <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+              <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
                 <p class="o-classificationList__tag__link__inner">
-                  <?= $tag->name?>
+                  <?= $uniqueTermsName?>
                 </p>
               </a>
             </li>
@@ -702,7 +721,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="o-headerInnerPc__left__category__list">
             <a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('feature/') ?>">
               <div class="o-headerInnerPc__left__category__list__link__icon">
-                <img class="o-headerInnerPc__left__category__list__link__icon__inner feature" src="<?= assetsPath('img') ?>icon/header/header-icon-feature.svg" alt="特集">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
               </div>
               <p class="o-headerInnerPc__left__category__list__link__text">特集</p>
 						</a>
@@ -710,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('hobby/') ?>">
               <div class="o-headerInnerPc__left__category__list__link__icon">
-                <img class="o-headerInnerPc__left__category__list__link__icon__inner hobby" src="<?= assetsPath('img') ?>icon/header/header-icon-hobby.svg" alt="趣味">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
               </div>
                 <p class="o-headerInnerPc__left__category__list__link__text">趣味</p>
 						</a>
@@ -718,7 +737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('life/') ?>">
               <div class="o-headerInnerPc__left__category__list__link__icon">
-                <img class="o-headerInnerPc__left__category__list__link__icon__inner life" src="<?= assetsPath('img') ?>icon/header/header-icon-life.svg" alt="生活">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
               </div>
               <p class="o-headerInnerPc__left__category__list__link__text">生活</p>
 						</a>
@@ -726,7 +745,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="o-headerInnerPc__left__category__list">
 						<a class="o-headerInnerPc__left__category__list__link" href="<?= site_url('learn/') ?>">
               <div class="o-headerInnerPc__left__category__list__link__icon">
-                <img class="o-headerInnerPc__left__category__list__link__icon__inner learn" src="<?= assetsPath('img') ?>icon/header/header-icon-learn.svg" alt="学び">
+                <img class="o-headerInnerPc__left__category__list__link__icon__inner learn" src="<?= assetsPath('img') ?>icon/home/icon-learn.svg" alt="学び">
               </div>
               <p class="o-headerInnerPc__left__category__list__link__text">学び</p>
 						</a>
@@ -735,7 +754,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<ul class="o-headerInnerPc__left__button">
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
 						<div class="o-headerInnerPc__left__button__list__icon">
-              <img src="<?= assetsPath('img') ?>icon/header-search.svg">
+              <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
               <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__search__triangle">
                 <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
                   <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
@@ -749,7 +768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</li>
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
 						<div class="o-headerInnerPc__left__button__list__icon">
-              <img src="<?= assetsPath('img') ?>icon/header-star.svg">
+              <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
               <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__grant__triangle">
                 <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
                   <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">

@@ -14,6 +14,10 @@
   .o-topperSection {
     padding:40px 20px 60px 20px;
     background-color: $bg-1-color;  
+
+    @include screen-large {
+      padding:50px 20px 50px 20px;
+    }
   }
 }
 
@@ -55,8 +59,8 @@
         left:50%;
         transform: translateY(-95px) translateX(-50%);
         background-color: $bg-13-color;
-        min-height: 70px;
-        padding:20px;
+        min-height: 52px;
+        padding:11px 20px;
         width: calc(100% - 30px);
         border-radius: 4px;
     
@@ -120,6 +124,10 @@
         .p-articleSearch__main__content__refine__inner__selectArea {       
           display: block;
           height: auto;
+
+          .o-classificationList {
+            padding-bottom:10px;
+          }
         }  
       }
     }
@@ -132,8 +140,11 @@
       }
   
       .p-articleSearch__main__content__column__result {
-        padding:10px 0px 0px 0px;
-        margin-bottom:-10px;
+
+        @include screen-large {
+          margin-top:20px;
+        }
+
     
         .p-articleSearch__main__content__column__result__category {
           display: flex;
@@ -158,6 +169,17 @@
             font-size: $font-xs;
             font-weight: $font-bold;
             color:$font-4-color;
+          }
+        }
+      }
+
+      .o-verticallyCardList {
+        margin-top:10px;
+
+        .m-verticallyCard {
+
+          &:nth-of-type(-n+2) {
+            margin-top:0;
           }
         }
       }

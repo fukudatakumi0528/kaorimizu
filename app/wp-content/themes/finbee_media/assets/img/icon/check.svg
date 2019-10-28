@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="25px" viewBox="0 0 78 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC-Copy-2" transform="translate(-912.000000, -6265.000000)">
+            <g id="sec_07" transform="translate(0.000000, 5983.000000)">
+                <g id="sns" transform="translate(911.988716, 282.146830)">
+                    <g id="check">
+                        <g id="Group-5">
+                            <text id="CHECK!" font-family="JosefinSans-Bold, Josefin Sans" font-size="16" font-weight="bold" letter-spacing="1.254902" fill="#262626">
+                                <tspan x="11.0112836" y="23.8531704">CHECK!</tspan>
+                            </text>
+                            <g id="point-copy" transform="translate(10.000000, 7.500000) rotate(1.000000) translate(-10.000000, -7.500000) translate(1.000000, 1.000000)" stroke="#262626" stroke-linecap="round" stroke-width="2">
+                                <path d="M0.894775617,9.4481218 L3.72320274,12.2765489" id="Path-3" transform="translate(2.308989, 10.862335) rotate(-15.000000) translate(-2.308989, -10.862335) "></path>
+                                <path d="M13.9858329,0.828628804 L16.81426,3.65705593" id="Path-3-Copy" transform="translate(15.400046, 2.242842) rotate(-330.000000) translate(-15.400046, -2.242842) "></path>
+                                <path d="M6,3.31099071 L8.4,6.51099071" id="Path-4"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

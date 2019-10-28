@@ -4,35 +4,52 @@
 
   .m-titleBorder__icon {
     min-height: 20px;
-    width: 20px;
+    width: auto;
     position: relative;
     margin-right: 4px;
 
-    &.icon-feature {
-      font-size: 28px;
+    @include screen-large {
+      margin-right: 10px;
     }
 
-    &.icon-hobby {
-      font-size: 25px;
-    }
+    .m-titleBorder__icon__image {
 
-    &.icon-life {
-      font-size: 20px;
-    }
+      &.feature {
+        width: 20px;
+        height: auto;
 
-    &.icon-learn {
-      font-size: 22px;
-    }
-
-
-    >span {
-      position: absolute;
-      bottom:0;
-      width: 100%;
-
-      &::before {
-        margin:0 !important;
+        @include screen-large {
+          width: 30px;
+        }
       }
+
+      &.hobby {
+        width: 18px;
+        height: auto;   
+        
+        @include screen-large {
+          width: 26px;
+        }
+      }
+
+      &.life {
+        width: 19px;
+        height: auto;
+
+        @include screen-large {
+          width: 27px;
+        }
+      }
+
+      &.learn {
+        width: 19px;        
+        height: auto;
+
+        @include screen-large {
+          width: 27px;        
+        }
+      }
+
     }
   }
 
@@ -47,12 +64,13 @@
 
     .m-titleBorder__main__text {
       white-space: nowrap;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: $font-bold;
       margin:0;
       flex-basis: auto;
   
       small {
+        font-family: 'Josefin Sans', sans-serif;
         font-size: 12px;
         font-weight: $font-bold;
         margin-left:5px;
@@ -61,6 +79,7 @@
       @include screen-large {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         small {
           margin-left:0;

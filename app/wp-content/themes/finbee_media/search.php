@@ -25,7 +25,7 @@
         <?php if(have_posts() && get_search_query()): ?>         
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category">
-						<p class="p-search__main__content__column__result__category__text"><strong><?= urldecode($termTypeQuery); ?><?php the_search_query(); ?></strong>の検索結果</p>
+						<p class="p-search__main__content__column__result__category__text"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果</p>
           </div>
           <div class="p-search__main__content__column__result__number">
             <p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
@@ -34,7 +34,7 @@
         <?php else: ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category nothing">
-						<p class="p-search__main__content__column__result__category__text nothing"><strong><?= urldecode($termTypeQuery); ?><?php the_search_query(); ?></strong>の検索結果が見つかりませんでした。</p>
+						<p class="p-search__main__content__column__result__category__text nothing"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果が見つかりませんでした。</p>
           </div>
         </div>
         <?php endif; ?>
@@ -87,7 +87,7 @@
 								'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 								'format' => '?paged=%#%',
 								'current' => max( 1, get_query_var('paged') ),
-								'total' => $query->max_num_pages,
+								'total' => $wp_query->max_num_pages,
 								'prev_text' => __('前へ'),
 								'next_text' => __('次へ'),
 								'mid_size' => 2,

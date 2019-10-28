@@ -7,5 +7,10 @@
   .m-verticallyCard {
     width: 48%;
     margin-top:20px;
+
+    @include screen-large {
+      width: 47%;
+      margin-top:50px;
+    }
   }
 }

@@ -52,6 +52,14 @@
       box-sizing: border-box;
       padding:4px 0;
 
+      @include screen-large {
+        padding:0;
+      }
+
+      &:first-child {
+        margin-top:0;
+      }
+
         
       .m-verticallyCard__inner__footer__topper {
         display: flex;
@@ -59,12 +67,18 @@
         margin-top:5px;
 
         @include screen-large {
-          margin-top:10px;
+          margin-top:18px;
         }
 
         .m-verticallyCard__inner__footer__topper__date {
           font-size: $font-xxs;
           color:$font-1-color;  
+          display: flex;
+          align-items: center;
+  
+          @include screen-large {
+            font-size: $font-xs;
+          }    
         }  
 
         .m-verticallyCard__inner__footer__topper__new {
@@ -125,17 +139,11 @@
         overflow: hidden;
 
         @include screen-large {
-          margin-top:10px;
+          font-size: 15px;
           @media all and (-ms-high-contrast: none){
             max-height: calc(13px * 1.5 * 2);
           }
           -webkit-line-clamp: 2; 
-        }
-      }
-
-      .m-classificationArea {
-        @include screen-large {
-          margin-top:5px;
         }
       }
     }

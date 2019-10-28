@@ -24,40 +24,40 @@
 				display: block;
 				margin:70px auto 0 auto;
 				width: 100%;
-				max-width: 1000px;
-				padding:50px 0px;
+				max-width: 1030px;
+				padding:50px 15px;
 			}
 
 			h1 {
-				font-size: 28px;
+				font-size: 29px;
 				font-weight: $font-bold;
 				line-height: 150%;
 				letter-spacing: 1.3;
 			}
 
 			.article__header__sub {
-				margin-top:4px;
+				margin-top:11px;
 				display: flex;
 				align-items: center;
 
 				p {
-					font-size: $font-s;
+					font-size: 15px;
 					font-weight: $font-bold;
 					line-height: 100%;
 
 					&:after {
 						content:"|";
-						margin-left:4px;
-						font-size: $font-s;
+						margin-left:11px;
+						font-size: 15px;
 						font-weight: $font-bold;
 					}
 				}
 
 				time {
-					margin-left:4px;
+					margin-left:11px;
 					font-weight: $font-bold;
 					color:$font-4-color;
-					font-size: $font-xs;
+					font-size: 13px;
 					line-height: 100%;
 				}
 			}
@@ -90,7 +90,7 @@
 						.article__header {
 
 							h1 {
-								font-size: $font-xl;
+								font-size: 21px;
 								font-weight: $font-bold;
 								line-height: 150%;
 								letter-spacing: 1.3;
@@ -110,14 +110,14 @@
 								}
 
 								p {
-									font-size: $font-xs;
+									font-size: 13px;
 									font-weight: $font-bold;
 									line-height: 100%;
 
 									&:after {
 										content:"|";
 										margin-left:4px;
-										font-size: $font-xs;
+										font-size: 13px;
 										font-weight: $font-bold;
 									}
 								}
@@ -126,7 +126,7 @@
 									margin-left:4px;
 									font-weight: $font-bold;
 									color:$font-4-color;
-									font-size: $font-xs;
+									font-size: 13px;
 									line-height: 100%;
 								}
 							}
@@ -145,7 +145,7 @@
 
 						.article__body {
 							margin-top:30px;
-							font-size: $font-s;
+							font-size: 15px;
 
 							.counter-hierarchy {
 								margin-top:15px;
@@ -153,16 +153,21 @@
 								flex-direction: column;
 								width: 100%;
 								border:$border-6;
+								border-bottom:solid 4px #DEDEDE;
+								border-radius:5px;
+								background-color: $font-5-color;
 
 								.ez-toc-title-container {
-									padding:12px 16px;
+									padding:10px 16px;
 									background-color: $bg-3-color;
 									display: flex;
 									align-content: center;
 
+									border-radius:3px 3px 0 0;
+
 									.ez-toc-title {
 										margin:0;
-										font-size: $font-m;
+										font-size: 17px;
 										font-weight: $font-bold;
 										display: flex;
 										align-items: center;
@@ -186,23 +191,27 @@
 										padding:0;
 
 										li {
-											padding:12px 16px;
+											padding:10px 16px;
 											background-color: $bg-16-color;
 											display: flex;
 											align-items: center;
+
+											&:nth-last-child(1){
+												border-radius:0 0 3px 3px;
+											}
 
 											&:nth-of-type(even) {
 												background-color: $bg-3-color;
 											}
 
 											.icon-head {
-												font-size: 12px;
+												font-size: 13px;
 											}
 
 											&::before {
 												content: "\f105";
 												display: block;
-												font-size: $font-s;
+												font-size: 15px;
 												margin-right: 8px;
 												font-family: FontAwesome;
 												text-decoration-line:none;
@@ -210,8 +219,8 @@
 
 											a {
 												margin:0;
-												font-size: $font-xs;
-												font-weight: $font-bold;
+												font-size:15px;
+												font-weight: $font-medium;
 												text-decoration: underline;
 												line-height: 170%;
 												display: flex;
@@ -225,28 +234,28 @@
 
 							h2 {
 								display: block;
-								margin-top:30px;
-								font-size: 20px;
+								margin-top:60px;
+								font-size: 25px;
 								font-weight: $font-bold !important;
 								line-height: 170%;
 
 								span {
 									display: inline;
 									background:linear-gradient(transparent 85%, $bg-1-color 0%);
-									font-size: 19px;
+									font-size: 25px;
 									font-weight: $font-bold !important;
 									line-height: 170%;
 	
 									@include screen-large {
-										padding-top:30px;
-										margin-top:-30px;	
+										padding-top:60px;
+										margin-top:-60px;	
 									}
 								}
 							}
 
 							h3 {
 								margin-top:20px;
-								font-size: 17px;
+								font-size: 20px;
 								font-weight: $font-bold !important;
 								line-height: 170%;
 							}
@@ -254,7 +263,7 @@
 
 							h4 {
 								margin-top:20px;
-								font-size: 15px;
+								font-size:18px;
 								font-weight: $font-bold !important;
 								line-height: 170%;
 								display: flex;
@@ -262,7 +271,7 @@
 
 								&:before {
 									content:"ー";
-									font-size: $font-xs;
+									font-size: 18px;
 									font-weight: $font-bold !important;
 									margin-right: 4px;
 								}
@@ -270,8 +279,12 @@
 
 							p {
 								margin-top:20px;
-								font-size: $font-s;
+								font-size: 16px;
 								line-height: 170%;
+							}
+
+							.wp-caption-text {
+								font-size: 13px !important;
 							}
 
 							a {
@@ -318,7 +331,7 @@
 											text-align: center;
 											margin-top:0;
 											color:$font-4-color;
-											font-size: $font-xxs;
+											font-size: 11px;
 										}
 									}
 								}
@@ -435,16 +448,16 @@
 								p {
 									margin:0;
 									color:$font-4-color;
-									font-size: $font-s;
+									font-size: 15px;
 									line-height: 170%;
-									font-weight: $font-bold !important;
+									font-weight: $font-regular;
 									padding-left:10px;
 								}
 
 								cite {
 									margin:0;
 									color:$font-4-color;
-									font-size: $font-s;
+									font-size: 15px;
 									line-height: 170%;
 									font-weight: $font-bold !important;
 									padding-left:10px;
@@ -472,7 +485,7 @@
 
 									.article__interview__human__name {
 										margin-top:4px;
-										font-size: $font-xxs;
+										font-size: 11px;
 										line-height: 170%;
 										font-weight: $font-bold !important;
 									}
@@ -488,7 +501,7 @@
 										left:4px;
 										width: 30px;
 										height: 15px;
-										font-size: 14px;
+										font-size: 15px;
 									}
 
 									.article__interview__callout__text {
@@ -496,7 +509,7 @@
 										padding:18px;
 										background-color:$bg-3-color;
 										border-radius:20px;
-
+										font-size: 15px;
 									}
 								}
 							}
@@ -520,10 +533,14 @@
 
 							.article__bnr {
 								display: block;
-								max-width: 100%;
+								width: 100%;
 								height: auto;
-								margin:20px auto 0 auto;
+								margin: 40px auto 0 auto;
 								cursor: pointer;
+
+								@include screen-large {
+									max-width: 400px;
+								}
 
 								.article__bnr__image {
 									width: 100%;
@@ -538,7 +555,7 @@
 
 
 								p {
-									font-size: $font-s;
+									font-size: 15px;
 									font-weight: $font-bold !important;
 									display: flex;
 									justify-content: center;
@@ -577,16 +594,26 @@
 									max-width: 250px;
 
 									@include screen-large {
-										max-width: 400px;
+										max-width: 250px;
 									}
 
 									&>li {
 										height: 25px;
 										width: 25px;
+										transition: 0.4s;
+
+										&:hover {
+
+											@include screen-large {
+												height: 40px;
+												width: 40px;
+												transition: 0.4s;
+											}
+										}
 
 										@include screen-large {
-											height: 40px;
-											width: 40px;
+											height: 25px;
+											width: 25px;
 										}
 
 										&>a {
@@ -658,7 +685,7 @@
 
 											.article__prevnext__main__content__topper__text {
 												width: 100%;
-												font-size: $font-xs;
+												font-size: 13px;
 												font-weight: $font-bold !important;
 												color: $font-1-color;
 
@@ -688,7 +715,7 @@
 											@include screen-large {
 												margin-top:10px;
 												flex-direction: row;
-												height: 50px;
+												height: 70px;
 												align-items: center;
 											}
 
@@ -706,7 +733,7 @@
 											.article__prevnext__main__content__footer__title {
 												margin-top:10px;
 												width: 100%;
-												font-size: $font-xs;
+												font-size: 13px;
 												line-height: 150%;
 												font-weight: $font-bold !important;
 												text-align: left;
@@ -777,16 +804,16 @@
 										flex: 1;
 										padding-top: 10px;
 										h2 {
-											font-size: $font-l;
+											font-size: 19px;
 											font-weight: $font-bold !important;
 										}
 										b {
-											font-size: $font-s;
+											font-size: 15px;
 											display: block;
 											margin-top: 8px;
 										}
 										p {
-											font-size: $font-xs;
+											font-size: 13px;
 											margin-top: 12px;
 										}
 									}
