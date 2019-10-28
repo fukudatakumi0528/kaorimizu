@@ -1,7 +1,6 @@
 <?php
 	global $cssName;
 	global $breadcrumb;
-
 	$cssName = "contact/index";
 	$breadcrumb = '<li><a href="/news/">ニュース</a></li><li></li>';
 	get_header();
@@ -21,29 +20,10 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="p-contact__main">
-
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 			<?php the_content() ?>
 		<?php endwhile; endif; ?>
-
 	</section>
-
-
-
-	<section class="p-contact__footer">
-		<div class="m-breadcrumb">
-			<ul class="m-breadcrumb__list">
-				<li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">TOP</a><span class="icon-head"></span></li>
-				<li class="m-breadcrumb__list__link"> <a class="m-breadcrumb__list__link__text" href="">
-						<p class="m-breadcrumb__list__link__text__inner"> 特集</p></a><span class="icon-head"></span></li>
-			</ul>
-		</div>
-	</section>
-
-
-
-
 </main>
 <?php get_footer() ?>

@@ -221,6 +221,18 @@ $font-xxl: 2rem;
   }
 }
 
+.p-contact__main .p-contact__main__checkbox .error {
+  padding: 5px 10px;
+  border-radius: 1px;
+  background-color: #FFE9E9;
+  color: #DE3B39;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 150%;
+  margin-top: 10px;
+  display: block;
+}
+
 .p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,6 +240,57 @@ $font-xxl: 2rem;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field {
+  position: relative;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper input:checked + .mwform-checkbox-field-text::after {
+  opacity: 1;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text {
+  margin-right: 8px;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: #111 solid 2px;
+  cursor: pointer;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url("/wp-content/themes/finbee_media//assets/img/common/icon/checked.svg") !important;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  position: relative;
+  top: 1px;
+}
+
+.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text2 a {
+  color: #285486;
+  border-bottom: solid 1px #285486;
+  margin-right: 3px;
 }
 
 .p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .p-contact__main__checkbox__topper__required {
@@ -249,27 +312,8 @@ $font-xxl: 2rem;
   align-items: center;
   line-height: 100%;
   white-space: nowrap;
-}
-
-.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper input[type=checkbox]:checked + .p-contact__main__checkbox__topper__icon .icon-check .path2::before {
-  color: #eeeeee;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper input[type=checkbox]:checked + .p-contact__main__checkbox__topper__icon .icon-check .path3::before {
-  color: #df2b28;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .icon-check {
-  margin-left: 5px;
-  font-size: 21px;
-}
-
-.p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .icon-check .path2::before, .p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .icon-check .path3::before {
-  color: transparent;
+  position: relative;
+  top: -1px;
 }
 
 .p-contact__main .p-contact__main__checkbox .p-contact__main__checkbox__topper .p-contact__main__checkbox__topper__title {

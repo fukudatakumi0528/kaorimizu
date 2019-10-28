@@ -155,6 +155,27 @@
     }
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .p-contact__main__checkbox {
     margin-top: 30px;
     display: flex;
@@ -164,9 +185,84 @@
       margin-top:60px;
     }
 
+
+    .error {
+			padding:5px 10px;
+      border-radius: 1px;
+      background-color: $bg-14-color;
+      color:$bg-4-color;
+      font-size: $font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+      margin-top: 10px;
+      display: block;
+		}
+
+
+
     .p-contact__main__checkbox__topper {
       display: flex;
       align-items: flex-start;
+
+
+			.mwform-checkbox-field {
+				position: relative;
+			}
+
+
+			input {
+				&:checked {
+					& + .mwform-checkbox-field-text {
+						&::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+
+      .mwform-checkbox-field-text {
+	      margin-right: 8px;
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					border: #111 solid 2px;
+					cursor: pointer;
+				}
+				&::after {
+					content: "";
+					display: block;
+					width: 22px;
+					height: 22px;
+					background-image: url("/wp-content/themes/finbee_media//assets/img/common/icon/checked.svg")!important;
+					background-size: contain;
+					background-position: center center;
+					position: absolute;
+					top: -4px;
+					left: 12px;
+					pointer-events: none;
+					opacity: 0;
+					transition: all .2s ease;
+
+				}
+      }
+
+      .mwform-checkbox-field-text2 {
+	      font-weight: 700;
+	      font-size: 1.4rem;
+	      position: relative;
+	      top: 1px;
+	      a {
+		      color: #285486;
+		      border-bottom: solid 1px #285486;
+		      margin-right: 3px;
+	      }
+      }
+
+
+
 
       .p-contact__main__checkbox__topper__required {
         background-color: $bg-4-color;
@@ -181,41 +277,10 @@
         align-items: center;
         line-height: 100%;
         white-space: nowrap;
+        position: relative;
+        top: -1px;
       }
 
-      input[type=checkbox]:checked + .p-contact__main__checkbox__topper__icon {
-
-        .icon-check {
-
-          .path2 {
-
-            &::before {
-              color:rgb(238, 238, 238);
-              transition: 0.2s;
-            }
-          }
-
-          .path3{
-
-            &::before {
-              color:rgb(223, 43, 40);
-              transition: 0.2s;
-            }
-          }
-        }
-      }
-
-      .icon-check {
-        margin-left: 5px;
-        font-size: 21px;
-
-        .path2,.path3{
-
-          &::before {
-            color:transparent;
-          }
-        }
-      }
 
       .p-contact__main__checkbox__topper__title {
         margin-left: 5px;
@@ -261,6 +326,12 @@
     //margin-top:30px;
   }
 }
+
+
+
+
+
+
 
 .p-contact__main__btns {
 	margin-top: 50px;
