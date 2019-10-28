@@ -659,7 +659,7 @@
       @include screen-large {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         padding:0 15px;
       }
 
@@ -674,7 +674,7 @@
           @include screen-large {
             display: block;
             margin-left: 30px;
-            width: calc(100% / 3 - 30px);
+            width: calc(calc(100% - 60px) / 3);
           }  
         }
 
@@ -1028,7 +1028,7 @@
       @include screen-large {
         padding:0;
         margin-top:40px;
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .m-verticallyCard {
@@ -1046,7 +1046,7 @@
           @include screen-large {
             display: block;
             margin-left: 30px;
-            width: calc(100% / 3 - 30px);
+            width: calc(calc(100% - 60px) / 3);
           }  
         }
 

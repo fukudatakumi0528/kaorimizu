@@ -754,9 +754,9 @@ $font-xxl: 2rem;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     padding: 0 15px;
   }
 }
@@ -771,7 +771,7 @@ $font-xxl: 2rem;
   .p-top__featureHobby .p-top__featureHobby__slider .p-top__featureHobby__slider__inner .m-verticallyCard:nth-child(-n+3) {
     display: block;
     margin-left: 30px;
-    width: calc(100% / 3 - 30px);
+    width: calc(calc(100% - 60px) / 3);
   }
 }
 
@@ -1176,9 +1176,9 @@ $font-xxl: 2rem;
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner {
     padding: 0;
     margin-top: 40px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -1199,7 +1199,7 @@ $font-xxl: 2rem;
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard:nth-of-type(-n+3) {
     display: block;
     margin-left: 30px;
-    width: calc(100% / 3 - 30px);
+    width: calc(calc(100% - 60px) / 3);
   }
 }
 
