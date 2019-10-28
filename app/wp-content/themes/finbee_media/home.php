@@ -729,6 +729,13 @@
     $rankingPopularTags = array_slice($popularTags,0,10);
 
 		if(count($rankingPopularTags) > 0):
+
+
+		$termsNameList = [];
+		foreach ($rankingPopularTags as $termsName) {
+			array_push($termsNameList,$termsName->name);
+		}
+		$uniqueTermsNameList = array_unique($termsNameList);
 	?>
 	<section class="p-top__keyword">
 		<div class="p-top__keyword__header">
@@ -736,10 +743,10 @@
 			<div class="p-top__keyword__header__tilte">人気のワード</div>
 		</div>
 		<ul class="o-classificationList">
-			<?php foreach($rankingPopularTags as $rankingPopularTag): ?>
+			<?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 				<li class="o-classificationList__tag">
-					<a class="o-classificationList__tag__link" href="<?= get_category_link($rankingPopularTag->term_id);?>">
-						<p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
+					<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+						<p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
 					</a>
 				</li>
 			<?php endforeach;?>
