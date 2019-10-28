@@ -3177,19 +3177,19 @@ main {
   cursor: pointer;
 }
 
+.m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__topper {
+  padding-top: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
-  .m-oblongCard .m-oblongCard__inner:hover .m-oblongCard__inner__topper .m-oblongCard__inner__topper__image {
+  .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__topper:hover .m-oblongCard__inner__topper__image {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-}
-
-.m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__topper {
-  padding-top: 80%;
-  position: relative;
-  overflow: hidden;
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__topper .m-oblongCard__inner__topper__image {
@@ -3607,15 +3607,6 @@ main {
   display: block;
 }
 
-@media (min-width: 768px) {
-  .m-squareCard .m-squareCard__inner:hover .m-squareCard__inner__topper .m-squareCard__inner__topper__image {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-}
-
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__ranking {
   position: absolute;
   height: 60px;
@@ -3734,6 +3725,15 @@ main {
   padding-top: 80%;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .m-squareCard .m-squareCard__inner .m-squareCard__inner__topper:hover .m-squareCard__inner__topper__image {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
 }
 
 .m-squareCard .m-squareCard__inner .m-squareCard__inner__topper .m-squareCard__inner__topper__image {
@@ -4081,17 +4081,17 @@ main {
   cursor: pointer;
 }
 
+.m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__topper {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  .m-verticallyCard .m-verticallyCard__inner:hover .m-verticallyCard__inner__topper .m-verticallyCard__inner__topper__image .m-verticallyCard__inner__topper__image__inner {
+  .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__topper:hover .m-verticallyCard__inner__topper__image .m-verticallyCard__inner__topper__image__inner {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-}
-
-.m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__topper {
-  width: 100%;
 }
 
 .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__topper .m-verticallyCard__inner__topper__image {
@@ -4309,15 +4309,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  .m-wideCard .m-wideCard__inner:hover .m-wideCard__inner__left .m-wideCard__inner__left__image .m-wideCard__inner__left__image__inner {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-}
-
-@media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4333,6 +4324,15 @@ main {
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__left {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .m-wideCard .m-wideCard__inner .m-wideCard__inner__left:hover .m-wideCard__inner__left__image .m-wideCard__inner__left__image__inner {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 

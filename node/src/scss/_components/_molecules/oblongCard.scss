@@ -4,26 +4,23 @@
   .m-oblongCard__inner {
     display: block;
     cursor: pointer;
+    
+    .m-oblongCard__inner__topper {
+      padding-top:80%;
+      position: relative;
+      overflow: hidden;
 
-    &:hover {
-
-      .m-oblongCard__inner__topper {
+      &:hover {
       
         .m-oblongCard__inner__topper__image {
-
+  
           @include screen-large {
             transform: scale(1.05);
             transition: 0.4s;  
           }
         }
       }  
-    }
-    
-    .m-oblongCard__inner__topper {
-      padding-top:80%;
-      position: relative;
-      overflow: hidden;
-    
+
       .m-oblongCard__inner__topper__image {
         position: absolute;
         top:0;

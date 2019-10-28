@@ -5,20 +5,6 @@
     position: relative;
     display: block;
 
-    &:hover {        
-    
-      .m-squareCard__inner__topper {
-
-        .m-squareCard__inner__topper__image {
-
-          @include screen-large {
-            transform: scale(1.05);
-            transition: 0.4s;  
-          }
-        }
-      }      
-    }
-
     .m-squareCard__inner__ranking {
       position: absolute;
       height: 60px;
@@ -120,7 +106,18 @@
       padding-top:80%;
       position: relative;
       overflow: hidden;
+
+      &:hover {        
     
+        .m-squareCard__inner__topper__image {
+  
+          @include screen-large {
+            transform: scale(1.05);
+            transition: 0.4s;  
+          }
+        }
+      }  
+      
       .m-squareCard__inner__topper__image {
         position: absolute;
         top:0;
