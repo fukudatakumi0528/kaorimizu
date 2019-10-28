@@ -16,6 +16,7 @@
       margin:20px 15px 0 15px;
       padding:16px 10px;
       background-color: $bg-1-color;
+      border-radius: 3px;
 
       .l-footer__downlord__inner__image {
         width: 100%;
@@ -295,12 +296,14 @@
           font-size: 13px;
           font-weight: $font-regular; 
           line-height: 180%;
+          border-radius: 3px;
   
           @include screen-large {
             margin-top:24px;
             display: block;
             padding:0;
             margin:0 0 0 40px;
+            border-radius: 0px;
           }
         }
     

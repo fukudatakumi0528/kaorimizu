@@ -69,7 +69,6 @@
         position: absolute;
         height: 50px;
         width: 50px;
-        top:0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -84,8 +83,16 @@
           display: flex;
           align-items: baseline;
           line-height: 100%;
+          margin-top:10px;
+          margin-left:3px;
           color:$bg-6-color;
           font-weight: $font-bold;
+          font-family: 'Josefin Sans', sans-serif;
+
+          @include screen-large {
+            margin-top:6px;
+            margin-left:3px;  
+          }
 
           small {
             color:$bg-6-color;
