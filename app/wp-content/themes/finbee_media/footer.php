@@ -76,7 +76,7 @@
                 <div class="l-footer__about__inner__main__header__subtitle">ビートピアについて</div>
               </div>
               <div class="l-footer__about__inner__main__line"></div>
-              <p class="l-footer__about__inner__main__description">be-topiaは、「やりたいこと、やってみよう」をテーマにしたライフスタイルマガジンです。さまざまな人の「やりたいこと」や「やってみたこと」にまつわるストーリーやアイデアを紹介します。やりたいことが見つからない人、やりたいことを先延ばしにしている人。そんな人たちの背中をそっと押して、やりたいことへの一歩を踏み出す人を増やしていきます。</p>
+              <p class="l-footer__about__inner__main__description">be-topiaは、「みつける、なりたいジブン」をテーマにしたライフスタイルマガジンです。さまざまな人の「やりたいこと」や「やってみたこと」にまつわるストーリーやアイデアを紹介します。やりたいことが見つからない人、やりたいことを先延ばしにしている人。そんな人たちの背中をそっと押して、やりたいことへの一歩を踏み出す人を増やしていきます。</p>
             </div>
             <div class="l-footer__about__inner__footer">
               <div class="l-footer__about__inner__footer__left">
