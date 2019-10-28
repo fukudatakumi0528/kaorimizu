@@ -189,6 +189,7 @@
 									.ez-toc-list {
 										margin:0;
 										padding:0;
+										overflow: hidden;
 
 										li {
 											padding:10px 16px;
@@ -309,6 +310,18 @@
 								height: auto;
 							}
 
+							.wp-caption {
+								max-width: 100%;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+
+								.wp-caption-text {
+									margin-top:0px;
+									color:$font-1-color;
+								}
+							}
+
 							.wp-block-image {
 								margin-top:20px;
 								max-width: 100%;
@@ -349,6 +362,8 @@
 
 								li {
 									list-style-type: disc;
+									margin:0 0 0 -4px;
+									line-height: 200%;
 
 									p {
 										margin:0 0 0 -4px;
@@ -366,6 +381,8 @@
 									counter-increment: cnt;
 									display: flex;
 									align-items: flex-start;
+									margin:0;
+									line-height: 200%;
 
 									&::before {
 										position: relative;
@@ -394,6 +411,11 @@
 								border-collapse: inherit;
 
 								tbody {
+
+									p {
+										margin-top:0;
+										font-size: 15px;
+									}
 
 									tr {
 
@@ -424,6 +446,11 @@
 
 											&:nth-last-of-type(1) {
 												border-right: none;
+											}
+
+											p {
+												margin-top:0;
+												font-size: 15px;
 											}
 										}
 									}

@@ -69,7 +69,7 @@
 								<ul class="o-classificationList">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
 										<li class="o-classificationList__tag">
-											<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+											<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$tag->name ?>">
 												<p class="o-classificationList__tag__link__inner"><?= $tag->name?></p>
 											</a>
 										</li>
@@ -236,7 +236,7 @@
 												<div class="m-classificationArea">
 													<?php	if($term): foreach ($term as $tag ): ?>
 														<object>
-															<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+															<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name ?>">
 																<?= $tag->name?>
 															</a>
 														</object>
