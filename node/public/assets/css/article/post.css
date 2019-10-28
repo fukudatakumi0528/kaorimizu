@@ -289,13 +289,8 @@ $font-xxl: 2rem;
   font-size: 25px;
   font-weight: 700 !important;
   line-height: 170%;
-}
-
-@media (min-width: 768px) {
-  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 span {
-    padding-top: 60px;
-    margin-top: -60px;
-  }
+  padding-top: 60px;
+  margin-top: -60px;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 {

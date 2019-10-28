@@ -246,11 +246,8 @@
 									font-size: 25px;
 									font-weight: $font-bold !important;
 									line-height: 170%;
-	
-									@include screen-large {
-										padding-top:60px;
-										margin-top:-60px;	
-									}
+									padding-top:60px;
+									margin-top:-60px;	
 								}
 							}
 
