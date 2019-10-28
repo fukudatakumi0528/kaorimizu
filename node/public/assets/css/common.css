@@ -1992,7 +1992,7 @@ main {
 }
 
 .l-header {
-  height: 72px;
+  height: 60px;
   padding: 8px 20px 8px 16px;
 }
 
@@ -4441,7 +4441,7 @@ main {
 }
 
 .o-headerInner .m-logo {
-  width: 130px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4472,7 +4472,8 @@ main {
 
 .o-headerInner .o-headerInner__left .o-headerInner__left__list {
   margin-left: 15px;
-  height: 15px;
+  height: 17px;
+  width: 17px;
 }
 
 .o-headerInner .o-headerInner__left .o-headerInner__left__list img {

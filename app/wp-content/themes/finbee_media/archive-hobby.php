@@ -44,7 +44,7 @@
 							<?php $tags = get_terms('hobby_tag'); ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
-										<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$tag->name ?>">
+										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
 											<p class="o-classificationList__tag__link__inner"><?= $tag->name?></p>
 										</a>
 									</li>
