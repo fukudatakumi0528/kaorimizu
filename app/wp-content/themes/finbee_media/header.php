@@ -258,14 +258,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $sliceNewArrivalTags = array_slice($newArrivalTags,0,10);
 
             if(count($sliceNewArrivalTags) > 0):
+
+            $termsNameList = [];
+            foreach ($sliceNewArrivalTags as $termsName) {
+              array_push($termsNameList,$termsName->name);
+            }
+
+            $uniqueTermsNameList = array_unique($termsNameList);
           ?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
 						<ul class="o-classificationList">
-              <?php foreach($sliceNewArrivalTags as $sliceNewArrivalTag): ?>
+              <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 							<li class="o-classificationList__tag">
-                <a class="o-classificationList__tag__link" href="<?= get_category_link($sliceNewArrivalTag->term_id); ?>">
-                  <p class="o-classificationList__tag__link__inner"><?= $sliceNewArrivalTag->name ?></p>
+                <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+                  <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
                 </a>
               </li>
               <?php endforeach;?>
@@ -463,13 +470,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   asort($searchTermsUnique);
                   $searchTermsUnique = array_values($searchTermsUnique);
 
-                  foreach($searchTermsUnique as $searchTermUnique):
-                  $tag = get_term($searchTermUnique);
+                  $termsNameList = [];
+                  foreach ($searchTermsUnique as $termsID) {
+                    array_push($termsNameList,get_term($termsID)->name);
+                  }
+            
+                  $uniqueTermsNameList = array_unique($termsNameList);
+
+                  foreach($uniqueTermsNameList as $uniqueTermsName):
                 ?>
                 <li class="o-classificationList__tag">
-                  <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
                     <p class="o-classificationList__tag__link__inner">
-                      <?= $tag->name?>
+                      <?= $uniqueTermsName?>
                     </p>
                   </a>
                 </li>
@@ -662,13 +675,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               asort($grantTermsUnique);
               $grantTermsUnique = array_values($grantTermsUnique);
 
-              foreach($grantTermsUnique as $grantTermUnique):
-              $tag = get_term($grantTermUnique);
-            ?>
+              $termsNameList = [];
+              foreach ($grantTermsUnique as $termsID) {
+                array_push($termsNameList,get_term($termsID)->name);
+              }
+        
+              $uniqueTermsNameList = array_unique($termsNameList);
+
+              foreach($uniqueTermsNameList as $uniqueTermsName):
+        ?>
             <li class="o-classificationList__tag">
-              <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+              <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
                 <p class="o-classificationList__tag__link__inner">
-                  <?= $tag->name?>
+                  <?= $uniqueTermsName?>
                 </p>
               </a>
             </li>

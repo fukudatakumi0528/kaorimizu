@@ -129,12 +129,24 @@
         cursor: pointer;
         overflow: hidden;
 
+        @include screen-large {
+          transition: 0.2s;
+        }
+
         &:nth-of-type(2) {
           margin-left: 10px;
         }
 
+        &:hover {
+
+          @include screen-large {
+            background-color: rgba($color: $bg-1-color, $alpha: 0.5);
+            transition: 0.2s;  
+          }
+        }
+
         .o-headerInnerPc__left__button__list__text {
-          padding:4px 10px;
+          padding:0px 10px;
           width: auto;
           white-space: nowrap;
           font-size: $font-xs;
