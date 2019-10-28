@@ -361,6 +361,8 @@
 
 								li {
 									list-style-type: disc;
+									margin:0 0 0 -4px;
+									line-height: 200%;
 
 									p {
 										margin:0 0 0 -4px;
@@ -378,6 +380,8 @@
 									counter-increment: cnt;
 									display: flex;
 									align-items: flex-start;
+									margin:0;
+									line-height: 200%;
 
 									&::before {
 										position: relative;

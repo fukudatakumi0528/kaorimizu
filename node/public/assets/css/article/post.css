@@ -413,6 +413,8 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body ul li {
   list-style-type: disc;
+  margin: 0 0 0 -4px;
+  line-height: 200%;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body ul li p {
@@ -434,6 +436,8 @@ $font-xxl: 2rem;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin: 0;
+  line-height: 200%;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body ol li::before {
