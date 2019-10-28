@@ -2861,6 +2861,10 @@ main {
   position: relative;
 }
 
+.m-inputArea .m-inputArea__under_validationwrap.is-validation {
+  background: #fff;
+}
+
 .m-inputArea .m-inputArea__under_validationwrap.is-validation::before {
   content: "";
   display: block;
@@ -2876,7 +2880,11 @@ main {
   pointer-events: none;
 }
 
-.m-inputArea .m-inputArea__under_validationtext {
+.m-inputArea .m-inputArea__under_validationwrap.is-validation .m-inputArea__under__input {
+  background: #fff;
+}
+
+.m-inputArea .m-inputArea__under .error {
   padding: 5px 10px;
   border-radius: 1px;
   background-color: #FFE9E9;
@@ -2885,6 +2893,7 @@ main {
   font-weight: 700;
   line-height: 150%;
   margin-top: 10px;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -3330,6 +3339,18 @@ main {
   width: 100%;
   padding-left: 10px;
   position: relative;
+  /*
+		&_validationtext {
+			padding:5px 10px;
+      border-radius: 1px;
+      background-color: $bg-14-color;
+      color:$bg-4-color;
+      font-size: $font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+      margin-top: 10px;
+		}
+*/
 }
 
 .m-selectboxArea .m-selectboxArea__under_validationwrap {
@@ -3351,7 +3372,11 @@ main {
   pointer-events: none;
 }
 
-.m-selectboxArea .m-selectboxArea__under_validationtext {
+.m-selectboxArea .m-selectboxArea__under_validationwrap.is-validation .m-selectboxArea__under__input {
+  background: #fff;
+}
+
+.m-selectboxArea .m-selectboxArea__under .error {
   padding: 5px 10px;
   border-radius: 1px;
   background-color: #FFE9E9;
@@ -4041,10 +4066,14 @@ main {
   background-color: #262626;
   border-radius: 4px;
   cursor: pointer;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
   .m-wideButton {
+    width: 100%;
     max-width: 330px;
     margin: 12px auto 0 auto;
   }

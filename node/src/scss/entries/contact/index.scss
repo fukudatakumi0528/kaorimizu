@@ -277,9 +277,23 @@
   }
 
   .m-wideButton {
-    margin-top:30px;
+    //margin-top:30px;
   }
 }
+
+.p-contact__main__btns {
+	margin-top: 50px;
+	display: flex;
+	.m-wideButton {
+		& + .m-wideButton {
+			margin-left: 20px;
+		}
+	}
+}
+
+
+
+
 
 
 .p-contact__footer {

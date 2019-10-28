@@ -50,6 +50,7 @@
 		&_validationwrap {
 			position: relative;
 			&.is-validation {
+				background: #fff;
 				&::before {
 					content: "";
 					display: block;
@@ -64,12 +65,13 @@
 					border-radius: 3px;
 					pointer-events: none;
 				}
+				.m-inputArea__under__input {
+					background: #fff;
+				}
 			}
 		}
 
-
-
-		&_validationtext {
+		.error {
 			padding:5px 10px;
       border-radius: 1px;
       background-color: $bg-14-color;
@@ -78,6 +80,7 @@
       font-weight: $font-bold;
       line-height: 150%;
       margin-top: 10px;
+      display: block;
 		}
 
 
