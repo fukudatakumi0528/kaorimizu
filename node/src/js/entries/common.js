@@ -38,4 +38,4 @@ refine.clickRefineAccordion();
 const contact = new Contact();
 contact.selectBoxChange();
 contact.selectContactChoice();
-
+contact.checkValidation();

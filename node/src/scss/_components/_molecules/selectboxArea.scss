@@ -61,8 +61,26 @@
 					border-radius: 3px;
 					pointer-events: none;
 				}
+				.m-selectboxArea__under__input {
+					background: #fff;
+				}
 			}
 		}
+
+
+		.error {
+			padding:5px 10px;
+      border-radius: 1px;
+      background-color: $bg-14-color;
+      color:$bg-4-color;
+      font-size: $font-xs;
+      font-weight: $font-bold;
+      line-height: 150%;
+      margin-top: 10px;
+		}
+
+
+/*
 		&_validationtext {
 			padding:5px 10px;
       border-radius: 1px;
@@ -73,6 +91,7 @@
       line-height: 150%;
       margin-top: 10px;
 		}
+*/
 
 
 

@@ -6,16 +6,16 @@
   background-color: $bg-base-color;
   border-radius: 4px;
   cursor: pointer;
-
+	color:$bg-6-color;
+  font-size: $font-s;
+  font-weight: $font-bold;
   @include screen-large {
+	  width: 100%;
     max-width: 330px;
     margin:12px auto 0 auto;
   }
-
   &:hover {
-
     .icon-btn {
-
       @include screen-large {
         margin-right:3px;
         margin-left:7px;
@@ -28,12 +28,12 @@
     color:$bg-6-color;
     font-size: 25px;
     transition: 0.4s;
-    margin-right: 10px; 
+    margin-right: 10px;
   }
 
   .m-wideButton__text {
     color:$bg-6-color;
     font-size: $font-s;
-    font-weight: $font-bold; 
+    font-weight: $font-bold;
   }
 }
