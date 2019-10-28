@@ -519,6 +519,117 @@
     }
   }
 
+  .p-top__featureHobby__list {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    padding:0 15px;
+    margin-top:26px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include screen-large {
+      margin-top:40px;
+      display: block;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+
+    .p-top__featureHobby__list__inner {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding:0 15px;
+  
+      @include screen-large {
+        padding:0;
+        margin-top:40px;
+        justify-content: flex-start;
+      }
+
+      .m-verticallyCard {
+        width: 48%;
+        margin-top:20px;
+        height: auto;
+  
+        @include screen-large {
+          display: none;
+          width: 100%;
+        }
+
+        &:nth-of-type(-n+3) {
+
+          @include screen-large {
+            display: block;
+            margin-top:0;
+            margin-left: 30px;
+            width: calc(calc(100% - 60px) / 3);
+          }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0px;
+          }
+        }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0;
+        }
+
+        .m-verticallyCard__inner {
+          margin:0;
+  
+          .m-verticallyCard__inner__footer {
+            width: 100%;
+            box-sizing: border-box;
+            padding:4px 0;
+
+            @include screen-large {
+              padding:0;
+            }
+      
+
+            .m-verticallyCard__inner__footer__date {
+              display: block;
+              font-size: $font-xxs;      
+            }
+  
+
+            .m-verticallyCard__inner__footer__description {
+              display: block;
+
+              .m-verticallyCard__inner__footer__description__text {
+                font-size: $font-xs;
+                overflow: hidden;
+
+                @media all and (-ms-high-contrast: none){
+                  max-height: calc(12px * 1.7 * 2);
+                }      
+              }  
+            }
+
+            .m-verticallyCard__inner__footer__title {
+              display: block;
+              @media all and (-ms-high-contrast: none){
+                max-height: calc(13px * 1.5 * 3);
+              }
+            }      
+          }
+        }
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .p-top__featureHobby__slider {
     margin: 0 auto;
     width: 100%;
@@ -1006,6 +1117,7 @@
     width: 100%;
     max-width: 1100px;
     margin-top:26px;
+    padding:0 15px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1046,6 +1158,7 @@
           @include screen-large {
             display: block;
             margin-left: 30px;
+            margin-top:0px;
             width: calc(calc(100% - 60px) / 3);
           }  
         }
@@ -1114,6 +1227,7 @@
     margin:24px 15px 0 15px;
     display: flex;
     justify-content: flex-end;
+    padding:0 15px;
 
     @include screen-large {
       margin: 0 auto;
