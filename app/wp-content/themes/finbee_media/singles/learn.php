@@ -75,7 +75,7 @@
 									<?php  endforeach;  endif; ?>
 								</ul>
 							</div>
-							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
+							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>" target= _blank>
 								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
 							<div class="article__sns">

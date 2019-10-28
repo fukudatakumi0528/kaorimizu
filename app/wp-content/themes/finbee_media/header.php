@@ -21,13 +21,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 				</a>
 				<div class="o-headerInner__left">
-					<a class="o-headerInner__left__list instagram" href="">
+					<a class="o-headerInner__left__list instagram" href="" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
           </a>
-					<a class="o-headerInner__left__list twitter" href="">
+					<a class="o-headerInner__left__list twitter" href="" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
           </a>
-					<a class="o-headerInner__left__list facebook" href="">
+					<a class="o-headerInner__left__list facebook" href="" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
           </a>
 				</div>
@@ -281,13 +281,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </a>
             <div class="o-headerInner__left">
               <a class="o-headerInner__left__list instagram" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント" target= _blank>
               </a>
               <a class="o-headerInner__left__list twitter" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント" target= _blank>
               </a>
               <a class="o-headerInner__left__list facebook" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント" target= _blank>
               </a>
             </div>
           </div>
@@ -489,13 +489,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInner__left">
               <a class="o-headerInner__left__list instagram" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント" target= _blank>
               </a>
               <a class="o-headerInner__left__list twitter" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント" target= _blank>
               </a>
               <a class="o-headerInner__left__list facebook" href="">
-                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
+                <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント" target= _blank>
               </a>
             </div>
           </div>
@@ -695,13 +695,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 			<div class="o-headerInner__left">
         <a class="o-headerInner__left__list instagram" href="">
-          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
+          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント" target= _blank>
         </a>
         <a class="o-headerInner__left__list twitter" href="">
-          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
+          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント" target= _blank>
         </a>
         <a class="o-headerInner__left__list facebook" href="">
-          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
+          <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント" target= _blank>
         </a>
 			</div>
 		</div>
@@ -774,13 +774,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="o-headerInnerPc__left__icon">
           <div class="o-headerInnerPc__left__icon__list">
             <a class="o-headerInnerPc__left__icon__list__item instagram" href="">
-              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
+              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント" target= _blank>
             </a>
             <a class="o-headerInnerPc__left__icon__list__item twitter" href="">
-              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
+              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント" target= _blank>
             </a>
             <a class="o-headerInnerPc__left__icon__list__item facebook" href="">
-              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
+              <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント" target= _blank>
             </a>
             <div class="o-headerInnerPc__left__icon__list__item search js-headerInnerPc__Menu">
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-search.svg" alt="検索アイコン">
