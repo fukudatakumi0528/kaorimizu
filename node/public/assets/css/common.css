@@ -1044,6 +1044,12 @@ main {
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__text {
   font-size: 1rem;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__text strong {
@@ -1051,7 +1057,7 @@ main {
 }
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__icon {
-  margin-left: 2px;
+  margin-left: 1px;
   font-size: 14px;
 }
 

@@ -108,6 +108,8 @@
         .l-fixed-button__inner__main__button__text {
           font-size:$font-xxs;
           font-weight: $font-bold;
+          display: flex;
+          align-items: center;
 
           strong {
             font-size: $font-s;
@@ -115,7 +117,7 @@
         }
 
         .l-fixed-button__inner__main__button__icon {
-          margin-left: 2px;
+          margin-left: 1px;
           font-size: 14px;
         }
       }

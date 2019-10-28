@@ -191,11 +191,15 @@
           <div class="l-fixed-button__inner__main">
             <div class="l-fixed-button__inner__main__button" id="js-spSearch-trigger">
               <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>探す</strong></p>
-              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-search2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
+              <div class="l-fixed-button__inner__main__button__icon">
+                <img class="l-fixed-button__inner__main__button__icon__image search" src="<?= assetsPath('img') ?>icon/fixedButton/icon-search.svg" alt="">
+              </div>
             </div>
             <div class="l-fixed-button__inner__main__button" id="js-spGrant-trigger">
               <p class="l-fixed-button__inner__main__button__text">したい・ほしいを<strong>叶える</strong></p>
-              <div class="l-fixed-button__inner__main__button__icon"><span class="icon-star2"><span class="path1"></span><span class="path2"></span></span></div>
+              <div class="l-fixed-button__inner__main__button__icon">
+                <img class="l-fixed-button__inner__main__button__icon__image star" src="<?= assetsPath('img') ?>icon/fixedButton/icon-star.svg" alt="">
+              </div>
             </div>
           </div>
         </div>
