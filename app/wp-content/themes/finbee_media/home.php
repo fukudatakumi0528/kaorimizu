@@ -182,7 +182,6 @@
 		<?php 
 			$topFeature = get_field('top-feature', 'option');
 
-
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
@@ -238,6 +237,8 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
+					if($query->post_count > 0):
+
 					while($query->have_posts()): $query->the_post();
 					if($query !== $topFeature):
 
@@ -279,7 +280,7 @@
 						</div>
 					</a>
 				</li>
-				<?php endif; endwhile; wp_reset_postdata(); ?>
+				<?php endif; endwhile; wp_reset_postdata(); endif;?>
 			</ul>
 		</div>
 		<?php if($query->have_posts()): ?>
@@ -377,7 +378,7 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__hobby">
 				<?php
-					if($query->post_count > 1):
+					if($query->post_count > 0):
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {

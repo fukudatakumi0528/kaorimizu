@@ -155,7 +155,7 @@
           <div class="l-footer__nav__inner">
             <ul class="l-footer__nav__inner__main">
               <li class="l-footer__nav__inner__main__list">
-								<a class="l-footer__nav__inner__main__list__link" href="https://finbee.jp/company/">
+								<a class="l-footer__nav__inner__main__list__link" href="https://finbee.jp/company/" target="_blank">
 									<p class="l-footer__nav__inner__main__list__link__text">会社概要</p>
 									<span class="icon-tab"></span>
 								</a>
