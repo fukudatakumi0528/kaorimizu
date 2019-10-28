@@ -5,10 +5,16 @@
 
 .p-contact__topper {
   @include screen-large{
-    margin-top:70px;
+    margin-top:80px;
   }
+  
   .o-topperSection {
-    padding:40px 20px;
+    padding:40px 20px 40px 20px;
+    background-color: $bg-1-color;  
+
+    @include screen-large {
+      padding:50px 20px 50px 20px;
+    }
   }
 }
 

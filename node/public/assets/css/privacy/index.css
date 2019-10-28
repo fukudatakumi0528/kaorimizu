@@ -8,7 +8,18 @@ $font-xxl: 2rem;
 */
 @media (min-width: 768px) {
   .p-privacy__topper {
-    margin-top: 70px;
+    margin-top: 80px;
+  }
+}
+
+.p-privacy__topper .o-topperSection {
+  padding: 40px 20px 40px 20px;
+  background-color: #FFD94A;
+}
+
+@media (min-width: 768px) {
+  .p-privacy__topper .o-topperSection {
+    padding: 50px 20px 50px 20px;
   }
 }
 
