@@ -3,13 +3,16 @@
 	global $scriptName;
 ?>
 
-      <div class="m-breadcrumb">
-        <?php custom_breadcrumb(); ?>
-      </div>
-
 			<?php wp_footer(); ?>
 
 			<footer class="l-footer">
+
+        <?php if ( !is_home() && !is_front_page() ) :?>
+          <div class="m-breadcrumb">
+            <?php custom_breadcrumb(); ?>
+          </div>
+        <?php endif; ?>
+
         <div class="l-footer__downlord">
           <div class="l-footer__downlord__inner"><img class="l-footer__downlord__inner__image" src="<?php echo assetsPath('img') ?>common/footer/download.png" alt="">
             <div class="l-footer__downlord__inner__main">

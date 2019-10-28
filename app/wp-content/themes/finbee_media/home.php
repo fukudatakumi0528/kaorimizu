@@ -6,8 +6,7 @@
 
 	get_header();
 ?>
-<main>
-
+<main class="p-top">
 
 	<!-- kv-->
 	<section class="p-top__kv">
