@@ -14,10 +14,9 @@
         .m-verticallyCard__inner__topper__image {
 
           .m-verticallyCard__inner__topper__image__inner {
-
             @include screen-large {
               transform: scale(1.05);
-              transition: 0.4s;  
+              transition: 0.4s;
             }
           }
         }
