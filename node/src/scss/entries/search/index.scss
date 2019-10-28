@@ -15,7 +15,7 @@
 
   .m-inputSearch {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     height: 50px;
     margin:0 auto;
 
@@ -39,7 +39,7 @@
 .p-search__main {
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin-top:10px;
   z-index: 0;
   padding:0 15px;
@@ -197,7 +197,7 @@
 
     @include screen-large {
       display: block;
-      width: 30%;
+      width: 35%;
       min-width: 300px;
     }
     
