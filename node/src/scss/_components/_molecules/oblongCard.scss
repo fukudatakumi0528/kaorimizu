@@ -94,9 +94,9 @@
           overflow: hidden;
 
           @include screen-large {
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             @media all and (-ms-high-contrast: none){
-              max-height: calc(16px * 1.5 * 2);
+              max-height: calc(16px * 1.5 * 3);
             }   
           }
         } 

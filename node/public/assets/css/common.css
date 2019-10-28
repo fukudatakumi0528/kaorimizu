@@ -3199,13 +3199,13 @@ main {
 
 @media (min-width: 768px) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
-    max-height: calc(16px * 1.5 * 2);
+    max-height: calc(16px * 1.5 * 3);
   }
 }
 
@@ -3711,13 +3711,13 @@ main {
 
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
-    max-height: calc(16px * 1.5 * 2);
+    max-height: calc(16px * 1.5 * 3);
   }
 }
 
@@ -4139,13 +4139,13 @@ main {
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     font-size: 15px;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
-    max-height: calc(13px * 1.5 * 2);
+    max-height: calc(13px * 1.5 * 3);
   }
 }
 
@@ -4374,14 +4374,14 @@ main {
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
     font-size: 15px;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
-    max-height: calc(15px * 1.5 * 2);
+    max-height: calc(15px * 1.5 * 3);
   }
 }
 
