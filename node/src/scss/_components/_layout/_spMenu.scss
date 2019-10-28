@@ -87,37 +87,23 @@
             .l-spMenu__main__nav__list__link__left__icon {
               width: 30px;
               height: 30px;
-              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
 
-              &.icon-home {
-                font-size: 18px;
+              &.home {
               }
 
-              &.icon-feature {
-                font-size: 26px;
+              &.feature {
               }
 
-              &.icon-hobby {
-                font-size: 25px;
+              &.hobby {
               }
 
-              &.icon-life {
-                font-size: 20px;
+              &.life {
               }
 
-              &.icon-learn {
-                font-size: 22px;
-              }
-
-              >span {
-                position: absolute;
-                top:50%;
-                left:50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                &::before {
-                  margin: 0;
-                }
+              &.learn {
               }
 
             }

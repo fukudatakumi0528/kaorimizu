@@ -2346,39 +2346,15 @@ main {
 .l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon {
   width: 30px;
   height: 30px;
-  position: relative;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-home {
-  font-size: 18px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-feature {
-  font-size: 26px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-hobby {
-  font-size: 25px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-life {
-  font-size: 20px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-learn {
-  font-size: 22px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon > span::before {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__text {

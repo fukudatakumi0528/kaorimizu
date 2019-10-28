@@ -96,10 +96,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('') ?>">
 								<div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-home l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image home" src="<?= assetsPath('img') ?>icon/home/icon-home.svg" alt="TOP">
+                  </div>
 									<p class="l-spMenu__main__nav__list__link__left__text">TOP</p>
 								</div>
 								<div class="icon-btn"></div>
@@ -108,11 +107,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('feature/') ?>">
 								<div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-feature l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
+                  </div>
 									<p class="l-spMenu__main__nav__list__link__left__text">特集</p>
 								</div>
 								<div class="icon-btn"></div>
@@ -121,13 +118,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('hobby/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-hobby l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-										<span class="path4"></span>
-										<span class="path5"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">趣味</p>
                 </div>
 								<div class="icon-btn"></div>
@@ -136,10 +129,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('life/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-life l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">生活</p>
                 </div>
 								<div class="icon-btn"></div>
@@ -148,11 +140,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('learn/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-learn l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image learn" src="<?= assetsPath('img') ?>icon/home/icon-learn.svg" alt="学び">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">学び</p>
                 </div>
 								<div class="icon-btn"></div>
