@@ -2917,6 +2917,8 @@ main {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 100%;
+  position: relative;
+  top: 2px;
 }
 
 .m-inputArea .m-inputArea__under {
@@ -3401,6 +3403,8 @@ main {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 100%;
+  position: relative;
+  top: 2px;
 }
 
 .m-selectboxArea .m-selectboxArea__under {
