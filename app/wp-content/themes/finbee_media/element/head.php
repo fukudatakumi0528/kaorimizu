@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="<?= assetsPath('img') ?>icon/apple-touch-icon-180x180.png">
 <link rel="icon" href="<?= assetsPath('img') ?>icon/favicon.ico">
 <link rel="stylesheet" href="<?= assetsPath('css') ?>common.css">
-<link rel="stylesheet" href="<?= assetsPath('css') . $cssName ?>.css?1234">
+<link rel="stylesheet" href="<?= assetsPath('css') . $cssName ?>.css">
 <link rel="stylesheet" href="<?= assetsPath('fonts') ?>icomoon/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
