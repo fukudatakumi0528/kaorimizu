@@ -411,6 +411,11 @@
 
 								tbody {
 
+									p {
+										margin-top:0;
+										font-size: 15px;
+									}
+
 									tr {
 
 										&:nth-of-type(1) {
@@ -440,6 +445,11 @@
 
 											&:nth-last-of-type(1) {
 												border-right: none;
+											}
+
+											p {
+												margin-top:0;
+												font-size: 15px;
 											}
 										}
 									}

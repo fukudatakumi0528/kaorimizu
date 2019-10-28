@@ -464,6 +464,11 @@ $font-xxl: 2rem;
   border-collapse: inherit;
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body table tbody p {
+  margin-top: 0;
+  font-size: 15px;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body table tbody tr:nth-of-type(1) td {
   border-top: none;
 }
@@ -487,6 +492,11 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body table tbody tr td:nth-last-of-type(1) {
   border-right: none;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body table tbody tr td p {
+  margin-top: 0;
+  font-size: 15px;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body blockquote {
