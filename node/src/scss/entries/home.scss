@@ -328,6 +328,10 @@
 
       .m-wideCard {
         width: 100%;
+
+        @include screen-large {
+          width: 47%;
+        }
     
         &:nth-of-type(1) {
           margin-top:0;
