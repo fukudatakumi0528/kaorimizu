@@ -32,7 +32,7 @@ $font-xxl: 2rem;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  margin-top: 60px;
+  margin-top: 40px;
   z-index: 0;
   padding: 0 15px;
 }
@@ -78,8 +78,8 @@ $font-xxl: 2rem;
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateY(-95px) translateX(-50%);
-  transform: translateY(-95px) translateX(-50%);
+  -webkit-transform: translateY(-75px) translateX(-50%);
+  transform: translateY(-75px) translateX(-50%);
   background-color: #FFF2C3;
   min-height: 52px;
   padding: 11px 20px;
