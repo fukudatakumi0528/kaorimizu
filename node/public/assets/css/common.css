@@ -3094,8 +3094,8 @@ main {
 
 @media (min-width: 768px) {
   .m-oblongCard .m-oblongCard__inner:hover .m-oblongCard__inner__topper .m-oblongCard__inner__topper__image {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -3522,8 +3522,8 @@ main {
 
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner:hover .m-squareCard__inner__topper .m-squareCard__inner__topper__image {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -3987,8 +3987,8 @@ main {
 
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner:hover .m-verticallyCard__inner__topper .m-verticallyCard__inner__topper__image .m-verticallyCard__inner__topper__image__inner {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -4214,8 +4214,8 @@ main {
 
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner:hover .m-wideCard__inner__left .m-wideCard__inner__left__image .m-wideCard__inner__left__image__inner {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
