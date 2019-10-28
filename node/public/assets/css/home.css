@@ -642,7 +642,6 @@ $font-xxl: 2rem;
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -714,18 +713,21 @@ $font-xxl: 2rem;
 }
 
 .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
+  display: none;
   font-size: 1.2rem;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
+    display: block;
+  }
 }
 
 @media all and (-ms-high-contrast: none) {
   .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
     max-height: calc(12px * 1.7 * 2);
   }
-}
-
-.p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
-  display: block;
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -1309,7 +1311,6 @@ $font-xxl: 2rem;
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -1381,18 +1382,21 @@ $font-xxl: 2rem;
 }
 
 .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
+  display: none;
   font-size: 1.2rem;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
+    display: block;
+  }
 }
 
 @media all and (-ms-high-contrast: none) {
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
     max-height: calc(12px * 1.7 * 2);
   }
-}
-
-.p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
-  display: block;
 }
 
 @media all and (-ms-high-contrast: none) {

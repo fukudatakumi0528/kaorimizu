@@ -542,7 +542,6 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding:0 15px;
   
       @include screen-large {
         padding:0;
@@ -604,8 +603,13 @@
               display: block;
 
               .m-verticallyCard__inner__footer__description__text {
+                display: none;
                 font-size: $font-xs;
                 overflow: hidden;
+
+                @include screen-large {
+                  display: block;
+                }
 
                 @media all and (-ms-high-contrast: none){
                   max-height: calc(12px * 1.7 * 2);
@@ -614,7 +618,6 @@
             }
 
             .m-verticallyCard__inner__footer__title {
-              display: block;
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
               }
@@ -1135,7 +1138,6 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding:0 15px;
   
       @include screen-large {
         padding:0;
@@ -1197,8 +1199,13 @@
               display: block;
 
               .m-verticallyCard__inner__footer__description__text {
+                display: none;
                 font-size: $font-xs;
                 overflow: hidden;
+
+                @include screen-large {
+                  display: block;
+                }
 
                 @media all and (-ms-high-contrast: none){
                   max-height: calc(12px * 1.7 * 2);
@@ -1207,7 +1214,6 @@
             }
 
             .m-verticallyCard__inner__footer__title {
-              display: block;
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
               }
