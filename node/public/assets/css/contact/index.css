@@ -134,6 +134,10 @@ $font-xxl: 2rem;
   display: flex;
 }
 
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under span + span {
+  margin-left: 20px;
+}
+
 @media (min-width: 768px) {
   .p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under {
     margin: 0;
@@ -141,49 +145,47 @@ $font-xxl: 2rem;
 }
 
 .p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label input {
-  border: red solid 2px;
-  width: 20px;
-  height: 20px;
+  display: none;
+}
+
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label input:checked + .mwform-radio-field-text::after {
+  background: #FFD94A;
 }
 
 .p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label .mwform-radio-field-text {
-  border: blue solid 2px;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under input[type=radio]:checked + .p-contact__main__input__radiobutton__under__label label .icon-radio-button .path2:before {
-  color: #FFD94A;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label {
-  margin-left: 35px;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label:nth-of-type(1) {
-  margin-left: 0;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label label .icon-radio-button {
-  font-size: 24px;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label label .icon-radio-button .path2:before {
-  color: transparent;
-}
-
-.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under .p-contact__main__input__radiobutton__under__label label .p-contact__main__input__radiobutton__under__label__text {
-  margin-left: 5px;
+  position: relative;
+  cursor: pointer;
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 100%;
+}
+
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label .mwform-radio-field-text::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: #ccc solid 1px;
+  border-radius: 100%;
+  margin-right: 4px;
+}
+
+.p-contact__main .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under label .mwform-radio-field-text::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .p-contact__main .p-contact__main__input .p-contact__main__input__email {
