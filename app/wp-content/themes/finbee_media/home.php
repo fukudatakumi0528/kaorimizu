@@ -6,8 +6,7 @@
 
 	get_header();
 ?>
-<main>
-
+<main class="p-top">
 
 	<!-- kv-->
 	<section class="p-top__kv">
@@ -49,7 +48,9 @@
 							<p class="m-squareCard__inner__footer__title__text"><?= $slider->post_title ?></p>
 						</div>
 						<div class="m-squareCard__inner__footer__description">
-							<div class="m-squareCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></div>
+							<div class="m-squareCard__inner__footer__description__text">
+							<?php echo mb_substr($slider->post_title, 0, 100).'…'; ?>
+							</div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
 							<div class="m-classificationArea">
@@ -181,7 +182,6 @@
 		<?php 
 			$topFeature = get_field('top-feature', 'option');
 
-
 			if ($topFeature):										
 				// サムネイルID
 				if ( has_post_thumbnail($topFeature->ID)) {
@@ -237,6 +237,8 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
+					if($query->post_count > 0):
+
 					while($query->have_posts()): $query->the_post();
 					if($query !== $topFeature):
 
@@ -278,7 +280,7 @@
 						</div>
 					</a>
 				</li>
-				<?php endif; endwhile; wp_reset_postdata(); ?>
+				<?php endif; endwhile; wp_reset_postdata(); endif;?>
 			</ul>
 		</div>
 		<?php if($query->have_posts()): ?>
@@ -376,7 +378,7 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__hobby">
 				<?php
-					if($query->post_count > 1):
+					if($query->post_count > 0):
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {

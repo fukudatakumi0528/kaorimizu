@@ -1617,6 +1617,12 @@ main {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__category {
+    height: 30px;
+  }
+}
+
 .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__category .l-footer__search__inner__main__category__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1934,7 +1940,7 @@ main {
 
 .l-footer .l-footer__nav .l-footer__nav__inner .l-footer__nav__inner__main .l-footer__nav__inner__main__list .l-footer__nav__inner__main__list__link:before {
   position: absolute;
-  top: 1.4em;
+  bottom: 0;
   left: 0;
   content: "";
   display: inline-block;
@@ -1986,7 +1992,7 @@ main {
 }
 
 .l-header {
-  height: 72px;
+  height: 60px;
   padding: 8px 20px 8px 16px;
 }
 
@@ -2340,39 +2346,15 @@ main {
 .l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon {
   width: 30px;
   height: 30px;
-  position: relative;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-home {
-  font-size: 18px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-feature {
-  font-size: 26px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-hobby {
-  font-size: 25px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-life {
-  font-size: 20px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon.icon-learn {
-  font-size: 22px;
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__icon > span::before {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .l-spMenu .l-spMenu__main .l-spMenu__main__nav .l-spMenu__main__nav__list .l-spMenu__main__nav__list__link .l-spMenu__main__nav__list__link__left .l-spMenu__main__nav__list__link__left__text {
@@ -2714,6 +2696,7 @@ main {
 }
 
 .m-breadcrumb {
+  margin-top: 60px;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2816,6 +2799,7 @@ main {
 }
 
 .m-classificationArea .m-classificationArea__tag {
+  display: block;
   margin: 5px 0 0 8px;
   font-size: 1rem;
   color: #285486;
@@ -3217,13 +3201,13 @@ main {
 
 @media (min-width: 768px) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
-    max-height: calc(16px * 1.5 * 2);
+    max-height: calc(16px * 1.5 * 3);
   }
 }
 
@@ -3731,13 +3715,13 @@ main {
 
 @media (min-width: 768px) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-squareCard .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
-    max-height: calc(16px * 1.5 * 2);
+    max-height: calc(16px * 1.5 * 3);
   }
 }
 
@@ -4159,13 +4143,13 @@ main {
 @media (min-width: 768px) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     font-size: 15px;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
-    max-height: calc(13px * 1.5 * 2);
+    max-height: calc(13px * 1.5 * 3);
   }
 }
 
@@ -4394,14 +4378,14 @@ main {
 @media (min-width: 768px) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
     font-size: 15px;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 }
 
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__title {
-    max-height: calc(15px * 1.5 * 2);
+    max-height: calc(15px * 1.5 * 3);
   }
 }
 
@@ -4462,7 +4446,7 @@ main {
 }
 
 .o-headerInner .m-logo {
-  width: 130px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4493,7 +4477,8 @@ main {
 
 .o-headerInner .o-headerInner__left .o-headerInner__left__list {
   margin-left: 15px;
-  height: 15px;
+  height: 17px;
+  width: 17px;
 }
 
 .o-headerInner .o-headerInner__left .o-headerInner__left__list img {

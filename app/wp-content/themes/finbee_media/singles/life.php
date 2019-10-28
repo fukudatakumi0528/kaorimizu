@@ -76,7 +76,7 @@
 									<?php  endforeach;  endif; ?>
 								</ul>
 							</div>
-							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
+							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>" target= _blank>
 								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
 							<div class="article__sns">
@@ -92,7 +92,7 @@
 										</div>
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
-												<p class="article__prevnext__main__content__topper__text prev">前の記事</p>
+												<p class="article__prevnext__main__content__topper__text prev">次の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
 												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
@@ -108,7 +108,7 @@
 									<a class="article__prevnext__main" href="<?= $prev_post_url ?>">
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
-												<p class="article__prevnext__main__content__topper__text next">次の記事</p>
+												<p class="article__prevnext__main__content__topper__text next">前の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
 												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>

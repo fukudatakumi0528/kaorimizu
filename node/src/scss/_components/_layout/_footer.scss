@@ -417,6 +417,10 @@
           width: 100%;
           justify-content: space-between;
           align-items: center;
+
+          @include screen-large {
+            height: 30px;
+          }
   
           .l-footer__search__inner__main__category__list {
             display: flex;
@@ -663,7 +667,7 @@
 
             &:before{
               position: absolute;
-              top: 1.4em;
+              bottom: 0;
               left: 0;
               content: "";
               display: inline-block;
