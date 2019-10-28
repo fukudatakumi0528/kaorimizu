@@ -223,6 +223,7 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li {
