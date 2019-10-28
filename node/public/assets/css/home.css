@@ -1098,6 +1098,7 @@ $font-xxl: 2rem;
 
 .p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots {
   bottom: -40px;
+  display: none !important;
 }
 
 .p-top__lifeLearn .p-top__lifeLearn__slider .slick-dots li {

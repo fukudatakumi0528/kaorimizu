@@ -972,6 +972,7 @@
 
     .slick-dots {
       bottom:-40px;
+      display: none !important; //修正が終わり次第解除
 
       li {
         margin:0 3px;
