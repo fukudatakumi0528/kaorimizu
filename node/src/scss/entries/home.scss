@@ -485,6 +485,7 @@
             }
 
             .m-oblongCard__inner__footer__title__text {
+              font-weight: $font-bold;
 
               @include screen-large {
                 font-size: 20px;
