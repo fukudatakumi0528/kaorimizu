@@ -48,7 +48,9 @@
 							<p class="m-squareCard__inner__footer__title__text"><?= $slider->post_title ?></p>
 						</div>
 						<div class="m-squareCard__inner__footer__description">
-							<div class="m-squareCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></div>
+							<div class="m-squareCard__inner__footer__description__text">
+							<?php echo mb_substr($slider->post_title, 0, 100).'…'; ?>
+							</div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
 							<div class="m-classificationArea">
