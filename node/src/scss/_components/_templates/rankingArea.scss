@@ -17,6 +17,10 @@
     transition: 0.2s;
     cursor: pointer;
 
+    &:not(.is-active):hover {
+      height: 100%;
+    }
+
     &.is-active {
       background-color:$bg-1-color;
       height: 100%;

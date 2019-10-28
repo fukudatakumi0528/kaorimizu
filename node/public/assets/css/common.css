@@ -5160,6 +5160,10 @@ main {
   cursor: pointer;
 }
 
+.t-rankingArea__tab .t-rankingArea__tab__list:not(.is-active):hover {
+  height: 100%;
+}
+
 .t-rankingArea__tab .t-rankingArea__tab__list.is-active {
   background-color: #FFD94A;
   height: 100%;
