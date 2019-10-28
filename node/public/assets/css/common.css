@@ -1617,6 +1617,12 @@ main {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__category {
+    height: 30px;
+  }
+}
+
 .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__category .l-footer__search__inner__main__category__list {
   display: -webkit-box;
   display: -ms-flexbox;

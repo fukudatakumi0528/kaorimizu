@@ -417,6 +417,10 @@
           width: 100%;
           justify-content: space-between;
           align-items: center;
+
+          @include screen-large {
+            height: 30px;
+          }
   
           .l-footer__search__inner__main__category__list {
             display: flex;
