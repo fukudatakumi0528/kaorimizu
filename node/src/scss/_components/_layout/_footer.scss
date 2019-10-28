@@ -223,6 +223,7 @@
       }
 
       .l-footer__about__inner__main {
+        border-radius: 3px;
 
         @include screen-large {
           width: 100%;
@@ -236,32 +237,39 @@
           display: flex;
           flex-direction: column;
           align-items: center;  
+
   
           @include screen-large {
             align-items: flex-start;
           }
     
           .l-footer__about__inner__main__header__subhead {
+            font-family: 'Josefin Sans', sans-serif;
             font-size: $font-m;
             font-weight: $font-bold; 
             line-height: 100%;
           }
     
           .l-footer__about__inner__main__header__image {
-            margin-top:16px;
+            margin-top:0px;
             width: 200px;
             max-width: 200px;
+            @include screen-large {
+              margin-top:9px;
+            }
           }
     
           .l-footer__about__inner__main__header__subtitle {
-            margin-top:16px;
+            margin-top: 8px;
             font-size: $font-xs;
             font-weight: $font-bold; 
             line-height: 100%;
   
             @include screen-large {
+              margin-top:9px;
               width: 100%;
               text-align: right;
+              margin-bottom: 3px;
             }
           }
         }
@@ -281,7 +289,7 @@
         }
     
         .l-footer__about__inner__main__description {
-          margin-top:24px;
+          margin-top: 30px;
           background-color: $bg-6-color;
           padding:30px 20px;
           font-size: 13px;
@@ -289,6 +297,7 @@
           line-height: 180%;
   
           @include screen-large {
+            margin-top:24px;
             display: block;
             padding:0;
             margin:0 0 0 40px;
@@ -503,7 +512,7 @@
           max-width: 580px;
           min-width: 400px;
           background-color: $bg-13-color;
-          border-radius: 4px;
+          border-radius: 3px;
           display: flex;
           margin-left: 20px;
         }
