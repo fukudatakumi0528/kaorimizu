@@ -5101,7 +5101,7 @@ main {
 
 .o-wideCardList .m-wideCard {
   margin-top: 20px;
-  width: 48%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
