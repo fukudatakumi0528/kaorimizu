@@ -107,23 +107,34 @@
       }
 
       .l-spSearch__main__pickup__title {
+        font-family: 'Josefin Sans', sans-serif;
         font-size: $font-m;
         font-weight: $font-bold;
       }
 
       .o-verticallyCardList {
+        margin-top:10px;
 
         @include screen-large {
           justify-content: flex-start;
-          margin:-20px 0 0 -30px;
+          margin-top: 3px;
         }
 
         .m-verticallyCard {
 
           @include screen-large {
             width: 175px;
-            margin:20px 0 0 30px;
+            margin:0 0 0 30px;
           }
+
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+
+          &:nth-of-type(-n+2) {
+            margin-top:0;
+          }
+
 
           .m-verticallyCard__inner__footer__date {
             display: none;
@@ -156,10 +167,15 @@
 
       .l-spSearch__main__keywords__title {
         font-size: $font-m;
-        font-weight: $font-bold;        
+        font-weight: $font-bold;
+        font-family: 'Josefin Sans', sans-serif;    
       }
 
       .o-classificationList {
+
+        @include screen-large {
+          margin-top: 1px;
+        }
       }
     }
   }

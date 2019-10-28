@@ -2179,6 +2179,11 @@ main {
 .l-spGrant .l-spGrant__main .l-spGrant__main__pickup .l-spGrant__main__pickup__title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList {
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2186,15 +2191,23 @@ main {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: -20px 0 0 -30px;
+    margin-top: 3px;
   }
 }
 
 @media (min-width: 768px) {
   .l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard {
     width: 175px;
-    margin: 20px 0 0 30px;
+    margin: 0 0 0 30px;
   }
+}
+
+.l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
+  margin-top: 0;
 }
 
 .l-spGrant .l-spGrant__main .l-spGrant__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__date {
@@ -2231,6 +2244,13 @@ main {
 .l-spGrant .l-spGrant__main .l-spGrant__main__keywords .l-spGrant__main__keywords__title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .l-spGrant .l-spGrant__main .l-spGrant__main__keywords .o-classificationList {
+    margin-top: 1px;
+  }
 }
 
 .l-spMenu {
@@ -2434,7 +2454,7 @@ main {
 
 @media (min-width: 768px) {
   .l-spMenu .l-spMenu__main .l-spMenu__main__searcharea .m-inputSearch .icon-search {
-    right: 35px;
+    right: 15px;
   }
 }
 
@@ -2454,8 +2474,13 @@ main {
 }
 
 .l-spMenu .l-spMenu__main .l-spMenu__main__pickup .l-spMenu__main__pickup__title {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList {
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2463,15 +2488,23 @@ main {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: -20px 0 0 -30px;
+    margin-top: 3px;
   }
 }
 
 @media (min-width: 768px) {
   .l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard {
     width: 175px;
-    margin: 20px 0 0 30px;
+    margin: 0 0 0 30px;
   }
+}
+
+.l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
+  margin-top: 0;
 }
 
 .l-spMenu .l-spMenu__main .l-spMenu__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__date {
@@ -2508,6 +2541,13 @@ main {
 .l-spMenu .l-spMenu__main .l-spMenu__main__keywords .l-spMenu__main__keywords__title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .l-spMenu .l-spMenu__main .l-spMenu__main__keywords .o-classificationList {
+    margin-top: 1px;
+  }
 }
 
 .l-spSearch {
@@ -2653,8 +2693,13 @@ main {
 }
 
 .l-spSearch .l-spSearch__main .l-spSearch__main__pickup .l-spSearch__main__pickup__title {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList {
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2662,15 +2707,23 @@ main {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: -20px 0 0 -30px;
+    margin-top: 3px;
   }
 }
 
 @media (min-width: 768px) {
   .l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard {
     width: 175px;
-    margin: 20px 0 0 30px;
+    margin: 0 0 0 30px;
   }
+}
+
+.l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard:nth-of-type(-n+2) {
+  margin-top: 0;
 }
 
 .l-spSearch .l-spSearch__main .l-spSearch__main__pickup .o-verticallyCardList .m-verticallyCard .m-verticallyCard__inner__footer__date {
@@ -2707,6 +2760,13 @@ main {
 .l-spSearch .l-spSearch__main .l-spSearch__main__keywords .l-spSearch__main__keywords__title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .l-spSearch .l-spSearch__main .l-spSearch__main__keywords .o-classificationList {
+    margin-top: 1px;
+  }
 }
 
 .m-breadcrumb {
