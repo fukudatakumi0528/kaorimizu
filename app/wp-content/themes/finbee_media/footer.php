@@ -61,7 +61,7 @@
               </div>
             </div>
 						<div class="l-footer__support__inner__footer">be-topia のコンテンツに<br class="no-pc">参加してみたい方は以下フォームより、<br class="no-pc">お問い合わせください。</div>
-						<a class="m-wideButton">
+						<a class="m-wideButton" href="<?= site_url('contact/') ?>">
 							<span class="icon-btn"></span>
 							<p class="m-wideButton__text">お問い合わせ</p>
 						</a>
