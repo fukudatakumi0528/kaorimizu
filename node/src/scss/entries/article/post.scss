@@ -74,6 +74,8 @@
 				display: flex;
 				justify-content: space-between;
 				padding:0 15px;
+				position: relative;
+				min-height: 100%;
 			}
 
 			.p-articlePost__inner__main__content {
@@ -942,6 +944,23 @@
 					display: block;
 					width: 35%;
 					min-width: 300px;
+					z-index: 1000;
+					position: absolute;
+					height: 100%;
+					right:0;
+				}
+
+				.t-sideBarPc {
+					height: 100%;
+
+					.t-sideBarPc__downlord {
+
+						@include screen-large {
+							position: -webkit-sticky;
+							position: sticky;
+							top: 100px;	
+						}
+					}
 				}
 			}
 		}

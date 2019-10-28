@@ -94,6 +94,8 @@ $font-xxl: 2rem;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 15px;
+    position: relative;
+    min-height: 100%;
   }
 }
 
@@ -1071,6 +1073,22 @@ $font-xxl: 2rem;
     display: block;
     width: 35%;
     min-width: 300px;
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    right: 0;
+  }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar .t-sideBarPc {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar .t-sideBarPc .t-sideBarPc__downlord {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
   }
 }
 
