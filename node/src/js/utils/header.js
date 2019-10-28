@@ -115,59 +115,63 @@ export default class Header {
 			headerToggle();
 		}); 
 
-		//pcSearchが押された時
-		$headerInnerPcSearch.on('click', function () {
-			spSearchToggle();
-			modalCoverToggle();
+		//pcSearchがhoverされた時
+		$headerInnerPcSearch.on('mouseover', function () {
+			$spSearch.addClass('is-active');
+			$modalCover.addClass('is-active');
 
-			//searchボタンがクリックされた時は、必ずspMenuは閉じている。
-			if ($spMenu.hasClass('is-active')) {
-				$spMenu.removeClass('is-active');
-			};
+			//searchボタンがhoverされた時は、必ずspMenuは閉じている。
+			$spMenu.removeClass('is-active');
 			
-			//searchボタンがクリックされた時は、必ずspGrantは閉じている。
-			if ($spGrant.hasClass('is-active')) {
-				$spGrant.removeClass('is-active');
-			};
+			//searchボタンがhoverされた時は、必ずspGrantは閉じている。
+			$spGrant.removeClass('is-active');
 
-			triangleToggle();
-			headerToggle();
-		}); 
-
-
-		//pcGrantが押された時
-		$headerInnerPcGrant.on('click', function () {
-			spGrantToggle();
-			modalCoverToggle();
-
-			//grantボタンがクリックされた時は、必ずspMenuは閉じている。
-			if ($spMenu.hasClass('is-active')) {
-				$spMenu.removeClass('is-active');
-			};
-			
-			//grantボタンがクリックされた時は、必ずspSearchは閉じている。
-			if ($spSearch.hasClass('is-active')) {
-				$spSearch.removeClass('is-active');
-			};
-
-			triangleToggle();
-			headerToggle();
-		}); 
-
-		$modalCover.on('click', function () {
+			$seachTriangle.addClass('is-active');
+			$header.addClass('is-active');
+		}).on('mouseout', function () {
+			$spSearch.removeClass('is-active');
 			$modalCover.removeClass('is-active');
 
-			//modalCoverがクリックされた時は、必ずspMenuは閉じている。
+			$seachTriangle.removeClass('is-active');
+			$header.removeClass('is-active');
+		}); 
+
+
+		//pcGrantがhoverされた時
+		$headerInnerPcGrant.on('mouseover', function () {
+			$spGrant.addClass('is-active');
+			$modalCover.addClass('is-active');
+
+			//grantボタンがhoverされた時は、必ずspMenuは閉じている。
+			$spMenu.removeClass('is-active');
+			
+			//grantボタンがhoverされた時は、必ずspSearchは閉じている。
+			$spSearch.removeClass('is-active');
+
+			$grantTriangle.addClass('is-active');
+			$header.addClass('is-active');
+		}).on('mouseout', function () {
+			$spGrant.removeClass('is-active');
+			$modalCover.removeClass('is-active');
+
+			$grantTriangle.removeClass('is-active');
+			$header.removeClass('is-active');
+		}); 
+
+		$modalCover.on('mouseover', function () {
+			$modalCover.removeClass('is-active');
+
+			//modalCoverがhoverされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
 				$spMenu.removeClass('is-active');
 			};
 			
-			//modalCoverがクリックされた時は、必ずspGrantは閉じている。
+			//modalCoverがhoverされた時は、必ずspGrantは閉じている。
 			if ($spGrant.hasClass('is-active')) {
 				$spGrant.removeClass('is-active');
 			};
 
-			//modalCoverがクリックされた時は、必ずspSearchは閉じている。
+			//modalCoverがhoverされた時は、必ずspSearchは閉じている。
 			if ($spSearch.hasClass('is-active')) {
 				$spSearch.removeClass('is-active');
 			};			
