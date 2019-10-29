@@ -484,7 +484,7 @@
             display: none;
           }
   
-          .l-footer__search__inner__main__footer__link {
+          .anl_common_footer {
             margin-top:30px;
             display: flex;
             align-items:center;
@@ -496,7 +496,7 @@
               }
             }
   
-            .l-footer__search__inner__main__footer__link__text {
+            .anl_common_footer__text {
               margin-left:10px;
               font-size: $font-m;
               font-weight: $font-bold; 

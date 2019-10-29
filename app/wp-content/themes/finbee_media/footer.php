@@ -21,7 +21,7 @@
 									<a class="anl_common_footer" href="https://apps.apple.com/jp/app/finbee-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E8%B2%AF%E9%87%91-%E6%A5%BD%E3%81%97%E3%81%8F%E3%81%8A%E9%87%91%E3%82%92%E8%B2%AF%E3%82%81%E3%82%8B%E8%B2%AF%E9%87%91%E3%82%A2%E3%83%97%E3%83%AA/id1182852315?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2016-12-26&amp;kind=iossoftware&amp;bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
                 </div>
                 <div class="l-footer__downlord__inner__main__link__GooglePlay">
-									<a class="anl_common_footer" href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155"></a>
+									<a class="anl_common_footer" href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&referrer=utm_source%3Dbe-topia%26utm_medium%3Danl_common_footer%26utm_campaign%3D<?= $_SERVER["REQUEST_URI"]; ?>"><img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155"></a>
                 </div>
               </div>
             </div>
@@ -115,9 +115,9 @@
 								</li>
               </ul>
               <div class="l-footer__search__inner__main__footer">
-								<a class="l-footer__search__inner__main__footer__link" href="https://finbee.jp/" target= _blank>
+								<a class="anl_common_footer" href="https://finbee.jp/?utm_source=be-topia&utm_medium=footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>" target= _blank>
 									<span class="icon-btn"></span>
-									<p class="l-footer__search__inner__main__footer__link__text">自動貯金サービス「finbee」</p>
+									<p class="anl_common_footer__text">自動貯金サービス「finbee」</p>
 									<span class="icon-tab"></span>
 								</a>
 							</div>
@@ -133,7 +133,7 @@
 												<a class="anl_common_footer" href="https://apps.apple.com/jp/app/finbee-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E8%B2%AF%E9%87%91-%E6%A5%BD%E3%81%97%E3%81%8F%E3%81%8A%E9%87%91%E3%82%92%E8%B2%AF%E3%82%81%E3%82%8B%E8%B2%AF%E9%87%91%E3%82%A2%E3%83%97%E3%83%AA/id1182852315?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2016-12-26&amp;kind=iossoftware&amp;bubble=ios_apps) no-repeat;width:135px;height:40px;" target= _blank></a>
 											</div>
                       <div class="l-footer__search__inner__downlord__inner__topper__link__button__GooglePlay">
-                        <a class="anl_common_footer" href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&amp;hl=ja&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target= _blank>
+                        <a class="anl_common_footer" href="https://play.google.com/store/apps/details?id=jp.co.nestegg.finbee&referrer=utm_source%3Dbe-topia%26utm_medium%3Danl_common_footer%26utm_campaign%3D<?= $_SERVER["REQUEST_URI"]; ?>" target= _blank>
                           <img alt="Google Play で手に入れよう" src="https://play.google.com/intl/ja/badges/images/generic/ja_badge_web_generic.png" width="155">
                         </a>
 											</div>

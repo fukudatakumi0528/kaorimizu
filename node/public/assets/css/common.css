@@ -1723,7 +1723,7 @@ main {
   }
 }
 
-.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .l-footer__search__inner__main__footer__link {
+.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .anl_common_footer {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1733,15 +1733,15 @@ main {
   align-items: center;
 }
 
-.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .l-footer__search__inner__main__footer__link .icon-btn {
+.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .anl_common_footer .icon-btn {
   font-size: 27px;
 }
 
-.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .l-footer__search__inner__main__footer__link .icon-btn::before {
+.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .anl_common_footer .icon-btn::before {
   color: #3c3c3c;
 }
 
-.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .l-footer__search__inner__main__footer__link .l-footer__search__inner__main__footer__link__text {
+.l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__main .l-footer__search__inner__main__footer .anl_common_footer .anl_common_footer__text {
   margin-left: 10px;
   font-size: 1.6rem;
   font-weight: 700;
