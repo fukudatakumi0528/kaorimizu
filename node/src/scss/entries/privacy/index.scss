@@ -56,6 +56,16 @@
       text-decoration: underline;
     }
   }
+
+  .p-privacy__main__footer {
+    margin-top:50px;
+    font-size: $font-s;
+    line-height: 170%;
+    letter-spacing:1.6;
+    font-weight: $font-medium;
+    width: 100%;
+    text-align: right;
+  }
 }
 
 .p-privacy__footer {

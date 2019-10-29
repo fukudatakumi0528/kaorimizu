@@ -66,6 +66,16 @@ $font-xxl: 2rem;
   text-decoration: underline;
 }
 
+.p-privacy__main .p-privacy__main__footer {
+  margin-top: 50px;
+  font-size: 1.4rem;
+  line-height: 170%;
+  letter-spacing: 1.6;
+  font-weight: 500;
+  width: 100%;
+  text-align: right;
+}
+
 .p-privacy__footer {
   margin-top: 0px;
   width: 100%;
