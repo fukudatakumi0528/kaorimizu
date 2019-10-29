@@ -499,6 +499,14 @@
                 font-size: 20px;
                 font-weight: $font-bold;  
               }
+
+              @media all and (-ms-high-contrast: none){
+
+                @include screen-large {
+                  max-height: calc(20px * 1.5 * 3);
+                  display: block;  
+                }
+              }     
             }
           }
 

@@ -598,6 +598,13 @@ $font-xxl: 2rem;
   }
 }
 
+@media all and (-ms-high-contrast: none) and (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__title .m-oblongCard__inner__footer__title__text {
+    max-height: calc(20px * 1.5 * 3);
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .p-top__featureHobby .p-top__featureHobby__topper > .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__description {
     margin-top: 5px;
