@@ -7,6 +7,12 @@
 //
 
 // iphone5 以下
+@mixin screen-se() {
+  @media (max-width: 340px) {
+    @content;
+  }
+}
+
 @mixin screen-small() {
   @media (max-width: $base-breakpoint-small) {
     @content;
