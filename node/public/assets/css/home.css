@@ -744,9 +744,10 @@ $font-xxl: 2rem;
   }
 }
 
-@media all and (-ms-high-contrast: none) {
+@media all and (-ms-high-contrast: none) and (min-width: 768px) {
   .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
     max-height: calc(12px * 1.7 * 2);
+    display: block;
   }
 }
 
@@ -1413,15 +1414,17 @@ $font-xxl: 2rem;
   }
 }
 
-@media all and (-ms-high-contrast: none) {
+@media all and (-ms-high-contrast: none) and (min-width: 768px) {
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
     max-height: calc(12px * 1.7 * 2);
+    display: block;
   }
 }
 
 @media all and (-ms-high-contrast: none) {
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__title {
     max-height: calc(13px * 1.5 * 3);
+    display: block;
   }
 }
 

@@ -628,7 +628,11 @@
                 }
 
                 @media all and (-ms-high-contrast: none){
-                  max-height: calc(12px * 1.7 * 2);
+
+                  @include screen-large {
+                    max-height: calc(12px * 1.7 * 2);
+                    display: block;  
+                  }
                 }      
               }  
             }
@@ -1224,7 +1228,11 @@
                 }
 
                 @media all and (-ms-high-contrast: none){
-                  max-height: calc(12px * 1.7 * 2);
+
+                  @include screen-large {
+                    max-height: calc(12px * 1.7 * 2);
+                    display: block;  
+                  }
                 }      
               }  
             }
@@ -1232,6 +1240,7 @@
             .m-verticallyCard__inner__footer__title {
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
+                display: block;  
               }
             }      
           }

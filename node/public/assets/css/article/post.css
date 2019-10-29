@@ -925,6 +925,7 @@ $font-xxl: 2rem;
 @media all and (-ms-high-contrast: none) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {
     max-height: calc(12px * 1.5 * 3);
+    display: block;
   }
 }
 
@@ -938,6 +939,7 @@ $font-xxl: 2rem;
 @media all and (min-width: 768px) and (-ms-high-contrast: none) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {
     max-height: calc(12px * 1.5 * 3);
+    display: block;
   }
 }
 

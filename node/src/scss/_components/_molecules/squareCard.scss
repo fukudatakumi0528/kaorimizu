@@ -170,6 +170,7 @@
           -webkit-line-clamp: 3;  
           @media all and (-ms-high-contrast: none){
             max-height: calc(16px * 1.5 * 3);
+            display: block;
           }
           overflow: hidden;
 
@@ -177,6 +178,7 @@
             -webkit-line-clamp: 3; 
             @media all and (-ms-high-contrast: none){
               max-height: calc(16px * 1.5 * 3);  
+              display: block;
             }
           }
         } 
@@ -202,6 +204,7 @@
           -webkit-line-clamp: 2;  
           @media all and (-ms-high-contrast: none){
             max-height: calc(14px * 1.7 * 2);
+            display: block;
           }
           overflow: hidden;
         } 
