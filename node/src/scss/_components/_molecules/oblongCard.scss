@@ -56,12 +56,13 @@
         }  
 
         .m-oblongCard__inner__footer__topper__new {
+          font-family: 'Josefin Sans', sans-serif;
           font-size: $font-xxs;
           color:$font-1-color;
           display: flex;
           align-items: center;
           margin-left: 5px;
-          padding:2px 10px;
+          padding:3px 10px 0px 10px;;
           background-color: $bg-4-color;
           color: $bg-3-color;
           line-height: 100%;

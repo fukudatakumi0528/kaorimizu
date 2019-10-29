@@ -3239,6 +3239,7 @@ main {
 }
 
 .m-oblongCard .m-oblongCard__inner .m-oblongCard__inner__footer .m-oblongCard__inner__footer__topper .m-oblongCard__inner__footer__topper__new {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   color: #A3A3A3;
   display: -webkit-box;
@@ -3248,7 +3249,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 5px;
-  padding: 2px 10px;
+  padding: 3px 10px 0px 10px;
   background-color: #DE3B39;
   color: #F5F5F5;
   line-height: 100%;
@@ -4167,6 +4168,7 @@ main {
 }
 
 .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__topper .m-verticallyCard__inner__footer__topper__new {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   color: #A3A3A3;
   display: -webkit-box;
@@ -4176,7 +4178,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 5px;
-  padding: 2px 10px;
+  padding: 3px 10px 0px 10px;
   background-color: #DE3B39;
   color: #F5F5F5;
   line-height: 100%;
@@ -4402,6 +4404,7 @@ main {
 }
 
 .m-wideCard .m-wideCard__inner .m-wideCard__inner__right .m-wideCard__inner__right__topper .m-wideCard__inner__right__topper__new {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   color: #A3A3A3;
   display: -webkit-box;
@@ -4411,7 +4414,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 5px;
-  padding: 2px 10px;
+  padding: 3px 10px 0px 10px;
   background-color: #DE3B39;
   color: #F5F5F5;
   line-height: 100%;
