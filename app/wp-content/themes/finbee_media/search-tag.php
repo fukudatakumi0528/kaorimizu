@@ -31,7 +31,7 @@
         'terms' => htmlspecialchars($_GET["s"]),
       ),
       array(
-        'taxonomy' => 'life_tag',
+        'taxonomy' => 'learn_tag',
         'field' => 'slug',
         'terms' => htmlspecialchars($_GET["s"]),
       )
