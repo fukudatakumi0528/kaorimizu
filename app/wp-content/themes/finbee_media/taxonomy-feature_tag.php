@@ -17,7 +17,7 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+				<img class="o-topperSection__main__title__icon feature" src="<?php echo assetsPath('img') ?>icon/category/category-icon-feature.svg" alt="特集">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">特集</h1>
 						<p class="o-topperSection__main__title__text__sub">Feature</p>

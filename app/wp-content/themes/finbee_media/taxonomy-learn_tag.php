@@ -17,13 +17,13 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+					<img class="o-topperSection__main__title__icon learn" src="<?php echo assetsPath('img') ?>icon/category/category-icon-learn.svg" alt="学び">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">学び</h1>
 						<p class="o-topperSection__main__title__text__sub">Learn</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">貯金や学習など、夢や目標に近づくヒントをお届けします。</div>
 			</div>
 		</div>
 	</section>

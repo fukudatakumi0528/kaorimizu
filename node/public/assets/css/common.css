@@ -1054,11 +1054,12 @@ main {
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__text strong {
   font-size: 1.4rem;
+  line-height: 100%;
 }
 
 .l-fixed-button .l-fixed-button__inner .l-fixed-button__inner__main .l-fixed-button__inner__main__button .l-fixed-button__inner__main__button__icon {
   margin-left: 1px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 @media (min-width: 768px) {
@@ -5066,6 +5067,15 @@ main {
   height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__icon.life {
+  height: 35px;
+  margin-bottom: 5px;
+}
+
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__icon.learn {
+  height: 35px;
 }
 
 .o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text {

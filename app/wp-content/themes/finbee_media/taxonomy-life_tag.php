@@ -17,13 +17,13 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/feature.png" alt="">
+					<img class="o-topperSection__main__title__icon life" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">生活</h1>
 						<p class="o-topperSection__main__title__text__sub">Life</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">生活や仕事など、暮らしをもっと楽しくするコンテンツをお届けします。</div>
 			</div>
 		</div>
 	</section>

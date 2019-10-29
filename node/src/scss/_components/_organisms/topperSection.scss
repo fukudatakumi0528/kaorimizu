@@ -15,6 +15,15 @@
       .o-topperSection__main__title__icon {
         height: 40px;
         object-fit: cover;
+
+        &.life {
+          height: 35px;
+          margin-bottom: 5px;
+        }
+
+        &.learn {
+          height: 35px;
+        }
       }
 
       .o-topperSection__main__title__text {

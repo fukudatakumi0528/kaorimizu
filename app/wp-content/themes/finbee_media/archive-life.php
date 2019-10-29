@@ -18,7 +18,7 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
+					<img class="o-topperSection__main__title__icon life" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">生活</h1>
 						<p class="o-topperSection__main__title__text__sub">Life</p>

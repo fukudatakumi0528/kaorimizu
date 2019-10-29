@@ -17,13 +17,13 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/hobby.png" alt="">
+				<img class="o-topperSection__main__title__icon hobby" src="<?php echo assetsPath('img') ?>icon/category/category-icon-hobby.svg" alt="趣味">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">趣味</h1>
 						<p class="o-topperSection__main__title__text__sub">Hobby</p>
 					</div>
 				</div>
-				<div class="o-topperSection__main__description">ヒト・モノ・コトをテーマにコラム・インタビュー記事などをお届けします。</div>
+				<div class="o-topperSection__main__description">趣味やスポーツなど、ジブンもやってみたくなるコンテンツをお届けします。</div>
 			</div>
 		</div>
 	</section>
