@@ -1845,8 +1845,8 @@ main {
 }
 
 .l-footer .l-footer__search .l-footer__search__inner .l-footer__search__inner__downlord .l-footer__search__inner__downlord__inner .l-footer__search__inner__downlord__inner__topper .l-footer__search__inner__downlord__inner__topper__link .l-footer__search__inner__downlord__inner__topper__link__button .l-footer__search__inner__downlord__inner__topper__link__button__AppStore {
-  height: 100%;
-  width: auto;
+  width: 135px;
+  height: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
