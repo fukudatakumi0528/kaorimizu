@@ -579,9 +579,15 @@
                 align-items: center;
     
                 .l-footer__search__inner__downlord__inner__topper__link__button__AppStore {
-    
                   height: 100%;
                   width: auto;
+                  transition: 0.2s;
+
+                  &:hover {
+                    opacity:0.5;
+                    transition: 0.2s;
+                  }
+      
     
                   a {
                     display: block;
@@ -592,7 +598,13 @@
                 .l-footer__search__inner__downlord__inner__topper__link__button__GooglePlay {
                   width: auto;
                   height: 100%;
-    
+                  transition: 0.2s;
+
+                  &:hover {
+                    opacity:0.5;
+                    transition: 0.2s;
+                  }
+
                   a {
                     display: block;
                     margin:0 -10px 0 -5px;

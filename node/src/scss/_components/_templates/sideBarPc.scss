@@ -101,6 +101,12 @@
 
           .t-sideBarPc__downlord__inner__main__link__AppStore {
             width: auto;
+            transition: 0.2s;
+
+            &:hover {
+              opacity:0.5;
+              transition: 0.2s;
+            }
 
             a {
               display: block;
@@ -110,6 +116,12 @@
 
           .t-sideBarPc__downlord__inner__main__link__GooglePlay {
             width: auto;
+            transition: 0.2s;
+
+            &:hover {
+              opacity:0.5;
+              transition: 0.2s;
+            }
 
             a {
               display: block;
