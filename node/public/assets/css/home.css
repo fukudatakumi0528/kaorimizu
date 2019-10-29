@@ -485,6 +485,16 @@ $font-xxl: 2rem;
   }
 }
 
+.p-top__featureHobby .p-top__featureHobby__bg.fewArticle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__bg.fewArticle {
+    display: block;
+  }
+}
+
 .p-top__featureHobby .m-titleBorder {
   padding: 0 15px;
   margin: 0 auto;
@@ -694,22 +704,28 @@ $font-xxl: 2rem;
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner {
+    margin: 0;
+  }
+}
+
 .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  background-color: #FFFFFF;
   padding: 4px 0;
 }
 
 @media (min-width: 768px) {
   .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer {
-    padding: 0;
+    padding: 16px;
   }
 }
 
-.p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__date {
-  display: block;
-  font-size: 1rem;
+@media (min-width: 768px) {
+  .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__topper {
+    margin-top: 0;
+  }
 }
 
 .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description {
@@ -724,7 +740,7 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-top__featureHobby .p-top__featureHobby__list .p-top__featureHobby__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
-    display: block;
+    display: -webkit-box;
   }
 }
 
@@ -1393,7 +1409,7 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-top__lifeLearn .p-top__lifeLearn__list .p-top__lifeLearn__list__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-verticallyCard__inner__footer__description .m-verticallyCard__inner__footer__description__text {
-    display: block;
+    display: -webkit-box;
   }
 }
 
