@@ -10,7 +10,7 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>common/icon/mail.png" alt="">
+					<img class="o-topperSection__main__title__icon contact" src="<?php echo assetsPath('img') ?>common/icon/mail.png" alt="">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">お問い合わせ</h1>
 						<p class="o-topperSection__main__title__text__sub">Contact</p>

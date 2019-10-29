@@ -5092,6 +5092,10 @@ main {
   height: 35px;
 }
 
+.o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__icon.contact {
+  height: 24px;
+}
+
 .o-topperSection .o-topperSection__main .o-topperSection__main__title .o-topperSection__main__title__text {
   margin-left: 5px;
   display: -webkit-box;
