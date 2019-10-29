@@ -78,6 +78,7 @@
           $terms = get_the_terms( $post_id, $the_tax );
 
           // タクソノミーが紐づいていれば表示
+          /*
           if ( $terms !== false ) {
 
             $child_terms  = array();  // 子を持たないタームだけを集める配列
@@ -126,6 +127,7 @@
                   '</a>'.
                 '</li>';
           }
+          */
 
           // 投稿自身の表示
           echo '<li><span>'. esc_html( strip_tags( $post_title ) ) .'</span></li>';
