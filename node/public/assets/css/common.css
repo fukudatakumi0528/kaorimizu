@@ -4832,14 +4832,6 @@ main {
   margin-left: 10px;
 }
 
-@media (min-width: 768px) {
-  .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner:hover {
-    background-color: rgba(255, 217, 74, 0.5);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-  }
-}
-
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__text {
   padding: 0px 10px;
   width: auto;
@@ -4874,11 +4866,27 @@ main {
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__icon img.search {
   width: 16px;
   height: auto;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__icon img.search.is-active {
+  width: 20px;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__icon img.star {
   width: 19px;
   height: auto;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__icon img.star.is-active {
+  width: 25px;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 .o-headerInnerPc .o-headerInnerPc__left .o-headerInnerPc__left__button .o-headerInnerPc__left__button__list .o-headerInnerPc__left__button__list__inner .o-headerInnerPc__left__button__list__inner__icon .o-headerInnerPc__left__button__list__inner__icon__triangle {

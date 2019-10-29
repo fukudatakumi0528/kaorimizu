@@ -142,14 +142,6 @@
             margin-left: 10px;
           }
   
-          &:hover {
-  
-            @include screen-large {
-              background-color: rgba($color: $bg-1-color, $alpha: 0.5);
-              transition: 0.2s;  
-            }
-          }
-  
           .o-headerInnerPc__left__button__list__inner__text {
             padding:0px 10px;
             width: auto;
@@ -179,11 +171,23 @@
               &.search {
                 width: 16px;
                 height: auto;  
+                transition: 0.15s;
+
+                &.is-active {
+                  width: 20px;
+                  transition: 0.15s;
+                }
               }
   
               &.star {
                 width: 19px;
                 height: auto;  
+                transition: 0.15s;  
+
+                &.is-active {
+                  width: 25px;
+                  transition: 0.15s;
+                }
               }
             }
   

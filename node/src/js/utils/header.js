@@ -9,18 +9,25 @@ export default class Header {
 	};
 
 	clickHeaderButton() {
+		//seachMenu,grantMenuのトリガー
 		const $headerInnerPcSearch = $('.js-headerInnerPc__search');
 		const $headerInnerPcGrant = $('.js-headerInnerPc__grant');
 
+		//seachMenu,grantMenu,mainMenu
 		const $spSearch = $('#js-spSearch');
 		const $spGrant = $('#js-spGrant');
 		const $spMenu = $('#js-spMenu');
 
+		//header,modalカバー
 		const $header = $('.l-header');
 		const $modalCover = $('.l-modalCover')
 
+		//メニューが出てきたときの三角吹き出し
 		const $seachTriangle = $('.js-headerInnerPc__search__triangle');
 		const $grantTriangle = $('.js-headerInnerPc__grant__triangle');
+
+		const $seachIcon = $('.js-headerInnerPc__search__icon');
+		const $grantIcon = $('.js-headerInnerPc__grant__icon');
 
 		//spSearchの出し入れ
 		function spSearchToggle() {
@@ -96,6 +103,8 @@ export default class Header {
 			}
 		}
 
+
+
 		//pcMenuが押された時
 		$(".js-headerInnerPc__Menu, .js-spMenu__close").on('click', function () {
 			spMenuToggle();
@@ -115,10 +124,13 @@ export default class Header {
 			headerToggle();
 		}); 
 
+
+
 		//pcSearchがhoverされた時
 		$headerInnerPcSearch.on('mouseover', function () {
 			$spSearch.addClass('is-active');
 			$modalCover.addClass('is-active');
+			$seachIcon.addClass('is-active');
 
 			//searchボタンがhoverされた時は、必ずspMenuは閉じている。
 			$spMenu.removeClass('is-active');
@@ -131,16 +143,20 @@ export default class Header {
 		}).on('mouseout', function () {
 			$spSearch.removeClass('is-active');
 			$modalCover.removeClass('is-active');
+			$seachIcon.removeClass('is-active');
 
 			$seachTriangle.removeClass('is-active');
 			$header.removeClass('is-active');
 		}); 
 
 
+
+
 		//pcGrantがhoverされた時
 		$headerInnerPcGrant.on('mouseover', function () {
 			$spGrant.addClass('is-active');
 			$modalCover.addClass('is-active');
+			$grantIcon.addClass('is-active');
 
 			//grantボタンがhoverされた時は、必ずspMenuは閉じている。
 			$spMenu.removeClass('is-active');
@@ -153,10 +169,13 @@ export default class Header {
 		}).on('mouseout', function () {
 			$spGrant.removeClass('is-active');
 			$modalCover.removeClass('is-active');
+			$grantIcon.removeClass('is-active');
 
 			$grantTriangle.removeClass('is-active');
 			$header.removeClass('is-active');
 		}); 
+
+
 
 		$modalCover.on('mouseover', function () {
 			$modalCover.removeClass('is-active');
