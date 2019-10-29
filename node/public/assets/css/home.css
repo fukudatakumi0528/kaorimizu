@@ -686,7 +686,7 @@ $font-xxl: 2rem;
     display: block;
     margin-top: 0;
     margin-left: 30px;
-    width: calc(calc(100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -933,7 +933,7 @@ $font-xxl: 2rem;
   .p-top__featureHobby .p-top__featureHobby__slider .p-top__featureHobby__slider__inner .m-verticallyCard:nth-child(-n+3) {
     display: block;
     margin-left: 30px;
-    width: calc(calc(100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -1362,7 +1362,7 @@ $font-xxl: 2rem;
     display: block;
     margin-left: 30px;
     margin-top: 0px;
-    width: calc(calc(100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 

@@ -574,7 +574,7 @@
             display: block;
             margin-top:0;
             margin-left: 30px;
-            width: calc(calc(100% - 60px) / 3);
+            width: calc((100% - 60px) / 3);
           }  
         }
 
@@ -808,7 +808,7 @@
           @include screen-large {
             display: block;
             margin-left: 30px;
-            width: calc(calc(100% - 60px) / 3);
+            width: calc((100% - 60px) / 3);
           }  
         }
 
@@ -1181,7 +1181,7 @@
             display: block;
             margin-left: 30px;
             margin-top:0px;
-            width: calc(calc(100% - 60px) / 3);
+            width: calc((100% - 60px) / 3);
           }  
         }
 
