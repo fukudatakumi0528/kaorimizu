@@ -55,7 +55,7 @@
     <ul class="o-classificationList">
       <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
         <li class="o-classificationList__tag">
-          <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+          <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
             <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
           </a>
         </li>

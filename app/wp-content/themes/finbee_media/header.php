@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<ul class="o-classificationList">
               <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 							<li class="o-classificationList__tag">
-                <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+                <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
                   <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
                 </a>
               </li>
@@ -407,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -480,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   foreach($uniqueTermsNameList as $uniqueTermsName):
                 ?>
                 <li class="o-classificationList__tag">
-                  <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+                  <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
                     <p class="o-classificationList__tag__link__inner">
                       <?= $uniqueTermsName?>
                     </p>
@@ -618,7 +618,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -691,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               foreach($uniqueTermsNameList as $uniqueTermsName):
         ?>
             <li class="o-classificationList__tag">
-              <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+              <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
                 <p class="o-classificationList__tag__link__inner">
                   <?= $uniqueTermsName?>
                 </p>

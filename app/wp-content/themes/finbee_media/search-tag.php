@@ -1,12 +1,4 @@
 <?php
-// GET値がタグ検索の場合、search_tag.phpを表示
-if($_GET["t"] === 'tag') {
-	include(TEMPLATEPATH . '/search-tag.php');
-	return false;
-};
-?>
-
-<?php
 	global $cssName;
 	global $scriptName;
 	$cssName = "search/index";
@@ -16,12 +8,43 @@ if($_GET["t"] === 'tag') {
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
 	
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
-	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
+  $endPageNumber = $startPageNumber + $wp_query->post_count - 1;
+  
+  $args = array(
+    'post_type' => array('feature', 'hobby', 'life', 'learn'),
+    'orderby' => 'post_date',
+    'tax_query' => array(
+      'relation'=>'OR',
+      array(
+        'taxonomy' => 'feature_tag',
+        'field' => 'slug',
+        'terms' => htmlspecialchars($_GET["s"]),
+      ),
+      array(
+        'taxonomy' => 'hobby_tag',
+        'field' => 'slug',
+        'terms' => htmlspecialchars($_GET["s"]),
+      ),
+      array(
+        'taxonomy' => 'life_tag',
+        'field' => 'slug',
+        'terms' => htmlspecialchars($_GET["s"]),
+      ),
+      array(
+        'taxonomy' => 'life_tag',
+        'field' => 'slug',
+        'terms' => htmlspecialchars($_GET["s"]),
+      )
+    )
+  );
+
+$post_list = new WP_Query($args);
+
 
 	get_header();
 ?>
 <main>
-	<section class="p-search__topper">
+  <section class="p-search__topper">
     <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
       <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
       <button class="icon-search" type="submit" id="s-btn-area"></button>
@@ -30,10 +53,10 @@ if($_GET["t"] === 'tag') {
 	<section class="p-search__main">
 		<div class="p-search__main__content">
 			<div class="p-search__main__content__column">
-        <?php if(have_posts() && get_search_query()): ?>         
+        <?php if($post_list->have_posts() && get_search_query()): ?>         
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category">
-						<p class="p-search__main__content__column__result__category__text"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果</p>
+						<p class="p-search__main__content__column__result__category__text"><strong>＃<?= esc_html( get_search_query( false ) ); ?></strong>タグが付いている記事</p>
           </div>
           <div class="p-search__main__content__column__result__number">
             <p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
@@ -42,22 +65,23 @@ if($_GET["t"] === 'tag') {
         <?php else: ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category nothing">
-						<p class="p-search__main__content__column__result__category__text nothing"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果が見つかりませんでした。</p>
+						<p class="p-search__main__content__column__result__category__text nothing"><strong>#<?= esc_html( get_search_query( false ) ); ?></strong>タグが付いている記事は見つかりませんでした。</p>
           </div>
         </div>
         <?php endif; ?>
 				<div class="o-verticallyCardList">
-					<?php
-            while(have_posts()): 
-            the_post();
-              
-						$singletags = search_tags($post->ID);
+          <?php          
+          
+          while($post_list->have_posts()): 
+          $post_list->the_post();
+            
+          $singletags = search_tags($post->ID);
 
-						if ( has_post_thumbnail($post->ID) ) {
-							$thumbnail =  get_the_post_thumbnail_url($post->ID);
-						} else {
-							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-						};
+          if ( has_post_thumbnail($post->ID) ) {
+            $thumbnail =  get_the_post_thumbnail_url($post->ID);
+          } else {
+            $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+          };
 	
 					?>
 						<article class="m-verticallyCard">
