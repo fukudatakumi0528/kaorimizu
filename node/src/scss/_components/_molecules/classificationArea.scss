@@ -8,27 +8,37 @@
   }
 
   .m-classificationArea__tag {
-    display: block;
+    display: flex;
     margin:5px 0 0 8px;
     font-size: $font-xxs;
-    color:$font-2-color;   
+    color:$font-2-color;
+    position: relative;
 
-    @include screen-large {
-      font-size: 11px;
-    } 
+    &:after{
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 1px;
+      background: $font-2-color;
+      transition: 0.2s;
+    }
 
     &:hover {
 
       @include screen-large {
-        color: $bg-1-color;
-      }
-
-      &::before {  
-        @include screen-large {
-          color: $bg-1-color;
+        &:after {
+          width: 100%;
         }    
-      }  
+      }
     }
+
+
+    @include screen-large {
+      font-size: 11px;
+    } 
 
     &::before {
       content:"#";

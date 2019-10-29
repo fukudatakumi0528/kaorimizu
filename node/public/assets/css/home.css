@@ -1001,10 +1001,6 @@ $font-xxl: 2rem;
   }
 }
 
-.p-top__featureHobby .p-top__featureHobby__slider .p-top__featureHobby__slider__inner .m-verticallyCard .m-verticallyCard__inner .m-verticallyCard__inner__footer .m-classificationArea {
-  margin-bottom: 0;
-}
-
 .p-top__featureHobby .p-top__featureHobby__slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
