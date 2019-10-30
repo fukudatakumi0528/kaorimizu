@@ -54,7 +54,7 @@
 				<ul class="o-classificationList">
 					<?php foreach($rankingPopularTags as $rankingPopularTag): ?>
 						<li class="o-classificationList__tag">
-							<a class="o-classificationList__tag__link" href="">
+							<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$rankingPopularTag->name .'&t=tag' ?>">
 								<p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
 							</a>
 						</li>
