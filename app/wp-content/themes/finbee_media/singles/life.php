@@ -92,7 +92,7 @@
 										</div>
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
-												<p class="article__prevnext__main__content__topper__text prev">次の記事</p>
+												<p class="article__prevnext__main__content__topper__text prev">前の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
 												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>
@@ -108,7 +108,7 @@
 									<a class="article__prevnext__main" href="<?= $next_post_url ?>">
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
-												<p class="article__prevnext__main__content__topper__text next">前の記事</p>
+												<p class="article__prevnext__main__content__topper__text next">次の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
 												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
