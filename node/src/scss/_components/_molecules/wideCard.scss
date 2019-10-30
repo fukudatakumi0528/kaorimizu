@@ -141,9 +141,9 @@
 
         @include screen-large {
           font-size: 15px;
-          -webkit-line-clamp: 3; 
+          -webkit-line-clamp: 4; 
           @media all and (-ms-high-contrast: none){
-            max-height: calc(15px * 1.5 * 3);
+            max-height: calc(15px * 1.5 * 4);
           }
           overflow: hidden;
         }    

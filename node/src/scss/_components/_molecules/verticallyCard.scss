@@ -139,9 +139,9 @@
         @include screen-large {
           font-size: 15px;
           @media all and (-ms-high-contrast: none){
-            max-height: calc(13px * 1.5 * 3);
+            max-height: calc(13px * 1.5 * 4);
           }
-          -webkit-line-clamp: 3; 
+          -webkit-line-clamp: 4; 
         }
       }
     }

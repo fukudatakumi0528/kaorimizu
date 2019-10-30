@@ -239,9 +239,9 @@
 
                 @include screen-large {
                   font-size: 20px;
-                  -webkit-line-clamp: 3; 
+                  -webkit-line-clamp: 5; 
                   @media all and (-ms-high-contrast: none){
-                    max-height: calc(20px * 1.5 * 3);
+                    max-height: calc(20px * 1.5 * 5);
                   }
                   overflow: hidden;         
                 }  
