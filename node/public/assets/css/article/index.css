@@ -160,7 +160,7 @@ $font-xxl: 2rem;
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner .p-article__main__content__refine__inner__selectArea {
-  display: block;
+  display: none;
   height: auto;
 }
 
