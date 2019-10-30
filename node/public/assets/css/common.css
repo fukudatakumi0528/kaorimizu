@@ -3663,7 +3663,7 @@ main {
 
 /* IE11 */
 _:-ms-lang(x)::-ms-backdrop, .m-selectboxArea__under__input {
-  color: #262626;
+  color: #262626 !important;
 }
 
 .m-squareCard {
