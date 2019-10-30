@@ -302,6 +302,20 @@ $font-xxl: 2rem;
   line-height: 170%;
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3::before {
+  content: "";
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  line-height: 34px;
+  background-color: #FFD94A;
+  margin-right: 5px;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 span {
+  display: inline;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h4 {
   margin-top: 20px;
   font-size: 18px;
