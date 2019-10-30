@@ -13,7 +13,7 @@ function my_validation_rule_job( $Validation, $data, $Data ) {
 	// メールアドレス + 確認
 	$Validation->set_rule( 'email', 'noEmpty', array( 'message' => '正しく入力してください' ) );
 	$Validation->set_rule( 'email', 'mail', array( 'message' => 'メールアドレスの形式ではありません' ) );
-	$Validation->set_rule( 'email-conf', 'noEmpty', array( 'message' => '必須項目を入力してください' ) );
+	$Validation->set_rule( 'email-conf', 'noEmpty', array( 'message' => '正しく入力してください' ) );
 	$Validation->set_rule( 'email-conf', 'mail', array( 'message' => 'メールアドレスの形式ではありません' ) );
 	$Validation->set_rule( 'email-conf', 'eq', array( 'target' => 'email', 'message' => 'メールアドレスが一致しません') );
 	// 電話番号
