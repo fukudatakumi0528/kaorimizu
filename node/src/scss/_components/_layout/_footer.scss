@@ -365,10 +365,11 @@
 
           .l-footer__about__inner__footer__list__item {
             height: 20px;
-            margin-left: 15px;
+            margin-left: 17px;
 
             @include screen-large {
               width: 20px;
+              margin-left: 15px;
               display: flex;
               justify-content: center;
               align-items: flex-end;
@@ -389,7 +390,7 @@
             }
 
             img {
-              height: 15px;
+              height: 17px;
               transition: 0.2s;
             }
           }

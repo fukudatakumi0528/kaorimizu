@@ -1560,12 +1560,13 @@ main {
 
 .l-footer .l-footer__about .l-footer__about__inner .l-footer__about__inner__footer .l-footer__about__inner__footer__list .l-footer__about__inner__footer__list__item {
   height: 20px;
-  margin-left: 15px;
+  margin-left: 17px;
 }
 
 @media (min-width: 768px) {
   .l-footer .l-footer__about .l-footer__about__inner .l-footer__about__inner__footer .l-footer__about__inner__footer__list .l-footer__about__inner__footer__list__item {
     width: 20px;
+    margin-left: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1591,7 +1592,7 @@ main {
 }
 
 .l-footer .l-footer__about .l-footer__about__inner .l-footer__about__inner__footer .l-footer__about__inner__footer__list .l-footer__about__inner__footer__list__item img {
-  height: 15px;
+  height: 17px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
