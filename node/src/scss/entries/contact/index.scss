@@ -7,10 +7,10 @@
   @include screen-large{
     margin-top:80px;
   }
-  
+
   .o-topperSection {
     padding:40px 20px 40px 20px;
-    background-color: $bg-1-color;  
+    background-color: $bg-1-color;
 
     @include screen-large {
       padding:50px 20px 50px 20px;
@@ -48,49 +48,49 @@
 
         .m-inputArea {
           margin-top:30px;
-    
+
           @include screen-large {
             margin-top: 60px;
           }
         }
-    
+
         .m-selectboxArea {
           margin-top:30px;
-    
+
           @include screen-large {
             margin-top: 60px;
           }
         }
-    
+
         .m-textareaArea {
           margin-top:30px;
-    
+
           @include screen-large {
             margin-top: 60px;
           }
         }
-    
+
         .p-contact__main__input__radiobutton {
           margin-top:30px;
           display: flex;
           flex-direction: column;
-    
+
           @include screen-large {
             flex-direction: row;
             align-items: flex-start;
             margin-top: 60px;
           }
-    
+
           .p-contact__main__input__radiobutton__topper {
             display: flex;
             align-items: center;
-    
+
             @include screen-large {
               width: 30%;
               min-width: 300px;
               align-items: flex-start;
             }
-    
+
             .p-contact__main__input__radiobutton__topper__required {
               background-color: $bg-4-color;
               color: $bg-6-color;
@@ -105,14 +105,19 @@
               line-height: 100%;
               white-space: nowrap;
             }
-    
+
             .p-contact__main__input__radiobutton__topper__title {
               font-size: $font-s;
               font-weight: $font-bold;
               line-height: 100%;
+
+							@include screen-large() {
+								position: relative;
+								top: 2px;
+							}
             }
           }
-    
+
           .p-contact__main__input__radiobutton__under {
             margin-top:8px;
             width: 100%;
@@ -165,7 +170,7 @@
             }
           }
         }
-    
+
         .p-contact__main__input__email {
           display: none;
           &.is-active {
@@ -179,17 +184,17 @@
           }
         }
       }
-    
+
       .p-contact__main__checkbox {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
-    
+
         @include screen-large {
           margin-top:60px;
         }
-    
-    
+
+
         .error {
           padding:5px 10px;
           border-radius: 1px;
@@ -201,19 +206,22 @@
           margin-top: 10px;
           display: block;
         }
-    
-    
-    
+
+
+
         .p-contact__main__checkbox__topper {
           display: flex;
           align-items: flex-start;
-    
-    
+
+
           .mwform-checkbox-field {
             position: relative;
+            input {
+	            display: none;
+            }
           }
-    
-    
+
+
           input {
             &:checked {
               & + .mwform-checkbox-field-text {
@@ -223,10 +231,10 @@
               }
             }
           }
-    
-    
+
+
           .mwform-checkbox-field-text {
-            margin-right: 8px;
+            margin-right: 5px;
             &::before {
               content: "";
               display: inline-block;
@@ -249,13 +257,13 @@
               pointer-events: none;
               opacity: 0;
               transition: all .2s ease;
-    
+
             }
           }
-    
+
           .mwform-checkbox-field-text2 {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             position: relative;
             top: 1px;
             a {
@@ -264,10 +272,10 @@
               margin-right: 3px;
             }
           }
-    
-    
-    
-    
+
+
+
+
           .p-contact__main__checkbox__topper__required {
             background-color: $bg-4-color;
             color: $bg-6-color;
@@ -284,8 +292,8 @@
             position: relative;
             top: -1px;
           }
-    
-    
+
+
           .p-contact__main__checkbox__topper__title {
             margin-left: 5px;
             font-size: $font-s;
@@ -298,16 +306,16 @@
             }
           }
         }
-    
+
         .p-contact__main__checkbox__validation {
           margin-top:3px;
           width: 100%;
           padding-left:10px;
-    
+
           @include screen-large {
             padding:0;
           }
-    
+
           .p-contact__main__checkbox__validation__text {
             padding:5px 10px;
             border-radius: 1px;
@@ -316,7 +324,7 @@
             font-size: $font-xs;
             font-weight: $font-bold;
             line-height: 150%;
-    
+
             br {
               @include screen-large {
                 display: none;
@@ -325,7 +333,7 @@
           }
         }
       }
-    
+
       .m-wideButton {
         //margin-top:30px;
       }

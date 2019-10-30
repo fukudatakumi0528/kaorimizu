@@ -158,6 +158,13 @@ $font-xxl: 2rem;
   line-height: 100%;
 }
 
+@media (min-width: 768px) {
+  .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__topper .p-contact__main__input__radiobutton__topper__title {
+    position: relative;
+    top: 2px;
+  }
+}
+
 .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__input .p-contact__main__input__radiobutton .p-contact__main__input__radiobutton__under {
   margin-top: 8px;
   width: 100%;
@@ -280,12 +287,16 @@ $font-xxl: 2rem;
   position: relative;
 }
 
+.p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field input {
+  display: none;
+}
+
 .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__checkbox .p-contact__main__checkbox__topper input:checked + .mwform-checkbox-field-text::after {
   opacity: 1;
 }
 
 .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text {
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text::before {
@@ -316,7 +327,7 @@ $font-xxl: 2rem;
 
 .p-contact__main .p-contact__main__bg .p-contact__main__inner .p-contact__main__checkbox .p-contact__main__checkbox__topper .mwform-checkbox-field-text2 {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   position: relative;
   top: 1px;
 }

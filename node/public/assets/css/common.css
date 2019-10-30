@@ -3010,6 +3010,8 @@ main {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    position: relative;
+    top: 14px;
   }
 }
 
@@ -3038,15 +3040,25 @@ main {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 100%;
-  position: relative;
-  top: 2px;
+}
+
+@media (min-width: 768px) {
+  .m-inputArea .m-inputArea__topper .m-inputArea__topper__title {
+    position: relative;
+    top: 2px;
+  }
 }
 
 .m-inputArea .m-inputArea__under {
   margin-top: 8px;
   width: 100%;
-  padding-left: 10px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .m-inputArea .m-inputArea__under {
+    padding-left: 10px;
+  }
 }
 
 .m-inputArea .m-inputArea__under_validationwrap {
@@ -3500,6 +3512,8 @@ main {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    position: relative;
+    top: 14px;
   }
 }
 
@@ -3528,27 +3542,25 @@ main {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 100%;
-  position: relative;
-  top: 2px;
+}
+
+@media (min-width: 768px) {
+  .m-selectboxArea .m-selectboxArea__topper .m-selectboxArea__topper__title {
+    position: relative;
+    top: 2px;
+  }
 }
 
 .m-selectboxArea .m-selectboxArea__under {
   margin-top: 8px;
   width: 100%;
-  padding-left: 10px;
   position: relative;
-  /*
-		&_validationtext {
-			padding:5px 10px;
-      border-radius: 1px;
-      background-color: $bg-14-color;
-      color:$bg-4-color;
-      font-size: $font-xs;
-      font-weight: $font-bold;
-      line-height: 150%;
-      margin-top: 10px;
-		}
-*/
+}
+
+@media (min-width: 768px) {
+  .m-selectboxArea .m-selectboxArea__under {
+    padding-left: 10px;
+  }
 }
 
 .m-selectboxArea .m-selectboxArea__under_validationwrap {
@@ -3654,6 +3666,11 @@ main {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 150%;
+}
+
+/* IE11 */
+_:-ms-lang(x)::-ms-backdrop, .m-selectboxArea__under__input {
+  color: #262626;
 }
 
 .m-squareCard {
@@ -3967,13 +3984,11 @@ main {
 .m-textareaArea .m-textareaArea__under {
   margin-top: 8px;
   width: 100%;
-  padding-left: 10px;
 }
 
 @media (min-width: 768px) {
   .m-textareaArea .m-textareaArea__under {
     margin-top: 16px;
-    padding: 0;
   }
 }
 

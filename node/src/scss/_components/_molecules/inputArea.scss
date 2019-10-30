@@ -10,11 +10,12 @@
   .m-inputArea__topper {
     display: flex;
     align-items: center;
-
     @include screen-large {
       width: 30%;
       min-width: 300px;
       align-items: flex-start;
+      position: relative;
+      top: 14px;
     }
 
 
@@ -37,16 +38,21 @@
       font-size: $font-s;
       font-weight: $font-bold;
       line-height: 100%;
-      position: relative;
-      top: 2px;
+
+      @include screen-large() {
+      	position: relative;
+				top: 2px;
+      }
     }
   }
 
   .m-inputArea__under {
     margin-top:8px;
     width: 100%;
-    padding-left:10px;
     position: relative;
+    @include screen-large() {
+    	padding-left:10px;
+    }
 
 
 		&_validationwrap {
