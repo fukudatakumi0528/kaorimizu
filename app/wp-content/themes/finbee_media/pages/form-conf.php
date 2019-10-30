@@ -22,9 +22,13 @@
 		</div>
 	</section>
 	<section class="p-contact__main">
-		<?php if(have_posts()): while(have_posts()): the_post(); ?>
-			<?php the_content() ?>
-		<?php endwhile; endif; ?>
+		<div class="p-contact__main__bg">
+			<div class="p-contact__main__inner">
+				<?php if(have_posts()): while(have_posts()): the_post(); ?>
+					<?php the_content() ?>
+				<?php endwhile; endif; ?>
+			</div>
+		</div>
 	</section>
 </main>
 <?php get_footer() ?>
