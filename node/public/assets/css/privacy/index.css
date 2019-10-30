@@ -28,6 +28,12 @@ $font-xxl: 2rem;
   background-color: #F5F5F5;
 }
 
+@media (min-width: 768px) {
+  .p-privacy__main {
+    padding-bottom: 40px;
+  }
+}
+
 .p-privacy__main .p-privacy__main__bg {
   width: 100%;
   max-width: 1100px;

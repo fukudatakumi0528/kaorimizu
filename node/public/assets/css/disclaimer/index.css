@@ -28,6 +28,12 @@ $font-xxl: 2rem;
   background-color: #F5F5F5;
 }
 
+@media (min-width: 768px) {
+  .p-disclaimer__main {
+    padding-bottom: 40px;
+  }
+}
+
 .p-disclaimer__main .p-disclaimer__main__bg {
   width: 100%;
   max-width: 1100px;

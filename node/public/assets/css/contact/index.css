@@ -31,6 +31,12 @@ $font-xxl: 2rem;
   display: flex;
 }
 
+@media (min-width: 768px) {
+  .p-contact__main {
+    padding-bottom: 40px;
+  }
+}
+
 .p-contact__main .p-contact__main__bg {
   width: 100%;
   max-width: 1100px;
