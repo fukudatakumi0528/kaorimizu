@@ -311,6 +311,7 @@ $font-xxl: 2rem;
   background-color: #FFD94A;
   margin-right: 5px;
   margin-left: 2px;
+  margin-bottom: 1px;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 span {
