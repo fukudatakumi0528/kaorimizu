@@ -3,6 +3,12 @@
 @import "../_utils/_variables";
 @import "../_utils/_mixins";
 
+.p-top{
+  @include screen-large {
+    padding-bottom:120px;
+  }
+}
+
 .p-top__kv {
   margin-top: 40px;
   width: 100%;
@@ -1345,11 +1351,3 @@
       
   }
 }
-
-.l-footer {
-
-  @include screen-large {
-    margin-top:120px;
-  }
-}
-

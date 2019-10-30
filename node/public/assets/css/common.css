@@ -1076,12 +1076,6 @@ main {
   margin-left: 0px;
 }
 
-@media (min-width: 768px) {
-  .l-footer {
-    margin-top: 35px;
-  }
-}
-
 .l-footer .l-footer__downlord {
   width: 100%;
 }
@@ -2823,7 +2817,6 @@ main {
 }
 
 .m-breadcrumb {
-  margin-top: 60px;
   background-color: #EEEEEE;
   display: -webkit-box;
   display: -ms-flexbox;

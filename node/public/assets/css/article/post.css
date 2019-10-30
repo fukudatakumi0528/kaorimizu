@@ -12,17 +12,17 @@ $font-xxl: 2rem;
   background-color: #F5F5F5;
 }
 
-@media (min-width: 768px) {
-  .p-articlePost {
-    padding-bottom: 90px;
-  }
-}
-
 .p-articlePost .p-articlePost__inner {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner {
+    padding-bottom: 90px;
+  }
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__topper {

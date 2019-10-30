@@ -59,6 +59,7 @@ $font-xxl: 2rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-bottom: 60px;
   }
 }
 
@@ -247,6 +248,12 @@ $font-xxl: 2rem;
   margin-top: 50px;
   width: 100%;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .p-search__footer {
+    margin-top: 0;
+  }
 }
 
 .p-search__footer .m-titleBorder {
