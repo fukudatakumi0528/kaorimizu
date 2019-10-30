@@ -169,7 +169,11 @@
 		if($query->have_posts() || $topFeature):
 	?>
 	<section class="p-top__featureHobby">
-		<div class="p-top__featureHobby__bg"></div>
+		<?php if(count($query->posts) < 5):?>
+			<div class="p-top__featureHobby__bg fewArticle"></div>
+		<?php else: ?>
+			<div class="p-top__featureHobby__bg"></div>
+		<?php endif; ?>		
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
@@ -364,7 +368,11 @@
 		if($query->have_posts() || $topHobby):
 	?>
 	<section class="p-top__featureHobby">
-		<div class="p-top__featureHobby__bg"></div>
+		<?php if(count($query->posts) < 5):?>
+			<div class="p-top__featureHobby__bg fewArticle"></div>
+		<?php else: ?>
+			<div class="p-top__featureHobby__bg"></div>
+		<?php endif; ?>		
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
