@@ -84,13 +84,13 @@
                 <span class="icon-arrow"></span>
               </div>
               <div class="l-footer__about__inner__footer__list">
-                <a class="l-footer__about__inner__footer__list__item instagram" href="" target= _blank>
+                <a class="l-footer__about__inner__footer__list__item instagram" href="https://www.instagram.com/be_topia/" target= _blank>
                   <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
                 </a>
-                <a class="l-footer__about__inner__footer__list__item twitter" href="" target= _blank>
+                <a class="l-footer__about__inner__footer__list__item twitter" href="https://twitter.com/be_topia" target= _blank>
                   <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
                 </a>
-                <a class="l-footer__about__inner__footer__list__item facebook" href="" target= _blank>
+                <a class="l-footer__about__inner__footer__list__item facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
                   <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
                 </a>
               </div>

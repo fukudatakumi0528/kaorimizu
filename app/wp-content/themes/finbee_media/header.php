@@ -21,13 +21,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 				</a>
 				<div class="o-headerInner__left">
-					<a class="o-headerInner__left__list instagram" href="" target= _blank>
+					<a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
           </a>
-					<a class="o-headerInner__left__list twitter" href="" target= _blank>
+					<a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
           </a>
-					<a class="o-headerInner__left__list facebook" href="" target= _blank>
+					<a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
           </a>
 				</div>
@@ -64,9 +64,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
               </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -264,13 +264,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInner__left">
-              <a class="o-headerInner__left__list instagram" href="" target= _blank>
+              <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
               </a>
-              <a class="o-headerInner__left__list twitter" href="" target= _blank>
+              <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
               </a>
-              <a class="o-headerInner__left__list facebook" href="" target= _blank>
+              <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
               </a>
             </div>
@@ -307,9 +307,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
               </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -458,13 +458,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="o-headerInner"><a class="m-logo" href="<?= site_url() ?>">
             <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInner__left">
-              <a class="o-headerInner__left__list instagram" href="" target= _blank>
+              <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
               </a>
-              <a class="o-headerInner__left__list twitter" href="" target= _blank>
+              <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
               </a>
-              <a class="o-headerInner__left__list facebook" href="" target= _blank>
+              <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
               </a>
             </div>
@@ -499,9 +499,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
               </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -650,13 +650,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 			</a>
 			<div class="o-headerInner__left">
-        <a class="o-headerInner__left__list instagram" href="" target= _blank>
+        <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
         </a>
-        <a class="o-headerInner__left__list twitter" href="" target= _blank>
+        <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
         </a>
-        <a class="o-headerInner__left__list facebook" href="" target= _blank>
+        <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
         </a>
 			</div>
@@ -733,13 +733,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</ul>
 				<div class="o-headerInnerPc__left__icon">
           <div class="o-headerInnerPc__left__icon__list">
-            <a class="o-headerInnerPc__left__icon__list__item instagram" href=""target= _blank >
+            <a class="o-headerInnerPc__left__icon__list__item instagram" href="https://www.instagram.com/be_topia/"target= _blank >
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
             </a>
-            <a class="o-headerInnerPc__left__icon__list__item twitter" href="" target= _blank>
+            <a class="o-headerInnerPc__left__icon__list__item twitter" href="https://twitter.com/be_topia" target= _blank>
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
             </a>
-            <a class="o-headerInnerPc__left__icon__list__item facebook" href="" target= _blank>
+            <a class="o-headerInnerPc__left__icon__list__item facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
             </a>
             <div class="o-headerInnerPc__left__icon__list__item search js-headerInnerPc__Menu">
