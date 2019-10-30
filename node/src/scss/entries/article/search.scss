@@ -204,9 +204,11 @@
   margin-top:50px;
   width: 100%;
   overflow:hidden;
+  padding-bottom:60px;
 
   @include screen-large {
     margin-top:0px;
+    padding-bottom:0px;
   }
 
   .m-titleBorder {

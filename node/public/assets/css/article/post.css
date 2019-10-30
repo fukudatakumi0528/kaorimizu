@@ -1112,8 +1112,16 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer {
   margin-top: 50px;
+  padding-bottom: 60px;
   width: 100%;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer {
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .m-titleBorder {

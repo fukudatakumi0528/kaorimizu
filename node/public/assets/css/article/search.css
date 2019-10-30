@@ -243,11 +243,13 @@ $font-xxl: 2rem;
   margin-top: 50px;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
   .p-articleSearch__footer {
     margin-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
