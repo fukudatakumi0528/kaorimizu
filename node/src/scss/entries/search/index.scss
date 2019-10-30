@@ -48,6 +48,7 @@
     display: flex;
     margin-top:30px;
     justify-content: space-between;
+    padding-bottom:60px;
   }
 
   .p-search__main__content {
@@ -206,8 +207,14 @@
 
 .p-search__footer {
   margin-top:50px;
+  padding-bottom:60px;
   width: 100%;
   overflow:hidden;
+
+  @include screen-large {
+    margin-top:0;
+    padding-bottom:0px;
+  }
 
   .m-titleBorder {
     padding:0 15px;

@@ -24,8 +24,8 @@
   background-color: $bg-3-color;
 
   @include screen-large {
-		padding-bottom:90px;
-	}
+    padding-bottom:40px;
+  }
 
   .p-disclaimer__main__bg {
     width: 100%;
@@ -34,7 +34,7 @@
     background-color:$bg-6-color;
 
     .p-disclaimer__main__inner {
-      padding:30px 15px;
+      padding:30px 15px 60px 15px;
       margin: 0 auto;
       width: 100%;
       max-width: 700px;

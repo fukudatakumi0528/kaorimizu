@@ -24,8 +24,8 @@
   display: flex;
 
   @include screen-large {
-		padding-bottom:90px;
-	}
+    padding-bottom:40px;    
+  }
 
   .p-contact__main__bg {
     width: 100%;

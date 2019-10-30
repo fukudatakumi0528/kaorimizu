@@ -46,6 +46,7 @@ $font-xxl: 2rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-bottom: 90px;
   }
 }
 
@@ -242,6 +243,14 @@ $font-xxl: 2rem;
   margin-top: 50px;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .p-articleSearch__footer {
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .p-articleSearch__footer .m-titleBorder {

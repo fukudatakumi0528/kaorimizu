@@ -33,7 +33,7 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-contact__main {
-    padding-bottom: 90px;
+    padding-bottom: 40px;
   }
 }
 

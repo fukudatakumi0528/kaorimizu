@@ -7,8 +7,9 @@
 .p-articlePost {
 	width: 100%;
 	background-color:$bg-3-color;
+
 	@include screen-large {
-		padding-bottom:90px;
+		padding-bottom: 40px;
 	}
 
 	.p-articlePost__inner {
@@ -16,6 +17,10 @@
 		max-width: 1100px;
 		margin:0 auto;
 		background-color:$bg-6-color;
+
+		@include screen-large {
+			padding-bottom:90px;
+		}	
 
 		.p-articlePost__inner__topper {
 			display: none;
@@ -985,8 +990,14 @@
 
 		.p-articlePost__inner__footer {
 			margin-top:50px;
+			padding-bottom:60px;
 			width: 100%;
 			overflow:hidden;
+
+			@include screen-large {
+				margin-top:0px;
+				padding-bottom:0px;	
+			}
 
 			.m-titleBorder {
 				padding:0 15px;
