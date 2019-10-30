@@ -5,6 +5,7 @@ import FixedButton from '../utils/fixedButton';
 import SliderTab from '../utils/sliderTab';
 import Refine from '../utils/refine';
 import Contact from '../utils/contact';
+import Sidebar from '../utils/sidebar';
 
 // ヘッダーメニュー
 const header = new Header();
@@ -29,6 +30,11 @@ fixedButton.clickMenu();
 //ランキングスライダーの入れ替え
 const sliderTab = new SliderTab();
 sliderTab.clickTab();
+
+//サイドバーの追従
+const sidebar = new Sidebar();
+sidebar.sticky();
+
 
 //追従ボタン
 const refine = new Refine();
