@@ -21,6 +21,7 @@
 .p-contact__main {
   width: 100%;
   background-color: $bg-3-color;
+  display: flex;
 
   @include screen-large {
 		padding-bottom:90px;

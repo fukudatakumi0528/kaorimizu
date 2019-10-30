@@ -26,6 +26,9 @@ $font-xxl: 2rem;
 .p-contact__main {
   width: 100%;
   background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 768px) {
