@@ -7,7 +7,7 @@
 <main>
 	<section class="p-404__main">
 		<img class="p-404__main__img" src="<?php echo assetsPath('img') ?>404/404.png" alt="">
-			<p class="p-404__main__description">指定されたULRのページは存在しませんが、<br class="is-onlySp">あなたにぴったりの楽しい記事はきっとあります。<br>人気のキーワードから見つけてみてください。</p>
+			<p class="p-404__main__description">指定されたURLのページは存在しませんが、<br class="is-onlySp">あなたにぴったりの楽しい記事はきっとあります。<br>人気のキーワードから見つけてみてください。</p>
 		</section>
 		<section class="p-404__footer">
 			<?php 
