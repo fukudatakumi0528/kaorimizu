@@ -31,7 +31,7 @@
 		<div class="p-articleSearch__main__content">
 			<div class="p-articleSearch__main__content__refine">
 				<div class="p-articleSearch__main__content__refine__inner">
-					<div class="p-articleSearch__main__content__refine__inner__header">
+					<div class="p-articleSearch__main__content__refine__inner__header js-refine__click">
 						<div class="p-articleSearch__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
 						<div class="p-articleSearch__main__content__refine__inner__header__icon js-refine__icon">
 							<span class="p-articleSearch__main__content__refine__inner__header__icon__line"></span>

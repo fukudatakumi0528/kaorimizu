@@ -107,6 +107,7 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner .p-article__main__content__refine__inner__header .p-article__main__content__refine__inner__header__title {

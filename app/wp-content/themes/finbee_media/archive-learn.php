@@ -33,7 +33,7 @@
 			<?php if($wp_query->have_posts()): ?>
 			<div class="p-article__main__content__refine">
 				<div class="p-article__main__content__refine__inner">
-					<div class="p-article__main__content__refine__inner__header">
+					<div class="p-article__main__content__refine__inner__header js-refine__click">
 						<div class="p-article__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
 						<div class="p-article__main__content__refine__inner__header__icon js-refine__icon">
 							<span class="p-article__main__content__refine__inner__header__icon__line"></span>
