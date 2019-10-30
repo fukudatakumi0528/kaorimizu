@@ -304,6 +304,7 @@ $font-xxl: 2rem;
 
 .p-top__kv .p-top__kv__slider .slick-list.draggable .m-squareCard.slick-slide .m-squareCard__inner .m-squareCard__inner__footer .m-squareCard__inner__footer__title .m-squareCard__inner__footer__title__text {
   font-weight: 700;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
