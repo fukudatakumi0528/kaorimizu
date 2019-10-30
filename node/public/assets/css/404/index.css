@@ -47,8 +47,10 @@ $font-xxl: 2rem;
   line-height: 180%;
 }
 
-.p-404__main .p-404__main__description br.is-onlySp {
-  display: none;
+@media (min-width: 768px) {
+  .p-404__main .p-404__main__description br.is-onlySp {
+    display: none;
+  }
 }
 
 .p-404__footer {

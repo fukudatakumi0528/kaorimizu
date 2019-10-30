@@ -30,7 +30,10 @@
     line-height: 180%;
 
     br.is-onlySp {
-      display:none;
+
+      @include screen-large {
+        display:none;
+      }
     }
   }
 }
