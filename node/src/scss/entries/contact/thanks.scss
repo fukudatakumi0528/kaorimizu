@@ -11,7 +11,7 @@
   padding:0 15px;
 
   @include screen-large {
-    margin-top:120px;
+    margin-top:170px;
   }
 
   .p-contactThanks__main__topper {
@@ -21,6 +21,10 @@
 
     .icon-check2 {
       font-size: 30px;
+
+      @include screen-large {
+        font-size: 45px;
+      }
     }
 
     .p-contactThanks__main__topper__title {
@@ -29,6 +33,11 @@
       font-weight: $font-bold;
       line-height: 150%;
       background: linear-gradient(transparent 60%, $bg-1-color 40%);
+
+      @include screen-large {
+        font-size: 22px;
+        margin-top:15px;
+      }
 
       &.is-onlySp {
         display: block;

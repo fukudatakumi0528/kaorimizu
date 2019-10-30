@@ -23,7 +23,7 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-contactThanks__main {
-    margin-top: 120px;
+    margin-top: 170px;
   }
 }
 
@@ -44,6 +44,12 @@ $font-xxl: 2rem;
   font-size: 30px;
 }
 
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .icon-check2 {
+    font-size: 45px;
+  }
+}
+
 .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title {
   text-align: center;
   font-size: 2rem;
@@ -51,6 +57,13 @@ $font-xxl: 2rem;
   line-height: 150%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #FFD94A));
   background: linear-gradient(transparent 60%, #FFD94A 40%);
+}
+
+@media (min-width: 768px) {
+  .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title {
+    font-size: 22px;
+    margin-top: 15px;
+  }
 }
 
 .p-contactThanks__main .p-contactThanks__main__topper .p-contactThanks__main__topper__title.is-onlySp {
