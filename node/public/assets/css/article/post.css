@@ -280,6 +280,14 @@ $font-xxl: 2rem;
   -ms-flex-align: center;
   align-items: center;
   color: #262626;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .counter-hierarchy nav .ez-toc-list li a:hover {
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 {
@@ -357,6 +365,8 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body a {
   color: #285486;
   text-decoration: underline;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body a[target="_blank"]:after {
@@ -364,6 +374,12 @@ $font-xxl: 2rem;
   content: "\f24d";
   font-family: FontAwesome;
   display: inline-block;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body a:hover {
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body img {

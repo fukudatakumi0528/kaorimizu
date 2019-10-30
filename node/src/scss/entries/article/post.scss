@@ -234,6 +234,12 @@
 												display: flex;
 												align-items: center;
 												color:$font-base-color;
+												transition: 0.2s;
+
+												&:hover {
+													text-decoration: none;
+													transition: 0.2s;
+												}
 											}
 										}
 									}
@@ -311,6 +317,7 @@
 							a {
 								color:$font-2-color;
 								text-decoration: underline;
+								transition: 0.2s;
 
 								&[target="_blank"] {
 
@@ -320,6 +327,11 @@
 										font-family: FontAwesome;
 										display: inline-block;
 									}
+								}
+
+								&:hover {
+									text-decoration: none;
+									transition: 0.2s;
 								}
 							}
 
