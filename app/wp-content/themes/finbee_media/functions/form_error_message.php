@@ -9,8 +9,10 @@ function my_validation_rule_job( $Validation, $data, $Data ) {
 	// お名前
 	$Validation->set_rule( 'name', 'noEmpty', array( 'message' => '正しく入力してください' ) );
 	$Validation->set_rule( 'furigana', 'noEmpty', array( 'message' => '正しく入力してください' ) );
+	$Validation->set_rule( 'furigana', 'hiragana', array( 'message' => 'ひらがなで入力してください' ) );
 	// メールアドレス + 確認
-	$Validation->set_rule( 'email', 'mail', array( 'message' => '正しい形式で入力してください' ) );
+	$Validation->set_rule( 'email', 'noEmpty', array( 'message' => '正しく入力してください' ) );
+	$Validation->set_rule( 'email', 'mail', array( 'message' => 'メールアドレスの形式ではありません' ) );
 	$Validation->set_rule( 'email-conf', 'noEmpty', array( 'message' => '必須項目を入力してください' ) );
 	$Validation->set_rule( 'email-conf', 'mail', array( 'message' => 'メールアドレスの形式ではありません' ) );
 	$Validation->set_rule( 'email-conf', 'eq', array( 'target' => 'email', 'message' => 'メールアドレスが一致しません') );
