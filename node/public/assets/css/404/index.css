@@ -36,7 +36,7 @@ $font-xxl: 2rem;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .p-404__main .p-404__main__description {
