@@ -85,8 +85,8 @@
 							</div>
 							<div class="article__border"></div>
 							<div class="article__prevnext">
-								<?php if($next_post): ?>
-									<a class="article__prevnext__main" href="<?= $next_post_url ?>">
+								<?php if($prev_post): ?>
+									<a class="article__prevnext__main" href="<?= $prev_post_url ?>">
 										<div class="article__prevnext__main__button prev">
 											<span class="icon-head prev"></span>
 										</div>
@@ -95,8 +95,8 @@
 												<p class="article__prevnext__main__content__topper__text prev">次の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
-												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($next_post_ID) ?></p>
+												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>
+												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($prev_post_ID) ?></p>
 											</div>
 										</div>
 									</a>
@@ -104,15 +104,15 @@
 									<div class="article__prevnext__main empty">
 									</div>
 								<?php endif; ?>
-								<?php if($prev_post): ?>
-									<a class="article__prevnext__main" href="<?= $prev_post_url ?>">
+								<?php if($next_post): ?>
+									<a class="article__prevnext__main" href="<?= $next_post_url ?>">
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
 												<p class="article__prevnext__main__content__topper__text next">前の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>
-												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($prev_post_ID) ?></p>
+												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
+												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($next_post_ID) ?></p>
 											</div>
 										</div>
 										<div class="article__prevnext__main__button next">
