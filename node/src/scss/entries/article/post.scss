@@ -723,6 +723,17 @@
 									display: flex;
 									width: 49%;
 
+									&:hover {
+
+										.article__prevnext__main__content__footer__image__inner {
+
+											@include screen-large {
+												transform: scale(1.05);
+												transition: 0.2s;
+											}
+										}										
+									}
+
 									.article__prevnext__main__button {
 										height: 100%;
 										padding: 0 3px;
@@ -797,11 +808,19 @@
 											.article__prevnext__main__content__footer__image {
 												margin-top:10px;
 												width: 100%;
+												overflow: hidden;
 
 												@include screen-large {
-													width: auto;
+													width: 150px;
 													height: 100%;
 													margin:0;
+												}
+
+												.article__prevnext__main__content__footer__image__inner {
+													height: 100%;
+													width: 100%;
+													object-fit: fill;
+													transition: 0.2s;
 												}
 											}
 

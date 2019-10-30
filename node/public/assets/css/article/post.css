@@ -816,6 +816,15 @@ $font-xxl: 2rem;
   width: 49%;
 }
 
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main:hover .article__prevnext__main__content__footer__image__inner {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__button {
   height: 100%;
   padding: 0 3px;
@@ -920,14 +929,24 @@ $font-xxl: 2rem;
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__image {
   margin-top: 10px;
   width: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__image {
-    width: auto;
+    width: 150px;
     height: 100%;
     margin: 0;
   }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__image .article__prevnext__main__content__footer__image__inner {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__prevnext .article__prevnext__main .article__prevnext__main__content .article__prevnext__main__content__footer .article__prevnext__main__content__footer__title {

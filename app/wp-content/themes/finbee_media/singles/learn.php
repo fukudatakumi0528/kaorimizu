@@ -94,7 +94,9 @@
 												<p class="article__prevnext__main__content__topper__text prev">前の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>
+												<div class="article__prevnext__main__content__footer__image">
+													<img class="article__prevnext__main__content__footer__image__inner" src="<?= $prev_post_thumb ?>"></img>
+												</div>
 												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($prev_post_ID) ?></p>
 											</div>
 										</div>
@@ -110,7 +112,9 @@
 												<p class="article__prevnext__main__content__topper__text next">次の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
+												<div class="article__prevnext__main__content__footer__image">
+													<img class="article__prevnext__main__content__footer__image__inner" src="<?= $next_post_thumb ?>"></img>
+												</div>
 												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($next_post_ID) ?></p>
 											</div>
 										</div>
