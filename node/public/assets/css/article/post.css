@@ -1097,16 +1097,16 @@ $font-xxl: 2rem;
     -ms-flex-pack: center;
     justify-content: center;
     font-size: 17px;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
   }
 }
 
 @media (min-width: 768px) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__writer_item_sns li a:hover::before {
     font-size: 20px;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
   }
 }
 

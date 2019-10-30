@@ -947,14 +947,14 @@
 														align-items: center;
 														justify-content: center;
 														font-size: 17px;
-														transition: 0.2s;
+														transition: 0.1s;
 													}
 												}
 												&:hover {
 													&::before {
 														@include screen-large {
 															font-size: 20px;
-															transition: 0.2s;
+															transition: 0.1s;
 														}
 													}
 												}
