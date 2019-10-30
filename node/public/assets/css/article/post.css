@@ -9,7 +9,7 @@ $font-xxl: 2rem;
 */
 .p-articlePost {
   width: 100%;
-  background-color: #F7F7F7;
+  background-color: #F5F5F5;
 }
 
 @media (min-width: 768px) {

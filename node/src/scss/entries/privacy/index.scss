@@ -20,51 +20,73 @@
 }
 
 .p-privacy__main {
-  padding:30px 15px;
-  margin: 0 auto;
   width: 100%;
-  max-width: 700px;
+  background-color: $bg-3-color;
 
-  .p-privacy__main__title {
-    margin-top:50px;
-    font-size: $font-m;
-    line-height: 170%;
-    letter-spacing:1.6;
-    font-weight: $font-bold;
-    display: flex;
-    align-items: center;
+  @include screen-large {
+		padding-bottom:90px;
+	}
 
-    &::before {
-      content:"";
-      display: block;
-      height: 13px;
-      width: 13px;
-      background-color:$bg-1-color; 
-      margin-right: 5px;
-    }
-  }
-
-  .p-privacy__main__description {
-    margin-top:10px;
-    font-size: $font-s;
-    line-height: 170%;
-    letter-spacing:1.6;
-    font-weight: $font-medium;
-
-    a {
-      color: $font-2-color;
-      text-decoration: underline;
-    }
-  }
-
-  .p-privacy__main__footer {
-    margin-top:50px;
-    font-size: $font-s;
-    line-height: 170%;
-    letter-spacing:1.6;
-    font-weight: $font-medium;
+  .p-privacy__main__bg {
     width: 100%;
-    text-align: right;
+    max-width: 1100px;
+    margin:0 auto;
+    background-color:$bg-6-color;
+
+    .p-privacy__main__inner {
+      padding:30px 15px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 700px;
+
+      @include screen-large {
+        padding-bottom:90px;
+      }
+    
+      .p-privacy__main__inner__title {
+        margin-top:50px;
+        font-size: $font-m;
+        line-height: 170%;
+        letter-spacing:1.6;
+        font-weight: $font-bold;
+        display: flex;
+        align-items: center;
+    
+        &::before {
+          content:"";
+          display: block;
+          height: 13px;
+          width: 13px;
+          background-color:$bg-1-color; 
+          margin-right: 5px;
+        }
+      }
+    
+      .p-privacy__main__inner__description {
+        margin-top:10px;
+        font-size: $font-s;
+        line-height: 170%;
+        letter-spacing:1.6;
+        font-weight: $font-medium;
+    
+        a {
+          color: $font-2-color;
+          text-decoration: underline;
+        }
+      }
+    
+      .p-privacy__main__inner__footer {
+        margin-top:50px;
+        font-size: $font-s;
+        line-height: 170%;
+        letter-spacing:1.6;
+        font-weight: $font-medium;
+        width: 100%;
+        text-align: right;
+      }
+    
+    }
+  
   }
 }
 

@@ -24,13 +24,37 @@ $font-xxl: 2rem;
 }
 
 .p-disclaimer__main {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+@media (min-width: 768px) {
+  .p-disclaimer__main {
+    padding-bottom: 90px;
+  }
+}
+
+.p-disclaimer__main .p-disclaimer__main__bg {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner {
   padding: 30px 15px;
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
 }
 
-.p-disclaimer__main .p-disclaimer__main__title {
+@media (min-width: 768px) {
+  .p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner {
+    padding-bottom: 90px;
+  }
+}
+
+.p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner .p-disclaimer__main__inner__title {
   margin-top: 50px;
   font-size: 1.6rem;
   line-height: 170%;
@@ -44,7 +68,7 @@ $font-xxl: 2rem;
   align-items: center;
 }
 
-.p-disclaimer__main .p-disclaimer__main__title::before {
+.p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner .p-disclaimer__main__inner__title::before {
   content: "";
   display: block;
   height: 13px;
@@ -53,7 +77,7 @@ $font-xxl: 2rem;
   margin-right: 5px;
 }
 
-.p-disclaimer__main .p-disclaimer__main__description {
+.p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner .p-disclaimer__main__inner__description {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 170%;
@@ -61,7 +85,7 @@ $font-xxl: 2rem;
   font-weight: 500;
 }
 
-.p-disclaimer__main .p-disclaimer__main__description a {
+.p-disclaimer__main .p-disclaimer__main__bg .p-disclaimer__main__inner .p-disclaimer__main__inner__description a {
   color: #285486;
   text-decoration: underline;
 }
