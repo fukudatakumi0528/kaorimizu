@@ -2136,6 +2136,10 @@ main {
   }
 }
 
+.l-spGrant.is-hidden {
+  display: none;
+}
+
 .l-spGrant.is-left {
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -2318,6 +2322,10 @@ main {
     transition: 0.2s;
     z-index: 1001;
   }
+}
+
+.l-spMenu.is-hidden {
+  display: none;
 }
 
 .l-spMenu.is-left {
@@ -2616,6 +2624,10 @@ main {
     transition: 0.2s;
     z-index: 998;
   }
+}
+
+.l-spSearch.is-hidden {
+  display: none;
 }
 
 .l-spSearch.is-left {

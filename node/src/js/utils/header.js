@@ -1,13 +1,19 @@
 export default class Header {
-	openHeaderNav() {
-		const $selecter = $('.header__btn');
-		const $navArea = $('.header__nav');
-		$selecter.on('click', event => {
-			$selecter.toggleClass('-isActive');
-			$navArea.toggleClass('-isOpen');
-		});
+
+	//表示崩れを起こさないために、読み込み直後は非表示にしておく。
+	onloadDocument() {
+		setTimeout(function () {
+			const $spSearch = $('#js-spSearch');
+			const $spGrant = $('#js-spGrant');
+			const $spMenu = $('#js-spMenu');
+	
+			$spSearch.removeClass('is-hidden');
+			$spGrant.removeClass('is-hidden');
+			$spMenu.removeClass('is-hidden');
+		},200)
 	};
 
+　//メニュー関連の開閉に関する処理。
 	clickHeaderButton() {
 		//seachMenu,grantMenuのトリガー
 		const $headerInnerPcSearch = $('.js-headerInnerPc__search');

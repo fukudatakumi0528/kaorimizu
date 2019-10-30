@@ -8,7 +8,7 @@ import Contact from '../utils/contact';
 
 // ヘッダーメニュー
 const header = new Header();
-header.openHeaderNav();
+header.onloadDocument();
 header.clickHeaderButton();
 
 // SLICK
@@ -26,7 +26,7 @@ objectFitImages();
 const fixedButton = new FixedButton();
 fixedButton.clickMenu();
 
-//追従ボタン
+//ランキングスライダーの入れ替え
 const sliderTab = new SliderTab();
 sliderTab.clickTab();
 

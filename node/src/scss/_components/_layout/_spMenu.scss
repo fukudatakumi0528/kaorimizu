@@ -18,6 +18,9 @@
     z-index: 1001;
   }
 
+  &.is-hidden {
+    display: none;
+  }
 
   &.is-left {
     transition: 0.4s;

@@ -14,7 +14,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="l-modalCover"></div>
 
   <!-- メインメニュー -->
-	<div class="l-spMenu" id="js-spMenu">
+	<div class="l-spMenu is-hidden" id="js-spMenu">
 		<header class="l-header">
 			<div class="o-headerInner">
 				<a class="m-logo" href="<?= site_url() ?>">
@@ -257,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- 目標を探す -->
-      <div class="l-spSearch" id="js-spSearch">
+      <div class="l-spSearch is-hidden" id="js-spSearch">
         <header class="l-header">
           <div class="o-headerInner">
             <a class="m-logo" href="<?= site_url() ?>">
@@ -453,7 +453,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- 目標を叶える -->
-      <div class="l-spGrant" id="js-spGrant">
+      <div class="l-spGrant is-hidden" id="js-spGrant">
         <header class="l-header">
           <div class="o-headerInner"><a class="m-logo" href="<?= site_url() ?>">
             <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
