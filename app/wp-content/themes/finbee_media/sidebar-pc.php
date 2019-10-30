@@ -49,8 +49,8 @@
 
   <div class="t-sideBarPc__keyword">
     <div class="t-sideBarPc__keyword__header">
-      <div class="t-sideBarPc__keyword__header__tilte">人気のWord</div>
-      <div class="t-sideBarPc__keyword__header__subtitle">Ranking</div>
+      <div class="t-sideBarPc__keyword__header__tilte">人気のワード</div>
+      <div class="t-sideBarPc__keyword__header__subtitle">Keywords</div>
     </div>
     <ul class="o-classificationList">
       <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>

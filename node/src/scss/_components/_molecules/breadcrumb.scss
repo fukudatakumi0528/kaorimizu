@@ -31,10 +31,22 @@
           font-size:13px;
         }
 
+        a {
+          border-bottom:solid 1px $bg-base-color;
+          transition: 0.2s;
+
+          &:hover {
+            border-bottom:solid 1px transparent;
+            transition: 0.2s;
+          }
+
+        }
+
         span {
           display: block;  
           white-space: nowrap;
           font-size: $font-s;
+          line-height: 120%;
 
           @include screen-large {
             font-size:13px;
@@ -47,6 +59,7 @@
           font-size: $font-xs;
           margin-right: 5px;
           font-family: FontAwesome;
+          line-height: 120%;
 
           @include screen-large {
             font-size:13px;

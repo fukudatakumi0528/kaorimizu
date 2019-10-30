@@ -2869,10 +2869,23 @@ main {
   }
 }
 
+.m-breadcrumb #breadcrumb ul > li a {
+  border-bottom: solid 1px #262626;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.m-breadcrumb #breadcrumb ul > li a:hover {
+  border-bottom: solid 1px transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .m-breadcrumb #breadcrumb ul > li span {
   display: block;
   white-space: nowrap;
   font-size: 1.4rem;
+  line-height: 120%;
 }
 
 @media (min-width: 768px) {
@@ -2887,6 +2900,7 @@ main {
   font-size: 1.2rem;
   margin-right: 5px;
   font-family: FontAwesome;
+  line-height: 120%;
 }
 
 @media (min-width: 768px) {

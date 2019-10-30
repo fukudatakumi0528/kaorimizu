@@ -854,7 +854,7 @@
 	<section class="p-top__keyword">
 		<div class="p-top__keyword__header">
 			<div class="p-top__keyword__header__subtitle">Keywords</div>
-			<div class="p-top__keyword__header__tilte">人気のWord</div>
+			<div class="p-top__keyword__header__tilte">人気のワード</div>
 		</div>
 		<ul class="o-classificationList">
 			<?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
