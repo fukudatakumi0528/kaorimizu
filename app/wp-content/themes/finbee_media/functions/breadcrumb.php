@@ -11,7 +11,7 @@
       echo '<div id="breadcrumb">'.  //id名などは任意で
         '<ul>'.
           '<li>'.
-            '<a href="'. esc_url( home_url() ) .'"><span>ホーム</span></a>'.
+            '<a href="'. esc_url( home_url() ) .'"><span>TOP</span></a>'.
           '</li>';
 
       if ( is_attachment() ) {
