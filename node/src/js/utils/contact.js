@@ -15,9 +15,9 @@ export default class Contact {
 
 		$checker.each((ind, el) => {
 			const $this = $(el);
-			const $validationWrap = $this.prev('.validation');
+			const $validationWrap = $this.prev('.validationwrap');
 			$validationWrap.addClass('is-validation');
-			console.log('isvalidate');
+			console.log('isvalidated');
 			//const $validationWrapInput = $this.prev('.m-inputArea__under_validationwrap');
 			//const $validationWrapSelect = $this.prev('.m-selectboxArea__under_validationwrap');
 			//$validationWrapSelect.addClass('is-validation');
