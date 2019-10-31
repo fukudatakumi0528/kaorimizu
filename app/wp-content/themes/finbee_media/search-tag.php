@@ -3,14 +3,7 @@
 	global $scriptName;
 	$cssName = "search/index";
 
-	$currentPage = get_query_var('paged'); //現在のページ数
-	$currentPage = $currentPage == 0 ? 1 : $currentPage;
-	$articlePerPage = get_option('posts_per_page');//現在の表示件数
-	
-	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
-  $endPageNumber = $startPageNumber + $wp_query->post_count - 1;
-  
-  $args = array(
+	$args = array(
     'post_type' => array('feature', 'hobby', 'life', 'learn'),
     'orderby' => 'post_date',
     'tax_query' => array(
@@ -38,9 +31,16 @@
     )
   );
 
-$post_list = new WP_Query($args);
+	$post_list = new WP_Query($args);
 
 
+	$currentPage = get_query_var('paged'); //現在のページ数
+	$currentPage = $currentPage == 0 ? 1 : $currentPage;
+	$articlePerPage = get_option('posts_per_page');//現在の表示件数
+	
+	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
+  $endPageNumber = $startPageNumber + $post_list->post_count - 1;
+  
 	get_header();
 ?>
 <main>
@@ -59,7 +59,7 @@ $post_list = new WP_Query($args);
 						<p class="p-search__main__content__column__result__category__text"><strong>＃<?= esc_html( get_search_query( false ) ); ?></strong>タグが付いている記事</p>
           </div>
           <div class="p-search__main__content__column__result__number">
-            <p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
+            <p class="p-search__main__content__column__result__number__text"><?= $post_list->post_count; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
           </div>
         </div>
         <?php else: ?>
@@ -70,8 +70,7 @@ $post_list = new WP_Query($args);
         </div>
         <?php endif; ?>
 				<div class="o-verticallyCardList">
-          <?php          
-          
+					<?php          
           while($post_list->have_posts()): 
           $post_list->the_post();
             

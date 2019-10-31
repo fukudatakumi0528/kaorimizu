@@ -76,7 +76,7 @@
 						<p class="p-articleSearch__main__content__column__result__category__text"><strong>#<?= urldecode($termTypeQuery); ?></strong>の絞り込み結果</p>
 					</div>
 					<div class="p-articleSearch__main__content__column__result__number">
-						<p class="p-articleSearch__main__content__column__result__number__text"><?= wp_count_posts('life')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
+						<p class="p-articleSearch__main__content__column__result__number__text"><?= $query->post_count; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 					</div>
 				</div>		
 				<div class="o-verticallyCardList">
