@@ -23,14 +23,15 @@ if($_GET["t"] === 'tag') {
 <main>
 	<section class="p-search__topper">
     <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
-      <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
+      <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。" value="<?php echo htmlspecialchars($_GET["s"]) ?>">
       <button class="icon-search" type="submit" id="s-btn-area"></button>
     </form>
 	</section>
+
 	<section class="p-search__main">
 		<div class="p-search__main__content">
 			<div class="p-search__main__content__column">
-        <?php if(have_posts() && get_search_query()): ?>         
+				<?php if(have_posts() && get_search_query()): ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category">
 						<p class="p-search__main__content__column__result__category__text"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果</p>
