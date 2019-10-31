@@ -20,7 +20,7 @@
     width: 80%;
     object-fit: cover;
     font-family: 'object-fit: cover;'; /*IE対策*/
-    max-width: 400px;
+    max-width: 300px;
   }
   .p-404__main__description {
     margin-top:20px;
@@ -30,7 +30,10 @@
     line-height: 180%;
 
     br.is-onlySp {
-      display:none;
+
+      @include screen-large {
+        display:none;
+      }
     }
   }
 }
@@ -48,6 +51,7 @@
     .p-404__footer__keywords__title {
       font-size: $font-m;
       font-weight: $font-bold;
+      font-family: 'Josefin Sans', sans-serif;
     }  
   }
 }

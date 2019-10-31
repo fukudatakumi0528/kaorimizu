@@ -36,7 +36,7 @@ $font-xxl: 2rem;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /*IE対策*/
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .p-404__main .p-404__main__description {
@@ -47,8 +47,10 @@ $font-xxl: 2rem;
   line-height: 180%;
 }
 
-.p-404__main .p-404__main__description br.is-onlySp {
-  display: none;
+@media (min-width: 768px) {
+  .p-404__main .p-404__main__description br.is-onlySp {
+    display: none;
+  }
 }
 
 .p-404__footer {
@@ -66,4 +68,5 @@ $font-xxl: 2rem;
 .p-404__footer .p-404__footer__keywords .p-404__footer__keywords__title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
 }

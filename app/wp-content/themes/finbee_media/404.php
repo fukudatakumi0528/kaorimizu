@@ -7,7 +7,7 @@
 <main>
 	<section class="p-404__main">
 		<img class="p-404__main__img" src="<?php echo assetsPath('img') ?>404/404.png" alt="">
-			<p class="p-404__main__description">指定されたURLのページは存在しません。<br>人気のキーワードからあなたにぴったりの<br class="is-onlySp">楽しい記事を探してみてください。</p>
+			<p class="p-404__main__description">指定されたURLのページは存在しませんが、<br class="is-onlySp">あなたにぴったりの楽しい記事はきっとあります。<br>人気のキーワードから見つけてみてください。</p>
 		</section>
 		<section class="p-404__footer">
 			<?php 
@@ -54,7 +54,7 @@
 				<ul class="o-classificationList">
 					<?php foreach($rankingPopularTags as $rankingPopularTag): ?>
 						<li class="o-classificationList__tag">
-							<a class="o-classificationList__tag__link" href="">
+							<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$rankingPopularTag->name .'&t=tag' ?>">
 								<p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
 							</a>
 						</li>

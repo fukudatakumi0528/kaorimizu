@@ -3,8 +3,14 @@
 @import "../_utils/_variables";
 @import "../_utils/_mixins";
 
+.p-top{
+  @include screen-large {
+    padding-bottom:120px;
+  }
+}
+
 .p-top__kv {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 100%;
   position: relative;
 
@@ -235,12 +241,13 @@
               }
 
               .m-squareCard__inner__footer__title__text {
+                font-weight: $font-bold;
 
                 @include screen-large {
                   font-size: 20px;
-                  -webkit-line-clamp: 3; 
+                  -webkit-line-clamp: 5; 
                   @media all and (-ms-high-contrast: none){
-                    max-height: calc(20px * 1.5 * 3);
+                    max-height: calc(20px * 1.5 * 5);
                   }
                   overflow: hidden;         
                 }  
@@ -305,7 +312,7 @@
 .p-top__latestRanking {
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin-top:46px;
 
   @include screen-large {
@@ -327,6 +334,11 @@
       margin-top:32px;
 
       .m-wideCard {
+        width: 100%;
+
+        @include screen-large {
+          width: 47%;
+        }
     
         &:nth-of-type(1) {
           margin-top:0;
@@ -395,13 +407,21 @@
       width: 100%;
       height: calc(100% - 200px);
     }
+
+    &.fewArticle {
+      display: none;
+
+      @include screen-large {
+        display: block;
+      }
+    }
   }
 
   .m-titleBorder {
     padding:0 15px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;  
+    max-width: 1100px;  
   }
 
   .p-top__featureHobby__topper {
@@ -409,7 +429,7 @@
     margin-top:20px;
     padding:0 15px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
   
 
     @include screen-large {
@@ -479,11 +499,20 @@
             }
 
             .m-oblongCard__inner__footer__title__text {
+              font-weight: $font-bold;
 
               @include screen-large {
                 font-size: 20px;
                 font-weight: $font-bold;  
               }
+
+              @media all and (-ms-high-contrast: none){
+
+                @include screen-large {
+                  max-height: calc(20px * 1.5 * 3);
+                  display: block;  
+                }
+              }     
             }
           }
 
@@ -513,10 +542,135 @@
     }
   }
 
+  .p-top__featureHobby__list {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    padding:0 15px;
+    margin-top:26px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include screen-large {
+      margin-top:40px;
+      display: block;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+
+    .p-top__featureHobby__list__inner {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      @include screen-large {
+        padding:0;
+        margin-top:40px;
+        justify-content: flex-start;
+      }
+
+      .m-verticallyCard {
+        width: 48%;
+        margin-top:20px;
+        height: auto;
+  
+        @include screen-large {
+          display: none;
+          width: 100%;
+        }
+
+        &:nth-of-type(-n+3) {
+
+          @include screen-large {
+            display: block;
+            margin-top:0;
+            margin-left: 30px;
+            width: calc((100% - 60px) / 3);
+          }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0px;
+          }
+        }
+
+        &:nth-of-type(-n+2) {
+          margin-top:0;
+        }
+
+        .m-verticallyCard__inner {
+          margin:0;
+
+          @include screen-large {
+            margin:0;
+          }
+
+  
+          .m-verticallyCard__inner__footer {
+            width: 100%;
+            background-color: $bg-6-color;
+            padding:4px 0;
+
+            @include screen-large {
+              padding:16px;
+            }    
+            
+            .m-verticallyCard__inner__footer__topper {
+
+              @include screen-large {
+                margin-top:0;
+              }
+            }
+
+  
+
+            .m-verticallyCard__inner__footer__description {
+              display: block;
+
+              .m-verticallyCard__inner__footer__description__text {
+                display: none;
+                font-size: $font-xs;
+                overflow: hidden;
+
+                @include screen-large {
+                  display: -webkit-box;
+                }
+
+                @media all and (-ms-high-contrast: none){
+
+                  @include screen-large {
+                    max-height: calc(12px * 1.7 * 2);
+                    display: block;  
+                  }
+                }      
+              }  
+            }
+
+            .m-verticallyCard__inner__footer__title {
+              @media all and (-ms-high-contrast: none){
+                max-height: calc(13px * 1.5 * 3);
+              }
+            }      
+          }
+        }
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .p-top__featureHobby__slider {
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin-top:26px;
     position: relative;
 
@@ -653,7 +807,7 @@
       @include screen-large {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding:0 15px;
       }
 
@@ -667,8 +821,16 @@
 
           @include screen-large {
             display: block;
-            width: 31%;
+            margin-left: 30px;
+            width: calc((100% - 60px) / 3);
           }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0;
+          }
         }
 
         .m-verticallyCard__inner {
@@ -713,9 +875,6 @@
               }    
             }
 
-            .m-classificationArea {
-              margin-bottom:0;
-            }  
           }
         }
       }
@@ -730,7 +889,7 @@
   .p-top__featureHobby__footer {
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;  
+    max-width: 1100px;  
     display: flex;
     justify-content: flex-end;
     padding:0 15px;
@@ -788,7 +947,7 @@
     @include screen-large {
       margin: 0 auto;
       width: 100%;
-      max-width: 1000px;   
+      max-width: 1100px;   
       margin-top:100px; 
     }
   }
@@ -815,7 +974,7 @@
       }
 
       .p-top__lifeLearn__slider__arrow__inner {
-        max-width: 1000px;
+        max-width: 1100px;
         height: 100%;
         margin:0 auto;
         position: relative;
@@ -948,6 +1107,7 @@
     
       .m-verticallyCard {
         width: 48%;
+        margin-top:20px;
   
         @include screen-large {
           margin-top:0;
@@ -964,6 +1124,7 @@
 
     .slick-dots {
       bottom:-40px;
+      display: none !important; //修正が終わり次第解除
 
       li {
         margin:0 3px;
@@ -988,8 +1149,9 @@
   .p-top__lifeLearn__list {
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin-top:26px;
+    padding:0 15px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1007,12 +1169,11 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding:0 15px;
   
       @include screen-large {
         padding:0;
         margin-top:40px;
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .m-verticallyCard {
@@ -1023,15 +1184,23 @@
         @include screen-large {
           display: none;
           width: 100%;
-          margin:0 15px;
         }
 
         &:nth-of-type(-n+3) {
 
           @include screen-large {
             display: block;
-            width: 31%;
+            margin-left: 30px;
+            margin-top:0px;
+            width: calc((100% - 60px) / 3);
           }  
+        }
+
+        &:nth-child(1) {
+
+          @include screen-large {
+            margin-left: 0px;
+          }
         }
 
         &:nth-of-type(-n+2) {
@@ -1061,19 +1230,28 @@
               display: block;
 
               .m-verticallyCard__inner__footer__description__text {
+                display: none;
                 font-size: $font-xs;
                 overflow: hidden;
 
+                @include screen-large {
+                  display: -webkit-box;
+                }
+
                 @media all and (-ms-high-contrast: none){
-                  max-height: calc(12px * 1.7 * 2);
+
+                  @include screen-large {
+                    max-height: calc(12px * 1.7 * 2);
+                    display: block;  
+                  }
                 }      
               }  
             }
 
             .m-verticallyCard__inner__footer__title {
-              display: block;
               @media all and (-ms-high-contrast: none){
                 max-height: calc(13px * 1.5 * 3);
+                display: block;  
               }
             }      
           }
@@ -1091,11 +1269,12 @@
     margin:24px 15px 0 15px;
     display: flex;
     justify-content: flex-end;
+    padding:0 15px;
 
     @include screen-large {
       margin: 0 auto;
       width: 100%;
-      max-width: 1000px;
+      max-width: 1100px;
       margin-top:40px;   
     }
 
@@ -1172,11 +1351,3 @@
       
   }
 }
-
-.l-footer {
-
-  @include screen-large {
-    margin-top:120px;
-  }
-}
-

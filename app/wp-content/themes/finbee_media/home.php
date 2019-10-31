@@ -6,8 +6,7 @@
 
 	get_header();
 ?>
-<main>
-
+<main class="p-top">
 
 	<!-- kv-->
 	<section class="p-top__kv">
@@ -49,13 +48,15 @@
 							<p class="m-squareCard__inner__footer__title__text"><?= $slider->post_title ?></p>
 						</div>
 						<div class="m-squareCard__inner__footer__description">
-							<div class="m-squareCard__inner__footer__description__text"><?= strip_tags($slider->post_content) ?></div>
+							<div class="m-squareCard__inner__footer__description__text">
+							<?php echo mb_substr($slider->post_title, 0, 100).'…'; ?>
+							</div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
 							<div class="m-classificationArea">
 								<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+										<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 											<?= $tag->name?>
 										</a>
 									</object>
@@ -125,7 +126,7 @@
 							<div class="m-classificationArea">
 								<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+										<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 											<?= $tag->name?>
 										</a>
 									</object>
@@ -168,7 +169,11 @@
 		if($query->have_posts() || $topFeature):
 	?>
 	<section class="p-top__featureHobby">
-		<div class="p-top__featureHobby__bg"></div>
+		<?php if(count($query->posts) < 5):?>
+			<div class="p-top__featureHobby__bg fewArticle"></div>
+		<?php else: ?>
+			<div class="p-top__featureHobby__bg"></div>
+		<?php endif; ?>		
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
@@ -180,7 +185,6 @@
 		</div>
 		<?php 
 			$topFeature = get_field('top-feature', 'option');
-
 
 			if ($topFeature):										
 				// サムネイルID
@@ -217,7 +221,7 @@
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>
-									<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 										<?= $tag->name?>
 									</a>
 								</object>
@@ -228,6 +232,57 @@
 			</div>
 		</div>
 		<?php endif; ?>
+
+		<?php if($query->post_count > 0): ?>
+		<?php if(count($query->posts) < 5):?>
+		<div class="p-top__featureHobby__list">
+			<ul class="p-top__featureHobby__list__inner">
+
+				<?php
+					while($query->have_posts()): $query->the_post();
+
+					if ( has_post_thumbnail($post->ID)) {
+						$topFeatureListThumbnail =  get_the_post_thumbnail_url();
+					} else {
+						$topFeatureListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+					};
+	
+					$term = get_the_terms($post->ID, 'feature_tag');
+				?>
+				<li class="m-verticallyCard">
+					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+						<div class="m-verticallyCard__inner__topper">
+							<div class="m-verticallyCard__inner__topper__image">
+								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topFeatureListThumbnail ?>" alt="">
+							</div>
+						</div>
+						<div class="m-verticallyCard__inner__footer">
+							<div class="m-verticallyCard__inner__footer__topper">
+								<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
+							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+							<div class="m-verticallyCard__inner__footer__description">
+								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+							</div>
+							<div class="m-classificationArea">
+							<?php	if($term): foreach ($term as $tag ): ?>
+								<object>
+									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+										<?= $tag->name?>
+									</a>
+								</object>
+							<?php endforeach; endif; ?>
+							</div>
+						</div>
+					</a>
+				</li>
+				<?php endwhile; wp_reset_postdata();?>
+			</ul>
+		</div>
+		<?php else: ?>
 		<div class="p-top__featureHobby__slider">
 			<?php if($query->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__feature">
@@ -238,7 +293,6 @@
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
 					while($query->have_posts()): $query->the_post();
-					if($query !== $topFeature):
 
 					if ( has_post_thumbnail($post->ID)) {
 						$topFeatureListThumbnail =  get_the_post_thumbnail_url();
@@ -269,7 +323,7 @@
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+										<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 											<?= $tag->name?>
 										</a>
 									</object>
@@ -278,9 +332,11 @@
 						</div>
 					</a>
 				</li>
-				<?php endif; endwhile; wp_reset_postdata(); ?>
+				<?php endwhile; wp_reset_postdata();?>
 			</ul>
 		</div>
+		<?php endif; ?>
+		<?php endif; ?>
 		<?php if($query->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('feature/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
@@ -312,7 +368,11 @@
 		if($query->have_posts() || $topHobby):
 	?>
 	<section class="p-top__featureHobby">
-		<div class="p-top__featureHobby__bg"></div>
+		<?php if(count($query->posts) < 5):?>
+			<div class="p-top__featureHobby__bg fewArticle"></div>
+		<?php else: ?>
+			<div class="p-top__featureHobby__bg"></div>
+		<?php endif; ?>		
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
@@ -355,7 +415,7 @@
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
 								<object>
-									<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 										<?= $tag->name?>
 									</a>
 								</object>
@@ -367,6 +427,57 @@
 		</div>
 		<?php endif; ?>
 
+		<?php if($query->post_count > 0): ?>
+		<?php if(count($query->posts) < 5):?>
+		<div class="p-top__featureHobby__list">
+			<ul class="p-top__featureHobby__list__inner">
+
+				<?php
+					while($query->have_posts()): $query->the_post();
+
+					if ( has_post_thumbnail($post->ID)) {
+						$topHobbyListThumbnail =  get_the_post_thumbnail_url();
+					} else {
+						$topHobbyListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+					};
+	
+					$term = get_the_terms($post->ID, 'hobby_tag');
+				?>
+				<li class="m-verticallyCard">
+					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
+						<div class="m-verticallyCard__inner__topper">
+							<div class="m-verticallyCard__inner__topper__image">
+								<img class="m-verticallyCard__inner__topper__image__inner" src="<?= $topHobbyListThumbnail ?>" alt="">
+							</div>
+						</div>
+						<div class="m-verticallyCard__inner__footer">
+							<div class="m-verticallyCard__inner__footer__topper">
+								<time class="m-verticallyCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+								<?php if(article_new_arrival($post)): ?>
+									<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+								<?php endif; ?>
+							</div>
+							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
+							<div class="m-verticallyCard__inner__footer__description">
+								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+							</div>
+							<div class="m-classificationArea">
+							<?php	if($term): foreach ($term as $tag ): ?>
+								<object>
+									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+										<?= $tag->name?>
+									</a>
+								</object>
+							<?php endforeach; endif; ?>
+							</div>
+						</div>
+					</a>
+				</li>
+				<?php endwhile; wp_reset_postdata();?>
+			</ul>
+		</div>
+		<?php else: ?>
+
 		<div class="p-top__featureHobby__slider">
 			<?php if($query->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__hobby">
@@ -376,7 +487,6 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__hobby">
 				<?php
-					if($query->post_count > 1):
 					while($query->have_posts()): $query->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
@@ -407,20 +517,22 @@
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
-									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
-											<?= $tag->name?>
-										</a>
-									</object>
-								<?php endforeach; endif; ?>
+								<object>
+									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+										<?= $tag->name?>
+									</a>
+								</object>
+							<?php endforeach; endif; ?>
 							</div>
 						</div>
 					</a>
 				</li>
-				<?php endwhile; wp_reset_postdata(); endif;?>
+				<?php endwhile; wp_reset_postdata();?>
 
 			</ul>
 		</div>
+		<?php endif; ?>
+		<?php endif; ?>
 		<?php if($query->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('hobby/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
@@ -428,8 +540,10 @@
 		<?php endif;?>
 	</section>
 	<?php endif; ?>
-	<!-- life-->
 
+
+
+	<!-- life-->
 	<?php
 		$topLifeArgs = [
 			'post_type' => 'life',
@@ -486,7 +600,7 @@
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
 										<object>
-											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+											<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 												<?= $tag->name?>
 											</a>
 										</object>
@@ -539,7 +653,7 @@
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
 										<object>
-											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+											<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 												<?= $tag->name?>
 											</a>
 										</object>
@@ -617,7 +731,7 @@
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
 										<object>
-											<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+											<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 												<?= $tag->name?>
 											</a>
 										</object>
@@ -672,7 +786,7 @@
 							<div class="m-classificationArea">
 								<?php	if($singletags): foreach ($singletags as $tag ): ?>
 									<object>
-										<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+										<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 											<?= $tag->name?>
 										</a>
 									</object>
@@ -729,6 +843,13 @@
     $rankingPopularTags = array_slice($popularTags,0,10);
 
 		if(count($rankingPopularTags) > 0):
+
+
+		$termsNameList = [];
+		foreach ($rankingPopularTags as $termsName) {
+			array_push($termsNameList,$termsName->name);
+		}
+		$uniqueTermsNameList = array_unique($termsNameList);
 	?>
 	<section class="p-top__keyword">
 		<div class="p-top__keyword__header">
@@ -736,10 +857,10 @@
 			<div class="p-top__keyword__header__tilte">人気のワード</div>
 		</div>
 		<ul class="o-classificationList">
-			<?php foreach($rankingPopularTags as $rankingPopularTag): ?>
+			<?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 				<li class="o-classificationList__tag">
-					<a class="o-classificationList__tag__link" href="<?= get_category_link($rankingPopularTag->term_id);?>">
-						<p class="o-classificationList__tag__link__inner"><?= $rankingPopularTag->name ?></p>
+					<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName ?>">
+						<p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
 					</a>
 				</li>
 			<?php endforeach;?>

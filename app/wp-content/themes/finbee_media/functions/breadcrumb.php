@@ -41,8 +41,20 @@
           $tax_array = get_object_taxonomies( $post_type, 'names');
           foreach ($tax_array as $tax_name) {
               if ( $tax_name !== 'post_format' ) {
-                  $the_tax = $tax_name;
-                  break;
+                switch ($tax_name) {
+                  case "feature_tag":
+                      $the_tax = $tax_name;
+                      break;
+                  case "hobby_tag":
+                      $the_tax = $tax_name;
+                      break;
+                  case "life_tag":
+                      $the_tax = $tax_name;
+                      break;
+                  case "learn_tag":
+                    $the_tax = $tax_name;
+                      break;
+                  }
               }
           }
 
@@ -66,6 +78,7 @@
           $terms = get_the_terms( $post_id, $the_tax );
 
           // タクソノミーが紐づいていれば表示
+          /*
           if ( $terms !== false ) {
 
             $child_terms  = array();  // 子を持たないタームだけを集める配列
@@ -114,6 +127,7 @@
                   '</a>'.
                 '</li>';
           }
+          */
 
           // 投稿自身の表示
           echo '<li><span>'. esc_html( strip_tags( $post_title ) ) .'</span></li>';

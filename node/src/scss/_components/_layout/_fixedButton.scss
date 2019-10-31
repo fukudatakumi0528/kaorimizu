@@ -108,15 +108,34 @@
         .l-fixed-button__inner__main__button__text {
           font-size:$font-xxs;
           font-weight: $font-bold;
+          display: flex;
+          align-items: baseline;
 
           strong {
+            margin-left: 3px;
             font-size: $font-s;
+            line-height: 100%;
           }
         }
 
+
         .l-fixed-button__inner__main__button__icon {
-          margin-left: 2px;
-          font-size: 14px;
+          font-size: 17px;
+
+          @include screen-se {
+            display: none;
+          }
+
+          .l-fixed-button__inner__main__button__icon__image {
+            &.search {
+              margin-left: 5px;
+            }
+  
+            &.star {
+              margin-left:0px;
+            }
+  
+          }
         }
       }
     }

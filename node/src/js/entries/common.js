@@ -5,10 +5,11 @@ import FixedButton from '../utils/fixedButton';
 import SliderTab from '../utils/sliderTab';
 import Refine from '../utils/refine';
 import Contact from '../utils/contact';
+import Sidebar from '../utils/sidebar';
 
 // ヘッダーメニュー
 const header = new Header();
-header.openHeaderNav();
+header.onloadDocument();
 header.clickHeaderButton();
 
 // SLICK
@@ -26,9 +27,14 @@ objectFitImages();
 const fixedButton = new FixedButton();
 fixedButton.clickMenu();
 
-//追従ボタン
+//ランキングスライダーの入れ替え
 const sliderTab = new SliderTab();
 sliderTab.clickTab();
+
+//サイドバーの追従
+const sidebar = new Sidebar();
+sidebar.sticky();
+
 
 //追従ボタン
 const refine = new Refine();
@@ -38,4 +44,4 @@ refine.clickRefineAccordion();
 const contact = new Contact();
 contact.selectBoxChange();
 contact.selectContactChoice();
-
+contact.checkValidation();

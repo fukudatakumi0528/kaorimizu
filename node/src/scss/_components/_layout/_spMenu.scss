@@ -18,6 +18,9 @@
     z-index: 1001;
   }
 
+  &.is-hidden {
+    display: none;
+  }
 
   &.is-left {
     transition: 0.4s;
@@ -87,37 +90,23 @@
             .l-spMenu__main__nav__list__link__left__icon {
               width: 30px;
               height: 30px;
-              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
 
-              &.icon-home {
-                font-size: 18px;
+              &.home {
               }
 
-              &.icon-feature {
-                font-size: 26px;
+              &.feature {
               }
 
-              &.icon-hobby {
-                font-size: 25px;
+              &.hobby {
               }
 
-              &.icon-life {
-                font-size: 20px;
+              &.life {
               }
 
-              &.icon-learn {
-                font-size: 22px;
-              }
-
-              >span {
-                position: absolute;
-                top:50%;
-                left:50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                &::before {
-                  margin: 0;
-                }
+              &.learn {
               }
 
             }
@@ -182,7 +171,7 @@
           width: auto;
 
           @include screen-large {
-            right: 35px;
+            right: 15px;
           }
         }
       }   
@@ -201,22 +190,32 @@
       }
 
       .l-spMenu__main__pickup__title {
+        font-family: 'Josefin Sans', sans-serif;
         font-size: $font-m;
         font-weight: $font-bold;
       }
 
       .o-verticallyCardList {
+        margin-top:10px;
 
         @include screen-large {
           justify-content: flex-start;
-          margin:-20px 0 0 -30px;
+          margin-top: 3px;
         }
 
         .m-verticallyCard {
 
           @include screen-large {
             width: 175px;
-            margin:20px 0 0 30px;
+            margin:0 0 0 30px;
+          }
+
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+
+          &:nth-of-type(-n+2) {
+            margin-top:0;
           }
 
           .m-verticallyCard__inner__footer__date {
@@ -250,10 +249,14 @@
 
       .l-spMenu__main__keywords__title {
         font-size: $font-m;
-        font-weight: $font-bold;        
+        font-weight: $font-bold;
+        font-family: 'Josefin Sans', sans-serif;   
       }
 
       .o-classificationList {
+        @include screen-large {
+          margin-top: 1px;
+        }
       }
     }
   }

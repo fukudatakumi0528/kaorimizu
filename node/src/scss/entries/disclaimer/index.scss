@@ -6,46 +6,74 @@
 .p-disclaimer__topper {
 
   @include screen-large{
-    margin-top:70px;
+    margin-top:80px;
+  }
+
+  .o-topperSection {
+    padding:40px 20px 40px 20px;
+    background-color: $bg-1-color;  
+
+    @include screen-large {
+      padding:50px 20px 50px 20px;
+    }
   }
 }
 
 .p-disclaimer__main {
-  padding:30px 15px;
-  margin: 0 auto;
   width: 100%;
-  max-width: 700px;
+  background-color: $bg-3-color;
 
-
-  .p-disclaimer__main__title {
-    margin-top:50px;
-    font-size: $font-m;
-    line-height: 170%;
-    letter-spacing:1.6;
-    font-weight: $font-bold;
-    display: flex;
-    align-items: center;
-
-    &::before {
-      content:"";
-      display: block;
-      height: 13px;
-      width: 13px;
-      background-color:$bg-1-color; 
-      margin-right: 5px;
-    }
+  @include screen-large {
+    padding-bottom:40px;
   }
 
-  .p-disclaimer__main__description {
-    margin-top:10px;
-    font-size: $font-s;
-    line-height: 170%;
-    letter-spacing:1.6;
-    font-weight: $font-medium;
+  .p-disclaimer__main__bg {
+    width: 100%;
+    max-width: 1100px;
+    margin:0 auto;
+    background-color:$bg-6-color;
 
-    a {
-      color: $font-2-color;
-      text-decoration: underline;
+    .p-disclaimer__main__inner {
+      padding:30px 15px 60px 15px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 700px;
+
+      @include screen-large {
+        padding-bottom:90px;
+      }
+
+      .p-disclaimer__main__inner__title {
+        margin-top:50px;
+        font-size: $font-m;
+        line-height: 170%;
+        letter-spacing:1.6;
+        font-weight: $font-bold;
+        display: flex;
+        align-items: center;
+    
+        &::before {
+          content:"";
+          display: block;
+          height: 13px;
+          width: 13px;
+          background-color:$bg-1-color; 
+          margin-right: 5px;
+        }
+      }
+    
+      .p-disclaimer__main__inner__description {
+        margin-top:10px;
+        font-size: $font-s;
+        line-height: 170%;
+        letter-spacing:1.6;
+        font-weight: $font-medium;
+    
+        a {
+          color: $font-2-color;
+          text-decoration: underline;
+        }
+      }    
     }
   }
 }

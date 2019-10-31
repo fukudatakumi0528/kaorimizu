@@ -1,26 +1,39 @@
 export default class Header {
-	openHeaderNav() {
-		const $selecter = $('.header__btn');
-		const $navArea = $('.header__nav');
-		$selecter.on('click', event => {
-			$selecter.toggleClass('-isActive');
-			$navArea.toggleClass('-isOpen');
-		});
+
+	//表示崩れを起こさないために、読み込み直後は非表示にしておく。
+	onloadDocument() {
+		setTimeout(function () {
+			const $spSearch = $('#js-spSearch');
+			const $spGrant = $('#js-spGrant');
+			const $spMenu = $('#js-spMenu');
+	
+			$spSearch.removeClass('is-hidden');
+			$spGrant.removeClass('is-hidden');
+			$spMenu.removeClass('is-hidden');
+		},200)
 	};
 
+　//メニュー関連の開閉に関する処理。
 	clickHeaderButton() {
+		//seachMenu,grantMenuのトリガー
 		const $headerInnerPcSearch = $('.js-headerInnerPc__search');
 		const $headerInnerPcGrant = $('.js-headerInnerPc__grant');
 
+		//seachMenu,grantMenu,mainMenu
 		const $spSearch = $('#js-spSearch');
 		const $spGrant = $('#js-spGrant');
 		const $spMenu = $('#js-spMenu');
 
+		//header,modalカバー
 		const $header = $('.l-header');
 		const $modalCover = $('.l-modalCover')
 
+		//メニューが出てきたときの三角吹き出し
 		const $seachTriangle = $('.js-headerInnerPc__search__triangle');
 		const $grantTriangle = $('.js-headerInnerPc__grant__triangle');
+
+		const $seachIcon = $('.js-headerInnerPc__search__icon');
+		const $grantIcon = $('.js-headerInnerPc__grant__icon');
 
 		//spSearchの出し入れ
 		function spSearchToggle() {
@@ -96,6 +109,8 @@ export default class Header {
 			}
 		}
 
+
+
 		//pcMenuが押された時
 		$(".js-headerInnerPc__Menu, .js-spMenu__close").on('click', function () {
 			spMenuToggle();
@@ -115,59 +130,73 @@ export default class Header {
 			headerToggle();
 		}); 
 
-		//pcSearchが押された時
-		$headerInnerPcSearch.on('click', function () {
-			spSearchToggle();
-			modalCoverToggle();
 
-			//searchボタンがクリックされた時は、必ずspMenuは閉じている。
-			if ($spMenu.hasClass('is-active')) {
-				$spMenu.removeClass('is-active');
-			};
+
+		//pcSearchがhoverされた時
+		$headerInnerPcSearch.on('mouseover', function () {
+			$spSearch.addClass('is-active');
+			$modalCover.addClass('is-active');
+			$seachIcon.addClass('is-active');
+
+			//searchボタンがhoverされた時は、必ずspMenuは閉じている。
+			$spMenu.removeClass('is-active');
 			
-			//searchボタンがクリックされた時は、必ずspGrantは閉じている。
-			if ($spGrant.hasClass('is-active')) {
-				$spGrant.removeClass('is-active');
-			};
+			//searchボタンがhoverされた時は、必ずspGrantは閉じている。
+			$spGrant.removeClass('is-active');
 
-			triangleToggle();
-			headerToggle();
+			$seachTriangle.addClass('is-active');
+			$header.addClass('is-active');
+		}).on('mouseout', function () {
+			$spSearch.removeClass('is-active');
+			$modalCover.removeClass('is-active');
+			$seachIcon.removeClass('is-active');
+
+			$seachTriangle.removeClass('is-active');
+			$header.removeClass('is-active');
 		}); 
 
 
-		//pcGrantが押された時
-		$headerInnerPcGrant.on('click', function () {
-			spGrantToggle();
-			modalCoverToggle();
 
-			//grantボタンがクリックされた時は、必ずspMenuは閉じている。
-			if ($spMenu.hasClass('is-active')) {
-				$spMenu.removeClass('is-active');
-			};
+
+		//pcGrantがhoverされた時
+		$headerInnerPcGrant.on('mouseover', function () {
+			$spGrant.addClass('is-active');
+			$modalCover.addClass('is-active');
+			$grantIcon.addClass('is-active');
+
+			//grantボタンがhoverされた時は、必ずspMenuは閉じている。
+			$spMenu.removeClass('is-active');
 			
-			//grantボタンがクリックされた時は、必ずspSearchは閉じている。
-			if ($spSearch.hasClass('is-active')) {
-				$spSearch.removeClass('is-active');
-			};
+			//grantボタンがhoverされた時は、必ずspSearchは閉じている。
+			$spSearch.removeClass('is-active');
 
-			triangleToggle();
-			headerToggle();
+			$grantTriangle.addClass('is-active');
+			$header.addClass('is-active');
+		}).on('mouseout', function () {
+			$spGrant.removeClass('is-active');
+			$modalCover.removeClass('is-active');
+			$grantIcon.removeClass('is-active');
+
+			$grantTriangle.removeClass('is-active');
+			$header.removeClass('is-active');
 		}); 
 
-		$modalCover.on('click', function () {
+
+
+		$modalCover.on('mouseover', function () {
 			$modalCover.removeClass('is-active');
 
-			//modalCoverがクリックされた時は、必ずspMenuは閉じている。
+			//modalCoverがhoverされた時は、必ずspMenuは閉じている。
 			if ($spMenu.hasClass('is-active')) {
 				$spMenu.removeClass('is-active');
 			};
 			
-			//modalCoverがクリックされた時は、必ずspGrantは閉じている。
+			//modalCoverがhoverされた時は、必ずspGrantは閉じている。
 			if ($spGrant.hasClass('is-active')) {
 				$spGrant.removeClass('is-active');
 			};
 
-			//modalCoverがクリックされた時は、必ずspSearchは閉じている。
+			//modalCoverがhoverされた時は、必ずspSearchは閉じている。
 			if ($spSearch.hasClass('is-active')) {
 				$spSearch.removeClass('is-active');
 			};			

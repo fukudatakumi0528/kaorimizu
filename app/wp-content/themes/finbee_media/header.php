@@ -14,20 +14,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="l-modalCover"></div>
 
   <!-- メインメニュー -->
-	<div class="l-spMenu" id="js-spMenu">
+	<div class="l-spMenu is-hidden" id="js-spMenu">
 		<header class="l-header">
 			<div class="o-headerInner">
 				<a class="m-logo" href="<?= site_url() ?>">
 					<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 				</a>
 				<div class="o-headerInner__left">
-					<a class="o-headerInner__left__list instagram" href="">
+					<a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
           </a>
-					<a class="o-headerInner__left__list twitter" href="">
+					<a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
           </a>
-					<a class="o-headerInner__left__list facebook" href="">
+					<a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
   					<img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
           </a>
 				</div>
@@ -63,26 +63,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </a>
                 </li>
               </ul>
-              <ul class="o-headerInnerPc__left__button">
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
-                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
-                </li>
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
-                  <div class="o-headerInnerPc__left__button__list__triangle"></div>
-                </li>
-              </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -96,10 +80,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('') ?>">
 								<div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-home l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image home" src="<?= assetsPath('img') ?>icon/home/icon-home.svg" alt="TOP">
+                  </div>
 									<p class="l-spMenu__main__nav__list__link__left__text">TOP</p>
 								</div>
 								<div class="icon-btn"></div>
@@ -108,11 +91,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('feature/') ?>">
 								<div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-feature l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
+                  </div>
 									<p class="l-spMenu__main__nav__list__link__left__text">特集</p>
 								</div>
 								<div class="icon-btn"></div>
@@ -121,13 +102,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('hobby/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-hobby l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-										<span class="path4"></span>
-										<span class="path5"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">趣味</p>
                 </div>
 								<div class="icon-btn"></div>
@@ -136,10 +113,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('life/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-life l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image life" src="<?= assetsPath('img') ?>icon/home/icon-life.svg" alt="生活">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">生活</p>
                 </div>
 								<div class="icon-btn"></div>
@@ -148,11 +124,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="l-spMenu__main__nav__list">
 							<a class="l-spMenu__main__nav__list__link" href="<?= site_url('learn/') ?>">
                 <div class="l-spMenu__main__nav__list__link__left">
-									<span class="icon-learn l-spMenu__main__nav__list__link__left__icon">
-										<span class="path1"></span>
-										<span class="path2"></span>
-										<span class="path3"></span>
-									</span>
+                  <div class="l-spMenu__main__nav__list__link__left__icon">
+                    <img class="l-spMenu__main__nav__list__link__left__icon__image learn" src="<?= assetsPath('img') ?>icon/home/icon-learn.svg" alt="学び">
+                  </div>
                   <p class="l-spMenu__main__nav__list__link__left__text">学び</p>
                 </div>
 								<div class="icon-btn"></div>
@@ -207,7 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -258,14 +232,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $sliceNewArrivalTags = array_slice($newArrivalTags,0,10);
 
             if(count($sliceNewArrivalTags) > 0):
+
+            $termsNameList = [];
+            foreach ($sliceNewArrivalTags as $termsName) {
+              array_push($termsNameList,$termsName->name);
+            }
+
+            $uniqueTermsNameList = array_unique($termsNameList);
           ?>
           <div class="l-spMenu__main__keywords">
             <div class="l-spMenu__main__keywords__title">Keywords</div>
 						<ul class="o-classificationList">
-              <?php foreach($sliceNewArrivalTags as $sliceNewArrivalTag): ?>
+              <?php foreach($uniqueTermsNameList as $uniqueTermsName): ?>
 							<li class="o-classificationList__tag">
-                <a class="o-classificationList__tag__link" href="<?= get_category_link($sliceNewArrivalTag->term_id); ?>">
-                  <p class="o-classificationList__tag__link__inner"><?= $sliceNewArrivalTag->name ?></p>
+                <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
+                  <p class="o-classificationList__tag__link__inner"><?= $uniqueTermsName ?></p>
                 </a>
               </li>
               <?php endforeach;?>
@@ -276,20 +257,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- 目標を探す -->
-      <div class="l-spSearch" id="js-spSearch">
+      <div class="l-spSearch is-hidden" id="js-spSearch">
         <header class="l-header">
           <div class="o-headerInner">
             <a class="m-logo" href="<?= site_url() ?>">
               <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
             </a>
             <div class="o-headerInner__left">
-              <a class="o-headerInner__left__list instagram" href="">
+              <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
               </a>
-              <a class="o-headerInner__left__list twitter" href="">
+              <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
               </a>
-              <a class="o-headerInner__left__list facebook" href="">
+              <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
               </a>
             </div>
@@ -325,24 +306,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </a>
                 </li>
               </ul>
-              <ul class="o-headerInnerPc__left__button">
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
-                </li>
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
-                </li>
-              </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -351,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </header>
-        <div class="l-spSearch__main">
+        <div class="l-spSearch__main js-headerInnerPc__search">
           <div class="l-spSearch__main__callout">
             <div class="l-spSearch__main__callout__triangle"></div>
           </div>
@@ -400,7 +367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -463,13 +430,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   asort($searchTermsUnique);
                   $searchTermsUnique = array_values($searchTermsUnique);
 
-                  foreach($searchTermsUnique as $searchTermUnique):
-                  $tag = get_term($searchTermUnique);
+                  $termsNameList = [];
+                  foreach ($searchTermsUnique as $termsID) {
+                    array_push($termsNameList,get_term($termsID)->name);
+                  }
+            
+                  $uniqueTermsNameList = array_unique($termsNameList);
+
+                  foreach($uniqueTermsNameList as $uniqueTermsName):
                 ?>
                 <li class="o-classificationList__tag">
-                  <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
                     <p class="o-classificationList__tag__link__inner">
-                      <?= $tag->name?>
+                      <?= $uniqueTermsName?>
                     </p>
                   </a>
                 </li>
@@ -480,18 +453,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- 目標を叶える -->
-      <div class="l-spGrant" id="js-spGrant">
+      <div class="l-spGrant is-hidden" id="js-spGrant">
         <header class="l-header">
           <div class="o-headerInner"><a class="m-logo" href="<?= site_url() ?>">
             <img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia"></a>
             <div class="o-headerInner__left">
-              <a class="o-headerInner__left__list instagram" href="">
+              <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
               </a>
-              <a class="o-headerInner__left__list twitter" href="">
+              <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
               </a>
-              <a class="o-headerInner__left__list facebook" href="">
+              <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
                 <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
               </a>
             </div>
@@ -525,24 +498,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </a>
                 </li>
               </ul>
-              <ul class="o-headerInnerPc__left__button">
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
-                </li>
-                <li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-                  <div class="o-headerInnerPc__left__button__list__icon">
-                    <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
-                  </div>
-                  <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
-                </li>
-              </ul>
               <div class="o-headerInnerPc__left__icon">
-                <a class="icon-instagram o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-twitter o-headerInnerPc__left__icon__list" href=""></a>
-                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="">
+                <a class="icon-instagram o-headerInnerPc__left__icon__list" href="https://www.instagram.com/be_topia/"></a>
+                <a class="icon-twitter o-headerInnerPc__left__icon__list" href="https://twitter.com/be_topia"></a>
+                <a class="icon-facebook o-headerInnerPc__left__icon__list" href="https://www.facebook.com/betopia.jp">
                   <span class="path1"></span>
                   <span class="path2"></span>
                 </a>
@@ -551,7 +510,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </header>
-        <div class="l-spGrant__main">
+        <div class="l-spGrant__main js-headerInnerPc__grant">
           <div class="l-spGrant__main__triangle"></div>
           <form class="m-inputSearch" id="form" action="<?php echo esc_url( home_url() ); ?>" method="get">
             <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
@@ -599,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
-                          <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                          <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                             <?= $tag->name?>
                           </a>
                         </object>
@@ -662,13 +621,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               asort($grantTermsUnique);
               $grantTermsUnique = array_values($grantTermsUnique);
 
-              foreach($grantTermsUnique as $grantTermUnique):
-              $tag = get_term($grantTermUnique);
-            ?>
+              $termsNameList = [];
+              foreach ($grantTermsUnique as $termsID) {
+                array_push($termsNameList,get_term($termsID)->name);
+              }
+        
+              $uniqueTermsNameList = array_unique($termsNameList);
+
+              foreach($uniqueTermsNameList as $uniqueTermsName):
+        ?>
             <li class="o-classificationList__tag">
-              <a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+              <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
                 <p class="o-classificationList__tag__link__inner">
-                  <?= $tag->name?>
+                  <?= $uniqueTermsName?>
                 </p>
               </a>
             </li>
@@ -685,13 +650,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<img class="m-logo__image" src="<?= assetsPath('img') ?>logo/be-topia_headerLogo.svg" alt="be-topia">
 			</a>
 			<div class="o-headerInner__left">
-        <a class="o-headerInner__left__list instagram" href="">
+        <a class="o-headerInner__left__list instagram" href="https://www.instagram.com/be_topia/" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
         </a>
-        <a class="o-headerInner__left__list twitter" href="">
+        <a class="o-headerInner__left__list twitter" href="https://twitter.com/be_topia" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
         </a>
-        <a class="o-headerInner__left__list facebook" href="">
+        <a class="o-headerInner__left__list facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
           <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
         </a>
 			</div>
@@ -734,43 +699,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</ul>
 				<ul class="o-headerInnerPc__left__button">
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__search">
-						<div class="o-headerInnerPc__left__button__list__icon">
-              <img class="search" src="<?= assetsPath('img') ?>icon/header-search.svg">
-              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__search__triangle">
-                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
-                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
-                  </div>
-                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+            <div class="o-headerInnerPc__left__button__list__inner">
+              <div class="o-headerInnerPc__left__button__list__inner__icon">
+                <img class="search js-headerInnerPc__search__icon" src="<?= assetsPath('img') ?>icon/header-search.svg">
+                <div class="o-headerInnerPc__left__button__list__inner__icon__triangle js-headerInnerPc__search__triangle">
+                  <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner">
+                    <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner__back">
+                    </div>
+                    <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner__front">
+                    </div>
                   </div>
                 </div>
               </div>
-						</div>
-            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>探す</strong></p>
+              <p class="o-headerInnerPc__left__button__list__inner__text">したい・ほしいを<br><strong>探す</strong></p>
+            </div>
 					</li>
 					<li class="o-headerInnerPc__left__button__list js-headerInnerPc__grant">
-						<div class="o-headerInnerPc__left__button__list__icon">
-              <img class="star" src="<?= assetsPath('img') ?>icon/header-star.svg">
-              <div class="o-headerInnerPc__left__button__list__icon__triangle js-headerInnerPc__grant__triangle">
-                <div class="o-headerInnerPc__left__button__list__icon__triangle__inner">
-                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__back">
-                  </div>
-                  <div class="o-headerInnerPc__left__button__list__icon__triangle__inner__front">
+            <div class="o-headerInnerPc__left__button__list__inner">
+              <div class="o-headerInnerPc__left__button__list__inner__icon">
+                <img class="star js-headerInnerPc__grant__icon" src="<?= assetsPath('img') ?>icon/header-star.svg">
+                <div class="o-headerInnerPc__left__button__list__inner__icon__triangle js-headerInnerPc__grant__triangle">
+                  <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner">
+                    <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner__back">
+                    </div>
+                    <div class="o-headerInnerPc__left__button__list__inner__icon__triangle__inner__front">
+                    </div>
                   </div>
                 </div>
               </div>
-						</div>
-            <p class="o-headerInnerPc__left__button__list__text">したい・ほしいを<br><strong>叶える</strong></p>
+              <p class="o-headerInnerPc__left__button__list__inner__text">したい・ほしいを<br><strong>叶える</strong></p>
+            </div>
 					</li>
 				</ul>
 				<div class="o-headerInnerPc__left__icon">
           <div class="o-headerInnerPc__left__icon__list">
-            <a class="o-headerInnerPc__left__icon__list__item instagram" href="">
+            <a class="o-headerInnerPc__left__icon__list__item instagram" href="https://www.instagram.com/be_topia/"target= _blank >
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-instagram.svg" alt="instagram公式アカウント">
             </a>
-            <a class="o-headerInnerPc__left__icon__list__item twitter" href="">
+            <a class="o-headerInnerPc__left__icon__list__item twitter" href="https://twitter.com/be_topia" target= _blank>
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-twitter.svg" alt="twitter公式アカウント">
             </a>
-            <a class="o-headerInnerPc__left__icon__list__item facebook" href="">
+            <a class="o-headerInnerPc__left__icon__list__item facebook" href="https://www.facebook.com/betopia.jp" target= _blank>
               <img src="<?= assetsPath('img') ?>logo/sns/simple/logo-facebook.svg" alt="facebook公式アカウント">
             </a>
             <div class="o-headerInnerPc__left__icon__list__item search js-headerInnerPc__Menu">

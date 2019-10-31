@@ -17,6 +17,10 @@
     transition: 0.2s;
     cursor: pointer;
 
+    &:not(.is-active):hover {
+      height: 100%;
+    }
+
     &.is-active {
       background-color:$bg-1-color;
       height: 100%;
@@ -250,6 +254,14 @@
             @media all and (-ms-high-contrast: none){
               max-height: calc(12px * 1.5 * 3);
             }  
+
+            @include screen-large {
+              -webkit-line-clamp: 4;  
+              
+              @media all and (-ms-high-contrast: none){
+                max-height: calc(12px * 1.5 * 4);
+              }    
+            }
           }
 
           .m-squareCard__inner__footer__description {

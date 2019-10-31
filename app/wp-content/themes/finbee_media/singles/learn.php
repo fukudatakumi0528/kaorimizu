@@ -68,15 +68,15 @@
 								<ul class="o-classificationList">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
 										<li class="o-classificationList__tag">
-											<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+											<a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 												<p class="o-classificationList__tag__link__inner"><?= $tag->name?></p>
 											</a>
 										</li>
 									<?php  endforeach;  endif; ?>
 								</ul>
 							</div>
-							<a class="article__bnr" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>">
-								<img class="article__bnr__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
+							<a class="anl_post_footer" href="https://finbee.jp?utm_source=be-topia&utm_medium=anl_post_footer&utm_campaign=<?= $_SERVER["REQUEST_URI"]; ?>" target= _blank>
+								<img class="anl_post_footer__image" src="<?php echo assetsPath('img') . "/common/bnr.jpg" ?>" alt="">
 							</a>
 							<div class="article__sns">
 								<p>この記事をシェアする</p>
@@ -84,8 +84,8 @@
 							</div>
 							<div class="article__border"></div>
 							<div class="article__prevnext">
-								<?php if($next_post): ?>
-									<a class="article__prevnext__main" href="<?= $next_post_url ?>">
+								<?php if($prev_post): ?>
+									<a class="article__prevnext__main" href="<?= $prev_post_url ?>">
 										<div class="article__prevnext__main__button prev">
 											<span class="icon-head prev"></span>
 										</div>
@@ -94,8 +94,10 @@
 												<p class="article__prevnext__main__content__topper__text prev">前の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $next_post_thumb ?>"></img>
-												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($next_post_ID) ?></p>
+												<div class="article__prevnext__main__content__footer__image">
+													<img class="article__prevnext__main__content__footer__image__inner" src="<?= $prev_post_thumb ?>"></img>
+												</div>
+												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($prev_post_ID) ?></p>
 											</div>
 										</div>
 									</a>
@@ -103,15 +105,17 @@
 									<div class="article__prevnext__main empty">
 									</div>
 								<?php endif; ?>
-								<?php if($prev_post): ?>
-									<a class="article__prevnext__main" href="<?= $prev_post_url ?>">
+								<?php if($next_post): ?>
+									<a class="article__prevnext__main" href="<?= $next_post_url ?>">
 										<div class="article__prevnext__main__content">
 											<div class="article__prevnext__main__content__topper">
 												<p class="article__prevnext__main__content__topper__text next">次の記事</p>
 											</div>
 											<div class="article__prevnext__main__content__footer">
-												<img class="article__prevnext__main__content__footer__image" src="<?= $prev_post_thumb ?>"></img>
-												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($prev_post_ID) ?></p>
+												<div class="article__prevnext__main__content__footer__image">
+													<img class="article__prevnext__main__content__footer__image__inner" src="<?= $next_post_thumb ?>"></img>
+												</div>
+												<p class="article__prevnext__main__content__footer__title"><?= get_the_title($next_post_ID) ?></p>
 											</div>
 										</div>
 										<div class="article__prevnext__main__button next">
@@ -160,34 +164,17 @@
 							<?php endif; ?>
 
 							<?php 
-								$taxonomy_slug = 'learn_tag'; // タクソノミーのスラッグを指定
 								$post_type_slug = 'learn'; // 投稿タイプのスラッグを指定
-								$post_terms = wp_get_object_terms($post->ID, $taxonomy_slug); // タクソノミーの指定
-								if( $post_terms && !is_wp_error($post_terms)) { // 値があるときに作動
-									$terms_slug = array(); // 配列のセット
-									foreach( $post_terms as $value ){ // 配列の作成
-										$terms_slug[] = $value->slug; // タームのスラッグを配列に追加
-									}
-								}
-
-								if($terms_slug):
 
 								$args = array(
 									'post_type' => $post_type_slug, // 投稿タイプを指定
 									'posts_per_page' => 4, // 表示件数を指定
-									'orderby' =>  'rand', // ランダムに投稿を取得
+									'orderby' =>  'DESC', // ランダムに投稿を取得
 									'post__not_in' => array($post->ID), // 現在の投稿を除外
-									'tax_query' => array( // タクソノミーパラメーターを使用
-										array(
-											'taxonomy' => $taxonomy_slug, // タームを取得タクソノミーを指定
-											'field' => 'slug', // スラッグに一致するタームを返す
-											'terms' => $terms_slug // タームの配列を指定
-										)
-									)
 								);
 
-								$the_query = new WP_Query($args);		
-								
+								$the_query = new WP_Query($args);
+
 								if($the_query->have_posts()):
 							?> 
 							<div class="article__relation">
@@ -233,7 +220,7 @@
 												<div class="m-classificationArea">
 													<?php	if($term): foreach ($term as $tag ): ?>
 														<object>
-															<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+															<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 																<?= $tag->name?>
 															</a>
 														</object>
@@ -245,7 +232,7 @@
 									<?php endwhile; wp_reset_postdata(); ?>
 								</ul>
 							</div>
-							<?php endif; endif; ?>
+							<?php endif; ?>
 						</div>
 
 					</article>

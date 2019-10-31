@@ -1,4 +1,12 @@
 <?php
+// GET値がタグ検索の場合、search_tag.phpを表示
+if($_GET["t"] === 'tag') {
+	include(TEMPLATEPATH . '/search-tag.php');
+	return false;
+};
+?>
+
+<?php
 	global $cssName;
 	global $scriptName;
 	$cssName = "search/index";
@@ -60,7 +68,12 @@
 									</div>
 								</div>
 								<div class="m-verticallyCard__inner__footer">
-									<time class="m-verticallyCard__inner__footer__date"><?php the_time('Y.n.j') ?></time>
+									<div class="m-verticallyCard__inner__footer__topper">
+										<time class="m-verticallyCard__inner__footer__topper__date"><?php the_time('Y.n.j') ?></time>
+										<?php if(article_new_arrival($wp_query)): ?>
+											<p class="m-verticallyCard__inner__footer__topper__new">NEW</p>
+										<?php endif; ?>
+									</div>
 									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
 										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>
@@ -68,7 +81,7 @@
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
 											<object>
-												<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 													<?= $tag->name?>
 												</a>
 											</object>

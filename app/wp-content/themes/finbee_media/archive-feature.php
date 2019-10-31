@@ -17,7 +17,7 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-feature.svg" alt="特集">
+					<img class="o-topperSection__main__title__icon feature" src="<?php echo assetsPath('img') ?>icon/category/category-icon-feature.svg" alt="特集">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">特集</h1>
 						<p class="o-topperSection__main__title__text__sub">Feature</p>
@@ -32,7 +32,7 @@
 			<?php if($wp_query->have_posts()): ?>
 			<div class="p-article__main__content__refine">
 				<div class="p-article__main__content__refine__inner">
-					<div class="p-article__main__content__refine__inner__header">
+					<div class="p-article__main__content__refine__inner__header js-refine__click">
 						<div class="p-article__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
 						<div class="p-article__main__content__refine__inner__header__icon js-refine__icon">
 							<span class="p-article__main__content__refine__inner__header__icon__line"></span>
@@ -103,7 +103,7 @@
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
 											<object>
-												<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 													<?= $tag->name?>
 												</a>
 											</object>

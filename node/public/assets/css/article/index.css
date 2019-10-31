@@ -31,8 +31,8 @@ $font-xxl: 2rem;
 .p-article__main {
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
-  margin-top: 60px;
+  max-width: 1100px;
+  margin-top: 40px;
   z-index: 0;
   padding: 0 15px;
 }
@@ -46,6 +46,7 @@ $font-xxl: 2rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-bottom: 60px;
   }
 }
 
@@ -78,8 +79,8 @@ $font-xxl: 2rem;
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateY(-95px) translateX(-50%);
-  transform: translateY(-95px) translateX(-50%);
+  -webkit-transform: translateY(-75px) translateX(-50%);
+  transform: translateY(-75px) translateX(-50%);
   background-color: #FFF2C3;
   min-height: 52px;
   padding: 11px 20px;
@@ -107,6 +108,7 @@ $font-xxl: 2rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner .p-article__main__content__refine__inner__header .p-article__main__content__refine__inner__header__title {
@@ -160,7 +162,7 @@ $font-xxl: 2rem;
 }
 
 .p-article__main .p-article__main__content .p-article__main__content__refine .p-article__main__content__refine__inner .p-article__main__content__refine__inner__selectArea {
-  display: block;
+  display: none;
   height: auto;
 }
 
@@ -232,13 +234,14 @@ $font-xxl: 2rem;
 @media (min-width: 768px) {
   .p-article__main .p-article__main__sidebar {
     display: block;
-    width: 30%;
+    width: 35%;
     min-width: 300px;
   }
 }
 
 .p-article__footer {
   margin-top: 50px;
+  padding-bottom: 60px;
   width: 100%;
   overflow: hidden;
 }

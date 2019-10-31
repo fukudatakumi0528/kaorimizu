@@ -118,7 +118,7 @@
             <div class="m-classificationArea">
               <?php	if($term): foreach ($term as $tag ): ?>
                 <object>
-                  <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                     <?= $tag->name?>
                   </a>
                 </object>
@@ -185,7 +185,7 @@
             <div class="m-classificationArea">
               <?php	if($term): foreach ($term as $tag ): ?>
                 <object>
-                  <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                     <?= $tag->name?>
                   </a>
                 </object>
@@ -252,7 +252,7 @@
             <div class="m-classificationArea">
               <?php	if($term): foreach ($term as $tag ): ?>
                 <object>
-                  <a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+                  <a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
                     <?= $tag->name?>
                   </a>
                 </object>

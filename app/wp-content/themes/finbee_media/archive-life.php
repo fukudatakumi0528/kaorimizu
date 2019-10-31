@@ -18,7 +18,7 @@
 		<div class="o-topperSection">
 			<div class="o-topperSection__main">
 				<div class="o-topperSection__main__title">
-					<img class="o-topperSection__main__title__icon" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
+					<img class="o-topperSection__main__title__icon life" src="<?php echo assetsPath('img') ?>icon/category/category-icon-life.svg" alt="生活">
 					<div class="o-topperSection__main__title__text">
 						<h1 class="o-topperSection__main__title__text__main">生活</h1>
 						<p class="o-topperSection__main__title__text__sub">Life</p>
@@ -33,7 +33,7 @@
 			<?php if($wp_query->have_posts()): ?>
 			<div class="p-article__main__content__refine">
 				<div class="p-article__main__content__refine__inner">
-					<div class="p-article__main__content__refine__inner__header">
+					<div class="p-article__main__content__refine__inner__header js-refine__click">
 						<div class="p-article__main__content__refine__inner__header__title">人気のワードから絞り込む</div>
 						<div class="p-article__main__content__refine__inner__header__icon js-refine__icon">
 							<span class="p-article__main__content__refine__inner__header__icon__line"></span>
@@ -45,7 +45,8 @@
 							<?php $tags = get_terms('life_tag'); ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
-										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
+										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>
+										">
 											<p class="o-classificationList__tag__link__inner"><?= $tag->name?></p>
 										</a>
 									</li>
@@ -103,7 +104,7 @@
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
 											<object>
-												<a class="m-classificationArea__tag" href="<?= get_category_link($tag->term_id); ?>">
+												<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
 													<?= $tag->name?>
 												</a>
 											</object>
