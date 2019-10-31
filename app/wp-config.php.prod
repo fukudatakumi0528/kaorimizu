@@ -26,19 +26,19 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'officelab_ka_wordpress');
+define('DB_NAME', 'finbee_media_prod');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'root');
+define('DB_USER', 'giguser');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'BQ,7CjBdfQLYVcBq');
+define('DB_PASSWORD', 'FA105J9ApOjp');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'finbee-prod-rds.chijaeiqexoo.ap-northeast-1.rds.amazonaws.com');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define('DB_COLLATE', '');
@@ -52,23 +52,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-//define('AUTH_KEY',         '$m-Hwi+4;D[:}R8m.1K|Zj{%;naHi7WQ =R{*X5wg;<>gIpLI8V,8QpGHK5%b0hT');
-//define('SECURE_AUTH_KEY',  '/Mt[(2@97SK2>F}&DigLF#,[)6}@T)b$:NxsxICDMsTW_Cg#p Z?lcGvly-j[[)f');
-//define('LOGGED_IN_KEY',    '6*2Oxu}*}~bTHq3:wHEh{<U-O~PaEQ{ynQynA:-X!o-h8sv{Og$8k{~f~~xjsCt(');
-//define('NONCE_KEY',        'a% dl!%/+#Y(%NTi7q_>7>s9m*)FzPjEXv:(P*_d?i IQV0yst_g]T?98,_&flCO');
-//define('AUTH_SALT',        '.6 TK!^Df,3vq&}uH`/VuuGN/s<&=AJnuCqWDvy`_[27&#Jdn.Fkx0*oKCu;1NY}');
-//define('SECURE_AUTH_SALT', '^_X.jJ$rh%v{3z20NYPU,rSHNBa;xuLKWijKzu/yXSa?? wuF_**{Po^>m;+S!*?');
-//define('LOGGED_IN_SALT',   'i+E]JuWb|8~-]R)azV~c@SqqmpoA>Y(GBb!PXWdN|lINo[]Dv>%.BZldoYhr?945');
-//define('NONCE_SALT',       '@qW+Hzoeaps$7gLOXg>- (un1Fm(XgH8gF_*/zQOI2&HGXr&k:|Xz&?5<C?FLUTy');
-
-define('AUTH_KEY',         '7*}K7l]w!A,E%gXUgI|36Cxp(ujb&F5fQr+v~rJ&S#ZMNhgbY 8](#]x$*md|h,:');
-define('SECURE_AUTH_KEY',  'I%&%hT`y`d${JnwA7`z9[)o-5URncB.=y$G=l_~{lr5&lG}Wn Ye*2O,sqV;^U%B');
-define('LOGGED_IN_KEY',    '?3W%FC:jWh&#,}#q1~6admorTi_|T6RV#+lz*n0>%Y/F~=~?uH+9{|&sf_%bE_bi');
-define('NONCE_KEY',        ';m+5/#~+sK![HV!K+xAReO Y=T]8@Fyo[NpM+VB!q_TH*Y`AXmT=|F=R5v-NP&]I');
-define('AUTH_SALT',        'q[M_pnNoFQaq1*fBi5CqY3CB01stLyto%17NtcvWrj#9gwf|rvhzO,#v;`-QA)]A');
-define('SECURE_AUTH_SALT', 'DOg@C-I@L&jOzA5AeU=:K18?IsY06kKko[L3F#UB7Jka<hs!v$NQ5L@S+pg E}*M');
-define('LOGGED_IN_SALT',   'F0u-VOKE{a@r6*h2c1~}<|y7*LU?^9yM{Ai.?U{B%u*3l?cgn&1qwq2ar/[Sv3J`');
-define('NONCE_SALT',       ' ==znbG?Oh-t8=.F,l%mj9TG}2Ff.l/D5Iu;_&`L~|:(WINsrnPWXn(2fM){rg1b');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
@@ -90,7 +81,7 @@ $table_prefix  = 'wp_';
  *
  * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
@@ -98,8 +89,7 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
+$_SERVER['HTTPS'] ='on';
+
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-define('DISALLOW_FILE_EDIT', true);
-define('DISABLE_WP_CRON', 'true');
