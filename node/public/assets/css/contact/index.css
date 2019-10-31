@@ -409,6 +409,10 @@ $font-xxl: 2rem;
   display: flex;
 }
 
+.p-contact__main__btns .m-wideButton {
+  width: 50%;
+}
+
 .p-contact__main__btns .m-wideButton + .m-wideButton {
   margin-left: 20px;
 }

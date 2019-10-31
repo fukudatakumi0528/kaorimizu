@@ -351,6 +351,7 @@
 	margin-top: 50px;
 	display: flex;
 	.m-wideButton {
+    width: 50%;
 		& + .m-wideButton {
 			margin-left: 20px;
 		}
