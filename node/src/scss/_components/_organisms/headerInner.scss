@@ -29,6 +29,12 @@
       height: 17px;
       width: 17px;
 
+      //アカウント凍結解除まで非表示
+      &.instagram {
+        display: none;
+      }
+      //ここまで
+
       img {
         height: 100%;
       }  

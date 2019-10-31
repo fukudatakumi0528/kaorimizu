@@ -305,6 +305,12 @@
             justify-content: center;
             align-items: center;
           }
+
+          //アカウント凍結解除まで非表示
+          &.instagram {
+            display: none;
+          }
+          //ここまで
   
           &:nth-child(1) {
             margin-left: 0px;
