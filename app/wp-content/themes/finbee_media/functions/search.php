@@ -39,3 +39,19 @@ function custom_search($search, $wp_query) {
   return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);
+
+//固定ページやライター情報などを検索除外
+function my_posts_per_page($query) {
+    if( is_search() ) {
+        $query->set( 'post_type', array('feature', 'hobby', 'life', 'learn') );
+    }
+    }
+    add_action( 'pre_get_posts', 'my_posts_per_page' );
+    function my_posy_search($search) {
+    if(is_search()) {
+        // post_type='news'も検索結果に含める
+        $search .= " AND (post_type = 'feature' OR post_type='hobby' OR post_type='life' OR post_type='learn')";
+    }
+    return $search;
+}
+add_filter('posts_search', 'my_posy_search');
