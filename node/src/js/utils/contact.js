@@ -12,12 +12,15 @@ export default class Contact {
 
   checkValidation() {
 	  const $checker = $('.error');
+
 		$checker.each((ind, el) => {
 			const $this = $(el);
-			const $validationWrapInput = $this.prev('.m-inputArea__under_validationwrap');
-			const $validationWrapSelect = $this.prev('.m-selectboxArea__under_validationwrap');
-			$validationWrapInput.addClass('is-validation');
-			$validationWrapSelect.addClass('is-validation');
+			const $validationWrap = $this.prev('.validation')
+
+			//const $validationWrapInput = $this.prev('.m-inputArea__under_validationwrap');
+			//const $validationWrapSelect = $this.prev('.m-selectboxArea__under_validationwrap');
+			$validationWrap.addClass('is-validation');
+			//$validationWrapSelect.addClass('is-validation');
 		})
   }
 
