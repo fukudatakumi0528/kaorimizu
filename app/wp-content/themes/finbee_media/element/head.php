@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <title>finbee</title>
 <link rel="apple-touch-icon" sizes="180x180" href="<?= assetsPath('img') ?>icon/apple-touch-icon-180x180.png">
-<link rel="icon" href="<?= assetsPath('img') ?>icon/favicon.ico">
 <link rel="stylesheet" href="<?= assetsPath('css') ?>common.css">
 <link rel="stylesheet" href="<?= assetsPath('css') . $cssName ?>.css">
 <link rel="stylesheet" href="<?= assetsPath('fonts') ?>icomoon/style.css">
