@@ -22,7 +22,7 @@ function my_validation_rule_job( $Validation, $data, $Data ) {
 	// 都道府県
 	$Validation->set_rule( 'prefecture', 'noEmpty', array( 'message' => '選択してください' ) );
 	// プライバシーポリシーチェック
-	$Validation->set_rule( 'agreement', 'required', array( 'message' => 'プライバシーポリシー・利用規約に同意の上、チェックボックスにチェックを入れてください' ) );
+	$Validation->set_rule( 'agreement', 'required', array( 'message' => 'プライバシーポリシー・免責事項に同意の上、チェックボックスにチェックを入れてください' ) );
 
 
 /*
