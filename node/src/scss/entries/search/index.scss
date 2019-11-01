@@ -160,9 +160,10 @@
           justify-content: flex-start;
 
           &.nothing {
+            margin-bottom:30px;
 
             @include screen-large {
-              margin-bottom:30px;
+              margin-bottom:0px;
             }
           }
     
