@@ -244,7 +244,7 @@
         /**
          * 検索結果ページ
          */
-        echo '<li><span>「'. esc_html( get_search_query() ) .'」で検索した結果</span></li>';
+        echo '<li><span>「'. esc_html( get_search_query() ) .'」の検索結果</span></li>';
 
       
       } elseif ( is_404() ) {
