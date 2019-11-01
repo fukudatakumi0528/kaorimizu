@@ -300,13 +300,19 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 span {
   display: inline;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), color-stop(0%, #FFD94A));
-  background: linear-gradient(transparent 85%, #FFD94A 0%);
   font-size: 25px;
   font-weight: 700 !important;
   line-height: 170%;
-  padding-top: 60px;
-  margin-top: -60px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(0%, #FFD94A));
+  background: linear-gradient(transparent 65%, #FFD94A 0%);
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h2 span {
+    padding-top: 60px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), color-stop(0%, #FFD94A));
+    background: linear-gradient(transparent 85%, #FFD94A 0%);
+  }
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body h3 {

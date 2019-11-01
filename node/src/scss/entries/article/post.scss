@@ -255,12 +255,15 @@
 
 								span {
 									display: inline;
-									background:linear-gradient(transparent 85%, $bg-1-color 0%);
 									font-size: 25px;
 									font-weight: $font-bold !important;
 									line-height: 170%;
-									padding-top:60px;
-									margin-top:-60px;	
+									background:linear-gradient(transparent 65%, $bg-1-color 0%);
+
+									@include screen-large {
+										padding-top:60px;
+										background:linear-gradient(transparent 85%, $bg-1-color 0%);
+									}
 								}
 							}
 
