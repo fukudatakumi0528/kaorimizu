@@ -37,8 +37,12 @@ if($_GET["t"] === 'tag') {
 						<p class="p-search__main__content__column__result__category__text"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果</p>
           </div>
           <div class="p-search__main__content__column__result__number">
-            <p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
-          </div>
+						<?php if(((int)$wp_query->found_posts === 1)): ?>
+            	<p class="p-search__main__content__column__result__number__text">1件中 1件を表示</p>
+						<?php else: ?>
+							<p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
+						<?php endif; ?>
+					</div>
         </div>
 				<?php elseif(empty( get_search_query() )): ?>
 				<div class="p-search__main__content__column__result">
