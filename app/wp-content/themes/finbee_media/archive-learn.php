@@ -61,7 +61,7 @@
 					<?php if($wp_query->have_posts()): ?>
 						<div class="p-article__main__content__column__result__number">
 							<?php if(((int)wp_count_posts('learn')->publish === 1)): ?>
-								<p class="p-article__main__content__column__result__number__text">1件を表示</p>
+								<p class="p-article__main__content__column__result__number__text">1件中 1件を表示</p>
 							<?php else: ?>
 								<p class="p-article__main__content__column__result__number__text"><?= wp_count_posts('learn')->publish; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 							<?php endif; ?>
