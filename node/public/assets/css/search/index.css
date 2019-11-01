@@ -201,7 +201,7 @@ $font-xxl: 2rem;
 }
 
 .p-search__main .p-search__main__content .p-search__main__content__column .p-search__main__content__column__result .p-search__main__content__column__result__category.nothing {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 @media (min-width: 768px) {

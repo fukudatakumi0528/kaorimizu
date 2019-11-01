@@ -40,13 +40,20 @@ if($_GET["t"] === 'tag') {
             <p class="p-search__main__content__column__result__number__text"><?= $wp_query->found_posts; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
           </div>
         </div>
-        <?php else: ?>
+				<?php elseif(empty( get_search_query() )): ?>
+				<div class="p-search__main__content__column__result">
+					<div class="p-search__main__content__column__result__category nothing">
+						<p class="p-search__main__content__column__result__category__text nothing">検索キーワードが未入力です。</p>
+          </div>
+        </div>				
+				<?php else: ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category nothing">
 						<p class="p-search__main__content__column__result__category__text nothing"><strong><?= esc_html( get_search_query( false ) ); ?></strong>の検索結果が見つかりませんでした。</p>
           </div>
         </div>
-        <?php endif; ?>
+				<?php endif; ?>
+				<?php if(have_posts() && get_search_query()): ?>
 				<div class="o-verticallyCardList">
 					<?php
             while(have_posts()): 
@@ -93,6 +100,8 @@ if($_GET["t"] === 'tag') {
 						</article>
 					<?php endwhile; wp_reset_postdata(); ?>
 				</div>
+				<?php endif; ?>
+				<?php if(have_posts() && get_search_query() ): ?>
 				<div class="articles__pager">
 					<div class="c-pager">
 						<?php
@@ -110,7 +119,8 @@ if($_GET["t"] === 'tag') {
 							wp_reset_postdata();
 						?>
 					</div>
-        </div>
+				</div>
+				<?php endif; ?>
       </div>
 		</div>
 		<div class="p-search__main__sidebar">
