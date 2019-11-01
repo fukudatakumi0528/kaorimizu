@@ -14,7 +14,7 @@ function custom_search($search, $wp_query) {
   
   if(is_search()) {
     // カスタム投稿タイプを検索結果に含める
-    $search .= " (post_type = 'feature' OR post_type='hobby' OR post_type='life' OR post_type='learn')";
+    $search .= "AND (post_type = 'feature' OR post_type='hobby' OR post_type='life' OR post_type='learn')";
   }
 
   /*
