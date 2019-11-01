@@ -12,14 +12,13 @@ function custom_search($search, $wp_query) {
   if (!isset($wp_query->query_vars))
       return $search;
   
-  // ユーザー名とか、タグ名・カテゴリ名も検索対象に
-
   if(is_search()) {
     // カスタム投稿タイプを検索結果に含める
-    $search .= "AND (post_type = 'feature' OR post_type='hobby' OR post_type='life' OR post_type='learn')";
+    $search .= " (post_type = 'feature' OR post_type='hobby' OR post_type='life' OR post_type='learn')";
   }
 
   /*
+  ユーザー名とか、タグ名・カテゴリ名も検索対象にする場合
   $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
   if ( count($search_words) > 0 ) {
       $search = '';
