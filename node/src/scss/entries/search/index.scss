@@ -160,6 +160,10 @@
           justify-content: flex-start;
 
           &.nothing {
+
+            @include screen-large {
+              margin-bottom:30px;
+            }
           }
     
           .p-search__main__content__column__result__category__text {

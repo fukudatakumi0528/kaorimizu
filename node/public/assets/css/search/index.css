@@ -200,6 +200,12 @@ $font-xxl: 2rem;
   justify-content: flex-start;
 }
 
+@media (min-width: 768px) {
+  .p-search__main .p-search__main__content .p-search__main__content__column .p-search__main__content__column__result .p-search__main__content__column__result__category.nothing {
+    margin-bottom: 30px;
+  }
+}
+
 .p-search__main .p-search__main__content .p-search__main__content__column .p-search__main__content__column__result .p-search__main__content__column__result__category .p-search__main__content__column__result__category__text {
   font-size: 1.4rem;
   font-weight: 700;
