@@ -91,7 +91,7 @@ if($_GET["t"] === 'tag') {
 								</div>
 							</a>
 						</article>
-					<?php endwhile; ?>
+					<?php endwhile; wp_reset_postdata(); ?>
 				</div>
 				<div class="articles__pager">
 					<div class="c-pager">
