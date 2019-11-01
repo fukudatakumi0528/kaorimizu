@@ -5,7 +5,7 @@
   bottom:0;
   z-index: 1000;
 
-  @include screen-large {
+  @include screen-morelarge {
     display: none;
   }
 

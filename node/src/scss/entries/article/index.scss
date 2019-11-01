@@ -6,7 +6,7 @@
 .p-article__topper {
   z-index: 0;
 
-  @include screen-large{
+  @include screen-morelarge {
     margin-top:80px;
   }
 

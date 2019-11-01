@@ -20,9 +20,15 @@ $font-xxl: 2rem;
 
 @media (min-width: 768px) {
   .p-top__kv {
-    margin-top: 70px;
+    margin-top: 0;
     height: 490px;
     background-color: #F7F7F7;
+  }
+}
+
+@media (min-width: 970px) {
+  .p-top__kv {
+    margin-top: 70px;
   }
 }
 

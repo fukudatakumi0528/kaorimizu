@@ -5,7 +5,7 @@
 
 .p-disclaimer__topper {
 
-  @include screen-large{
+  @include screen-morelarge {
     margin-top:80px;
   }
 

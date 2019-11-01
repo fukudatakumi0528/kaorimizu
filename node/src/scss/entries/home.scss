@@ -4,6 +4,7 @@
 @import "../_utils/_mixins";
 
 .p-top{
+
   @include screen-large {
     padding-bottom:120px;
   }
@@ -15,9 +16,13 @@
   position: relative;
 
   @include screen-large {
-    margin-top:70px;
+    margin-top:0;
     height: 490px;
     background-color: $bg-10-color;
+  }
+
+  @include screen-morelarge {
+    margin-top:70px;
   }
 
   &:before {

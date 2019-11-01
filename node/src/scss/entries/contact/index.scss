@@ -4,7 +4,8 @@
 @import "../../_utils/_mixins";
 
 .p-contact__topper {
-  @include screen-large{
+
+  @include screen-morelarge {
     margin-top:80px;
   }
 

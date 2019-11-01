@@ -670,6 +670,15 @@
     color:$font-3-color;
     padding:15px;
 
+    @include screen-large {
+      padding-bottom:120px;
+    }
+
+    @include screen-morelarge {
+      padding:15px;
+    }
+
+
     .l-footer__nav__inner {
 
       @include screen-large {

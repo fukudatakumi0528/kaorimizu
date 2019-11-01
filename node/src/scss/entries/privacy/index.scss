@@ -5,9 +5,10 @@
 
 .p-privacy__topper {
 
-  @include screen-large{
+  @include screen-morelarge {
     margin-top:80px;
   }
+
 
   .o-topperSection {
     padding:40px 20px 40px 20px;

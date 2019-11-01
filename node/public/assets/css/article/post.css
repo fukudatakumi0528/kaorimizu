@@ -38,10 +38,17 @@ $font-xxl: 2rem;
 @media (min-width: 768px) {
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__topper {
     display: block;
-    margin: 70px auto 0 auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 1030px;
+    padding: 20px 15px 20px 15px;
+  }
+}
+
+@media (min-width: 970px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__topper {
     padding: 50px 15px;
+    margin-top: 70px;
   }
 }
 
