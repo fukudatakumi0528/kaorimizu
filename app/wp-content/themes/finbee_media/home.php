@@ -49,7 +49,7 @@
 						</div>
 						<div class="m-squareCard__inner__footer__description">
 							<div class="m-squareCard__inner__footer__description__text">
-							<?php echo mb_substr(strip_tags($slider->post_content), 0, 100).'…'; ?>
+							<?php echo mb_substr(strip_tags($slider->post_content), 0, 45).'…'; ?> 
 							</div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
