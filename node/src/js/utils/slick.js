@@ -92,7 +92,7 @@ export default class Slick {
 		});
 
 
-		var mediaQuery = matchMedia('(max-width: 768px)');
+		var mediaQuery = matchMedia('(max-width: 767px)');
 
 		// ページが読み込まれた時に実行
 		handle(mediaQuery);
