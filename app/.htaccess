@@ -23,6 +23,16 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 
+# SNS Share
+
+Satisfy Any
+Order Allow,Deny
+SetEnvIf User-Agent "^facebookexternalhit.*$" fb_crawler
+SetEnvIf User-Agent "^facebookplatform.*$" fb_crawler2
+SetEnvIf User-Agent "^Twitterbot.*$" tw_crawler
+Allow from env=fb_crawler
+Allow from env=fb_crawler2
+Allow from env=tw_crawler
 
 #Change upload limits
 #php_value memory_limit 34M
