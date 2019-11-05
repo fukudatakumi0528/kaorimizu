@@ -3,6 +3,24 @@ export default class SliderTab {
     const $sliderTabRanking = $('.t-rankingArea__tab');
     const $sliderTabRankingList = $sliderTabRanking.children('.t-rankingArea__tab__list')
 
+    //画面幅が変更された時に、スタイル適応させるため。
+    $(function(){
+      var timer = false;
+      var prewidth = $(window).width()
+      $(window).resize(function() {
+          if (timer !== false) {
+              clearTimeout(timer);
+          };
+          timer = setTimeout(function() {
+              var nowWidth = $(window).width()
+              if(prewidth !== nowWidth){
+                  location.reload();
+              };
+              prewidth = nowWidth;
+          }, 200);
+      });
+    });
+    
     $sliderTabRankingList.on('click', function () {
       if (!$(this).hasClass('is-active')) {
         $sliderTabRankingList.removeClass('is-active');

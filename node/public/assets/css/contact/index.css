@@ -6,7 +6,7 @@ $font-l: 1.6rem;
 $font-xl: 1.8rem;
 $font-xxl: 2rem;
 */
-@media (min-width: 768px) {
+@media (min-width: 970px) {
   .p-contact__topper {
     margin-top: 80px;
   }

@@ -4,6 +4,10 @@
 
   @include screen-large {
     height: 80px;
+  }
+
+  @include screen-morelarge {
+    height: 80px;
     padding:13px 20px 13px 16px;
     display: flex;
     justify-content: center;
@@ -22,7 +26,7 @@
 
   .o-headerInner {
 
-    @include screen-large {
+    @include screen-morelarge {
       display: none;
     }  
   }
@@ -30,7 +34,7 @@
   .o-headerInnerPc {
     display: none;
     
-    @include screen-large {
+    @include screen-morelarge {
       display: flex;
     }  
   }

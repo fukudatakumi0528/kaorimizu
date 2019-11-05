@@ -21,7 +21,7 @@ export default class Header {
 		$win.on('load resize', function() {
 			var windowWidth = window.innerWidth;
 		
-			if (windowWidth > 768) {
+			if (windowWidth > 970) {
 						//seachMenu,grantMenuのトリガー
 				const $headerInnerPcSearch = $('.js-headerInnerPc__search');
 				const $headerInnerPcGrant = $('.js-headerInnerPc__grant');

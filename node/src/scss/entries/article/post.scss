@@ -27,11 +27,17 @@
 
 			@include screen-large {
 				display: block;
-				margin:70px auto 0 auto;
+				margin:0 auto;
 				width: 100%;
 				max-width: 1030px;
-				padding:50px 15px;
+				padding:20px 15px 20px 15px; 
 			}
+
+			@include screen-morelarge {
+				padding:50px 15px;
+				margin-top:70px;
+			}
+		
 
 			h1 {
 				font-size: 29px;

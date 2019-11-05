@@ -9,9 +9,13 @@
   padding:20px 0;
 
   @include screen-large{
-    margin-top:80px;
     padding: 20px 15px;
   }
+
+  @include screen-morelarge {
+    margin-top:80px;
+  }
+
 
   .m-inputSearch {
     width: 100%;
@@ -22,8 +26,6 @@
     .m-inputSearch__input {
       background-color: $bg-6-color;
 
-      @include screen-large {
-      }
     }
 
     .icon-search {

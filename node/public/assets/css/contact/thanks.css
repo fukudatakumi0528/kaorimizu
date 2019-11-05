@@ -21,7 +21,7 @@ $font-xxl: 2rem;
   padding: 0 15px 60px 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 970px) {
   .p-contactThanks__main {
     margin-top: 170px;
   }
