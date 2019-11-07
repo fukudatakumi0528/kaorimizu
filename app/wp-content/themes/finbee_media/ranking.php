@@ -199,28 +199,36 @@
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
   <?php
-      $articlesRankingAll = get_field('article-ranking-all', 'option');
-      $articlesRankingAllNumber = 0;
+    $args = array(
+      'display_count' => 5, //10件表示
+      'period' => 30, //30日間のデータからランキング
+      'post_type' => array(
+        'feature', 'hobby', 'life', 'learn', //記事のみ 
+      ),
+    );
 
-      foreach($articlesRankingAll as $articleRankingAll):
+    $ranking_data = sga_ranking_get_date($args);
 
-        $articlesRankingAllNumber += 1;
+    $articlesRankingAllNumber = 0;
 
+    foreach($ranking_data as $articleRankingAll):
 
-      // サムネイルID
-      if ( has_post_thumbnail($articleRankingAll->ID) ) {
-        $thumbnail =  get_the_post_thumbnail_url($articleRankingAll->ID);
-      } else {
-        $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-      };
+    $articlesRankingAllNumber += 1;
 
-      //
-      $postType = get_post_type_object($articleRankingAll->post_type);
-      $postLabel = $postType->label;
+    // サムネイルID
+    if ( has_post_thumbnail($articleRankingAll->ID) ) {
+      $thumbnail =  get_the_post_thumbnail_url($articleRankingAll->ID);
+    } else {
+      $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+    };
 
-      //タグを取得
-      $term = search_tags($articleRankingAll->ID);
-    ?>
+    //
+    $postType = get_post_type_object($articleRankingAll->post_type);
+    $postLabel = $postType->label;
+
+    //タグを取得
+    $term = search_tags($articleRankingAll->ID);
+  ?>
     <li class="m-squareCard">
       <a class="m-squareCard__inner" href="<?php the_permalink($articleRankingAll) ?>">
         <?php if($articlesRankingAllNumber < 4): ?>
