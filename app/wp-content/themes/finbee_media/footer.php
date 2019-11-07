@@ -208,15 +208,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<script src="<?= assetsPath('js') ?>common.js"></script>
     <script src="<?= assetsPath('js') ?>home.js"></script>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(function() {
-        OneSignal.init({
-          appId: "fa6c61c4-e8f0-4c0a-ad34-89ef3f2c2175",
-        });
-      });
-    </script>
 		<?php if(!empty($scriptName)): ?>
 			<script src="<?= assetsPath('js') ?><?= $scriptName ?>.js"></script>
 		<?php endif; ?>
