@@ -199,19 +199,10 @@
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
   <?php
-    $args = array(
-      'display_count' => 5, //10件表示
-      'period' => 30, //30日間のデータからランキング
-      'post_type' => array(
-        'feature', 'hobby', 'life', 'learn', //記事のみ 
-      ),
-    );
-
-    $ranking_data = sga_ranking_get_date($args);
-
+    $articlesRankingAll = get_field('article-ranking-all', 'option');
     $articlesRankingAllNumber = 0;
 
-    foreach($ranking_data as $articleRankingAll):
+    foreach($articlesRankingAll as $articleRankingAll):
 
     $articlesRankingAllNumber += 1;
 
