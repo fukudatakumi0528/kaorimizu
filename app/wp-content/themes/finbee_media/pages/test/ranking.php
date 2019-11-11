@@ -33,6 +33,7 @@
 
       $ranking_data = sga_ranking_get_date($args);
 
+      var_dump($ranking_data);
       $articlesRankingAllNumber = 0;
 
       foreach($ranking_data as $articleRankingAll):
