@@ -8,13 +8,13 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
       $contents = "「" .get_the_title($post->ID) ."」が公開されました！";
 
       //image設定
-      $image = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+      $image = assetsPath('img') . "/logo/be-topia_symbol.png";
 
       //image設定(記事ごとにWEBプッシュ通知画像を変更したい時) 
       if ( has_post_thumbnail($post->ID) ) {
         $thumbnail =  get_the_post_thumbnail_url($post->ID);
       } else {
-        $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+        $thumbnail = assetsPath('img') . "/logo/be-topia_symbol.png";
       };
 
       // アクティブユーザーのみに通知する
