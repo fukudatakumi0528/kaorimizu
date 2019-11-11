@@ -21,7 +21,6 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
                       'isAndroid' => true,
                       'isIos' => true,
                       'url' => get_permalink($post->ID),
-                      'contents' => array("en" => $contents),
                   );
           }
         }
