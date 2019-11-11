@@ -20,7 +20,7 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
                       'isAndroid' => true,
                       'isIos' => true,
                       'url' => get_permalink($post->ID),
-                      'contents' => array("en" => "「" .get_the_title($post->ID)) ."」が公開されました！"
+                      'contents' => array("en" => "「" .get_the_title($post->ID) ."」が公開されました！"),
                   );
           }
         }
