@@ -66,11 +66,31 @@
   </div>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__month is-active">
     <?php
+      /* 自動ランキング機能
+      $simpleGaArgsMonth = array(
+        'display_count' => 5, //5件表示
+        'period' => 30, //30日間のデータからランキング
+        'post_type' => array(
+          'feature', 'hobby', 'life', 'learn', //記事のみ 
+        ),
+      );
+
+      $rankingDataMonth = sga_ranking_get_date(simpleGaArgsMonth);
+
+      $articlesRankingAllNumber = 0;
+
+      foreach($rankingDataMonth as $articleIdMonth):
+
+      $articleRankingMonth = get_post(articleIdMonth);
+      */
+
+      //ここから（手動ランキング機能）
       $articlesRankingMonth = get_field('article-ranking-month', 'option');
       $articlesRankingMonthNumber = 0;
 
       foreach($articlesRankingMonth as $articleRankingMonth):
 
+      //ここまで（手動ランキング機能）
         $articlesRankingMonthNumber += 1;
 
         // サムネイルID
@@ -132,10 +152,30 @@
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__weekly">
   <?php
+      /* 自動ランキング機能
+      $simpleGaArgsWeekly = array(
+        'display_count' => 5, //5件表示
+        'period' => 7, //7日間のデータからランキング
+        'post_type' => array(
+          'feature', 'hobby', 'life', 'learn', //記事のみ 
+        ),
+      );
+
+      $rankingDataWeekly = sga_ranking_get_date(simpleGaArgsWeekly);
+
+      $articlesRankingAllNumber = 0;
+
+      foreach($rankingDataWeekly as $articleIdWeekly):
+
+      $articleRankingWeekly = get_post(articleIdWeekly);
+      */
+
+      //ここから（手動ランキング機能）
       $articlesRankingWeekly = get_field('article-ranking-weekly', 'option');
       $articlesRankingWeeklyNumber = 0;
 
       foreach($articlesRankingWeekly as $articleRankingWeekly):
+      //ここまで（手動ランキング機能）
 
         $articlesRankingWeeklyNumber += 1;
 
@@ -199,10 +239,30 @@
   </ul>
   <ul class="t-rankingArea__slider__inner js-slickSlider-top__ranking__all">
   <?php
+    /* 自動ランキング機能
+    $simpleGaArgsAll = array(
+      'display_count' => 5, //5件表示
+      'period' => 365, //365日間のデータからランキング
+      'post_type' => array(
+        'feature', 'hobby', 'life', 'learn', //記事のみ 
+      ),
+    );
+
+    $rankingDataAll = sga_ranking_get_date(simpleGaArgsAll);
+
+    $articlesRankingAllNumber = 0;
+
+    foreach($rankingDataAll as $articleIdAll):
+
+    $articleRankingAll = get_post(articleIdAll);
+    */
+
+    //ここから（手動ランキング機能）
     $articlesRankingAll = get_field('article-ranking-all', 'option');
     $articlesRankingAllNumber = 0;
 
     foreach($articlesRankingAll as $articleRankingAll):
+    //ここまで（手動ランキング機能）
 
     $articlesRankingAllNumber += 1;
 
