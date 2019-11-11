@@ -17,4 +17,7 @@
 		case "thanks":
 			include(TEMPLATEPATH . '/pages/form-thanks.php');
 			break;
+		case "test-ranking":
+			include(TEMPLATEPATH . '/pages/test/ranking.php');
+			break;
 	}
