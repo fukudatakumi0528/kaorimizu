@@ -36,7 +36,9 @@
       var_dump($ranking_data);
       $articlesRankingAllNumber = 0;
 
-      foreach($ranking_data as $articleRankingAll):
+      foreach($ranking_data as $articleID):
+
+      $articleRankingAll = get_post($articleID);
 
       $articlesRankingAllNumber += 1;
 
