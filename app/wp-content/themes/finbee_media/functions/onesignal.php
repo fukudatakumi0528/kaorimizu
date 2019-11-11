@@ -7,15 +7,15 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
       //contents設定
       $contents = "「" .get_the_title($post->ID) ."」が公開されました！";
 
-      //icon設定
+      //image設定
+      $image = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+
+      //image設定(記事ごとにWEBプッシュ通知画像を変更したい時) 
       if ( has_post_thumbnail($post->ID) ) {
         $thumbnail =  get_the_post_thumbnail_url($post->ID);
       } else {
         $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
       };
-
-      //image設定
-      $image = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 
       // アクティブユーザーのみに通知する
       $fields = array(
@@ -25,9 +25,9 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
           'isAnyWeb' => true,
           'url' => get_permalink($post->ID),
           'contents' => array("en" => $contents, "ja" => $contents),
-          'chrome_web_icon' => $thumbnail,
-          'chrome_web_image' => $image,
-      );
+          'chrome_web_icon' => $image,
+          //'chrome_web_icon' => $thumbnail, 記事ごとにWEBプッシュ通知画像を変更したい時
+        );
     }
   }
   return $fields;
