@@ -159,3 +159,17 @@ $ npm run build
 ```
 $ npm run lint
 ```
+
+
+### プラグイン、function関連
+
+#### OneSignal(WEBプッシュ通知)
+WEBプッシュ通知は、Onesignalというプラグインを使用している。  
+また独自の実装部分は、function/onesignal.phpにフィルターフックで記載。  
+アカウント  
+ID:contact@be-topia.finbee.jp  
+PW:NEstEgg1101  
+#### ランキング機能
+simpleGArankingというプラグインを使用している。
+権限を持っているアカウントは、クライアントが持っているため、サイトドメイン変更時などは、クライアントとの連携対応が必要になる。  
+閲覧権限だけならば、GIG社内ディレクターなども持っている。
