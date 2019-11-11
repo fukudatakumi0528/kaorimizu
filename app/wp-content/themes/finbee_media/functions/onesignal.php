@@ -16,12 +16,11 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
                   $fields = array(
                       'app_id' => "fa6c61c4-e8f0-4c0a-ad34-89ef3f2c2175",
                       'included_segments' => array('Active Users'),
-                      'headings' => array("ja" => "be-topia(ビートピア)"),
+                      'headings' => array("en" => "be-topia(ビートピア)", "ja" => "be-topia(ビートピア)"),
                       'isAnyWeb' => true,
                       'isAndroid' => true,
                       'isIos' => true,
-                      'url' => get_permalink($post->ID),
-                      'contents' => array("ja" => $contents),
+                      'contents' => array("en" => $contents, "ja" => $contents),
                   );
           }
         }
