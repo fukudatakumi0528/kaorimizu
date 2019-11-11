@@ -2,6 +2,7 @@
 
 function onesignal_send_notification_filter($fields, $new_status, $old_status, $post)
 {
+  $contents = "「" .get_the_title($post->ID) ."」が公開されました！";
     if (defined('ENV') && ENV == 'prod') {
       if($new_status == 'publish'){
         if($post->post_type == 'feature' || $post->post_type == 'hobby' || $post->post_type == 'learn' || $post->post_type == 'life'){
@@ -20,7 +21,7 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
                       'isAndroid' => true,
                       'isIos' => true,
                       'url' => get_permalink($post->ID),
-                      'contents' => array("en" => "「" .get_the_title($post->ID) ."」が公開されました！"),
+                      'contents' => array("en" => $contents),
                   );
           }
         }
