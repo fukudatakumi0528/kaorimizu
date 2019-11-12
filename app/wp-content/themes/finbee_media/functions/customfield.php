@@ -18,15 +18,6 @@
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'
     ));
-    // 記事ランキング（初期）
-    acf_add_options_page(array(
-      'page_title'     => '記事ランキング（初期）',
-      'menu_title'    => '記事ランキング（初期）',
-      'menu_slug'     => 'article-ranking',
-      'capability'    => 'edit_posts',
-      'redirect'        => true,
-      'icon_url'    => 'dashicons-tag'
-    ));
     // 全カテゴリ（PICK UP）
     acf_add_options_page(array(
       'page_title'     => '全カテゴリ（PICK UP）',
