@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <title>finbee</title>
+<meta name="thumbnail" content="<?= assetsPath('img') ?>logo/be-topia_thumbnail.jpg" />
 <link rel="apple-touch-icon" sizes="180x180" href="<?= assetsPath('img') ?>icon/apple-touch-icon-180x180.png">
 <link rel="stylesheet" href="<?= assetsPath('css') ?>common.css">
 <link rel="stylesheet" href="<?= assetsPath('css') . $cssName ?>.css">
