@@ -583,6 +583,35 @@
 									}
 								}
 							}
+
+
+							#msmaflink-C0GFv-1 {
+
+								.easyLink-box.easyLink-size-s{
+									margin: 20px 0 0 0;
+									width: 100%;
+									max-width: 100%;
+
+									.easyLink-info {
+
+										.easyLink-info-btn {
+											flex-wrap: nowrap;
+
+											>a {
+												width: auto;
+												min-width: 33%;
+												text-decoration: none;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												padding: 5px;
+											}
+										}
+									}
+								}
+	
+							}
+
 						}
 
 						.article__footer {
