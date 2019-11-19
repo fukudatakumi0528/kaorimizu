@@ -165,21 +165,21 @@
 								</div>
 							<?php endif; ?>
 
-
+							<!-- 関連記事がある場合 -->
 							<?php
 							
-								$post_type_slug = 'feature'; // 投稿タイプのスラッグを指定
+								$post_type_slug_relation = 'feature'; // 投稿タイプのスラッグを指定
 
-								$args = array(
-									'post_type' => $post_type_slug, // 投稿タイプを指定
-									'posts_per_page' => 4, // 表示件数を指定
-									'orderby' =>  'DESC', // ランダムに投稿を取得
+								$args_relation = array(
+									'post_type' => $post_type_slug_relation, // 投稿タイプを指定
+									'posts_per_page' => 2, // 表示件数を指定
+									'orderby' =>  'DESC', // 新着順に投稿を取得
 									'post__not_in' => array($post->ID), // 現在の投稿を除外
 								);
 
-								$the_query = new WP_Query($args);
+								$the_query_relation = new WP_Query($args_relation);
 
-								if($the_query->have_posts()):
+								if($the_query_relation->have_posts()):
 							?>
 							<div class="article__relation">
 								<div class="m-titleBorder">
@@ -188,9 +188,11 @@
 										<div class="m-titleBorder__main__border"></div>
 									</div>
 								</div>
+
 								<ul class="o-wideCardList">
+									<!-- 関連記事をループ -->
 									<?php
-										while ($the_query->have_posts()): $the_query->the_post();
+										while ($the_query_relation->have_posts()): $the_query_relation->the_post();
 
 										if ( has_post_thumbnail() ) {
 											$thumbnail =  get_the_post_thumbnail_url();
@@ -232,11 +234,209 @@
 										</a>
 									</li>
 									<?php endwhile; wp_reset_postdata(); ?>
+
+									<!-- PR記事をループ -->
+									<?php
+
+										$post_type_slug_PR = array(
+											'feature','hobby','life','learn', // 投稿タイプのスラッグを指定
+										); 
+
+										//PR記事で除外するID一覧を作成。
+										$the_query_relation_ids = [$post->ID];
+										foreach($the_query_relation->posts as $post) {
+											array_push($the_query_relation_ids,$post->ID);									
+										}
+
+										$args_PR = array(
+											'post_type' => $post_type_slug_PR, // 投稿タイプを指定
+											'posts_per_page' => 2, // 表示件数を指定
+											'orderby' =>  'DESC', // 新着順に投稿を取得
+											'post__not_in' => $the_query_relation_ids, // 現在の投稿と、関連記事を除外
+											'tax_query' => array(
+												'relation'=>'OR',
+												array(
+													'taxonomy' => 'feature_tag',
+													'field'    => 'slug',
+													'terms'    => array( 'PR' ),
+												),
+												array(
+													'taxonomy' => 'hobby_tag',
+													'field'    => 'slug',
+													'terms'    => array( 'PR' ),
+												),
+												array(
+													'taxonomy' => 'life_tag',
+													'field'    => 'slug',
+													'terms'    => array( 'PR' ),
+												),
+												array(
+													'taxonomy' => 'learn_tag',
+													'field'    => 'slug',
+													'terms'    => array( 'PR' ),
+												),
+											)
+										);
+
+										$the_query_PR = new WP_Query($args_PR);
+
+										while ($the_query_PR->have_posts()): $the_query_PR->the_post();
+
+										if ( has_post_thumbnail() ) {
+											$thumbnail =  get_the_post_thumbnail_url();
+										}else{
+											$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+										}
+
+										$termType = get_post_taxonomies(get_the_ID());
+										$term = get_the_terms($post->ID, $termType[1]);
+									?>
+									<li class="m-wideCard">
+										<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
+											<div class="m-wideCard__inner__left">
+												<div class="m-wideCard__inner__left__image">
+													<img class="m-wideCard__inner__left__image__inner" src="<?= $thumbnail ?>" alt="">
+												</div>
+											</div>
+											<div class="m-wideCard__inner__right">
+												<div class="m-wideCard__inner__right__topper">
+													<time class="m-wideCard__inner__right__topper__date"><?php the_time('Y.n.j') ?></time>
+													<?php if(article_new_arrival($post)): ?>
+														<p class="m-wideCard__inner__right__topper__new">NEW</p>
+													<?php endif; ?>
+												</div>
+												<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
+												<div class="m-wideCard__inner__right__description">
+													<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>
+												</div>
+												<div class="m-classificationArea">
+													<?php	if($term): foreach ($term as $tag ): ?>
+														<object>
+															<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+																<?= $tag->name?>
+															</a>
+														</object>
+													<?php  endforeach; endif; ?>
+												</div>
+											</div>
+										</a>
+									</li>
+									<?php endwhile; wp_reset_postdata(); ?>
+									
+								</ul>
+							</div>
+							<?php else: ?>
+
+							<!-- 関連記事が無い場合（PR記事だけを表示） -->
+							<?php
+
+								$post_type_slug_PR = array(
+									'feature','hobby','life','learn', // 投稿タイプのスラッグを指定
+								); 
+
+								//PR記事で除外するID一覧を作成。
+								$the_query_relation_ids = [$post->ID];
+								foreach($the_query_relation->posts as $post) {
+									array_push($the_query_relation_ids,$post->ID);									
+								}
+
+								$args_PR = array(
+									'post_type' => $post_type_slug_PR, // 投稿タイプを指定
+									'posts_per_page' => 2, // 表示件数を指定
+									'orderby' =>  'DESC', // 新着順に投稿を取得
+									'post__not_in' => $the_query_relation_ids, // 現在の投稿と、関連記事を除外
+									'tax_query' => array(
+										'relation'=>'OR',
+										array(
+											'taxonomy' => 'feature_tag',
+											'field'    => 'slug',
+											'terms'    => array( 'PR' ),
+										),
+										array(
+											'taxonomy' => 'hobby_tag',
+											'field'    => 'slug',
+											'terms'    => array( 'PR' ),
+										),
+										array(
+											'taxonomy' => 'life_tag',
+											'field'    => 'slug',
+											'terms'    => array( 'PR' ),
+										),
+										array(
+											'taxonomy' => 'learn_tag',
+											'field'    => 'slug',
+											'terms'    => array( 'PR' ),
+										),
+									)
+								);
+
+								$the_query_PR = new WP_Query($args_PR);
+
+								if($the_query_PR->have_posts()):
+
+							?>
+							<div class="article__relation">
+								<div class="m-titleBorder">
+									<div class="m-titleBorder__main">
+										<div class="m-titleBorder__main__text">関連記事<small>Relation</small></div>
+										<div class="m-titleBorder__main__border"></div>
+									</div>
+								</div>
+
+								<ul class="o-wideCardList">
+
+									<!-- PR記事をループ -->
+									<?php
+										while ($the_query_PR->have_posts()): $the_query_PR->the_post();
+
+										if ( has_post_thumbnail() ) {
+											$thumbnail =  get_the_post_thumbnail_url();
+										}else{
+											$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+										}
+
+										$termType = get_post_taxonomies(get_the_ID());
+										$term = get_the_terms($post->ID, $termType[1]);
+									?>
+									<li class="m-wideCard">
+										<a class="m-wideCard__inner" href="<?php the_permalink() ?>">
+											<div class="m-wideCard__inner__left">
+												<div class="m-wideCard__inner__left__image">
+													<img class="m-wideCard__inner__left__image__inner" src="<?= $thumbnail ?>" alt="">
+												</div>
+											</div>
+											<div class="m-wideCard__inner__right">
+												<div class="m-wideCard__inner__right__topper">
+													<time class="m-wideCard__inner__right__topper__date"><?php the_time('Y.n.j') ?></time>
+													<?php if(article_new_arrival($post)): ?>
+														<p class="m-wideCard__inner__right__topper__new">NEW</p>
+													<?php endif; ?>
+												</div>
+												<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
+												<div class="m-wideCard__inner__right__description">
+													<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>
+												</div>
+												<div class="m-classificationArea">
+													<?php	if($term): foreach ($term as $tag ): ?>
+														<object>
+															<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+																<?= $tag->name?>
+															</a>
+														</object>
+													<?php  endforeach; endif; ?>
+												</div>
+											</div>
+										</a>
+									</li>
+									<?php endwhile; wp_reset_postdata(); ?>
+									
 								</ul>
 							</div>
 							<?php endif; ?>
-						</div>
 
+							<?php endif; ?>
+
+						</div>
 					</article>
 
 				</div>
