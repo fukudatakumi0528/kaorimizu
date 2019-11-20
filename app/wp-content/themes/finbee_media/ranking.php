@@ -124,7 +124,7 @@
           </div>
           <div class="m-squareCard__inner__footer__description">
             <div class="m-squareCard__inner__footer__description__text">
-              <?= mb_substr($articleRankingMonth->post_content, 0, 100).'…'; ?>
+              <?= get_the_custom_excerpt( $articleRankingMonth->post_content, 100 ) ?>
             </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
@@ -204,7 +204,7 @@
           </div>
           <div class="m-squareCard__inner__footer__description">
             <div class="m-squareCard__inner__footer__description__text">
-              <?= mb_substr($articleRankingWeekly->post_content, 0, 100).'…'; ?>
+              <?= get_the_custom_excerpt( $articleRankingWeekly->post_content, 100 ) ?>
             </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
@@ -283,7 +283,7 @@
           </div>
           <div class="m-squareCard__inner__footer__description">
             <div class="m-squareCard__inner__footer__description__text">
-              <?= mb_substr($articleRankingAll->post_content, 0, 100).'…'; ?>
+              <?= get_the_custom_excerpt( $articleRankingAll->post_content, 100 ) ?>
             </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
