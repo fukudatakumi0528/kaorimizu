@@ -121,7 +121,9 @@
 							</div>
 							<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
 							<div class="m-wideCard__inner__right__description">
-								<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>
+								<div class="m-wideCard__inner__right__description__text">
+									<?= mb_substr(the_excerpt(), 0, 100).'…'; ?> 
+								</div>
 							</div>
 							<div class="m-classificationArea">
 								<?php	if($term): foreach ($term as $tag ): ?>
@@ -216,7 +218,9 @@
 							<p class="m-oblongCard__inner__footer__title__text"><?= $topFeature->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
-							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topFeature->post_content) ?></p>
+							<p class="m-oblongCard__inner__footer__description__text">
+								<?= mb_substr(strip_tags($topFeature->post_content), 0, 100).'…'; ?> 
+							</p>
 						</div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -265,7 +269,9 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								<div class="m-verticallyCard__inner__footer__description__text">
+									<?= mb_substr(the_excerpt(), 0, 100).'…'; ?> 
+								</div>
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -318,7 +324,9 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								<div class="m-verticallyCard__inner__footer__description__text">
+									<?= mb_substr(the_excerpt(), 0, 100).'…'; ?> 
+								</div>
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -410,7 +418,9 @@
 							<p class="m-oblongCard__inner__footer__title__text"><?= $topHobby->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
-							<p class="m-oblongCard__inner__footer__description__text"><?= strip_tags($topHobby->post_content) ?></p>
+							<p class="m-oblongCard__inner__footer__description__text">
+								<?= mb_substr(strip_tags($topHobby->post_content), 0, 100).'…'; ?> 
+							</p>
 						</div>
 						<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -459,7 +469,9 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								<div class="m-verticallyCard__inner__footer__description__text">
+									<?= mb_substr(the_excerpt(), 0, 100).'…'; ?> 
+								</div>
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -513,7 +525,9 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								<div class="m-verticallyCard__inner__footer__description__text">									
+									<?= mb_substr(the_excerpt(), 0, 100).'…'; ?> 
+								</div>
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
@@ -595,7 +609,9 @@
 								</div>
 								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 								<div class="m-verticallyCard__inner__footer__description">
-									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+									<div class="m-verticallyCard__inner__footer__description__text">
+										<?= mb_substr(the_excerpt(), 0, 100).'…'; ?>
+									</div>
 								</div>
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -648,7 +664,9 @@
 								</div>
 								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 								<div class="m-verticallyCard__inner__footer__description">
-									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+									<div class="m-verticallyCard__inner__footer__description__text">
+										<?= mb_substr(the_excerpt(), 0, 100).'…'; ?>
+									</div>
 								</div>
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -726,7 +744,9 @@
 								</div>
 								<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 								<div class="m-verticallyCard__inner__footer__description">
-									<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+									<div class="m-verticallyCard__inner__footer__description__text">
+										<?= mb_substr(the_excerpt(), 0, 100).'…'; ?>
+									</div>
 								</div>
 								<div class="m-classificationArea">
 									<?php	if($singletags): foreach ($singletags as $tag ): ?>
@@ -781,7 +801,7 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></div>
+								<div class="m-verticallyCard__inner__footer__description__text"><?= mb_substr(the_excerpt(), 0, 100).'…'; ?></div>
 							</div>
 							<div class="m-classificationArea">
 								<?php	if($singletags): foreach ($singletags as $tag ): ?>

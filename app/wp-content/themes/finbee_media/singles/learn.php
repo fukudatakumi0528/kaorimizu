@@ -215,7 +215,7 @@
 												</div>
 												<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
 												<div class="m-wideCard__inner__right__description">
-													<div class="m-wideCard__inner__right__description__text"><?php the_excerpt() ?></div>
+													<div class="m-wideCard__inner__right__description__text"><?= mb_substr(the_excerpt(), 0, 100).'…'; ?></div>
 												</div>
 												<div class="m-classificationArea">
 													<?php	if($term): foreach ($term as $tag ): ?>

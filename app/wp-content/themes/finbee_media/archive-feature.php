@@ -102,7 +102,7 @@
 									</div>
 									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
-										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+										<p class="m-verticallyCard__inner__footer__description__text"><?= mb_substr(the_excerpt(), 0, 100).'…'; ?></p>
 									</div>
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>
