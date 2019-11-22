@@ -18,25 +18,36 @@
 		</div>
 		<ul class="p-top__kv__slider js-slickSlider-top__kv">
 			<?php 
-				$topSlider = get_field('_top-slider', 'option');
-				foreach($topSlider as $slider):
+				$post_type_slug_kv = array(
+					'feature','hobby','life', // 投稿タイプのスラッグを指定
+				); 
+
+				$args = array(
+					'post_type' => $post_type_slug_kv, // 投稿タイプを指定
+					'posts_per_page' => 5, // 表示件数を指定
+					'orderby' =>  'DESC', // 新着順
+				);
+
+				$slider_query = new WP_Query($args);
+				if($slider_query->have_posts()):
+				while ($slider_query->have_posts()): $slider_query->the_post();
 										 
-					// サムネイルID
-					if ( has_post_thumbnail($slider->ID) ) {
-						$topSliderThumbnail = get_the_post_thumbnail_url($slider->ID);
-					} else {
-						$topSliderThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-					};
+				// サムネイルID
+				if ( has_post_thumbnail($post->ID) ) {
+					$topSliderThumbnail = get_the_post_thumbnail_url($post->ID);
+				} else {
+					$topSliderThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+				};
 
-					//
-					$postType = get_post_type_object($slider->post_type);
-					$postLabel = $postType->label;
+				//
+				$postType = get_post_type_object($post->post_type);
+				$postLabel = $postType->label;
 
-					//タグを取得
-					$term = search_tags($slider->ID);
+				//タグを取得
+				$term = search_tags($post->ID);
 			?>
 			<li class="m-squareCard">
-				<a class="m-squareCard__inner" href="<?php the_permalink($slider) ?>">
+				<a class="m-squareCard__inner" href="<?php the_permalink($post) ?>">
 					<div class="m-squareCard__inner__topper">
 						<img class="m-squareCard__inner__topper__image" src="<?= $topSliderThumbnail ?>" alt="">
 					</div>
@@ -45,11 +56,11 @@
 							<div class="m-squareCard__inner__footer__sign__text"><?= $postLabel ?></div>
 						</div>
 						<div class="m-squareCard__inner__footer__title">
-							<p class="m-squareCard__inner__footer__title__text"><?= $slider->post_title ?></p>
+							<p class="m-squareCard__inner__footer__title__text"><?= $post->post_title ?></p>
 						</div>
 						<div class="m-squareCard__inner__footer__description">
 							<div class="m-squareCard__inner__footer__description__text">
-								<?= get_the_custom_excerpt( $slider->post_content, 45 ) ?>
+								<?= get_the_custom_excerpt( $post->post_content, 45 ) ?>
 							</div>
 						</div>
 						<div class="m-squareCard__inner__footer__classification">
@@ -66,7 +77,7 @@
 					</div>
 				</a>
 			</li>
-			<?php endforeach; ?>
+			<?php endwhile; wp_reset_postdata(); endif; ?>
 		</ul>
 		<!-- <div class="p-top__kv__cover"></div> -->
 	</section>
@@ -151,24 +162,18 @@
 
 	<!-- feature-->
 	<?php 
-		$topFeature = get_field('top-feature', 'option');
+		$post_type_slug_topFeature = array(
+			'feature', // 投稿タイプのスラッグを指定
+		); 
 
-		if($topFeature){
-			$topFeatureArgs = [
-				'post_type' => 'feature',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topFeature->ID),
-				'paged' => $paged,
-			];	
-		}else {
-			$topFeatureArgs = [
-				'post_type' => 'feature',
-				'posts_per_page' => 5,
-				'paged' => $paged,
-			];	
-		}
-		$query = new WP_Query($topFeatureArgs);
-		if($query->have_posts() || $topFeature):
+		$args_topFeature = array(
+			'post_type' => $post_type_slug_topFeature, // 投稿タイプを指定
+			'posts_per_page' => 1, // 表示件数を指定
+			'orderby' =>  'DESC', // 新着順
+		);
+
+		$topFeature_query = new WP_Query($args_topFeature);
+		if($topFeature_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
 		<?php if(count($query->posts) < 5):?>
@@ -186,40 +191,42 @@
 			</div>
 		</div>
 		<?php 
-			$topFeature = get_field('top-feature', 'option');
+			while ($topFeature_query->have_posts()): $topFeature_query->the_post();
 
-			if ($topFeature):										
-				// サムネイルID
-				if ( has_post_thumbnail($topFeature->ID)) {
-					$topFeatureThumbnail =  get_the_post_thumbnail_url($topFeature->ID);
-				} else {
-					$topFeatureThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
-				};
+			//topFeatureのIDを保存
+			$topFeatureId = $post->ID;
 
-				//タグを取得
-				$term = get_the_terms($topFeature->ID, 'feature_tag');
+			// サムネイルID
+			if ( has_post_thumbnail($post->ID)) {
+				$topFeatureThumbnail =  get_the_post_thumbnail_url($post->ID);
+			} else {
+				$topFeatureThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
+			};
+
+			//タグを取得
+			$term = get_the_terms($post->ID, 'feature_tag');
 
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
-				<a class="m-oblongCard__inner" href="<?php the_permalink($topFeature) ?>" alt="">
+				<a class="m-oblongCard__inner" href="<?php the_permalink($post) ?>" alt="">
 					<div class="m-oblongCard__inner__topper">
 						<img class="m-oblongCard__inner__topper__image" src="<?= $topFeatureThumbnail ?>" alt="">
 					</div>
 					<div class="m-oblongCard__inner__footer">
 						<div class="m-oblongCard__inner__footer__topper">
-							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topFeature->post_date); ?></time>
-							<?php if(article_new_arrival($topFeature)): ?>
+							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+							<?php if(article_new_arrival($post)): ?>
 								<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
 							<?php endif; ?>
 						</div>
 						<div class="m-oblongCard__inner__footer__title">
-							<p class="m-oblongCard__inner__footer__title__text"><?= $topFeature->post_title ?></p>
+							<p class="m-oblongCard__inner__footer__title__text"><?= $post->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text">
-								<?= get_the_custom_excerpt( $topFeature->post_content, 100 ) ?>
+								<?= get_the_custom_excerpt( $post->post_content, 100 ) ?>
 							</p>
 						</div>
 						<div class="m-classificationArea">
@@ -235,15 +242,25 @@
 				</a>
 			</div>
 		</div>
-		<?php endif; ?>
+		<?php endwhile; wp_reset_postdata(); endif; ?>
 
-		<?php if($query->post_count > 0): ?>
-		<?php if(count($query->posts) < 5):?>
+		<?php 
+			$args_topFeatureList = [
+				'post_type' => 'feature',
+				'posts_per_page' => 5,
+				'post__not_in' => array($topFeatureId),
+				'paged' => $paged,
+			];	
+
+			$query_topFeatureList = new WP_Query($args_topFeatureList);
+			if($query_topFeatureList->have_posts()):		
+		?>
+		<?php if(count($query_topFeatureList->posts) < 5):?>
 		<div class="p-top__featureHobby__list">
 			<ul class="p-top__featureHobby__list__inner">
 
 				<?php
-					while($query->have_posts()): $query->the_post();
+					while($query_topFeatureList->have_posts()): $query_topFeatureList->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
 						$topFeatureListThumbnail =  get_the_post_thumbnail_url();
@@ -290,7 +307,7 @@
 		</div>
 		<?php else: ?>
 		<div class="p-top__featureHobby__slider">
-			<?php if($query->have_posts()): ?>
+			<?php if($query_topFeatureList->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__feature">
 				<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 				<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
@@ -298,7 +315,7 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__feature">
 				<?php
-					while($query->have_posts()): $query->the_post();
+					while($query_topFeatureList->have_posts()): $query_topFeatureList->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
 						$topFeatureListThumbnail =  get_the_post_thumbnail_url();
@@ -307,6 +324,7 @@
 					};
 	
 					$term = get_the_terms($post->ID, 'feature_tag');
+
 				?>
 				<li class="m-verticallyCard">
 					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
@@ -344,8 +362,7 @@
 			</ul>
 		</div>
 		<?php endif; ?>
-		<?php endif; ?>
-		<?php if($query->have_posts()): ?>
+		<?php if($query_topFeatureList->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('feature/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
 		</div>
@@ -354,26 +371,21 @@
 	<?php endif; ?>
 
 
-	<!-- hobby-->
-	<?php
-		$topHobby = get_field('top-hobby', 'option');
 
-		if($topHobby){
-			$topHobbyArgs = [
-				'post_type' => 'hobby',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topHobby->ID),
-				'paged' => $paged,
-			];	
-		}else{
-			$topHobbyArgs = [
-				'post_type' => 'hobby',
-				'posts_per_page' => 5,
-				'paged' => $paged,
-			];	
-		}
-		$query = new WP_Query($topHobbyArgs);
-		if($query->have_posts() || $topHobby):
+		<!-- hobby-->
+		<?php 
+		$post_type_slug_topHobby = array(
+			'hobby', // 投稿タイプのスラッグを指定
+		); 
+
+		$args_topHobby = array(
+			'post_type' => $post_type_slug_topHobby, // 投稿タイプを指定
+			'posts_per_page' => 1, // 表示件数を指定
+			'orderby' =>  'DESC', // 新着順
+		);
+
+		$topHobby_query = new WP_Query($args_topHobby);
+		if($topHobby_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
 		<?php if(count($query->posts) < 5):?>
@@ -391,35 +403,42 @@
 			</div>
 		</div>
 		<?php 
-			if ($topHobby):
+			while ($topHobby_query->have_posts()): $topHobby_query->the_post();
 
-			if ( has_post_thumbnail($topHobby->ID)) {
-				$topHobbyThumbnail = get_the_post_thumbnail_url($topHobby->ID);
+			//topHobbyのIDを保存
+			$topHobbyId = $post->ID;
+
+			// サムネイルID
+			if ( has_post_thumbnail($post->ID)) {
+				$topHobbyThumbnail =  get_the_post_thumbnail_url($post->ID);
 			} else {
-				$topHobbyThumbnail = assetsPath('img') . "logo/be-topia_thumbnail.jpg";
+				$topHobbyThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 			};
 
-			//タグを取得				
-			$term = get_the_terms($topHobby->ID, 'hobby_tag');
+			//タグを取得
+			$term = get_the_terms($post->ID, 'hobby_tag');
+
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
 			<div class="m-oblongCard">
-				<a class="m-oblongCard__inner" href="<?php the_permalink($topHobby) ?>" alt="">
-					<div class="m-oblongCard__inner__topper"><img class="m-oblongCard__inner__topper__image" src="<?= $topHobbyThumbnail ?>" alt=""></div>
+				<a class="m-oblongCard__inner" href="<?php the_permalink($post) ?>" alt="">
+					<div class="m-oblongCard__inner__topper">
+						<img class="m-oblongCard__inner__topper__image" src="<?= $topHobbyThumbnail ?>" alt="">
+					</div>
 					<div class="m-oblongCard__inner__footer">
 						<div class="m-oblongCard__inner__footer__topper">
-							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $topHobby->post_date); ?></time>
-							<?php if(article_new_arrival($topHobby)): ?>
+							<time class="m-oblongCard__inner__footer__topper__date"><?= mysql2date('Y.n.j', $post->post_date); ?></time>
+							<?php if(article_new_arrival($post)): ?>
 								<p class="m-oblongCard__inner__footer__topper__new">NEW</p>
 							<?php endif; ?>
 						</div>
 						<div class="m-oblongCard__inner__footer__title">
-							<p class="m-oblongCard__inner__footer__title__text"><?= $topHobby->post_title ?></p>
+							<p class="m-oblongCard__inner__footer__title__text"><?= $post->post_title ?></p>
 						</div>
 						<div class="m-oblongCard__inner__footer__description">
 							<p class="m-oblongCard__inner__footer__description__text">
-								<?= get_the_custom_excerpt( $topHobby->post_content, 100 ) ?>
+								<?= get_the_custom_excerpt( $post->post_content, 100 ) ?>
 							</p>
 						</div>
 						<div class="m-classificationArea">
@@ -435,15 +454,25 @@
 				</a>
 			</div>
 		</div>
-		<?php endif; ?>
+		<?php endwhile; wp_reset_postdata(); endif; ?>
 
-		<?php if($query->post_count > 0): ?>
-		<?php if(count($query->posts) < 5):?>
+		<?php 
+			$args_topHobbyList = [
+				'post_type' => 'hobby',
+				'posts_per_page' => 5,
+				'post__not_in' => array($topHobbyId),
+				'paged' => $paged,
+			];	
+
+			$query_topHobbyList = new WP_Query($args_topHobbyList);
+			if($query_topHobbyList->have_posts()):		
+		?>
+		<?php if(count($query_topHobbyList->posts) < 5):?>
 		<div class="p-top__featureHobby__list">
 			<ul class="p-top__featureHobby__list__inner">
 
 				<?php
-					while($query->have_posts()): $query->the_post();
+					while($query_topHobbyList->have_posts()): $query_topHobbyList->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
 						$topHobbyListThumbnail =  get_the_post_thumbnail_url();
@@ -489,9 +518,8 @@
 			</ul>
 		</div>
 		<?php else: ?>
-
 		<div class="p-top__featureHobby__slider">
-			<?php if($query->have_posts()): ?>
+			<?php if($query_topHobbyList->have_posts()): ?>
 			<div class="p-top__featureHobby__slider__arrow js__arrow-top__hobby">
 				<div class="slick-next"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
 				<div class="slick-prev"><span class="icon-arrow2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></div>
@@ -499,15 +527,16 @@
 			<?php endif; ?>
 			<ul class="p-top__featureHobby__slider__inner js-slickSlider-top__hobby">
 				<?php
-					while($query->have_posts()): $query->the_post();
+					while($query_topHobbyList->have_posts()): $query_topHobbyList->the_post();
 
 					if ( has_post_thumbnail($post->ID)) {
 						$topHobbyListThumbnail =  get_the_post_thumbnail_url();
 					} else {
 						$topHobbyListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
-
+	
 					$term = get_the_terms($post->ID, 'hobby_tag');
+
 				?>
 				<li class="m-verticallyCard">
 					<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
@@ -525,36 +554,33 @@
 							</div>
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
-								<div class="m-verticallyCard__inner__footer__description__text">									
+								<div class="m-verticallyCard__inner__footer__description__text">
 									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
 								</div>
 							</div>
 							<div class="m-classificationArea">
 							<?php	if($term): foreach ($term as $tag ): ?>
-								<object>
-									<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
-										<?= $tag->name?>
-									</a>
-								</object>
-							<?php endforeach; endif; ?>
+									<object>
+										<a class="m-classificationArea__tag" href="<?= home_url() .'?s=' .$tag->name .'&t=tag' ?>">
+											<?= $tag->name?>
+										</a>
+									</object>
+								<?php endforeach; endif; ?>
 							</div>
 						</div>
 					</a>
 				</li>
 				<?php endwhile; wp_reset_postdata();?>
-
 			</ul>
 		</div>
 		<?php endif; ?>
-		<?php endif; ?>
-		<?php if($query->have_posts()): ?>
+		<?php if($query_topHobbyList->have_posts()): ?>
 		<div class="p-top__featureHobby__footer"><a class="p-top__featureHobby__footer__link" href="<?= site_url('hobby/') ?>"><span class="icon-btn"></span>
 			<p class="p-top__featureHobby__footer__link__text">記事一覧を見る</p></a>
 		</div>
-		<?php endif;?>
+		<?php endif; ?>
 	</section>
 	<?php endif; ?>
-
 
 
 	<!-- life-->
