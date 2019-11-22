@@ -600,13 +600,22 @@
 
 											>a {
 												width: auto;
-												min-width: 33%;
+												min-width: 31%;
 												text-decoration: none;
 												display: flex;
 												justify-content: center;
 												align-items: center;
 												padding: 5px;
 												color:$bg-3-color;
+												margin:10px 0 0 0;
+
+												@include screen-large {
+													margin:0 0 0 10px;
+												}
+
+												&:nth-of-type(1) {
+													margin:0;
+												}
 
 												&.easyLink-info-btn-amazon{
 													background:#F89502;
