@@ -606,6 +606,20 @@
 												justify-content: center;
 												align-items: center;
 												padding: 5px;
+												color:$bg-3-color;
+
+												&.easyLink-info-btn-amazon{
+													background-color:#F89502;
+												}
+
+												&.easyLink-info-btn-amazon{
+													background-color: #D34644;
+												}
+
+												&.easyLink-info-btn-amazon{
+													background-color: #6185EE;
+												}
+
 											}
 										}
 									}

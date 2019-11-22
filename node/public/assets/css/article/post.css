@@ -675,6 +675,19 @@ $font-xxl: 2rem;
   -ms-flex-align: center;
   align-items: center;
   padding: 5px;
+  color: #F5F5F5;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-amazon {
+  background-color: #F89502;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-amazon {
+  background-color: #D34644;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-amazon {
+  background-color: #6185EE;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer {
