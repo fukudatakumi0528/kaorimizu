@@ -679,15 +679,15 @@ $font-xxl: 2rem;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-amazon {
-  background-color: #F89502;
+  background: #F89502;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-rakuten {
-  background-color: #D34644;
+  background: #D34644;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-yahoo {
-  background-color: #6185EE;
+  background: #6185EE;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer {
