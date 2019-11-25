@@ -27,11 +27,11 @@
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'
     ));
-    // 純広告（サイドバー上部）
+    // 純広告（ランキング上部）
     acf_add_options_page(array(
-      'page_title'     => '純広告（サイドバー上部）',
-      'menu_title'    => '純広告（サイドバー上部）',
-      'menu_slug'     => 'article-ad-sidebar',
+      'page_title'     => '純広告（ランキング上部）',
+      'menu_title'    => '純広告（ランキング上部）',
+      'menu_slug'     => 'article-ad-ranking',
       'capability'    => 'edit_posts',
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'

@@ -2,15 +2,15 @@
   <?php 
   if ( is_singular(array("feature","hobby","learn","life")) ): 
 
-  $articleAdSidebarsrc = get_field('article-ad-sidebar-src', 'option');
-  $articleAdSidebaralt = get_field('article-ad-sidebar-alt', 'option');
-  $articleAdSidebarhref = get_field('article-ad-sidebar-href', 'option');
+  $articleAdRankingsrc = get_field('article-ad-ranking-src', 'option');
+  $articleAdRankingalt = get_field('article-ad-ranking-alt', 'option');
+  $articleAdRankinghref = get_field('article-ad-ranking-href', 'option');
 
-  if($articleAdSidebarsrc):
+  if($articleAdRankingsrc):
   ?>
-    <div class="t-sideBarPc">
-      <a href="<?= $articleAdSidebarhref ?>" target="_blank">
-        <img src="<?= $articleAdSidebarsrc ?>" alt="<?= $articleAdSidebaralt ?>" >
+    <div class="t-sideBarPc__ad">
+      <a href="<?= $articleAdRankinghref ?>" target="_blank">
+        <img src="<?= $articleAdRankingsrc ?>" alt="<?= $articleAdRankingalt ?>" >
       </a>
     </div>
   <?php endif; endif; ?>

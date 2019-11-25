@@ -275,6 +275,21 @@
 			</div>
 		</section>
 		<section class="p-articlePost__inner__footer">
+			<?php 
+				if ( is_singular(array("feature","hobby","learn","life")) ): 
+
+				$articleAdRankingsrc = get_field('article-ad-ranking-src', 'option');
+				$articleAdRankingalt = get_field('article-ad-ranking-alt', 'option');
+				$articleAdRankinghref = get_field('article-ad-ranking-href', 'option');
+
+				if($articleAdRankingsrc):
+			?>
+				<div class="p-articlePost__inner__footer__ad">
+					<a href="<?= $articleAdRankinghref ?>" target="_blank">
+						<img src="<?= $articleAdRankingsrc ?>" alt="<?= $articleAdRankingalt ?>" >
+					</a>
+				</div>
+			<?php endif; endif; ?>
 			<?php get_template_part('ranking'); ?>
 		</section>
 	</div>
