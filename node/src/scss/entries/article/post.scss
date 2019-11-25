@@ -1070,6 +1070,50 @@
 									}
 								}
 							}
+
+							.article__ad{
+								display: flex;
+								margin-top:50px;
+								justify-content: center;
+
+								.article__ad__list{
+									display: flex;
+									flex-wrap: wrap;
+									justify-content: center;
+									align-items: center;
+									margin:-20px 0 0 -20px;
+
+									@include screen-large {
+										justify-content: space-between;
+										flex-wrap: nowrap;
+										margin:0;
+									}
+
+									.article__ad__list__item {
+										width: 300px;
+										margin:20px 0 0 20px;
+
+										@include screen-large {
+											width: 47%;
+											margin:0;
+										}
+
+										&:nth-of-type(1) {
+											@include screen-large {
+												margin:0;
+											}
+										}
+
+										>a {
+											display: block;
+
+											>img{
+
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}

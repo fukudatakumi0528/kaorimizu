@@ -1,4 +1,19 @@
 <div class="t-sideBarPc">
+  <?php 
+  if ( is_singular(array("feature","hobby","learn","life")) ): 
+
+  $articleAdSidebarsrc = get_field('article-ad-sidebar-src', 'option');
+  $articleAdSidebaralt = get_field('article-ad-sidebar-alt', 'option');
+  $articleAdSidebarhref = get_field('article-ad-sidebar-href', 'option');
+
+  if($articleAdSidebarsrc):
+  ?>
+    <div class="t-sideBarPc">
+      <a href="<?= $articleAdSidebarhref ?>" target="_blank">
+        <img src="<?= $articleAdSidebarsrc ?>" alt="<?= $articleAdSidebaralt ?>" >
+      </a>
+    </div>
+  <?php endif; endif; ?>
   <?php get_template_part('ranking'); ?>
   <?php 
     $taxonomies = array( 
