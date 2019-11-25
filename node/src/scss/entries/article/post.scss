@@ -1165,10 +1165,6 @@
 				justify-content: center;
 				align-items: center;
 
-				@include screen-large {
-					display: none;
-				}
-
 				>a {
 					display: block;
 					width: 300px;
