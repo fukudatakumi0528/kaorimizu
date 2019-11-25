@@ -10757,13 +10757,7 @@ msgstr "スタイルシートが見つかりません。"
 msgid "The theme directory \"%s\" does not exist."
 msgstr "テーマディレクトリ \"%s\" が存在しません。"
 
-#. translators: 1: error message, 2: line number
-#: wp-includes/atomlib.php:175
-msgid "XML Error: %1$s at line %2$s"
-msgstr "XML エラー: %2$s行目の%1$s "
-
-#: wp-includes/atomlib.php:151 wp-includes/feed.php:554
-#: wp-includes/IXR/class-IXR-message.php:48
+#: wp-includes/feed.php:554
 msgid "PHP's XML extension is not available. Please contact your hosting provider to enable PHP's XML extension."
 msgstr "PHP の XML 拡張モジュールは利用できません。PHP の XML 拡張モジュールを有効にするようにホスティング会社に連絡してください。"
 
@@ -12618,8 +12612,7 @@ msgstr "%2$s に %1$s より"
 msgid "by"
 msgstr "by"
 
-#: wp-includes/blocks/rss.php:27 wp-includes/rss.php:917
-#: wp-includes/widgets.php:1471
+#: wp-includes/blocks/rss.php:27 wp-includes/widgets.php:1471
 msgid "An error has occurred, which probably means the feed is down. Try again later."
 msgstr "エラーが発生しました。ご指定のフィードは現在利用できないようです。後ほどもう一度お試しください。"
 
