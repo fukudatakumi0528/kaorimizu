@@ -196,7 +196,6 @@
 								</div>
 							<?php endif;?>
 
-
 							<?php
 							
 								$post_type_slug = 'feature'; // 投稿タイプのスラッグを指定
