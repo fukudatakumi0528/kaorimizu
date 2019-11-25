@@ -165,6 +165,22 @@
 								</div>
 							<?php endif; ?>
 
+							<?php
+							$articleAdUnder1 = get_field('article-ad-under-1', 'option');
+							$articleAdUnder2 = get_field('article-ad-under-2', 'option');
+							if($articleAdUnder1 || $articleAdUnder2):
+							?>
+								<div>
+									<ul>
+										<li>
+											<a href="">
+												<img src="" alt="" >
+											</a>
+										</li>
+									</ul>
+								</div>
+							<?php endif;?>
+
 
 							<?php
 							

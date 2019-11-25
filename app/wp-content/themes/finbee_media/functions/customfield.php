@@ -27,4 +27,32 @@
       'redirect'        => true,
       'icon_url'    => 'dashicons-tag'
     ));
+    // 純広告（サイドバー上部）
+    acf_add_options_page(array(
+      'page_title'     => '純広告（サイドバー上部）',
+      'menu_title'    => '純広告（サイドバー上部）',
+      'menu_slug'     => 'article-ad-sidebar',
+      'capability'    => 'edit_posts',
+      'redirect'        => true,
+      'icon_url'    => 'dashicons-tag'
+    ));    
+    // 純広告（記事詳細下部1）
+    acf_add_options_page(array(
+      'page_title'     => '純広告（記事詳細下部1）',
+      'menu_title'    => '純広告（記事詳細下部1）',
+      'menu_slug'     => 'article-ad-under-1',
+      'capability'    => 'edit_posts',
+      'redirect'        => true,
+      'icon_url'    => 'dashicons-tag'
+    ));    
+    // 純広告（記事詳細下部2）
+    acf_add_options_page(array(
+      'page_title'     => '純広告（記事詳細下部2）',
+      'menu_title'    => '純広告（記事詳細下部2）',
+      'menu_slug'     => 'article-ad-under-2',
+      'capability'    => 'edit_posts',
+      'redirect'        => true,
+      'icon_url'    => 'dashicons-tag'
+    ));    
+
   }
