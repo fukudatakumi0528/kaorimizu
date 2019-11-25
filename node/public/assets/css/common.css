@@ -5603,6 +5603,24 @@ _:-ms-lang(x)::-ms-backdrop, .m-selectboxArea__under__input {
   align-items: center;
 }
 
+.t-sideBarPc .t-sideBarPc__ad {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.t-sideBarPc .t-sideBarPc__ad > a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.t-sideBarPc .t-sideBarPc__ad > a > img {
+  width: 100%;
+  height: auto;
+}
+
 .t-sideBarPc .m-titleBorder {
   padding: 0 15px;
 }

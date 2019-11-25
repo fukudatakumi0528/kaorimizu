@@ -1,5 +1,23 @@
 .t-sideBarPc {
 
+  .t-sideBarPc__ad {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+    >a {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      >img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
   .m-titleBorder {
     padding:0 15px;
 

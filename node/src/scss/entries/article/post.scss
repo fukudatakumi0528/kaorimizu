@@ -1158,6 +1158,26 @@
 				padding-bottom:0px;	
 			}
 
+			.p-articlePost__inner__footer__ad {
+				margin-bottom:50px;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+
+				>a {
+					display: block;
+					width: 300px;
+					height: auto;
+
+					>img{
+						display: block;
+						width: 100%;
+						height: auto;;
+					}
+				}
+			}
+
 			.m-titleBorder {
 				padding:0 15px;
 
