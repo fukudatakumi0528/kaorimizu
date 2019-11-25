@@ -584,58 +584,52 @@
 								}
 							}
 
+							.easyLink-box.easyLink-size-s{
+								margin: 20px 0 0 0;
+								width: 100%;
+								max-width: 100%;
 
-							#msmaflink-C0GFv-1 {
-
-								.easyLink-box.easyLink-size-s{
-									margin: 20px 0 0 0;
+								.easyLink-info {
 									width: 100%;
-									max-width: 100%;
 
-									.easyLink-info {
-										width: 100%;
+									.easyLink-info-btn {
+										flex-wrap: nowrap;
 
-										.easyLink-info-btn {
-											flex-wrap: nowrap;
+										>a {
+											width: auto;
+											min-width: 32%;
+											text-decoration: none;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+											padding: 5px;
+											color:$bg-3-color;
+											margin:10px 0 0 0;
 
-											>a {
-												width: auto;
-												min-width: 32%;
-												text-decoration: none;
-												display: flex;
-												justify-content: center;
-												align-items: center;
-												padding: 5px;
-												color:$bg-3-color;
-												margin:10px 0 0 0;
-
-												@include screen-large {
-													margin:0 0 0 10px;
-												}
-
-												&:nth-of-type(1) {
-													margin:0;
-												}
-
-												&.easyLink-info-btn-amazon{
-													background:#F89502;
-												}
-
-												&.easyLink-info-btn-rakuten{
-													background: #D34644;
-												}
-
-												&.easyLink-info-btn-yahoo{
-													background: #6185EE;
-												}
-
+											@include screen-large {
+												margin:0 0 0 10px;
 											}
+
+											&:nth-of-type(1) {
+												margin:0;
+											}
+
+											&.easyLink-info-btn-amazon{
+												background:#F89502;
+											}
+
+											&.easyLink-info-btn-rakuten{
+												background: #D34644;
+											}
+
+											&.easyLink-info-btn-yahoo{
+												background: #6185EE;
+											}
+
 										}
 									}
 								}
-	
 							}
-
 						}
 
 						.article__footer {
