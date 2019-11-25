@@ -165,6 +165,37 @@
 							<?php endif; ?>
 
 							<?php
+							$articleAdUnder1src = get_field('article-ad-under-1-src', 'option');
+							$articleAdUnder1alt = get_field('article-ad-under-1-alt', 'option');
+							$articleAdUnder1href = get_field('article-ad-under-1-href', 'option');
+
+							$articleAdUnder2src = get_field('article-ad-under-2-src', 'option');
+							$articleAdUnder2alt = get_field('article-ad-under-2-alt', 'option');
+							$articleAdUnder2href = get_field('article-ad-under-2-href', 'option');
+
+							if($articleAdUnder1src || $articleAdUnder2src):
+							?>
+								<div class="article__ad">
+									<ul class="article__ad__list">
+										<?php if($articleAdUnder1src): ?>
+											<li class="article__ad__list__item">
+												<a href="<?= $articleAdUnder1href ?>" target="_blank">
+													<img src="<?= $articleAdUnder1src ?>" alt="<?= $articleAdUnder1alt ?>" >
+												</a>
+											</li>
+										<?php endif; ?>
+										<?php if($articleAdUnder2src): ?>
+											<li class="article__ad__list__item">
+												<a href="<?= $articleAdUnder2href ?>" target="_blank">
+													<img src="<?= $articleAdUnder2src ?>" alt="<?= $articleAdUnder2alt ?>" >
+												</a>
+											</li>
+										<?php endif; ?>
+									</ul>
+								</div>
+							<?php endif;?>
+
+							<?php
 								$post_type_slug = 'hobby'; // 投稿タイプのスラッグを指定
 
 								$args = array(
@@ -241,6 +272,22 @@
 				</div>
 			</div>
 			<div class="p-articlePost__inner__main__sidebar">
+				<?php 
+					if ( is_singular(array("feature","hobby","learn","life")) ): 
+
+					$articleAdRankingsrc = get_field('article-ad-ranking-src', 'option');
+					$articleAdRankingalt = get_field('article-ad-ranking-alt', 'option');
+					$articleAdRankinghref = get_field('article-ad-ranking-href', 'option');
+
+					if($articleAdRankingsrc):
+				?>
+					<div class="p-articlePost__inner__footer__ad">
+						<a href="<?= $articleAdRankinghref ?>" target="_blank">
+							<img src="<?= $articleAdRankingsrc ?>" alt="<?= $articleAdRankingalt ?>" >
+						</a>
+					</div>
+				<?php endif; endif; ?>
+
 				<?php get_sidebar('pc'); ?>
 			</div>
 		</section>
