@@ -1,32 +1,29 @@
 export default class Affiliate {
   linkCustom() {
-    const $btnAmazons = $('.easyLink-info-btn-amazon');
-    const $btnRakutens = $('.easyLink-info-btn-rakuten');
-    const $btnYahoos = $('.easyLink-info-btn-yahoo');
+    $(setTimeout(function () {
 
-    if ($btnAmazons) {
-      for (let $btnAmazon of $btnAmazons) {
-        $btnAmazon.attr({
-          'target': '_brank',
-        })
-      };
-    }
+      const $btnAmazons = $('.easyLink-info-btn-amazon');
+      const $btnRakutens = $('.easyLink-info-btn-rakuten');
+      const $btnYahoos = $('.easyLink-info-btn-yahoo');
   
-    if ($btnRakutens) {
-      for (let $btnRakuten of $btnRakutens) {
-        $btnRakuten.attr({
-          'target': '_brank',
+      if ($btnAmazons) {
+        $btnAmazons.each(function (i, elem) {
+          elem.setAttribute('target', '_brank');
         })
-      };      
-    }
-
-    if($btnYahoos){
-      for (let $btnYahoo of $btnYahoos) {
-        $btnYahoo.attr({
-          'target': '_brank',
+      }
+    
+      if ($btnRakutens) {
+        $btnRakutens.each(function (i, elem) {
+          elem.setAttribute('target', '_brank');
         })
-      };  
-    }
+      }
   
+      if ($btnYahoos) {
+        $btnYahoos.each(function (i, elem) {
+          elem.setAttribute('target', '_brank');
+        })
+      }
+      
+    },5000))
   }
 }

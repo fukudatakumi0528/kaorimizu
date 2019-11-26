@@ -6,6 +6,8 @@ import SliderTab from '../utils/sliderTab';
 import Refine from '../utils/refine';
 import Contact from '../utils/contact';
 import Sidebar from '../utils/sidebar';
+import Affiliate from '../utils/affiliate';
+
 
 // ヘッダーメニュー
 const header = new Header();
@@ -35,7 +37,6 @@ sliderTab.clickTab();
 const sidebar = new Sidebar();
 sidebar.sticky();
 
-
 //追従ボタン
 const refine = new Refine();
 refine.clickRefineAccordion();
@@ -45,3 +46,7 @@ const contact = new Contact();
 contact.selectBoxChange();
 contact.selectContactChoice();
 contact.checkValidation();
+
+//アフィリエイト
+const affiliate = new Affiliate();
+affiliate.linkCustom();
