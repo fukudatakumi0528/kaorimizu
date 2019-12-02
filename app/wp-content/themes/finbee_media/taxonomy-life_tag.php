@@ -39,8 +39,39 @@
 						</div>
 					</div>
 					<div class="p-articleSearch__main__content__refine__inner__selectArea js-refine__selectArea">
-						<ul class="o-classificationList">
-							<?php $tags = get_terms('life_tag'); ?>
+					<ul class="o-classificationList">
+							<?php
+								$taxonomies = array( 
+									'life_tag',
+								);
+							
+								$args = array(
+									'orderby'       => 'count', 
+									'order'         => 'DESC',
+									'hide_empty'    => true, 
+									'exclude'       => array(), 
+									'exclude_tree'  => array(), 
+									'include'       => array(),
+									'number'        => '', 
+									'fields'        => 'all', 
+									'slug'          => '', 
+									'parent'        => '',
+									'hierarchical'  => true, 
+									'child_of'      => 0, 
+									'childless'     => false,
+									'get'           => '', 
+									'name__like'    => '',
+									'description__like' => '',
+									'pad_counts'    => false, 
+									'offset'        => '', 
+									'search'        => '', 
+									'cache_domain'  => 'core'
+								); 					
+
+								$popularTags = get_terms($taxonomies, $args);
+
+								$tags = array_slice($popularTags,0,10);
+							?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
 										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
