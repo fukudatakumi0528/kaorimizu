@@ -427,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   };
 
                   $searchTermsUnique = array_unique($searchTerms);
-                  asort($searchTermsUnique);
+                  arsort($searchTermsUnique);
                   $searchTermsUnique = array_values($searchTermsUnique);
 
                   $termsNameList = [];
@@ -620,7 +620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               };
 
               $grantTermsUnique = array_unique($grantTerms);
-              asort($grantTermsUnique);
+              arsort($grantTermsUnique);
               $grantTermsUnique = array_values($grantTermsUnique);
 
               $termsNameList = [];
