@@ -195,7 +195,7 @@
 							<?php endif;?>
 
 							<?php 
-								$post_type_slug = 'learn'; // 投稿タイプのスラッグを指定
+								$post_type_slug_relation = 'learn'; // 投稿タイプのスラッグを指定
 
 								$args_relation = array(
 									'post_type' => $post_type_slug_relation, // 投稿タイプを指定
