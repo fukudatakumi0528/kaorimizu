@@ -163,7 +163,8 @@ export default class Slick {
 
 				// top hobby スライダー
 				$topLifeSlider.slick({
-					speed: 800,
+					autoplay: true,
+					autoplaySpeed: 4000,
 					arrows: true,
 					dots: true,
 					infinite: true,
@@ -175,7 +176,8 @@ export default class Slick {
 
 				// top hobby スライダー
 				$topLearnSlider.slick({
-					speed: 800,
+					autoplay: true,
+					autoplaySpeed: 4000,
 					arrows: true,
 					dots: true,
 					infinite: true,

@@ -646,24 +646,24 @@ $font-xxl: 2rem;
   font-size: 15px;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s {
   margin: 20px 0 0 0;
   width: 100%;
   max-width: 100%;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info {
   width: 100%;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body #msmaflink-C0GFv-1 .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a {
   width: auto;
-  min-width: 33%;
+  min-width: 32%;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -675,6 +675,30 @@ $font-xxl: 2rem;
   -ms-flex-align: center;
   align-items: center;
   padding: 5px;
+  color: #F5F5F5;
+  margin: 10px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a {
+    margin: 0 0 0 10px;
+  }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a:nth-of-type(1) {
+  margin: 0;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-amazon {
+  background: #F89502;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-rakuten {
+  background: #D34644;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info .easyLink-info-btn > a.easyLink-info-btn-yahoo {
+  background: #6185EE;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer {
@@ -1198,6 +1222,64 @@ $font-xxl: 2rem;
   background: #FFD94A;
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: -20px 0 0 -20px;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list .article__ad__list__item {
+  width: 300px;
+  margin: 20px 0 0 20px;
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list .article__ad__list__item {
+    width: 47%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list .article__ad__list__item:nth-of-type(1) {
+    margin: 0;
+  }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__footer .article__ad .article__ad__list .article__ad__list__item > a {
+  display: block;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__sidebar {
   display: none;
 }
@@ -1237,7 +1319,34 @@ $font-xxl: 2rem;
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer {
     margin-top: 0px;
     padding-bottom: 0px;
+    display: none;
   }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad > a {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .m-titleBorder {

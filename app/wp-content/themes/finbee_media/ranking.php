@@ -123,7 +123,9 @@
             <p class="m-squareCard__inner__footer__title__text"><?= $articleRankingMonth->post_title ?></p>
           </div>
           <div class="m-squareCard__inner__footer__description">
-            <div class="m-squareCard__inner__footer__description__text"><?= strip_tags($articleRankingMonth->post_content) ?></div>
+            <div class="m-squareCard__inner__footer__description__text">
+              <?= get_the_custom_excerpt( $articleRankingMonth->post_content, 100 ) ?>
+            </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
             <div class="m-classificationArea">
@@ -201,7 +203,9 @@
             <p class="m-squareCard__inner__footer__title__text"><?= $articleRankingWeekly->post_title ?></p>
           </div>
           <div class="m-squareCard__inner__footer__description">
-            <div class="m-squareCard__inner__footer__description__text"><?= strip_tags($articleRankingWeekly->post_content) ?></div>
+            <div class="m-squareCard__inner__footer__description__text">
+              <?= get_the_custom_excerpt( $articleRankingWeekly->post_content, 100 ) ?>
+            </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
             <div class="m-classificationArea">
@@ -278,7 +282,9 @@
             <p class="m-squareCard__inner__footer__title__text"><?= $articleRankingAll->post_title ?></p>
           </div>
           <div class="m-squareCard__inner__footer__description">
-            <div class="m-squareCard__inner__footer__description__text"><?= strip_tags($articleRankingAll->post_content) ?></div>
+            <div class="m-squareCard__inner__footer__description__text">
+              <?= get_the_custom_excerpt( $articleRankingAll->post_content, 100 ) ?>
+            </div>
           </div>
           <div class="m-squareCard__inner__footer__classification">
             <div class="m-classificationArea">

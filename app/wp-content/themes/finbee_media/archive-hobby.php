@@ -40,8 +40,40 @@
 						</div>
 					</div>
 					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
-						<ul class="o-classificationList">
-							<?php $tags = get_terms('hobby_tag'); ?>
+					<ul class="o-classificationList">
+							<?php
+								$taxonomies = array( 
+									'hobby_tag',
+								);
+							
+								$args = array(
+									'orderby'       => 'count', 
+									'order'         => 'DESC',
+									'hide_empty'    => true, 
+									'exclude'       => array(), 
+									'exclude_tree'  => array(), 
+									'include'       => array(),
+									'number'        => '', 
+									'fields'        => 'all', 
+									'slug'          => '', 
+									'parent'        => '',
+									'hierarchical'  => true, 
+									'child_of'      => 0, 
+									'childless'     => false,
+									'get'           => '', 
+									'name__like'    => '',
+									'description__like' => '',
+									'pad_counts'    => false, 
+									'offset'        => '', 
+									'search'        => '', 
+									'cache_domain'  => 'core'
+								); 					
+
+								$popularTags = get_terms($taxonomies, $args);
+
+								$tags = array_slice($popularTags,0,10);
+							
+							 ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
 										<a class="o-classificationList__tag__link" href="<?= get_category_link($tag->term_id); ?>">
@@ -101,7 +133,7 @@
 									</div>
 									<h2 class="m-verticallyCard__inner__footer__title" ><?php the_title_attribute(); ?></h2>
 									<div class="m-verticallyCard__inner__footer__description">
-										<p class="m-verticallyCard__inner__footer__description__text"><?php the_excerpt() ?></p>
+										<p class="m-verticallyCard__inner__footer__description__text"><?= get_the_custom_excerpt( the_excerpt(), 100 ) ?></p>
 									</div>
 									<div class="m-classificationArea">
 										<?php	if($singletags): foreach ($singletags as $tag ): ?>

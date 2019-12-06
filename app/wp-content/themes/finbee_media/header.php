@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             usort($newArrivalTags,"sort_id");
 
-            $sliceNewArrivalTags = array_slice($newArrivalTags,0,10);
+            $sliceNewArrivalTags = array_slice($newArrivalTags,0,30);
 
             if(count($sliceNewArrivalTags) > 0):
 
@@ -427,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   };
 
                   $searchTermsUnique = array_unique($searchTerms);
-                  asort($searchTermsUnique);
+                  arsort($searchTermsUnique);
                   $searchTermsUnique = array_values($searchTermsUnique);
 
                   $termsNameList = [];
@@ -437,7 +437,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
                   $uniqueTermsNameList = array_unique($termsNameList);
 
-                  foreach($uniqueTermsNameList as $uniqueTermsName):
+                  $uniqueTermsNameList30 = array_slice($uniqueTermsNameList,0,30);
+
+                  foreach($uniqueTermsNameList30 as $uniqueTermsName):
                 ?>
                 <li class="o-classificationList__tag">
                   <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">
@@ -618,7 +620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               };
 
               $grantTermsUnique = array_unique($grantTerms);
-              asort($grantTermsUnique);
+              arsort($grantTermsUnique);
               $grantTermsUnique = array_values($grantTermsUnique);
 
               $termsNameList = [];
@@ -627,8 +629,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               }
         
               $uniqueTermsNameList = array_unique($termsNameList);
+              
+              $uniqueTermsNameList30 = array_slice($uniqueTermsNameList,0,30);
 
-              foreach($uniqueTermsNameList as $uniqueTermsName):
+              foreach($uniqueTermsNameList30 as $uniqueTermsName):
         ?>
             <li class="o-classificationList__tag">
               <a class="o-classificationList__tag__link" href="<?= home_url() .'?s=' .$uniqueTermsName .'&t=tag' ?>">

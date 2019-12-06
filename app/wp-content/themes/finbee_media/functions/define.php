@@ -56,3 +56,13 @@ function article_new_arrival($articleObjectId) {
     return false;
   };
 }
+
+//本文抜粋を取得する関数
+//使用方法：http://nelog.jp/get_the_custom_excerpt
+function get_the_custom_excerpt($content, $length) {
+  $length = ($length ? $length : 100);//デフォルトの長さを指定する
+  $content =  strip_shortcodes($content);//ショートコード削除
+  $content =  strip_tags($content);//タグの除去
+  $content =  mb_substr($content,0,$length).'…';//文字列を指定した長さで切り取る
+  return $content;
+}
