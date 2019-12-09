@@ -22,6 +22,8 @@
  `ドキュメントルート`
 * sql
  `DBdumpデータ`
+* node
+ `scssやjsファイルのソースコード格納場所`
 
 ## Get Started (Docker)
 
@@ -110,21 +112,9 @@ $ docker exec office officelab-ka_php /usr/local/bin/wp search-replace 'localhos
 ```
 ※ 本番実行の際は--dry-runを外して実行してください
 
-## Get Started (JS/SCSSビルド環境)
-
 ### Node.jsのインストール
 
 [公式サイト](https://nodejs.org/ja/)より「推奨版」をDLしてインストールしてください。
-
-### 構成
-
-- Babel
-- Webpack
-- ESLint
-- Prettier
-- Jest
-
-Lintのテンプレートは `eslint-config-standard` を利用しています。
 
 ### 依存モジュールのインストールと初回ビルド
 
@@ -138,38 +128,33 @@ $ docker-compose up
 
 ### JS/SCSS開発の開始
 
-`node` ディレクトリへ移動後 `$ npm start` でJS/SCSSファイルのウォッチ&コンパイルを開始します。
-
-```
-$ docker exec -it aquamarine_node bash
-$ cd node
-$ npm start
-```
-
-* jsファイルのエントリーポイントを増やす場合は `webpack.config.js` を編集してください。
-
-### 手動ビルド
-
-```
-$ npm run build
-```
-
-### 構文チェック
-
-```
-$ npm run lint
-```
+docker-compose up を行なっている状態で、node/src配下のscss,jsを変更すると、自動的にapp配下にコンパイルしたcss,jsが作成されます。
 
 
-### プラグイン、function関連
+## 開発状況  
 
+### scss  
+components,utilis,entriesの3つのディレクトリに分かれている。 
+componentsは、アトミックデザインでいうコンポーネント粒度に該当するものを格納。 
+utilisは、reset.cssや変数定義を行なったりするファイルを格納。  
+entriesは、ページ単位でのスタイル寮生を行うファイルを格納している。(アトミックデザインでいうpages)  
+
+### プラグイン関連 
+ 
 #### OneSignal(WEBプッシュ通知)
 WEBプッシュ通知は、Onesignalというプラグインを使用している。  
 また独自の実装部分は、function/onesignal.phpにフィルターフックで記載。  
 アカウント  
 ID:contact@be-topia.finbee.jp  
 PW:NEstEgg1101  
+ 
 #### ランキング機能
 simpleGArankingというプラグインを使用している。
 権限を持っているアカウントは、クライアントが持っているため、サイトドメイン変更時などは、クライアントとの連携対応が必要になる。  
-閲覧権限だけならば、GIG社内ディレクターなども持っている。
+閲覧権限だけならば、GIG社内ディレクターなども持っている。  
+
+#### 広告関連  
+広告は、  
+- 純広告  
+- アドセンス広告  
+の2種類ある。  
