@@ -1177,6 +1177,8 @@
 					width: 100%;
 					height: 300px;
 					max-height: 300px;
+					display: flex;
+					justify-content: center;
 
 					&:nth-last-of-type(1) {
 						margin-bottom:50px;
