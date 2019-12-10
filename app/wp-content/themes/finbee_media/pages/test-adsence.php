@@ -474,8 +474,8 @@
       <div class="p-articlePost__inner__footer__adsence">
         <div class="p-articlePost__inner__footer__adsence__ad">
           <style>
-            .responsive-test { width: 326px; height: 100px; }
-            @media(min-width: 360px) { .responsive-test { width: 336px; height: 280px;} }
+            .responsive-test { width: 300px; height: 250px; }
+            @media(min-width: 360px) { .responsive-test { width: 300px; height: 250px;} }
           </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
@@ -506,8 +506,8 @@
         </div>
         <div class="p-articlePost__inner__footer__adsence__ad">
           <style>
-            .responsive-test { width: 326px; height: 100px; }
-            @media(min-width: 360px) { .responsive-test { width: 336px; height: 280px;} }
+            .responsive-test { width: 300px; height: 250px; }
+            @media(min-width: 360px) { .responsive-test { width: 300px; height: 250px;} }
           </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
