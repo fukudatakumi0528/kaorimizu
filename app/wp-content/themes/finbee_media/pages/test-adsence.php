@@ -479,7 +479,7 @@
               style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-full-width-responsive="true"></ins>
+              ></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
@@ -491,7 +491,7 @@
               style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-full-width-responsive="true"></ins>
+              ></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
@@ -503,7 +503,7 @@
               style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-full-width-responsive="true"></ins>
+              ></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
