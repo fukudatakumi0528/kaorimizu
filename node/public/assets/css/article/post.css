@@ -1319,8 +1319,23 @@ $font-xxl: 2rem;
   .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer {
     margin-top: 0px;
     padding-bottom: 0px;
-    display: none;
   }
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence {
+  width: 30%;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad {
