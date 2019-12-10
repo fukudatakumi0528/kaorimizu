@@ -1352,6 +1352,12 @@ $font-xxl: 2rem;
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad {
+    display: none;
+  }
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__ad > a {
   display: block;
   width: 300px;
