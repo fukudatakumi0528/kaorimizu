@@ -1328,7 +1328,7 @@ $font-xxl: 2rem;
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence {
   margin-top: 20px;
-  height: auto;
+  height: 300px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
