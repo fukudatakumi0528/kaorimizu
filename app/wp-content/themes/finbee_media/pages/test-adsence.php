@@ -473,39 +473,48 @@
       <!-- 埋め込み部分 -->
       <div class="p-articlePost__inner__footer__adsence">
         <div class="p-articlePost__inner__footer__adsence__ad">
+          <style>
+            .responsive-test { width: 326px; height: 100px; }
+            @media(min-width: 360px) { .responsive-test { width: 336px; height: 280px;} }
+          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle"
-              style="display:block"
+          <ins class="adsbygoogle responsive-test"
+              style="display:inline-block"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-ad-format="rectangle"
               data-full-width-responsive="true"></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </div>
         <div class="p-articlePost__inner__footer__adsence__ad">
+          <style>
+            .responsive-test { width: 326px; height: 100px; }
+            @media(min-width: 360px) { .responsive-test { width: 336px; height: 280px;} }
+          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle"
-              style="display:block"
+          <ins class="adsbygoogle responsive-test"
+              style="display:inline-block"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-ad-format="rectangle"
               data-full-width-responsive="true"></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </div>
         <div class="p-articlePost__inner__footer__adsence__ad">
+          <style>
+            .responsive-test { width: 326px; height: 100px; }
+            @media(min-width: 360px) { .responsive-test { width: 336px; height: 280px;} }
+          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle"
-              style="display:block"
+          <ins class="adsbygoogle responsive-test"
+              style="display:inline-block"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
-              data-ad-format="rectangle"
               data-full-width-responsive="true"></ins>
           <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
