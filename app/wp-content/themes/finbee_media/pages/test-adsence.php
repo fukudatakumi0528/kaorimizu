@@ -473,14 +473,10 @@
       <!-- 埋め込み部分 -->
       <div class="p-articlePost__inner__footer__adsence">
         <div class="p-articlePost__inner__footer__adsence__ad">
-          <style>
-            .responsive-test { width: 300px; height: 250px; }
-            @media(min-width: 360px) { .responsive-test { width: 300px; height: 250px;} }
-          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
           <ins class="adsbygoogle responsive-test"
-              style="display:inline-block"
+              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
               data-full-width-responsive="true"></ins>
@@ -489,14 +485,10 @@
           </script>
         </div>
         <div class="p-articlePost__inner__footer__adsence__ad">
-          <style>
-            .responsive-test { width: 300px; height: 250px; }
-            @media(min-width: 360px) { .responsive-test { width: 300px; height: 250px;} }
-          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
           <ins class="adsbygoogle responsive-test"
-              style="display:inline-block"
+              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
               data-full-width-responsive="true"></ins>
@@ -505,14 +497,10 @@
           </script>
         </div>
         <div class="p-articlePost__inner__footer__adsence__ad">
-          <style>
-            .responsive-test { width: 300px; height: 250px; }
-            @media(min-width: 360px) { .responsive-test { width: 300px; height: 250px;} }
-          </style>          
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- be-topiaサイドバナー -->
           <ins class="adsbygoogle responsive-test"
-              style="display:inline-block"
+              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
               data-ad-client="ca-pub-8403517419537651"
               data-ad-slot="4866197532"
               data-full-width-responsive="true"></ins>
