@@ -1157,16 +1157,17 @@
 			}
 
 			.p-articlePost__inner__footer__adsence {
-				margin-top:20px;
 				height: 300px;
 				max-width: 300px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				align-items: center;
 				margin:0 auto;
 				padding:0 15px;
 			
 				@include screen-large {
+					margin-top:20px;
 					width: 100%;
 					flex-direction: row;
 					justify-content: space-between;
@@ -1182,10 +1183,6 @@
 					@include screen-large {
 						width: 30%;
 						height: 100%;
-						margin-top:0px;
-					}
-
-					&:nth-of-type(1) {
 						margin-top:0px;
 					}
 				}
