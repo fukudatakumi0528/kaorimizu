@@ -1369,7 +1369,7 @@ $font-xxl: 2rem;
   max-height: 300px;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence__ad:nth-last-of-type {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence__ad:nth-last-of-type(1) {
   margin-bottom: 50px;
 }
 
@@ -1379,7 +1379,7 @@ $font-xxl: 2rem;
     height: 100%;
     margin-top: 0px;
   }
-  .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence__ad:nth-last-of-type {
+  .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence__ad:nth-last-of-type(1) {
     margin-bottom: 0px;
   }
 }

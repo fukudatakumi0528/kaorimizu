@@ -1181,7 +1181,7 @@
 					height: 300px;
 					max-height: 300px;
 
-					&:nth-last-of-type {
+					&:nth-last-of-type(1) {
 						margin-bottom:50px;
 					}
 
@@ -1190,7 +1190,7 @@
 						height: 100%;
 						margin-top:0px;
 
-						&:nth-last-of-type {
+						&:nth-last-of-type(1) {
 							margin-bottom:0px;
 						}	
 					}
