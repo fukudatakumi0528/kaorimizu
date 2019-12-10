@@ -1334,7 +1334,7 @@ $font-xxl: 2rem;
   justify-content: space-between;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence .p-articlePost__inner__footer__adsence__ad {
   width: 30%;
   height: 100%;
 }
