@@ -1326,7 +1326,6 @@ $font-xxl: 2rem;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__footer .p-articlePost__inner__footer__adsence {
-  height: 300px;
   padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
