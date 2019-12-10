@@ -1176,9 +1176,8 @@
 
 					@include screen-large {
 						width: 30%;
-						height: 300px;
 						height: 100%;
-	
+						margin-top:0px;
 					}
 
 					&:nth-of-type(1) {
