@@ -1167,12 +1167,14 @@
 				@include screen-large {
 					flex-direction: row;
 					justify-content: space-between;
+					max-height: 300px;
 				}
 
 				.p-articlePost__inner__footer__adsence__ad {
 					margin-top:50px;
 					width: 300px;
 					height: 300px;
+					max-height: 300px;
 
 					@include screen-large {
 						width: 30%;
