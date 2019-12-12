@@ -162,21 +162,33 @@
 
 	<!-- feature-->
 	<?php 
+	  //top部分
 		$post_type_slug_topFeature = array(
 			'feature', // 投稿タイプのスラッグを指定
 		); 
-
 		$args_topFeature = array(
 			'post_type' => $post_type_slug_topFeature, // 投稿タイプを指定
 			'posts_per_page' => 1, // 表示件数を指定
 			'orderby' =>  'DESC', // 新着順
 		);
-
 		$topFeature_query = new WP_Query($args_topFeature);
+
+		//topFeatureのIDを保存
+		$topFeatureId = $topFeature_query->posts[0]->ID;
+
+		//スライダー部分
+		$args_topFeatureList = [
+			'post_type' => 'feature',
+			'posts_per_page' => 5,
+			'post__not_in' => array($topFeatureId),
+			'paged' => $paged,
+		];	
+		$query_topFeatureList = new WP_Query($args_topFeatureList);
+
 		if($topFeature_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query->posts) < 5):?>
+		<?php if(count($query_topFeatureList->posts) < 5):?>
 			<div class="p-top__featureHobby__bg fewArticle"></div>
 		<?php else: ?>
 			<div class="p-top__featureHobby__bg"></div>
@@ -193,9 +205,6 @@
 		<?php 
 			while ($topFeature_query->have_posts()): $topFeature_query->the_post();
 
-			//topFeatureのIDを保存
-			$topFeatureId = $post->ID;
-
 			// サムネイルID
 			if ( has_post_thumbnail($post->ID)) {
 				$topFeatureThumbnail =  get_the_post_thumbnail_url($post->ID);
@@ -205,7 +214,6 @@
 
 			//タグを取得
 			$term = get_the_terms($post->ID, 'feature_tag');
-
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
@@ -245,14 +253,6 @@
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
 		<?php 
-			$args_topFeatureList = [
-				'post_type' => 'feature',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topFeatureId),
-				'paged' => $paged,
-			];	
-
-			$query_topFeatureList = new WP_Query($args_topFeatureList);
 			if($query_topFeatureList->have_posts()):		
 		?>
 		<?php if(count($query_topFeatureList->posts) < 5):?>
@@ -369,26 +369,35 @@
 		<?php endif; ?>
 	</section>
 	<?php endif; ?>
-
-
-
 		<!-- hobby-->
-		<?php 
+	<?php
+		//top部分
 		$post_type_slug_topHobby = array(
 			'hobby', // 投稿タイプのスラッグを指定
 		); 
-
 		$args_topHobby = array(
 			'post_type' => $post_type_slug_topHobby, // 投稿タイプを指定
 			'posts_per_page' => 1, // 表示件数を指定
 			'orderby' =>  'DESC', // 新着順
 		);
-
 		$topHobby_query = new WP_Query($args_topHobby);
+
+		//topHobbyのIDを保存
+		$topHobbyId = $topHobby_query->posts[0]->ID;
+
+		//スライダー部分
+		$args_topHobbyList = [
+			'post_type' => 'hobby',
+			'posts_per_page' => 5,
+			'post__not_in' => array($topHobbyId),
+			'paged' => $paged,
+		];	
+		$query_topHobbyList = new WP_Query($args_topHobbyList);
+
 		if($topHobby_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query->posts) < 5):?>
+		<?php if(count($query_topHobbyList->posts) < 5 ):?>
 			<div class="p-top__featureHobby__bg fewArticle"></div>
 		<?php else: ?>
 			<div class="p-top__featureHobby__bg"></div>
@@ -404,9 +413,6 @@
 		</div>
 		<?php 
 			while ($topHobby_query->have_posts()): $topHobby_query->the_post();
-
-			//topHobbyのIDを保存
-			$topHobbyId = $post->ID;
 
 			// サムネイルID
 			if ( has_post_thumbnail($post->ID)) {
@@ -457,14 +463,6 @@
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
 		<?php 
-			$args_topHobbyList = [
-				'post_type' => 'hobby',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topHobbyId),
-				'paged' => $paged,
-			];	
-
-			$query_topHobbyList = new WP_Query($args_topHobbyList);
 			if($query_topHobbyList->have_posts()):		
 		?>
 		<?php if(count($query_topHobbyList->posts) < 5):?>
