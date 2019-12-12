@@ -188,11 +188,13 @@
 		if($topFeature_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query_topFeatureList->posts) < 5):?>
-			<div class="p-top__featureHobby__bg fewArticle"></div>
-		<?php else: ?>
-			<div class="p-top__featureHobby__bg"></div>
-		<?php endif; ?>		
+		<?php if(count($query_topFeatureList->posts) > 0): ?>
+			<?php if(count($query_topFeatureList->posts) < 5):?>
+				<div class="p-top__featureHobby__bg fewArticle"></div>
+			<?php else: ?>
+				<div class="p-top__featureHobby__bg"></div>
+			<?php endif; ?>		
+		<?php endif; ?>
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
@@ -397,10 +399,12 @@
 		if($topHobby_query->have_posts()):	
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query_topHobbyList->posts) < 5 ):?>
-			<div class="p-top__featureHobby__bg fewArticle"></div>
-		<?php else: ?>
-			<div class="p-top__featureHobby__bg"></div>
+		<?php if(count($query_topHobbyList->posts) > 0 ):?>
+			<?php if(count($query_topHobbyList->posts) < 5):?>
+				<div class="p-top__featureHobby__bg fewArticle"></div>
+			<?php else: ?>
+				<div class="p-top__featureHobby__bg"></div>
+			<?php endif; ?>
 		<?php endif; ?>		
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
