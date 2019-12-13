@@ -470,47 +470,6 @@
 			</div>
     </section>
 		<section class="p-articlePost__inner__footer">
-      <!-- 埋め込み部分 -->
-      <div class="p-articlePost__inner__footer__adsence">
-        <div class="p-articlePost__inner__footer__adsence__ad">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle responsive-test"
-              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
-              data-ad-client="ca-pub-8403517419537651"
-              data-ad-slot="4866197532"
-              ></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-        <div class="p-articlePost__inner__footer__adsence__ad">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle responsive-test"
-              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
-              data-ad-client="ca-pub-8403517419537651"
-              data-ad-slot="4866197532"
-              ></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-        <div class="p-articlePost__inner__footer__adsence__ad">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <!-- be-topiaサイドバナー -->
-          <ins class="adsbygoogle responsive-test"
-              style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
-              data-ad-client="ca-pub-8403517419537651"
-              data-ad-slot="4866197532"
-              ></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-      </div>
-      <!-- 埋め込み部分 -->
-
 			<?php 
 				if ( is_singular(array("feature","hobby","learn","life")) ): 
 
@@ -530,6 +489,48 @@
 			<?php get_template_part('ranking'); ?>
 		</section>
 	</div>
+
+	<!-- 埋め込み部分 -->
+	<div class="p-articlePost__adsence">
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+	<!-- 埋め込み部分 -->
+
 </main>
 
 
