@@ -10,6 +10,12 @@ const webpack = require('webpack-stream');
 const browserSync = require('browser-sync').create();
 const runSequence = require('run-sequence');
 const cssmin = require('gulp-cssmin');
+const htmlcomp = require('gulp-phtml-simple-comp');
+
+
+
+
+
 
 const options = {
   SRC_PATH: './src',
@@ -81,7 +87,7 @@ gulp.task('js', () => {
 gulp.task('js-wp', () => {
   return gulp.src(`${options.SRC_PATH}/js/entries/**/*.js`)
     .pipe(plumber())
-    .pipe(webpack(Object.assign({}, options.WEBPACK, { mode: 'development' })))
+    .pipe(webpack(Object.assign({}, options.WEBPACK, { mode: 'production' })))
     .pipe(gulp.dest(`${options.THEME_PATH}/assets/js`));
 });
 
