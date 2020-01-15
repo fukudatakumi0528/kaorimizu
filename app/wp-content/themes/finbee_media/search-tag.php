@@ -1,6 +1,5 @@
 <?php
 	global $cssName;
-	global $scriptName;
 	$cssName = "search/index";
 
 	$args = array(
@@ -32,15 +31,11 @@
   );
 
 	$post_list = new WP_Query($args);
-
-
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
-	
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
   $endPageNumber = $startPageNumber + $post_list->post_count - 1;
-  
 	get_header();
 ?>
 <main>
@@ -53,7 +48,7 @@
 	<section class="p-search__main">
 		<div class="p-search__main__content">
 			<div class="p-search__main__content__column">
-        <?php if($post_list->have_posts() && get_search_query()): ?>         
+        <?php if($post_list->have_posts() && get_search_query()): ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category">
 						<p class="p-search__main__content__column__result__category__text"><strong>＃<?= esc_html( get_search_query( false ) ); ?></strong>タグが付いている記事</p>
@@ -74,10 +69,10 @@
         </div>
         <?php endif; ?>
 				<div class="o-verticallyCardList">
-					<?php          
-          while($post_list->have_posts()): 
+					<?php
+          while($post_list->have_posts()):
           $post_list->the_post();
-            
+
           $singletags = search_tags($post->ID);
 
           if ( has_post_thumbnail($post->ID) ) {
@@ -85,7 +80,7 @@
           } else {
             $thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
           };
-	
+
 					?>
 						<article class="m-verticallyCard">
 							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
@@ -119,7 +114,7 @@
 						</article>
 					<?php endwhile; ?>
 				</div>
-				<?php if($post_list->have_posts() && get_search_query()): ?>         
+				<?php if($post_list->have_posts() && get_search_query()): ?>
 				<div class="articles__pager">
 					<div class="c-pager">
 						<?php

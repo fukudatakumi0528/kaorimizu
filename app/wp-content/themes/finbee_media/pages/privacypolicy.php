@@ -1,9 +1,6 @@
 <?php
 	global $cssName;
-	global $scriptName;
 	$cssName = "privacy/index";
-	$scriptName = "privacy/index";
-
 	get_header();
 ?>
 <main>
@@ -142,7 +139,7 @@
         <p class="p-privacy__main__inner__description">当社の利用者情報の取扱いに関するご意見、ご質問、苦情のお申出その他利用者情報の取扱いに関するお問い合わせは、本サイトのお問い合わせフォームよりお申し出ください。</p>
 
         <p class="p-privacy__main__inner__footer">2019年11月1日制定</p>
-      </div>  
+      </div>
     </div>
   </section>
 </main>

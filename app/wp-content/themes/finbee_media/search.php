@@ -8,13 +8,12 @@ if($_GET["t"] === 'tag') {
 
 <?php
 	global $cssName;
-	global $scriptName;
 	$cssName = "search/index";
 
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
-	
+
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
 	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
 
@@ -49,7 +48,7 @@ if($_GET["t"] === 'tag') {
 					<div class="p-search__main__content__column__result__category nothing">
 						<p class="p-search__main__content__column__result__category__text nothing">検索キーワードが未入力です。</p>
           </div>
-        </div>				
+        </div>
 				<?php else: ?>
 				<div class="p-search__main__content__column__result">
 					<div class="p-search__main__content__column__result__category nothing">
@@ -60,9 +59,9 @@ if($_GET["t"] === 'tag') {
 				<?php if(have_posts() && get_search_query()): ?>
 				<div class="o-verticallyCardList">
 					<?php
-            while(have_posts()): 
+            while(have_posts()):
             the_post();
-              
+
 						$singletags = search_tags($post->ID);
 
 						if ( has_post_thumbnail($post->ID) ) {
@@ -70,7 +69,7 @@ if($_GET["t"] === 'tag') {
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
-	
+
 					?>
 						<article class="m-verticallyCard">
 							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">

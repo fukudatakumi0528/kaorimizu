@@ -207,7 +207,6 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<script src="<?= assetsPath('js') ?>common.js"></script>
-    <script src="<?= assetsPath('js') ?>home.js"></script>
 		<?php if(!empty($scriptName)): ?>
 			<script src="<?= assetsPath('js') ?><?= $scriptName ?>.js"></script>
 		<?php endif; ?>

@@ -1,10 +1,7 @@
 <?php
 	global $cssName;
-	global $breadcrumb;
 	$cssName = "contact/thanks";
-	$breadcrumb = '<li><a href="/news/">ニュース</a></li><li></li>';
 	get_header();
-
 ?>
 <main>
 	<section class="p-contactThanks__main">

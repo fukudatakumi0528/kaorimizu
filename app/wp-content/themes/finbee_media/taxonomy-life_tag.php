@@ -1,12 +1,11 @@
 <?php
 	global $cssName;
-	global $scriptName;
 	$cssName = "article/search";
 
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
-	
+
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
 	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
 
@@ -41,32 +40,32 @@
 					<div class="p-articleSearch__main__content__refine__inner__selectArea js-refine__selectArea">
 					<ul class="o-classificationList">
 							<?php
-								$taxonomies = array( 
+								$taxonomies = array(
 									'life_tag',
 								);
-							
+
 								$args = array(
-									'orderby'       => 'count', 
+									'orderby'       => 'count',
 									'order'         => 'DESC',
-									'hide_empty'    => true, 
-									'exclude'       => array(), 
-									'exclude_tree'  => array(), 
+									'hide_empty'    => true,
+									'exclude'       => array(),
+									'exclude_tree'  => array(),
 									'include'       => array(),
-									'number'        => '', 
-									'fields'        => 'all', 
-									'slug'          => '', 
+									'number'        => '',
+									'fields'        => 'all',
+									'slug'          => '',
 									'parent'        => '',
-									'hierarchical'  => true, 
-									'child_of'      => 0, 
+									'hierarchical'  => true,
+									'child_of'      => 0,
 									'childless'     => false,
-									'get'           => '', 
+									'get'           => '',
 									'name__like'    => '',
 									'description__like' => '',
-									'pad_counts'    => false, 
-									'offset'        => '', 
-									'search'        => '', 
+									'pad_counts'    => false,
+									'offset'        => '',
+									'search'        => '',
 									'cache_domain'  => 'core'
-								); 					
+								);
 
 								$popularTags = get_terms($taxonomies, $args);
 
@@ -94,7 +93,7 @@
 							array(
 								'taxonomy' => 'life_tag',
 								'field' => 'slug',
-								'terms' => $termTypeQuery,									
+								'terms' => $termTypeQuery,
 							),
 						),
 						'posts_per_page' => 16,
@@ -113,7 +112,7 @@
 							<p class="p-articleSearch__main__content__column__result__number__text"><?= $query->post_count; ?>件中 <?= $startPageNumber ?>-<?= $endPageNumber ?>件を表示</p>
 						<?php endif; ?>
 					</div>
-				</div>		
+				</div>
 				<div class="o-verticallyCardList">
 					<?php
 						if($query->have_posts()): while($query->have_posts()): $query->the_post();
@@ -125,7 +124,7 @@
 						} else {
 							$thumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 						};
-	
+
 					?>
 						<article class="m-verticallyCard">
 							<a class="m-verticallyCard__inner" href="<?php the_permalink() ?>">
