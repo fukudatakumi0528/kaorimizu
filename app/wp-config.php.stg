@@ -35,7 +35,7 @@ define('DB_USER', 'giguser');
 define('DB_PASSWORD', 'FA105J9ApOjp');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'finbee-prod-rds.chijaeiqexoo.ap-northeast-1.rds.amazonaws.com');
+define('DB_HOST', 'finbee-prod-rds-small.chijaeiqexoo.ap-northeast-1.rds.amazonaws.com');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8');

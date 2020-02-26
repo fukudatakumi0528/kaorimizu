@@ -140,16 +140,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <button class="icon-search" type="submit" id="s-btn-area"></button>
             </form>
           </div>
-          <?php 
+          <?php
             $articleAllPickup = get_field('article-all-pickup', 'option');
             if($articleAllPickup):
           ?>
           <div class="l-spMenu__main__pickup">
             <p class="l-spMenu__main__pickup__title">Pickup</p>
 							<ul class="o-verticallyCardList">
-              <?php 
+              <?php
                 foreach($articleAllPickup as $articleAll):
-                            
+
                   // サムネイルID
                   if ( has_post_thumbnail($articleAll->ID) ) {
                     $thumbnail =  get_the_post_thumbnail_url($articleAll->ID);
@@ -164,7 +164,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   //タグを取得
                   $term = search_tags($articleAll->ID);
               ?>
-
 							<li class="m-verticallyCard">
 								<a class="m-verticallyCard__inner" href="<?php the_permalink($articleAll) ?>">
 									<div class="m-verticallyCard__inner__topper">
@@ -173,11 +172,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                   </div>
 									<div class="m-verticallyCard__inner__footer">
-                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__date">---</div>
                     <div class="m-verticallyCard__inner__footer__title"><?= $articleAll->post_title ?></div>
 										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleAll->post_content) ?></div>
+											<div class="m-verticallyCard__inner__footer__description__text"><?php /* strip_tags($articleAll->post_content) */ ?></div>
 										</div>
+										<?php /*
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
                         <object>
@@ -187,6 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </object>
                       <?php  endforeach; endif; ?>
                     </div>
+                    */ ?>
 									</div>
 								</a>
               </li>
@@ -194,36 +195,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</ul>
           </div>
           <?php endif; ?>
-          <?php 
-            $taxonomies = array( 
+          <?php
+            $taxonomies = array(
               'feature_tag',
               'hobby_tag',
               'life_tag',
               'learn_tag',
             );
-          
+
             $args = array(
-              'orderby'       => 'name', 
+              'orderby'       => 'name',
               'order'         => 'ASC',
-              'hide_empty'    => true, 
-              'exclude'       => array(), 
-              'exclude_tree'  => array(), 
+              'hide_empty'    => true,
+              'exclude'       => array(),
+              'exclude_tree'  => array(),
               'include'       => array(),
-              'number'        => '', 
-              'fields'        => 'all', 
-              'slug'          => '', 
+              'number'        => '',
+              'fields'        => 'all',
+              'slug'          => '',
               'parent'        => '',
-              'hierarchical'  => true, 
-              'child_of'      => 0, 
+              'hierarchical'  => true,
+              'child_of'      => 0,
               'childless'     => false,
-              'get'           => '', 
+              'get'           => '',
               'name__like'    => '',
               'description__like' => '',
-              'pad_counts'    => false, 
-              'offset'        => '', 
-              'search'        => '', 
+              'pad_counts'    => false,
+              'offset'        => '',
+              'search'        => '',
               'cache_domain'  => 'core'
-            ); 					
+            );
 
             $newArrivalTags = get_terms($taxonomies, $args);
 
@@ -326,16 +327,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input class="m-inputSearch__input" id="s-box" name="s" type="text" placeholder="気になるワードを入力してください。">
             <button class="icon-search" type="submit" id="s-btn-area"></button>
           </form>
-          <?php 
+
+
+
+          <?php
             $articleSearchPickup = get_field('article-search-pickup', 'option');
             if($articleSearchPickup):
           ?>
           <div class="l-spSearch__main__pickup">
             <p class="l-spSearch__main__pickup__title">Pickup</p>
             <ul class="o-verticallyCardList">
-              <?php 
+              <?php
                 foreach($articleSearchPickup as $articleSearch):
-                            
+
                   // サムネイルID
                   if ( has_post_thumbnail($articleSearch->ID) ) {
                     $thumbnail =  get_the_post_thumbnail_url($articleSearch->ID);
@@ -359,10 +363,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                   </div>
 									<div class="m-verticallyCard__inner__footer">
-                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__date">---</div>
                     <div class="m-verticallyCard__inner__footer__title"><?= $articleSearch->post_title ?></div>
 										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleSearch->post_content) ?></div>
+											<div class="m-verticallyCard__inner__footer__description__text"><?php /* strip_tags($articleSearch->post_content) */ ?></div>
 										</div>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
@@ -380,10 +384,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</ul>
           </div>
           <?php endif;?>
+
+
           <div class="l-spSearch__main__keywords">
             <div class="l-spSearch__main__keywords__title">Keywords</div>
               <ul class="o-classificationList">
-                <?php 
+                <?php
                   $args = array(
                     'post_type' => array(
                       'feature','hobby', 'life', 'learn',
@@ -392,37 +398,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     'tax_query' => array(
                       'relation' => 'OR',
                       array(
-                        'taxonomy' => 'feature_taxonomy', 
+                        'taxonomy' => 'feature_taxonomy',
                         'field' => 'slug',
                         'terms' => 'goal-search' //タームのスラッグ
-                      ),    
+                      ),
                       array(
-                        'taxonomy' => 'hobby_taxonomy', 
+                        'taxonomy' => 'hobby_taxonomy',
                         'field' => 'slug',
                         'terms' => 'goal-search' //タームのスラッグ
-                      ),    
+                      ),
                       array(
-                        'taxonomy' => 'life_taxonomy', 
+                        'taxonomy' => 'life_taxonomy',
                         'field' => 'slug',
                         'terms' => 'goal-search' //タームのスラッグ
-                      ),    
+                      ),
                       array(
-                        'taxonomy' => 'learn_taxonomy', 
+                        'taxonomy' => 'learn_taxonomy',
                         'field' => 'slug',
                         'terms' => 'goal-search' //タームのスラッグ
-                      ),    
+                      ),
                     ),
                     'fields' => 'ids',
                   );
 
-                  $goalSearchArticles = get_posts($args);	
+                  $goalSearchArticles = get_posts($args);
                   $searchTerms = [];
 
                   foreach($goalSearchArticles as $goalSearchArticle) {
                     $goalSearchArticleTerms = search_tags($goalSearchArticle);
-                    
+
                     foreach($goalSearchArticleTerms as $goalSearchArticleTerm){
-                      array_push($searchTerms ,$goalSearchArticleTerm->term_id); 
+                      array_push($searchTerms ,$goalSearchArticleTerm->term_id);
                     }
                   };
 
@@ -434,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   foreach ($searchTermsUnique as $termsID) {
                     array_push($termsNameList,get_term($termsID)->name);
                   }
-            
+
                   $uniqueTermsNameList = array_unique($termsNameList);
 
                   $uniqueTermsNameList30 = array_slice($uniqueTermsNameList,0,30);
@@ -453,6 +459,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+
+
+
 
       <!-- 目標を叶える -->
       <div class="l-spGrant is-hidden" id="js-spGrant">
@@ -520,15 +529,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </form>
           <?php
             $articleGrantPickup = get_field('article-grant-pickup', 'option');
-            if($articleGrantPickup):  
+            if($articleGrantPickup):
           ?>
           <div class="l-spGrant__main__pickup">
             <p class="l-spGrant__main__pickup__title">Pickup</p>
             <ul class="o-verticallyCardList">
-              <?php 
+              <?php
                 $articleGrantPickup = get_field('article-grant-pickup', 'option');
                 foreach($articleGrantPickup as $articleGrant):
-                            
+
                   // サムネイルID
                   if ( has_post_thumbnail($articleGrant->ID) ) {
                     $thumbnail =  get_the_post_thumbnail_url($articleGrant->ID);
@@ -552,10 +561,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                   </div>
 									<div class="m-verticallyCard__inner__footer">
-                    <div class="m-verticallyCard__inner__footer__date">2019.08.14</div>
+                    <div class="m-verticallyCard__inner__footer__date">---</div>
                     <div class="m-verticallyCard__inner__footer__title"><?= $articleGrant->post_title ?></div>
 										<div class="m-verticallyCard__inner__footer__description">
-											<div class="m-verticallyCard__inner__footer__description__text"><?= strip_tags($articleGrant->post_content) ?></div>
+											<div class="m-verticallyCard__inner__footer__description__text"><?php /* strip_tags($articleGrant->post_content) */ ?></div>
 										</div>
                     <div class="m-classificationArea">
                       <?php	if($term): foreach ($term as $tag ): ?>
@@ -576,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="l-spGrant__main__keywords">
             <div class="l-spGrant__main__keywords__title">Keywords</div>
               <ul class="o-classificationList">
-              <?php 
+              <?php
               $args = array(
                 'post_type' => array(
                   'feature','hobby', 'life', 'learn',
@@ -585,37 +594,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 'tax_query' => array(
                   'relation' => 'OR',
                   array(
-                    'taxonomy' => 'feature_taxonomy', 
+                    'taxonomy' => 'feature_taxonomy',
                     'field' => 'slug',
                     'terms' => 'goal-grant' //タームのスラッグ
-                  ),    
+                  ),
                   array(
-                    'taxonomy' => 'hobby_taxonomy', 
+                    'taxonomy' => 'hobby_taxonomy',
                     'field' => 'slug',
                     'terms' => 'goal-grant' //タームのスラッグ
-                  ),    
+                  ),
                   array(
-                    'taxonomy' => 'life_taxonomy', 
+                    'taxonomy' => 'life_taxonomy',
                     'field' => 'slug',
                     'terms' => 'goal-grant' //タームのスラッグ
-                  ),    
+                  ),
                   array(
-                    'taxonomy' => 'learn_taxonomy', 
+                    'taxonomy' => 'learn_taxonomy',
                     'field' => 'slug',
                     'terms' => 'goal-grant' //タームのスラッグ
-                  ),    
+                  ),
                 ),
                 'fields' => 'ids',
               );
 
-              $goalGrantArticles = get_posts($args);	
+              $goalGrantArticles = get_posts($args);
               $grantTerms = [];
 
               foreach($goalGrantArticles as $goalGrantArticle) {
                 $goalGrantArticleTerms = search_tags($goalGrantArticle);
-                
+
                 foreach($goalGrantArticleTerms as $goalGrantArticleTerm){
-                  array_push($grantTerms ,$goalGrantArticleTerm->term_id); 
+                  array_push($grantTerms ,$goalGrantArticleTerm->term_id);
                 }
               };
 
@@ -627,9 +636,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               foreach ($grantTermsUnique as $termsID) {
                 array_push($termsNameList,get_term($termsID)->name);
               }
-        
+
               $uniqueTermsNameList = array_unique($termsNameList);
-              
+
               $uniqueTermsNameList30 = array_slice($uniqueTermsNameList,0,30);
 
               foreach($uniqueTermsNameList30 as $uniqueTermsName):

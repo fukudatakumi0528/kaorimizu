@@ -1,11 +1,9 @@
 <?php
 	global $cssName;
-
 	$cssName = "article/index";
 	$currentPage = get_query_var('paged'); //現在のページ数
 	$currentPage = $currentPage == 0 ? 1 : $currentPage;
 	$articlePerPage = get_option('posts_per_page');//現在の表示件数
-	
 	$startPageNumber = $articlePerPage * ($currentPage - 1) + 1;
 	$endPageNumber = $startPageNumber + $wp_query->post_count - 1;
 
@@ -42,37 +40,37 @@
 					<div class="p-article__main__content__refine__inner__selectArea js-refine__selectArea">
 					<ul class="o-classificationList">
 							<?php
-								$taxonomies = array( 
+								$taxonomies = array(
 									'hobby_tag',
 								);
-							
+
 								$args = array(
-									'orderby'       => 'count', 
+									'orderby'       => 'count',
 									'order'         => 'DESC',
-									'hide_empty'    => true, 
-									'exclude'       => array(), 
-									'exclude_tree'  => array(), 
+									'hide_empty'    => true,
+									'exclude'       => array(),
+									'exclude_tree'  => array(),
 									'include'       => array(),
-									'number'        => '', 
-									'fields'        => 'all', 
-									'slug'          => '', 
+									'number'        => '',
+									'fields'        => 'all',
+									'slug'          => '',
 									'parent'        => '',
-									'hierarchical'  => true, 
-									'child_of'      => 0, 
+									'hierarchical'  => true,
+									'child_of'      => 0,
 									'childless'     => false,
-									'get'           => '', 
+									'get'           => '',
 									'name__like'    => '',
 									'description__like' => '',
-									'pad_counts'    => false, 
-									'offset'        => '', 
-									'search'        => '', 
+									'pad_counts'    => false,
+									'offset'        => '',
+									'search'        => '',
 									'cache_domain'  => 'core'
-								); 					
+								);
 
 								$popularTags = get_terms($taxonomies, $args);
 
 								$tags = array_slice($popularTags,0,10);
-							
+
 							 ?>
 								<?php	if($tags): foreach ($tags as $tag ): ?>
 									<li class="o-classificationList__tag">
@@ -104,7 +102,7 @@
 					</div>
 				</div>
 				<?php endif;?>
-				</div>		
+				</div>
 				<div class="o-verticallyCardList">
 					<?php
 						if($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();

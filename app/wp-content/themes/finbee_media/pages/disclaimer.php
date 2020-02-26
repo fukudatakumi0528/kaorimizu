@@ -1,9 +1,6 @@
 <?php
 	global $cssName;
-	global $scriptName;
 	$cssName = "disclaimer/index";
-	$scriptName = "disclaimer/index";
-
 	get_header();
 ?>
 <main>

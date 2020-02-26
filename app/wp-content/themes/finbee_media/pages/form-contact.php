@@ -1,8 +1,6 @@
 <?php
 	global $cssName;
-	global $breadcrumb;
 	$cssName = "contact/index";
-	$breadcrumb = '<li><a href="/news/">ニュース</a></li><li></li>';
 	get_header();
 ?>
 <main>

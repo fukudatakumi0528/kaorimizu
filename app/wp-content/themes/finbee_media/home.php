@@ -3,7 +3,6 @@
 	global $scriptName;
 	$cssName = "home";
 	$scriptName = "home";
-
 	get_header();
 ?>
 <main class="p-top">
@@ -17,10 +16,10 @@
 			</div>
 		</div>
 		<ul class="p-top__kv__slider js-slickSlider-top__kv">
-			<?php 
+			<?php
 				$post_type_slug_kv = array(
 					'feature','hobby','life', // 投稿タイプのスラッグを指定
-				); 
+				);
 
 				$args = array(
 					'post_type' => $post_type_slug_kv, // 投稿タイプを指定
@@ -31,7 +30,7 @@
 				$slider_query = new WP_Query($args);
 				if($slider_query->have_posts()):
 				while ($slider_query->have_posts()): $slider_query->the_post();
-										 
+
 				// サムネイルID
 				if ( has_post_thumbnail($post->ID) ) {
 					$topSliderThumbnail = get_the_post_thumbnail_url($post->ID);
@@ -94,7 +93,7 @@
 				</div>
 			</div>
 			<ul class="o-wideCardList">
-				<?php 
+				<?php
 					$newPostArgs = array(
 						"posts_per_page" => 6,
 						"post_status" => "publish",
@@ -105,7 +104,7 @@
 					);
 					$newPost = new WP_Query($newPostArgs);
 
-					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post(); 
+					if($newPost->have_posts()): while($newPost->have_posts()): $newPost->the_post();
 
 					if ( has_post_thumbnail(get_the_ID()) ) {
 						$topLatestThumbnail =  get_the_post_thumbnail_url();
@@ -133,7 +132,7 @@
 							<h2 class="m-wideCard__inner__right__title"><?php the_title_attribute(); ?></h2>
 							<div class="m-wideCard__inner__right__description">
 								<div class="m-wideCard__inner__right__description__text">
-									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
+									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?>
 								</div>
 							</div>
 							<div class="m-classificationArea">
@@ -161,26 +160,40 @@
 
 
 	<!-- feature-->
-	<?php 
+	<?php
+	  //top部分
 		$post_type_slug_topFeature = array(
 			'feature', // 投稿タイプのスラッグを指定
-		); 
-
+		);
 		$args_topFeature = array(
 			'post_type' => $post_type_slug_topFeature, // 投稿タイプを指定
 			'posts_per_page' => 1, // 表示件数を指定
 			'orderby' =>  'DESC', // 新着順
 		);
-
 		$topFeature_query = new WP_Query($args_topFeature);
-		if($topFeature_query->have_posts()):	
+
+		//topFeatureのIDを保存
+		$topFeatureId = $topFeature_query->posts[0]->ID;
+
+		//スライダー部分
+		$args_topFeatureList = [
+			'post_type' => 'feature',
+			'posts_per_page' => 5,
+			'post__not_in' => array($topFeatureId),
+			'paged' => $paged,
+		];
+		$query_topFeatureList = new WP_Query($args_topFeatureList);
+
+		if($topFeature_query->have_posts()):
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query->posts) < 5):?>
-			<div class="p-top__featureHobby__bg fewArticle"></div>
-		<?php else: ?>
-			<div class="p-top__featureHobby__bg"></div>
-		<?php endif; ?>		
+		<?php if(count($query_topFeatureList->posts) > 0): ?>
+			<?php if(count($query_topFeatureList->posts) < 5):?>
+				<div class="p-top__featureHobby__bg fewArticle"></div>
+			<?php else: ?>
+				<div class="p-top__featureHobby__bg"></div>
+			<?php endif; ?>
+		<?php endif; ?>
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image feature" src="<?= assetsPath('img') ?>icon/home/icon-feature.svg" alt="特集">
@@ -190,11 +203,8 @@
 				<div class="m-titleBorder__main__border"></div>
 			</div>
 		</div>
-		<?php 
+		<?php
 			while ($topFeature_query->have_posts()): $topFeature_query->the_post();
-
-			//topFeatureのIDを保存
-			$topFeatureId = $post->ID;
 
 			// サムネイルID
 			if ( has_post_thumbnail($post->ID)) {
@@ -205,7 +215,6 @@
 
 			//タグを取得
 			$term = get_the_terms($post->ID, 'feature_tag');
-
 		?>
 		<div class="p-top__featureHobby__topper">
 			<div class="p-top__featureHobby__topper__bg"></div>
@@ -244,16 +253,8 @@
 		</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
-		<?php 
-			$args_topFeatureList = [
-				'post_type' => 'feature',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topFeatureId),
-				'paged' => $paged,
-			];	
-
-			$query_topFeatureList = new WP_Query($args_topFeatureList);
-			if($query_topFeatureList->have_posts()):		
+		<?php
+			if($query_topFeatureList->have_posts()):
 		?>
 		<?php if(count($query_topFeatureList->posts) < 5):?>
 		<div class="p-top__featureHobby__list">
@@ -267,7 +268,7 @@
 					} else {
 						$topFeatureListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
-	
+
 					$term = get_the_terms($post->ID, 'feature_tag');
 				?>
 				<li class="m-verticallyCard">
@@ -287,7 +288,7 @@
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
 								<div class="m-verticallyCard__inner__footer__description__text">
-									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
+									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?>
 								</div>
 							</div>
 							<div class="m-classificationArea">
@@ -322,7 +323,7 @@
 					} else {
 						$topFeatureListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
-	
+
 					$term = get_the_terms($post->ID, 'feature_tag');
 
 				?>
@@ -343,7 +344,7 @@
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
 								<div class="m-verticallyCard__inner__footer__description__text">
-									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
+									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?>
 								</div>
 							</div>
 							<div class="m-classificationArea">
@@ -369,30 +370,41 @@
 		<?php endif; ?>
 	</section>
 	<?php endif; ?>
-
-
-
 		<!-- hobby-->
-		<?php 
+	<?php
+		//top部分
 		$post_type_slug_topHobby = array(
 			'hobby', // 投稿タイプのスラッグを指定
-		); 
-
+		);
 		$args_topHobby = array(
 			'post_type' => $post_type_slug_topHobby, // 投稿タイプを指定
 			'posts_per_page' => 1, // 表示件数を指定
 			'orderby' =>  'DESC', // 新着順
 		);
-
 		$topHobby_query = new WP_Query($args_topHobby);
-		if($topHobby_query->have_posts()):	
+
+		//topHobbyのIDを保存
+		$topHobbyId = $topHobby_query->posts[0]->ID;
+
+		//スライダー部分
+		$args_topHobbyList = [
+			'post_type' => 'hobby',
+			'posts_per_page' => 5,
+			'post__not_in' => array($topHobbyId),
+			'paged' => $paged,
+		];
+		$query_topHobbyList = new WP_Query($args_topHobbyList);
+
+		if($topHobby_query->have_posts()):
 	?>
 	<section class="p-top__featureHobby">
-		<?php if(count($query->posts) < 5):?>
-			<div class="p-top__featureHobby__bg fewArticle"></div>
-		<?php else: ?>
-			<div class="p-top__featureHobby__bg"></div>
-		<?php endif; ?>		
+		<?php if(count($query_topHobbyList->posts) > 0 ):?>
+			<?php if(count($query_topHobbyList->posts) < 5):?>
+				<div class="p-top__featureHobby__bg fewArticle"></div>
+			<?php else: ?>
+				<div class="p-top__featureHobby__bg"></div>
+			<?php endif; ?>
+		<?php endif; ?>
 		<div class="m-titleBorder">
 			<span class="m-titleBorder__icon">
 				<img class="m-titleBorder__icon__image hobby" src="<?= assetsPath('img') ?>icon/home/icon-hobby.svg" alt="趣味">
@@ -402,11 +414,8 @@
 				<div class="m-titleBorder__main__border"></div>
 			</div>
 		</div>
-		<?php 
+		<?php
 			while ($topHobby_query->have_posts()): $topHobby_query->the_post();
-
-			//topHobbyのIDを保存
-			$topHobbyId = $post->ID;
 
 			// サムネイルID
 			if ( has_post_thumbnail($post->ID)) {
@@ -456,16 +465,8 @@
 		</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
-		<?php 
-			$args_topHobbyList = [
-				'post_type' => 'hobby',
-				'posts_per_page' => 5,
-				'post__not_in' => array($topHobbyId),
-				'paged' => $paged,
-			];	
-
-			$query_topHobbyList = new WP_Query($args_topHobbyList);
-			if($query_topHobbyList->have_posts()):		
+		<?php
+			if($query_topHobbyList->have_posts()):
 		?>
 		<?php if(count($query_topHobbyList->posts) < 5):?>
 		<div class="p-top__featureHobby__list">
@@ -479,7 +480,7 @@
 					} else {
 						$topHobbyListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
-	
+
 					$term = get_the_terms($post->ID, 'hobby_tag');
 				?>
 				<li class="m-verticallyCard">
@@ -499,7 +500,7 @@
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
 								<div class="m-verticallyCard__inner__footer__description__text">
-									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
+									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?>
 								</div>
 							</div>
 							<div class="m-classificationArea">
@@ -534,7 +535,7 @@
 					} else {
 						$topHobbyListThumbnail = assetsPath('img') . "/logo/be-topia_thumbnail.jpg";
 					};
-	
+
 					$term = get_the_terms($post->ID, 'hobby_tag');
 
 				?>
@@ -555,7 +556,7 @@
 							<div class="m-verticallyCard__inner__footer__title"><?php the_title_attribute(); ?></div>
 							<div class="m-verticallyCard__inner__footer__description">
 								<div class="m-verticallyCard__inner__footer__description__text">
-									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?> 
+									<?= get_the_custom_excerpt( the_excerpt(), 100 ) ?>
 								</div>
 							</div>
 							<div class="m-classificationArea">
@@ -737,7 +738,7 @@
 				<div class="m-titleBorder__main__border"></div>
 			</div>
 		</div>
-		
+
 		<?php if(count($query->posts) < 5): ?>
 			<div class="p-top__lifeLearn__list">
 				<ul class="p-top__lifeLearn__list__inner">
@@ -851,36 +852,36 @@
 	</section>
 	<?php endif;?>
 
-	<?php 
-    $taxonomies = array( 
+	<?php
+    $taxonomies = array(
       'feature_tag',
       'hobby_tag',
       'life_tag',
       'learn_tag',
     );
-  
+
     $args = array(
-      'orderby'       => 'name', 
+      'orderby'       => 'name',
       'order'         => 'ASC',
-      'hide_empty'    => true, 
-      'exclude'       => array(), 
-      'exclude_tree'  => array(), 
+      'hide_empty'    => true,
+      'exclude'       => array(),
+      'exclude_tree'  => array(),
       'include'       => array(),
-      'number'        => '', 
-      'fields'        => 'all', 
-      'slug'          => '', 
+      'number'        => '',
+      'fields'        => 'all',
+      'slug'          => '',
       'parent'        => '',
-      'hierarchical'  => true, 
-      'child_of'      => 0, 
+      'hierarchical'  => true,
+      'child_of'      => 0,
       'childless'     => false,
-      'get'           => '', 
+      'get'           => '',
       'name__like'    => '',
       'description__like' => '',
-      'pad_counts'    => false, 
-      'offset'        => '', 
-      'search'        => '', 
+      'pad_counts'    => false,
+      'offset'        => '',
+      'search'        => '',
       'cache_domain'  => 'core'
-    ); 					
+    );
 
     $popularTags = get_terms($taxonomies, $args);
 

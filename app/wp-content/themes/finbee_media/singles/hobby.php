@@ -1,9 +1,6 @@
 <?php
 	global $cssName;
-	global $breadcrumb;
-
 	$cssName = "article/post";
-	$breadcrumb = '<li><a href="/column/">コラム</a></li><li>'.get_the_title().'</li>';
 	get_header();
 
 	//前後の記事取得
@@ -12,7 +9,7 @@
 		$next_post_ID = $next_post->ID;
 		$next_post_thumb = get_the_post_thumbnail_url($next_post_ID);
 		$next_post_url = get_permalink($next_post_ID);
-		$next_post_time = get_the_time('Y.n.j', $next_post_ID);	
+		$next_post_time = get_the_time('Y.n.j', $next_post_ID);
 	};
 
 	$prev_post = get_previous_post();
@@ -20,7 +17,7 @@
 		$prev_post_ID = $prev_post->ID;
 		$prev_post_thumb = get_the_post_thumbnail_url($prev_post_ID);
 		$prev_post_url = get_permalink($prev_post_ID);
-		$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);	
+		$prev_post_time = get_the_time('Y.n.j', $prev_post_ID);
 	};
 
 	//当記事のサムネイル
@@ -269,12 +266,12 @@
 
 										$post_type_slug_PR = array(
 											'feature','hobby','life','learn', // 投稿タイプのスラッグを指定
-										); 
+										);
 
 										//PR記事で除外するID一覧を作成。
 										$the_query_relation_ids = [$post->ID];
 										foreach($the_query_relation->posts as $post) {
-											array_push($the_query_relation_ids,$post->ID);									
+											array_push($the_query_relation_ids,$post->ID);
 										}
 
 										$args_PR = array(
@@ -351,7 +348,7 @@
 										</a>
 									</li>
 									<?php endwhile; wp_reset_postdata(); ?>
-									
+
 								</ul>
 							</div>
 							<?php else:?>
@@ -361,12 +358,12 @@
 
 								$post_type_slug_PR = array(
 									'feature','hobby','life','learn', // 投稿タイプのスラッグを指定
-								); 
+								);
 
 								//PR記事で除外するID一覧を作成。
 								$the_query_relation_ids = [$post->ID];
 								foreach($the_query_relation->posts as $post) {
-									array_push($the_query_relation_ids,$post->ID);									
+									array_push($the_query_relation_ids,$post->ID);
 								}
 
 								$args_PR = array(
@@ -458,12 +455,12 @@
 										</a>
 									</li>
 									<?php endwhile; wp_reset_postdata(); ?>
-									
+
 								</ul>
 							</div>
 							<?php endif; ?>
 
-							<?php endif; ?>							
+							<?php endif; ?>
 
 						</div>
 
@@ -476,8 +473,8 @@
 			</div>
 		</section>
 		<section class="p-articlePost__inner__footer">
-			<?php 
-				if ( is_singular(array("feature","hobby","learn","life")) ): 
+			<?php
+				if ( is_singular(array("feature","hobby","learn","life")) ):
 
 				$articleAdRankingsrc = get_field('article-ad-ranking-src', 'option');
 				$articleAdRankingalt = get_field('article-ad-ranking-alt', 'option');
@@ -495,6 +492,46 @@
 			<?php get_template_part('ranking'); ?>
 		</section>
 	</div>
+
+	<div class="p-articlePost__adsence">
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div class="p-articlePost__adsence__ad">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- be-topiaサイドバナー -->
+			<ins class="adsbygoogle responsive-test"
+					style="display:inline-block;min-width:250px;max-width:300px;width:100%;height:250px"
+					data-ad-client="ca-pub-8403517419537651"
+					data-ad-slot="4866197532"
+					></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+
 </main>
 
 

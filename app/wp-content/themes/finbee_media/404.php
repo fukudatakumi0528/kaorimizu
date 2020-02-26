@@ -10,36 +10,36 @@
 			<p class="p-404__main__description">指定されたURLのページは存在しませんが、<br class="is-onlySp">あなたにぴったりの楽しい記事はきっとあります。<br>人気のキーワードから見つけてみてください。</p>
 		</section>
 		<section class="p-404__footer">
-			<?php 
-				$taxonomies = array( 
+			<?php
+				$taxonomies = array(
 					'feature_tag',
 					'hobby_tag',
 					'life_tag',
 					'learn_tag',
 				);
-			
+
 				$args = array(
-					'orderby'       => 'name', 
+					'orderby'       => 'name',
 					'order'         => 'ASC',
-					'hide_empty'    => true, 
-					'exclude'       => array(), 
-					'exclude_tree'  => array(), 
+					'hide_empty'    => true,
+					'exclude'       => array(),
+					'exclude_tree'  => array(),
 					'include'       => array(),
-					'number'        => '', 
-					'fields'        => 'all', 
-					'slug'          => '', 
+					'number'        => '',
+					'fields'        => 'all',
+					'slug'          => '',
 					'parent'        => '',
-					'hierarchical'  => true, 
-					'child_of'      => 0, 
+					'hierarchical'  => true,
+					'child_of'      => 0,
 					'childless'     => false,
-					'get'           => '', 
+					'get'           => '',
 					'name__like'    => '',
 					'description__like' => '',
-					'pad_counts'    => false, 
-					'offset'        => '', 
-					'search'        => '', 
+					'pad_counts'    => false,
+					'offset'        => '',
+					'search'        => '',
 					'cache_domain'  => 'core'
-				); 					
+				);
 
 				$popularTags = get_terms($taxonomies, $args);
 
