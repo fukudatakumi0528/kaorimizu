@@ -371,6 +371,13 @@ $font-xxl: 2rem;
   line-height: 170%;
 }
 
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body p > img {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+  height: auto;
+}
+
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .wp-caption-text {
   font-size: 13px !important;
 }
@@ -395,7 +402,7 @@ $font-xxl: 2rem;
   transition: 0.2s;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body img {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body > img {
   display: block;
   max-width: 100%;
   margin-top: 20px;
