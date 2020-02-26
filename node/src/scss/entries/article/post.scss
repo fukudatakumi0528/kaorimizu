@@ -317,13 +317,6 @@
 								margin-top:20px;
 								font-size: 16px;
 								line-height: 170%;
-
-								& > img {
-									display: block;
-									max-width: 100%;
-									margin-top:20px;
-									height: auto;
-								}	
 							}
 
 							.wp-caption-text {
@@ -351,7 +344,7 @@
 								}
 							}
 
-							& > img {
+							img {
 								display: block;
 								max-width: 100%;
 								margin-top:20px;
@@ -595,6 +588,22 @@
 								margin: 20px 0 0 0;
 								width: 100%;
 								max-width: 100%;
+
+								.easyLink-img {
+
+									.easyLink-img-box {
+
+										span {
+
+											&:not(:first-child) {
+
+												img {
+													display: none;
+												}
+											}
+										}
+									}
+								}
 
 								.easyLink-info {
 									width: 100%;
