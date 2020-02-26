@@ -371,13 +371,6 @@ $font-xxl: 2rem;
   line-height: 170%;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body p > img {
-  display: block;
-  max-width: 100%;
-  margin-top: 20px;
-  height: auto;
-}
-
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .wp-caption-text {
   font-size: 13px !important;
 }
@@ -402,7 +395,7 @@ $font-xxl: 2rem;
   transition: 0.2s;
 }
 
-.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body > img {
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body img {
   display: block;
   max-width: 100%;
   margin-top: 20px;
@@ -657,6 +650,10 @@ $font-xxl: 2rem;
   margin: 20px 0 0 0;
   width: 100%;
   max-width: 100%;
+}
+
+.p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-img .easyLink-img-box span:not(:first-child) img {
+  display: none;
 }
 
 .p-articlePost .p-articlePost__inner .p-articlePost__inner__main .p-articlePost__inner__main__content .p-articlePost__inner__main__content__column .article .article__body .easyLink-box.easyLink-size-s .easyLink-info {
