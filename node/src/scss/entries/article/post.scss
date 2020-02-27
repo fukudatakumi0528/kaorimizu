@@ -589,6 +589,10 @@
 								width: 100%;
 								max-width: 100%;
 
+								img {
+									pointer-events: auto;
+								}
+
 								.easyLink-img {
 
 									.easyLink-img-box {
@@ -597,8 +601,16 @@
 
 											&:not(:first-child) {
 
-												img {
+												.js-item-image {
 													display: none;
+
+													&.easyLink-img-pht {
+														display: block;
+													}
+
+													&.msm_right_slideOut {
+														display: block;
+													}
 												}
 											}
 										}
