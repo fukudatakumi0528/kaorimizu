@@ -584,10 +584,14 @@
 								}
 							}
 
-							.easyLink-box.easyLink-size-s{
+							.easyLink-box{ //もしもアフィリエイトボタン内のaタグで、pointer-events:none;を設定するとバグが発生する。
 								margin: 20px 0 0 0;
 								width: 100%;
 								max-width: 100%;
+
+								img {
+									pointer-events: auto;
+								}
 
 								.easyLink-img {
 
@@ -597,8 +601,20 @@
 
 											&:not(:first-child) {
 
-												img {
+												.js-item-image {
 													display: none;
+
+													&.easyLink-img-pht {
+														display: block;
+													}
+
+													&.msm_right_slideOut {
+														display: block;
+													}
+
+													&.msm_left_slideOut {
+														display: block;
+													}
 												}
 											}
 										}
