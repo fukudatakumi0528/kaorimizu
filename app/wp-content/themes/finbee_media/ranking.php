@@ -227,7 +227,7 @@
   <?php
     $simpleGaArgsAll = array(
       'display_count' => 5, //5件表示
-      'period' => 90, //90日間のデータからランキング
+      'period' => 365, //365日間(過去１年)のデータからランキング
       'post_type' => array(
         'feature', 'hobby', 'life', 'learn', //記事のみ 
       ),
