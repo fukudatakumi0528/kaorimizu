@@ -1,18 +1,18 @@
-=== AdSense Plugin WP QUADS === 
+=== Ads & AdSense Plugin WP QUADS === 
 
-Author URL: https://profiles.wordpress.org/renehermi/
-Plugin URL: https://wpquads.com
-Contributors: ReneHermi, WP-Staging
+Author URL: https://wpquads.com
+Plugin URL: https://wordpress.org/plugins/quick-adsense-reloaded/
+Contributors: wpquads
 Donate link: https://wpquads.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: adsense, ads, ad, google adsense, advertising, amp, ad injection, ad inserter, ad manager
 Requires at least: 3.6+
-Tested up to: 5.2
+Tested up to: 5.4
 Requires PHP: 5.3
-Stable tag: 1.8.7 
+Stable tag: 1.8.18
 
-Quick Adsense Reloaded! Quickest way to insert Google AdSense & other ads into your website. Google AdSense integration with Google AMP support
+Ads & AdSense Plugin is the quickest way to insert Google AdSense & other ads into your website. Google AdSense integration with Google AMP support.
 
 == Description == 
 
@@ -127,8 +127,51 @@ Alternative Installation:
 3. AdSense Widgets
 4. AdSense Options from the post editor
 
+== Changelog == 
+= 1.8.18 =
+* Fix: The content missing issue in Wordpress 5.4 version.
+* Fix: Fixed amp validation issue.
 
 == Changelog == 
+= 1.8.17 =
+* Fix: Added vi banner dis-missable.
+* Fix: Debug Error in quads help tab.
+
+= 1.8.16 =
+* Fix: HTML encoding issue
+
+= 1.8.15 =
+* Fix: Changes support Email id form in help area.
+* New: Converting adsbygoogle to amp-ads for AMP.
+* Fix: Fixed jumping issue in quads settings.
+
+= 1.8.14 =
+* New: Added support form in help area.
+* New: Added Email optin box with auto message
+* New: Added Margin & Padding options for AD Widget
+* New: Improve tab UX
+* Fix: updated the dependency in package-lock.json 
+* Fix: Removed hello world block gutenberg module.
+
+= 1.8.13 =
+* Feature: Created new mu-plugin for removing the WP QUADS shortcode when the plugin deactive/uninstall.
+* Fix: Assigned version number of Gutenberg module js and css files.
+
+= 1.8.12 =
+* Fix: Fatal error for wordpress version below 5.0 
+
+= 1.8.11 =
+* Feature: Elementor module for ads #60
+
+= 1.8.10 =
+* Feature: Gutenberg module for ads #60
+* Fix: Ads in middle of the post not working properly when custom HTML markup was added in the post #57
+
+= 1.8.9 =
+* Fix: Quicktag buttons are not shown with Gutenberg editor #50
+
+= 1.8.8 =
+* New: Compatible up to WordPress 5.3.0
 
 = 1.8.7 =
 * New: Compatible up to WordPress 5.2.3
@@ -158,19 +201,9 @@ Alternative Installation:
 = 1.8.0 =
 * Fix: If post has more than 10 blockquotes the resulting blockquote order will be wrong
 
-= 1.7.9 =
-* New: Add up to 11 paragraph ads with WP QUADS PRO
-* New: Fix tag condition in wp quads pro
-* New: Support for Google Auto Ads with WP QUADS PRO
-* Tweak: Rename ad tabs
-
-= 1.7.8 =
-* Fix: License notice shown even though license is not expired
-* Fix: Ads are injected into blog loop because of forgotten development code
-
 Complete changelog: https://wpquads.com/changelog
 
 == Upgrade Notice ==
 
-= 1.8.7 =
-* New: Compatible up to WordPress 5.2.3
+= 1.8.9 =
+* Fix: Quicktag buttons are not shown with Gutenberg editor #50

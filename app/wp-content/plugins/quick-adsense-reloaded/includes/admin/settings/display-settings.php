@@ -91,7 +91,6 @@ function quads_do_settings_fields($page, $section) {
     }
     
     foreach ((array) $wp_settings_fields[$page][$section] as $field) {
-        
        $sanitizedID = str_replace('[', '', $field['id'] );
        $sanitizedID = str_replace(']', '', $sanitizedID );
        
@@ -113,15 +112,15 @@ function quads_do_settings_fields($page, $section) {
             echo '<td class="quads-row th">';
             echo '<label for="' . esc_attr($field['args']['label_for']) . '">' . $field['title'] . '</label>';
             echo '</td></tr>';
-        }else if (!empty($field['title']) && !quads_is_excluded_title( $field['args']['id'] ) && !empty($field['args']['helper-desc'])){
+        }else if (!empty($field['title']) && !empty($field['args']['helper-desc']) && !quads_is_excluded_title( $field['args']['id'] ) ){
             echo '<tr class="quads-row">';
-            echo '<td class="quads-row th">';
+            echo '<td class="quads-row th">';//xss ok
             echo '<div class="col-title">' . $field['title'] . '<a class="quads-general-helper" href="#"></a><div class="quads-message">' . $field['args']['helper-desc']. '</div></div>';
             echo '</td></tr>';
-        }else if (!empty($field['title']) && !quads_is_excluded_title( $field['args']['id'] ) ){
+        }else if (!empty($field['title']) && !empty($field['args']['id']) && !quads_is_excluded_title( $field['args']['id'] ) ){
             echo '<tr class="quads-row">';
-            echo '<td class="quads-row th">';
-            echo '<div class="col-title">' . $field['title'] . '</div>';
+            echo '<td class="quads-row th">'; //xss ok
+            echo '<div class="col-title" id="'.$field['args']['id'].'">' . $field['title'] . '</div>';
             echo '</td></tr>';
         }
         
@@ -175,13 +174,13 @@ function quads_is_excluded_title($string){
  * @return void
  */
 function quads_options_page() {
-	global $quads_options;
+    global $quads_options;
 
-	$active_tab = isset( $_GET[ 'tab' ] ) && array_key_exists( $_GET['tab'], quads_get_settings_tabs() ) ? $_GET[ 'tab' ] : 'general';
+    $active_tab = isset( $_GET[ 'tab' ] ) && array_key_exists( $_GET['tab'], quads_get_settings_tabs() ) ? $_GET[ 'tab' ] : 'general';
 
-	ob_start();
-	?>
-	<div class="wrap quads_admin">
+    ob_start();
+    ?>
+    <div class="wrap quads_admin">
              <h1 style="text-align:center;"> <?php echo QUADS_NAME . ' ' . QUADS_VERSION; ?></h1>
              <div class="about-text" style="font-weight: 400;line-height: 1.6em;text-align:center;">
                 <div class='quads-share-button-container'>
@@ -201,34 +200,34 @@ function quads_options_page() {
                     </div>
                 </div>
             </div>
-		<h2 class="nav-tab-wrapper">
-			<?php
-			foreach( quads_get_settings_tabs() as $tab_id => $tab_name ) {
+        <h2 class="nav-tab-wrapper">
+            <?php
+            foreach( quads_get_settings_tabs() as $tab_id => $tab_name ) {
 
-				$tab_url = esc_url(add_query_arg( array(
-					'settings-updated' => false,
-					'tab' => $tab_id
-				) ));
+                $tab_url = esc_url(add_query_arg( array(
+                    'settings-updated' => false,
+                    'tab' => $tab_id
+                ) ));
 
-				$active = $active_tab == $tab_id ? ' nav-tab-active' : '';
+                $active = $active_tab == $tab_id ? ' nav-tab-active' : '';
 
-				echo '<a href="' . esc_url( $tab_url ) . '" title="' . esc_attr( $tab_name ) . '" class="nav-tab' . $active . '">';
-					echo esc_html( $tab_name );
-				echo '</a>';
-			}
-			?>
-		</h2>
-		<div id="quads_tab_container" class="quads_tab_container">
+                echo '<a href="' . esc_url( $tab_url ) . '" title="' . esc_attr( $tab_name ) . '" class="nav-tab' . $active . '">';
+                    echo esc_html( $tab_name );
+                echo '</a>';
+            }
+            ?>
+        </h2>
+        <div id="quads_tab_container" class="quads_tab_container">
                         <?php quads_get_tab_header( 'quads_settings_' . $active_tab, 'quads_settings_' . $active_tab ); ?>   
                     <div class="quads-panel-container"> <!-- new //-->
-			<form method="post" action="options.php" id="quads_settings">
+            <form method="post" action="options.php" id="quads_settings">
                             
-				<?php
-				settings_fields( 'quads_settings' );
-				quads_do_settings_fields( 'quads_settings_' . $active_tab, 'quads_settings_' . $active_tab );
-				?>                                
+                <?php
+                settings_fields( 'quads_settings' );
+                quads_do_settings_fields( 'quads_settings_' . $active_tab, 'quads_settings_' . $active_tab );
+                ?>                                
                                 <?php  settings_errors(); ?>
-				<?php 
+                <?php 
                                 // do not show save button on add-on page
                                 if ($active_tab !== 'addons' && $active_tab !== 'imexport' && $active_tab !== 'help'){
                                     $other_attributes = array( 'id' => 'quads-submit-button' );
@@ -241,7 +240,7 @@ function quads_options_page() {
                                 
                                     }
                                 ?>
-			</form>
+            </form>
                         <div id="quads-footer">
                         <?php
                         
@@ -251,7 +250,7 @@ function quads_options_page() {
                            'http://wpquads.com/support/'
                         );
                         echo '<br/><br/>' . sprintf( __( '<strong>Ads are not showing? Read the <a href="%s" target="_blank">troubleshooting guide</a> to find out how to resolve it.<p> Looking for a quick way to clone your WordPress? Try the free plugin <a href="%s" target="_blank">WP Staging</a>.', 'quick-adsense-reloaded' ),
-			'http://wpquads.com/docs/adsense-ads-are-not-showing/?utm_source=plugin&utm_campaign=wpquads-settings&utm_medium=website&utm_term=bottomlink',
+            'http://wpquads.com/docs/adsense-ads-are-not-showing/?utm_source=plugin&utm_campaign=wpquads-settings&utm_medium=website&utm_term=bottomlink',
                      'https://wp-staging.com/?utm_source=wpquads_plugin&utm_campaign=footer&utm_medium=website&utm_term=bottomlink'
                         );
                         }
@@ -259,13 +258,13 @@ function quads_options_page() {
                         </div>
                     </div> <!-- new //-->
                     <?php quads_get_advertising(); ?>
-		</div><!-- #tab_container-->
+        </div><!-- #tab_container-->
                 <div id="quads-save-result"></div>
                 <div class="quads-admin-debug"><?php echo quads_get_debug_messages(); ?></div>
                 <?php echo quads_render_adsense_form(); ?>
-	</div><!-- .wrap -->
-	<?php
-	echo ob_get_clean();
+    </div><!-- .wrap -->
+    <?php
+    echo ob_get_clean();
 }
 
 function quads_get_debug_messages(){

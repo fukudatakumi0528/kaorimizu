@@ -2,10 +2,10 @@
 /*
 Plugin Name: WP Multibyte Patch
 Description: Multibyte functionality enhancement for the WordPress Japanese package.
-Version: 2.8.2
-Plugin URI: http://eastcoder.com/code/wp-multibyte-patch/
+Version: 2.8.4
+Plugin URI: https://eastcoder.com/code/wp-multibyte-patch/
 Author: Seisuke Kuraishi
-Author URI: http://tinybit.co.jp/
+Author URI: https://tinybit.co.jp/
 License: GPLv2
 Text Domain: wp-multibyte-patch
 Domain Path: /languages
@@ -15,11 +15,11 @@ Domain Path: /languages
  * Multibyte functionality enhancement for the WordPress Japanese package.
  *
  * @package WP_Multibyte_Patch
- * @version 2.8.2
+ * @version 2.8.4
  * @author Seisuke Kuraishi <210pura@gmail.com>
- * @copyright Copyright (c) 2018 Seisuke Kuraishi, Tinybit Inc.
- * @license http://opensource.org/licenses/gpl-2.0.php GPLv2
- * @link http://eastcoder.com/code/wp-multibyte-patch/
+ * @copyright Copyright (c) 2020 Seisuke Kuraishi, Tinybit Inc.
+ * @license https://opensource.org/licenses/gpl-2.0.php GPLv2
+ * @link https://eastcoder.com/code/wp-multibyte-patch/
  */
 
 /**
@@ -107,8 +107,9 @@ class multibyte_patch {
 
 		$from_encoding = isset( $_POST['charset'] ) ? $_POST['charset'] : '';
 
-		if ( !$from_encoding )
-			$from_encoding = ( preg_match( "/^.*charset=([a-zA-Z0-9\-_]+).*$/i", $_SERVER['CONTENT_TYPE'], $matched ) ) ? $matched[1] : '';
+		if ( empty( $from_encoding ) && preg_match( "/^.*charset=([a-zA-Z0-9\-_]+).*$/i", $_SERVER['CONTENT_TYPE'], $matched ) ) {
+			$from_encoding = isset( $matched[1] ) ? $matched[1] : '';
+		}
 
 		$from_encoding = str_replace( array( ',', ' ' ), '', strtoupper( trim( $from_encoding ) ) );
 		$from_encoding = $this->guess_encoding( $excerpt . $title . $blog_name, $from_encoding );
@@ -166,7 +167,7 @@ class multibyte_patch {
 				break;
 		}
 
-		if ( !$context )
+		if ( empty( $context ) )
 			return $commentdata;
 
 		$context[1] = strip_tags( $context[1] );
@@ -287,6 +288,14 @@ class multibyte_patch {
 		$debug_qs = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '?sd=1' : '';
 
 		$scripts->add( 'wplink', plugin_dir_url( __FILE__ ) . "wplink.php{$debug_qs}", array( 'jquery', 'wp-a11y' ), false, 1 );
+	}
+
+	public function wplink_js_minimum_input_length( $translations = '', $text = '', $context = '' ) {
+		if ( 'minimum input length for searching post links' === $context && '3' === $text ) {
+			return '2';
+		}
+
+		return $translations;
 	}
 
 	public function force_character_count( $translations = '', $text = '', $context = '' ) {
@@ -426,6 +435,17 @@ class multibyte_patch {
 			if ( function_exists( 'twentyseventeen_fonts_url' ) )
 				$this->remove_editor_style( twentyseventeen_fonts_url() );
 		}
+
+		if ( false !== $this->conf['patch_wplink_js'] ) {
+			if ( $this->is_wp_required_version( '5.4-beta1' ) ) {
+				if ( '2' !== _x( '3', 'minimum input length for searching post links' ) ) {
+					add_filter( 'gettext_with_context', array( $this, 'wplink_js_minimum_input_length' ), 10, 3 );
+				}
+			}
+			else {
+				add_action( 'wp_default_scripts', array( $this, 'wplink_js' ), 9 );
+			}
+		}
 	}
 
 	public function filters() {
@@ -467,9 +487,6 @@ class multibyte_patch {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_custom_css' ), 99 );
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'admin_custom_css' ), 99 );
 		}
-
-		if ( false !== $this->conf['patch_wplink_js'] )
-			add_action( 'wp_default_scripts', array( $this, 'wplink_js' ), 9 );
 
 		add_action( 'after_setup_theme', array( $this, 'filters_after_setup_theme' ), 99 );
 		add_action( 'template_redirect', array( $this, 'filters_after_template_redirect' ) );
