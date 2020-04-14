@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // we need to hook into the_content on lower than default priority (that's why we use separate hook)
 add_filter('the_content', 'quads_post_settings_to_quicktags', 5);
 add_filter('the_content', 'quads_process_content', quads_get_load_priority());
+add_filter('rest_prepare_post', 'quads_classic_to_gutenberg', 10, 1);
+add_filter('the_content', 'quads_change_adsbygoogle_to_amp',11);
 
 /**
  * Show ads before posts
@@ -47,6 +49,71 @@ add_filter('the_content', 'quads_process_content', quads_get_load_priority());
 //   echo quads_render_ad(1, $code, false);
 //   
 //}
+
+function quads_classic_to_gutenberg($data)
+{
+    if (isset($data->data['content']['raw'])) {
+        $data->data['content']['raw'] =  preg_replace('/<!--Ads(\d+)-->/','[quads id=$1]', $data->data['content']['raw']);  
+        $data->data['content']['raw'] =  str_replace('<!--RndAds-->', '[quads id=RndAds]', $data->data['content']['raw']);
+    }
+    return $data;
+}
+function quads_change_adsbygoogle_to_amp($content){
+    if (quads_is_amp_endpoint()){
+        $dom = new DOMDocument();
+         if( function_exists( 'mb_convert_encoding' ) ){
+          $content = mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8');     
+        }
+        else{
+          $content =  preg_replace( '/&.*?;/', 'x', $content ); // multi-byte characters converted to X
+        }
+        @$dom->loadHTML($content);
+        $nodes = $dom->getElementsByTagName( 'ins' );
+
+        $num_nodes  = $nodes->length;
+        for ( $i = $num_nodes - 1; $i >= 0; $i-- ) {
+            $url = $width = $height = '';
+            $node   = $nodes->item( $i );
+            if($node->getAttribute('class') == 'adsbygoogle'){
+                $adclient= $node->getAttribute('data-ad-client');
+                $adslot= $node->getAttribute('data-ad-slot');
+                $adformat= $node->getAttribute('data-ad-format');
+                $adfullwidth= $node->getAttribute('data-full-width-responsive');
+    
+                $new_node= $dom->createElement('amp-ad');
+                $new_node->setAttribute('type', 'adsense');
+                $new_node->setAttribute('data-ad-client', $adclient);
+                $new_node->setAttribute('data-ad-slot', $adslot);
+                if($node->getAttribute('data-full-width-responsive')){
+                            $new_node->setAttribute('data-ad-format', $adformat);
+                            $new_node->setAttribute('data-full-width-responsive', $adfullwidth);
+                }
+                $styletag= $node->getAttribute('style');
+                $widthreg = "/width:(?<width>\\d+)/";
+                $heightreg = "/height:(?<height>\\d+)/";
+                preg_match($widthreg, $styletag, $width);
+                preg_match($heightreg, $styletag, $height);
+                if(isset($width['width'])){
+                    $new_node->setAttribute('width', $width['width']);
+                }else{
+                    $new_node->setAttribute('width', '100vw');
+                }
+                if(isset($height['height'])){
+                    $new_node->setAttribute('height', $height['height']);
+                }else{
+                    $new_node->setAttribute('height', '320');
+                }
+                $child_element= $dom->createElement('div');
+                $child_element->setAttribute('overflow', '');
+                $new_node->appendChild( $child_element );
+    
+                $node->parentNode->replaceChild($new_node, $node);
+            }
+        }
+        $content = $dom->saveHTML();
+    }
+    return $content;
+}
 
 /**
  * Adds quicktags, defined via post meta options, to content.
@@ -445,20 +512,8 @@ function quads_filter_default_ads( $content ) {
             * Check if last element is empty and remove it
             */
             if(trim($paragraphsArray[count($paragraphsArray)-1]) == "") array_pop($paragraphsArray);
-            
-            $nn = 0;
-            $mm = strlen( $content ) / 2;
-            for ( $i = 0; $i < count( $paragraphsArray ); $i++ ) {
-                $nn += strlen( $paragraphsArray[$i] ) + 4;
-                if( $nn > $mm ) {
-                    if( ($mm - ($nn - strlen( $paragraphsArray[$i] ))) > ($nn - $mm) && $i + 1 < count( $paragraphsArray ) ) {
-                        $paragraphsArray[$i + 1] = '<!--' . $m1 . '-->' . $paragraphsArray[$i + 1];
-                    } else {
-                        $paragraphsArray[$i] = '<!--' . $m1 . '-->' . $paragraphsArray[$i];
-                    }
-                    break;
-                }
-            }
+            $checkcenter =intval(count( $paragraphsArray )/2);
+            $paragraphsArray[$checkcenter] = '<!--' . $m1 . '-->' . $paragraphsArray[$checkcenter];
             $content = implode( $closingTagP, $paragraphsArray );
         }
     }
@@ -568,6 +623,7 @@ function quads_parse_random_quicktag_ads($content){
     /*
      * Replace RndAds Random Ads
      */
+    $content=  str_replace('[quads id=RndAds]', '<!--RndAds-->', $content);
     if( strpos( $content, '<!--RndAds-->' ) !== false && is_singular() ) {
         $adsArrayTmp = array();
         shuffle( $adsArray );
