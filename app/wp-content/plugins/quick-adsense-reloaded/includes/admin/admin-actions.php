@@ -55,11 +55,11 @@ add_action('quads_close_vi_welcome_notice', 'quads_close_vi_welcome_notice');
  * Close vi ads txt notice and do not show again
  */
 function quads_close_quads_vi_ads_txt_notice() {
-
+    
     delete_transient('quads_vi_ads_txt_notice');
 }
-
 add_action('quads_close_quads_vi_ads_txt_notice', 'quads_close_quads_vi_ads_txt_notice');
+
 
 /**
  * Close vi update notice and show it one week later again
@@ -140,14 +140,6 @@ function quads_logout_vi() {
     delete_option('quads_vi_token');
 }
 add_action('quads_logout_vi', 'quads_logout_vi');
-
-/**
- * Hide ads txt information notice
- */
-function quads_close_ads_txt_notice() {
-    delete_transient('quads_ads_txt_notice');
-}
-add_action('quads_close_ads_txt_notice', 'quads_close_ads_txt_notice');
 
 /**
  * Hide ads txt error notice

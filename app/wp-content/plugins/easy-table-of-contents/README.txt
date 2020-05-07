@@ -5,7 +5,7 @@ Tags: table of contents, toc
 Requires at least: 5.2
 Tested up to: 5.4
 Requires PHP: 5.6.20
-Stable tag: 2.0.9
+Stable tag: 2.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,16 @@ Easy Table Contents is a fork of the excellent [Table of Contents Plus](https://
 4. Activate the plugin on the Plugins admin page.
 
 == Changelog ==
+
+= 2.0.11 05/01/2020 =
+* COMPATIBILITY: Add support for the Uncode theme.
+* COMPATIBILITY: Do not run on WooCommerce pages.
+* DEV: Correct typo in phpDoc.
+
+= 2.0.10 04/20/2020 =
+* TWEAK: Add trailing `span` to heading, to prepare for `#` option and to fix duplicate heading title matching.
+* TWEAK: Add second heading search/replace function to search for heading in content with heading html entities decoded. May help Beaver Builder users as it seems like it does not encode HTML entities as WP core does.
+
 
 = 2.0.9 04/08/2020 =
 * TWEAK: AMP/Caching plugins seems to break anchors with colons and periods even though they are valid characters for the id attribute in HTML5.
@@ -398,4 +408,10 @@ Requires WordPress >= 5.0 and PHP version >= 5.6.20 (>= 7.1 is recommended).
 Requires WordPress >= 5.0 and PHP version >= 5.6.20 (>= 7.1 is recommended).
 
 = 2.0.9 =
+Requires WordPress >= 5.0 and PHP version >= 5.6.20 (>= 7.1 is recommended).
+
+= 2.0.10 =
+Requires WordPress >= 5.0 and PHP version >= 5.6.20 (>= 7.1 is recommended).
+
+= 2.0.11 =
 Requires WordPress >= 5.0 and PHP version >= 5.6.20 (>= 7.1 is recommended).
