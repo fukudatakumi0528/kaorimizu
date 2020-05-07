@@ -13,7 +13,7 @@ Plugin Name: EWWW Image Optimizer
 Plugin URI: https://wordpress.org/plugins/ewww-image-optimizer/
 Description: Reduce file sizes for images within WordPress including NextGEN Gallery and GRAND FlAGallery. Uses jpegtran, optipng/pngout, and gifsicle.
 Author: Exactly WWW
-Version: 5.1.3
+Version: 5.3.1
 Author URI: https://ewww.io/
 License: GPLv3
 */
@@ -83,7 +83,7 @@ if ( ! defined( 'PHP_VERSION_ID' ) || PHP_VERSION_ID < 50600 ) {
 	 *
 	 * @var string EWWW_IMAGE_OPTIMIZER_PLUGIN_FILE_REL
 	 */
-	define( 'EWWW_IMAGE_OPTIMIZER_PLUGIN_FILE_REL', basename( plugin_dir_path( __FILE__ ) ) . '/' . basename( __FILE__ ) );
+	define( 'EWWW_IMAGE_OPTIMIZER_PLUGIN_FILE_REL', plugin_basename( __FILE__ ) );
 	/**
 	 * This is the full system path to the plugin folder.
 	 *
@@ -127,10 +127,6 @@ if ( ! defined( 'PHP_VERSION_ID' ) || PHP_VERSION_ID < 50600 ) {
 	 * EWWWIO_Tracking class for reporting anonymous site data.
 	 */
 	require_once( EWWW_IMAGE_OPTIMIZER_PLUGIN_PATH . 'classes/class-ewwwio-tracking.php' );
-	/**
-	 * EWWWIO_HS_Beacon class for embedding the HelpScout Beacon.
-	 */
-	require_once( EWWW_IMAGE_OPTIMIZER_PLUGIN_PATH . 'classes/class-eio-hs-beacon.php' );
 } // End if().
 
 if ( ! function_exists( 'ewww_image_optimizer_unsupported_php' ) ) {
@@ -161,7 +157,7 @@ if ( ! function_exists( 'ewww_image_optimizer_unsupported_php' ) ) {
  */
 function ewww_image_optimizer_notice_wpengine() {
 	echo "<div id='ewww-image-optimizer-warning-wpengine' class='error'><p>" . esc_html__( 'The regular version of the EWWW Image Optimizer plugin is not permitted on WP Engine sites. However, the cloud version has been approved by WP Engine. Please deactivate EWWW Image Optimizer and install EWWW Image Optimizer Cloud to optimize your images.', 'ewww-image-optimizer' ) .
-		' <a href="admin.php?action=ewwwio_install_cloud_plugin">' . esc_html__( 'Install now.', 'ewww-image-optimizer' ) . '</a></p></div>';
+		' <a href="' . admin_url( 'admin.php?action=ewwwio_install_cloud_plugin' ) . '">' . esc_html__( 'Install now.', 'ewww-image-optimizer' ) . '</a></p></div>';
 }
 
 /**

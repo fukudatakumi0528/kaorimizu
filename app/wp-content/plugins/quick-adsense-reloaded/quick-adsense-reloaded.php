@@ -4,9 +4,9 @@
  * Plugin Name: AdSense Integration WP QUADS
  * Plugin URI: https://wordpress.org/plugins/quick-adsense-reloaded/
  * Description: Insert Google AdSense and other ad formats fully automatic into your website
- * Author: Rene Hermenau, WP-Staging
+ * Author: WP Quads
  * Author URI: https://wordpress.org/plugins/quick-adsense-reloaded/
- * Version: 1.8.7
+ * Version: 2.0
  * Text Domain: quick-adsense-reloaded
  * Domain Path: languages
  * Credits: WP QUADS - Quick AdSense Reloaded is a fork of Quick AdSense
@@ -38,7 +38,7 @@ if( !defined( 'ABSPATH' ) )
 
 // Plugin version
 if( !defined( 'QUADS_VERSION' ) ) {
-   define( 'QUADS_VERSION', '1.8.7' );
+  define( 'QUADS_VERSION', '2.0' );
 }
 
 // Plugin name
@@ -195,11 +195,13 @@ if( !class_exists( 'QuickAdsenseReloaded' ) ) :
        * @return void
        */
       private function includes() {
-         global $quads_options;
+         global $quads_options, $quads_mode;
 
+         $quads_mode = get_option('quads-mode');
+         
          require_once QUADS_PLUGIN_DIR . 'includes/admin/settings/register-settings.php';
          $quads_options = quads_get_settings();
-         
+                  
          require_once QUADS_PLUGIN_DIR . 'includes/post_types.php';
          require_once QUADS_PLUGIN_DIR . 'includes/user_roles.php';
          require_once QUADS_PLUGIN_DIR . 'includes/widgets.php';
@@ -222,7 +224,10 @@ if( !class_exists( 'QuickAdsenseReloaded' ) ) :
          require_once QUADS_PLUGIN_DIR . 'includes/vendor/google/adsense.php';
          require_once QUADS_PLUGIN_DIR . 'includes/class-template.php';
          require_once QUADS_PLUGIN_DIR . 'includes/admin/adsTxt.php';
-
+        require_once QUADS_PLUGIN_DIR . 'includes/elementor/widget.php';
+        if ( function_exists('has_blocks')) {
+            require_once QUADS_PLUGIN_DIR . 'includes/gutenberg/src/init.php';
+        }
 
          if( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
             require_once QUADS_PLUGIN_DIR . 'includes/admin/add-ons.php';
@@ -244,6 +249,13 @@ if( !class_exists( 'QuickAdsenseReloaded' ) ) :
             $this->registerNamespaces();
 
          }
+         
+         //Includes new files
+         require_once QUADS_PLUGIN_DIR . '/admin/includes/setup.php';
+         require_once QUADS_PLUGIN_DIR . '/admin/includes/rest-api.php';  
+         require_once QUADS_PLUGIN_DIR . '/admin/includes/common-functions.php'; 
+         require_once QUADS_PLUGIN_DIR . '/admin/includes/widget.php';         
+         
       }
       
    /**
@@ -369,7 +381,7 @@ if( !class_exists( 'QuickAdsenseReloaded' ) ) :
             $quads_options['visibility']['AppArch'] = "1";
             $quads_options['visibility']['AppTags'] = "1";
             $quads_options['quicktags']['QckTags'] = "1";
-
+            add_option('quads-mode','new');
             update_option( 'quads_settings', $quads_options );
          }
 
@@ -479,6 +491,23 @@ function quads_is_active_deprecated() {
    if( is_plugin_active( $plugin ) ) {
       return true;
    }
+ }
 
-   return false;
+/**
+ * Create a MU plugin to remove unused shortcode when plugin is removed.
+ * 
+ * @since 1.8.12
+ */
+add_action('update_option_quads_settings', 'wpquads_remove_shortcode',10,3);
+function wpquads_remove_shortcode($old_value,$new_value,$option){
+  $content_url =WPMU_PLUGIN_DIR.'/wpquads_remove_shortcode.php';
+  if(isset($new_value['hide_add_on_disableplugin'])){
+    wp_mkdir_p(WPMU_PLUGIN_DIR, 755, true);
+    $sourc =plugin_dir_path( __FILE__ ) . 'includes/mu-plugin/wpquads_remove_shortcode.php';
+    if (!file_exists($content_url)) {
+      copy($sourc,$content_url);
+    }
+  }else{
+    wp_delete_file($content_url);
+  }
 }
