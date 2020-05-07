@@ -67,15 +67,22 @@ HTTPS Setup Video: [youtube https://www.youtube.com/watch?v=BeTZ2KgytC0]
 
 == Changelog ==
 
+<<<<<<< HEAD
 = 2.1.2 =
 
 - Obfuscation of REST API key in OneSignal configuration page to only show last 4 characters
 
+=======
+>>>>>>> 5104bb240477a53b908b6fa3d3bfd075e25e8f2e
 = 2.1.1 =
 
 - Minor bug fixes: check native_prompt setting key exists, reworked checkbox logic to support custom post statuses
 
+<<<<<<< HEAD
 = 2.1.0 =
+=======
+= 2.1.0 = 
+>>>>>>> 5104bb240477a53b908b6fa3d3bfd075e25e8f2e
 
 - OneSignal config page interface changes to prompting options to discourage native prompt use, bug fixes
 
