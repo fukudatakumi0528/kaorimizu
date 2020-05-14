@@ -41,15 +41,15 @@ class QuadsAdConfig extends Component {
               closeModal    = {this.props.closeModal}
               />
               </div> 
-              {
-                      quads_localize_data.is_pro ? 
+   
               <div className="quads-settings-group">
               <QuadsAMPCompatibility 
               ad_type={page.ad_type} 
               parentState={this.props.parentState} 
               adFormChangeHandler={this.props.adFormChangeHandler} 
               />
-              </div> : ""}
+              </div> 
+              {this.props.parentState.ad_type !="random_ads" ?
               <div className="quads-settings-group">
               <QuadsLayout 
               ad_type={page.ad_type} 
@@ -57,7 +57,8 @@ class QuadsAdConfig extends Component {
               adFormChangeHandler={this.props.adFormChangeHandler} 
               />
               </div>
-              <div class="quads-btn-navigate">
+              : ""}
+              <div className="quads-btn-navigate">
               <div className="quads-next" onClick={this.props.moveNext}><a className="quads-btn quads-btn-primary">{__('Next', 'quick-adsense-reloaded')}</a></div>
               </div>
             </Fragment>
