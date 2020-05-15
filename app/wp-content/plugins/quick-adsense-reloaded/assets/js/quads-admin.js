@@ -1,7 +1,35 @@
 var strict;
+function quads_switch_version(toversion,selector){
+jQuery(selector).attr('onClick', "");
+    var data = {
+        action: 'quads_change_mode',
+        mode: toversion,
+        nonce: quads.nonce,
+    };        
+    jQuery.post(ajaxurl, data, function (resp, status, xhr) {
+var data = {
+        action: 'quads_sync_random_ads_in_new_design',
+        nonce: quads.nonce,
+    };
+    jQuery.post(ajaxurl, data, function (resp, status, xhr) {
 
+        window.location.href = quads.path + '/wp-admin/admin.php?page=quads-settings';  
+
+    }).fail(function (xhr) { // Will be executed when $.post() fails
+        window.location.href = quads.path + '/wp-admin/admin.php?page=quads-settings';  
+    });
+                           
+
+    }).fail(function (xhr) { // Will be executed when $.post() fails
+        quads_show_message('Ajax Error: ' + xhr.status + ' ' + xhr.statusText);            
+    });
+}
 
 jQuery(document).ready(function ($) {
+
+$('a[href$="quads_switch_to_new"]').removeAttr("href").attr('onClick', "quads_switch_version('new',this);");
+$('a[href$="quads_switch_to_old"]').removeAttr("href").attr('onClick', "quads_switch_version('old',this);");
+
     $(".wpquads-send-query").on("click", function(e){
         e.preventDefault();   
         var message     = $("#wpquads_query_message").val();  
@@ -269,9 +297,13 @@ e.preventDefault();
      */
     // Check if submit button is visible than stick it to the bottom of the page
     $(window).scroll(function() {
-        
+        if(!$('#quads_settings').length){
+            return true;
+        }
         var elem = '#quads_tab_container .submit';
-        
+        var $myElement = $('#quads_settings'),
+        canUserSeeIt = inViewport($myElement);
+
         if ($(elem).length < 1){
             return;
         }
@@ -279,7 +311,7 @@ e.preventDefault();
         var top_of_element = $(elem).offset().top;
         var bottom_of_element = $(elem).offset().top + $(elem).outerHeight(false);
         var bottom_of_screen = $(window).scrollTop() + $(window).height();
-        if (bottom_of_screen > top_of_element){
+        if (!canUserSeeIt){
             // The element is visible, do something
             $('#quads-submit-button').css('position', 'relative').css('bottom', '20px');
         } else {
@@ -287,6 +319,17 @@ e.preventDefault();
             $('#quads-submit-button').css('position', 'fixed').css('bottom', '20px');
             }
     });
+    function inViewport($ele) {
+    var lBound = $(window).scrollTop(),
+        uBound = lBound + $(window).height(),
+        top = $ele.offset().top,
+        bottom = top + $ele.outerHeight(true);
+
+    return (top > lBound && top < uBound)
+        || (bottom > lBound && bottom < uBound)
+        || (lBound >= top && lBound <= bottom)
+        || (uBound >= top && uBound <= bottom);
+}
     
     // Activate chosen select boxes
 //    $(".quads-chosen-select").chosen({
@@ -356,6 +399,30 @@ e.preventDefault();
         bubble.toggle();
         e.stopPropagation();
     });
+        $('.quads-general-helper').hover(function (e) {
+        e.preventDefault();
+        var icon = $(this),
+                bubble = $(this).next();
+
+        // Close any that are already open
+        $('.quads-message').not(bubble).hide();
+
+        var position = icon.position();
+        if (bubble.hasClass('bottom')) {
+            bubble.css({
+                'left': (position.left - bubble.width() / 2) + 'px',
+                'top': (position.top + icon.height() + 9) + 'px'
+            });
+        } else {
+            bubble.css({
+                'left': (position.left + icon.width() + 9) + 'px',
+                'top': (position.top + icon.height() / 2 - 18) + 'px'
+            });
+        }
+
+        bubble.toggle();
+        e.stopPropagation();
+    });
     $('.quads-general-helper').click(function (e) {
         e.preventDefault();
         var icon = $(this),
@@ -392,6 +459,24 @@ e.preventDefault();
 /**
  * Save settings via ajax
  */
+
+function quads_sync_ads_in_new_design(){
+
+    var data = {
+        action: 'quads_sync_ads_in_new_design',
+        nonce: quads.nonce,
+    };
+    jQuery.post(ajaxurl, data, function (resp, status, xhr) {
+
+        //console.log('success:' + resp + status + xhr);
+        quads_show_message(resp);
+
+    }).fail(function (xhr) { // Will be executed when $.post() fails
+        quads_show_message('Ajax Error: ' + xhr.status + ' ' + xhr.statusText);
+        //console.log('error: ' + xhr.statusText);
+    });
+
+}
  
     jQuery('#quads_settings').submit(function() {
         
@@ -411,6 +496,7 @@ e.preventDefault();
         jQuery(this).ajaxSubmit({
             
             success: function(){
+                quads_sync_ads_in_new_design();
                 jQuery('#quads-save-result').html("<div id='quads-save-message' class='quads-success-modal'></div>");
                 jQuery('#quads-save-message').append('<p><img src="'+quads.path+'/wp-content/plugins/quick-adsense-reloaded/assets/images/saved.gif"></p>').show();
                 quads_hide_success_message();

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - AMP - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-07 16:01:30+0000\n"
+"PO-Revision-Date: 2020-04-21 03:06:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,155 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - AMP - Stable (latest release)\n"
+
+#: includes/validation/class-amp-validation-error-taxonomy.php:3350
+msgid "Message"
+msgstr "メッセージ"
+
+#: assets/js/amp-block-editor.js:1
+msgid "Preview AMP"
+msgstr "AMP をプレビュー"
+
+#: assets/js/amp-block-editor.js:1
+msgid "Generating AMP preview…"
+msgstr "AMP プレビューを生成中..."
+
+#. translators: %1$s: the fetched URL, %2$s the error message that was returned
+#: includes/sanitizers/class-amp-style-sanitizer.php:1442
+msgid "Failed to fetch: %1$s (%2$s)"
+msgstr "%1$s (%2$s) の取得に失敗しました。"
+
+#: includes/validation/class-amp-validation-manager.php:2099
+msgid "Too many redirects."
+msgstr "リダイレクトが多すぎます。"
+
+#: includes/validation/class-amp-validation-manager.php:1792
+msgid "Nonce authentication failed."
+msgstr "Nonce 認証に失敗しました。"
+
+#: includes/validation/class-amp-validation-error-taxonomy.php:3055
+msgid "Invalid JSON"
+msgstr "無効な JSON"
+
+#: includes/validation/class-amp-validation-error-taxonomy.php:1845
+msgid "Syntax error"
+msgstr "構文エラー"
+
+#: includes/validation/class-amp-validation-error-taxonomy.php:1839
+msgid "Invalid or malformed JSON"
+msgstr "無効または不正な形式の JSON"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2315
+msgid "CSS Code"
+msgstr "CSS コード"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2298
+msgid "Stylesheet URL"
+msgstr "スタイルシート URL"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2208
+msgid "Expand/collapse"
+msgstr "展開する/折りたたむ"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2161
+msgid "Markup"
+msgstr "マークアップ"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2160
+msgid "Included"
+msgstr "同梱"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2159
+msgid "Priority"
+msgstr "優先度"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2158
+msgid "Percent"
+msgstr "パーセント"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2155
+msgid "Final"
+msgstr "最終"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2153
+msgid "Minified"
+msgstr "圧縮 (minify)"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2150
+msgid "Original"
+msgstr "オリジナル"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2148
+msgid "Order"
+msgstr "順序"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2063
+#: includes/validation/class-amp-validated-url-post-type.php:2072
+#: includes/validation/class-amp-validated-url-post-type.php:2120
+#: includes/validation/class-amp-validated-url-post-type.php:2151
+#: includes/validation/class-amp-validated-url-post-type.php:2156
+msgctxt "abbreviation for bytes"
+msgid "B"
+msgstr "B"
+
+#: includes/validation/class-amp-validated-url-post-type.php:2063
+#: includes/validation/class-amp-validated-url-post-type.php:2072
+#: includes/validation/class-amp-validated-url-post-type.php:2120
+#: includes/validation/class-amp-validated-url-post-type.php:2151
+#: includes/validation/class-amp-validated-url-post-type.php:2156
+msgid "bytes"
+msgstr "バイト"
+
+#: includes/validation/class-amp-validated-url-post-type.php:1800
+msgid "Stylesheets"
+msgstr "スタイルシート"
+
+#: includes/templates/amp-paired-browsing.php:54
+msgid "Go Back"
+msgstr "戻る"
+
+#: includes/templates/amp-paired-browsing.php:51
+msgid "Exit"
+msgstr "終了"
+
+#: includes/templates/amp-paired-browsing.php:16
+msgid "Loading&#8230;"
+msgstr "読み込み中&#8230;"
+
+#: src/Admin/SiteHealth.php:268
+msgid "Transient caching of parsed stylesheets is enabled"
+msgstr "パースされたスタイルシートの transient キャッシュは有効化されています"
+
+#: src/Admin/SiteHealth.php:264
+msgid "Transient caching of parsed stylesheets is disabled"
+msgstr "パースされたスタイルシートの transient キャッシュは無効化されています"
+
+#: src/Admin/SiteHealth.php:260
+msgid "Transient caching of parsed stylesheets is not used due to external object cache"
+msgstr "外部オブジェクトキャッシュが使われているためパースされたスタイルシートの transient キャッシュは使われません"
+
+#: src/Admin/SiteHealth.php:219
+msgid "Learn more about ICU"
+msgstr "ICU についてさらに詳しく"
+
+#: src/Admin/SiteHealth.php:103
+msgid "Persistent object caching is not enabled"
+msgstr "永続的なオブジェクトキャッシュは有効化されていません"
+
+#: src/Admin/SiteHealth.php:102
+msgid "Persistent object caching is enabled"
+msgstr "永続的なオブジェクトキャッシュは有効化されています"
+
+#. translators: The accessibility text.
+#. translators: accessibility text
+#: src/Admin/SiteHealth.php:79 src/Admin/SiteHealth.php:142
+#: src/Admin/SiteHealth.php:221 assets/js/amp-block-editor.js:3
+msgid "(opens in a new tab)"
+msgstr "(新しいタブで開く)"
+
+#: src/Admin/SiteHealth.php:77
+msgid "Learn more about persistent object caching"
+msgstr "永続的なオブジェクトキャッシュについてさらに詳しく"
 
 #: includes/validation/class-amp-validation-manager.php:2213
 msgid "Failed to fetch URL to validate."
@@ -89,6 +238,11 @@ msgstr "無効な処理命令"
 #: includes/validation/class-amp-validation-error-taxonomy.php:2758
 msgid "Custom HTML"
 msgstr "カスタム HTML"
+
+#. translators: %d is the hook priority
+#: includes/validation/class-amp-validation-error-taxonomy.php:2653
+msgid "(priority %d)"
+msgstr "(優先順位 %d)"
 
 #: includes/validation/class-amp-validation-error-taxonomy.php:2628
 msgid "Core"
@@ -209,9 +363,29 @@ msgstr "マークアップのステータスでフィルターする"
 msgid "Validate"
 msgstr "検証"
 
+#: includes/validation/class-amp-validated-url-post-type.php:2705
+msgid "AMP Validated URL"
+msgstr "AMP 検証済み URL"
+
+#. translators: %s is the hook name
+#: includes/validation/class-amp-validated-url-post-type.php:1213
+msgid "Hook: %s"
+msgstr "フック: %s"
+
 #: includes/validation/class-amp-validated-url-post-type.php:1207
 msgid "Excerpt"
 msgstr "抜粋"
+
+#: includes/validation/class-amp-validated-url-post-type.php:1203
+msgid "Content"
+msgstr "コンテンツ"
+
+#: includes/validation/class-amp-validated-url-post-type.php:973
+#: includes/validation/class-amp-validated-url-post-type.php:977
+#: includes/validation/class-amp-validation-error-taxonomy.php:838
+#: includes/validation/class-amp-validation-error-taxonomy.php:842
+msgid "Context"
+msgstr "コンテキスト"
 
 #: includes/validation/class-amp-validated-url-post-type.php:1456
 #: includes/validation/class-amp-validation-error-taxonomy.php:1665

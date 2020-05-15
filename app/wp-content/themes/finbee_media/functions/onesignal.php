@@ -19,7 +19,7 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
 
       // アクティブユーザーのみに通知する
       $fields = array(
-          'app_id' => "92105a34-bce9-4de5-8cff-5bb235ac159f",//prod環境のapp_idを入力（stgでテストしたい時は、記載変更する。）
+          'app_id' => "fa6c61c4-e8f0-4c0a-ad34-89ef3f2c2175",//prod環境のapp_idを入力（stgでテストしたい時は、記載変更する。）
           'included_segments' => array('Active Users'),
           'headings' => array("en" => "be-topia(ビートピア)", "ja" => "be-topia(ビートピア)"),
           'isAnyWeb' => true,
@@ -27,7 +27,7 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
           'contents' => array("en" => $contents, "ja" => $contents),
           'chrome_web_icon' => $image,
           //'chrome_web_icon' => $thumbnail, 記事ごとにWEBプッシュ通知画像を変更したい時
-        );
+      );
     }
   }
   return $fields;
