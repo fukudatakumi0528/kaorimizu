@@ -20,3 +20,18 @@ pipelines:
         script:
           - apk update && apk add openssh-client bash
           - ssh -p $DEPLOY_SERVER_PORT $DEPLOY_SERVER_USER@$PROD_SERVER_IP "cd $PROD_DEPLOY_DIR && git pull"
+  custom:
+    wordpressUpdate:
+      - step:
+         name: Wordpress update
+         script:
+           - apk update && apk add openssh-client bash
+           - ssh -p $DEPLOY_SERVER_PORT $DEPLOY_SERVER_USER@$STAG_SERVER_IP "cd $STAG_DEPLOY_DIR/app && wp plugin status && wp plugin update --all"
+
+      - step:
+         name: plugin update commit
+         deployment: staging
+         trigger: manual
+         script:
+           - apk update && apk add openssh-client bash
+           - ssh -p $DEPLOY_SERVER_PORT $DEPLOY_SERVER_USER@$STAG_SERVER_IP bash < deploy.sh
