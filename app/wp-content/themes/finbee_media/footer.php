@@ -207,6 +207,7 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 		<script src="<?= assetsPath('js') ?>common.js"></script>
+                <script type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.2.2' async='async'></script>
 		<?php if(!empty($scriptName)): ?>
 			<script src="<?= assetsPath('js') ?><?= $scriptName ?>.js"></script>
 		<?php endif; ?>
