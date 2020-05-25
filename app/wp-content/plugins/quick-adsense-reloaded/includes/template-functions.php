@@ -17,6 +17,7 @@ add_filter('the_content', 'quads_post_settings_to_quicktags', 5);
 add_filter('the_content', 'quads_process_content', quads_get_load_priority());
 add_filter('rest_prepare_post', 'quads_classic_to_gutenberg', 10, 1);
 add_filter('the_content', 'quads_change_adsbygoogle_to_amp',11);
+add_action('wp_head',  'quads_doubleclick_head_code');
 
 /**
  * Show ads before posts
@@ -192,7 +193,7 @@ function quads_process_content( $content ) {
     $adsArray = quads_get_active_ads();
     
     // Return is no ads are defined
-    if ($adsArray === 0){
+    if ($adsArray === 0 && $quads_mode != 'new'){
         return $content;
     }
 
@@ -926,7 +927,8 @@ function quads_parse_random_quicktag_ads($content){
         shuffle($keys); 
         $randomid = $random_ads_list_after[$keys[0]]; 
         $selected_ads[] = $randomid;
-        $content = quads_replace_ads_new( $content, 'CusRnd' . $ad_id, $randomid,$ad_meta['enabled_on_amp'][0]);
+        $enabled_on_amp = (isset($ad_meta['enabled_on_amp'][0]))? $ad_meta['enabled_on_amp'][0]: '';
+        $content = quads_replace_ads_new( $content, 'CusRnd' . $ad_id, $randomid,$enabled_on_amp);
     }
     return $content;
 
@@ -985,7 +987,9 @@ function quads_parse_random_ads($content) {
 function quads_parse_quicktags($content){
     global $adsArray, $visibleContentAds;
     //print_r(count($adsArray));
-    
+    if (!is_array($adsArray)){
+        return $content;
+    }
     $idx = 0;
     for ( $i = 1; $i <= count( $adsArray ); $i++ ) {
         if( strpos( $content, '<!--Ads' . $adsArray[$idx] . '-->' ) !== false ) {
@@ -1066,11 +1070,12 @@ function quads_parse_default_ads_new( $content ) {
         return $content;
     }
 
-    $number_rand_ads = substr_count( $content, '<!--CusRnd' );
+    $number_rand_ads = substr_count( $content, '<!--CusAds' );
     for ( $i = 0; $i <= $number_rand_ads - 1; $i++ ) {
          preg_match("#<!--CusAds(.+?)-->#si", $content, $match);
          $ad_id = isset($match['1'])?$match['1']:'';
         if( strpos( $content, '<!--CusAds' . $ad_id . '-->' ) !== false )  {
+
             $content = quads_replace_ads_new( $content, 'CusAds' . $ad_id, $ad_id );
         }
     }

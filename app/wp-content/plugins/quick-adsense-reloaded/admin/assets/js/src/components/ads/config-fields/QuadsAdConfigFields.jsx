@@ -223,6 +223,65 @@ error_outline
         : ''}
        </div>);      
               break; 
+            case 'double_click':
+             ad_type_name = 'Google AD Manager (DFP)';  
+              comp_html.push(<div key="double_click">
+                <table>
+                  <tbody>
+                    <tr><td>
+                    <label>{__('Network Code', 'quick-adsense-reloaded')}</label></td><td><input className={(show_form_error && post_meta.network_code == '') ? 'quads_form_error' : ''} value={post_meta.network_code} onChange={this.props.adFormChangeHandler} type="text" id="network_code" name="network_code" placeholder="Network Code" />
+                    {(show_form_error && post_meta.network_code == '') ? <div className="quads_form_msg"><span className="material-icons">
+                    error_outline</span>Enter Network Code</div> :''}
+                     </td></tr>
+                    <tr><td><label>{__('AD Unit Name', 'quick-adsense-reloaded')}</label></td><td><input className={(show_form_error && post_meta.ad_unit_name == '') ? 'quads_form_error' : ''}  value={post_meta.ad_unit_name} onChange={this.props.adFormChangeHandler} type="text" placeholder="AD Unit Name" id="ad_unit_name" name="ad_unit_name" />
+                    {(show_form_error && post_meta.ad_unit_name == '') ? <div className="quads_form_msg"><span className="material-icons">
+error_outline
+</span>Enter AD Unit Name</div> :''}</td></tr>
+                    <tr><td><label>{__('Size', 'quick-adsense-reloaded')}</label></td><td>
+                      <div>
+                        <select value={post_meta.adsense_type} onChange={this.props.adFormChangeHandler} name="adsense_type" id="adsense_type">
+                        <option value="normal">{__('Fixed Size', 'quick-adsense-reloaded')}</option>
+                        <option value="responsive">{__('Responsive', 'quick-adsense-reloaded')}</option> 
+                      </select>
+                      {
+                        post_meta.adsense_type !== 'responsive' ?                        
+                      <div className="quads-adsense-width-heigth">
+                        
+                        <div className="quads-adsense-width">
+                          <label>{__('Width', 'quick-adsense-reloaded')}
+                          <input value={post_meta.g_data_ad_width ? post_meta.g_data_ad_width:'300'} onChange={this.props.adFormChangeHandler} type="number" id="g_data_ad_width" name="g_data_ad_width" /> 
+                          </label>
+                        </div>
+                        <div className="quads-adsense-height">
+                          <label>{__('Height', 'quick-adsense-reloaded')}
+                          <input value={post_meta.g_data_ad_height  ? post_meta.g_data_ad_height:'250'} onChange={this.props.adFormChangeHandler} type="number" id="g_data_ad_height" name="g_data_ad_height" />  
+                          </label>
+                        </div>
+                      </div>
+                      : ''
+                      }
+                      </div>
+                      </td></tr>
+                  </tbody>
+                </table>
+                </div>);
+
+              break;
+            case 'yandex':
+             ad_type_name = 'Yandex';  
+              comp_html.push(<div key="yandex">
+                <table>
+                  <tbody>
+                    <tr><td>
+                    <label>{__('Block Id', 'quick-adsense-reloaded')}</label></td><td><input className={(show_form_error && post_meta.block_id == '') ? 'quads_form_error' : ''} value={post_meta.block_id} onChange={this.props.adFormChangeHandler} type="text" id="block_id" name="block_id" placeholder="Block Id" />
+                    {(show_form_error && post_meta.block_id == '') ? <div className="quads_form_msg"><span className="material-icons">
+                    error_outline</span>Enter Block Id</div> :''}
+                     </td></tr>
+                  </tbody>
+                </table>
+                </div>);
+
+              break;
 
             default:
               comp_html.push(<div key="noads" >{__('Ad not found', 'quick-adsense-reloaded')}</div>);
