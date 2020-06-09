@@ -1,14 +1,5 @@
 jQuery( function( $ ) {
 
-	/**
-	 * @typedef ezTOC
-	 * @type {Object} ezTOC
-	 * @property {string} affixSelector
-	 * @property {string} scroll_offset
-	 * @property {string} smooth_scroll
-	 * @property {string} visibility_hide_by_default
-	 */
-
 	if ( typeof ezTOC != 'undefined' ) {
 
 		var affix = $( '.ez-toc-widget-container.ez-toc-affix' );
@@ -26,13 +17,13 @@ jQuery( function( $ ) {
 			// check offset setting
 			if ( typeof ezTOC.scroll_offset != 'undefined' ) {
 
-				affixOffset = parseInt( ezTOC.scroll_offset );
+				affixOffset =  ezTOC.scroll_offset;
 			}
 
-			$( ezTOC.affixSelector ).stick_in_parent( {
-				inner_scrolling: false,
-				offset_top:      affixOffset
-			} )
+			$( ezTOC.affixSelector ).stick_in_parent({
+				inner_scrolling : false,
+				offset_top : parseInt( affixOffset )
+			});
 		}
 
 		$.fn.shrinkTOCWidth = function() {
@@ -46,40 +37,40 @@ jQuery( function( $ ) {
 				$( this ).css( 'width', '' );
 		};
 
-		var smoothScroll = parseInt( ezTOC.smooth_scroll );
+		if ( ezTOC.smooth_scroll == 1 ) {
 
-		if ( 1 === smoothScroll ) {
+			var target = hostname = pathname = qs = hash = null;
 
-			$( 'a.ez-toc-link' ).on( 'click', function() {
+			$( 'body a' ).click( function( event ) {
 
-				var self = $( this );
-
-				var target = '';
-				var hostname = self.prop( 'hostname' );
-				var pathname = self.prop( 'pathname' );
-				var qs = self.prop( 'search' );
-				var hash = self.prop( 'hash' );
+				hostname = $( this ).prop( 'hostname' );
+				pathname = $( this ).prop( 'pathname' );
+				qs = $( this ).prop( 'search' );
+				hash = $( this ).prop( 'hash' );
 
 				// ie strips out the preceding / from pathname
 				if ( pathname.length > 0 ) {
-					if ( pathname.charAt( 0 ) !== '/' ) {
+					if ( pathname.charAt( 0 ) != '/' ) {
 						pathname = '/' + pathname;
 					}
 				}
 
-				if ( ( window.location.hostname === hostname ) &&
-					( window.location.pathname === pathname ) &&
-					( window.location.search === qs ) &&
-					( hash !== '' )
-				) {
+				if ( (window.location.hostname == hostname) && (window.location.pathname == pathname) && (window.location.search == qs) && (hash !== '') ) {
 
-					// var id = decodeURIComponent( hash.replace( '#', '' ) );
-					target = '[id="' + hash.replace( '#', '' ) + '"]';
+					// escape jquery selector chars, but keep the #
+					var hash_selector = hash.replace( /([ !"$%&'()*+,.\/:;<=>?@[\]^`{|}~])/g, '\\$1' );
 
-					// verify it exists
-					if ( $( target ).length === 0 ) {
-						console.log( 'ezTOC scrollTarget Not Found: ' + target );
-						target = '';
+					// check if element exists with id=__
+					if ( $( hash_selector ).length > 0 )
+						target = hash;
+					else {
+						// must be an anchor (a name=__)
+						anchor = hash;
+						anchor = anchor.replace( '#', '' );
+						target = 'a[name="' + anchor + '"]';
+						// verify it exists
+						if ( $( target ).length == 0 )
+							target = '';
 					}
 
 					// check offset setting
@@ -120,7 +111,6 @@ jQuery( function( $ ) {
 
 		if ( typeof ezTOC.visibility_hide_by_default != 'undefined' ) {
 
-			var toc = $( 'ul.ez-toc-list' );
 			var toggle = $( 'a.ez-toc-toggle' );
 			var invert = ezTOC.visibility_hide_by_default;
 
@@ -140,10 +130,10 @@ jQuery( function( $ ) {
 
 			if ( ! toggle.data( 'visible' ) ) {
 
-				toc.hide();
+				$( 'ul.ez-toc-list' ).hide();
 			}
 
-			toggle.on( 'click', function( event ) {
+			toggle.click( function( event ) {
 
 				event.preventDefault();
 
@@ -159,7 +149,7 @@ jQuery( function( $ ) {
 							Cookies.set( 'ezTOC_hidetoc', '1', { expires: 30, path: '/' } );
 					}
 
-					toc.hide( 'fast' );
+					$( 'ul.ez-toc-list' ).hide( 'fast' );
 
 				} else {
 
@@ -173,7 +163,7 @@ jQuery( function( $ ) {
 							Cookies.set( 'ezTOC_hidetoc', null, { path: '/' } );
 					}
 
-					toc.show( 'fast' );
+					$( 'ul.ez-toc-list' ).show( 'fast' );
 
 				}
 
@@ -201,7 +191,7 @@ jQuery( function( $ ) {
                 removeStyleFromNonActiveListElement( activeListElementLink, listElementLinks );
                 setStyleForActiveListElementElement( activeListElementLink );
             }
-        }
+        };
 
         function activateSetActiveEzTocListElement() {
             if ( headings.length > 0 && $('.ez-toc-widget-container').length) {
@@ -277,9 +267,8 @@ jQuery( function( $ ) {
             // But because it get's directly removed afterwards it never will be rendered by the browser
             // (at least in my tests in FF, Chrome, IE11 and Edge)
             $listElement.parent().append( '<li id="ez-toc-height-test" class="active">' + content + '</li>' );
-            var listItem = $( '#ez-toc-height-test' );
-            var height = listItem.height();
-	        listItem.remove();
+            var height = jQuery( '#ez-toc-height-test' ).height();
+            jQuery( '#ez-toc-height-test' ).remove();
             return height - $listElement.children( 'ul' ).first().height();
         }
 
