@@ -95,7 +95,7 @@ docker rmi `docker images | sed -ne '2,$p' -e 's/  */ /g' | awk '{print $1":"$2}
 初期のデータベースを更新
 
 ```
-$ docker exec finbee_media_mysql /usr/bin/mysqldump -u root --password=password wordpress > sql/wordpress.sql
+$ docker exec kaorimizu_media_mysql /usr/bin/mysqldump -u root --password=password wordpress > sql/wordpress.sql
 ```
 WP CLIを使う
 

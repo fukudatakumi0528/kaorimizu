@@ -12,15 +12,10 @@ const runSequence = require('run-sequence');
 const cssmin = require('gulp-cssmin');
 const htmlcomp = require('gulp-phtml-simple-comp');
 
-
-
-
-
-
 const options = {
   SRC_PATH: './src',
   PUBLIC_PATH: './public',
-  THEME_PATH: '../app/wp-content/themes/finbee_media',
+  THEME_PATH: '../app/wp-content/themes/kaorimizu_media',
   BUILD_PATH: './dist',
   AUTOPREFIXER: {
     browsers: ['last 2 versions'],

@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    container_name: finbee_media_web
+    container_name: kaorimizu_media_web
     build: docker/nginx
     ports:
       - 8888:80
@@ -10,7 +10,7 @@ services:
     volumes:
       - ./app:/var/www/html
   fpm:
-    container_name: finbee_media_php
+    container_name: kaorimizu_media_php
     build: docker/phpfpm
     volumes:
       - ./app:/var/www/html
@@ -20,7 +20,7 @@ services:
     environment:
       - DEBUG=true
   mysql:
-    container_name: finbee_media_mysql
+    container_name: kaorimizu_media_mysql
     build: docker/mysql
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
@@ -41,17 +41,17 @@ services:
     volumes:
        - /sessions
   smtp:
-    container_name: finbee_media_smtp
+    container_name: kaorimizu_media_smtp
     image: phpdockerio/mailhog:latest
     ports:
       - 8025:8025
   node:
-    container_name: finbee_media_node
+    container_name: kaorimizu_media_node
     tty: true
     build: ./docker/node
     ports:
       - 3000:3000
     volumes:
       - ./node:/home/node
-      - ./app/wp-content/themes/finbee_media/assets/js:/home/app/wp-content/themes/finbee_media/assets/js
-      - ./app/wp-content/themes/finbee_media/assets/css:/home/app/wp-content/themes/finbee_media/assets/css
+      - ./app/wp-content/themes/kaorimizu_media/assets/js:/home/app/wp-content/themes/kaorimizu_media/assets/js
+      - ./app/wp-content/themes/kaorimizu_media/assets/css:/home/app/wp-content/themes/kaorimizu_media/assets/css
